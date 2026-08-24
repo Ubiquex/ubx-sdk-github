@@ -8,7 +8,7 @@ type Hook_Config struct {
 	ContentType any
 	// Controls whether GitHub disables SSL verification when delivering webhook payloads. Accepts '0' or false to enable verification, and '1' or true to allow insecure connections (e.g., self-signed certificates). (AI-inferred)
 	InsecureSsl any
-	// If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value for [delivery signature headers](https://docs.github.com/webhooks/event-payloads/#delivery-headers).
+	// If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value for [delivery signature headers](https://docs.github.com/enterprise-cloud@latest/webhooks/event-payloads/#delivery-headers).
 	Secret any
 	// The URL to which the payloads will be delivered.
 	Url any
@@ -35,7 +35,7 @@ type HookConfig struct {
 	Active any
 	// Key/value pairs to provide settings for this webhook.
 	Config any
-	// Determines what [events](https://docs.github.com/webhooks/event-payloads) the hook is triggered for.
+	// Determines what [events](https://docs.github.com/enterprise-cloud@latest/webhooks/event-payloads) the hook is triggered for.
 	Events any
 	// Use `web` to create a webhook. Default: `web`. This parameter only accepts the value `web`.
 	Name any
@@ -56,7 +56,7 @@ type HookAttrs struct {
 	CreatedAt any
 	// The URL to the API endpoint for listing deliveries of this webhook. (AI-inferred)
 	DeliveriesUrl any
-	// Determines what [events](https://docs.github.com/webhooks/event-payloads) the hook is triggered for.
+	// Determines what [events](https://docs.github.com/enterprise-cloud@latest/webhooks/event-payloads) the hook is triggered for.
 	Events any
 	// Unique identifier of the webhook.
 	Id any

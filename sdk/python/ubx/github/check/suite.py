@@ -278,6 +278,7 @@ class Suite_Repository_SecurityAndAnalysis:
     secret_scanning_non_provider_patterns: Any = None
     # Settings for secret scanning push protection on the repository, indicating whether it is enabled or disabled. (AI-inferred)
     secret_scanning_push_protection: Any = None
+    secret_scanning_validity_checks: Any = None
 
 @dataclasses.dataclass
 class Suite_Repository:

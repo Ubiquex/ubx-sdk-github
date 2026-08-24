@@ -326,6 +326,7 @@ type Repository_SecurityAndAnalysis struct {
 	SecretScanningNonProviderPatterns any
 	// Configuration for secret scanning push protection, which blocks pushes that contain detected secrets from being successfully pushed to the repository. (AI-inferred)
 	SecretScanningPushProtection any
+	SecretScanningValidityChecks any
 }
 
 type RepositoryConfig struct {

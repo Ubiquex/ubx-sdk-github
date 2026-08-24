@@ -155,6 +155,7 @@ type Codespace_Repository_SecurityAndAnalysis struct {
 	SecretScanningNonProviderPatterns any
 	// Configuration for secret scanning push protection on the repository. This feature helps prevent secrets from being pushed by blocking the push if a secret is detected. (AI-inferred)
 	SecretScanningPushProtection any
+	SecretScanningValidityChecks any
 }
 
 type Codespace_Repository struct {

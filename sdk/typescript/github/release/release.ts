@@ -99,7 +99,7 @@ export interface Release_Reactions {
 export interface ReleaseConfig {
   /** Text describing the contents of the tag. */
   body?: string | Computed<string>;
-  /** If specified, a discussion of the specified category is created and linked to the release. The value must be a category that already exists in the repository. For more information, see "[Managing categories for discussions in your repository](https://docs.github.com/discussions/managing-discussions-for-your-community/managing-categories-for-discussions-in-your-repository)." */
+  /** If specified, a discussion of the specified category is created and linked to the release. The value must be a category that already exists in the repository. For more information, see "[Managing categories for discussions in your repository](https://docs.github.com/enterprise-cloud@latest/discussions/managing-discussions-for-your-community/managing-categories-for-discussions-in-your-repository)." */
   discussionCategoryName?: string | Computed<string>;
   /** `true` to create a draft (unpublished) release, `false` to create a published one. */
   draft?: boolean | Computed<boolean>;
@@ -138,7 +138,7 @@ export interface ReleaseAttrs {
   bodyText: string;
   /** The timestamp of when the release was created, in ISO 8601 format (e.g., 2023-01-01T00:00:00Z). (AI-inferred) */
   createdAt: string;
-  /** If specified, a discussion of the specified category is created and linked to the release. The value must be a category that already exists in the repository. For more information, see "[Managing categories for discussions in your repository](https://docs.github.com/discussions/managing-discussions-for-your-community/managing-categories-for-discussions-in-your-repository)." */
+  /** If specified, a discussion of the specified category is created and linked to the release. The value must be a category that already exists in the repository. For more information, see "[Managing categories for discussions in your repository](https://docs.github.com/enterprise-cloud@latest/discussions/managing-discussions-for-your-community/managing-categories-for-discussions-in-your-repository)." */
   discussionCategoryName: string;
   /** The URL of the release discussion. */
   discussionUrl: string;

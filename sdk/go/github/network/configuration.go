@@ -10,12 +10,12 @@ type ConfigurationConfig struct {
 	FailoverNetworkEnabled any
 	// A list of identifiers of the failover network settings resources to use for the network configuration. Exactly one resource identifier must be specified in the list.
 	FailoverNetworkSettingsIds any
-	// Name of the network configuration. Must be between 1 and 100 characters and may only contain upper and lowercase letters a-z, numbers 0-9, '.', '-', and '_'.
+	// Name of the network configuration. Must be between 1 and 100 characters and may only contain upper and lowercase letters a-z, numbers 0-9, `.`, `-`, and `_`.
 	Name any
 	// A list of identifiers of the network settings resources to use for the network configuration. Exactly one resource identifier must be specified in the list.
 	NetworkSettingsIds any
 	// path parameter, not part of the API's own resource representation
-	Org any
+	Enterprise any
 	// path parameter, not part of the API's own resource representation
 	NetworkConfigurationId any
 }
@@ -31,12 +31,12 @@ type ConfigurationAttrs struct {
 	FailoverNetworkSettingsIds any
 	// The unique identifier of the network configuration.
 	Id any
-	// Name of the network configuration. Must be between 1 and 100 characters and may only contain upper and lowercase letters a-z, numbers 0-9, '.', '-', and '_'.
+	// Name of the network configuration. Must be between 1 and 100 characters and may only contain upper and lowercase letters a-z, numbers 0-9, `.`, `-`, and `_`.
 	Name any
 	// A list of identifiers of the network settings resources to use for the network configuration. Exactly one resource identifier must be specified in the list.
 	NetworkSettingsIds any
 	// path parameter, not part of the API's own resource representation
-	Org any
+	Enterprise any
 	// path parameter, not part of the API's own resource representation
 	NetworkConfigurationId any
 }
@@ -49,7 +49,7 @@ var Configuration = ubx.ResourceBinding{
 		"FailoverNetworkSettingsIds": ubx.FieldSpec{WireName: "failover_network_settings_ids"},
 		"Name": ubx.FieldSpec{WireName: "name"},
 		"NetworkSettingsIds": ubx.FieldSpec{WireName: "network_settings_ids"},
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
 		"NetworkConfigurationId": ubx.FieldSpec{WireName: "network_configuration_id"},
 	},
 }

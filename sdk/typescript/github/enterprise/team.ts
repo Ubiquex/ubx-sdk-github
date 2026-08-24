@@ -4,13 +4,13 @@ import type { Computed, FieldMap, ResourceBinding } from "@ubx/sdk";
 export interface TeamConfig {
   /** A description of the team. */
   description?: string | Computed<string>;
-  /** The ID of the IdP group to assign team membership with. You can get this value from the [REST API endpoints for SCIM](https://docs.github.com/rest/scim#list-provisioned-scim-groups-for-an-enterprise). */
+  /** The ID of the IdP group to assign team membership with. You can get this value from the [REST API endpoints for SCIM](https://docs.github.com/enterprise-cloud@latest/rest/scim#list-provisioned-scim-groups-for-an-enterprise). */
   groupId?: string | Computed<string>;
   /** The name of the team. */
   name: string | Computed<string>;
   /** The notification setting the team is set to. The options are: * `notifications_enabled` - team members receive notifications when the team is @mentioned. * `notifications_disabled` - no one receives notifications. Default: `notifications_enabled` */
   notificationSetting?: string | Computed<string>;
-  /** Specifies which organizations in the enterprise should have access to this team. Can be one of `disabled`, `selected`, or `all`. `disabled`: The team is not assigned to any organizations. This is the default when you create a new team. `selected`: The team is assigned to specific organizations. You can then use the [add organization assignments API](https://docs.github.com/rest/enterprise-teams/enterprise-team-organizations#add-organization-assignments) endpoint. `all`: The team is assigned to all current and future organizations in the enterprise. */
+  /** Specifies which organizations in the enterprise should have access to this team. Can be one of `disabled`, `selected`, or `all`. `disabled`: The team is not assigned to any organizations. This is the default when you create a new team. `selected`: The team is assigned to specific organizations. You can then use the [add organization assignments API](https://docs.github.com/enterprise-cloud@latest/rest/enterprise-teams/enterprise-team-organizations#add-organization-assignments) endpoint. `all`: The team is assigned to all current and future organizations in the enterprise. */
   organizationSelectionType?: string | Computed<string>;
   /** Retired: this field is no longer supported. Whether the enterprise team should be reflected in each organization. This value cannot be set. */
   syncToOrganizations?: string | Computed<string>;
@@ -25,7 +25,7 @@ export interface TeamAttrs {
   createdAt: string;
   /** A description of the team. */
   description: string;
-  /** The ID of the IdP group to assign team membership with. You can get this value from the [REST API endpoints for SCIM](https://docs.github.com/rest/scim#list-provisioned-scim-groups-for-an-enterprise). */
+  /** The ID of the IdP group to assign team membership with. You can get this value from the [REST API endpoints for SCIM](https://docs.github.com/enterprise-cloud@latest/rest/scim#list-provisioned-scim-groups-for-an-enterprise). */
   groupId: string;
   /** Retired: this field will not be returned with GHEC enterprise teams. */
   groupName: string;
@@ -38,7 +38,7 @@ export interface TeamAttrs {
   name: string;
   /** The notification setting the team is set to. The options are: * `notifications_enabled` - team members receive notifications when the team is @mentioned. * `notifications_disabled` - no one receives notifications. Default: `notifications_enabled` */
   notificationSetting: string;
-  /** Specifies which organizations in the enterprise should have access to this team. Can be one of `disabled`, `selected`, or `all`. `disabled`: The team is not assigned to any organizations. This is the default when you create a new team. `selected`: The team is assigned to specific organizations. You can then use the [add organization assignments API](https://docs.github.com/rest/enterprise-teams/enterprise-team-organizations#add-organization-assignments) endpoint. `all`: The team is assigned to all current and future organizations in the enterprise. */
+  /** Specifies which organizations in the enterprise should have access to this team. Can be one of `disabled`, `selected`, or `all`. `disabled`: The team is not assigned to any organizations. This is the default when you create a new team. `selected`: The team is assigned to specific organizations. You can then use the [add organization assignments API](https://docs.github.com/enterprise-cloud@latest/rest/enterprise-teams/enterprise-team-organizations#add-organization-assignments) endpoint. `all`: The team is assigned to all current and future organizations in the enterprise. */
   organizationSelectionType: string;
   /** The URL-friendly slug of the team, generated from the team's name and used in URLs. (AI-inferred) */
   slug: string;

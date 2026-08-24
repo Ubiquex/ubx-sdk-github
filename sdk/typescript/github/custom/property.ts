@@ -17,7 +17,7 @@ export interface PropertyConfig {
   /** Who can edit the values of the property */
   valuesEditableBy?: string | Computed<string>;
   /** path parameter, not part of the API's own resource representation */
-  org: string | Computed<string>;
+  enterprise: string | Computed<string>;
   /** path parameter, not part of the API's own resource representation */
   customPropertyName: string | Computed<string>;
 }
@@ -44,7 +44,7 @@ export interface PropertyAttrs {
   /** Who can edit the values of the property */
   valuesEditableBy: string;
   /** path parameter, not part of the API's own resource representation */
-  org: string;
+  enterprise: string;
   /** path parameter, not part of the API's own resource representation */
   customPropertyName: string;
 }
@@ -59,7 +59,7 @@ export const Property: ResourceBinding<PropertyConfig, PropertyAttrs> = {
     required: "required",
     valueType: "value_type",
     valuesEditableBy: "values_editable_by",
-    org: "org",
+    enterprise: "enterprise",
     customPropertyName: "custom_property_name",
   },
 };

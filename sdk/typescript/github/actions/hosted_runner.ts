@@ -64,7 +64,7 @@ export interface HostedRunnerConfig {
   /** The machine size of the runner. To list available sizes, use `GET actions/hosted-runners/machine-sizes` */
   size: string | Computed<string>;
   /** path parameter, not part of the API's own resource representation */
-  org: string | Computed<string>;
+  enterprise: string | Computed<string>;
   /** path parameter, not part of the API's own resource representation */
   hostedRunnerId: string | Computed<string>;
 }
@@ -101,7 +101,7 @@ export interface HostedRunnerAttrs {
   /** The status of the runner. */
   status: string;
   /** path parameter, not part of the API's own resource representation */
-  org: string;
+  enterprise: string;
   /** path parameter, not part of the API's own resource representation */
   hostedRunnerId: string;
 }
@@ -120,7 +120,7 @@ export const HostedRunner: ResourceBinding<HostedRunnerConfig, HostedRunnerAttrs
     name: "name",
     runnerGroupId: "runner_group_id",
     size: "size",
-    org: "org",
+    enterprise: "enterprise",
     hostedRunnerId: "hosted_runner_id",
   },
 };

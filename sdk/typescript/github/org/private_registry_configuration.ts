@@ -18,7 +18,7 @@ export interface PrivateRegistryConfigurationConfig {
   domain?: string | Computed<string>;
   /** The CodeArtifact domain owner (AWS account ID). Required when `auth_type` is `oidc_aws`. */
   domainOwner?: string | Computed<string>;
-  /** The value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get private registries public key for an organization](https://docs.github.com/rest/private-registries/organization-configurations#get-private-registries-public-key-for-an-organization) endpoint. Required when `auth_type` is `token` or `username_password`. Should be omitted for OIDC auth types. */
+  /** The value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get private registries public key for an organization](https://docs.github.com/enterprise-cloud@latest/rest/private-registries/organization-configurations#get-private-registries-public-key-for-an-organization) endpoint. Required when `auth_type` is `token` or `username_password`. Should be omitted for OIDC auth types. */
   encryptedValue?: string | Computed<string>;
   /** The JFrog identity mapping name. Optional for `oidc_jfrog` auth type. */
   identityMappingName?: string | Computed<string>;
@@ -34,7 +34,7 @@ export interface PrivateRegistryConfigurationConfig {
   replacesBase?: boolean | Computed<boolean>;
   /** The AWS IAM role name. Required when `auth_type` is `oidc_aws`. */
   roleName?: string | Computed<string>;
-  /** An array of repository IDs that can access the organization private registry. You can only provide a list of repository IDs when `visibility` is set to `selected`. You can manage the list of selected repositories using the [Update a private registry for an organization](https://docs.github.com/rest/private-registries/organization-configurations#update-a-private-registry-for-an-organization) endpoint. This field should be omitted if `visibility` is set to `all` or `private`. */
+  /** An array of repository IDs that can access the organization private registry. You can only provide a list of repository IDs when `visibility` is set to `selected`. You can manage the list of selected repositories using the [Update a private registry for an organization](https://docs.github.com/enterprise-cloud@latest/rest/private-registries/organization-configurations#update-a-private-registry-for-an-organization) endpoint. This field should be omitted if `visibility` is set to `all` or `private`. */
   selectedRepositoryIds?: number[] | Computed<number[]>;
   /** The GCP service account email to impersonate. Optional for `oidc_gcp` auth type. If omitted, the federated token is used directly (direct WIF). */
   serviceAccount?: string | Computed<string>;
@@ -75,7 +75,7 @@ export interface PrivateRegistryConfigurationAttrs {
   domain: string;
   /** The CodeArtifact domain owner (AWS account ID). Required when `auth_type` is `oidc_aws`. */
   domainOwner: string;
-  /** The value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get private registries public key for an organization](https://docs.github.com/rest/private-registries/organization-configurations#get-private-registries-public-key-for-an-organization) endpoint. Required when `auth_type` is `token` or `username_password`. Should be omitted for OIDC auth types. */
+  /** The value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get private registries public key for an organization](https://docs.github.com/enterprise-cloud@latest/rest/private-registries/organization-configurations#get-private-registries-public-key-for-an-organization) endpoint. Required when `auth_type` is `token` or `username_password`. Should be omitted for OIDC auth types. */
   encryptedValue: string;
   /** The JFrog identity mapping name. Optional for `oidc_jfrog` auth type. */
   identityMappingName: string;
@@ -93,7 +93,7 @@ export interface PrivateRegistryConfigurationAttrs {
   replacesBase: boolean;
   /** The AWS IAM role name. Required when `auth_type` is `oidc_aws`. */
   roleName: string;
-  /** An array of repository IDs that can access the organization private registry. You can only provide a list of repository IDs when `visibility` is set to `selected`. You can manage the list of selected repositories using the [Update a private registry for an organization](https://docs.github.com/rest/private-registries/organization-configurations#update-a-private-registry-for-an-organization) endpoint. This field should be omitted if `visibility` is set to `all` or `private`. */
+  /** An array of repository IDs that can access the organization private registry. You can only provide a list of repository IDs when `visibility` is set to `selected`. You can manage the list of selected repositories using the [Update a private registry for an organization](https://docs.github.com/enterprise-cloud@latest/rest/private-registries/organization-configurations#update-a-private-registry-for-an-organization) endpoint. This field should be omitted if `visibility` is set to `all` or `private`. */
   selectedRepositoryIds: number[];
   /** The GCP service account email to impersonate. Optional for `oidc_gcp` auth type. If omitted, the federated token is used directly (direct WIF). */
   serviceAccount: string;

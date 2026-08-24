@@ -27,7 +27,7 @@ class BudgetConfig:
     budget_entity_name: Any = None
     # A single product or SKU that will be covered in the budget
     budget_product_sku: Any = None
-    # The scope of the budget for this organization. - `organization`: Apply the budget to the organization. - `repository`: Apply the budget to a specific repository in the organization. - `multi_user_customer`: Apply a universal budget to all users in the organization. - `user`: Apply the budget to a single user in the organization. `user` and `multi_user_customer` scopes are only supported when `budget_product_sku` is `ai_credits` or `premium_requests`.
+    # The scope of the budget. - `enterprise`: Apply the budget to the entire enterprise. - `organization`: Apply the budget to a specific organization in the enterprise. - `repository`: Apply the budget to a specific repository. - `cost_center`: Apply the budget to a specific cost center. - `multi_user_customer`: Apply a universal budget to all users in the enterprise. - `multi_user_cost_center`: Apply a universal budget to all users in a cost center. - `user`: Apply the budget to a single user. `user`, `multi_user_customer`, and `multi_user_cost_center` scopes are only supported when `budget_product_sku` is `ai_credits` or `premium_requests`.
     budget_scope: Any = None
     # The type of pricing model used by the budget. Determines how `budget_product_sku` is interpreted. - `BundlePricing`: Covers all AI credit SKUs. Set `budget_product_sku` to `ai_credits`. - `ProductPricing`: Covers all SKUs that belong to a product. Set `budget_product_sku` to a product such as `actions` or `packages`. - `SkuPricing`: Covers a single, specific SKU. Set `budget_product_sku` to a SKU such as `actions_linux`.
     budget_type: Any = None
@@ -36,7 +36,7 @@ class BudgetConfig:
     # The username of the user for `user` scope budgets. This field is required when `budget_scope` is `user`.
     user: Any = None
     # path parameter, not part of the API's own resource representation
-    org: Any = None
+    enterprise: Any = None
     # path parameter, not part of the API's own resource representation
     budget_id: Any = None
 
@@ -49,7 +49,7 @@ class BudgetAttrs:
     budget_entity_name: Any = None
     # A single product or SKU that will be covered in the budget
     budget_product_sku: Any = None
-    # The scope of the budget for this organization. - `organization`: Apply the budget to the organization. - `repository`: Apply the budget to a specific repository in the organization. - `multi_user_customer`: Apply a universal budget to all users in the organization. - `user`: Apply the budget to a single user in the organization. `user` and `multi_user_customer` scopes are only supported when `budget_product_sku` is `ai_credits` or `premium_requests`.
+    # The scope of the budget. - `enterprise`: Apply the budget to the entire enterprise. - `organization`: Apply the budget to a specific organization in the enterprise. - `repository`: Apply the budget to a specific repository. - `cost_center`: Apply the budget to a specific cost center. - `multi_user_customer`: Apply a universal budget to all users in the enterprise. - `multi_user_cost_center`: Apply a universal budget to all users in a cost center. - `user`: Apply the budget to a single user. `user`, `multi_user_customer`, and `multi_user_cost_center` scopes are only supported when `budget_product_sku` is `ai_credits` or `premium_requests`.
     budget_scope: Any = None
     # The type of pricing model used by the budget. Determines how `budget_product_sku` is interpreted. - `BundlePricing`: Covers all AI credit SKUs. Set `budget_product_sku` to `ai_credits`. - `ProductPricing`: Covers all SKUs that belong to a product. Set `budget_product_sku` to a product such as `actions` or `packages`. - `SkuPricing`: Covers a single, specific SKU. Set `budget_product_sku` to a SKU such as `actions_linux`.
     budget_type: Any = None
@@ -60,7 +60,7 @@ class BudgetAttrs:
     # The username of the user for `user` scope budgets. This field is required when `budget_scope` is `user`.
     user: Any = None
     # path parameter, not part of the API's own resource representation
-    org: Any = None
+    enterprise: Any = None
     # path parameter, not part of the API's own resource representation
     budget_id: Any = None
 
@@ -79,7 +79,7 @@ Budget = ubx.ResourceBinding(
         "budget_type": ubx.FieldSpec(wire_name="budget_type"),
         "prevent_further_usage": ubx.FieldSpec(wire_name="prevent_further_usage"),
         "user": ubx.FieldSpec(wire_name="user"),
-        "org": ubx.FieldSpec(wire_name="org"),
+        "enterprise": ubx.FieldSpec(wire_name="enterprise"),
         "budget_id": ubx.FieldSpec(wire_name="budget_id"),
     },
 )

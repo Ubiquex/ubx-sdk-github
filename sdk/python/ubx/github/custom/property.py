@@ -23,7 +23,7 @@ class PropertyConfig:
     # Who can edit the values of the property
     values_editable_by: Any = None
     # path parameter, not part of the API's own resource representation
-    org: Any = None
+    enterprise: Any = None
     # path parameter, not part of the API's own resource representation
     custom_property_name: Any = None
 
@@ -50,7 +50,7 @@ class PropertyAttrs:
     # Who can edit the values of the property
     values_editable_by: Any = None
     # path parameter, not part of the API's own resource representation
-    org: Any = None
+    enterprise: Any = None
     # path parameter, not part of the API's own resource representation
     custom_property_name: Any = None
 
@@ -64,7 +64,7 @@ Property = ubx.ResourceBinding(
         "required": ubx.FieldSpec(wire_name="required"),
         "value_type": ubx.FieldSpec(wire_name="value_type"),
         "values_editable_by": ubx.FieldSpec(wire_name="values_editable_by"),
-        "org": ubx.FieldSpec(wire_name="org"),
+        "enterprise": ubx.FieldSpec(wire_name="enterprise"),
         "custom_property_name": ubx.FieldSpec(wire_name="custom_property_name"),
     },
 )

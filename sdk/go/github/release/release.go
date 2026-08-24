@@ -101,7 +101,7 @@ type Release_Reactions struct {
 type ReleaseConfig struct {
 	// Text describing the contents of the tag.
 	Body any
-	// If specified, a discussion of the specified category is created and linked to the release. The value must be a category that already exists in the repository. For more information, see "[Managing categories for discussions in your repository](https://docs.github.com/discussions/managing-discussions-for-your-community/managing-categories-for-discussions-in-your-repository)."
+	// If specified, a discussion of the specified category is created and linked to the release. The value must be a category that already exists in the repository. For more information, see "[Managing categories for discussions in your repository](https://docs.github.com/enterprise-cloud@latest/discussions/managing-discussions-for-your-community/managing-categories-for-discussions-in-your-repository)."
 	DiscussionCategoryName any
 	// `true` to create a draft (unpublished) release, `false` to create a published one.
 	Draft any
@@ -140,7 +140,7 @@ type ReleaseAttrs struct {
 	BodyText any
 	// The timestamp of when the release was created, in ISO 8601 format (e.g., 2023-01-01T00:00:00Z). (AI-inferred)
 	CreatedAt any
-	// If specified, a discussion of the specified category is created and linked to the release. The value must be a category that already exists in the repository. For more information, see "[Managing categories for discussions in your repository](https://docs.github.com/discussions/managing-discussions-for-your-community/managing-categories-for-discussions-in-your-repository)."
+	// If specified, a discussion of the specified category is created and linked to the release. The value must be a category that already exists in the repository. For more information, see "[Managing categories for discussions in your repository](https://docs.github.com/enterprise-cloud@latest/discussions/managing-discussions-for-your-community/managing-categories-for-discussions-in-your-repository)."
 	DiscussionCategoryName any
 	// The URL of the release discussion.
 	DiscussionUrl any

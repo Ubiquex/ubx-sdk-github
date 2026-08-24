@@ -198,7 +198,7 @@ class RequestConfig:
     base: Any = None
     # The contents of the pull request.
     body: Any = None
-    # Indicates whether the pull request is a draft. See "[Draft Pull Requests](https://docs.github.com/articles/about-pull-requests#draft-pull-requests)" in the GitHub Help documentation to learn more.
+    # Indicates whether the pull request is a draft. See "[Draft Pull Requests](https://docs.github.com/enterprise-cloud@latest/articles/about-pull-requests#draft-pull-requests)" in the GitHub Help documentation to learn more.
     draft: Any = None
     # The name of the branch where your changes are implemented. For cross-repository pull requests in the same network, namespace `head` with a user like this: `username:branch`.
     head: Any = None
@@ -206,7 +206,7 @@ class RequestConfig:
     head_repo: Any = None
     # An issue in the repository to convert to a pull request. The issue title, body, and comments will become the title, body, and comments on the new pull request. Required unless `title` is specified.
     issue: Any = None
-    # Indicates whether [maintainers can modify](https://docs.github.com/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
+    # Indicates whether [maintainers can modify](https://docs.github.com/enterprise-cloud@latest/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
     maintainer_can_modify: Any = None
     # The title of the new pull request. Required unless `issue` is specified.
     title: Any = None
@@ -255,7 +255,7 @@ class RequestAttrs:
     deletions: Any = None
     # The URL to the diff file for this pull request. (AI-inferred)
     diff_url: Any = None
-    # Indicates whether the pull request is a draft. See "[Draft Pull Requests](https://docs.github.com/articles/about-pull-requests#draft-pull-requests)" in the GitHub Help documentation to learn more.
+    # Indicates whether the pull request is a draft. See "[Draft Pull Requests](https://docs.github.com/enterprise-cloud@latest/articles/about-pull-requests#draft-pull-requests)" in the GitHub Help documentation to learn more.
     draft: Any = None
     # The name of the branch where your changes are implemented. For cross-repository pull requests in the same network, namespace `head` with a user like this: `username:branch`.
     head: Any = None
@@ -272,7 +272,7 @@ class RequestAttrs:
     labels: Any = None
     # Indicates whether the pull request conversation is locked, restricting commenting to users with write access. This is a read-only value set by GitHub. (AI-inferred)
     locked: Any = None
-    # Indicates whether [maintainers can modify](https://docs.github.com/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
+    # Indicates whether [maintainers can modify](https://docs.github.com/enterprise-cloud@latest/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
     maintainer_can_modify: Any = None
     # The SHA of the merge commit created when the pull request is merged. This value is computed by GitHub and is only populated after a successful merge. (AI-inferred)
     merge_commit_sha: Any = None

@@ -330,6 +330,7 @@ class Repository_SecurityAndAnalysis:
     secret_scanning_non_provider_patterns: Any = None
     # Configuration for secret scanning push protection, which blocks pushes that contain detected secrets from being successfully pushed to the repository. (AI-inferred)
     secret_scanning_push_protection: Any = None
+    secret_scanning_validity_checks: Any = None
 
 @dataclasses.dataclass
 class RepositoryConfig:

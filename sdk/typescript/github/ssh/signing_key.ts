@@ -2,7 +2,7 @@
 import type { Computed, FieldMap, ResourceBinding } from "@ubx/sdk";
 
 export interface SigningKeyConfig {
-  /** The public SSH key to add to your GitHub account. For more information, see "[Checking for existing SSH keys](https://docs.github.com/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)." */
+  /** The public SSH key to add to your GitHub account. For more information, see "[Checking for existing SSH keys](https://docs.github.com/enterprise-cloud@latest/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)." */
   key: string | Computed<string>;
   /** A descriptive name for the new key. */
   title?: string | Computed<string>;
@@ -15,7 +15,7 @@ export interface SigningKeyAttrs {
   createdAt: string;
   /** The SSH signing key's numeric ID. (AI-inferred) */
   id: number;
-  /** The public SSH key to add to your GitHub account. For more information, see "[Checking for existing SSH keys](https://docs.github.com/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)." */
+  /** The public SSH key to add to your GitHub account. For more information, see "[Checking for existing SSH keys](https://docs.github.com/enterprise-cloud@latest/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)." */
   key: string;
   /** A descriptive name for the new key. */
   title: string;

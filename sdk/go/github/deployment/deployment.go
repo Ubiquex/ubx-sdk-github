@@ -159,7 +159,7 @@ type DeploymentConfig struct {
 	ProductionEnvironment any
 	// The ref to deploy. This can be a branch, tag, or SHA.
 	Ref any
-	// The [status](https://docs.github.com/rest/commits/statuses) contexts to verify against commit status checks. If you omit this parameter, GitHub verifies all unique contexts before creating a deployment. To bypass checking entirely, pass an empty array. Defaults to all unique contexts.
+	// The [status](https://docs.github.com/enterprise-cloud@latest/rest/commits/statuses) contexts to verify against commit status checks. If you omit this parameter, GitHub verifies all unique contexts before creating a deployment. To bypass checking entirely, pass an empty array. Defaults to all unique contexts.
 	RequiredContexts any
 	// Specifies a task to execute (e.g., `deploy` or `deploy:migrations`).
 	Task any
@@ -200,7 +200,7 @@ type DeploymentAttrs struct {
 	Ref any
 	// The URL of the repository associated with this deployment. This value is computed by the provider. (AI-inferred)
 	RepositoryUrl any
-	// The [status](https://docs.github.com/rest/commits/statuses) contexts to verify against commit status checks. If you omit this parameter, GitHub verifies all unique contexts before creating a deployment. To bypass checking entirely, pass an empty array. Defaults to all unique contexts.
+	// The [status](https://docs.github.com/enterprise-cloud@latest/rest/commits/statuses) contexts to verify against commit status checks. If you omit this parameter, GitHub verifies all unique contexts before creating a deployment. To bypass checking entirely, pass an empty array. Defaults to all unique contexts.
 	RequiredContexts any
 	// The SHA of the commit that is being deployed. (AI-inferred)
 	Sha any

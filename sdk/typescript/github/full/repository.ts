@@ -324,6 +324,7 @@ export interface Repository_SecurityAndAnalysis {
   secretScanningNonProviderPatterns?: Repository_SecurityAndAnalysis_AdvancedSecurity | Computed<Repository_SecurityAndAnalysis_AdvancedSecurity>;
   /** Configuration for secret scanning push protection, which blocks pushes that contain detected secrets from being successfully pushed to the repository. (AI-inferred) */
   secretScanningPushProtection?: Repository_SecurityAndAnalysis_AdvancedSecurity | Computed<Repository_SecurityAndAnalysis_AdvancedSecurity>;
+  secretScanningValidityChecks?: Repository_SecurityAndAnalysis_AdvancedSecurity | Computed<Repository_SecurityAndAnalysis_AdvancedSecurity>;
 }
 
 export interface RepositoryConfig {

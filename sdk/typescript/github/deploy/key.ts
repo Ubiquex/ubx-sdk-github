@@ -4,7 +4,7 @@ import type { Computed, FieldMap, ResourceBinding } from "@ubx/sdk";
 export interface KeyConfig {
   /** The contents of the key. */
   key: string | Computed<string>;
-  /** If `true`, the key will only be able to read repository contents. Otherwise, the key will be able to read and write. Deploy keys with write access can perform the same actions as an organization member with admin access, or a collaborator on a personal repository. For more information, see "[Repository permission levels for an organization](https://docs.github.com/articles/repository-permission-levels-for-an-organization/)" and "[Permission levels for a user account repository](https://docs.github.com/articles/permission-levels-for-a-user-account-repository/)." */
+  /** If `true`, the key will only be able to read repository contents. Otherwise, the key will be able to read and write. Deploy keys with write access can perform the same actions as an organization member with admin access, or a collaborator on a personal repository. For more information, see "[Repository permission levels for an organization](https://docs.github.com/enterprise-cloud@latest/articles/repository-permission-levels-for-an-organization/)" and "[Permission levels for a user account repository](https://docs.github.com/enterprise-cloud@latest/articles/permission-levels-for-a-user-account-repository/)." */
   readOnly?: boolean | Computed<boolean>;
   /** A name for the key. */
   title?: string | Computed<string>;
@@ -27,7 +27,7 @@ export interface KeyAttrs {
   key: string;
   /** The timestamp of when the deploy key was last used, as a string. (AI-inferred) */
   lastUsed: string;
-  /** If `true`, the key will only be able to read repository contents. Otherwise, the key will be able to read and write. Deploy keys with write access can perform the same actions as an organization member with admin access, or a collaborator on a personal repository. For more information, see "[Repository permission levels for an organization](https://docs.github.com/articles/repository-permission-levels-for-an-organization/)" and "[Permission levels for a user account repository](https://docs.github.com/articles/permission-levels-for-a-user-account-repository/)." */
+  /** If `true`, the key will only be able to read repository contents. Otherwise, the key will be able to read and write. Deploy keys with write access can perform the same actions as an organization member with admin access, or a collaborator on a personal repository. For more information, see "[Repository permission levels for an organization](https://docs.github.com/enterprise-cloud@latest/articles/repository-permission-levels-for-an-organization/)" and "[Permission levels for a user account repository](https://docs.github.com/enterprise-cloud@latest/articles/permission-levels-for-a-user-account-repository/)." */
   readOnly: boolean;
   /** A name for the key. */
   title: string;

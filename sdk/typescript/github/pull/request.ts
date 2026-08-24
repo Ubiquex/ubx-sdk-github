@@ -192,7 +192,7 @@ export interface RequestConfig {
   base: string | Computed<string>;
   /** The contents of the pull request. */
   body?: string | Computed<string>;
-  /** Indicates whether the pull request is a draft. See "[Draft Pull Requests](https://docs.github.com/articles/about-pull-requests#draft-pull-requests)" in the GitHub Help documentation to learn more. */
+  /** Indicates whether the pull request is a draft. See "[Draft Pull Requests](https://docs.github.com/enterprise-cloud@latest/articles/about-pull-requests#draft-pull-requests)" in the GitHub Help documentation to learn more. */
   draft?: boolean | Computed<boolean>;
   /** The name of the branch where your changes are implemented. For cross-repository pull requests in the same network, namespace `head` with a user like this: `username:branch`. */
   head: string | Computed<string>;
@@ -200,7 +200,7 @@ export interface RequestConfig {
   headRepo?: string | Computed<string>;
   /** An issue in the repository to convert to a pull request. The issue title, body, and comments will become the title, body, and comments on the new pull request. Required unless `title` is specified. */
   issue?: number | Computed<number>;
-  /** Indicates whether [maintainers can modify](https://docs.github.com/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request. */
+  /** Indicates whether [maintainers can modify](https://docs.github.com/enterprise-cloud@latest/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request. */
   maintainerCanModify?: boolean | Computed<boolean>;
   /** The title of the new pull request. Required unless `issue` is specified. */
   title?: string | Computed<string>;
@@ -249,7 +249,7 @@ export interface RequestAttrs {
   deletions: number;
   /** The URL to the diff file for this pull request. (AI-inferred) */
   diffUrl: string;
-  /** Indicates whether the pull request is a draft. See "[Draft Pull Requests](https://docs.github.com/articles/about-pull-requests#draft-pull-requests)" in the GitHub Help documentation to learn more. */
+  /** Indicates whether the pull request is a draft. See "[Draft Pull Requests](https://docs.github.com/enterprise-cloud@latest/articles/about-pull-requests#draft-pull-requests)" in the GitHub Help documentation to learn more. */
   draft: boolean;
   /** The name of the branch where your changes are implemented. For cross-repository pull requests in the same network, namespace `head` with a user like this: `username:branch`. */
   head: string;
@@ -266,7 +266,7 @@ export interface RequestAttrs {
   labels: Request_Labels[];
   /** Indicates whether the pull request conversation is locked, restricting commenting to users with write access. This is a read-only value set by GitHub. (AI-inferred) */
   locked: boolean;
-  /** Indicates whether [maintainers can modify](https://docs.github.com/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request. */
+  /** Indicates whether [maintainers can modify](https://docs.github.com/enterprise-cloud@latest/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request. */
   maintainerCanModify: boolean;
   /** The SHA of the merge commit created when the pull request is merged. This value is computed by GitHub and is only populated after a successful merge. (AI-inferred) */
   mergeCommitSha: string;

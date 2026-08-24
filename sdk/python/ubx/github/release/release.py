@@ -105,7 +105,7 @@ class Release_Reactions:
 class ReleaseConfig:
     # Text describing the contents of the tag.
     body: Any = None
-    # If specified, a discussion of the specified category is created and linked to the release. The value must be a category that already exists in the repository. For more information, see "[Managing categories for discussions in your repository](https://docs.github.com/discussions/managing-discussions-for-your-community/managing-categories-for-discussions-in-your-repository)."
+    # If specified, a discussion of the specified category is created and linked to the release. The value must be a category that already exists in the repository. For more information, see "[Managing categories for discussions in your repository](https://docs.github.com/enterprise-cloud@latest/discussions/managing-discussions-for-your-community/managing-categories-for-discussions-in-your-repository)."
     discussion_category_name: Any = None
     # `true` to create a draft (unpublished) release, `false` to create a published one.
     draft: Any = None
@@ -144,7 +144,7 @@ class ReleaseAttrs:
     body_text: Any = None
     # The timestamp of when the release was created, in ISO 8601 format (e.g., 2023-01-01T00:00:00Z). (AI-inferred)
     created_at: Any = None
-    # If specified, a discussion of the specified category is created and linked to the release. The value must be a category that already exists in the repository. For more information, see "[Managing categories for discussions in your repository](https://docs.github.com/discussions/managing-discussions-for-your-community/managing-categories-for-discussions-in-your-repository)."
+    # If specified, a discussion of the specified category is created and linked to the release. The value must be a category that already exists in the repository. For more information, see "[Managing categories for discussions in your repository](https://docs.github.com/enterprise-cloud@latest/discussions/managing-discussions-for-your-community/managing-categories-for-discussions-in-your-repository)."
     discussion_category_name: Any = None
     # The URL of the release discussion.
     discussion_url: Any = None

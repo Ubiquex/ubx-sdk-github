@@ -274,6 +274,7 @@ type Suite_Repository_SecurityAndAnalysis struct {
 	SecretScanningNonProviderPatterns any
 	// Settings for secret scanning push protection on the repository, indicating whether it is enabled or disabled. (AI-inferred)
 	SecretScanningPushProtection any
+	SecretScanningValidityChecks any
 }
 
 type Suite_Repository struct {

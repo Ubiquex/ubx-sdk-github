@@ -66,7 +66,7 @@ type HostedRunnerConfig struct {
 	// The machine size of the runner. To list available sizes, use `GET actions/hosted-runners/machine-sizes`
 	Size any
 	// path parameter, not part of the API's own resource representation
-	Org any
+	Enterprise any
 	// path parameter, not part of the API's own resource representation
 	HostedRunnerId any
 }
@@ -103,7 +103,7 @@ type HostedRunnerAttrs struct {
 	// The status of the runner.
 	Status any
 	// path parameter, not part of the API's own resource representation
-	Org any
+	Enterprise any
 	// path parameter, not part of the API's own resource representation
 	HostedRunnerId any
 }
@@ -122,7 +122,7 @@ var HostedRunner = ubx.ResourceBinding{
 		"Name": ubx.FieldSpec{WireName: "name"},
 		"RunnerGroupId": ubx.FieldSpec{WireName: "runner_group_id"},
 		"Size": ubx.FieldSpec{WireName: "size"},
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
 		"HostedRunnerId": ubx.FieldSpec{WireName: "hosted_runner_id"},
 	},
 }

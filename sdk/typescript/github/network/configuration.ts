@@ -8,12 +8,12 @@ export interface ConfigurationConfig {
   failoverNetworkEnabled?: boolean | Computed<boolean>;
   /** A list of identifiers of the failover network settings resources to use for the network configuration. Exactly one resource identifier must be specified in the list. */
   failoverNetworkSettingsIds?: string[] | Computed<string[]>;
-  /** Name of the network configuration. Must be between 1 and 100 characters and may only contain upper and lowercase letters a-z, numbers 0-9, '.', '-', and '_'. */
+  /** Name of the network configuration. Must be between 1 and 100 characters and may only contain upper and lowercase letters a-z, numbers 0-9, `.`, `-`, and `_`. */
   name: string | Computed<string>;
   /** A list of identifiers of the network settings resources to use for the network configuration. Exactly one resource identifier must be specified in the list. */
   networkSettingsIds: string[] | Computed<string[]>;
   /** path parameter, not part of the API's own resource representation */
-  org: string | Computed<string>;
+  enterprise: string | Computed<string>;
   /** path parameter, not part of the API's own resource representation */
   networkConfigurationId: string | Computed<string>;
 }
@@ -29,12 +29,12 @@ export interface ConfigurationAttrs {
   failoverNetworkSettingsIds: string[];
   /** The unique identifier of the network configuration. */
   id: string;
-  /** Name of the network configuration. Must be between 1 and 100 characters and may only contain upper and lowercase letters a-z, numbers 0-9, '.', '-', and '_'. */
+  /** Name of the network configuration. Must be between 1 and 100 characters and may only contain upper and lowercase letters a-z, numbers 0-9, `.`, `-`, and `_`. */
   name: string;
   /** A list of identifiers of the network settings resources to use for the network configuration. Exactly one resource identifier must be specified in the list. */
   networkSettingsIds: string[];
   /** path parameter, not part of the API's own resource representation */
-  org: string;
+  enterprise: string;
   /** path parameter, not part of the API's own resource representation */
   networkConfigurationId: string;
 }
@@ -47,7 +47,7 @@ export const Configuration: ResourceBinding<ConfigurationConfig, ConfigurationAt
     failoverNetworkSettingsIds: "failover_network_settings_ids",
     name: "name",
     networkSettingsIds: "network_settings_ids",
-    org: "org",
+    enterprise: "enterprise",
     networkConfigurationId: "network_configuration_id",
   },
 };
