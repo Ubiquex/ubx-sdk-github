@@ -22,11 +22,19 @@ Repo shape follows the same one-repo-per-provider convention (UBI-138) as
 ## Versioning
 
 GitHub publishes no discrete, pinnable release for its REST API description —
-the `schema_url` this provider fetches from
-(`github/rest-api-description/main/descriptions/api.github.com/api.github.com.json`)
-points at a live `main` branch, not a tagged version. There is no upstream
-version number to record the way the four Terraform-provider-sourced repos
-record `hashicorp/<provider>@X.Y.Z`.
+the `schema_url` this provider fetches from points at a live `main` branch,
+not a tagged version. There is no upstream version number to record the way
+the four Terraform-provider-sourced repos record `hashicorp/<provider>@X.Y.Z`.
+
+As of `1.1.0`, `schema_url` points at GitHub's own `ghec` description
+(`github/rest-api-description/main/descriptions/ghec/ghec.json`, GitHub
+Enterprise Cloud) instead of the plain `api.github.com` one — confirmed a
+clean, richer superset: all 68 resources `1.0.0` generated are present with
+equal-or-richer fields (zero regressions), plus 12 genuinely new ones. GHEC
+is not a separate hostname; GitHub.com customers on an Enterprise Cloud plan
+are served by the same real `api.github.com` REST API this repo's `base_url`
+already pointed at, just a richer published spec — so this is a straight
+repoint, not a second source to merge.
 
 `VERSION` instead records what was actually fetched: a SHA-256 of the raw
 spec bytes, the fetch date, and the source URL. A scheduled workflow

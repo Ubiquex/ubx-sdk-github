@@ -62,9 +62,9 @@ const Ruleset_RulesFields: FieldMap = {
 export interface RulesetConfig {
   /** The actors that can bypass the rules in this ruleset */
   bypassActors?: Ruleset_BypassActors[] | Computed<Ruleset_BypassActors[]>;
-  /** Conditions for an organization ruleset. The branch and tag rulesets conditions object should contain both `repository_name` and `ref_name` properties, or both `repository_id` and `ref_name` properties, or both `repository_property` and `ref_name` properties. The push rulesets conditions object does not require the `ref_name` property. For repository policy rulesets, the conditions object should only contain the `repository_name`, the `repository_id`, or the `repository_property`. */
+  /** Conditions for an enterprise ruleset. The `conditions` object supports either of the following combinations: - `organization_id` and `repository_name` - `organization_id` and `repository_property` - `organization_name` and `repository_name` - `organization_name` and `repository_property` - `organization_property` and `repository_name` - `organization_property` and `repository_property` For branch and tag rulesets, the `conditions` object should also contain the `ref_name` property. */
   conditions?: Ruleset_Conditions | Computed<Ruleset_Conditions>;
-  /** The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page (`evaluate` is only available with GitHub Enterprise). */
+  /** The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page. `evaluate` is not available for the `repository` target. */
   enforcement: string | Computed<string>;
   /** The name of the ruleset. */
   name: string | Computed<string>;
@@ -73,7 +73,7 @@ export interface RulesetConfig {
   /** The target of the ruleset */
   target?: string | Computed<string>;
   /** path parameter, not part of the API's own resource representation */
-  org: string | Computed<string>;
+  enterprise: string | Computed<string>;
   /** path parameter, not part of the API's own resource representation */
   rulesetId: string | Computed<string>;
 }
@@ -82,13 +82,13 @@ export interface RulesetAttrs {
   links: Ruleset_Links;
   /** The actors that can bypass the rules in this ruleset */
   bypassActors: Ruleset_BypassActors[];
-  /** Conditions for an organization ruleset. The branch and tag rulesets conditions object should contain both `repository_name` and `ref_name` properties, or both `repository_id` and `ref_name` properties, or both `repository_property` and `ref_name` properties. The push rulesets conditions object does not require the `ref_name` property. For repository policy rulesets, the conditions object should only contain the `repository_name`, the `repository_id`, or the `repository_property`. */
+  /** Conditions for an enterprise ruleset. The `conditions` object supports either of the following combinations: - `organization_id` and `repository_name` - `organization_id` and `repository_property` - `organization_name` and `repository_name` - `organization_name` and `repository_property` - `organization_property` and `repository_name` - `organization_property` and `repository_property` For branch and tag rulesets, the `conditions` object should also contain the `ref_name` property. */
   conditions: Ruleset_Conditions;
   /** The timestamp indicating when the repository ruleset was created. (AI-inferred) */
   createdAt: string;
   /** The bypass type of the user making the API request for this ruleset. This field is only returned when querying the repository-level endpoint. */
   currentUserCanBypass: string;
-  /** The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page (`evaluate` is only available with GitHub Enterprise). */
+  /** The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page. `evaluate` is not available for the `repository` target. */
   enforcement: string;
   /** The ID of the ruleset */
   id: number;
@@ -107,7 +107,7 @@ export interface RulesetAttrs {
   /** The timestamp of the last update to the ruleset. (AI-inferred) */
   updatedAt: string;
   /** path parameter, not part of the API's own resource representation */
-  org: string;
+  enterprise: string;
   /** path parameter, not part of the API's own resource representation */
   rulesetId: string;
 }
@@ -133,7 +133,7 @@ export const Ruleset: ResourceBinding<RulesetConfig, RulesetAttrs> = {
       fields: Ruleset_RulesFields,
     },
     target: "target",
-    org: "org",
+    enterprise: "enterprise",
     rulesetId: "ruleset_id",
   },
 };

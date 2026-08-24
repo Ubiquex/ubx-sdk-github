@@ -7,7 +7,7 @@ export interface Hook_Config {
   /** Controls whether SSL verification is enabled for webhook deliveries. Set to '1' or true to ignore SSL certificate errors, or '0' or false to require valid certificates. Accepts both boolean and string values due to its dynamic type. (AI-inferred) */
   insecureSsl?: unknown | Computed<unknown>;
   password?: string | Computed<string>;
-  /** If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value for [delivery signature headers](https://docs.github.com/webhooks/event-payloads/#delivery-headers). */
+  /** If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value for [delivery signature headers](https://docs.github.com/enterprise-cloud@latest/webhooks/event-payloads/#delivery-headers). */
   secret?: string | Computed<string>;
   /** The URL to which the payloads will be delivered. */
   url: string | Computed<string>;
@@ -28,7 +28,7 @@ export interface HookConfig {
   active?: boolean | Computed<boolean>;
   /** Key/value pairs to provide settings for this webhook. */
   config: Hook_Config | Computed<Hook_Config>;
-  /** Determines what [events](https://docs.github.com/webhooks/event-payloads) the hook is triggered for. Set to `["*"]` to receive all possible events. */
+  /** Determines what [events](https://docs.github.com/enterprise-cloud@latest/webhooks/event-payloads) the hook is triggered for. Set to `["*"]` to receive all possible events. */
   events?: string[] | Computed<string[]>;
   /** Must be passed as "web". */
   name: string | Computed<string>;
@@ -47,7 +47,7 @@ export interface HookAttrs {
   createdAt: string;
   /** The URL to list the webhook deliveries for this organization webhook. (AI-inferred) */
   deliveriesUrl: string;
-  /** Determines what [events](https://docs.github.com/webhooks/event-payloads) the hook is triggered for. Set to `["*"]` to receive all possible events. */
+  /** Determines what [events](https://docs.github.com/enterprise-cloud@latest/webhooks/event-payloads) the hook is triggered for. Set to `["*"]` to receive all possible events. */
   events: string[];
   id: number;
   /** Must be passed as "web". */

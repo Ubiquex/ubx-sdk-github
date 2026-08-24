@@ -92,7 +92,7 @@ export interface RequestReviewConfig {
   comments?: RequestReview_Comments[] | Computed<RequestReview_Comments[]>;
   /** The SHA of the commit that needs a review. Not using the latest commit SHA may render your review comment outdated if a subsequent commit modifies the line you specify as the `position`. Defaults to the most recent commit in the pull request when you do not specify a value. */
   commitId?: string | Computed<string>;
-  /** The review action you want to perform. The review actions include: `APPROVE`, `REQUEST_CHANGES`, or `COMMENT`. By leaving this blank, you set the review action state to `PENDING`, which means you will need to [submit the pull request review](https://docs.github.com/rest/pulls/reviews#submit-a-review-for-a-pull-request) when you are ready. */
+  /** The review action you want to perform. The review actions include: `APPROVE`, `REQUEST_CHANGES`, or `COMMENT`. By leaving this blank, you set the review action state to `PENDING`, which means you will need to [submit the pull request review](https://docs.github.com/enterprise-cloud@latest/rest/pulls/reviews#submit-a-review-for-a-pull-request) when you are ready. */
   event?: string | Computed<string>;
   /** path parameter, not part of the API's own resource representation */
   owner: string | Computed<string>;
@@ -119,7 +119,7 @@ export interface RequestReviewAttrs {
   comments: RequestReview_Comments[];
   /** The SHA of the commit that needs a review. Not using the latest commit SHA may render your review comment outdated if a subsequent commit modifies the line you specify as the `position`. Defaults to the most recent commit in the pull request when you do not specify a value. */
   commitId: string;
-  /** The review action you want to perform. The review actions include: `APPROVE`, `REQUEST_CHANGES`, or `COMMENT`. By leaving this blank, you set the review action state to `PENDING`, which means you will need to [submit the pull request review](https://docs.github.com/rest/pulls/reviews#submit-a-review-for-a-pull-request) when you are ready. */
+  /** The review action you want to perform. The review actions include: `APPROVE`, `REQUEST_CHANGES`, or `COMMENT`. By leaving this blank, you set the review action state to `PENDING`, which means you will need to [submit the pull request review](https://docs.github.com/enterprise-cloud@latest/rest/pulls/reviews#submit-a-review-for-a-pull-request) when you are ready. */
   event: string;
   /** The GitHub URL for the pull request review. (AI-inferred) */
   htmlUrl: string;

@@ -19,7 +19,7 @@ type PropertyConfig struct {
 	// Who can edit the values of the property
 	ValuesEditableBy any
 	// path parameter, not part of the API's own resource representation
-	Org any
+	Enterprise any
 	// path parameter, not part of the API's own resource representation
 	CustomPropertyName any
 }
@@ -46,7 +46,7 @@ type PropertyAttrs struct {
 	// Who can edit the values of the property
 	ValuesEditableBy any
 	// path parameter, not part of the API's own resource representation
-	Org any
+	Enterprise any
 	// path parameter, not part of the API's own resource representation
 	CustomPropertyName any
 }
@@ -61,7 +61,7 @@ var Property = ubx.ResourceBinding{
 		"Required": ubx.FieldSpec{WireName: "required"},
 		"ValueType": ubx.FieldSpec{WireName: "value_type"},
 		"ValuesEditableBy": ubx.FieldSpec{WireName: "values_editable_by"},
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
 		"CustomPropertyName": ubx.FieldSpec{WireName: "custom_property_name"},
 	},
 }

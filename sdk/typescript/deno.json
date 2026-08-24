@@ -1,7 +1,10 @@
 {
   "name": "@ubx/sdk-github",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "Apache-2.0",
+  "imports": {
+    "@ubx/sdk": "jsr:@ubx/sdk@^0.1.0"
+  },
   "exports": {
     "./github/actions/doc": "./github/actions/doc.ts",
     "./github/actions/hosted_runner": "./github/actions/hosted_runner.ts",
@@ -34,6 +37,8 @@
     "./github/copilot/space_resource": "./github/copilot/space_resource.ts",
     "./github/custom/doc": "./github/custom/doc.ts",
     "./github/custom/property": "./github/custom/property.ts",
+    "./github/dependabot/alert_dismissal_request": "./github/dependabot/alert_dismissal_request.ts",
+    "./github/dependabot/doc": "./github/dependabot/doc.ts",
     "./github/deploy/doc": "./github/deploy/doc.ts",
     "./github/deploy/key": "./github/deploy/key.ts",
     "./github/deployment/branch_policy": "./github/deployment/branch_policy.ts",
@@ -47,7 +52,9 @@
     "./github/environment/environment": "./github/environment/environment.ts",
     "./github/full/doc": "./github/full/doc.ts",
     "./github/full/repository": "./github/full/repository.ts",
+    "./github/get/audit_log_stream_config": "./github/get/audit_log_stream_config.ts",
     "./github/get/budget": "./github/get/budget.ts",
+    "./github/get/cost_center": "./github/get/cost_center.ts",
     "./github/get/doc": "./github/get/doc.ts",
     "./github/gist/comment": "./github/gist/comment.ts",
     "./github/gist/doc": "./github/gist/doc.ts",
@@ -61,6 +68,8 @@
     "./github/gpg/key": "./github/gpg/key.ts",
     "./github/hook/doc": "./github/hook/doc.ts",
     "./github/hook/hook": "./github/hook/hook.ts",
+    "./github/installation/doc": "./github/installation/doc.ts",
+    "./github/installation/installation": "./github/installation/installation.ts",
     "./github/issue/comment": "./github/issue/comment.ts",
     "./github/issue/doc": "./github/issue/doc.ts",
     "./github/issue/issue": "./github/issue/issue.ts",
@@ -81,7 +90,10 @@
     "./github/org/membership": "./github/org/membership.ts",
     "./github/org/private_registry_configuration": "./github/org/private_registry_configuration.ts",
     "./github/organization/actions_variable": "./github/organization/actions_variable.ts",
+    "./github/organization/custom_property": "./github/organization/custom_property.ts",
+    "./github/organization/custom_repository_role": "./github/organization/custom_repository_role.ts",
     "./github/organization/doc": "./github/organization/doc.ts",
+    "./github/organization/role": "./github/organization/role.ts",
     "./github/organization/simple": "./github/organization/simple.ts",
     "./github/page/build": "./github/page/build.ts",
     "./github/page/doc": "./github/page/doc.ts",
@@ -102,7 +114,12 @@
     "./github/repository/doc": "./github/repository/doc.ts",
     "./github/repository/ruleset": "./github/repository/ruleset.ts",
     "./github/runner/doc": "./github/runner/doc.ts",
+    "./github/runner/groups_enterprise": "./github/runner/groups_enterprise.ts",
     "./github/runner/groups_org": "./github/runner/groups_org.ts",
+    "./github/scim/doc": "./github/scim/doc.ts",
+    "./github/scim/enterprise_group_response": "./github/scim/enterprise_group_response.ts",
+    "./github/scim/enterprise_user_response": "./github/scim/enterprise_user_response.ts",
+    "./github/scim/user": "./github/scim/user.ts",
     "./github/simple/doc": "./github/simple/doc.ts",
     "./github/simple/user": "./github/simple/user.ts",
     "./github/ssh/doc": "./github/ssh/doc.ts",
@@ -113,6 +130,8 @@
     "./github/task/task": "./github/task/task.ts",
     "./github/team/doc": "./github/team/doc.ts",
     "./github/team/full": "./github/team/full.ts",
-    "./github/team/membership": "./github/team/membership.ts"
+    "./github/team/membership": "./github/team/membership.ts",
+    "./github/usage/doc": "./github/usage/doc.ts",
+    "./github/usage/report_export": "./github/usage/report_export.ts"
   }
 }

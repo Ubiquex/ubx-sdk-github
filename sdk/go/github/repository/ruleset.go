@@ -64,9 +64,9 @@ var Ruleset_RulesFields = ubx.FieldMap{
 type RulesetConfig struct {
 	// The actors that can bypass the rules in this ruleset
 	BypassActors any
-	// Conditions for an organization ruleset. The branch and tag rulesets conditions object should contain both `repository_name` and `ref_name` properties, or both `repository_id` and `ref_name` properties, or both `repository_property` and `ref_name` properties. The push rulesets conditions object does not require the `ref_name` property. For repository policy rulesets, the conditions object should only contain the `repository_name`, the `repository_id`, or the `repository_property`.
+	// Conditions for an enterprise ruleset. The `conditions` object supports either of the following combinations: - `organization_id` and `repository_name` - `organization_id` and `repository_property` - `organization_name` and `repository_name` - `organization_name` and `repository_property` - `organization_property` and `repository_name` - `organization_property` and `repository_property` For branch and tag rulesets, the `conditions` object should also contain the `ref_name` property.
 	Conditions any
-	// The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page (`evaluate` is only available with GitHub Enterprise).
+	// The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page. `evaluate` is not available for the `repository` target.
 	Enforcement any
 	// The name of the ruleset.
 	Name any
@@ -75,7 +75,7 @@ type RulesetConfig struct {
 	// The target of the ruleset
 	Target any
 	// path parameter, not part of the API's own resource representation
-	Org any
+	Enterprise any
 	// path parameter, not part of the API's own resource representation
 	RulesetId any
 }
@@ -84,13 +84,13 @@ type RulesetAttrs struct {
 	Links any
 	// The actors that can bypass the rules in this ruleset
 	BypassActors any
-	// Conditions for an organization ruleset. The branch and tag rulesets conditions object should contain both `repository_name` and `ref_name` properties, or both `repository_id` and `ref_name` properties, or both `repository_property` and `ref_name` properties. The push rulesets conditions object does not require the `ref_name` property. For repository policy rulesets, the conditions object should only contain the `repository_name`, the `repository_id`, or the `repository_property`.
+	// Conditions for an enterprise ruleset. The `conditions` object supports either of the following combinations: - `organization_id` and `repository_name` - `organization_id` and `repository_property` - `organization_name` and `repository_name` - `organization_name` and `repository_property` - `organization_property` and `repository_name` - `organization_property` and `repository_property` For branch and tag rulesets, the `conditions` object should also contain the `ref_name` property.
 	Conditions any
 	// The timestamp indicating when the repository ruleset was created. (AI-inferred)
 	CreatedAt any
 	// The bypass type of the user making the API request for this ruleset. This field is only returned when querying the repository-level endpoint.
 	CurrentUserCanBypass any
-	// The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page (`evaluate` is only available with GitHub Enterprise).
+	// The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page. `evaluate` is not available for the `repository` target.
 	Enforcement any
 	// The ID of the ruleset
 	Id any
@@ -109,7 +109,7 @@ type RulesetAttrs struct {
 	// The timestamp of the last update to the ruleset. (AI-inferred)
 	UpdatedAt any
 	// path parameter, not part of the API's own resource representation
-	Org any
+	Enterprise any
 	// path parameter, not part of the API's own resource representation
 	RulesetId any
 }
@@ -135,7 +135,7 @@ var Ruleset = ubx.ResourceBinding{
 			Fields: Ruleset_RulesFields,
 		},
 		"Target": ubx.FieldSpec{WireName: "target"},
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
 		"RulesetId": ubx.FieldSpec{WireName: "ruleset_id"},
 	},
 }

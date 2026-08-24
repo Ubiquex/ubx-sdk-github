@@ -5,4 +5,7 @@
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
 from .actions_variable import ActionsVariable, ActionsVariableConfig
+from .custom_property import CustomProperty, CustomPropertyConfig
+from .custom_repository_role import CustomRepositoryRole, CustomRepositoryRoleConfig
+from .role import Role, RoleConfig
 from .simple import Simple, SimpleConfig

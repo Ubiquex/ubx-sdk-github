@@ -70,7 +70,7 @@ class HostedRunnerConfig:
     # The machine size of the runner. To list available sizes, use `GET actions/hosted-runners/machine-sizes`
     size: Any = None
     # path parameter, not part of the API's own resource representation
-    org: Any = None
+    enterprise: Any = None
     # path parameter, not part of the API's own resource representation
     hosted_runner_id: Any = None
 
@@ -107,7 +107,7 @@ class HostedRunnerAttrs:
     # The status of the runner.
     status: Any = None
     # path parameter, not part of the API's own resource representation
-    org: Any = None
+    enterprise: Any = None
     # path parameter, not part of the API's own resource representation
     hosted_runner_id: Any = None
 
@@ -125,7 +125,7 @@ HostedRunner = ubx.ResourceBinding(
         "name": ubx.FieldSpec(wire_name="name"),
         "runner_group_id": ubx.FieldSpec(wire_name="runner_group_id"),
         "size": ubx.FieldSpec(wire_name="size"),
-        "org": ubx.FieldSpec(wire_name="org"),
+        "enterprise": ubx.FieldSpec(wire_name="enterprise"),
         "hosted_runner_id": ubx.FieldSpec(wire_name="hosted_runner_id"),
     },
 )

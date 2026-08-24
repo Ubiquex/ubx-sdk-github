@@ -14,12 +14,12 @@ class ConfigurationConfig:
     failover_network_enabled: Any = None
     # A list of identifiers of the failover network settings resources to use for the network configuration. Exactly one resource identifier must be specified in the list.
     failover_network_settings_ids: Any = None
-    # Name of the network configuration. Must be between 1 and 100 characters and may only contain upper and lowercase letters a-z, numbers 0-9, '.', '-', and '_'.
+    # Name of the network configuration. Must be between 1 and 100 characters and may only contain upper and lowercase letters a-z, numbers 0-9, `.`, `-`, and `_`.
     name: Any = None
     # A list of identifiers of the network settings resources to use for the network configuration. Exactly one resource identifier must be specified in the list.
     network_settings_ids: Any = None
     # path parameter, not part of the API's own resource representation
-    org: Any = None
+    enterprise: Any = None
     # path parameter, not part of the API's own resource representation
     network_configuration_id: Any = None
 
@@ -35,12 +35,12 @@ class ConfigurationAttrs:
     failover_network_settings_ids: Any = None
     # The unique identifier of the network configuration.
     id: Any = None
-    # Name of the network configuration. Must be between 1 and 100 characters and may only contain upper and lowercase letters a-z, numbers 0-9, '.', '-', and '_'.
+    # Name of the network configuration. Must be between 1 and 100 characters and may only contain upper and lowercase letters a-z, numbers 0-9, `.`, `-`, and `_`.
     name: Any = None
     # A list of identifiers of the network settings resources to use for the network configuration. Exactly one resource identifier must be specified in the list.
     network_settings_ids: Any = None
     # path parameter, not part of the API's own resource representation
-    org: Any = None
+    enterprise: Any = None
     # path parameter, not part of the API's own resource representation
     network_configuration_id: Any = None
 
@@ -52,7 +52,7 @@ Configuration = ubx.ResourceBinding(
         "failover_network_settings_ids": ubx.FieldSpec(wire_name="failover_network_settings_ids"),
         "name": ubx.FieldSpec(wire_name="name"),
         "network_settings_ids": ubx.FieldSpec(wire_name="network_settings_ids"),
-        "org": ubx.FieldSpec(wire_name="org"),
+        "enterprise": ubx.FieldSpec(wire_name="enterprise"),
         "network_configuration_id": ubx.FieldSpec(wire_name="network_configuration_id"),
     },
 )

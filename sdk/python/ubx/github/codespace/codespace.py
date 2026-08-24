@@ -159,6 +159,7 @@ class Codespace_Repository_SecurityAndAnalysis:
     secret_scanning_non_provider_patterns: Any = None
     # Configuration for secret scanning push protection on the repository. This feature helps prevent secrets from being pushed by blocking the push if a secret is detected. (AI-inferred)
     secret_scanning_push_protection: Any = None
+    secret_scanning_validity_checks: Any = None
 
 @dataclasses.dataclass
 class Codespace_Repository:

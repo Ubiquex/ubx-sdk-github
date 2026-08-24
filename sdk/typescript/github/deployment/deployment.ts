@@ -157,7 +157,7 @@ export interface DeploymentConfig {
   productionEnvironment?: boolean | Computed<boolean>;
   /** The ref to deploy. This can be a branch, tag, or SHA. */
   ref: string | Computed<string>;
-  /** The [status](https://docs.github.com/rest/commits/statuses) contexts to verify against commit status checks. If you omit this parameter, GitHub verifies all unique contexts before creating a deployment. To bypass checking entirely, pass an empty array. Defaults to all unique contexts. */
+  /** The [status](https://docs.github.com/enterprise-cloud@latest/rest/commits/statuses) contexts to verify against commit status checks. If you omit this parameter, GitHub verifies all unique contexts before creating a deployment. To bypass checking entirely, pass an empty array. Defaults to all unique contexts. */
   requiredContexts?: string[] | Computed<string[]>;
   /** Specifies a task to execute (e.g., `deploy` or `deploy:migrations`). */
   task?: string | Computed<string>;
@@ -198,7 +198,7 @@ export interface DeploymentAttrs {
   ref: string;
   /** The URL of the repository associated with this deployment. This value is computed by the provider. (AI-inferred) */
   repositoryUrl: string;
-  /** The [status](https://docs.github.com/rest/commits/statuses) contexts to verify against commit status checks. If you omit this parameter, GitHub verifies all unique contexts before creating a deployment. To bypass checking entirely, pass an empty array. Defaults to all unique contexts. */
+  /** The [status](https://docs.github.com/enterprise-cloud@latest/rest/commits/statuses) contexts to verify against commit status checks. If you omit this parameter, GitHub verifies all unique contexts before creating a deployment. To bypass checking entirely, pass an empty array. Defaults to all unique contexts. */
   requiredContexts: string[];
   /** The SHA of the commit that is being deployed. (AI-inferred) */
   sha: string;

@@ -153,6 +153,7 @@ export interface Codespace_Repository_SecurityAndAnalysis {
   secretScanningNonProviderPatterns?: Codespace_Repository_SecurityAndAnalysis_AdvancedSecurity | Computed<Codespace_Repository_SecurityAndAnalysis_AdvancedSecurity>;
   /** Configuration for secret scanning push protection on the repository. This feature helps prevent secrets from being pushed by blocking the push if a secret is detected. (AI-inferred) */
   secretScanningPushProtection?: Codespace_Repository_SecurityAndAnalysis_AdvancedSecurity | Computed<Codespace_Repository_SecurityAndAnalysis_AdvancedSecurity>;
+  secretScanningValidityChecks?: Codespace_Repository_SecurityAndAnalysis_AdvancedSecurity | Computed<Codespace_Repository_SecurityAndAnalysis_AdvancedSecurity>;
 }
 
 export interface Codespace_Repository {

@@ -3,9 +3,9 @@ import type { Computed, FieldMap, ResourceBinding } from "@ubx/sdk";
 
 export interface Budget_BudgetAlerting {
   /** Array of user login names who will receive alerts. Rejected for user-scope as alerting is always disabled for them. */
-  alertRecipients?: string[] | Computed<string[]>;
+  alertRecipients: string[] | Computed<string[]>;
   /** Whether alerts are enabled for this budget. Rejected for user-scope as alerting is always disabled for them. */
-  willAlert?: boolean | Computed<boolean>;
+  willAlert: boolean | Computed<boolean>;
 }
 
 const Budget_BudgetAlertingFields: FieldMap = {
@@ -14,23 +14,23 @@ const Budget_BudgetAlertingFields: FieldMap = {
 };
 
 export interface BudgetConfig {
-  budgetAlerting?: Budget_BudgetAlerting | Computed<Budget_BudgetAlerting>;
+  budgetAlerting: Budget_BudgetAlerting | Computed<Budget_BudgetAlerting>;
   /** The budget amount in whole dollars. For license-based products, this represents the number of licenses. */
-  budgetAmount?: number | Computed<number>;
+  budgetAmount: number | Computed<number>;
   /** The name of the entity to apply the budget to */
   budgetEntityName?: string | Computed<string>;
   /** A single product or SKU that will be covered in the budget */
   budgetProductSku?: string | Computed<string>;
-  /** The scope of the budget for this organization. - `organization`: Apply the budget to the organization. - `repository`: Apply the budget to a specific repository in the organization. - `multi_user_customer`: Apply a universal budget to all users in the organization. - `user`: Apply the budget to a single user in the organization. `user` and `multi_user_customer` scopes are only supported when `budget_product_sku` is `ai_credits` or `premium_requests`. */
-  budgetScope?: string | Computed<string>;
+  /** The scope of the budget. - `enterprise`: Apply the budget to the entire enterprise. - `organization`: Apply the budget to a specific organization in the enterprise. - `repository`: Apply the budget to a specific repository. - `cost_center`: Apply the budget to a specific cost center. - `multi_user_customer`: Apply a universal budget to all users in the enterprise. - `multi_user_cost_center`: Apply a universal budget to all users in a cost center. - `user`: Apply the budget to a single user. `user`, `multi_user_customer`, and `multi_user_cost_center` scopes are only supported when `budget_product_sku` is `ai_credits` or `premium_requests`. */
+  budgetScope: string | Computed<string>;
   /** The type of pricing model used by the budget. Determines how `budget_product_sku` is interpreted. - `BundlePricing`: Covers all AI credit SKUs. Set `budget_product_sku` to `ai_credits`. - `ProductPricing`: Covers all SKUs that belong to a product. Set `budget_product_sku` to a product such as `actions` or `packages`. - `SkuPricing`: Covers a single, specific SKU. Set `budget_product_sku` to a SKU such as `actions_linux`. */
-  budgetType?: string | Computed<string>;
+  budgetType: string | Computed<string>;
   /** Whether to prevent additional spending once the budget is exceeded. For `user` and `multi_user_customer` scopes, this must be `true`. */
-  preventFurtherUsage?: boolean | Computed<boolean>;
+  preventFurtherUsage: boolean | Computed<boolean>;
   /** The username of the user for `user` scope budgets. This field is required when `budget_scope` is `user`. */
   user?: string | Computed<string>;
   /** path parameter, not part of the API's own resource representation */
-  org: string | Computed<string>;
+  enterprise: string | Computed<string>;
   /** path parameter, not part of the API's own resource representation */
   budgetId: string | Computed<string>;
 }
@@ -43,7 +43,7 @@ export interface BudgetAttrs {
   budgetEntityName: string;
   /** A single product or SKU that will be covered in the budget */
   budgetProductSku: string;
-  /** The scope of the budget for this organization. - `organization`: Apply the budget to the organization. - `repository`: Apply the budget to a specific repository in the organization. - `multi_user_customer`: Apply a universal budget to all users in the organization. - `user`: Apply the budget to a single user in the organization. `user` and `multi_user_customer` scopes are only supported when `budget_product_sku` is `ai_credits` or `premium_requests`. */
+  /** The scope of the budget. - `enterprise`: Apply the budget to the entire enterprise. - `organization`: Apply the budget to a specific organization in the enterprise. - `repository`: Apply the budget to a specific repository. - `cost_center`: Apply the budget to a specific cost center. - `multi_user_customer`: Apply a universal budget to all users in the enterprise. - `multi_user_cost_center`: Apply a universal budget to all users in a cost center. - `user`: Apply the budget to a single user. `user`, `multi_user_customer`, and `multi_user_cost_center` scopes are only supported when `budget_product_sku` is `ai_credits` or `premium_requests`. */
   budgetScope: string;
   /** The type of pricing model used by the budget. Determines how `budget_product_sku` is interpreted. - `BundlePricing`: Covers all AI credit SKUs. Set `budget_product_sku` to `ai_credits`. - `ProductPricing`: Covers all SKUs that belong to a product. Set `budget_product_sku` to a product such as `actions` or `packages`. - `SkuPricing`: Covers a single, specific SKU. Set `budget_product_sku` to a SKU such as `actions_linux`. */
   budgetType: string;
@@ -54,7 +54,7 @@ export interface BudgetAttrs {
   /** The username of the user for `user` scope budgets. This field is required when `budget_scope` is `user`. */
   user: string;
   /** path parameter, not part of the API's own resource representation */
-  org: string;
+  enterprise: string;
   /** path parameter, not part of the API's own resource representation */
   budgetId: string;
 }
@@ -74,7 +74,7 @@ export const Budget: ResourceBinding<BudgetConfig, BudgetAttrs> = {
     budgetType: "budget_type",
     preventFurtherUsage: "prevent_further_usage",
     user: "user",
-    org: "org",
+    enterprise: "enterprise",
     budgetId: "budget_id",
   },
 };

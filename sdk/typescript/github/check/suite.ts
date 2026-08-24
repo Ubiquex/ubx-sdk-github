@@ -272,6 +272,7 @@ export interface Suite_Repository_SecurityAndAnalysis {
   secretScanningNonProviderPatterns?: Suite_Repository_SecurityAndAnalysis_AdvancedSecurity | Computed<Suite_Repository_SecurityAndAnalysis_AdvancedSecurity>;
   /** Settings for secret scanning push protection on the repository, indicating whether it is enabled or disabled. (AI-inferred) */
   secretScanningPushProtection?: Suite_Repository_SecurityAndAnalysis_AdvancedSecurity | Computed<Suite_Repository_SecurityAndAnalysis_AdvancedSecurity>;
+  secretScanningValidityChecks?: Suite_Repository_SecurityAndAnalysis_AdvancedSecurity | Computed<Suite_Repository_SecurityAndAnalysis_AdvancedSecurity>;
 }
 
 export interface Suite_Repository {

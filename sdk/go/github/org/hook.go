@@ -9,7 +9,7 @@ type Hook_Config struct {
 	// Controls whether SSL verification is enabled for webhook deliveries. Set to '1' or true to ignore SSL certificate errors, or '0' or false to require valid certificates. Accepts both boolean and string values due to its dynamic type. (AI-inferred)
 	InsecureSsl any
 	Password any
-	// If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value for [delivery signature headers](https://docs.github.com/webhooks/event-payloads/#delivery-headers).
+	// If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value for [delivery signature headers](https://docs.github.com/enterprise-cloud@latest/webhooks/event-payloads/#delivery-headers).
 	Secret any
 	// The URL to which the payloads will be delivered.
 	Url any
@@ -30,7 +30,7 @@ type HookConfig struct {
 	Active any
 	// Key/value pairs to provide settings for this webhook.
 	Config any
-	// Determines what [events](https://docs.github.com/webhooks/event-payloads) the hook is triggered for. Set to `["*"]` to receive all possible events.
+	// Determines what [events](https://docs.github.com/enterprise-cloud@latest/webhooks/event-payloads) the hook is triggered for. Set to `["*"]` to receive all possible events.
 	Events any
 	// Must be passed as "web".
 	Name any
@@ -49,7 +49,7 @@ type HookAttrs struct {
 	CreatedAt any
 	// The URL to list the webhook deliveries for this organization webhook. (AI-inferred)
 	DeliveriesUrl any
-	// Determines what [events](https://docs.github.com/webhooks/event-payloads) the hook is triggered for. Set to `["*"]` to receive all possible events.
+	// Determines what [events](https://docs.github.com/enterprise-cloud@latest/webhooks/event-payloads) the hook is triggered for. Set to `["*"]` to receive all possible events.
 	Events any
 	Id any
 	// Must be passed as "web".

@@ -69,9 +69,9 @@ _Ruleset_RulesFields = {
 class RulesetConfig:
     # The actors that can bypass the rules in this ruleset
     bypass_actors: Any = None
-    # Conditions for an organization ruleset. The branch and tag rulesets conditions object should contain both `repository_name` and `ref_name` properties, or both `repository_id` and `ref_name` properties, or both `repository_property` and `ref_name` properties. The push rulesets conditions object does not require the `ref_name` property. For repository policy rulesets, the conditions object should only contain the `repository_name`, the `repository_id`, or the `repository_property`.
+    # Conditions for an enterprise ruleset. The `conditions` object supports either of the following combinations: - `organization_id` and `repository_name` - `organization_id` and `repository_property` - `organization_name` and `repository_name` - `organization_name` and `repository_property` - `organization_property` and `repository_name` - `organization_property` and `repository_property` For branch and tag rulesets, the `conditions` object should also contain the `ref_name` property.
     conditions: Any = None
-    # The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page (`evaluate` is only available with GitHub Enterprise).
+    # The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page. `evaluate` is not available for the `repository` target.
     enforcement: Any = None
     # The name of the ruleset.
     name: Any = None
@@ -80,7 +80,7 @@ class RulesetConfig:
     # The target of the ruleset
     target: Any = None
     # path parameter, not part of the API's own resource representation
-    org: Any = None
+    enterprise: Any = None
     # path parameter, not part of the API's own resource representation
     ruleset_id: Any = None
 
@@ -89,13 +89,13 @@ class RulesetAttrs:
     links: Any = None
     # The actors that can bypass the rules in this ruleset
     bypass_actors: Any = None
-    # Conditions for an organization ruleset. The branch and tag rulesets conditions object should contain both `repository_name` and `ref_name` properties, or both `repository_id` and `ref_name` properties, or both `repository_property` and `ref_name` properties. The push rulesets conditions object does not require the `ref_name` property. For repository policy rulesets, the conditions object should only contain the `repository_name`, the `repository_id`, or the `repository_property`.
+    # Conditions for an enterprise ruleset. The `conditions` object supports either of the following combinations: - `organization_id` and `repository_name` - `organization_id` and `repository_property` - `organization_name` and `repository_name` - `organization_name` and `repository_property` - `organization_property` and `repository_name` - `organization_property` and `repository_property` For branch and tag rulesets, the `conditions` object should also contain the `ref_name` property.
     conditions: Any = None
     # The timestamp indicating when the repository ruleset was created. (AI-inferred)
     created_at: Any = None
     # The bypass type of the user making the API request for this ruleset. This field is only returned when querying the repository-level endpoint.
     current_user_can_bypass: Any = None
-    # The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page (`evaluate` is only available with GitHub Enterprise).
+    # The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page. `evaluate` is not available for the `repository` target.
     enforcement: Any = None
     # The ID of the ruleset
     id: Any = None
@@ -114,7 +114,7 @@ class RulesetAttrs:
     # The timestamp of the last update to the ruleset. (AI-inferred)
     updated_at: Any = None
     # path parameter, not part of the API's own resource representation
-    org: Any = None
+    enterprise: Any = None
     # path parameter, not part of the API's own resource representation
     ruleset_id: Any = None
 
@@ -139,7 +139,7 @@ Ruleset = ubx.ResourceBinding(
             fields=_Ruleset_RulesFields,
         ),
         "target": ubx.FieldSpec(wire_name="target"),
-        "org": ubx.FieldSpec(wire_name="org"),
+        "enterprise": ubx.FieldSpec(wire_name="enterprise"),
         "ruleset_id": ubx.FieldSpec(wire_name="ruleset_id"),
     },
 )

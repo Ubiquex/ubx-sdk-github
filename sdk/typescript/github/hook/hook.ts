@@ -6,7 +6,7 @@ export interface Hook_Config {
   contentType?: string | Computed<string>;
   /** Controls whether GitHub disables SSL verification when delivering webhook payloads. Accepts '0' or false to enable verification, and '1' or true to allow insecure connections (e.g., self-signed certificates). (AI-inferred) */
   insecureSsl?: unknown | Computed<unknown>;
-  /** If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value for [delivery signature headers](https://docs.github.com/webhooks/event-payloads/#delivery-headers). */
+  /** If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value for [delivery signature headers](https://docs.github.com/enterprise-cloud@latest/webhooks/event-payloads/#delivery-headers). */
   secret?: string | Computed<string>;
   /** The URL to which the payloads will be delivered. */
   url?: string | Computed<string>;
@@ -33,7 +33,7 @@ export interface HookConfig {
   active?: boolean | Computed<boolean>;
   /** Key/value pairs to provide settings for this webhook. */
   config?: Hook_Config | Computed<Hook_Config>;
-  /** Determines what [events](https://docs.github.com/webhooks/event-payloads) the hook is triggered for. */
+  /** Determines what [events](https://docs.github.com/enterprise-cloud@latest/webhooks/event-payloads) the hook is triggered for. */
   events?: string[] | Computed<string[]>;
   /** Use `web` to create a webhook. Default: `web`. This parameter only accepts the value `web`. */
   name?: string | Computed<string>;
@@ -54,7 +54,7 @@ export interface HookAttrs {
   createdAt: string;
   /** The URL to the API endpoint for listing deliveries of this webhook. (AI-inferred) */
   deliveriesUrl: string;
-  /** Determines what [events](https://docs.github.com/webhooks/event-payloads) the hook is triggered for. */
+  /** Determines what [events](https://docs.github.com/enterprise-cloud@latest/webhooks/event-payloads) the hook is triggered for. */
   events: string[];
   /** Unique identifier of the webhook. */
   id: number;
