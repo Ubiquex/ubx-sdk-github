@@ -31,6 +31,25 @@ name: hash-watch
 # from 80 resources back to 68. Fixed here, all three references now
 # point at ghec, matching VERSION and the real, currently-configured
 # [dynamic_providers.github] in ubiquex.
+#
+# 1.2.0: switched from raw byte hashing to the same canonicalized-content
+# hashing every other repo in this org uses. This file happened to work
+# correctly on raw bytes because ghec.json is a single static file served
+# from raw.githubusercontent.com's own main branch and is byte-stable --
+# confirmed live, three independent fetches, identical bytes every time.
+# That stability is a property of this one source, not of the design --
+# leaving this repo on a different method than Datadog/Azure/Google
+# (which all needed canonicalization to survive real, live serving
+# inconsistencies on their own sources) is how a real gap survives
+# unnoticed until something upstream of GitHub's own raw-byte serving
+# ever changes. Now uses the same canonicalize() (parse, strip a
+# top-level "revision" key if present, sort_keys, compact separators)
+# and the same Retry-After-aware fetch() backoff as every other repo.
+# Raw and canonicalized hashes were confirmed different for this exact
+# document (canonicalizing changes the serialized byte representation
+# even though the parsed content is identical) -- VERSION's spec-sha256
+# moves to the new canonicalized value even though the underlying spec
+# has not changed.
 
 on:
   schedule:
@@ -48,15 +67,69 @@ jobs:
       - name: Check out ubx-sdk-github
         uses: actions/checkout@v4
 
-      - name: Fetch the real GitHub OpenAPI spec and hash it
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up PyYAML
+        run: pip install --quiet pyyaml
+
+      - name: Fetch the real GitHub OpenAPI spec and compute its canonicalized-content spec-sha256
         id: spec
         run: |
           set -euo pipefail
-          url="https://raw.githubusercontent.com/github/rest-api-description/main/descriptions/ghec/ghec.json"
-          curl -sf "$url" -o /tmp/spec.bin
-          hash="$(sha256sum /tmp/spec.bin | awk '{print $1}')"
-          echo "hash=$hash" >> "$GITHUB_OUTPUT"
-          echo "Live spec sha256: $hash"
+          python3 - <<'PYEOF'
+          import hashlib, json, os, time, urllib.error, urllib.request, yaml, datetime
+
+          URL = "https://raw.githubusercontent.com/github/rest-api-description/main/descriptions/ghec/ghec.json"
+
+          def fetch(url, retries=5):
+              # Same Retry-After-aware backoff as every other repo's own
+              # fetch() this session, kept here for consistency even
+              # though a single-document fetch is lower 429 risk than the
+              # multi-member loops that first surfaced this bug.
+              req = urllib.request.Request(url, headers={"User-Agent": "ubx-hash-watch"})
+              for i in range(retries):
+                  try:
+                      with urllib.request.urlopen(req, timeout=30) as resp:
+                          return resp.read()
+                  except urllib.error.HTTPError as e:
+                      if i == retries - 1:
+                          raise
+                      retry_after = e.headers.get("Retry-After") if e.code == 429 else None
+                      time.sleep(float(retry_after) if retry_after else 5 * (2 ** i))
+                  except Exception:
+                      if i == retries - 1:
+                          raise
+                      time.sleep(5 * (2 ** i))
+
+          def json_default(o):
+              if isinstance(o, (datetime.date, datetime.datetime)):
+                  return o.isoformat()
+              raise TypeError(f"not JSON serializable: {o!r}")
+
+          def canonicalize(raw_bytes):
+              text = raw_bytes.decode("utf-8")
+              try:
+                  doc = json.loads(text)
+              except json.JSONDecodeError:
+                  doc = yaml.safe_load(text)
+              # Same revision-key strip as every other repo's own
+              # canonicalize() this session -- a real no-op here (checked
+              # directly: this document has no top-level "revision" key),
+              # kept only so all six repos run identical logic.
+              if isinstance(doc, dict) and "revision" in doc:
+                  doc = {k: v for k, v in doc.items() if k != "revision"}
+              return json.dumps(doc, sort_keys=True, separators=(",", ":"), default=json_default).encode("utf-8")
+
+          h = hashlib.sha256()
+          h.update(canonicalize(fetch(URL)))
+
+          with open(os.environ["GITHUB_OUTPUT"], "a") as out:
+              out.write(f"hash={h.hexdigest()}\n")
+          print(f"Live canonicalized spec-sha256: {h.hexdigest()}")
+          PYEOF
 
       - name: Compare against this repo's committed hash
         id: compare
@@ -112,12 +185,6 @@ jobs:
         uses: denoland/setup-deno@v2.0.5
         with:
           deno-version: "2.x"
-
-      - name: Set up Python
-        if: steps.compare.outputs.newer == 'true'
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.x"
 
       - name: Build ubx
         if: steps.compare.outputs.newer == 'true'
