@@ -19,6 +19,18 @@ name: hash-watch
 # ubx-provider-dynamic build to resolve at all (cli/dynamicprovider.go's
 # UBX_PROVIDER_DYNAMIC_REPO convention), unlike a thirdparty Terraform
 # provider, which ubx sdk gen acquires on its own.
+#
+# 1.1.0: schema_url repointed from api.github.com's own description to
+# GitHub's own ghec description (GitHub Enterprise Cloud) -- this file's
+# own fetch/regen/VERSION-write steps were never updated to match at the
+# time, leaving all three still hardcoded to the pre-repoint path. A
+# workflow left in that state would fetch and hash the WRONG spec,
+# almost certainly never match VERSION's own (correctly ghec-based)
+# committed hash, always conclude the corpus changed, and regenerate
+# from the stale api.github.com spec -- silently reverting this repo
+# from 80 resources back to 68. Fixed here, all three references now
+# point at ghec, matching VERSION and the real, currently-configured
+# [dynamic_providers.github] in ubiquex.
 
 on:
   schedule:
@@ -40,7 +52,7 @@ jobs:
         id: spec
         run: |
           set -euo pipefail
-          url="https://raw.githubusercontent.com/github/rest-api-description/main/descriptions/api.github.com/api.github.com.json"
+          url="https://raw.githubusercontent.com/github/rest-api-description/main/descriptions/ghec/ghec.json"
           curl -sf "$url" -o /tmp/spec.bin
           hash="$(sha256sum /tmp/spec.bin | awk '{print $1}')"
           echo "hash=$hash" >> "$GITHUB_OUTPUT"
@@ -115,7 +127,7 @@ jobs:
           cat > "$gendir/.ubx/config" <<EOF
           [dynamic_providers.github]
           schema_source = "openapi"
-          schema_url = "https://raw.githubusercontent.com/github/rest-api-description/main/descriptions/api.github.com/api.github.com.json"
+          schema_url = "https://raw.githubusercontent.com/github/rest-api-description/main/descriptions/ghec/ghec.json"
           base_url = "https://api.github.com"
           EOF
 
@@ -166,7 +178,7 @@ jobs:
           cat > VERSION <<EOF
           spec-sha256: ${{ steps.spec.outputs.hash }}
           fetched: $(date -u +%Y-%m-%d)
-          source: https://raw.githubusercontent.com/github/rest-api-description/main/descriptions/api.github.com/api.github.com.json
+          source: https://raw.githubusercontent.com/github/rest-api-description/main/descriptions/ghec/ghec.json
           EOF
 
       - name: Refresh sdk/typescript/deno.json's exports map for the regenerated tree
