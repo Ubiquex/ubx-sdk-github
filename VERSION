@@ -1,3 +1,3 @@
-spec-sha256: 5c2733476cbd23e33c967c101da437627d35409691cb7ae2e6d44a70a3105fad
-fetched: 2026-08-24
+spec-sha256: afcc0b0d74fc78a0f8cd1c76622333cfe242a61ff44190db7857289d273b13e2
+fetched: 2026-08-27
 source: https://raw.githubusercontent.com/github/rest-api-description/main/descriptions/ghec/ghec.json
