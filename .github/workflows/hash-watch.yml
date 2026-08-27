@@ -221,9 +221,16 @@ jobs:
           mkdir -p "$gendir/out/github/sdk/go"
           cp sdk/go/go.mod "$gendir/out/github/sdk/go/go.mod"
 
-          ( cd "$gendir" && "${{ runner.temp }}/ubx" sdk gen --only github --lang go --out out )
-          ( cd "$gendir" && "${{ runner.temp }}/ubx" sdk gen --only github --lang ts --out out )
-          ( cd "$gendir" && "${{ runner.temp }}/ubx" sdk gen --only github --lang py --out out )
+          ( cd "$gendir" && "${{ runner.temp }}/ubx" sdk gen --only github --lang go --out out --require-clean-provenance )
+          ( cd "$gendir" && "${{ runner.temp }}/ubx" sdk gen --only github --lang ts --out out --require-clean-provenance )
+          ( cd "$gendir" && "${{ runner.temp }}/ubx" sdk gen --only github --lang py --out out --require-clean-provenance )
+
+          # UBI-197: real ubx-provider-dynamic provenance (source, commit,
+          # dirty, unpushed) -- --require-clean-provenance above already
+          # refuses on anything but a clean, pushed commit, so this is
+          # real confirmation, not just a record of an unverified claim.
+          # Committed to this repo's own root, sibling to VERSION.
+          cp "$gendir/out/github/PROVENANCE.json" PROVENANCE.json
 
           # go.sum, deno.json/deno.lock are hand/tooling-maintained, not
           # codegen output, and are excluded from the regeneration diff.
