@@ -507,6 +507,8 @@ class IssueConfig:
     labels: Any = None
     # The milestone associated with the issue, if any. This field is computed and read-only; it cannot be set from the client. (AI-inferred)
     milestone: Any = None
+    # The id of the parent issue to add this issue to as a sub-issue. _NOTE: Only users with triage access to both the parent issue's repository and this repository can set the parent issue._
+    parent_issue_id: Any = None
     # The title of the issue.
     title: Any = None
     # The name of the issue type to associate with this issue. _NOTE: Only users with push access can set the type for new issues. The type is silently dropped otherwise._
@@ -566,6 +568,8 @@ class IssueAttrs:
     node_id: Any = None
     # Number uniquely identifying the issue within its repository
     number: Any = None
+    # The id of the parent issue to add this issue to as a sub-issue. _NOTE: Only users with triage access to both the parent issue's repository and this repository can set the parent issue._
+    parent_issue_id: Any = None
     # URL to get the parent issue of this issue, if it is a sub-issue
     parent_issue_url: Any = None
     # GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
@@ -617,6 +621,7 @@ Issue = ubx.ResourceBinding(
         ),
         "labels": ubx.FieldSpec(wire_name="labels"),
         "milestone": ubx.FieldSpec(wire_name="milestone"),
+        "parent_issue_id": ubx.FieldSpec(wire_name="parent_issue_id"),
         "title": ubx.FieldSpec(wire_name="title"),
         "type": ubx.FieldSpec(wire_name="type"),
         "owner": ubx.FieldSpec(wire_name="owner"),

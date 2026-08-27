@@ -27,6 +27,8 @@ type BudgetConfig struct {
 	BudgetScope any
 	// The type of pricing model used by the budget. Determines how `budget_product_sku` is interpreted. - `BundlePricing`: Covers all AI credit SKUs. Set `budget_product_sku` to `ai_credits`. - `ProductPricing`: Covers all SKUs that belong to a product. Set `budget_product_sku` to a product such as `actions` or `packages`. - `SkuPricing`: Covers a single, specific SKU. Set `budget_product_sku` to a SKU such as `actions_linux`.
 	BudgetType any
+	// The date the budget will expire in `YYYY-MM-DD` format. Only dates in the future are accepted. If not provided, the budget will not expire. Only supported for budgets with `budget_scope` of `user`
+	ExpiresAt any
 	// Whether to prevent additional spending once the budget is exceeded. For `user` and `multi_user_customer` scopes, this must be `true`.
 	PreventFurtherUsage any
 	// The username of the user for `user` scope budgets. This field is required when `budget_scope` is `user`.
@@ -49,6 +51,8 @@ type BudgetAttrs struct {
 	BudgetScope any
 	// The type of pricing model used by the budget. Determines how `budget_product_sku` is interpreted. - `BundlePricing`: Covers all AI credit SKUs. Set `budget_product_sku` to `ai_credits`. - `ProductPricing`: Covers all SKUs that belong to a product. Set `budget_product_sku` to a product such as `actions` or `packages`. - `SkuPricing`: Covers a single, specific SKU. Set `budget_product_sku` to a SKU such as `actions_linux`.
 	BudgetType any
+	// The date the budget will expire in `YYYY-MM-DD` format. Only dates in the future are accepted. If not provided, the budget will not expire. Only supported for budgets with `budget_scope` of `user`
+	ExpiresAt any
 	// ID of the budget.
 	Id any
 	// Whether to prevent additional spending once the budget is exceeded. For `user` and `multi_user_customer` scopes, this must be `true`.
@@ -74,6 +78,7 @@ var Budget = ubx.ResourceBinding{
 		"BudgetProductSku": ubx.FieldSpec{WireName: "budget_product_sku"},
 		"BudgetScope": ubx.FieldSpec{WireName: "budget_scope"},
 		"BudgetType": ubx.FieldSpec{WireName: "budget_type"},
+		"ExpiresAt": ubx.FieldSpec{WireName: "expires_at"},
 		"PreventFurtherUsage": ubx.FieldSpec{WireName: "prevent_further_usage"},
 		"User": ubx.FieldSpec{WireName: "user"},
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},

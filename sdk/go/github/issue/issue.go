@@ -503,6 +503,8 @@ type IssueConfig struct {
 	Labels any
 	// The milestone associated with the issue, if any. This field is computed and read-only; it cannot be set from the client. (AI-inferred)
 	Milestone any
+	// The id of the parent issue to add this issue to as a sub-issue. _NOTE: Only users with triage access to both the parent issue's repository and this repository can set the parent issue._
+	ParentIssueId any
 	// The title of the issue.
 	Title any
 	// The name of the issue type to associate with this issue. _NOTE: Only users with push access can set the type for new issues. The type is silently dropped otherwise._
@@ -562,6 +564,8 @@ type IssueAttrs struct {
 	NodeId any
 	// Number uniquely identifying the issue within its repository
 	Number any
+	// The id of the parent issue to add this issue to as a sub-issue. _NOTE: Only users with triage access to both the parent issue's repository and this repository can set the parent issue._
+	ParentIssueId any
 	// URL to get the parent issue of this issue, if it is a sub-issue
 	ParentIssueUrl any
 	// GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
@@ -614,6 +618,7 @@ var Issue = ubx.ResourceBinding{
 		},
 		"Labels": ubx.FieldSpec{WireName: "labels"},
 		"Milestone": ubx.FieldSpec{WireName: "milestone"},
+		"ParentIssueId": ubx.FieldSpec{WireName: "parent_issue_id"},
 		"Title": ubx.FieldSpec{WireName: "title"},
 		"Type": ubx.FieldSpec{WireName: "type"},
 		"Owner": ubx.FieldSpec{WireName: "owner"},

@@ -4,4 +4,4 @@
 # re-run `ubx sdk gen` to regenerate after a provider version bump.
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
-from .team import Team, TeamConfig
+from .team_with_member_count import TeamWithMemberCount, TeamWithMemberCountConfig

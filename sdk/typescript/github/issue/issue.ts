@@ -501,6 +501,8 @@ export interface IssueConfig {
   labels?: unknown[] | Computed<unknown[]>;
   /** The milestone associated with the issue, if any. This field is computed and read-only; it cannot be set from the client. (AI-inferred) */
   milestone?: unknown | Computed<unknown>;
+  /** The id of the parent issue to add this issue to as a sub-issue. _NOTE: Only users with triage access to both the parent issue's repository and this repository can set the parent issue._ */
+  parentIssueId?: number | Computed<number>;
   /** The title of the issue. */
   title: unknown | Computed<unknown>;
   /** The name of the issue type to associate with this issue. _NOTE: Only users with push access can set the type for new issues. The type is silently dropped otherwise._ */
@@ -560,6 +562,8 @@ export interface IssueAttrs {
   nodeId: string;
   /** Number uniquely identifying the issue within its repository */
   number: number;
+  /** The id of the parent issue to add this issue to as a sub-issue. _NOTE: Only users with triage access to both the parent issue's repository and this repository can set the parent issue._ */
+  parentIssueId: number;
   /** URL to get the parent issue of this issue, if it is a sub-issue */
   parentIssueUrl: string;
   /** GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub. */
@@ -612,6 +616,7 @@ export const Issue: ResourceBinding<IssueConfig, IssueAttrs> = {
     },
     labels: "labels",
     milestone: "milestone",
+    parentIssueId: "parent_issue_id",
     title: "title",
     type: "type",
     owner: "owner",
