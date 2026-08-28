@@ -16,6 +16,14 @@ languages in one combined repo:
 One package per GitHub API resource family (`repos/`, `issues/`, `actions/`,
 ...), one file per resource type, in every language.
 
+## Install
+
+```
+go get github.com/ubiquex/ubx-sdk-github/sdk/go
+npm install @ubx/sdk-github
+pip install ubx-sdk-github
+```
+
 Repo shape follows the same one-repo-per-provider convention (UBI-138) as
 `ubx-sdk-aws`/`ubx-sdk-google`/`ubx-sdk-kubernetes`/`ubx-sdk-azure`.
 
@@ -54,3 +62,18 @@ regenerate.
 Depends on the shared runtime: [ubx-sdk-go](https://github.com/ubiquex/ubx-sdk-go) (Go),
 [`jsr:@ubx/sdk`](https://jsr.io/@ubx/sdk) (TypeScript),
 [`ubx-sdk`](https://pypi.org/project/ubx-sdk/) (Python, imported as `ubx_sdk`).
+
+<!-- README-GEN:BEGIN -->
+**Real, current counts** (`ubx sdk gen --dump-ir`): 80 resource types, 262 data source types.
+
+**Real, current published versions:**
+- Go: `v1.2.0`
+- npm (`@ubx/sdk-github`): `1.2.0`
+- PyPI (`ubx-sdk-github`): `1.2.0`
+
+## Links
+
+- Docs: https://docs.ubiquex.io
+- Internals (architecture and design): https://github.com/Ubiquex/ubiquex-internals
+- Linear board: https://linear.app/ubiquex
+<!-- README-GEN:END -->
