@@ -37,6 +37,14 @@ jobs:
         with:
           deno-version: v2.x
 
+      - name: deno install (sdk/typescript)
+        # deno check's own type resolution for the real npm dependency
+        # (@ubx/sdk, package.json) needs node_modules populated first --
+        # caught live on this workflow's own first real PR run: "Could
+        # not find @ubx/sdk in a node_modules folder."
+        run: deno install
+        working-directory: sdk/typescript
+
       - name: deno check (sdk/typescript)
         run: find . -name "*.ts" -print0 | xargs -0 deno check
         working-directory: sdk/typescript
