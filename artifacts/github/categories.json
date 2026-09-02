@@ -1,12 +1,75 @@
 {
  "overrides": {
+  "github_actions_artifact_and_log_retention_response": {
+   "label": "Actions"
+  },
+  "github_actions_cache_list": {
+   "label": "Actions"
+  },
+  "github_actions_cache_retention_limit_for_enterprise": {
+   "label": "Actions"
+  },
+  "github_actions_cache_retention_limit_for_organization": {
+   "label": "Actions"
+  },
+  "github_actions_cache_retention_limit_for_repository": {
+   "label": "Actions"
+  },
+  "github_actions_cache_storage_limit_for_enterprise": {
+   "label": "Actions"
+  },
+  "github_actions_cache_storage_limit_for_organization": {
+   "label": "Actions"
+  },
+  "github_actions_cache_storage_limit_for_repository": {
+   "label": "Actions"
+  },
+  "github_actions_enterprise_permissions": {
+   "label": "Actions"
+  },
+  "github_actions_fork_pr_contributor_approval": {
+   "label": "Actions"
+  },
+  "github_actions_fork_pr_workflows_private_repos": {
+   "label": "Actions"
+  },
+  "github_actions_get_default_workflow_permissions": {
+   "label": "Actions"
+  },
   "github_actions_hosted_runner": {
+   "label": "Actions"
+  },
+  "github_actions_hosted_runner_curated_image": {
+   "label": "Actions"
+  },
+  "github_actions_hosted_runner_custom_image": {
+   "label": "Actions"
+  },
+  "github_actions_hosted_runner_custom_image_version": {
+   "label": "Actions"
+  },
+  "github_actions_hosted_runner_limits": {
+   "label": "Actions"
+  },
+  "github_actions_hosted_runner_machine_spec": {
+   "label": "Actions"
+  },
+  "github_actions_organization_permissions": {
+   "label": "Actions"
+  },
+  "github_actions_public_key": {
+   "label": "Actions"
+  },
+  "github_actions_repository_permissions": {
    "label": "Actions"
   },
   "github_actions_secret": {
    "label": "Actions"
   },
   "github_actions_variable": {
+   "label": "Actions"
+  },
+  "github_actions_workflow_access_to_repository": {
    "label": "Actions"
   },
   "github_advanced_security_active_committers_repository": {
@@ -60,6 +123,12 @@
   "github_blob": {
    "label": "Git"
   },
+  "github_branch": {
+   "label": "Repositories"
+  },
+  "github_branch_protection": {
+   "label": "Repositories"
+  },
   "github_branch_with_protection": {
    "label": "Repositories"
   },
@@ -74,6 +143,12 @@
   },
   "github_campaign_summary": {
    "label": "Campaigns"
+  },
+  "github_check_automated_security_fixes": {
+   "label": "Checks"
+  },
+  "github_check_immutable_releases": {
+   "label": "Checks"
   },
   "github_check_run": {
    "label": "Checks"
@@ -90,14 +165,65 @@
   "github_cloud_agent": {
    "label": "Agent Tasks"
   },
+  "github_code_of_conduct": {
+   "label": "Repositories"
+  },
+  "github_code_quality": {
+   "label": "Code Quality"
+  },
+  "github_code_quality_finding": {
+   "label": "Code Quality"
+  },
+  "github_code_quality_setup": {
+   "label": "Code Quality"
+  },
+  "github_code_scanning": {
+   "label": "Code Scanning"
+  },
+  "github_code_scanning_alert": {
+   "label": "Code Scanning"
+  },
+  "github_code_scanning_analysis": {
+   "label": "Code Scanning"
+  },
+  "github_code_scanning_autofix": {
+   "label": "Code Scanning"
+  },
+  "github_code_scanning_codeql_database": {
+   "label": "Code Scanning"
+  },
+  "github_code_scanning_default_setup": {
+   "label": "Code Scanning"
+  },
   "github_code_scanning_sarifs_status": {
    "label": "Code Scanning"
   },
   "github_code_scanning_variant_analysis": {
    "label": "Code Scanning"
   },
+  "github_code_scanning_variant_analysis_repo_task": {
+   "label": "Code Scanning"
+  },
+  "github_code_search_result_item": {
+   "label": "Search"
+  },
+  "github_code_security": {
+   "label": "Code Security"
+  },
   "github_code_security_configuration": {
    "label": "Code Security"
+  },
+  "github_code_security_configuration_for_repository": {
+   "label": "Code Security"
+  },
+  "github_code_security_default_configurations": {
+   "label": "Code Security"
+  },
+  "github_codeowners_errors": {
+   "label": "Repositories"
+  },
+  "github_codeql": {
+   "label": "Code Scanning"
   },
   "github_codespace": {
    "label": "Codespaces"
@@ -105,10 +231,22 @@
   "github_codespace_export_details": {
    "label": "Codespaces"
   },
+  "github_codespace_machine": {
+   "label": "Codespaces"
+  },
   "github_codespaces_org_secret": {
    "label": "Codespaces"
   },
+  "github_codespaces_permissions_check_for_devcontainer": {
+   "label": "Codespaces"
+  },
+  "github_codespaces_public_key": {
+   "label": "Codespaces"
+  },
   "github_codespaces_secret": {
+   "label": "Codespaces"
+  },
+  "github_codespaces_user_public_key": {
    "label": "Codespaces"
   },
   "github_coding_agent": {
@@ -121,6 +259,12 @@
    "label": "Repositories"
   },
   "github_commit_comment": {
+   "label": "Repositories"
+  },
+  "github_commit_comparison": {
+   "label": "Repositories"
+  },
+  "github_commit_search_result_item": {
    "label": "Repositories"
   },
   "github_community_profile": {
@@ -144,23 +288,53 @@
   "github_content_file": {
    "label": "Repositories"
   },
+  "github_copilot": {
+   "label": "Copilot Spaces"
+  },
+  "github_copilot_enterprise_content_exclusion_details": {
+   "label": "Copilot Spaces"
+  },
+  "github_copilot_organization_content_exclusion_details": {
+   "label": "Copilot Spaces"
+  },
+  "github_copilot_organization_details": {
+   "label": "Copilot Spaces"
+  },
+  "github_copilot_seat_details": {
+   "label": "Copilot Spaces"
+  },
   "github_copilot_space": {
+   "label": "Copilot Spaces"
+  },
+  "github_copilot_space_collaborator": {
    "label": "Copilot Spaces"
   },
   "github_copilot_space_resource": {
    "label": "Copilot Spaces"
   },
+  "github_custom_agent": {
+   "label": "Organizations"
+  },
+  "github_custom_deployment_rule_app": {
+   "label": "Organizations"
+  },
   "github_custom_property": {
    "label": "Organizations"
   },
+  "github_dependabot": {
+   "label": "Dependabot"
+  },
   "github_dependabot_alert_dismissal_request": {
+   "label": "Dependabot"
+  },
+  "github_dependabot_public_key": {
    "label": "Dependabot"
   },
   "github_dependabot_secret": {
    "label": "Dependabot"
   },
-  "github_dependencie": {
-   "label": "Dependabot"
+  "github_dependency": {
+   "label": "Dependency Graph"
   },
   "github_dependency_graph_diff": {
    "label": "Dependency Graph"
@@ -195,7 +369,16 @@
   "github_docker": {
    "label": "Packages"
   },
-  "github_enterprise_team": {
+  "github_enterprise": {
+   "label": "Enterprise"
+  },
+  "github_enterprise_role": {
+   "label": "Enterprise"
+  },
+  "github_enterprise_security_analysis_settings": {
+   "label": "Enterprise"
+  },
+  "github_enterprise_team_with_member_count": {
    "label": "Enterprise Teams"
   },
   "github_environment": {
@@ -219,8 +402,20 @@
   "github_get_budget": {
    "label": "Billing"
   },
+  "github_get_budget_user_states": {
+   "label": "Billing"
+  },
+  "github_get_consumed_licenses": {
+   "label": "Billing"
+  },
   "github_get_cost_center": {
    "label": "Billing"
+  },
+  "github_get_license_sync_status": {
+   "label": "Billing"
+  },
+  "github_gist": {
+   "label": "Gists"
   },
   "github_gist_comment": {
    "label": "Gists"
@@ -240,6 +435,9 @@
   "github_git_tree": {
    "label": "Git"
   },
+  "github_gitignore_template": {
+   "label": "Git"
+  },
   "github_gpg_key": {
    "label": "Users"
   },
@@ -247,6 +445,9 @@
    "label": "SCIM Provisioning"
   },
   "github_hook": {
+   "label": "Repositories"
+  },
+  "github_hook_delivery": {
    "label": "Repositories"
   },
   "github_hosted_runner": {
@@ -279,6 +480,9 @@
   "github_issue_comment": {
    "label": "Issues"
   },
+  "github_issue_search_result_item": {
+   "label": "Issues"
+  },
   "github_job": {
    "label": "Actions"
   },
@@ -286,6 +490,9 @@
    "label": "Users"
   },
   "github_label": {
+   "label": "Issues"
+  },
+  "github_label_search_result_item": {
    "label": "Issues"
   },
   "github_language": {
@@ -306,6 +513,9 @@
   "github_matching_ref": {
    "label": "Git"
   },
+  "github_member": {
+   "label": "Organizations"
+  },
   "github_membership": {
    "label": "Teams"
   },
@@ -321,7 +531,13 @@
   "github_minimal_repository": {
    "label": "Repositories"
   },
+  "github_network": {
+   "label": "Hosted Compute"
+  },
   "github_network_configuration": {
+   "label": "Hosted Compute"
+  },
+  "github_network_settings": {
    "label": "Hosted Compute"
   },
   "github_nullable_simple_repository": {
@@ -333,6 +549,9 @@
   "github_oidc_custom_sub_repo": {
    "label": "Actions"
   },
+  "github_org": {
+   "label": "Organizations"
+  },
   "github_org_hook": {
    "label": "Organizations"
   },
@@ -341,6 +560,12 @@
   },
   "github_org_private_registry_configuration": {
    "label": "Private Registries"
+  },
+  "github_org_property": {
+   "label": "Organizations"
+  },
+  "github_organization": {
+   "label": "Organizations"
   },
   "github_organization_actions_secret": {
    "label": "Actions"
@@ -357,6 +582,9 @@
   "github_organization_dependabot_secret": {
    "label": "Dependabot"
   },
+  "github_organization_full": {
+   "label": "Organizations"
+  },
   "github_organization_role": {
    "label": "Organizations"
   },
@@ -369,10 +597,16 @@
   "github_package_version": {
    "label": "Packages"
   },
+  "github_page": {
+   "label": "Repositories"
+  },
   "github_page_build": {
    "label": "Repositories"
   },
   "github_pages_deployment_status": {
+   "label": "Repositories"
+  },
+  "github_pages_health_check": {
    "label": "Repositories"
   },
   "github_participation_stats": {
@@ -393,8 +627,11 @@
   "github_popular": {
    "label": "Repositories"
   },
-  "github_private_registrie": {
+  "github_private_registry": {
    "label": "Private Registries"
+  },
+  "github_projects_v2": {
+   "label": "Projects"
   },
   "github_projects_v2_field": {
    "label": "Projects"
@@ -402,7 +639,10 @@
   "github_projects_v2_item_with_content": {
    "label": "Projects"
   },
-  "github_propertie": {
+  "github_projects_v2_single_select_options": {
+   "label": "Projects"
+  },
+  "github_property": {
    "label": "Organizations"
   },
   "github_protected_branch_admin_enforced": {
@@ -413,6 +653,9 @@
   },
   "github_public_ip": {
    "label": "Meta"
+  },
+  "github_pull": {
+   "label": "Pull Requests"
   },
   "github_pull_request": {
    "label": "Pull Requests"
@@ -426,6 +669,9 @@
   "github_pull_request_review_comment": {
    "label": "Pull Requests"
   },
+  "github_pull_request_review_request": {
+   "label": "Pull Requests"
+  },
   "github_rate_limit_overview": {
    "label": "Meta"
   },
@@ -435,13 +681,31 @@
   "github_release_asset": {
    "label": "Repositories"
   },
+  "github_repo": {
+   "label": "Codespaces"
+  },
   "github_repo_codespaces_secret": {
    "label": "Codespaces"
+  },
+  "github_repo_search_result_item": {
+   "label": "Codespaces"
+  },
+  "github_repository": {
+   "label": "Repositories"
   },
   "github_repository_advisory": {
    "label": "Security Advisories"
   },
+  "github_repository_collaborator_permission": {
+   "label": "Repositories"
+  },
+  "github_repository_hash_algorithm": {
+   "label": "Repositories"
+  },
   "github_repository_ruleset": {
+   "label": "Repositories"
+  },
+  "github_repository_subscription": {
    "label": "Repositories"
   },
   "github_required_status_check": {
@@ -471,10 +735,19 @@
   "github_ruleset_version_with_state": {
    "label": "Rulesets"
   },
+  "github_run": {
+   "label": "Actions"
+  },
+  "github_runner": {
+   "label": "Actions"
+  },
   "github_runner_groups_enterprise": {
    "label": "Actions"
   },
   "github_runner_groups_org": {
+   "label": "Actions"
+  },
+  "github_runner_label": {
    "label": "Actions"
   },
   "github_sbom": {
@@ -507,6 +780,9 @@
   "github_server_statistics": {
    "label": "Server Statistics"
   },
+  "github_simple_commit_status": {
+   "label": "Enterprise Team Memberships"
+  },
   "github_simple_user": {
    "label": "Enterprise Team Memberships"
   },
@@ -533,6 +809,9 @@
   },
   "github_task": {
    "label": "Agent Tasks"
+  },
+  "github_team": {
+   "label": "Teams"
   },
   "github_team_full": {
    "label": "Teams"
