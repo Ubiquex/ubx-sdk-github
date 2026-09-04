@@ -259,6 +259,22 @@ jobs:
 
           echo "gendir=$gendir" >> "$GITHUB_OUTPUT"
 
+      - name: gofmt the regenerated Go tree before comparing
+        if: steps.compare.outputs.state == 'candidate'
+        run: |
+          set -euo pipefail
+          # ubx sdk gen's own Go output is not gofmt-canonical on its own
+          # (confirmed live, UBI-249: a real dispatch of this workflow
+          # diffed every single generated .go file against the committed
+          # tree over formatting alone -- Fields: ubx.FieldMap{\n}, vs.
+          # the gofmt-collapsed Fields: ubx.FieldMap{} -- with zero real
+          # content difference underneath). The committed tree in every
+          # ubx-sdk-* repo has always been gofmt'd as a real, separate
+          # step before commit; comparing raw generator output against it
+          # without formatting both the same way makes every regen look
+          # like a translator-driven change even when nothing real moved.
+          gofmt -w "${{ steps.regen.outputs.gendir }}/out/github/sdk/go"
+
       - name: Diff regenerated output against what's currently committed
         id: diff
         if: steps.compare.outputs.state == 'candidate'
@@ -364,7 +380,13 @@ jobs:
         run: |
           set -euo pipefail
           cd sdk/typescript
-          find . -name "*.ts" -print0 | xargs -0 deno cache
+          # deno cache alone does not populate node_modules/ for the npm:
+          # @ubx/sdk dependency -- confirmed live, UBI-249: a real
+          # dispatch of this workflow failed deno check on this exact
+          # gap ("Could not find @ubx/sdk in a node_modules folder").
+          # deno install is what every manual regeneration this session
+          # actually ran before deno check, and is what's needed here too.
+          deno install
           find . -name "*.ts" -print0 | xargs -0 deno check --frozen
 
       - name: Sanity-check the regenerated Python tree -- real import of every module
