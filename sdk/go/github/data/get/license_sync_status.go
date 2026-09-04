@@ -4,8 +4,8 @@ package get
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type LicenseSyncStatus_ServerInstances_LastSync struct {
-	Date any
-	Error any
+	Date   any
+	Error  any
 	Status any
 }
 
@@ -20,7 +20,7 @@ type LicenseSyncStatusConfig struct {
 }
 
 type LicenseSyncStatusAttrs struct {
-	Enterprise any
+	Enterprise      any
 	ServerInstances any
 }
 

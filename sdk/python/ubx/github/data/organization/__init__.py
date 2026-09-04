@@ -9,5 +9,7 @@ from .actions_secret import ActionsSecret, ActionsSecretConfig
 from .actions_variable import ActionsVariable, ActionsVariableConfig
 from .custom_repository_role import CustomRepositoryRole, CustomRepositoryRoleConfig
 from .dependabot_secret import DependabotSecret, DependabotSecretConfig
+from .fine_grained_permission import FineGrainedPermission, FineGrainedPermissionConfig
 from .full import Full, FullConfig
 from .role import Role, RoleConfig
+from .simple import Simple, SimpleConfig

@@ -2,34 +2,49 @@
 import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface IssueConfig {
+  collab?: boolean | Computed<boolean>;
   direction?: string | Computed<string>;
-  owner: string | Computed<string>;
+  filter?: string | Computed<string>;
+  labels?: string | Computed<string>;
+  orgs?: boolean | Computed<boolean>;
+  owned?: boolean | Computed<boolean>;
   page?: number | Computed<number>;
   perPage?: number | Computed<number>;
-  repo: string | Computed<string>;
+  pulls?: boolean | Computed<boolean>;
   since?: string | Computed<string>;
   sort?: string | Computed<string>;
+  state?: string | Computed<string>;
 }
 
 export interface IssueAttrs {
+  collab: boolean;
   direction: string;
-  owner: string;
+  filter: string;
+  labels: string;
+  orgs: boolean;
+  owned: boolean;
   page: number;
   perPage: number;
-  repo: string;
+  pulls: boolean;
   since: string;
   sort: string;
+  state: string;
 }
 
 export const Issue: DataSourceBinding<IssueConfig, IssueAttrs> = {
   wireType: "github_issue",
   fields: {
+    collab: "collab",
     direction: "direction",
-    owner: "owner",
+    filter: "filter",
+    labels: "labels",
+    orgs: "orgs",
+    owned: "owned",
     page: "page",
     perPage: "per_page",
-    repo: "repo",
+    pulls: "pulls",
     since: "since",
     sort: "sort",
+    state: "state",
   },
 };

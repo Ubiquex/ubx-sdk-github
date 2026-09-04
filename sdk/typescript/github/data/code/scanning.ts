@@ -2,52 +2,37 @@
 import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface ScanningConfig {
-  after?: string | Computed<string>;
-  assignees?: string | Computed<string>;
-  before?: string | Computed<string>;
-  direction?: string | Computed<string>;
-  enterprise: string | Computed<string>;
+  org: string | Computed<string>;
   page?: number | Computed<number>;
   perPage?: number | Computed<number>;
-  sort?: string | Computed<string>;
-  /** State of a code scanning alert. */
-  state?: string | Computed<string>;
-  /** The GUID of the tool used to generate the code scanning analysis, if provided in the uploaded SARIF data. */
-  toolGuid?: string | Computed<string>;
-  /** The name of the tool used to generate the code scanning analysis. */
-  toolName?: string | Computed<string>;
+  repositoryName?: string | Computed<string>;
+  requestStatus?: string | Computed<string>;
+  requester?: string | Computed<string>;
+  reviewer?: string | Computed<string>;
+  timePeriod?: string | Computed<string>;
 }
 
 export interface ScanningAttrs {
-  after: string;
-  assignees: string;
-  before: string;
-  direction: string;
-  enterprise: string;
+  org: string;
   page: number;
   perPage: number;
-  sort: string;
-  /** State of a code scanning alert. */
-  state: string;
-  /** The GUID of the tool used to generate the code scanning analysis, if provided in the uploaded SARIF data. */
-  toolGuid: string;
-  /** The name of the tool used to generate the code scanning analysis. */
-  toolName: string;
+  repositoryName: string;
+  requestStatus: string;
+  requester: string;
+  reviewer: string;
+  timePeriod: string;
 }
 
 export const Scanning: DataSourceBinding<ScanningConfig, ScanningAttrs> = {
   wireType: "github_code_scanning",
   fields: {
-    after: "after",
-    assignees: "assignees",
-    before: "before",
-    direction: "direction",
-    enterprise: "enterprise",
+    org: "org",
     page: "page",
     perPage: "per_page",
-    sort: "sort",
-    state: "state",
-    toolGuid: "tool_guid",
-    toolName: "tool_name",
+    repositoryName: "repository_name",
+    requestStatus: "request_status",
+    requester: "requester",
+    reviewer: "reviewer",
+    timePeriod: "time_period",
   },
 };

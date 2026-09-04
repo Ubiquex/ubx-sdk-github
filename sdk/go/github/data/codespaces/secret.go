@@ -3,27 +3,30 @@ package codespaces
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
+type Secret_Secrets struct {
+	CreatedAt               any
+	Name                    any
+	SelectedRepositoriesUrl any
+	UpdatedAt               any
+	Visibility              any
+}
+
 type SecretConfig struct {
-	SecretName any
+	Page    any
+	PerPage any
 }
 
 type SecretAttrs struct {
-	// The date and time at which the secret was created, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
-	CreatedAt any
-	// The name of the secret
-	Name any
-	SecretName any
-	// The API URL at which the list of repositories this secret is visible to can be retrieved
-	SelectedRepositoriesUrl any
-	// The date and time at which the secret was last updated, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
-	UpdatedAt any
-	// The type of repositories in the organization that the secret is visible to
-	Visibility any
+	Page       any
+	PerPage    any
+	Secrets    any
+	TotalCount any
 }
 
 var Secret = ubx.DataSourceBinding{
 	WireType: "github_codespaces_secret",
 	Fields: ubx.FieldMap{
-		"SecretName": ubx.FieldSpec{WireName: "secret_name"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

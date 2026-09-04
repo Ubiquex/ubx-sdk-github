@@ -3,17 +3,90 @@ package task
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
+type Task_Tasks_Artifacts_Data struct {
+	BaseRef  any
+	GlobalId any
+	HeadRef  any
+	Id       any
+}
+
+type Task_Tasks_Artifacts struct {
+	Data     any
+	Provider any
+	Type     any
+}
+
+type Task_Tasks_Creator struct {
+	Id any
+}
+
+type Task_Tasks_CustomAgent struct {
+	Id any
+}
+
+type Task_Tasks struct {
+	ArchivedAt        any
+	Artifacts         any
+	CreatedAt         any
+	Creator           any
+	CreatorType       any
+	CustomAgent       any
+	HtmlUrl           any
+	Id                any
+	Name              any
+	Owner             any
+	Repository        any
+	SessionCount      any
+	State             any
+	UpdatedAt         any
+	Url               any
+	UserCollaborators any
+}
+
 type TaskConfig struct {
-	TaskId any
+	CreatorId  any
+	Direction  any
+	IsArchived any
+	Owner      any
+	Page       any
+	PerPage    any
+	Repo       any
+	Since      any
+	Sort       any
+	State      any
 }
 
 type TaskAttrs struct {
-	TaskId any
+	CreatorId  any
+	Direction  any
+	IsArchived any
+	Owner      any
+	Page       any
+	PerPage    any
+	Repo       any
+	Since      any
+	Sort       any
+	State      any
+	// List of tasks
+	Tasks any
+	// Total count of active (non-archived) tasks
+	TotalActiveCount any
+	// Total count of archived tasks
+	TotalArchivedCount any
 }
 
 var Task = ubx.DataSourceBinding{
 	WireType: "github_task",
 	Fields: ubx.FieldMap{
-		"TaskId": ubx.FieldSpec{WireName: "task_id"},
+		"CreatorId":  ubx.FieldSpec{WireName: "creator_id"},
+		"Direction":  ubx.FieldSpec{WireName: "direction"},
+		"IsArchived": ubx.FieldSpec{WireName: "is_archived"},
+		"Owner":      ubx.FieldSpec{WireName: "owner"},
+		"Page":       ubx.FieldSpec{WireName: "page"},
+		"PerPage":    ubx.FieldSpec{WireName: "per_page"},
+		"Repo":       ubx.FieldSpec{WireName: "repo"},
+		"Since":      ubx.FieldSpec{WireName: "since"},
+		"Sort":       ubx.FieldSpec{WireName: "sort"},
+		"State":      ubx.FieldSpec{WireName: "state"},
 	},
 }

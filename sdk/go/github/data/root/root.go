@@ -7,43 +7,42 @@ type RootConfig struct {
 }
 
 type RootAttrs struct {
-	AuthorizationsUrl any
-	CodeSearchUrl any
-	CommitSearchUrl any
+	AuthorizationsUrl                any
+	CodeSearchUrl                    any
+	CommitSearchUrl                  any
 	CurrentUserAuthorizationsHtmlUrl any
-	CurrentUserRepositoriesUrl any
-	CurrentUserUrl any
-	EmailsUrl any
-	EmojisUrl any
-	EventsUrl any
-	FeedsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	HubUrl any
-	IssueSearchUrl any
-	IssuesUrl any
-	KeysUrl any
-	LabelSearchUrl any
-	NotificationsUrl any
-	OrganizationRepositoriesUrl any
-	OrganizationTeamsUrl any
-	OrganizationUrl any
-	PublicGistsUrl any
-	RateLimitUrl any
-	RepositorySearchUrl any
-	RepositoryUrl any
-	StarredGistsUrl any
-	StarredUrl any
-	TopicSearchUrl any
-	UserOrganizationsUrl any
-	UserRepositoriesUrl any
-	UserSearchUrl any
-	UserUrl any
+	CurrentUserRepositoriesUrl       any
+	CurrentUserUrl                   any
+	EmailsUrl                        any
+	EmojisUrl                        any
+	EventsUrl                        any
+	FeedsUrl                         any
+	FollowersUrl                     any
+	FollowingUrl                     any
+	GistsUrl                         any
+	HubUrl                           any
+	IssueSearchUrl                   any
+	IssuesUrl                        any
+	KeysUrl                          any
+	LabelSearchUrl                   any
+	NotificationsUrl                 any
+	OrganizationRepositoriesUrl      any
+	OrganizationTeamsUrl             any
+	OrganizationUrl                  any
+	PublicGistsUrl                   any
+	RateLimitUrl                     any
+	RepositorySearchUrl              any
+	RepositoryUrl                    any
+	StarredGistsUrl                  any
+	StarredUrl                       any
+	TopicSearchUrl                   any
+	UserOrganizationsUrl             any
+	UserRepositoriesUrl              any
+	UserSearchUrl                    any
+	UserUrl                          any
 }
 
 var Root = ubx.DataSourceBinding{
 	WireType: "github_root",
-	Fields: ubx.FieldMap{
-	},
+	Fields:   ubx.FieldMap{},
 }

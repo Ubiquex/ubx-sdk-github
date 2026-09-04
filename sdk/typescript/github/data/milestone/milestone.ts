@@ -2,28 +2,34 @@
 import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface MilestoneConfig {
-  milestoneNumber: number | Computed<number>;
+  direction?: string | Computed<string>;
   owner: string | Computed<string>;
   page?: number | Computed<number>;
   perPage?: number | Computed<number>;
   repo: string | Computed<string>;
+  sort?: string | Computed<string>;
+  state?: string | Computed<string>;
 }
 
 export interface MilestoneAttrs {
-  milestoneNumber: number;
+  direction: string;
   owner: string;
   page: number;
   perPage: number;
   repo: string;
+  sort: string;
+  state: string;
 }
 
 export const Milestone: DataSourceBinding<MilestoneConfig, MilestoneAttrs> = {
   wireType: "github_milestone",
   fields: {
-    milestoneNumber: "milestone_number",
+    direction: "direction",
     owner: "owner",
     page: "page",
     perPage: "per_page",
     repo: "repo",
+    sort: "sort",
+    state: "state",
   },
 };

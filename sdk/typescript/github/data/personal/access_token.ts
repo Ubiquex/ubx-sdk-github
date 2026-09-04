@@ -2,25 +2,46 @@
 import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface AccessTokenConfig {
+  direction?: string | Computed<string>;
+  lastUsedAfter?: string | Computed<string>;
+  lastUsedBefore?: string | Computed<string>;
   org: string | Computed<string>;
+  owner?: string[] | Computed<string[]>;
   page?: number | Computed<number>;
-  patId: number | Computed<number>;
   perPage?: number | Computed<number>;
+  permission?: string | Computed<string>;
+  repository?: string | Computed<string>;
+  sort?: string | Computed<string>;
+  tokenId?: string[] | Computed<string[]>;
 }
 
 export interface AccessTokenAttrs {
+  direction: string;
+  lastUsedAfter: string;
+  lastUsedBefore: string;
   org: string;
+  owner: string[];
   page: number;
-  patId: number;
   perPage: number;
+  permission: string;
+  repository: string;
+  sort: string;
+  tokenId: string[];
 }
 
 export const AccessToken: DataSourceBinding<AccessTokenConfig, AccessTokenAttrs> = {
   wireType: "github_personal_access_token",
   fields: {
+    direction: "direction",
+    lastUsedAfter: "last_used_after",
+    lastUsedBefore: "last_used_before",
     org: "org",
+    owner: "owner",
     page: "page",
-    patId: "pat_id",
     perPage: "per_page",
+    permission: "permission",
+    repository: "repository",
+    sort: "sort",
+    tokenId: "token_id",
   },
 };

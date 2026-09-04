@@ -5,3 +5,4 @@
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
 from .artifact import Artifact, ArtifactConfig
+from .deployment_record import DeploymentRecord, DeploymentRecordConfig

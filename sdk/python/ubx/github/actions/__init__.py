@@ -5,4 +5,5 @@
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
 from .hosted_runner import HostedRunner, HostedRunnerConfig
+from .secret import Secret, SecretConfig
 from .variable import Variable, VariableConfig

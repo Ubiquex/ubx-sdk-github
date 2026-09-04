@@ -13,6 +13,22 @@ class EnterpriseUserResponse_Emails:
     value: Any = None
 
 @dataclasses.dataclass
+class EnterpriseUserResponse_Groups:
+    display: Any = None
+    value: Any = None
+
+@dataclasses.dataclass
+class EnterpriseUserResponse_Meta:
+    # A date and time when the user was created.
+    created: Any = None
+    # A data and time when the user was last modified.
+    last_modified: Any = None
+    # A URL location of an object
+    location: Any = None
+    # A type of a resource
+    resource_type: Any = None
+
+@dataclasses.dataclass
 class EnterpriseUserResponse_Name:
     # The family name of the user.
     family_name: Any = None
@@ -82,6 +98,12 @@ class EnterpriseUserResponseAttrs:
     emails: Any = None
     # A unique identifier for the resource as defined by the provisioning client.
     external_id: Any = None
+    # Provisioned SCIM groups that the user is a member of.
+    groups: Any = None
+    # The internally generated id for the user object.
+    id: Any = None
+    # The metadata associated with the creation/updates to the user.
+    meta: Any = None
     name: Any = None
     # The roles assigned to the user.
     roles: Any = None

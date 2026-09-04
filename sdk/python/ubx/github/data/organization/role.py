@@ -7,25 +7,57 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
+class Role_Roles_Organization:
+    avatar_url: Any = None
+    email: Any = None
+    events_url: Any = None
+    followers_url: Any = None
+    following_url: Any = None
+    gists_url: Any = None
+    gravatar_id: Any = None
+    html_url: Any = None
+    id: Any = None
+    login: Any = None
+    name: Any = None
+    node_id: Any = None
+    organizations_url: Any = None
+    received_events_url: Any = None
+    repos_url: Any = None
+    site_admin: Any = None
+    starred_at: Any = None
+    starred_url: Any = None
+    subscriptions_url: Any = None
+    type: Any = None
+    url: Any = None
+    user_view_type: Any = None
+
+@dataclasses.dataclass
+class Role_Roles:
+    base_role: Any = None
+    created_at: Any = None
+    description: Any = None
+    id: Any = None
+    name: Any = None
+    organization: Any = None
+    permissions: Any = None
+    source: Any = None
+    updated_at: Any = None
+
+@dataclasses.dataclass
 class RoleConfig:
     org: Any = None
-    page: Any = None
-    per_page: Any = None
-    role_id: Any = None
 
 @dataclasses.dataclass
 class RoleAttrs:
     org: Any = None
-    page: Any = None
-    per_page: Any = None
-    role_id: Any = None
+    # The list of organization roles available to the organization.
+    roles: Any = None
+    # The total number of organization roles available to the organization.
+    total_count: Any = None
 
 Role = ubx.DataSourceBinding(
     wire_type="github_organization_role",
     fields={
         "org": ubx.FieldSpec(wire_name="org"),
-        "page": ubx.FieldSpec(wire_name="page"),
-        "per_page": ubx.FieldSpec(wire_name="per_page"),
-        "role_id": ubx.FieldSpec(wire_name="role_id"),
     },
 )

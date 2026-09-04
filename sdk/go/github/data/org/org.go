@@ -4,34 +4,22 @@ package org
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type OrgConfig struct {
-	After any
-	Before any
-	Include any
-	Order any
-	Org any
+	Page    any
 	PerPage any
-	Phrase any
+	State   any
 }
 
 type OrgAttrs struct {
-	After any
-	Before any
-	Include any
-	Order any
-	Org any
+	Page    any
 	PerPage any
-	Phrase any
+	State   any
 }
 
 var Org = ubx.DataSourceBinding{
 	WireType: "github_org",
 	Fields: ubx.FieldMap{
-		"After": ubx.FieldSpec{WireName: "after"},
-		"Before": ubx.FieldSpec{WireName: "before"},
-		"Include": ubx.FieldSpec{WireName: "include"},
-		"Order": ubx.FieldSpec{WireName: "order"},
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Phrase": ubx.FieldSpec{WireName: "phrase"},
+		"State":   ubx.FieldSpec{WireName: "state"},
 	},
 }

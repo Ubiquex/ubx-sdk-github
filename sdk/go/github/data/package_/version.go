@@ -12,44 +12,41 @@ type Version_Metadata_Docker struct {
 }
 
 type Version_Metadata struct {
-	Container any
-	Docker any
+	Container   any
+	Docker      any
 	PackageType any
 }
 
 type VersionConfig struct {
-	Org any
-	PackageName any
-	PackageType any
+	PackageName      any
+	PackageType      any
 	PackageVersionId any
 }
 
 type VersionAttrs struct {
-	CreatedAt any
-	DeletedAt any
+	CreatedAt   any
+	DeletedAt   any
 	Description any
-	HtmlUrl any
+	HtmlUrl     any
 	// Unique identifier of the package version.
-	Id any
-	License any
+	Id       any
+	License  any
 	Metadata any
 	// The name of the package version.
-	Name any
-	Org any
-	PackageHtmlUrl any
-	PackageName any
-	PackageType any
+	Name             any
+	PackageHtmlUrl   any
+	PackageName      any
+	PackageType      any
 	PackageVersionId any
-	UpdatedAt any
-	Url any
+	UpdatedAt        any
+	Url              any
 }
 
 var Version = ubx.DataSourceBinding{
 	WireType: "github_package_version",
 	Fields: ubx.FieldMap{
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"PackageName": ubx.FieldSpec{WireName: "package_name"},
-		"PackageType": ubx.FieldSpec{WireName: "package_type"},
+		"PackageName":      ubx.FieldSpec{WireName: "package_name"},
+		"PackageType":      ubx.FieldSpec{WireName: "package_type"},
 		"PackageVersionId": ubx.FieldSpec{WireName: "package_version_id"},
 	},
 }

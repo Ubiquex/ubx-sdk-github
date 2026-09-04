@@ -13,10 +13,8 @@ type SigningKeyConfig struct {
 }
 
 type SigningKeyAttrs struct {
-	// Timestamp the SSH signing key was added to the account. (AI-inferred)
 	CreatedAt any
-	// The SSH signing key's numeric ID. (AI-inferred)
-	Id any
+	Id        any
 	// The public SSH key to add to your GitHub account. For more information, see "[Checking for existing SSH keys](https://docs.github.com/enterprise-cloud@latest/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)."
 	Key any
 	// A descriptive name for the new key.
@@ -28,8 +26,8 @@ type SigningKeyAttrs struct {
 var SigningKey = ubx.ResourceBinding{
 	WireType: "github_ssh_signing_key",
 	Fields: ubx.FieldMap{
-		"Key": ubx.FieldSpec{WireName: "key"},
-		"Title": ubx.FieldSpec{WireName: "title"},
+		"Key":             ubx.FieldSpec{WireName: "key"},
+		"Title":           ubx.FieldSpec{WireName: "title"},
 		"SshSigningKeyId": ubx.FieldSpec{WireName: "ssh_signing_key_id"},
 	},
 }

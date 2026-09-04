@@ -2,92 +2,56 @@
 import type { Computed, FieldMap, ResourceBinding } from "@ubx/sdk";
 
 export interface Run_Actions {
-  /** A short explanation of the action, displayed to users. Maximum length is 40 characters. (AI-inferred) */
   description?: string | Computed<string>;
-  /** A short identifier for the action, maximum length of 20 characters. (AI-inferred) */
   identifier?: string | Computed<string>;
-  /** The short text label for the action button, displayed in the GitHub UI. Must be 20 characters or fewer. (AI-inferred) */
   label?: string | Computed<string>;
 }
 
 export interface Run_App_Owner {
-  /** The URL of the avatar image for the owner (user or organization). (AI-inferred) */
   avatarUrl?: string | Computed<string>;
-  /** The date and time when the GitHub App owner (user or organization) was created, in ISO 8601 format. (AI-inferred) */
   createdAt?: string | Computed<string>;
-  /** The description of the owner (organization or user) of the GitHub App that created this check run. (AI-inferred) */
   description?: string | Computed<string>;
-  /** The email address of the user or organization that owns the GitHub App associated with this check run. (AI-inferred) */
   email?: string | Computed<string>;
-  /** The API URL for events associated with the owner (the user or organization that owns the GitHub App). (AI-inferred) */
   eventsUrl?: string | Computed<string>;
-  /** The API URL to retrieve the list of followers for the owner of the GitHub app. (AI-inferred) */
   followersUrl?: string | Computed<string>;
-  /** The URL to the list of users that this owner follows, as provided by the GitHub API. This URL may include a template placeholder. (AI-inferred) */
   followingUrl?: string | Computed<string>;
-  /** The URL to fetch the owner's gists via the GitHub API. (AI-inferred) */
   gistsUrl?: string | Computed<string>;
-  /** The Gravatar ID for the owner's avatar. This is typically a hash of the owner's email address and is used to construct the owner's Gravatar URL. In the GitHub API, this field is often deprecated and may be an empty string; prefer using `avatar_url`. (AI-inferred) */
   gravatarId?: string | Computed<string>;
-  /** The URL to view the owner's GitHub profile in a web browser. (AI-inferred) */
   htmlUrl?: string | Computed<string>;
-  /** The unique identifier of the GitHub App's owner, which can be a user or an organization. (AI-inferred) */
   id?: number | Computed<number>;
-  /** The login name (username or organization name) of the GitHub App owner. (AI-inferred) */
   login?: string | Computed<string>;
   name?: string | Computed<string>;
-  /** The GraphQL node ID of the app's owner (user or organization). (AI-inferred) */
   nodeId?: string | Computed<string>;
-  /** The API URL that lists the organizations this owner belongs to, as defined by the GitHub API owner object. (AI-inferred) */
   organizationsUrl?: string | Computed<string>;
-  /** The URL to the received events for the owner (user or organization). (AI-inferred) */
   receivedEventsUrl?: string | Computed<string>;
-  /** URL to the list of repositories owned by this GitHub user or organization. (AI-inferred) */
   reposUrl?: string | Computed<string>;
-  /** Whether the owner (user or organization) is a site administrator for GitHub Enterprise. (AI-inferred) */
   siteAdmin?: boolean | Computed<boolean>;
   slug?: string | Computed<string>;
   starredAt?: string | Computed<string>;
-  /** The URL template for the owner's starred repositories, as specified by the GitHub API. It typically includes placeholders for owner and repository information. (AI-inferred) */
   starredUrl?: string | Computed<string>;
-  /** The API endpoint URL for the subscriptions of the owner (user or organization), as defined by the GitHub API. (AI-inferred) */
   subscriptionsUrl?: string | Computed<string>;
-  /** The type of GitHub account that owns the app, such as 'User' or 'Organization'. (AI-inferred) */
   type?: string | Computed<string>;
-  /** The timestamp (ISO 8601) when the owner of the GitHub App was last updated. (AI-inferred) */
   updatedAt?: string | Computed<string>;
-  /** The GitHub API URL for the owner (user or organization) of the GitHub App associated with the check run. (AI-inferred) */
   url?: string | Computed<string>;
   userViewType?: string | Computed<string>;
-  /** The website URL of the owner (user or organization) of the GitHub App that created or is associated with this check run. (AI-inferred) */
   websiteUrl?: string | Computed<string>;
 }
 
 export interface Run_App_Permissions {
-  /** The permission level for the Checks API. Valid values are 'read' or 'write'. (AI-inferred) */
   checks?: string | Computed<string>;
-  /** The level of access to repository contents granted to the GitHub App. Allowed values are read, write, or none. (AI-inferred) */
   contents?: string | Computed<string>;
-  /** The level of permission that the GitHub App has for the Deployments API. Allowed values are 'read', 'write', or 'none'. (AI-inferred) */
   deployments?: string | Computed<string>;
-  /** The permission level for the GitHub App's access to issues. Allowed values are 'read', 'write', or 'none'. (AI-inferred) */
   issues?: string | Computed<string>;
-  /** The permission level for metadata endpoints, typically 'read' or 'write'. (AI-inferred) */
   metadata?: string | Computed<string>;
 }
 
 export interface Run_App {
-  /** The public OAuth client ID of the GitHub App that created the check run. This identifier is used in OAuth flows to uniquely identify the app. (AI-inferred) */
   clientId?: string | Computed<string>;
-  /** The time when the check run was created, in ISO 8601 format (YYYY-MM-DDTHH:MM:SSZ). (AI-inferred) */
   createdAt: string | Computed<string>;
-  /** A short description of the GitHub App that created the check run. (AI-inferred) */
   description: string | Computed<string>;
   /** The list of events for the GitHub app. Note that the `installation_target`, `security_advisory`, and `meta` events are not included because they are global events and not specific to an installation. */
   events: string[] | Computed<string[]>;
-  /** The URL to the GitHub App's external website, as displayed in the GitHub App's public profile. (AI-inferred) */
   externalUrl: string | Computed<string>;
-  /** The URL to the GitHub App's public page. (AI-inferred) */
   htmlUrl: string | Computed<string>;
   /** Unique identifier of the GitHub app */
   id: number | Computed<number>;
@@ -95,86 +59,65 @@ export interface Run_App {
   installationsCount?: number | Computed<number>;
   /** The name of the GitHub app */
   name: string | Computed<string>;
-  /** The GraphQL node identifier for the app object within a GitHub check run. (AI-inferred) */
   nodeId: string | Computed<string>;
-  /** The GitHub user or organization that owns the GitHub App. Required; identifies the account responsible for the app. (AI-inferred) */
   owner: Run_App_Owner | Computed<Run_App_Owner>;
   /** The set of permissions for the GitHub app */
   permissions: Run_App_Permissions | Computed<Run_App_Permissions>;
   /** The slug name of the GitHub app */
   slug?: string | Computed<string>;
-  /** The timestamp indicating when the GitHub App was last updated, in ISO 8601 format. (AI-inferred) */
   updatedAt: string | Computed<string>;
 }
 
 export interface Run_CheckSuite {
-  /** The unique identifier of the check suite. (AI-inferred) */
   id: number | Computed<number>;
 }
 
 export interface Run_Deployment {
   createdAt: string | Computed<string>;
-  /** A short description of the deployment, providing context about the deployment. (AI-inferred) */
   description: string | Computed<string>;
   /** Name for the target deployment environment. */
   environment: string | Computed<string>;
   /** Unique identifier of the deployment */
   id: number | Computed<number>;
-  /** The global node identifier (node ID) for this deployment in GitHub's graph-based API system. (AI-inferred) */
   nodeId: string | Computed<string>;
-  /** The name of the environment the deployment originally targeted, before any overrides or changes. (AI-inferred) */
   originalEnvironment?: string | Computed<string>;
   /** GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub. */
   performedViaGithubApp?: Run_App | Computed<Run_App>;
   /** Specifies if the given environment is one that end-users directly interact with. Default: false. */
   productionEnvironment?: boolean | Computed<boolean>;
-  /** The URL of the repository associated with the deployment. (AI-inferred) */
   repositoryUrl: string | Computed<string>;
-  /** The URL to retrieve the list of deployment statuses for this deployment. (AI-inferred) */
   statusesUrl: string | Computed<string>;
   /** Parameter to specify a task to execute */
   task: string | Computed<string>;
   /** Specifies if the given environment is will no longer exist at some point in the future. Default: false. */
   transientEnvironment?: boolean | Computed<boolean>;
-  /** The timestamp of when the deployment was last updated, in ISO 8601 format. (AI-inferred) */
   updatedAt: string | Computed<string>;
-  /** The URL to the deployment resource in the GitHub API. (AI-inferred) */
   url: string | Computed<string>;
 }
 
 export interface Run_Output_Annotations {
-  /** The level of the annotation, which can be 'notice', 'warning', or 'failure'. (AI-inferred) */
   annotationLevel?: string | Computed<string>;
-  /** The column number where the annotation ends. Used with start_column to define the horizontal range of the annotation within a line. (AI-inferred) */
   endColumn?: number | Computed<number>;
-  /** The line number of the end of the annotation within the source file. (AI-inferred) */
   endLine?: number | Computed<number>;
-  /** A short description of the feedback for these lines of code. Max length is 255 characters. (AI-inferred) */
   message?: string | Computed<string>;
-  /** The path of the file that this check run annotation applies to, relative to the repository root. (AI-inferred) */
   path?: string | Computed<string>;
-  /** Additional details about the annotation that GitHub does not render. (AI-inferred) */
   rawDetails?: string | Computed<string>;
-  /** The start column of the annotation. Column numbers start at 1. Only valid when start_line is provided. (AI-inferred) */
   startColumn?: number | Computed<number>;
-  /** The line number in the file where the annotation starts. In GitHub Check Run annotations, this identifies the beginning line of the annotation. (AI-inferred) */
   startLine?: number | Computed<number>;
-  /** The title of the annotation, providing a concise summary of the issue or finding. (AI-inferred) */
   title?: string | Computed<string>;
 }
 
 export interface Run_Output_Images {
-  /** The alternative text for the image, providing a textual description of the image content. (AI-inferred) */
   alt?: string | Computed<string>;
-  /** The caption text displayed with the image in a GitHub check run output. This brief description appears alongside the image in the GitHub UI. (AI-inferred) */
   caption?: string | Computed<string>;
-  /** The URL of the image to display in the GitHub check run output. (AI-inferred) */
   imageUrl?: string | Computed<string>;
 }
 
 export interface Run_Output {
   /** Adds information from your analysis to specific lines of code. Annotations are visible on GitHub in the **Checks** and **Files changed** tab of the pull request. The Checks API limits the number of annotations to a maximum of 50 per API request. To create more than 50 annotations, you have to make multiple requests to the [Update a check run](https://docs.github.com/enterprise-cloud@latest/rest/checks/runs#update-a-check-run) endpoint. Each time you update the check run, annotations are appended to the list of annotations that already exist for the check run. GitHub Actions are limited to 10 warning annotations and 10 error annotations per step. For details about how you can view annotations on GitHub, see "[About status checks](https://docs.github.com/enterprise-cloud@latest/articles/about-status-checks#checks)". */
   annotations?: Run_Output_Annotations[] | Computed<Run_Output_Annotations[]>;
+  annotationsCount?: number | Computed<number>;
+  annotationsUrl?: string | Computed<string>;
   /** Adds images to the output displayed in the GitHub pull request UI. */
   images?: Run_Output_Images[] | Computed<Run_Output_Images[]>;
   /** The summary of the check run. This parameter supports Markdown. **Maximum length**: 65535 characters. */
@@ -187,31 +130,21 @@ export interface Run_Output {
 
 export interface Run_PullRequests_Base_Repo {
   id?: number | Computed<number>;
-  /** The name of the repository that contains the base branch of the pull request. (AI-inferred) */
   name?: string | Computed<string>;
-  /** The API URL of the repository, as returned by the GitHub API (e.g., https://api.github.com/repos/{owner}/{repo}). (AI-inferred) */
   url?: string | Computed<string>;
 }
 
 export interface Run_PullRequests_Base {
-  /** The git reference (branch or tag) of the base of the pull request. (AI-inferred) */
   ref?: string | Computed<string>;
-  /** The repository associated with the base of the pull request. (AI-inferred) */
   repo?: Run_PullRequests_Base_Repo | Computed<Run_PullRequests_Base_Repo>;
-  /** The SHA of the latest commit on the base branch of the pull request. (AI-inferred) */
   sha?: string | Computed<string>;
 }
 
 export interface Run_PullRequests {
-  /** The base branch of the pull request, containing details such as the branch reference, commit SHA, and repository information. (AI-inferred) */
   base?: Run_PullRequests_Base | Computed<Run_PullRequests_Base>;
-  /** The head of the pull request, containing details such as the source branch name, commit SHA, and repository information. (AI-inferred) */
   head?: Run_PullRequests_Base | Computed<Run_PullRequests_Base>;
-  /** The unique identifier of the pull request associated with this check run. (AI-inferred) */
   id?: number | Computed<number>;
-  /** The pull request number for the pull request associated with the check run. (AI-inferred) */
   number?: number | Computed<number>;
-  /** The URL of the pull request associated with the check run. (AI-inferred) */
   url?: string | Computed<string>;
 }
 
@@ -245,6 +178,8 @@ const Run_OutputFields: FieldMap = {
     kind: "list",
     fields: Run_Output_AnnotationsFields,
   },
+  annotationsCount: "annotations_count",
+  annotationsUrl: "annotations_url",
   images: {
     wireName: "images",
     kind: "list",
@@ -289,7 +224,6 @@ export interface RunAttrs {
   actions: Run_Actions[];
   /** GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub. */
   app: Run_App;
-  /** The check suite that is associated with this check run. It includes information about the suite, such as its unique identifier and the branch it applies to. (AI-inferred) */
   checkSuite: Run_CheckSuite;
   /** The time the check completed. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`. */
   completedAt: string;
@@ -303,13 +237,11 @@ export interface RunAttrs {
   externalId: string;
   /** The SHA of the commit. */
   headSha: string;
-  /** The URL to view the check run details on GitHub. (AI-inferred) */
   htmlUrl: string;
   /** The id of the check. */
   id: number;
   /** The name of the check. For example, "code-coverage". */
   name: string;
-  /** The GraphQL global node ID for the check run. (AI-inferred) */
   nodeId: string;
   /** Check runs can accept a variety of data in the `output` object, including a `title` and `summary` and can optionally provide descriptive details about the run. */
   output: Run_Output;
@@ -319,7 +251,6 @@ export interface RunAttrs {
   startedAt: string;
   /** The current status of the check run. Only GitHub Actions can set a status of `waiting`, `pending`, or `requested`. */
   status: string;
-  /** The API URL of the check run. (AI-inferred) */
   url: string;
   /** path parameter, not part of the API's own resource representation */
   owner: string;

@@ -4,52 +4,52 @@ package thread
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Thread_Repository_CodeOfConduct struct {
-	Body any
+	Body    any
 	HtmlUrl any
-	Key any
-	Name any
-	Url any
+	Key     any
+	Name    any
+	Url     any
 }
 
 type Thread_Repository_License struct {
-	Key any
-	Name any
+	Key    any
+	Name   any
 	NodeId any
 	SpdxId any
-	Url any
+	Url    any
 }
 
 type Thread_Repository_Owner struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type Thread_Repository_Permissions struct {
-	Admin any
+	Admin    any
 	Maintain any
-	Pull any
-	Push any
-	Triage any
+	Pull     any
+	Push     any
+	Triage   any
 }
 
 type Thread_Repository_SecurityAndAnalysis_AdvancedSecurity struct {
@@ -57,8 +57,8 @@ type Thread_Repository_SecurityAndAnalysis_AdvancedSecurity struct {
 }
 
 type Thread_Repository_SecurityAndAnalysis_SecretScanningDelegatedBypassOptions_Reviewers struct {
-	Mode any
-	ReviewerId any
+	Mode         any
+	ReviewerId   any
 	ReviewerType any
 }
 
@@ -70,122 +70,122 @@ type Thread_Repository_SecurityAndAnalysis_SecretScanningDelegatedBypassOptions 
 type Thread_Repository_SecurityAndAnalysis struct {
 	// Enable or disable GitHub Advanced Security for the repository. For standalone Code Scanning or Secret Protection products, this parameter cannot be used.
 	AdvancedSecurity any
-	CodeSecurity any
+	CodeSecurity     any
 	// Enable or disable Dependabot security updates for the repository.
-	DependabotSecurityUpdates any
-	SecretScanning any
-	SecretScanningAiDetection any
+	DependabotSecurityUpdates             any
+	SecretScanning                        any
+	SecretScanningAiDetection             any
 	SecretScanningDelegatedAlertDismissal any
-	SecretScanningDelegatedBypass any
-	SecretScanningDelegatedBypassOptions any
-	SecretScanningNonProviderPatterns any
-	SecretScanningPushProtection any
-	SecretScanningValidityChecks any
+	SecretScanningDelegatedBypass         any
+	SecretScanningDelegatedBypassOptions  any
+	SecretScanningNonProviderPatterns     any
+	SecretScanningPushProtection          any
+	SecretScanningValidityChecks          any
 }
 
 type Thread_Repository struct {
 	AllowForking any
-	ArchiveUrl any
-	Archived any
+	ArchiveUrl   any
+	Archived     any
 	AssigneesUrl any
-	BlobsUrl any
-	BranchesUrl any
-	CloneUrl any
+	BlobsUrl     any
+	BranchesUrl  any
+	CloneUrl     any
 	// Code Of Conduct
-	CodeOfConduct any
+	CodeOfConduct    any
 	CollaboratorsUrl any
-	CommentsUrl any
-	CommitsUrl any
-	CompareUrl any
-	ContentsUrl any
-	ContributorsUrl any
-	CreatedAt any
+	CommentsUrl      any
+	CommitsUrl       any
+	CompareUrl       any
+	ContentsUrl      any
+	ContributorsUrl  any
+	CreatedAt        any
 	// The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
-	CustomProperties any
-	DefaultBranch any
+	CustomProperties    any
+	DefaultBranch       any
 	DeleteBranchOnMerge any
-	DeploymentsUrl any
-	Description any
-	Disabled any
-	DownloadsUrl any
-	EventsUrl any
-	Fork any
-	Forks any
-	ForksCount any
-	ForksUrl any
-	FullName any
-	GitCommitsUrl any
-	GitRefsUrl any
-	GitTagsUrl any
-	GitUrl any
-	HasDiscussions any
-	HasDownloads any
-	HasIssues any
-	HasPages any
-	HasProjects any
-	HasPullRequests any
-	HasWiki any
-	Homepage any
-	HooksUrl any
-	HtmlUrl any
-	Id any
-	IsTemplate any
-	IssueCommentUrl any
-	IssueEventsUrl any
-	IssuesUrl any
-	KeysUrl any
-	LabelsUrl any
-	Language any
-	LanguagesUrl any
-	License any
-	MergesUrl any
-	MilestonesUrl any
-	MirrorUrl any
-	Name any
-	NetworkCount any
-	NodeId any
-	NotificationsUrl any
-	OpenIssues any
-	OpenIssuesCount any
+	DeploymentsUrl      any
+	Description         any
+	Disabled            any
+	DownloadsUrl        any
+	EventsUrl           any
+	Fork                any
+	Forks               any
+	ForksCount          any
+	ForksUrl            any
+	FullName            any
+	GitCommitsUrl       any
+	GitRefsUrl          any
+	GitTagsUrl          any
+	GitUrl              any
+	HasDiscussions      any
+	HasDownloads        any
+	HasIssues           any
+	HasPages            any
+	HasProjects         any
+	HasPullRequests     any
+	HasWiki             any
+	Homepage            any
+	HooksUrl            any
+	HtmlUrl             any
+	Id                  any
+	IsTemplate          any
+	IssueCommentUrl     any
+	IssueEventsUrl      any
+	IssuesUrl           any
+	KeysUrl             any
+	LabelsUrl           any
+	Language            any
+	LanguagesUrl        any
+	License             any
+	MergesUrl           any
+	MilestonesUrl       any
+	MirrorUrl           any
+	Name                any
+	NetworkCount        any
+	NodeId              any
+	NotificationsUrl    any
+	OpenIssues          any
+	OpenIssuesCount     any
 	// A GitHub user.
-	Owner any
+	Owner       any
 	Permissions any
-	Private any
+	Private     any
 	// The policy controlling who can create pull requests: all or collaborators_only.
 	PullRequestCreationPolicy any
-	PullsUrl any
-	PushedAt any
-	ReleasesUrl any
-	RoleName any
-	SecurityAndAnalysis any
+	PullsUrl                  any
+	PushedAt                  any
+	ReleasesUrl               any
+	RoleName                  any
+	SecurityAndAnalysis       any
 	// The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
-	Size any
-	SshUrl any
-	StargazersCount any
-	StargazersUrl any
-	StatusesUrl any
-	SubscribersCount any
-	SubscribersUrl any
-	SubscriptionUrl any
-	SvnUrl any
-	TagsUrl any
-	TeamsUrl any
-	TempCloneToken any
-	Topics any
-	TreesUrl any
-	UpdatedAt any
-	Url any
-	Visibility any
-	Watchers any
-	WatchersCount any
+	Size                     any
+	SshUrl                   any
+	StargazersCount          any
+	StargazersUrl            any
+	StatusesUrl              any
+	SubscribersCount         any
+	SubscribersUrl           any
+	SubscriptionUrl          any
+	SvnUrl                   any
+	TagsUrl                  any
+	TeamsUrl                 any
+	TempCloneToken           any
+	Topics                   any
+	TreesUrl                 any
+	UpdatedAt                any
+	Url                      any
+	Visibility               any
+	Watchers                 any
+	WatchersCount            any
 	WebCommitSignoffRequired any
 }
 
 type Thread_Subject struct {
 	LatestCommentUrl any
-	Title any
-	Type any
-	Url any
+	Title            any
+	Type             any
+	Url              any
 }
 
 type ThreadConfig struct {
@@ -193,17 +193,17 @@ type ThreadConfig struct {
 }
 
 type ThreadAttrs struct {
-	Id any
+	Id         any
 	LastReadAt any
-	Reason any
+	Reason     any
 	// Minimal Repository
-	Repository any
-	Subject any
+	Repository      any
+	Subject         any
 	SubscriptionUrl any
-	ThreadId any
-	Unread any
-	UpdatedAt any
-	Url any
+	ThreadId        any
+	Unread          any
+	UpdatedAt       any
+	Url             any
 }
 
 var Thread = ubx.DataSourceBinding{

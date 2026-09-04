@@ -2,25 +2,25 @@
 import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface RulesetConfig {
-  enterprise: string | Computed<string>;
+  org: string | Computed<string>;
   page?: number | Computed<number>;
   perPage?: number | Computed<number>;
-  rulesetId: number | Computed<number>;
+  targets?: string | Computed<string>;
 }
 
 export interface RulesetAttrs {
-  enterprise: string;
+  org: string;
   page: number;
   perPage: number;
-  rulesetId: number;
+  targets: string;
 }
 
 export const Ruleset: DataSourceBinding<RulesetConfig, RulesetAttrs> = {
   wireType: "github_ruleset",
   fields: {
-    enterprise: "enterprise",
+    org: "org",
     page: "page",
     perPage: "per_page",
-    rulesetId: "ruleset_id",
+    targets: "targets",
   },
 };

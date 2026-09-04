@@ -2,45 +2,26 @@
 import type { Computed, FieldMap, ResourceBinding } from "@ubx/sdk";
 
 export interface Asset_Uploader {
-  /** The URL of the GitHub user's avatar image. (AI-inferred) */
   avatarUrl: string | Computed<string>;
-  /** The email address of the uploader, if publicly available. May be null if the user has not made their email public. (AI-inferred) */
   email?: string | Computed<string>;
-  /** The API URL that lists events performed by this user. (AI-inferred) */
   eventsUrl: string | Computed<string>;
-  /** The URL to the GitHub API endpoint that lists the followers of the uploader user. (AI-inferred) */
   followersUrl: string | Computed<string>;
-  /** The URL template to list the users that this uploader follows, with a placeholder for the target user (e.g., {/other_user}). (AI-inferred) */
   followingUrl: string | Computed<string>;
-  /** The URL to the user's gists on GitHub, typically in the form 'https://api.github.com/users/{username}/gists{/gist_id}'. (AI-inferred) */
   gistsUrl: string | Computed<string>;
-  /** The Gravatar hash of the uploader user, used to construct their avatar image URL. (AI-inferred) */
   gravatarId: string | Computed<string>;
-  /** The GitHub profile URL for the user who uploaded the release asset. (AI-inferred) */
   htmlUrl: string | Computed<string>;
   id: number | Computed<number>;
-  /** The GitHub username of the user who uploaded the release asset. (AI-inferred) */
   login: string | Computed<string>;
-  /** The display name of the user who uploaded the release asset. (AI-inferred) */
   name?: string | Computed<string>;
-  /** The GraphQL node ID of the user who uploaded the release asset. (AI-inferred) */
   nodeId: string | Computed<string>;
-  /** The URL to the organizations endpoint for the user who uploaded the release asset. This endpoint returns the list of organizations the uploader belongs to. (AI-inferred) */
   organizationsUrl: string | Computed<string>;
-  /** The URL to the GitHub API endpoint that lists events received by the uploader user (the user who uploaded the release asset). (AI-inferred) */
   receivedEventsUrl: string | Computed<string>;
-  /** The URL to the list of repositories belonging to the user who uploaded the release asset. (AI-inferred) */
   reposUrl: string | Computed<string>;
-  /** Indicates whether the uploader is a GitHub site administrator (e.g., on GitHub.com or GitHub Enterprise). (AI-inferred) */
   siteAdmin: boolean | Computed<boolean>;
   starredAt?: string | Computed<string>;
-  /** The URL template for listing the uploader's starred GitHub repositories, with placeholders {owner} and {repo}. (AI-inferred) */
   starredUrl: string | Computed<string>;
-  /** The URL to the GitHub subscriptions of the user who uploaded the release asset. (AI-inferred) */
   subscriptionsUrl: string | Computed<string>;
-  /** The type of the uploader account, either 'User' or 'Organization'. (AI-inferred) */
   type: string | Computed<string>;
-  /** The URL of the uploader's GitHub profile. (AI-inferred) */
   url: string | Computed<string>;
   userViewType?: string | Computed<string>;
 }
@@ -57,33 +38,22 @@ export interface AssetConfig {
 }
 
 export interface AssetAttrs {
-  /** The browser-friendly URL for downloading the release asset. (AI-inferred) */
   browserDownloadUrl: string;
-  /** The MIME type of the release asset, as reported by GitHub for the uploaded file. (AI-inferred) */
   contentType: string;
-  /** The timestamp of when the release asset was created, set by the API. (AI-inferred) */
   createdAt: string;
-  /** The SHA-256 digest of the release asset file, computed by GitHub after upload. (AI-inferred) */
   digest: string;
-  /** The number of times the release asset has been downloaded. (AI-inferred) */
   downloadCount: number;
-  /** The unique identifier for this release asset, assigned by GitHub. (AI-inferred) */
   id: number;
-  /** The custom label assigned to the release asset, as returned by GitHub. (AI-inferred) */
   label: string;
   /** The file name of the asset. */
   name: string;
-  /** The unique identifier for the release asset, used as a GraphQL node ID. (AI-inferred) */
   nodeId: string;
-  /** The size of the release asset file in bytes. (AI-inferred) */
   size: number;
   /** State of the release asset. */
   state: string;
-  /** The timestamp of the last update to the release asset, in ISO 8601 format (e.g., 2013-02-27T19:35:32Z). (AI-inferred) */
   updatedAt: string;
   /** A GitHub user. */
   uploader: Asset_Uploader;
-  /** The API URL for the release asset on GitHub, used for programmatic access. (AI-inferred) */
   url: string;
   /** path parameter, not part of the API's own resource representation */
   owner: string;

@@ -7,73 +7,60 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
-class HostedRunner_ImageDetails:
-    # Display name for this image.
+class HostedRunner_Runners_ImageDetails:
     display_name: Any = None
-    # The ID of the image. Use this ID for the `image` parameter when creating a new larger runner.
     id: Any = None
-    # Image size in GB.
     size_gb: Any = None
-    # The image provider.
     source: Any = None
-    # The image version of the hosted runner pool.
     version: Any = None
 
 @dataclasses.dataclass
-class HostedRunner_MachineSizeDetails:
-    # The number of cores.
+class HostedRunner_Runners_MachineSizeDetails:
     cpu_cores: Any = None
-    # The ID used for the `size` parameter when creating a new runner.
     id: Any = None
-    # The available RAM for the machine spec.
     memory_gb: Any = None
-    # The available SSD storage for the machine spec.
     storage_gb: Any = None
 
 @dataclasses.dataclass
-class HostedRunner_PublicIps:
+class HostedRunner_Runners_PublicIps:
     enabled: Any = None
     length: Any = None
     prefix: Any = None
 
 @dataclasses.dataclass
+class HostedRunner_Runners:
+    id: Any = None
+    image_details: Any = None
+    image_gen: Any = None
+    last_active_on: Any = None
+    machine_size_details: Any = None
+    maximum_runners: Any = None
+    name: Any = None
+    platform: Any = None
+    public_ip_enabled: Any = None
+    public_ips: Any = None
+    runner_group_id: Any = None
+    status: Any = None
+
+@dataclasses.dataclass
 class HostedRunnerConfig:
-    hosted_runner_id: Any = None
-    org: Any = None
+    enterprise: Any = None
+    page: Any = None
+    per_page: Any = None
 
 @dataclasses.dataclass
 class HostedRunnerAttrs:
-    hosted_runner_id: Any = None
-    # The unique identifier of the hosted runner.
-    id: Any = None
-    # Provides details of a hosted runner image
-    image_details: Any = None
-    # Whether custom image generation is enabled for the hosted runners.
-    image_gen: Any = None
-    # The time at which the runner was last used, in ISO 8601 format.
-    last_active_on: Any = None
-    # Provides details of a particular machine spec.
-    machine_size_details: Any = None
-    # The maximum amount of hosted runners. Runners will not scale automatically above this number. Use this setting to limit your cost.
-    maximum_runners: Any = None
-    # The name of the hosted runner.
-    name: Any = None
-    org: Any = None
-    # The operating system of the image.
-    platform: Any = None
-    # Whether public IP is enabled for the hosted runners.
-    public_ip_enabled: Any = None
-    # The public IP ranges when public IP is enabled for the hosted runners.
-    public_ips: Any = None
-    # The unique identifier of the group that the hosted runner belongs to.
-    runner_group_id: Any = None
-    # The status of the runner.
-    status: Any = None
+    enterprise: Any = None
+    page: Any = None
+    per_page: Any = None
+    runners: Any = None
+    total_count: Any = None
 
 HostedRunner = ubx.DataSourceBinding(
     wire_type="github_actions_hosted_runner",
     fields={
-        "hosted_runner_id": ubx.FieldSpec(wire_name="hosted_runner_id"),
-        "org": ubx.FieldSpec(wire_name="org"),
+        "enterprise": ubx.FieldSpec(wire_name="enterprise"),
+        "page": ubx.FieldSpec(wire_name="page"),
+        "per_page": ubx.FieldSpec(wire_name="per_page"),
     },
 )

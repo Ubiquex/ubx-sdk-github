@@ -3,12 +3,15 @@ import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface StargazerConfig {
   owner: string | Computed<string>;
+  page?: number | Computed<number>;
+  perPage?: number | Computed<number>;
   repo: string | Computed<string>;
 }
 
 export interface StargazerAttrs {
-  count: number;
   owner: string;
+  page: number;
+  perPage: number;
   repo: string;
 }
 
@@ -16,6 +19,8 @@ export const Stargazer: DataSourceBinding<StargazerConfig, StargazerAttrs> = {
   wireType: "github_stargazer",
   fields: {
     owner: "owner",
+    page: "page",
+    perPage: "per_page",
     repo: "repo",
   },
 };

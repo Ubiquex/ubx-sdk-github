@@ -10,7 +10,7 @@ type HostedRunnersSettingsConfig struct {
 type HostedRunnersSettingsAttrs struct {
 	// The policy that controls whether self-hosted runners can be used by repositories in the organization
 	EnabledRepositories any
-	Org any
+	Org                 any
 	// The URL to the endpoint for managing selected repositories for self-hosted runners in the organization
 	SelectedRepositoriesUrl any
 }

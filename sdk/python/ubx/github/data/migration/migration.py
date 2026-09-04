@@ -8,14 +8,14 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class MigrationConfig:
-    migration_id: Any = None
+    exclude: Any = None
     org: Any = None
     page: Any = None
     per_page: Any = None
 
 @dataclasses.dataclass
 class MigrationAttrs:
-    migration_id: Any = None
+    exclude: Any = None
     org: Any = None
     page: Any = None
     per_page: Any = None
@@ -23,7 +23,7 @@ class MigrationAttrs:
 Migration = ubx.DataSourceBinding(
     wire_type="github_migration",
     fields={
-        "migration_id": ubx.FieldSpec(wire_name="migration_id"),
+        "exclude": ubx.FieldSpec(wire_name="exclude"),
         "org": ubx.FieldSpec(wire_name="org"),
         "page": ubx.FieldSpec(wire_name="page"),
         "per_page": ubx.FieldSpec(wire_name="per_page"),

@@ -4,12 +4,10 @@
 # re-run `ubx sdk gen` to regenerate after a provider version bump.
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
-from .copilot import Copilot, CopilotConfig
 from .enterprise_content_exclusion_details import EnterpriseContentExclusionDetails, EnterpriseContentExclusionDetailsConfig
 from .organization_content_exclusion_details import OrganizationContentExclusionDetails, OrganizationContentExclusionDetailsConfig
 from .organization_details import OrganizationDetails, OrganizationDetailsConfig
 from .seat_details import SeatDetails, SeatDetailsConfig
 from .space import Space, SpaceConfig
+from .space_collaborator import SpaceCollaborator, SpaceCollaboratorConfig
 from .space_resource import SpaceResource, SpaceResourceConfig
-from .usage_metrics_1_day_report import UsageMetrics1DayReport, UsageMetrics1DayReportConfig
-from .usage_metrics_28_day_report import UsageMetrics28DayReport, UsageMetrics28DayReportConfig

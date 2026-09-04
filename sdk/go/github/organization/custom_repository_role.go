@@ -4,28 +4,28 @@ package organization
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type CustomRepositoryRole_Organization struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type CustomRepositoryRoleConfig struct {
@@ -45,7 +45,7 @@ type CustomRepositoryRoleConfig struct {
 
 type CustomRepositoryRoleAttrs struct {
 	// The system role from which this role inherits permissions.
-	BaseRole any
+	BaseRole  any
 	CreatedAt any
 	// A short description about who this role is for or what permissions it grants.
 	Description any
@@ -57,7 +57,7 @@ type CustomRepositoryRoleAttrs struct {
 	Organization any
 	// A list of additional permissions included in this role.
 	Permissions any
-	UpdatedAt any
+	UpdatedAt   any
 	// path parameter, not part of the API's own resource representation
 	Org any
 	// path parameter, not part of the API's own resource representation
@@ -67,11 +67,11 @@ type CustomRepositoryRoleAttrs struct {
 var CustomRepositoryRole = ubx.ResourceBinding{
 	WireType: "github_organization_custom_repository_role",
 	Fields: ubx.FieldMap{
-		"BaseRole": ubx.FieldSpec{WireName: "base_role"},
+		"BaseRole":    ubx.FieldSpec{WireName: "base_role"},
 		"Description": ubx.FieldSpec{WireName: "description"},
-		"Name": ubx.FieldSpec{WireName: "name"},
+		"Name":        ubx.FieldSpec{WireName: "name"},
 		"Permissions": ubx.FieldSpec{WireName: "permissions"},
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"RoleId": ubx.FieldSpec{WireName: "role_id"},
+		"Org":         ubx.FieldSpec{WireName: "org"},
+		"RoleId":      ubx.FieldSpec{WireName: "role_id"},
 	},
 }

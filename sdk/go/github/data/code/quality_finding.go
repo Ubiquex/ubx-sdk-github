@@ -40,13 +40,13 @@ type QualityFinding_Rule struct {
 
 type QualityFindingConfig struct {
 	FindingNumber any
-	Owner any
-	Repo any
+	Owner         any
+	Repo          any
 }
 
 type QualityFindingAttrs struct {
 	// The time the code quality finding was created.
-	CreatedAt any
+	CreatedAt     any
 	FindingNumber any
 	// Code quality file location
 	Location any
@@ -54,8 +54,8 @@ type QualityFindingAttrs struct {
 	Message any
 	// The finding number.
 	Number any
-	Owner any
-	Repo any
+	Owner  any
+	Repo   any
 	// Code quality rule
 	Rule any
 	// State of the code quality finding.
@@ -68,7 +68,7 @@ var QualityFinding = ubx.DataSourceBinding{
 	WireType: "github_code_quality_finding",
 	Fields: ubx.FieldMap{
 		"FindingNumber": ubx.FieldSpec{WireName: "finding_number"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":         ubx.FieldSpec{WireName: "owner"},
+		"Repo":          ubx.FieldSpec{WireName: "repo"},
 	},
 }

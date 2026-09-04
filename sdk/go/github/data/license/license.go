@@ -4,29 +4,22 @@ package license
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type LicenseConfig struct {
-	License any
+	Featured any
+	Page     any
+	PerPage  any
 }
 
 type LicenseAttrs struct {
-	Body any
-	Conditions any
-	Description any
 	Featured any
-	HtmlUrl any
-	Implementation any
-	Key any
-	License any
-	Limitations any
-	Name any
-	NodeId any
-	Permissions any
-	SpdxId any
-	Url any
+	Page     any
+	PerPage  any
 }
 
 var License = ubx.DataSourceBinding{
 	WireType: "github_license",
 	Fields: ubx.FieldMap{
-		"License": ubx.FieldSpec{WireName: "license"},
+		"Featured": ubx.FieldSpec{WireName: "featured"},
+		"Page":     ubx.FieldSpec{WireName: "page"},
+		"PerPage":  ubx.FieldSpec{WireName: "per_page"},
 	},
 }

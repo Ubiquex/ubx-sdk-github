@@ -7,7 +7,7 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
-class SeatDetails_Assignee:
+class SeatDetails_Seats_Assignee:
     avatar_url: Any = None
     email: Any = None
     events_url: Any = None
@@ -32,7 +32,7 @@ class SeatDetails_Assignee:
     user_view_type: Any = None
 
 @dataclasses.dataclass
-class SeatDetails_AssigningTeam_Parent:
+class SeatDetails_Seats_AssigningTeam_Parent:
     description: Any = None
     enterprise_id: Any = None
     html_url: Any = None
@@ -51,7 +51,7 @@ class SeatDetails_AssigningTeam_Parent:
     url: Any = None
 
 @dataclasses.dataclass
-class SeatDetails_AssigningTeam_Permissions:
+class SeatDetails_Seats_AssigningTeam_Permissions:
     admin: Any = None
     maintain: Any = None
     pull: Any = None
@@ -59,7 +59,7 @@ class SeatDetails_AssigningTeam_Permissions:
     triage: Any = None
 
 @dataclasses.dataclass
-class SeatDetails_AssigningTeam:
+class SeatDetails_Seats_AssigningTeam:
     access_source: Any = None
     created_at: Any = None
     description: Any = None
@@ -86,7 +86,7 @@ class SeatDetails_AssigningTeam:
     url: Any = None
 
 @dataclasses.dataclass
-class SeatDetails_Organization:
+class SeatDetails_Seats_Organization:
     avatar_url: Any = None
     description: Any = None
     events_url: Any = None
@@ -101,39 +101,38 @@ class SeatDetails_Organization:
     url: Any = None
 
 @dataclasses.dataclass
+class SeatDetails_Seats:
+    assignee: Any = None
+    assigning_team: Any = None
+    created_at: Any = None
+    last_activity_at: Any = None
+    last_activity_editor: Any = None
+    last_authenticated_at: Any = None
+    organization: Any = None
+    pending_cancellation_date: Any = None
+    plan_type: Any = None
+    updated_at: Any = None
+
+@dataclasses.dataclass
 class SeatDetailsConfig:
-    org: Any = None
-    username: Any = None
+    enterprise: Any = None
+    page: Any = None
+    per_page: Any = None
 
 @dataclasses.dataclass
 class SeatDetailsAttrs:
-    # A GitHub user.
-    assignee: Any = None
-    # The team through which the assignee is granted access to GitHub Copilot, if applicable.
-    assigning_team: Any = None
-    # Timestamp of when the assignee was last granted access to GitHub Copilot, in ISO 8601 format.
-    created_at: Any = None
-    # Timestamp of user's last GitHub Copilot activity, in ISO 8601 format.
-    last_activity_at: Any = None
-    # Last editor that was used by the user for a GitHub Copilot completion.
-    last_activity_editor: Any = None
-    # Timestamp of the last time the user authenticated with GitHub Copilot, in ISO 8601 format.
-    last_authenticated_at: Any = None
-    org: Any = None
-    # A GitHub organization.
-    organization: Any = None
-    # The pending cancellation date for the seat, in `YYYY-MM-DD` format. This will be null unless the assignee's Copilot access has been canceled during the current billing cycle. If the seat has been cancelled, this corresponds to the start of the organization's next billing cycle.
-    pending_cancellation_date: Any = None
-    # The Copilot plan of the organization, or the parent enterprise, when applicable.
-    plan_type: Any = None
-    # **Closing down notice:** This field is no longer relevant and is closing down. Use the `created_at` field to determine when the assignee was last granted access to GitHub Copilot. Timestamp of when the assignee's GitHub Copilot access was last updated, in ISO 8601 format.
-    updated_at: Any = None
-    username: Any = None
+    enterprise: Any = None
+    page: Any = None
+    per_page: Any = None
+    seats: Any = None
+    # The total number of Copilot seats the enterprise is being billed for. Users with access through multiple organizations or enterprise teams are only counted once.
+    total_seats: Any = None
 
 SeatDetails = ubx.DataSourceBinding(
     wire_type="github_copilot_seat_details",
     fields={
-        "org": ubx.FieldSpec(wire_name="org"),
-        "username": ubx.FieldSpec(wire_name="username"),
+        "enterprise": ubx.FieldSpec(wire_name="enterprise"),
+        "page": ubx.FieldSpec(wire_name="page"),
+        "per_page": ubx.FieldSpec(wire_name="per_page"),
     },
 )

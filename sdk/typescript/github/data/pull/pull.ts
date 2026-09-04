@@ -2,20 +2,28 @@
 import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface PullConfig {
-  org: string | Computed<string>;
+  commitSha: string | Computed<string>;
+  owner: string | Computed<string>;
+  page?: number | Computed<number>;
+  perPage?: number | Computed<number>;
+  repo: string | Computed<string>;
 }
 
 export interface PullAttrs {
-  /** Whether the pull request creation cap is enabled */
-  enabled: boolean;
-  /** The maximum number of open pull requests a user can have at one time */
-  maxOpenPullRequests: number;
-  org: string;
+  commitSha: string;
+  owner: string;
+  page: number;
+  perPage: number;
+  repo: string;
 }
 
 export const Pull: DataSourceBinding<PullConfig, PullAttrs> = {
   wireType: "github_pull",
   fields: {
-    org: "org",
+    commitSha: "commit_sha",
+    owner: "owner",
+    page: "page",
+    perPage: "per_page",
+    repo: "repo",
   },
 };

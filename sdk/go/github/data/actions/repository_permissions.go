@@ -5,7 +5,7 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type RepositoryPermissionsConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type RepositoryPermissionsAttrs struct {
@@ -13,8 +13,8 @@ type RepositoryPermissionsAttrs struct {
 	AllowedActions any
 	// Whether GitHub Actions is enabled on the repository.
 	Enabled any
-	Owner any
-	Repo any
+	Owner   any
+	Repo    any
 	// The API URL to use to get or set the actions and reusable workflows that are allowed to run, when `allowed_actions` is set to `selected`.
 	SelectedActionsUrl any
 	// Whether actions must be pinned to a full-length commit SHA.
@@ -25,6 +25,6 @@ var RepositoryPermissions = ubx.DataSourceBinding{
 	WireType: "github_actions_repository_permissions",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

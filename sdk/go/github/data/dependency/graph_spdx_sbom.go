@@ -12,40 +12,40 @@ type GraphSpdxSbom_Sbom_CreationInfo struct {
 
 type GraphSpdxSbom_Sbom_Packages_ExternalRefs struct {
 	ReferenceCategory any
-	ReferenceLocator any
-	ReferenceType any
+	ReferenceLocator  any
+	ReferenceType     any
 }
 
 type GraphSpdxSbom_Sbom_Packages struct {
-	CopyrightText any
+	CopyrightText    any
 	DownloadLocation any
-	ExternalRefs any
-	FilesAnalyzed any
+	ExternalRefs     any
+	FilesAnalyzed    any
 	LicenseConcluded any
-	LicenseDeclared any
-	Name any
-	Spdxid any
-	Supplier any
-	VersionInfo any
+	LicenseDeclared  any
+	Name             any
+	Spdxid           any
+	Supplier         any
+	VersionInfo      any
 }
 
 type GraphSpdxSbom_Sbom_Relationships struct {
 	RelatedSpdxElement any
-	RelationshipType any
-	SpdxElementId any
+	RelationshipType   any
+	SpdxElementId      any
 }
 
 type GraphSpdxSbom_Sbom struct {
 	// An optional comment about the SPDX document.
-	Comment any
+	Comment      any
 	CreationInfo any
 	// The license under which the SPDX document is licensed.
 	DataLicense any
 	// The namespace for the SPDX document.
 	DocumentNamespace any
 	// The name of the SPDX document.
-	Name any
-	Packages any
+	Name          any
+	Packages      any
 	Relationships any
 	// The version of the SPDX specification that this document conforms to.
 	SpdxVersion any
@@ -55,19 +55,19 @@ type GraphSpdxSbom_Sbom struct {
 
 type GraphSpdxSbomConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type GraphSpdxSbomAttrs struct {
 	Owner any
-	Repo any
-	Sbom any
+	Repo  any
+	Sbom  any
 }
 
 var GraphSpdxSbom = ubx.DataSourceBinding{
 	WireType: "github_dependency_graph_spdx_sbom",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

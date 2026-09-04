@@ -3,90 +3,17 @@ package repo
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
-type Repo_Tasks_Artifacts_Data struct {
-	BaseRef any
-	GlobalId any
-	HeadRef any
-	Id any
-}
-
-type Repo_Tasks_Artifacts struct {
-	Data any
-	Provider any
-	Type any
-}
-
-type Repo_Tasks_Creator struct {
-	Id any
-}
-
-type Repo_Tasks_CustomAgent struct {
-	Id any
-}
-
-type Repo_Tasks struct {
-	ArchivedAt any
-	Artifacts any
-	CreatedAt any
-	Creator any
-	CreatorType any
-	CustomAgent any
-	HtmlUrl any
-	Id any
-	Name any
-	Owner any
-	Repository any
-	SessionCount any
-	State any
-	UpdatedAt any
-	Url any
-	UserCollaborators any
-}
-
 type RepoConfig struct {
-	CreatorId any
-	Direction any
-	IsArchived any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
-	Since any
-	Sort any
-	State any
+	Enterprise any
 }
 
 type RepoAttrs struct {
-	CreatorId any
-	Direction any
-	IsArchived any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
-	Since any
-	Sort any
-	State any
-	// List of tasks
-	Tasks any
-	// Total count of active (non-archived) tasks
-	TotalActiveCount any
-	// Total count of archived tasks
-	TotalArchivedCount any
+	Enterprise any
 }
 
 var Repo = ubx.DataSourceBinding{
 	WireType: "github_repo",
 	Fields: ubx.FieldMap{
-		"CreatorId": ubx.FieldSpec{WireName: "creator_id"},
-		"Direction": ubx.FieldSpec{WireName: "direction"},
-		"IsArchived": ubx.FieldSpec{WireName: "is_archived"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"Since": ubx.FieldSpec{WireName: "since"},
-		"Sort": ubx.FieldSpec{WireName: "sort"},
-		"State": ubx.FieldSpec{WireName: "state"},
+		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
 	},
 }

@@ -7,30 +7,29 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
-class HostedRunnerCustomImageVersionConfig:
-    enterprise: Any = None
-    image_definition_id: Any = None
+class HostedRunnerCustomImageVersion_ImageVersions:
+    created_on: Any = None
+    size_gb: Any = None
+    state: Any = None
+    state_details: Any = None
     version: Any = None
 
 @dataclasses.dataclass
-class HostedRunnerCustomImageVersionAttrs:
-    # The creation date time of the image version.
-    created_on: Any = None
+class HostedRunnerCustomImageVersionConfig:
     enterprise: Any = None
     image_definition_id: Any = None
-    # Image version size in GB.
-    size_gb: Any = None
-    # The state of image version.
-    state: Any = None
-    # The image version status details.
-    state_details: Any = None
-    version: Any = None
+
+@dataclasses.dataclass
+class HostedRunnerCustomImageVersionAttrs:
+    enterprise: Any = None
+    image_definition_id: Any = None
+    image_versions: Any = None
+    total_count: Any = None
 
 HostedRunnerCustomImageVersion = ubx.DataSourceBinding(
     wire_type="github_actions_hosted_runner_custom_image_version",
     fields={
         "enterprise": ubx.FieldSpec(wire_name="enterprise"),
         "image_definition_id": ubx.FieldSpec(wire_name="image_definition_id"),
-        "version": ubx.FieldSpec(wire_name="version"),
     },
 )

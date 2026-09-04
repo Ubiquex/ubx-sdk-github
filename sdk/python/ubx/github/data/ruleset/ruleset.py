@@ -8,24 +8,24 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class RulesetConfig:
-    enterprise: Any = None
+    org: Any = None
     page: Any = None
     per_page: Any = None
-    ruleset_id: Any = None
+    targets: Any = None
 
 @dataclasses.dataclass
 class RulesetAttrs:
-    enterprise: Any = None
+    org: Any = None
     page: Any = None
     per_page: Any = None
-    ruleset_id: Any = None
+    targets: Any = None
 
 Ruleset = ubx.DataSourceBinding(
     wire_type="github_ruleset",
     fields={
-        "enterprise": ubx.FieldSpec(wire_name="enterprise"),
+        "org": ubx.FieldSpec(wire_name="org"),
         "page": ubx.FieldSpec(wire_name="page"),
         "per_page": ubx.FieldSpec(wire_name="per_page"),
-        "ruleset_id": ubx.FieldSpec(wire_name="ruleset_id"),
+        "targets": ubx.FieldSpec(wire_name="targets"),
     },
 )

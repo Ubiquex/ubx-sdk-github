@@ -11,9 +11,7 @@ export interface Summary_AlertStats {
 }
 
 export interface Summary_CodeScanningAlerts {
-  /** The list of alert numbers for the code scanning alerts in this campaign summary. (AI-inferred) */
   alertNumbers?: number[] | Computed<number[]>;
-  /** The numeric identifier of the repository in which the code scanning alert was found. (AI-inferred) */
   repositoryId?: number | Computed<number>;
 }
 

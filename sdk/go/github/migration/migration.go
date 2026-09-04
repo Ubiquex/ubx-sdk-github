@@ -4,47 +4,28 @@ package migration
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Migration_Owner struct {
-	// The URL of the avatar image for the owner of the GitHub migration. (AI-inferred)
-	AvatarUrl any
-	Email any
-	// URL to the events of the owner (user or organization), as provided by the GitHub API. (AI-inferred)
-	EventsUrl any
-	// The URL to the GitHub API endpoint for the list of followers of the owner. (AI-inferred)
-	FollowersUrl any
-	// The URL template to list users this owner follows, optionally with another user as a query parameter to check if the owner follows that user. (AI-inferred)
-	FollowingUrl any
-	// The URL to the owner's gists endpoint. (AI-inferred)
-	GistsUrl any
-	// The Gravatar ID for the owner's avatar image, as used by GitHub. (AI-inferred)
-	GravatarId any
-	// The GitHub web URL for the owner (user or organization) that owns the migration. (AI-inferred)
-	HtmlUrl any
-	// The unique identifier of the owner (user or organization) associated with the GitHub migration. (AI-inferred)
-	Id any
-	// The GitHub username or organization login for the owner of the migration. (AI-inferred)
-	Login any
-	Name any
-	// The node ID of the GitHub migration owner (user or organization), used as a unique identifier in the GitHub API. (AI-inferred)
-	NodeId any
-	// The URL to the GitHub API endpoint that lists the organizations associated with this owner account (e.g., https://api.github.com/users/{login}/orgs). (AI-inferred)
-	OrganizationsUrl any
-	// The URL to retrieve the list of events received by this GitHub owner. (AI-inferred)
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	// The API endpoint URL for the owner's repositories. (AI-inferred)
-	ReposUrl any
-	// Boolean indicating whether the owner is a GitHub site administrator. This is a required field in the migration owner object. (AI-inferred)
-	SiteAdmin any
-	// The timestamp indicating when the owner starred this repository. Typically in RFC3339 format and present only if the owner has starred the repository. (AI-inferred)
-	StarredAt any
-	// The URL template for the repositories starred by this owner, e.g., https://api.github.com/users/{owner}/starred{/owner}{/repo}. (AI-inferred)
-	StarredUrl any
-	// The URL to the owner's subscriptions list, used to retrieve the subscriptions for the migration owner. (AI-inferred)
-	SubscriptionsUrl any
-	// The type of the GitHub account that owns the migration, such as 'User' or 'Organization'. (AI-inferred)
-	Type any
-	// The URL to the owner's GitHub API resource for the migration, such as an organization or user. (AI-inferred)
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type MigrationConfig struct {
@@ -64,8 +45,7 @@ type MigrationConfig struct {
 	LockRepositories any
 	// Indicates whether this should only include organization metadata (repositories array should be empty and will ignore other flags).
 	OrgMetadataOnly any
-	// The list of repositories to include in the migration. Each item typically identifies a repository (e.g., in 'owner/name' format) that will be migrated. (AI-inferred)
-	Repositories any
+	Repositories    any
 	// path parameter, not part of the API's own resource representation
 	Org any
 	// path parameter, not part of the API's own resource representation
@@ -73,10 +53,8 @@ type MigrationConfig struct {
 }
 
 type MigrationAttrs struct {
-	// The URL at which the migration archive can be downloaded. This value is computed and only available after the migration completes. (AI-inferred)
 	ArchiveUrl any
-	// The timestamp for when the GitHub migration was created. (AI-inferred)
-	CreatedAt any
+	CreatedAt  any
 	// Exclude attributes from the API response to improve performance
 	Exclude any
 	// Do not include attachments in the migration
@@ -89,22 +67,19 @@ type MigrationAttrs struct {
 	ExcludeOwnerProjects any
 	// Do not include releases in the migration
 	ExcludeReleases any
-	Guid any
-	Id any
+	Guid            any
+	Id              any
 	// Lock the repositories being migrated at the start of the migration
 	LockRepositories any
-	// The GraphQL node identifier for this migration, used to access it via the GitHub GraphQL API. (AI-inferred)
-	NodeId any
+	NodeId           any
 	// Indicates whether this should only include organization metadata (repositories array should be empty and will ignore other flags).
 	OrgMetadataOnly any
 	// A GitHub user.
-	Owner any
-	// The list of repositories to include in the migration. Each item typically identifies a repository (e.g., in 'owner/name' format) that will be migrated. (AI-inferred)
+	Owner        any
 	Repositories any
-	State any
-	UpdatedAt any
-	// The GitHub API URL for this migration. (AI-inferred)
-	Url any
+	State        any
+	UpdatedAt    any
+	Url          any
 	// path parameter, not part of the API's own resource representation
 	Org any
 	// path parameter, not part of the API's own resource representation
@@ -114,16 +89,16 @@ type MigrationAttrs struct {
 var Migration = ubx.ResourceBinding{
 	WireType: "github_migration",
 	Fields: ubx.FieldMap{
-		"Exclude": ubx.FieldSpec{WireName: "exclude"},
-		"ExcludeAttachments": ubx.FieldSpec{WireName: "exclude_attachments"},
-		"ExcludeGitData": ubx.FieldSpec{WireName: "exclude_git_data"},
-		"ExcludeMetadata": ubx.FieldSpec{WireName: "exclude_metadata"},
+		"Exclude":              ubx.FieldSpec{WireName: "exclude"},
+		"ExcludeAttachments":   ubx.FieldSpec{WireName: "exclude_attachments"},
+		"ExcludeGitData":       ubx.FieldSpec{WireName: "exclude_git_data"},
+		"ExcludeMetadata":      ubx.FieldSpec{WireName: "exclude_metadata"},
 		"ExcludeOwnerProjects": ubx.FieldSpec{WireName: "exclude_owner_projects"},
-		"ExcludeReleases": ubx.FieldSpec{WireName: "exclude_releases"},
-		"LockRepositories": ubx.FieldSpec{WireName: "lock_repositories"},
-		"OrgMetadataOnly": ubx.FieldSpec{WireName: "org_metadata_only"},
-		"Repositories": ubx.FieldSpec{WireName: "repositories"},
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"MigrationId": ubx.FieldSpec{WireName: "migration_id"},
+		"ExcludeReleases":      ubx.FieldSpec{WireName: "exclude_releases"},
+		"LockRepositories":     ubx.FieldSpec{WireName: "lock_repositories"},
+		"OrgMetadataOnly":      ubx.FieldSpec{WireName: "org_metadata_only"},
+		"Repositories":         ubx.FieldSpec{WireName: "repositories"},
+		"Org":                  ubx.FieldSpec{WireName: "org"},
+		"MigrationId":          ubx.FieldSpec{WireName: "migration_id"},
 	},
 }

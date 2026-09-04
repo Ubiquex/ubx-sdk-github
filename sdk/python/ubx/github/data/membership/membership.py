@@ -8,21 +8,24 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class MembershipConfig:
+    enterprise: Any = None
+    enterprise_team: Any = None
     page: Any = None
     per_page: Any = None
-    state: Any = None
 
 @dataclasses.dataclass
 class MembershipAttrs:
+    enterprise: Any = None
+    enterprise_team: Any = None
     page: Any = None
     per_page: Any = None
-    state: Any = None
 
 Membership = ubx.DataSourceBinding(
     wire_type="github_membership",
     fields={
+        "enterprise": ubx.FieldSpec(wire_name="enterprise"),
+        "enterprise_team": ubx.FieldSpec(wire_name="enterprise_team"),
         "page": ubx.FieldSpec(wire_name="page"),
         "per_page": ubx.FieldSpec(wire_name="per_page"),
-        "state": ubx.FieldSpec(wire_name="state"),
     },
 )

@@ -7,6 +7,11 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
+class VersionWithState_Actor:
+    id: Any = None
+    type: Any = None
+
+@dataclasses.dataclass
 class VersionWithStateConfig:
     enterprise: Any = None
     ruleset_id: Any = None
@@ -14,8 +19,13 @@ class VersionWithStateConfig:
 
 @dataclasses.dataclass
 class VersionWithStateAttrs:
+    # The actor who updated the ruleset
+    actor: Any = None
     enterprise: Any = None
     ruleset_id: Any = None
+    # The state of the ruleset version
+    state: Any = None
+    updated_at: Any = None
     version_id: Any = None
 
 VersionWithState = ubx.DataSourceBinding(

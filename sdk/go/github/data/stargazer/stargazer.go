@@ -4,20 +4,25 @@ package stargazer
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type StargazerConfig struct {
-	Owner any
-	Repo any
+	Owner   any
+	Page    any
+	PerPage any
+	Repo    any
 }
 
 type StargazerAttrs struct {
-	Count any
-	Owner any
-	Repo any
+	Owner   any
+	Page    any
+	PerPage any
+	Repo    any
 }
 
 var Stargazer = ubx.DataSourceBinding{
 	WireType: "github_stargazer",
 	Fields: ubx.FieldMap{
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":   ubx.FieldSpec{WireName: "owner"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Repo":    ubx.FieldSpec{WireName: "repo"},
 	},
 }

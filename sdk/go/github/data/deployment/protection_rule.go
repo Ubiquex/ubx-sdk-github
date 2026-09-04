@@ -3,29 +3,32 @@ package deployment
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
-type ProtectionRule_AvailableCustomDeploymentProtectionRuleIntegrations struct {
-	Id any
+type ProtectionRule_CustomDeploymentProtectionRules_App struct {
+	Id             any
 	IntegrationUrl any
-	NodeId any
-	Slug any
+	NodeId         any
+	Slug           any
+}
+
+type ProtectionRule_CustomDeploymentProtectionRules struct {
+	App     any
+	Enabled any
+	Id      any
+	NodeId  any
 }
 
 type ProtectionRuleConfig struct {
 	EnvironmentName any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
+	Owner           any
+	Repo            any
 }
 
 type ProtectionRuleAttrs struct {
-	AvailableCustomDeploymentProtectionRuleIntegrations any
-	EnvironmentName any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
-	// The total number of custom deployment protection rule integrations available for this environment.
+	CustomDeploymentProtectionRules any
+	EnvironmentName                 any
+	Owner                           any
+	Repo                            any
+	// The number of enabled custom deployment protection rules for this environment
 	TotalCount any
 }
 
@@ -33,9 +36,7 @@ var ProtectionRule = ubx.DataSourceBinding{
 	WireType: "github_deployment_protection_rule",
 	Fields: ubx.FieldMap{
 		"EnvironmentName": ubx.FieldSpec{WireName: "environment_name"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":           ubx.FieldSpec{WireName: "owner"},
+		"Repo":            ubx.FieldSpec{WireName: "repo"},
 	},
 }

@@ -7,7 +7,7 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
-class Artifact_WorkflowRun:
+class Artifact_Artifacts_WorkflowRun:
     head_branch: Any = None
     head_repository_id: Any = None
     head_sha: Any = None
@@ -15,38 +15,45 @@ class Artifact_WorkflowRun:
     repository_id: Any = None
 
 @dataclasses.dataclass
-class ArtifactConfig:
-    artifact_id: Any = None
-    owner: Any = None
-    repo: Any = None
-
-@dataclasses.dataclass
-class ArtifactAttrs:
+class Artifact_Artifacts:
     archive_download_url: Any = None
-    artifact_id: Any = None
     created_at: Any = None
-    # The SHA256 digest of the artifact. This field will only be populated on artifacts uploaded with upload-artifact v4 or newer. For older versions, this field will be null.
     digest: Any = None
-    # Whether or not the artifact has expired.
     expired: Any = None
     expires_at: Any = None
     id: Any = None
-    # The name of the artifact.
     name: Any = None
     node_id: Any = None
-    owner: Any = None
-    repo: Any = None
-    # The size in bytes of the artifact.
     size_in_bytes: Any = None
     updated_at: Any = None
     url: Any = None
     workflow_run: Any = None
 
+@dataclasses.dataclass
+class ArtifactConfig:
+    name: Any = None
+    owner: Any = None
+    page: Any = None
+    per_page: Any = None
+    repo: Any = None
+
+@dataclasses.dataclass
+class ArtifactAttrs:
+    artifacts: Any = None
+    name: Any = None
+    owner: Any = None
+    page: Any = None
+    per_page: Any = None
+    repo: Any = None
+    total_count: Any = None
+
 Artifact = ubx.DataSourceBinding(
     wire_type="github_artifact",
     fields={
-        "artifact_id": ubx.FieldSpec(wire_name="artifact_id"),
+        "name": ubx.FieldSpec(wire_name="name"),
         "owner": ubx.FieldSpec(wire_name="owner"),
+        "page": ubx.FieldSpec(wire_name="page"),
+        "per_page": ubx.FieldSpec(wire_name="per_page"),
         "repo": ubx.FieldSpec(wire_name="repo"),
     },
 )

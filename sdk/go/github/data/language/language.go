@@ -5,18 +5,18 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type LanguageConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type LanguageAttrs struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 var Language = ubx.DataSourceBinding{
 	WireType: "github_language",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

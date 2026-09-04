@@ -4,22 +4,22 @@ package commit
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type CommitConfig struct {
-	CommitSha any
-	Owner any
-	Repo any
+	GistId  any
+	Page    any
+	PerPage any
 }
 
 type CommitAttrs struct {
-	CommitSha any
-	Owner any
-	Repo any
+	GistId  any
+	Page    any
+	PerPage any
 }
 
 var Commit = ubx.DataSourceBinding{
 	WireType: "github_commit",
 	Fields: ubx.FieldMap{
-		"CommitSha": ubx.FieldSpec{WireName: "commit_sha"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"GistId":  ubx.FieldSpec{WireName: "gist_id"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

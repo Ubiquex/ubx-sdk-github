@@ -33,8 +33,14 @@ class CustomPropertyAttrs:
     default_value: Any = None
     # Short description of the property.
     description: Any = None
+    # The name of the property
+    property_name: Any = None
     # Whether the property is required.
     required: Any = None
+    # The source type of the property
+    source_type: Any = None
+    # The URL that can be used to fetch, update, or delete info about this property via the API.
+    url: Any = None
     # The type of the value for the property.
     value_type: Any = None
     # Who can edit the values of the property.

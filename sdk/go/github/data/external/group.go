@@ -5,20 +5,20 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Group_Members struct {
 	MemberEmail any
-	MemberId any
+	MemberId    any
 	MemberLogin any
-	MemberName any
+	MemberName  any
 }
 
 type Group_Teams struct {
-	TeamId any
+	TeamId   any
 	TeamName any
 }
 
 type GroupConfig struct {
 	GroupId any
-	Org any
-	Page any
+	Org     any
+	Page    any
 	PerPage any
 }
 
@@ -28,8 +28,8 @@ type GroupAttrs struct {
 	GroupName any
 	// An array of external members linked to this group
 	Members any
-	Org any
-	Page any
+	Org     any
+	Page    any
 	PerPage any
 	// An array of teams linked to this group
 	Teams any
@@ -41,8 +41,8 @@ var Group = ubx.DataSourceBinding{
 	WireType: "github_external_group",
 	Fields: ubx.FieldMap{
 		"GroupId": ubx.FieldSpec{WireName: "group_id"},
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"Page": ubx.FieldSpec{WireName: "page"},
+		"Org":     ubx.FieldSpec{WireName: "org"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

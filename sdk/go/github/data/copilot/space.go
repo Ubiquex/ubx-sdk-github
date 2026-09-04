@@ -3,22 +3,121 @@ package copilot
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
+type Space_Spaces_Creator struct {
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
+	ReceivedEventsUrl any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
+}
+
+type Space_Spaces_Owner struct {
+	AvatarUrl         any
+	Description       any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HooksUrl          any
+	HtmlUrl           any
+	Id                any
+	IssuesUrl         any
+	Login             any
+	MembersUrl        any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
+	PublicMembersUrl  any
+	ReceivedEventsUrl any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
+}
+
+type Space_Spaces_ResourcesAttributes_Metadata struct {
+	CopilotChatAttachmentId any
+	FilePath                any
+	Height                  any
+	MediaType               any
+	Name                    any
+	Number                  any
+	RepositoryId            any
+	Text                    any
+	Url                     any
+	Width                   any
+}
+
+type Space_Spaces_ResourcesAttributes struct {
+	CopilotChatAttachmentId any
+	CreatedAt               any
+	Id                      any
+	Metadata                any
+	ResourceType            any
+	UpdatedAt               any
+}
+
+type Space_Spaces struct {
+	ApiUrl              any
+	BaseRole            any
+	CreatedAt           any
+	Creator             any
+	Description         any
+	GeneralInstructions any
+	HtmlUrl             any
+	Id                  any
+	Name                any
+	Number              any
+	Owner               any
+	ResourcesAttributes any
+	UpdatedAt           any
+}
+
 type SpaceConfig struct {
-	Org any
-	SpaceNumber any
+	After   any
+	Before  any
+	Org     any
+	PerPage any
 }
 
 type SpaceAttrs struct {
-	// The list of collaborators for this Copilot Space.
-	Collaborators any
-	Org any
-	SpaceNumber any
+	After   any
+	Before  any
+	Org     any
+	PerPage any
+	// The list of Copilot Spaces on this page of results.
+	Spaces any
 }
 
 var Space = ubx.DataSourceBinding{
 	WireType: "github_copilot_space",
 	Fields: ubx.FieldMap{
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"SpaceNumber": ubx.FieldSpec{WireName: "space_number"},
+		"After":   ubx.FieldSpec{WireName: "after"},
+		"Before":  ubx.FieldSpec{WireName: "before"},
+		"Org":     ubx.FieldSpec{WireName: "org"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

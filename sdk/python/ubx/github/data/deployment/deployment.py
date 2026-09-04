@@ -8,27 +8,36 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class DeploymentConfig:
-    deployment_id: Any = None
+    environment: Any = None
     owner: Any = None
     page: Any = None
     per_page: Any = None
+    ref: Any = None
     repo: Any = None
+    sha: Any = None
+    task: Any = None
 
 @dataclasses.dataclass
 class DeploymentAttrs:
-    deployment_id: Any = None
+    environment: Any = None
     owner: Any = None
     page: Any = None
     per_page: Any = None
+    ref: Any = None
     repo: Any = None
+    sha: Any = None
+    task: Any = None
 
 Deployment = ubx.DataSourceBinding(
     wire_type="github_deployment",
     fields={
-        "deployment_id": ubx.FieldSpec(wire_name="deployment_id"),
+        "environment": ubx.FieldSpec(wire_name="environment"),
         "owner": ubx.FieldSpec(wire_name="owner"),
         "page": ubx.FieldSpec(wire_name="page"),
         "per_page": ubx.FieldSpec(wire_name="per_page"),
+        "ref": ubx.FieldSpec(wire_name="ref"),
         "repo": ubx.FieldSpec(wire_name="repo"),
+        "sha": ubx.FieldSpec(wire_name="sha"),
+        "task": ubx.FieldSpec(wire_name="task"),
     },
 )

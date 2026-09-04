@@ -3,29 +3,164 @@ package check
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
-type RunConfig struct {
-	CheckRunId any
-	Owner any
-	Page any
-	PerPage any
+type Run_CheckRuns_App_Owner struct {
+	AvatarUrl         any
+	CreatedAt         any
+	Description       any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
+	ReceivedEventsUrl any
+	ReposUrl          any
+	SiteAdmin         any
+	Slug              any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	UpdatedAt         any
+	Url               any
+	UserViewType      any
+	WebsiteUrl        any
+}
+
+type Run_CheckRuns_App_Permissions struct {
+	Checks      any
+	Contents    any
+	Deployments any
+	Issues      any
+	Metadata    any
+}
+
+type Run_CheckRuns_App struct {
+	ClientId           any
+	CreatedAt          any
+	Description        any
+	Events             any
+	ExternalUrl        any
+	HtmlUrl            any
+	Id                 any
+	InstallationsCount any
+	Name               any
+	NodeId             any
+	Owner              any
+	Permissions        any
+	Slug               any
+	UpdatedAt          any
+}
+
+type Run_CheckRuns_CheckSuite struct {
+	Id any
+}
+
+type Run_CheckRuns_Deployment struct {
+	CreatedAt             any
+	Description           any
+	Environment           any
+	Id                    any
+	NodeId                any
+	OriginalEnvironment   any
+	PerformedViaGithubApp any
+	ProductionEnvironment any
+	RepositoryUrl         any
+	StatusesUrl           any
+	Task                  any
+	TransientEnvironment  any
+	UpdatedAt             any
+	Url                   any
+}
+
+type Run_CheckRuns_Output struct {
+	AnnotationsCount any
+	AnnotationsUrl   any
+	Summary          any
+	Text             any
+	Title            any
+}
+
+type Run_CheckRuns_PullRequests_Base_Repo struct {
+	Id   any
+	Name any
+	Url  any
+}
+
+type Run_CheckRuns_PullRequests_Base struct {
+	Ref  any
 	Repo any
+	Sha  any
+}
+
+type Run_CheckRuns_PullRequests struct {
+	Base   any
+	Head   any
+	Id     any
+	Number any
+	Url    any
+}
+
+type Run_CheckRuns struct {
+	App          any
+	CheckSuite   any
+	CompletedAt  any
+	Conclusion   any
+	Deployment   any
+	DetailsUrl   any
+	ExternalId   any
+	HeadSha      any
+	HtmlUrl      any
+	Id           any
+	Name         any
+	NodeId       any
+	Output       any
+	PullRequests any
+	StartedAt    any
+	Status       any
+	Url          any
+}
+
+type RunConfig struct {
+	CheckName    any
+	CheckSuiteId any
+	Filter       any
+	Owner        any
+	Page         any
+	PerPage      any
+	Repo         any
+	Status       any
 }
 
 type RunAttrs struct {
-	CheckRunId any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
+	CheckName    any
+	CheckRuns    any
+	CheckSuiteId any
+	Filter       any
+	Owner        any
+	Page         any
+	PerPage      any
+	Repo         any
+	Status       any
+	TotalCount   any
 }
 
 var Run = ubx.DataSourceBinding{
 	WireType: "github_check_run",
 	Fields: ubx.FieldMap{
-		"CheckRunId": ubx.FieldSpec{WireName: "check_run_id"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"CheckName":    ubx.FieldSpec{WireName: "check_name"},
+		"CheckSuiteId": ubx.FieldSpec{WireName: "check_suite_id"},
+		"Filter":       ubx.FieldSpec{WireName: "filter"},
+		"Owner":        ubx.FieldSpec{WireName: "owner"},
+		"Page":         ubx.FieldSpec{WireName: "page"},
+		"PerPage":      ubx.FieldSpec{WireName: "per_page"},
+		"Repo":         ubx.FieldSpec{WireName: "repo"},
+		"Status":       ubx.FieldSpec{WireName: "status"},
 	},
 }

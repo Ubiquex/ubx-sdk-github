@@ -8,7 +8,7 @@ type TemplateConfig struct {
 }
 
 type TemplateAttrs struct {
-	Name any
+	Name   any
 	Source any
 }
 

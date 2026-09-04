@@ -7,16 +7,89 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
+class Task_Tasks_Artifacts_Data:
+    base_ref: Any = None
+    global_id: Any = None
+    head_ref: Any = None
+    id: Any = None
+
+@dataclasses.dataclass
+class Task_Tasks_Artifacts:
+    data: Any = None
+    provider: Any = None
+    type: Any = None
+
+@dataclasses.dataclass
+class Task_Tasks_Creator:
+    id: Any = None
+
+@dataclasses.dataclass
+class Task_Tasks_CustomAgent:
+    id: Any = None
+
+@dataclasses.dataclass
+class Task_Tasks:
+    archived_at: Any = None
+    artifacts: Any = None
+    created_at: Any = None
+    creator: Any = None
+    creator_type: Any = None
+    custom_agent: Any = None
+    html_url: Any = None
+    id: Any = None
+    name: Any = None
+    owner: Any = None
+    repository: Any = None
+    session_count: Any = None
+    state: Any = None
+    updated_at: Any = None
+    url: Any = None
+    user_collaborators: Any = None
+
+@dataclasses.dataclass
 class TaskConfig:
-    task_id: Any = None
+    creator_id: Any = None
+    direction: Any = None
+    is_archived: Any = None
+    owner: Any = None
+    page: Any = None
+    per_page: Any = None
+    repo: Any = None
+    since: Any = None
+    sort: Any = None
+    state: Any = None
 
 @dataclasses.dataclass
 class TaskAttrs:
-    task_id: Any = None
+    creator_id: Any = None
+    direction: Any = None
+    is_archived: Any = None
+    owner: Any = None
+    page: Any = None
+    per_page: Any = None
+    repo: Any = None
+    since: Any = None
+    sort: Any = None
+    state: Any = None
+    # List of tasks
+    tasks: Any = None
+    # Total count of active (non-archived) tasks
+    total_active_count: Any = None
+    # Total count of archived tasks
+    total_archived_count: Any = None
 
 Task = ubx.DataSourceBinding(
     wire_type="github_task",
     fields={
-        "task_id": ubx.FieldSpec(wire_name="task_id"),
+        "creator_id": ubx.FieldSpec(wire_name="creator_id"),
+        "direction": ubx.FieldSpec(wire_name="direction"),
+        "is_archived": ubx.FieldSpec(wire_name="is_archived"),
+        "owner": ubx.FieldSpec(wire_name="owner"),
+        "page": ubx.FieldSpec(wire_name="page"),
+        "per_page": ubx.FieldSpec(wire_name="per_page"),
+        "repo": ubx.FieldSpec(wire_name="repo"),
+        "since": ubx.FieldSpec(wire_name="since"),
+        "sort": ubx.FieldSpec(wire_name="sort"),
+        "state": ubx.FieldSpec(wire_name="state"),
     },
 )

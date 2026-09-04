@@ -19,7 +19,6 @@ export interface ActionsVariableAttrs {
   createdAt: string;
   /** The name of the variable. */
   name: string;
-  /** API URL listing the repositories this organization-level Actions variable is selectively exposed to. (AI-inferred) */
   selectedRepositoriesUrl: string;
   /** An array of repository ids that can access the organization variable. You can only provide a list of repository ids when the `visibility` is set to `selected`. */
   selectedRepositoryIds: number[];

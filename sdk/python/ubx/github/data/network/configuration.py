@@ -7,33 +7,34 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
+class Configuration_NetworkConfigurations:
+    compute_service: Any = None
+    created_on: Any = None
+    failover_network_enabled: Any = None
+    failover_network_settings_ids: Any = None
+    id: Any = None
+    name: Any = None
+    network_settings_ids: Any = None
+
+@dataclasses.dataclass
 class ConfigurationConfig:
-    network_configuration_id: Any = None
-    org: Any = None
+    enterprise: Any = None
+    page: Any = None
+    per_page: Any = None
 
 @dataclasses.dataclass
 class ConfigurationAttrs:
-    # The hosted compute service the network configuration supports.
-    compute_service: Any = None
-    # The time at which the network configuration was created, in ISO 8601 format.
-    created_on: Any = None
-    # Indicates whether the failover network resource is enabled.
-    failover_network_enabled: Any = None
-    # The unique identifier of each failover network settings in the configuration.
-    failover_network_settings_ids: Any = None
-    # The unique identifier of the network configuration.
-    id: Any = None
-    # The name of the network configuration.
-    name: Any = None
-    network_configuration_id: Any = None
-    # The unique identifier of each network settings in the configuration.
-    network_settings_ids: Any = None
-    org: Any = None
+    enterprise: Any = None
+    network_configurations: Any = None
+    page: Any = None
+    per_page: Any = None
+    total_count: Any = None
 
 Configuration = ubx.DataSourceBinding(
     wire_type="github_network_configuration",
     fields={
-        "network_configuration_id": ubx.FieldSpec(wire_name="network_configuration_id"),
-        "org": ubx.FieldSpec(wire_name="org"),
+        "enterprise": ubx.FieldSpec(wire_name="enterprise"),
+        "page": ubx.FieldSpec(wire_name="page"),
+        "per_page": ubx.FieldSpec(wire_name="per_page"),
     },
 )

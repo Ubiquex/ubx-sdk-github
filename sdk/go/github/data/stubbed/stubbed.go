@@ -4,19 +4,19 @@ package stubbed
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type StubbedConfig struct {
-	Page any
+	Page    any
 	PerPage any
 }
 
 type StubbedAttrs struct {
-	Page any
+	Page    any
 	PerPage any
 }
 
 var Stubbed = ubx.DataSourceBinding{
 	WireType: "github_stubbed",
 	Fields: ubx.FieldMap{
-		"Page": ubx.FieldSpec{WireName: "page"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

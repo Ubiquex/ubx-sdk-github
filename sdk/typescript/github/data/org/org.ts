@@ -2,34 +2,22 @@
 import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface OrgConfig {
-  after?: string | Computed<string>;
-  before?: string | Computed<string>;
-  include?: string | Computed<string>;
-  order?: string | Computed<string>;
-  org: string | Computed<string>;
+  page?: number | Computed<number>;
   perPage?: number | Computed<number>;
-  phrase?: string | Computed<string>;
+  state?: string | Computed<string>;
 }
 
 export interface OrgAttrs {
-  after: string;
-  before: string;
-  include: string;
-  order: string;
-  org: string;
+  page: number;
   perPage: number;
-  phrase: string;
+  state: string;
 }
 
 export const Org: DataSourceBinding<OrgConfig, OrgAttrs> = {
   wireType: "github_org",
   fields: {
-    after: "after",
-    before: "before",
-    include: "include",
-    order: "order",
-    org: "org",
+    page: "page",
     perPage: "per_page",
-    phrase: "phrase",
+    state: "state",
   },
 };

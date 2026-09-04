@@ -13,31 +13,24 @@ class V2Field_Configuration_Iterations_Title:
 
 @dataclasses.dataclass
 class V2Field_Configuration_Iterations:
-    # Indicates whether this iteration has been marked as completed. When true, the iteration is considered finished, which may affect how it is displayed in the project. (AI-inferred)
     completed: Any = None
-    # The duration of each iteration in days. (AI-inferred)
     duration: Any = None
     id: Any = None
-    # The start date of the iteration, in ISO 8601 format (YYYY-MM-DD), used to define the iteration's time period. (AI-inferred)
     start_date: Any = None
-    # The title of the iteration in the GitHub Projects v2 field's iteration configuration. (AI-inferred)
     title: Any = None
 
 @dataclasses.dataclass
 class V2Field_Configuration:
     # The duration of the iteration in days.
     duration: Any = None
-    # A list of iteration objects that define the iteration field's configuration in GitHub Projects v2, including details like title, start date, and duration. (AI-inferred)
     iterations: Any = None
     # The day of the week when the iteration starts.
     start_day: Any = None
 
 @dataclasses.dataclass
 class V2Field_Options:
-    # The color of the option, used for display in the GitHub Projects UI. Must be one of: GRAY, RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE, PINK. (AI-inferred)
     color: Any = None
     description: Any = None
-    # The unique identifier for this option within the GitHub Projects v2 field. (AI-inferred)
     id: Any = None
     name: Any = None
 

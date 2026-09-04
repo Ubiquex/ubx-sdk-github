@@ -8,27 +8,18 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class PlanConfig:
-    direction: Any = None
     page: Any = None
     per_page: Any = None
-    plan_id: Any = None
-    sort: Any = None
 
 @dataclasses.dataclass
 class PlanAttrs:
-    direction: Any = None
     page: Any = None
     per_page: Any = None
-    plan_id: Any = None
-    sort: Any = None
 
 Plan = ubx.DataSourceBinding(
     wire_type="github_plan",
     fields={
-        "direction": ubx.FieldSpec(wire_name="direction"),
         "page": ubx.FieldSpec(wire_name="page"),
         "per_page": ubx.FieldSpec(wire_name="per_page"),
-        "plan_id": ubx.FieldSpec(wire_name="plan_id"),
-        "sort": ubx.FieldSpec(wire_name="sort"),
     },
 )

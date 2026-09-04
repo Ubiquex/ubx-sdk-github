@@ -5,11 +5,11 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Assignment_Classroom_Organization struct {
 	AvatarUrl any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
+	HtmlUrl   any
+	Id        any
+	Login     any
+	Name      any
+	NodeId    any
 }
 
 type Assignment_Classroom struct {
@@ -46,7 +46,7 @@ type AssignmentConfig struct {
 
 type AssignmentAttrs struct {
 	// The number of students that have accepted the assignment.
-	Accepted any
+	Accepted     any
 	AssignmentId any
 	// A GitHub Classroom classroom
 	Classroom any

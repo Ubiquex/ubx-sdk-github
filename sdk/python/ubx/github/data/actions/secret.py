@@ -7,26 +7,33 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
+class Secret_Secrets:
+    created_at: Any = None
+    name: Any = None
+    updated_at: Any = None
+
+@dataclasses.dataclass
 class SecretConfig:
     owner: Any = None
+    page: Any = None
+    per_page: Any = None
     repo: Any = None
-    secret_name: Any = None
 
 @dataclasses.dataclass
 class SecretAttrs:
-    created_at: Any = None
-    # The name of the secret.
-    name: Any = None
     owner: Any = None
+    page: Any = None
+    per_page: Any = None
     repo: Any = None
-    secret_name: Any = None
-    updated_at: Any = None
+    secrets: Any = None
+    total_count: Any = None
 
 Secret = ubx.DataSourceBinding(
     wire_type="github_actions_secret",
     fields={
         "owner": ubx.FieldSpec(wire_name="owner"),
+        "page": ubx.FieldSpec(wire_name="page"),
+        "per_page": ubx.FieldSpec(wire_name="per_page"),
         "repo": ubx.FieldSpec(wire_name="repo"),
-        "secret_name": ubx.FieldSpec(wire_name="secret_name"),
     },
 )

@@ -7,6 +7,22 @@ export interface EnterpriseUserResponse_Emails {
   value?: string | Computed<string>;
 }
 
+export interface EnterpriseUserResponse_Groups {
+  display?: string | Computed<string>;
+  value?: string | Computed<string>;
+}
+
+export interface EnterpriseUserResponse_Meta {
+  /** A date and time when the user was created. */
+  created?: string | Computed<string>;
+  /** A data and time when the user was last modified. */
+  lastModified?: string | Computed<string>;
+  /** A URL location of an object */
+  location?: string | Computed<string>;
+  /** A type of a resource */
+  resourceType: string | Computed<string>;
+}
+
 export interface EnterpriseUserResponse_Name {
   /** The family name of the user. */
   familyName: string | Computed<string>;
@@ -76,6 +92,12 @@ export interface EnterpriseUserResponseAttrs {
   emails: EnterpriseUserResponse_Emails[];
   /** A unique identifier for the resource as defined by the provisioning client. */
   externalId: string;
+  /** Provisioned SCIM groups that the user is a member of. */
+  groups: EnterpriseUserResponse_Groups[];
+  /** The internally generated id for the user object. */
+  id: string;
+  /** The metadata associated with the creation/updates to the user. */
+  meta: EnterpriseUserResponse_Meta;
   name: EnterpriseUserResponse_Name;
   /** The roles assigned to the user. */
   roles: EnterpriseUserResponse_Roles[];

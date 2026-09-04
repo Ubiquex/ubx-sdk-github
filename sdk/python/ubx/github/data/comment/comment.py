@@ -8,30 +8,21 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class CommentConfig:
-    comment_id: Any = None
-    content: Any = None
-    owner: Any = None
+    gist_id: Any = None
     page: Any = None
     per_page: Any = None
-    repo: Any = None
 
 @dataclasses.dataclass
 class CommentAttrs:
-    comment_id: Any = None
-    content: Any = None
-    owner: Any = None
+    gist_id: Any = None
     page: Any = None
     per_page: Any = None
-    repo: Any = None
 
 Comment = ubx.DataSourceBinding(
     wire_type="github_comment",
     fields={
-        "comment_id": ubx.FieldSpec(wire_name="comment_id"),
-        "content": ubx.FieldSpec(wire_name="content"),
-        "owner": ubx.FieldSpec(wire_name="owner"),
+        "gist_id": ubx.FieldSpec(wire_name="gist_id"),
         "page": ubx.FieldSpec(wire_name="page"),
         "per_page": ubx.FieldSpec(wire_name="per_page"),
-        "repo": ubx.FieldSpec(wire_name="repo"),
     },
 )

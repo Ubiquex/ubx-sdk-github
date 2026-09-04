@@ -4,5 +4,4 @@
 # re-run `ubx sdk gen` to regenerate after a provider version bump.
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
-from .listing import Listing, ListingConfig
 from .purchase import Purchase, PurchaseConfig

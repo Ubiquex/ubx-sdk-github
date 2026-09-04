@@ -4,6 +4,5 @@
 # re-run `ubx sdk gen` to regenerate after a provider version bump.
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
-from .network import Network, NetworkConfig
 from .configuration import Configuration, ConfigurationConfig
 from .settings import Settings, SettingsConfig

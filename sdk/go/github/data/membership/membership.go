@@ -4,22 +4,25 @@ package membership
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type MembershipConfig struct {
-	Page any
-	PerPage any
-	State any
+	Enterprise     any
+	EnterpriseTeam any
+	Page           any
+	PerPage        any
 }
 
 type MembershipAttrs struct {
-	Page any
-	PerPage any
-	State any
+	Enterprise     any
+	EnterpriseTeam any
+	Page           any
+	PerPage        any
 }
 
 var Membership = ubx.DataSourceBinding{
 	WireType: "github_membership",
 	Fields: ubx.FieldMap{
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"State": ubx.FieldSpec{WireName: "state"},
+		"Enterprise":     ubx.FieldSpec{WireName: "enterprise"},
+		"EnterpriseTeam": ubx.FieldSpec{WireName: "enterprise_team"},
+		"Page":           ubx.FieldSpec{WireName: "page"},
+		"PerPage":        ubx.FieldSpec{WireName: "per_page"},
 	},
 }

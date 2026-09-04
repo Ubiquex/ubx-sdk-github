@@ -4,34 +4,49 @@ package issue
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type IssueConfig struct {
+	Collab    any
 	Direction any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
-	Since any
-	Sort any
+	Filter    any
+	Labels    any
+	Orgs      any
+	Owned     any
+	Page      any
+	PerPage   any
+	Pulls     any
+	Since     any
+	Sort      any
+	State     any
 }
 
 type IssueAttrs struct {
+	Collab    any
 	Direction any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
-	Since any
-	Sort any
+	Filter    any
+	Labels    any
+	Orgs      any
+	Owned     any
+	Page      any
+	PerPage   any
+	Pulls     any
+	Since     any
+	Sort      any
+	State     any
 }
 
 var Issue = ubx.DataSourceBinding{
 	WireType: "github_issue",
 	Fields: ubx.FieldMap{
+		"Collab":    ubx.FieldSpec{WireName: "collab"},
 		"Direction": ubx.FieldSpec{WireName: "direction"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"Since": ubx.FieldSpec{WireName: "since"},
-		"Sort": ubx.FieldSpec{WireName: "sort"},
+		"Filter":    ubx.FieldSpec{WireName: "filter"},
+		"Labels":    ubx.FieldSpec{WireName: "labels"},
+		"Orgs":      ubx.FieldSpec{WireName: "orgs"},
+		"Owned":     ubx.FieldSpec{WireName: "owned"},
+		"Page":      ubx.FieldSpec{WireName: "page"},
+		"PerPage":   ubx.FieldSpec{WireName: "per_page"},
+		"Pulls":     ubx.FieldSpec{WireName: "pulls"},
+		"Since":     ubx.FieldSpec{WireName: "since"},
+		"Sort":      ubx.FieldSpec{WireName: "sort"},
+		"State":     ubx.FieldSpec{WireName: "state"},
 	},
 }

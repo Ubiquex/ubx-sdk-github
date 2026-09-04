@@ -3,40 +3,21 @@ package permission
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
-type Permission_Organizations struct {
-	AvatarUrl any
-	Description any
-	EventsUrl any
-	HooksUrl any
-	Id any
-	IssuesUrl any
-	Login any
-	MembersUrl any
-	NodeId any
-	PublicMembersUrl any
-	ReposUrl any
-	Url any
-}
-
 type PermissionConfig struct {
-	Enterprise any
-	Page any
-	PerPage any
+	Org any
 }
 
 type PermissionAttrs struct {
-	Enterprise any
-	Organizations any
-	Page any
-	PerPage any
-	TotalCount any
+	// The policy for which repositories can use Copilot cloud agent. Can be one of `all`, `selected`, or `none`.
+	EnabledRepositories any
+	Org                 any
+	// The URL for the selected repositories endpoint. Only present when `enabled_repositories` is `selected`.
+	SelectedRepositoriesUrl any
 }
 
 var Permission = ubx.DataSourceBinding{
 	WireType: "github_permission",
 	Fields: ubx.FieldMap{
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Org": ubx.FieldSpec{WireName: "org"},
 	},
 }

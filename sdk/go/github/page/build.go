@@ -4,54 +4,32 @@ package page
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Build_Error struct {
-	// The error message describing why the page build failed. (AI-inferred)
 	Message any
 }
 
 type Build_Pusher struct {
-	// The URL of the avatar image for the GitHub user who pushed the build. (AI-inferred)
-	AvatarUrl any
-	// The email address of the user who pushed the commit that triggered the page build. This may be null if the user has kept their email private. (AI-inferred)
-	Email any
-	// The URL to the events of this user on GitHub. (AI-inferred)
-	EventsUrl any
-	// The URL to the list of followers of the pusher user. (AI-inferred)
-	FollowersUrl any
-	// The URL template to list the users this user follows. It may include a placeholder such as {/other_user} for fetching specific follow relationships. (AI-inferred)
-	FollowingUrl any
-	// The URL template for accessing the user's gists, typically in the format https://api.github.com/users/{username}/gists{/gist_id}. (AI-inferred)
-	GistsUrl any
-	// The Gravatar ID for the pusher, an MD5 hash of their email used to construct their avatar URL. (AI-inferred)
-	GravatarId any
-	// The GitHub profile URL for the user who pushed the commit that triggered the page build. (AI-inferred)
-	HtmlUrl any
-	// The unique identifier of the user who pushed the GitHub Pages build. (AI-inferred)
-	Id any
-	// The GitHub username of the user who pushed the commit that triggered the page build. This field is always present. (AI-inferred)
-	Login any
-	// The display name of the user who pushed the commit that triggered this GitHub Pages build. (AI-inferred)
-	Name any
-	// The GraphQL node identifier for the pusher (the user who triggered the page build). (AI-inferred)
-	NodeId any
-	// The URL to the list of organizations associated with the pusher's GitHub account. (AI-inferred)
-	OrganizationsUrl any
-	// The URL to the received events endpoint for the user who pushed the commit that triggered the page build. (AI-inferred)
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	// The URL to the user's public repositories on GitHub. (AI-inferred)
-	ReposUrl any
-	// Whether the user who pushed the commit is a GitHub site administrator. (AI-inferred)
-	SiteAdmin any
-	StarredAt any
-	// The URL template for the user's starred repositories, with optional placeholders for owner and repo (e.g., https://api.github.com/users/{user}/starred{/owner}{/repo}). (AI-inferred)
-	StarredUrl any
-	// The URL to the list of subscriptions for the user who pushed the page build. (AI-inferred)
-	SubscriptionsUrl any
-	// The type of GitHub account that pushed the build, either 'User' or 'Organization'. (AI-inferred)
-	Type any
-	// The URL of the user who pushed the commit that triggered the page build. This is typically the GitHub API URL for the user (e.g., https://api.github.com/users/{username}). (AI-inferred)
-	Url any
-	// Indicates whether the user is a public or private user. Possible values are 'public' and 'private'. (AI-inferred)
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type BuildConfig struct {
@@ -64,22 +42,15 @@ type BuildConfig struct {
 }
 
 type BuildAttrs struct {
-	// The SHA of the commit that this page build was triggered by or built from. (AI-inferred)
-	Commit any
-	// The date and time when the page build was created. This value is set by GitHub and is not editable. (AI-inferred)
+	Commit    any
 	CreatedAt any
-	// The duration of the page build, in seconds, as computed by the system after the build completes. (AI-inferred)
-	Duration any
-	// An object containing error details for the GitHub Pages build, if any. This computed field is present only when the build encounters an error. (AI-inferred)
-	Error any
+	Duration  any
+	Error     any
 	// A GitHub user.
-	Pusher any
-	// The current status of the GitHub Pages build. Possible values include `queued`, `in_progress`, `errored`, `cancelled`, and `built`. (AI-inferred)
-	Status any
-	// The timestamp of when the page build was last updated. (AI-inferred)
+	Pusher    any
+	Status    any
 	UpdatedAt any
-	// The URL of the built page. (AI-inferred)
-	Url any
+	Url       any
 	// path parameter, not part of the API's own resource representation
 	Owner any
 	// path parameter, not part of the API's own resource representation
@@ -91,8 +62,8 @@ type BuildAttrs struct {
 var Build = ubx.ResourceBinding{
 	WireType: "github_page_build",
 	Fields: ubx.FieldMap{
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":   ubx.FieldSpec{WireName: "owner"},
+		"Repo":    ubx.FieldSpec{WireName: "repo"},
 		"BuildId": ubx.FieldSpec{WireName: "build_id"},
 	},
 }

@@ -7,35 +7,19 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
-class Classroom_Organization:
-    avatar_url: Any = None
-    html_url: Any = None
-    id: Any = None
-    login: Any = None
-    name: Any = None
-    node_id: Any = None
-
-@dataclasses.dataclass
 class ClassroomConfig:
-    classroom_id: Any = None
+    page: Any = None
+    per_page: Any = None
 
 @dataclasses.dataclass
 class ClassroomAttrs:
-    # Whether classroom is archived.
-    archived: Any = None
-    classroom_id: Any = None
-    # Unique identifier of the classroom.
-    id: Any = None
-    # The name of the classroom.
-    name: Any = None
-    # A GitHub organization.
-    organization: Any = None
-    # The URL of the classroom on GitHub Classroom.
-    url: Any = None
+    page: Any = None
+    per_page: Any = None
 
 Classroom = ubx.DataSourceBinding(
     wire_type="github_classroom",
     fields={
-        "classroom_id": ubx.FieldSpec(wire_name="classroom_id"),
+        "page": ubx.FieldSpec(wire_name="page"),
+        "per_page": ubx.FieldSpec(wire_name="per_page"),
     },
 )

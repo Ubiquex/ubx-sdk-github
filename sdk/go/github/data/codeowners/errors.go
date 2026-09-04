@@ -4,33 +4,33 @@ package codeowners
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Errors_Errors struct {
-	Column any
-	Kind any
-	Line any
-	Message any
-	Path any
-	Source any
+	Column     any
+	Kind       any
+	Line       any
+	Message    any
+	Path       any
+	Source     any
 	Suggestion any
 }
 
 type ErrorsConfig struct {
 	Owner any
-	Ref any
-	Repo any
+	Ref   any
+	Repo  any
 }
 
 type ErrorsAttrs struct {
 	Errors any
-	Owner any
-	Ref any
-	Repo any
+	Owner  any
+	Ref    any
+	Repo   any
 }
 
 var Errors = ubx.DataSourceBinding{
 	WireType: "github_codeowners_errors",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Ref": ubx.FieldSpec{WireName: "ref"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Ref":   ubx.FieldSpec{WireName: "ref"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

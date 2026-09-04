@@ -17,15 +17,10 @@ class Commit_Author:
 
 @dataclasses.dataclass
 class Commit_Verification:
-    # The payload that was signed for commit verification, used to verify the signature and ensure the commit's integrity. (AI-inferred)
     payload: Any = None
-    # The reason explaining the commit's signature verification state. For verified commits, this is 'valid'; for unverified commits, it provides a reason like 'unsigned' or 'bad_email'. (AI-inferred)
     reason: Any = None
-    # The signature of the commit, used to verify its authenticity. (AI-inferred)
     signature: Any = None
-    # Whether the commit's signature is verified by GitHub. (AI-inferred)
     verified: Any = None
-    # The timestamp (as a string) indicating when the commit's signature was verified, typically in ISO 8601 format. (AI-inferred)
     verified_at: Any = None
 
 _Commit_AuthorFields = {
@@ -61,11 +56,9 @@ class CommitAttrs:
     author: Any = None
     # Information about the person who is making the commit. By default, `committer` will use the information set in `author`. See the `author` and `committer` object below for details.
     committer: Any = None
-    # The URL to view the commit on GitHub. (AI-inferred)
     html_url: Any = None
     # The commit message
     message: Any = None
-    # The GraphQL node ID of the git commit, used for identifying the commit in the GitHub GraphQL API. (AI-inferred)
     node_id: Any = None
     # The full SHAs of the commits that were the parents of this commit. If omitted or empty, the commit will be written as a root commit. For a single parent, an array of one SHA should be provided; for a merge commit, an array of more than one should be provided.
     parents: Any = None
@@ -75,9 +68,7 @@ class CommitAttrs:
     signature: Any = None
     # The SHA of the tree object this commit points to
     tree: Any = None
-    # The GitHub API URL for the commit. (AI-inferred)
     url: Any = None
-    # Object containing details about the commit's signature verification status, such as whether the signature is verified and associated metadata. This field is computed and only present after the commit is created. (AI-inferred)
     verification: Any = None
     # path parameter, not part of the API's own resource representation
     owner: Any = None

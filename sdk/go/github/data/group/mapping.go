@@ -5,34 +5,34 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Mapping_Groups struct {
 	GroupDescription any
-	GroupId any
-	GroupName any
-	Status any
-	SyncedAt any
+	GroupId          any
+	GroupName        any
+	Status           any
+	SyncedAt         any
 }
 
 type MappingConfig struct {
-	Org any
-	Page any
+	Org     any
+	Page    any
 	PerPage any
-	Q any
+	Q       any
 }
 
 type MappingAttrs struct {
 	// Array of groups to be mapped to this team
-	Groups any
-	Org any
-	Page any
+	Groups  any
+	Org     any
+	Page    any
 	PerPage any
-	Q any
+	Q       any
 }
 
 var Mapping = ubx.DataSourceBinding{
 	WireType: "github_group_mapping",
 	Fields: ubx.FieldMap{
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"Page": ubx.FieldSpec{WireName: "page"},
+		"Org":     ubx.FieldSpec{WireName: "org"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Q": ubx.FieldSpec{WireName: "q"},
+		"Q":       ubx.FieldSpec{WireName: "q"},
 	},
 }

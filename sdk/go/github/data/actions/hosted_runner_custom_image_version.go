@@ -3,31 +3,30 @@ package actions
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
+type HostedRunnerCustomImageVersion_ImageVersions struct {
+	CreatedOn    any
+	SizeGb       any
+	State        any
+	StateDetails any
+	Version      any
+}
+
 type HostedRunnerCustomImageVersionConfig struct {
-	Enterprise any
+	Enterprise        any
 	ImageDefinitionId any
-	Version any
 }
 
 type HostedRunnerCustomImageVersionAttrs struct {
-	// The creation date time of the image version.
-	CreatedOn any
-	Enterprise any
+	Enterprise        any
 	ImageDefinitionId any
-	// Image version size in GB.
-	SizeGb any
-	// The state of image version.
-	State any
-	// The image version status details.
-	StateDetails any
-	Version any
+	ImageVersions     any
+	TotalCount        any
 }
 
 var HostedRunnerCustomImageVersion = ubx.DataSourceBinding{
 	WireType: "github_actions_hosted_runner_custom_image_version",
 	Fields: ubx.FieldMap{
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
+		"Enterprise":        ubx.FieldSpec{WireName: "enterprise"},
 		"ImageDefinitionId": ubx.FieldSpec{WireName: "image_definition_id"},
-		"Version": ubx.FieldSpec{WireName: "version"},
 	},
 }

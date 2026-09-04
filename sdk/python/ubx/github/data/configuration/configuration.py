@@ -10,28 +10,22 @@ import ubx_sdk as ubx
 class ConfigurationConfig:
     after: Any = None
     before: Any = None
-    configuration_id: Any = None
     enterprise: Any = None
     per_page: Any = None
-    status: Any = None
 
 @dataclasses.dataclass
 class ConfigurationAttrs:
     after: Any = None
     before: Any = None
-    configuration_id: Any = None
     enterprise: Any = None
     per_page: Any = None
-    status: Any = None
 
 Configuration = ubx.DataSourceBinding(
     wire_type="github_configuration",
     fields={
         "after": ubx.FieldSpec(wire_name="after"),
         "before": ubx.FieldSpec(wire_name="before"),
-        "configuration_id": ubx.FieldSpec(wire_name="configuration_id"),
         "enterprise": ubx.FieldSpec(wire_name="enterprise"),
         "per_page": ubx.FieldSpec(wire_name="per_page"),
-        "status": ubx.FieldSpec(wire_name="status"),
     },
 )

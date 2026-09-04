@@ -21,13 +21,9 @@ type SecurityConfiguration_DependencyGraphAutosubmitActionOptions struct {
 }
 
 type SecurityConfiguration_SecretScanningDelegatedBypassOptions_Reviewers struct {
-	// The mode of the reviewer, which must be either `ALWAYS` or `EXEMPT`. (AI-inferred)
-	Mode any
-	// The ID of the GitHub user or team that serves as a reviewer for delegated secret scanning bypass requests. (AI-inferred)
-	ReviewerId any
-	// Type of the reviewer for the delegated bypass. Valid values are `TEAM` or `ROLE`. (AI-inferred)
-	ReviewerType any
-	// The ID of the code security configuration that contains these secret scanning delegated bypass reviewers. (AI-inferred)
+	Mode                    any
+	ReviewerId              any
+	ReviewerType            any
 	SecurityConfigurationId any
 }
 
@@ -37,17 +33,17 @@ type SecurityConfiguration_SecretScanningDelegatedBypassOptions struct {
 }
 
 var SecurityConfiguration_CodeScanningDefaultSetupOptionsFields = ubx.FieldMap{
-		"RunnerLabel": ubx.FieldSpec{WireName: "runner_label"},
-		"RunnerType": ubx.FieldSpec{WireName: "runner_type"},
-	}
+	"RunnerLabel": ubx.FieldSpec{WireName: "runner_label"},
+	"RunnerType":  ubx.FieldSpec{WireName: "runner_type"},
+}
 
 var SecurityConfiguration_CodeScanningOptionsFields = ubx.FieldMap{
-		"AllowAdvanced": ubx.FieldSpec{WireName: "allow_advanced"},
-	}
+	"AllowAdvanced": ubx.FieldSpec{WireName: "allow_advanced"},
+}
 
 var SecurityConfiguration_DependencyGraphAutosubmitActionOptionsFields = ubx.FieldMap{
-		"LabeledRunners": ubx.FieldSpec{WireName: "labeled_runners"},
-	}
+	"LabeledRunners": ubx.FieldSpec{WireName: "labeled_runners"},
+}
 
 type SecurityConfigurationConfig struct {
 	// The enablement status of GitHub Advanced Security features. `enabled` will enable both Code Security and Secret Protection features. > [!WARNING] > `code_security` and `secret_protection` are deprecated values for this field. Prefer the individual `code_security` and `secret_protection` fields to set the status of these features.
@@ -115,8 +111,7 @@ type SecurityConfigurationAttrs struct {
 	CodeScanningOptions any
 	// The enablement status of GitHub Code Security features.
 	CodeSecurity any
-	// The timestamp at which the code security configuration was created, automatically set by the system. (AI-inferred)
-	CreatedAt any
+	CreatedAt    any
 	// The enablement status of Dependabot alerts
 	DependabotAlerts any
 	// The enablement status of Dependabot delegated alert dismissal
@@ -163,8 +158,7 @@ type SecurityConfigurationAttrs struct {
 	SecretScanningValidityChecks any
 	// The type of the code security configuration.
 	TargetType any
-	// The timestamp of when the code security configuration was last updated, in ISO 8601 format. (AI-inferred)
-	UpdatedAt any
+	UpdatedAt  any
 	// The URL of the configuration
 	Url any
 	// path parameter, not part of the API's own resource representation
@@ -176,42 +170,42 @@ type SecurityConfigurationAttrs struct {
 var SecurityConfiguration = ubx.ResourceBinding{
 	WireType: "github_code_security_configuration",
 	Fields: ubx.FieldMap{
-		"AdvancedSecurity": ubx.FieldSpec{WireName: "advanced_security"},
+		"AdvancedSecurity":         ubx.FieldSpec{WireName: "advanced_security"},
 		"CodeScanningDefaultSetup": ubx.FieldSpec{WireName: "code_scanning_default_setup"},
 		"CodeScanningDefaultSetupOptions": ubx.FieldSpec{
 			WireName: "code_scanning_default_setup_options",
-			Kind: "object",
-			Fields: SecurityConfiguration_CodeScanningDefaultSetupOptionsFields,
+			Kind:     "object",
+			Fields:   SecurityConfiguration_CodeScanningDefaultSetupOptionsFields,
 		},
 		"CodeScanningDelegatedAlertDismissal": ubx.FieldSpec{WireName: "code_scanning_delegated_alert_dismissal"},
 		"CodeScanningOptions": ubx.FieldSpec{
 			WireName: "code_scanning_options",
-			Kind: "object",
-			Fields: SecurityConfiguration_CodeScanningOptionsFields,
+			Kind:     "object",
+			Fields:   SecurityConfiguration_CodeScanningOptionsFields,
 		},
-		"CodeSecurity": ubx.FieldSpec{WireName: "code_security"},
-		"DependabotAlerts": ubx.FieldSpec{WireName: "dependabot_alerts"},
-		"DependabotSecurityUpdates": ubx.FieldSpec{WireName: "dependabot_security_updates"},
-		"DependencyGraph": ubx.FieldSpec{WireName: "dependency_graph"},
+		"CodeSecurity":                    ubx.FieldSpec{WireName: "code_security"},
+		"DependabotAlerts":                ubx.FieldSpec{WireName: "dependabot_alerts"},
+		"DependabotSecurityUpdates":       ubx.FieldSpec{WireName: "dependabot_security_updates"},
+		"DependencyGraph":                 ubx.FieldSpec{WireName: "dependency_graph"},
 		"DependencyGraphAutosubmitAction": ubx.FieldSpec{WireName: "dependency_graph_autosubmit_action"},
 		"DependencyGraphAutosubmitActionOptions": ubx.FieldSpec{
 			WireName: "dependency_graph_autosubmit_action_options",
-			Kind: "object",
-			Fields: SecurityConfiguration_DependencyGraphAutosubmitActionOptionsFields,
+			Kind:     "object",
+			Fields:   SecurityConfiguration_DependencyGraphAutosubmitActionOptionsFields,
 		},
-		"Description": ubx.FieldSpec{WireName: "description"},
-		"Enforcement": ubx.FieldSpec{WireName: "enforcement"},
-		"Name": ubx.FieldSpec{WireName: "name"},
-		"PrivateVulnerabilityReporting": ubx.FieldSpec{WireName: "private_vulnerability_reporting"},
-		"SecretProtection": ubx.FieldSpec{WireName: "secret_protection"},
-		"SecretScanning": ubx.FieldSpec{WireName: "secret_scanning"},
+		"Description":                           ubx.FieldSpec{WireName: "description"},
+		"Enforcement":                           ubx.FieldSpec{WireName: "enforcement"},
+		"Name":                                  ubx.FieldSpec{WireName: "name"},
+		"PrivateVulnerabilityReporting":         ubx.FieldSpec{WireName: "private_vulnerability_reporting"},
+		"SecretProtection":                      ubx.FieldSpec{WireName: "secret_protection"},
+		"SecretScanning":                        ubx.FieldSpec{WireName: "secret_scanning"},
 		"SecretScanningDelegatedAlertDismissal": ubx.FieldSpec{WireName: "secret_scanning_delegated_alert_dismissal"},
-		"SecretScanningExtendedMetadata": ubx.FieldSpec{WireName: "secret_scanning_extended_metadata"},
-		"SecretScanningGenericSecrets": ubx.FieldSpec{WireName: "secret_scanning_generic_secrets"},
-		"SecretScanningNonProviderPatterns": ubx.FieldSpec{WireName: "secret_scanning_non_provider_patterns"},
-		"SecretScanningPushProtection": ubx.FieldSpec{WireName: "secret_scanning_push_protection"},
-		"SecretScanningValidityChecks": ubx.FieldSpec{WireName: "secret_scanning_validity_checks"},
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"ConfigurationId": ubx.FieldSpec{WireName: "configuration_id"},
+		"SecretScanningExtendedMetadata":        ubx.FieldSpec{WireName: "secret_scanning_extended_metadata"},
+		"SecretScanningGenericSecrets":          ubx.FieldSpec{WireName: "secret_scanning_generic_secrets"},
+		"SecretScanningNonProviderPatterns":     ubx.FieldSpec{WireName: "secret_scanning_non_provider_patterns"},
+		"SecretScanningPushProtection":          ubx.FieldSpec{WireName: "secret_scanning_push_protection"},
+		"SecretScanningValidityChecks":          ubx.FieldSpec{WireName: "secret_scanning_validity_checks"},
+		"Enterprise":                            ubx.FieldSpec{WireName: "enterprise"},
+		"ConfigurationId":                       ubx.FieldSpec{WireName: "configuration_id"},
 	},
 }

@@ -6,3 +6,4 @@ SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
 from .repo import Repo, RepoConfig
 from .codespaces_secret import CodespacesSecret, CodespacesSecretConfig
+from .search_result_item import SearchResultItem, SearchResultItemConfig

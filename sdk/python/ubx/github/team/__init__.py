@@ -6,3 +6,4 @@ SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
 from .full import Full, FullConfig
 from .membership import Membership, MembershipConfig
+from .repository import Repository, RepositoryConfig

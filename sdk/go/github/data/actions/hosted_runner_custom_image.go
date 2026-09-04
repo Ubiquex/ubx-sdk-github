@@ -3,36 +3,30 @@ package actions
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
+type HostedRunnerCustomImage_Images struct {
+	Id                any
+	LatestVersion     any
+	Name              any
+	Platform          any
+	Source            any
+	State             any
+	TotalVersionsSize any
+	VersionsCount     any
+}
+
 type HostedRunnerCustomImageConfig struct {
 	Enterprise any
-	ImageDefinitionId any
 }
 
 type HostedRunnerCustomImageAttrs struct {
 	Enterprise any
-	// The ID of the image. Use this ID for the `image` parameter when creating a new larger runner.
-	Id any
-	ImageDefinitionId any
-	// The latest image version associated with the image.
-	LatestVersion any
-	// Display name for this image.
-	Name any
-	// The operating system of the image.
-	Platform any
-	// The image provider.
-	Source any
-	// The number of image versions associated with the image.
-	State any
-	// Total size of all the image versions in GB.
-	TotalVersionsSize any
-	// The number of image versions associated with the image.
-	VersionsCount any
+	Images     any
+	TotalCount any
 }
 
 var HostedRunnerCustomImage = ubx.DataSourceBinding{
 	WireType: "github_actions_hosted_runner_custom_image",
 	Fields: ubx.FieldMap{
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"ImageDefinitionId": ubx.FieldSpec{WireName: "image_definition_id"},
 	},
 }

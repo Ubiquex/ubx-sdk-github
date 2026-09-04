@@ -7,6 +7,51 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
+class Task_Artifacts_Data:
+    base_ref: Any = None
+    global_id: Any = None
+    head_ref: Any = None
+    id: Any = None
+
+@dataclasses.dataclass
+class Task_Artifacts:
+    data: Any = None
+    provider: Any = None
+    type: Any = None
+
+@dataclasses.dataclass
+class Task_Creator:
+    id: Any = None
+
+@dataclasses.dataclass
+class Task_Sessions_Error:
+    message: Any = None
+
+@dataclasses.dataclass
+class Task_Sessions_Usage:
+    amount: Any = None
+    type: Any = None
+
+@dataclasses.dataclass
+class Task_Sessions:
+    base_ref: Any = None
+    completed_at: Any = None
+    created_at: Any = None
+    error: Any = None
+    head_ref: Any = None
+    id: Any = None
+    model: Any = None
+    name: Any = None
+    owner: Any = None
+    prompt: Any = None
+    repository: Any = None
+    state: Any = None
+    task_id: Any = None
+    updated_at: Any = None
+    usage: Any = None
+    user: Any = None
+
+@dataclasses.dataclass
 class TaskConfig:
     # Base ref for new branch/PR
     base_ref: Any = None
@@ -20,33 +65,69 @@ class TaskConfig:
     model: Any = None
     # The user's prompt for the agent
     prompt: Any = None
-    # path parameter, not part of the API's own resource representation
-    owner: Any = None
+    # path parameter, not part of the API's own resource representation (renamed from "owner": that name is already used by a differently-typed, real response attribute)
+    owner_path: Any = None
     # path parameter, not part of the API's own resource representation
     repo: Any = None
     # path parameter, not part of the API's own resource representation
     task_id: Any = None
+    # path parameter, not part of the API's own resource representation (renamed from "owner": that name is already used by a differently-typed, real response attribute)
+    owner_path2: Any = None
 
 @dataclasses.dataclass
 class TaskAttrs:
+    # Timestamp when the task was archived, null if not archived
+    archived_at: Any = None
+    # Resources created by this task (PRs, branches, etc.)
+    artifacts: Any = None
     # Base ref for new branch/PR
     base_ref: Any = None
     # Whether to create a PR.
     create_pull_request: Any = None
+    # Timestamp when the task was created
+    created_at: Any = None
+    # The entity who created this task
+    creator: Any = None
+    # Type of the task creator
+    creator_type: Any = None
     # Optional identifier for a custom agent to use for this task. Use the custom agent's filename without the extension - for example, for a `.github/agents/performance-optimizer.agent.md` custom agent, use `performance-optimizer`.
     custom_agent: Any = None
     # Head ref for existing branch/PR. If provided with `base_ref`, the agent looks up open PR context for `head_ref` targeting `base_ref` and commits to `head_ref` instead of creating a new branch.
     head_ref: Any = None
+    # Web URL for this task
+    html_url: Any = None
+    # Unique task identifier
+    id: Any = None
     # The model to use for this task. The allowed models may change over time and depend on the user's GitHub Copilot plan and organization policies. Currently supported values: `claude-sonnet-4.6`, `claude-opus-4.6`, `gpt-5.2-codex`, `gpt-5.3-codex`, `gpt-5.4`, `claude-sonnet-4.5`, `claude-opus-4.5`
     model: Any = None
+    # Human-readable name derived from the task prompt
+    name: Any = None
+    # The owner of the repository
+    owner: Any = None
     # The user's prompt for the agent
     prompt: Any = None
-    # path parameter, not part of the API's own resource representation
-    owner: Any = None
+    # The repository this task belongs to
+    repository: Any = None
+    # Number of sessions in this task
+    session_count: Any = None
+    # Sessions associated with this task
+    sessions: Any = None
+    # Current state of the task, derived from its most recent session
+    state: Any = None
+    # Timestamp of the most recent update
+    updated_at: Any = None
+    # API URL for this task
+    url: Any = None
+    # User objects of collaborators on this task
+    user_collaborators: Any = None
+    # path parameter, not part of the API's own resource representation (renamed from "owner": that name is already used by a differently-typed, real response attribute)
+    owner_path: Any = None
     # path parameter, not part of the API's own resource representation
     repo: Any = None
     # path parameter, not part of the API's own resource representation
     task_id: Any = None
+    # path parameter, not part of the API's own resource representation (renamed from "owner": that name is already used by a differently-typed, real response attribute)
+    owner_path2: Any = None
 
 Task = ubx.ResourceBinding(
     wire_type="github_task",
@@ -57,8 +138,9 @@ Task = ubx.ResourceBinding(
         "head_ref": ubx.FieldSpec(wire_name="head_ref"),
         "model": ubx.FieldSpec(wire_name="model"),
         "prompt": ubx.FieldSpec(wire_name="prompt"),
-        "owner": ubx.FieldSpec(wire_name="owner"),
+        "owner_path": ubx.FieldSpec(wire_name="owner_path"),
         "repo": ubx.FieldSpec(wire_name="repo"),
         "task_id": ubx.FieldSpec(wire_name="task_id"),
+        "owner_path2": ubx.FieldSpec(wire_name="owner_path2"),
     },
 )

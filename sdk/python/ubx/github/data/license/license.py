@@ -8,28 +8,21 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class LicenseConfig:
-    license: Any = None
+    featured: Any = None
+    page: Any = None
+    per_page: Any = None
 
 @dataclasses.dataclass
 class LicenseAttrs:
-    body: Any = None
-    conditions: Any = None
-    description: Any = None
     featured: Any = None
-    html_url: Any = None
-    implementation: Any = None
-    key: Any = None
-    license: Any = None
-    limitations: Any = None
-    name: Any = None
-    node_id: Any = None
-    permissions: Any = None
-    spdx_id: Any = None
-    url: Any = None
+    page: Any = None
+    per_page: Any = None
 
 License = ubx.DataSourceBinding(
     wire_type="github_license",
     fields={
-        "license": ubx.FieldSpec(wire_name="license"),
+        "featured": ubx.FieldSpec(wire_name="featured"),
+        "page": ubx.FieldSpec(wire_name="page"),
+        "per_page": ubx.FieldSpec(wire_name="per_page"),
     },
 )

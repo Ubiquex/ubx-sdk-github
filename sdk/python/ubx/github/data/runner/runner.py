@@ -7,16 +7,45 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
+class Runner_Runners_Labels:
+    id: Any = None
+    name: Any = None
+    type: Any = None
+
+@dataclasses.dataclass
+class Runner_Runners:
+    busy: Any = None
+    ephemeral: Any = None
+    id: Any = None
+    labels: Any = None
+    name: Any = None
+    os: Any = None
+    runner_group_id: Any = None
+    status: Any = None
+    version: Any = None
+
+@dataclasses.dataclass
 class RunnerConfig:
     enterprise: Any = None
+    page: Any = None
+    per_page: Any = None
+    runner_group_id: Any = None
 
 @dataclasses.dataclass
 class RunnerAttrs:
     enterprise: Any = None
+    page: Any = None
+    per_page: Any = None
+    runner_group_id: Any = None
+    runners: Any = None
+    total_count: Any = None
 
 Runner = ubx.DataSourceBinding(
     wire_type="github_runner",
     fields={
         "enterprise": ubx.FieldSpec(wire_name="enterprise"),
+        "page": ubx.FieldSpec(wire_name="page"),
+        "per_page": ubx.FieldSpec(wire_name="per_page"),
+        "runner_group_id": ubx.FieldSpec(wire_name="runner_group_id"),
     },
 )

@@ -7,26 +7,32 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
+class DependabotSecret_Secrets:
+    created_at: Any = None
+    name: Any = None
+    selected_repositories_url: Any = None
+    updated_at: Any = None
+    visibility: Any = None
+
+@dataclasses.dataclass
 class DependabotSecretConfig:
     org: Any = None
-    secret_name: Any = None
+    page: Any = None
+    per_page: Any = None
 
 @dataclasses.dataclass
 class DependabotSecretAttrs:
-    created_at: Any = None
-    # The name of the secret.
-    name: Any = None
     org: Any = None
-    secret_name: Any = None
-    selected_repositories_url: Any = None
-    updated_at: Any = None
-    # Visibility of a secret
-    visibility: Any = None
+    page: Any = None
+    per_page: Any = None
+    secrets: Any = None
+    total_count: Any = None
 
 DependabotSecret = ubx.DataSourceBinding(
     wire_type="github_organization_dependabot_secret",
     fields={
         "org": ubx.FieldSpec(wire_name="org"),
-        "secret_name": ubx.FieldSpec(wire_name="secret_name"),
+        "page": ubx.FieldSpec(wire_name="page"),
+        "per_page": ubx.FieldSpec(wire_name="per_page"),
     },
 )

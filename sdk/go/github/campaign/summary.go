@@ -13,16 +13,14 @@ type Summary_AlertStats struct {
 }
 
 type Summary_CodeScanningAlerts struct {
-	// The list of alert numbers for the code scanning alerts in this campaign summary. (AI-inferred)
 	AlertNumbers any
-	// The numeric identifier of the repository in which the code scanning alert was found. (AI-inferred)
 	RepositoryId any
 }
 
 var Summary_CodeScanningAlertsFields = ubx.FieldMap{
-		"AlertNumbers": ubx.FieldSpec{WireName: "alert_numbers"},
-		"RepositoryId": ubx.FieldSpec{WireName: "repository_id"},
-	}
+	"AlertNumbers": ubx.FieldSpec{WireName: "alert_numbers"},
+	"RepositoryId": ubx.FieldSpec{WireName: "repository_id"},
+}
 
 type SummaryConfig struct {
 	// The code scanning alerts to include in this campaign
@@ -88,17 +86,17 @@ var Summary = ubx.ResourceBinding{
 	Fields: ubx.FieldMap{
 		"CodeScanningAlerts": ubx.FieldSpec{
 			WireName: "code_scanning_alerts",
-			Kind: "list",
-			Fields: Summary_CodeScanningAlertsFields,
+			Kind:     "list",
+			Fields:   Summary_CodeScanningAlertsFields,
 		},
-		"ContactLink": ubx.FieldSpec{WireName: "contact_link"},
-		"Description": ubx.FieldSpec{WireName: "description"},
-		"EndsAt": ubx.FieldSpec{WireName: "ends_at"},
+		"ContactLink":    ubx.FieldSpec{WireName: "contact_link"},
+		"Description":    ubx.FieldSpec{WireName: "description"},
+		"EndsAt":         ubx.FieldSpec{WireName: "ends_at"},
 		"GenerateIssues": ubx.FieldSpec{WireName: "generate_issues"},
-		"Managers": ubx.FieldSpec{WireName: "managers"},
-		"Name": ubx.FieldSpec{WireName: "name"},
-		"TeamManagers": ubx.FieldSpec{WireName: "team_managers"},
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Managers":       ubx.FieldSpec{WireName: "managers"},
+		"Name":           ubx.FieldSpec{WireName: "name"},
+		"TeamManagers":   ubx.FieldSpec{WireName: "team_managers"},
+		"Org":            ubx.FieldSpec{WireName: "org"},
 		"CampaignNumber": ubx.FieldSpec{WireName: "campaign_number"},
 	},
 }

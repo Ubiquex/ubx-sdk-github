@@ -4,18 +4,18 @@ package org
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Membership_Organization struct {
-	AvatarUrl any
-	Description any
-	EventsUrl any
-	HooksUrl any
-	Id any
-	IssuesUrl any
-	Login any
-	MembersUrl any
-	NodeId any
+	AvatarUrl        any
+	Description      any
+	EventsUrl        any
+	HooksUrl         any
+	Id               any
+	IssuesUrl        any
+	Login            any
+	MembersUrl       any
+	NodeId           any
 	PublicMembersUrl any
-	ReposUrl any
-	Url any
+	ReposUrl         any
+	Url              any
 }
 
 type Membership_Permissions struct {
@@ -23,28 +23,28 @@ type Membership_Permissions struct {
 }
 
 type Membership_User struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type MembershipConfig struct {
@@ -56,16 +56,16 @@ type MembershipAttrs struct {
 	DirectMembership any
 	// The slugs of the enterprise teams providing the user with indirect membership in the organization. A limit of 100 enterprise team slugs is returned.
 	EnterpriseTeamsProvidingIndirectMembership any
-	Org any
+	Org                                        any
 	// A GitHub organization.
-	Organization any
+	Organization    any
 	OrganizationUrl any
-	Permissions any
+	Permissions     any
 	// The user's membership type in the organization.
 	Role any
 	// The state of the member in the organization. The `pending` state indicates the user has not yet accepted an invitation.
 	State any
-	Url any
+	Url   any
 	// A GitHub user.
 	User any
 }

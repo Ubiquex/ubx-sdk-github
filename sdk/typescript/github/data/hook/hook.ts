@@ -2,22 +2,22 @@
 import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface HookConfig {
-  cursor?: string | Computed<string>;
+  org: string | Computed<string>;
+  page?: number | Computed<number>;
   perPage?: number | Computed<number>;
-  status?: string | Computed<string>;
 }
 
 export interface HookAttrs {
-  cursor: string;
+  org: string;
+  page: number;
   perPage: number;
-  status: string;
 }
 
 export const Hook: DataSourceBinding<HookConfig, HookAttrs> = {
   wireType: "github_hook",
   fields: {
-    cursor: "cursor",
+    org: "org",
+    page: "page",
     perPage: "per_page",
-    status: "status",
   },
 };

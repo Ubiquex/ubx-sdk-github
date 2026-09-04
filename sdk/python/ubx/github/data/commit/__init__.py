@@ -6,3 +6,4 @@ SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
 from .commit import Commit, CommitConfig
 from .comparison import Comparison, ComparisonConfig
+from .search_result_item import SearchResultItem, SearchResultItemConfig

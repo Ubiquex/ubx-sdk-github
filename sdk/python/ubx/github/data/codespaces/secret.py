@@ -7,26 +7,29 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
+class Secret_Secrets:
+    created_at: Any = None
+    name: Any = None
+    selected_repositories_url: Any = None
+    updated_at: Any = None
+    visibility: Any = None
+
+@dataclasses.dataclass
 class SecretConfig:
-    secret_name: Any = None
+    page: Any = None
+    per_page: Any = None
 
 @dataclasses.dataclass
 class SecretAttrs:
-    # The date and time at which the secret was created, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
-    created_at: Any = None
-    # The name of the secret
-    name: Any = None
-    secret_name: Any = None
-    # The API URL at which the list of repositories this secret is visible to can be retrieved
-    selected_repositories_url: Any = None
-    # The date and time at which the secret was last updated, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
-    updated_at: Any = None
-    # The type of repositories in the organization that the secret is visible to
-    visibility: Any = None
+    page: Any = None
+    per_page: Any = None
+    secrets: Any = None
+    total_count: Any = None
 
 Secret = ubx.DataSourceBinding(
     wire_type="github_codespaces_secret",
     fields={
-        "secret_name": ubx.FieldSpec(wire_name="secret_name"),
+        "page": ubx.FieldSpec(wire_name="page"),
+        "per_page": ubx.FieldSpec(wire_name="per_page"),
     },
 )

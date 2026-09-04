@@ -27,14 +27,10 @@ export interface GroupsOrgConfig {
 export interface GroupsOrgAttrs {
   /** Whether the runner group can be used by `public` repositories. */
   allowsPublicRepositories: boolean;
-  /** Whether this runner group is the default group for the organization. (AI-inferred) */
   default: boolean;
-  /** The API URL for accessing the hosted runners associated with this runner group. (AI-inferred) */
   hostedRunnersUrl: string;
   id: number;
-  /** Indicates whether the runner group is inherited from an enterprise account. (AI-inferred) */
   inherited: boolean;
-  /** Whether the runner group inherits the organization's setting for allowing public repositories. This computed value is determined by GitHub and reflects the inherited state of `allows_public_repositories`. (AI-inferred) */
   inheritedAllowsPublicRepositories: boolean;
   /** Name of the runner group. */
   name: string;
@@ -44,7 +40,6 @@ export interface GroupsOrgAttrs {
   restrictedToWorkflows: boolean;
   /** List of runner IDs to add to the runner group. */
   runners: number[];
-  /** The API URL to fetch the list of runners belonging to this organization runner group. (AI-inferred) */
   runnersUrl: string;
   /** Link to the selected repositories resource for this runner group. Not present unless visibility was set to `selected` */
   selectedRepositoriesUrl: string;

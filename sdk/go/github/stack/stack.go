@@ -4,7 +4,6 @@ package stack
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Stack_Base struct {
-	// The git reference (branch, tag, or commit SHA) to use as the base for the stack. (AI-inferred)
 	Ref any
 }
 
@@ -20,17 +19,16 @@ type StackConfig struct {
 }
 
 type StackAttrs struct {
-	Base any
+	Base      any
 	CreatedAt any
-	Id any
-	// The GraphQL node ID of the GitHub stack. (AI-inferred)
-	NodeId any
-	Number any
+	Id        any
+	NodeId    any
+	Number    any
 	// Whether the stack has any open pull request. False when all pull requests are merged or closed.
 	Open any
 	// An ordered list of pull request numbers forming the stack from bottom to top.
 	PullRequests any
-	Url any
+	Url          any
 	// path parameter, not part of the API's own resource representation
 	Owner any
 	// path parameter, not part of the API's own resource representation
@@ -43,8 +41,8 @@ var Stack = ubx.ResourceBinding{
 	WireType: "github_stack",
 	Fields: ubx.FieldMap{
 		"PullRequests": ubx.FieldSpec{WireName: "pull_requests"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"StackNumber": ubx.FieldSpec{WireName: "stack_number"},
+		"Owner":        ubx.FieldSpec{WireName: "owner"},
+		"Repo":         ubx.FieldSpec{WireName: "repo"},
+		"StackNumber":  ubx.FieldSpec{WireName: "stack_number"},
 	},
 }

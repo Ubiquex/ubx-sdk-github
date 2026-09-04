@@ -8,21 +8,21 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class HookConfig:
-    cursor: Any = None
+    org: Any = None
+    page: Any = None
     per_page: Any = None
-    status: Any = None
 
 @dataclasses.dataclass
 class HookAttrs:
-    cursor: Any = None
+    org: Any = None
+    page: Any = None
     per_page: Any = None
-    status: Any = None
 
 Hook = ubx.DataSourceBinding(
     wire_type="github_hook",
     fields={
-        "cursor": ubx.FieldSpec(wire_name="cursor"),
+        "org": ubx.FieldSpec(wire_name="org"),
+        "page": ubx.FieldSpec(wire_name="page"),
         "per_page": ubx.FieldSpec(wire_name="per_page"),
-        "status": ubx.FieldSpec(wire_name="status"),
     },
 )

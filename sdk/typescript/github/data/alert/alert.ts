@@ -2,35 +2,52 @@
 import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface AlertConfig {
-  owner: string | Computed<string>;
+  after?: string | Computed<string>;
+  assignees?: string | Computed<string>;
+  before?: string | Computed<string>;
+  direction?: string | Computed<string>;
+  enterprise: string | Computed<string>;
   page?: number | Computed<number>;
   perPage?: number | Computed<number>;
-  pr?: number | Computed<number>;
-  /** The Git reference, formatted as `refs/pull/<number>/merge`, `refs/pull/<number>/head`, `refs/heads/<branch name>` or simply `<branch name>`. */
-  ref?: string | Computed<string>;
-  repo: string | Computed<string>;
+  sort?: string | Computed<string>;
+  /** State of a code scanning alert. */
+  state?: string | Computed<string>;
+  /** The GUID of the tool used to generate the code scanning analysis, if provided in the uploaded SARIF data. */
+  toolGuid?: string | Computed<string>;
+  /** The name of the tool used to generate the code scanning analysis. */
+  toolName?: string | Computed<string>;
 }
 
 export interface AlertAttrs {
-  /** The security alert number. */
-  alertNumber: number;
-  owner: string;
+  after: string;
+  assignees: string;
+  before: string;
+  direction: string;
+  enterprise: string;
   page: number;
   perPage: number;
-  pr: number;
-  /** The Git reference, formatted as `refs/pull/<number>/merge`, `refs/pull/<number>/head`, `refs/heads/<branch name>` or simply `<branch name>`. */
-  ref: string;
-  repo: string;
+  sort: string;
+  /** State of a code scanning alert. */
+  state: string;
+  /** The GUID of the tool used to generate the code scanning analysis, if provided in the uploaded SARIF data. */
+  toolGuid: string;
+  /** The name of the tool used to generate the code scanning analysis. */
+  toolName: string;
 }
 
 export const Alert: DataSourceBinding<AlertConfig, AlertAttrs> = {
   wireType: "github_alert",
   fields: {
-    owner: "owner",
+    after: "after",
+    assignees: "assignees",
+    before: "before",
+    direction: "direction",
+    enterprise: "enterprise",
     page: "page",
     perPage: "per_page",
-    pr: "pr",
-    ref: "ref",
-    repo: "repo",
+    sort: "sort",
+    state: "state",
+    toolGuid: "tool_guid",
+    toolName: "tool_name",
   },
 };

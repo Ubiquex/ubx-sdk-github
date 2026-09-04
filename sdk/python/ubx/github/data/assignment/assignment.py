@@ -8,20 +8,20 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class AssignmentConfig:
-    assignment_id: Any = None
+    classroom_id: Any = None
     page: Any = None
     per_page: Any = None
 
 @dataclasses.dataclass
 class AssignmentAttrs:
-    assignment_id: Any = None
+    classroom_id: Any = None
     page: Any = None
     per_page: Any = None
 
 Assignment = ubx.DataSourceBinding(
     wire_type="github_assignment",
     fields={
-        "assignment_id": ubx.FieldSpec(wire_name="assignment_id"),
+        "classroom_id": ubx.FieldSpec(wire_name="classroom_id"),
         "page": ubx.FieldSpec(wire_name="page"),
         "per_page": ubx.FieldSpec(wire_name="per_page"),
     },

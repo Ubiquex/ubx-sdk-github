@@ -4,4 +4,4 @@
 # re-run `ubx sdk gen` to regenerate after a provider version bump.
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
-from .registrie import Registrie, RegistrieConfig
+from .vulnerability_reporting import VulnerabilityReporting, VulnerabilityReportingConfig

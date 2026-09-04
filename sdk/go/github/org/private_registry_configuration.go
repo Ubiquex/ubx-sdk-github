@@ -70,8 +70,7 @@ type PrivateRegistryConfigurationAttrs struct {
 	// The AWS region. Required when `auth_type` is `oidc_aws`.
 	AwsRegion any
 	// The client ID of the Azure AD application. Required when `auth_type` is `oidc_azure`.
-	ClientId any
-	// Timestamp the private registry configuration was created. (AI-inferred)
+	ClientId  any
 	CreatedAt any
 	// The CodeArtifact domain. Required when `auth_type` is `oidc_aws`.
 	Domain any
@@ -102,8 +101,7 @@ type PrivateRegistryConfigurationAttrs struct {
 	// The Cloudsmith service account slug. Required when `auth_type` is `oidc_cloudsmith`.
 	ServiceSlug any
 	// The tenant ID of the Azure AD application. Required when `auth_type` is `oidc_azure`.
-	TenantId any
-	// Timestamp the private registry configuration was last updated. (AI-inferred)
+	TenantId  any
 	UpdatedAt any
 	// The URL of the private registry.
 	Url any
@@ -122,31 +120,31 @@ type PrivateRegistryConfigurationAttrs struct {
 var PrivateRegistryConfiguration = ubx.ResourceBinding{
 	WireType: "github_org_private_registry_configuration",
 	Fields: ubx.FieldMap{
-		"AccountId": ubx.FieldSpec{WireName: "account_id"},
-		"ApiHost": ubx.FieldSpec{WireName: "api_host"},
-		"Audience": ubx.FieldSpec{WireName: "audience"},
-		"AuthType": ubx.FieldSpec{WireName: "auth_type"},
-		"AwsRegion": ubx.FieldSpec{WireName: "aws_region"},
-		"ClientId": ubx.FieldSpec{WireName: "client_id"},
-		"Domain": ubx.FieldSpec{WireName: "domain"},
-		"DomainOwner": ubx.FieldSpec{WireName: "domain_owner"},
-		"EncryptedValue": ubx.FieldSpec{WireName: "encrypted_value"},
-		"IdentityMappingName": ubx.FieldSpec{WireName: "identity_mapping_name"},
-		"JfrogOidcProviderName": ubx.FieldSpec{WireName: "jfrog_oidc_provider_name"},
-		"KeyId": ubx.FieldSpec{WireName: "key_id"},
-		"Namespace": ubx.FieldSpec{WireName: "namespace"},
-		"RegistryType": ubx.FieldSpec{WireName: "registry_type"},
-		"ReplacesBase": ubx.FieldSpec{WireName: "replaces_base"},
-		"RoleName": ubx.FieldSpec{WireName: "role_name"},
-		"SelectedRepositoryIds": ubx.FieldSpec{WireName: "selected_repository_ids"},
-		"ServiceAccount": ubx.FieldSpec{WireName: "service_account"},
-		"ServiceSlug": ubx.FieldSpec{WireName: "service_slug"},
-		"TenantId": ubx.FieldSpec{WireName: "tenant_id"},
-		"Url": ubx.FieldSpec{WireName: "url"},
-		"Username": ubx.FieldSpec{WireName: "username"},
-		"Visibility": ubx.FieldSpec{WireName: "visibility"},
+		"AccountId":                ubx.FieldSpec{WireName: "account_id"},
+		"ApiHost":                  ubx.FieldSpec{WireName: "api_host"},
+		"Audience":                 ubx.FieldSpec{WireName: "audience"},
+		"AuthType":                 ubx.FieldSpec{WireName: "auth_type"},
+		"AwsRegion":                ubx.FieldSpec{WireName: "aws_region"},
+		"ClientId":                 ubx.FieldSpec{WireName: "client_id"},
+		"Domain":                   ubx.FieldSpec{WireName: "domain"},
+		"DomainOwner":              ubx.FieldSpec{WireName: "domain_owner"},
+		"EncryptedValue":           ubx.FieldSpec{WireName: "encrypted_value"},
+		"IdentityMappingName":      ubx.FieldSpec{WireName: "identity_mapping_name"},
+		"JfrogOidcProviderName":    ubx.FieldSpec{WireName: "jfrog_oidc_provider_name"},
+		"KeyId":                    ubx.FieldSpec{WireName: "key_id"},
+		"Namespace":                ubx.FieldSpec{WireName: "namespace"},
+		"RegistryType":             ubx.FieldSpec{WireName: "registry_type"},
+		"ReplacesBase":             ubx.FieldSpec{WireName: "replaces_base"},
+		"RoleName":                 ubx.FieldSpec{WireName: "role_name"},
+		"SelectedRepositoryIds":    ubx.FieldSpec{WireName: "selected_repository_ids"},
+		"ServiceAccount":           ubx.FieldSpec{WireName: "service_account"},
+		"ServiceSlug":              ubx.FieldSpec{WireName: "service_slug"},
+		"TenantId":                 ubx.FieldSpec{WireName: "tenant_id"},
+		"Url":                      ubx.FieldSpec{WireName: "url"},
+		"Username":                 ubx.FieldSpec{WireName: "username"},
+		"Visibility":               ubx.FieldSpec{WireName: "visibility"},
 		"WorkloadIdentityProvider": ubx.FieldSpec{WireName: "workload_identity_provider"},
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"SecretName": ubx.FieldSpec{WireName: "secret_name"},
+		"Org":                      ubx.FieldSpec{WireName: "org"},
+		"SecretName":               ubx.FieldSpec{WireName: "secret_name"},
 	},
 }

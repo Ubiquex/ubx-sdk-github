@@ -4,28 +4,37 @@ package deployment
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type DeploymentConfig struct {
-	DeploymentId any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
+	Environment any
+	Owner       any
+	Page        any
+	PerPage     any
+	Ref         any
+	Repo        any
+	Sha         any
+	Task        any
 }
 
 type DeploymentAttrs struct {
-	DeploymentId any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
+	Environment any
+	Owner       any
+	Page        any
+	PerPage     any
+	Ref         any
+	Repo        any
+	Sha         any
+	Task        any
 }
 
 var Deployment = ubx.DataSourceBinding{
 	WireType: "github_deployment",
 	Fields: ubx.FieldMap{
-		"DeploymentId": ubx.FieldSpec{WireName: "deployment_id"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Environment": ubx.FieldSpec{WireName: "environment"},
+		"Owner":       ubx.FieldSpec{WireName: "owner"},
+		"Page":        ubx.FieldSpec{WireName: "page"},
+		"PerPage":     ubx.FieldSpec{WireName: "per_page"},
+		"Ref":         ubx.FieldSpec{WireName: "ref"},
+		"Repo":        ubx.FieldSpec{WireName: "repo"},
+		"Sha":         ubx.FieldSpec{WireName: "sha"},
+		"Task":        ubx.FieldSpec{WireName: "task"},
 	},
 }

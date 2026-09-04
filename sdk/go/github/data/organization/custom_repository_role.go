@@ -3,59 +3,56 @@ package organization
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
-type CustomRepositoryRole_Organization struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+type CustomRepositoryRole_CustomRoles_Organization struct {
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
+}
+
+type CustomRepositoryRole_CustomRoles struct {
+	BaseRole     any
+	CreatedAt    any
+	Description  any
+	Id           any
+	Name         any
+	Organization any
+	Permissions  any
+	UpdatedAt    any
 }
 
 type CustomRepositoryRoleConfig struct {
-	Org any
-	RoleId any
+	OrganizationId any
 }
 
 type CustomRepositoryRoleAttrs struct {
-	// The system role from which this role inherits permissions.
-	BaseRole any
-	CreatedAt any
-	// A short description about who this role is for or what permissions it grants.
-	Description any
-	// The unique identifier of the custom role.
-	Id any
-	// The name of the custom role.
-	Name any
-	Org any
-	// A GitHub user.
-	Organization any
-	// A list of additional permissions included in this role.
-	Permissions any
-	RoleId any
-	UpdatedAt any
+	CustomRoles    any
+	OrganizationId any
+	// The number of custom roles in this organization
+	TotalCount any
 }
 
 var CustomRepositoryRole = ubx.DataSourceBinding{
 	WireType: "github_organization_custom_repository_role",
 	Fields: ubx.FieldMap{
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"RoleId": ubx.FieldSpec{WireName: "role_id"},
+		"OrganizationId": ubx.FieldSpec{WireName: "organization_id"},
 	},
 }

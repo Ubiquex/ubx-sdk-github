@@ -4,31 +4,25 @@ package configuration
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ConfigurationConfig struct {
-	After any
-	Before any
-	ConfigurationId any
+	After      any
+	Before     any
 	Enterprise any
-	PerPage any
-	Status any
+	PerPage    any
 }
 
 type ConfigurationAttrs struct {
-	After any
-	Before any
-	ConfigurationId any
+	After      any
+	Before     any
 	Enterprise any
-	PerPage any
-	Status any
+	PerPage    any
 }
 
 var Configuration = ubx.DataSourceBinding{
 	WireType: "github_configuration",
 	Fields: ubx.FieldMap{
-		"After": ubx.FieldSpec{WireName: "after"},
-		"Before": ubx.FieldSpec{WireName: "before"},
-		"ConfigurationId": ubx.FieldSpec{WireName: "configuration_id"},
+		"After":      ubx.FieldSpec{WireName: "after"},
+		"Before":     ubx.FieldSpec{WireName: "before"},
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Status": ubx.FieldSpec{WireName: "status"},
+		"PerPage":    ubx.FieldSpec{WireName: "per_page"},
 	},
 }

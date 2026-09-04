@@ -4,97 +4,97 @@ package pull
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type RequestReviewRequest_Teams_Parent struct {
-	Description any
-	EnterpriseId any
-	HtmlUrl any
-	Id any
-	LdapDn any
-	MembersUrl any
-	Name any
-	NodeId any
+	Description         any
+	EnterpriseId        any
+	HtmlUrl             any
+	Id                  any
+	LdapDn              any
+	MembersUrl          any
+	Name                any
+	NodeId              any
 	NotificationSetting any
-	OrganizationId any
-	Permission any
-	Privacy any
-	RepositoriesUrl any
-	Slug any
-	Type any
-	Url any
+	OrganizationId      any
+	Permission          any
+	Privacy             any
+	RepositoriesUrl     any
+	Slug                any
+	Type                any
+	Url                 any
 }
 
 type RequestReviewRequest_Teams_Permissions struct {
-	Admin any
+	Admin    any
 	Maintain any
-	Pull any
-	Push any
-	Triage any
+	Pull     any
+	Push     any
+	Triage   any
 }
 
 type RequestReviewRequest_Teams struct {
-	AccessSource any
-	Description any
-	EnterpriseId any
-	HtmlUrl any
-	Id any
-	MembersUrl any
-	Name any
-	NodeId any
+	AccessSource        any
+	Description         any
+	EnterpriseId        any
+	HtmlUrl             any
+	Id                  any
+	MembersUrl          any
+	Name                any
+	NodeId              any
 	NotificationSetting any
-	OrganizationId any
-	Parent any
-	Permission any
-	Permissions any
-	Privacy any
-	RepositoriesUrl any
-	Slug any
-	Type any
-	Url any
+	OrganizationId      any
+	Parent              any
+	Permission          any
+	Permissions         any
+	Privacy             any
+	RepositoriesUrl     any
+	Slug                any
+	Type                any
+	Url                 any
 }
 
 type RequestReviewRequest_Users struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type RequestReviewRequestConfig struct {
-	Owner any
+	Owner      any
 	PullNumber any
-	Repo any
+	Repo       any
 }
 
 type RequestReviewRequestAttrs struct {
-	Owner any
+	Owner      any
 	PullNumber any
-	Repo any
-	Teams any
-	Users any
+	Repo       any
+	Teams      any
+	Users      any
 }
 
 var RequestReviewRequest = ubx.DataSourceBinding{
 	WireType: "github_pull_request_review_request",
 	Fields: ubx.FieldMap{
-		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Owner":      ubx.FieldSpec{WireName: "owner"},
 		"PullNumber": ubx.FieldSpec{WireName: "pull_number"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":       ubx.FieldSpec{WireName: "repo"},
 	},
 }

@@ -8,60 +8,36 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class DependabotConfig:
-    after: Any = None
-    assignee: Any = None
-    before: Any = None
-    classification: Any = None
-    direction: Any = None
-    ecosystem: Any = None
-    enterprise: Any = None
-    epss_percentage: Any = None
-    has: Any = None
-    package: Any = None
+    org: Any = None
+    page: Any = None
     per_page: Any = None
-    relationship: Any = None
-    scope: Any = None
-    severity: Any = None
-    sort: Any = None
-    state: Any = None
+    repository_name: Any = None
+    request_status: Any = None
+    requester: Any = None
+    reviewer: Any = None
+    time_period: Any = None
 
 @dataclasses.dataclass
 class DependabotAttrs:
-    after: Any = None
-    assignee: Any = None
-    before: Any = None
-    classification: Any = None
-    direction: Any = None
-    ecosystem: Any = None
-    enterprise: Any = None
-    epss_percentage: Any = None
-    has: Any = None
-    package: Any = None
+    org: Any = None
+    page: Any = None
     per_page: Any = None
-    relationship: Any = None
-    scope: Any = None
-    severity: Any = None
-    sort: Any = None
-    state: Any = None
+    repository_name: Any = None
+    request_status: Any = None
+    requester: Any = None
+    reviewer: Any = None
+    time_period: Any = None
 
 Dependabot = ubx.DataSourceBinding(
     wire_type="github_dependabot",
     fields={
-        "after": ubx.FieldSpec(wire_name="after"),
-        "assignee": ubx.FieldSpec(wire_name="assignee"),
-        "before": ubx.FieldSpec(wire_name="before"),
-        "classification": ubx.FieldSpec(wire_name="classification"),
-        "direction": ubx.FieldSpec(wire_name="direction"),
-        "ecosystem": ubx.FieldSpec(wire_name="ecosystem"),
-        "enterprise": ubx.FieldSpec(wire_name="enterprise"),
-        "epss_percentage": ubx.FieldSpec(wire_name="epss_percentage"),
-        "has": ubx.FieldSpec(wire_name="has"),
-        "package": ubx.FieldSpec(wire_name="package"),
+        "org": ubx.FieldSpec(wire_name="org"),
+        "page": ubx.FieldSpec(wire_name="page"),
         "per_page": ubx.FieldSpec(wire_name="per_page"),
-        "relationship": ubx.FieldSpec(wire_name="relationship"),
-        "scope": ubx.FieldSpec(wire_name="scope"),
-        "severity": ubx.FieldSpec(wire_name="severity"),
-        "sort": ubx.FieldSpec(wire_name="sort"),
-        "state": ubx.FieldSpec(wire_name="state"),
+        "repository_name": ubx.FieldSpec(wire_name="repository_name"),
+        "request_status": ubx.FieldSpec(wire_name="request_status"),
+        "requester": ubx.FieldSpec(wire_name="requester"),
+        "reviewer": ubx.FieldSpec(wire_name="reviewer"),
+        "time_period": ubx.FieldSpec(wire_name="time_period"),
     },
 )

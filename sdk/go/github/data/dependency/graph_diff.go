@@ -5,24 +5,24 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type GraphDiffConfig struct {
 	Basehead any
-	Name any
-	Owner any
-	Repo any
+	Name     any
+	Owner    any
+	Repo     any
 }
 
 type GraphDiffAttrs struct {
 	Basehead any
-	Name any
-	Owner any
-	Repo any
+	Name     any
+	Owner    any
+	Repo     any
 }
 
 var GraphDiff = ubx.DataSourceBinding{
 	WireType: "github_dependency_graph_diff",
 	Fields: ubx.FieldMap{
 		"Basehead": ubx.FieldSpec{WireName: "basehead"},
-		"Name": ubx.FieldSpec{WireName: "name"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Name":     ubx.FieldSpec{WireName: "name"},
+		"Owner":    ubx.FieldSpec{WireName: "owner"},
+		"Repo":     ubx.FieldSpec{WireName: "repo"},
 	},
 }

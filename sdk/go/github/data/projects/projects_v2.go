@@ -3,102 +3,29 @@ package projects
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
-type ProjectsV2_Creator struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
-	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
-}
-
-type ProjectsV2_LatestStatusUpdate struct {
-	// Body of the status update
-	Body any
-	// The time when the status update was created.
-	CreatedAt any
-	// A GitHub user.
-	Creator any
-	// The unique identifier of the status update.
-	Id any
-	// The node ID of the status update.
-	NodeId any
-	// The node ID of the project that this status update belongs to.
-	ProjectNodeId any
-	// The start date of the period covered by the update.
-	StartDate any
-	// The current status.
-	Status any
-	// The target date associated with the update.
-	TargetDate any
-	// The time when the status update was last updated.
-	UpdatedAt any
-}
-
 type ProjectsV2Config struct {
-	Org any
-	ProjectNumber any
+	After   any
+	Before  any
+	Org     any
+	PerPage any
+	Q       any
 }
 
 type ProjectsV2Attrs struct {
-	// The time when the project was closed.
-	ClosedAt any
-	// The time when the project was created.
-	CreatedAt any
-	// A GitHub user.
-	Creator any
-	// The time when the project was deleted.
-	DeletedAt any
-	// A GitHub user.
-	DeletedBy any
-	// A short description of the project.
-	Description any
-	// The unique identifier of the project.
-	Id any
-	// Whether this project is a template
-	IsTemplate any
-	// An status update belonging to a project
-	LatestStatusUpdate any
-	// The node ID of the project.
-	NodeId any
-	// The project number.
-	Number any
-	Org any
-	// A GitHub user.
-	Owner any
-	ProjectNumber any
-	// Whether the project is visible to anyone with access to the owner.
-	Public any
-	// A concise summary of the project.
-	ShortDescription any
-	// The current state of the project.
-	State any
-	// The project title.
-	Title any
-	// The time when the project was last updated.
-	UpdatedAt any
+	After   any
+	Before  any
+	Org     any
+	PerPage any
+	Q       any
 }
 
 var ProjectsV2 = ubx.DataSourceBinding{
 	WireType: "github_projects_v2",
 	Fields: ubx.FieldMap{
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"ProjectNumber": ubx.FieldSpec{WireName: "project_number"},
+		"After":   ubx.FieldSpec{WireName: "after"},
+		"Before":  ubx.FieldSpec{WireName: "before"},
+		"Org":     ubx.FieldSpec{WireName: "org"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Q":       ubx.FieldSpec{WireName: "q"},
 	},
 }

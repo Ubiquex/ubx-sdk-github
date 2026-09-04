@@ -4,22 +4,22 @@ package hook
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type HookConfig struct {
-	Cursor any
+	Org     any
+	Page    any
 	PerPage any
-	Status any
 }
 
 type HookAttrs struct {
-	Cursor any
+	Org     any
+	Page    any
 	PerPage any
-	Status any
 }
 
 var Hook = ubx.DataSourceBinding{
 	WireType: "github_hook",
 	Fields: ubx.FieldMap{
-		"Cursor": ubx.FieldSpec{WireName: "cursor"},
+		"Org":     ubx.FieldSpec{WireName: "org"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Status": ubx.FieldSpec{WireName: "status"},
 	},
 }

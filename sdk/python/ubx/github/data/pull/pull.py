@@ -8,19 +8,27 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class PullConfig:
-    org: Any = None
+    commit_sha: Any = None
+    owner: Any = None
+    page: Any = None
+    per_page: Any = None
+    repo: Any = None
 
 @dataclasses.dataclass
 class PullAttrs:
-    # Whether the pull request creation cap is enabled
-    enabled: Any = None
-    # The maximum number of open pull requests a user can have at one time
-    max_open_pull_requests: Any = None
-    org: Any = None
+    commit_sha: Any = None
+    owner: Any = None
+    page: Any = None
+    per_page: Any = None
+    repo: Any = None
 
 Pull = ubx.DataSourceBinding(
     wire_type="github_pull",
     fields={
-        "org": ubx.FieldSpec(wire_name="org"),
+        "commit_sha": ubx.FieldSpec(wire_name="commit_sha"),
+        "owner": ubx.FieldSpec(wire_name="owner"),
+        "page": ubx.FieldSpec(wire_name="page"),
+        "per_page": ubx.FieldSpec(wire_name="per_page"),
+        "repo": ubx.FieldSpec(wire_name="repo"),
     },
 )

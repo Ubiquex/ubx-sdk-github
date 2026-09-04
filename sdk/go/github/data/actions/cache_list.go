@@ -4,37 +4,37 @@ package actions
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type CacheList_ActionsCaches struct {
-	CreatedAt any
-	Id any
-	Key any
+	CreatedAt      any
+	Id             any
+	Key            any
 	LastAccessedAt any
-	Ref any
-	SizeInBytes any
-	Version any
+	Ref            any
+	SizeInBytes    any
+	Version        any
 }
 
 type CacheListConfig struct {
 	Direction any
-	Key any
-	Owner any
-	Page any
-	PerPage any
-	Ref any
-	Repo any
-	Sort any
+	Key       any
+	Owner     any
+	Page      any
+	PerPage   any
+	Ref       any
+	Repo      any
+	Sort      any
 }
 
 type CacheListAttrs struct {
 	// Array of caches
 	ActionsCaches any
-	Direction any
-	Key any
-	Owner any
-	Page any
-	PerPage any
-	Ref any
-	Repo any
-	Sort any
+	Direction     any
+	Key           any
+	Owner         any
+	Page          any
+	PerPage       any
+	Ref           any
+	Repo          any
+	Sort          any
 	// Total number of caches
 	TotalCount any
 }
@@ -43,12 +43,12 @@ var CacheList = ubx.DataSourceBinding{
 	WireType: "github_actions_cache_list",
 	Fields: ubx.FieldMap{
 		"Direction": ubx.FieldSpec{WireName: "direction"},
-		"Key": ubx.FieldSpec{WireName: "key"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Ref": ubx.FieldSpec{WireName: "ref"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"Sort": ubx.FieldSpec{WireName: "sort"},
+		"Key":       ubx.FieldSpec{WireName: "key"},
+		"Owner":     ubx.FieldSpec{WireName: "owner"},
+		"Page":      ubx.FieldSpec{WireName: "page"},
+		"PerPage":   ubx.FieldSpec{WireName: "per_page"},
+		"Ref":       ubx.FieldSpec{WireName: "ref"},
+		"Repo":      ubx.FieldSpec{WireName: "repo"},
+		"Sort":      ubx.FieldSpec{WireName: "sort"},
 	},
 }

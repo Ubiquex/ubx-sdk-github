@@ -4,52 +4,37 @@ package code
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ScanningConfig struct {
-	After any
-	Assignees any
-	Before any
-	Direction any
-	Enterprise any
-	Page any
-	PerPage any
-	Sort any
-	// State of a code scanning alert.
-	State any
-	// The GUID of the tool used to generate the code scanning analysis, if provided in the uploaded SARIF data.
-	ToolGuid any
-	// The name of the tool used to generate the code scanning analysis.
-	ToolName any
+	Org            any
+	Page           any
+	PerPage        any
+	RepositoryName any
+	RequestStatus  any
+	Requester      any
+	Reviewer       any
+	TimePeriod     any
 }
 
 type ScanningAttrs struct {
-	After any
-	Assignees any
-	Before any
-	Direction any
-	Enterprise any
-	Page any
-	PerPage any
-	Sort any
-	// State of a code scanning alert.
-	State any
-	// The GUID of the tool used to generate the code scanning analysis, if provided in the uploaded SARIF data.
-	ToolGuid any
-	// The name of the tool used to generate the code scanning analysis.
-	ToolName any
+	Org            any
+	Page           any
+	PerPage        any
+	RepositoryName any
+	RequestStatus  any
+	Requester      any
+	Reviewer       any
+	TimePeriod     any
 }
 
 var Scanning = ubx.DataSourceBinding{
 	WireType: "github_code_scanning",
 	Fields: ubx.FieldMap{
-		"After": ubx.FieldSpec{WireName: "after"},
-		"Assignees": ubx.FieldSpec{WireName: "assignees"},
-		"Before": ubx.FieldSpec{WireName: "before"},
-		"Direction": ubx.FieldSpec{WireName: "direction"},
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Sort": ubx.FieldSpec{WireName: "sort"},
-		"State": ubx.FieldSpec{WireName: "state"},
-		"ToolGuid": ubx.FieldSpec{WireName: "tool_guid"},
-		"ToolName": ubx.FieldSpec{WireName: "tool_name"},
+		"Org":            ubx.FieldSpec{WireName: "org"},
+		"Page":           ubx.FieldSpec{WireName: "page"},
+		"PerPage":        ubx.FieldSpec{WireName: "per_page"},
+		"RepositoryName": ubx.FieldSpec{WireName: "repository_name"},
+		"RequestStatus":  ubx.FieldSpec{WireName: "request_status"},
+		"Requester":      ubx.FieldSpec{WireName: "requester"},
+		"Reviewer":       ubx.FieldSpec{WireName: "reviewer"},
+		"TimePeriod":     ubx.FieldSpec{WireName: "time_period"},
 	},
 }

@@ -9,23 +9,23 @@ import ubx_sdk as ubx
 @dataclasses.dataclass
 class TeamConfig:
     enterprise: Any = None
-    enterprise_team: Any = None
     page: Any = None
     per_page: Any = None
+    role_id: Any = None
 
 @dataclasses.dataclass
 class TeamAttrs:
     enterprise: Any = None
-    enterprise_team: Any = None
     page: Any = None
     per_page: Any = None
+    role_id: Any = None
 
 Team = ubx.DataSourceBinding(
     wire_type="github_team",
     fields={
         "enterprise": ubx.FieldSpec(wire_name="enterprise"),
-        "enterprise_team": ubx.FieldSpec(wire_name="enterprise_team"),
         "page": ubx.FieldSpec(wire_name="page"),
         "per_page": ubx.FieldSpec(wire_name="per_page"),
+        "role_id": ubx.FieldSpec(wire_name="role_id"),
     },
 )

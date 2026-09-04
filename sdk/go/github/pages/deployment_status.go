@@ -46,13 +46,13 @@ type DeploymentStatusAttrs struct {
 var DeploymentStatus = ubx.ResourceBinding{
 	WireType: "github_pages_deployment_status",
 	Fields: ubx.FieldMap{
-		"ArtifactId": ubx.FieldSpec{WireName: "artifact_id"},
-		"ArtifactUrl": ubx.FieldSpec{WireName: "artifact_url"},
-		"Environment": ubx.FieldSpec{WireName: "environment"},
-		"OidcToken": ubx.FieldSpec{WireName: "oidc_token"},
+		"ArtifactId":        ubx.FieldSpec{WireName: "artifact_id"},
+		"ArtifactUrl":       ubx.FieldSpec{WireName: "artifact_url"},
+		"Environment":       ubx.FieldSpec{WireName: "environment"},
+		"OidcToken":         ubx.FieldSpec{WireName: "oidc_token"},
 		"PagesBuildVersion": ubx.FieldSpec{WireName: "pages_build_version"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":             ubx.FieldSpec{WireName: "owner"},
+		"Repo":              ubx.FieldSpec{WireName: "repo"},
 		"PagesDeploymentId": ubx.FieldSpec{WireName: "pages_deployment_id"},
 	},
 }

@@ -8,72 +8,36 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class ScanningConfig:
-    after: Any = None
-    assignee: Any = None
-    before: Any = None
-    direction: Any = None
     enterprise: Any = None
-    exclude_providers: Any = None
-    exclude_secret_types: Any = None
-    hide_secret: Any = None
-    included_metadata: Any = None
-    is_bypassed: Any = None
-    is_multi_repo: Any = None
-    is_publicly_leaked: Any = None
-    owner_email_hash: Any = None
+    organization_name: Any = None
+    page: Any = None
     per_page: Any = None
-    providers: Any = None
-    resolution: Any = None
-    secret_type: Any = None
-    sort: Any = None
-    state: Any = None
-    validity: Any = None
+    request_status: Any = None
+    requester: Any = None
+    reviewer: Any = None
+    time_period: Any = None
 
 @dataclasses.dataclass
 class ScanningAttrs:
-    after: Any = None
-    assignee: Any = None
-    before: Any = None
-    direction: Any = None
     enterprise: Any = None
-    exclude_providers: Any = None
-    exclude_secret_types: Any = None
-    hide_secret: Any = None
-    included_metadata: Any = None
-    is_bypassed: Any = None
-    is_multi_repo: Any = None
-    is_publicly_leaked: Any = None
-    owner_email_hash: Any = None
+    organization_name: Any = None
+    page: Any = None
     per_page: Any = None
-    providers: Any = None
-    resolution: Any = None
-    secret_type: Any = None
-    sort: Any = None
-    state: Any = None
-    validity: Any = None
+    request_status: Any = None
+    requester: Any = None
+    reviewer: Any = None
+    time_period: Any = None
 
 Scanning = ubx.DataSourceBinding(
     wire_type="github_secret_scanning",
     fields={
-        "after": ubx.FieldSpec(wire_name="after"),
-        "assignee": ubx.FieldSpec(wire_name="assignee"),
-        "before": ubx.FieldSpec(wire_name="before"),
-        "direction": ubx.FieldSpec(wire_name="direction"),
         "enterprise": ubx.FieldSpec(wire_name="enterprise"),
-        "exclude_providers": ubx.FieldSpec(wire_name="exclude_providers"),
-        "exclude_secret_types": ubx.FieldSpec(wire_name="exclude_secret_types"),
-        "hide_secret": ubx.FieldSpec(wire_name="hide_secret"),
-        "included_metadata": ubx.FieldSpec(wire_name="included_metadata"),
-        "is_bypassed": ubx.FieldSpec(wire_name="is_bypassed"),
-        "is_multi_repo": ubx.FieldSpec(wire_name="is_multi_repo"),
-        "is_publicly_leaked": ubx.FieldSpec(wire_name="is_publicly_leaked"),
-        "owner_email_hash": ubx.FieldSpec(wire_name="owner_email_hash"),
+        "organization_name": ubx.FieldSpec(wire_name="organization_name"),
+        "page": ubx.FieldSpec(wire_name="page"),
         "per_page": ubx.FieldSpec(wire_name="per_page"),
-        "providers": ubx.FieldSpec(wire_name="providers"),
-        "resolution": ubx.FieldSpec(wire_name="resolution"),
-        "secret_type": ubx.FieldSpec(wire_name="secret_type"),
-        "sort": ubx.FieldSpec(wire_name="sort"),
-        "state": ubx.FieldSpec(wire_name="state"),
-        "validity": ubx.FieldSpec(wire_name="validity"),
+        "request_status": ubx.FieldSpec(wire_name="request_status"),
+        "requester": ubx.FieldSpec(wire_name="requester"),
+        "reviewer": ubx.FieldSpec(wire_name="reviewer"),
+        "time_period": ubx.FieldSpec(wire_name="time_period"),
     },
 )

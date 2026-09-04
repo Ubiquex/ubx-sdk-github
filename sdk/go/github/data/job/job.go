@@ -5,17 +5,17 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Job_Steps struct {
 	CompletedAt any
-	Conclusion any
-	Name any
-	Number any
-	StartedAt any
-	Status any
+	Conclusion  any
+	Name        any
+	Number      any
+	StartedAt   any
+	Status      any
 }
 
 type JobConfig struct {
 	JobId any
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type JobAttrs struct {
@@ -32,19 +32,19 @@ type JobAttrs struct {
 	HeadSha any
 	HtmlUrl any
 	// The id of the job.
-	Id any
+	Id    any
 	JobId any
 	// Labels for the workflow job. Specified by the "runs_on" attribute in the action's workflow file.
 	Labels any
 	// The name of the job.
-	Name any
+	Name   any
 	NodeId any
-	Owner any
-	Repo any
+	Owner  any
+	Repo   any
 	// Attempt number of the associated workflow run, 1 for first attempt and higher if the workflow was re-run.
 	RunAttempt any
 	// The id of the associated workflow run.
-	RunId any
+	RunId  any
 	RunUrl any
 	// The ID of the runner group to which this job has been assigned. (If a runner hasn't yet been assigned, this will be null.)
 	RunnerGroupId any
@@ -60,7 +60,7 @@ type JobAttrs struct {
 	Status any
 	// Steps in this job.
 	Steps any
-	Url any
+	Url   any
 	// The name of the workflow.
 	WorkflowName any
 }
@@ -70,6 +70,6 @@ var Job = ubx.DataSourceBinding{
 	Fields: ubx.FieldMap{
 		"JobId": ubx.FieldSpec{WireName: "job_id"},
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

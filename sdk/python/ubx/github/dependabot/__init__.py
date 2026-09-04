@@ -5,3 +5,4 @@
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
 from .alert_dismissal_request import AlertDismissalRequest, AlertDismissalRequestConfig
+from .secret import Secret, SecretConfig

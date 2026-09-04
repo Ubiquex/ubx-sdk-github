@@ -17,9 +17,7 @@ class Summary_AlertStats:
 
 @dataclasses.dataclass
 class Summary_CodeScanningAlerts:
-    # The list of alert numbers for the code scanning alerts in this campaign summary. (AI-inferred)
     alert_numbers: Any = None
-    # The numeric identifier of the repository in which the code scanning alert was found. (AI-inferred)
     repository_id: Any = None
 
 _Summary_CodeScanningAlertsFields = {

@@ -4,30 +4,26 @@ package job
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Job_Deployments struct {
-	// A human-readable name for a deployment associated with the job. Must be between 1 and 256 characters in length. (AI-inferred)
-	DeploymentName any
-	// The SHA256 digest of the container image, formatted as `sha256:` followed by 64 lowercase hexadecimal characters (e.g., `sha256:abcdef...`). This uniquely identifies the image content. (AI-inferred)
-	Digest any
-	// The name of the GitHub repository, up to 100 characters, containing only alphanumeric characters, dots, hyphens, and underscores. (AI-inferred)
+	DeploymentName   any
+	Digest           any
 	GithubRepository any
-	Name any
-	RuntimeRisks any
-	// The status of the deployment, which can be `deployed` or `decommissioned`. (AI-inferred)
-	Status any
-	Tags any
-	Version any
+	Name             any
+	RuntimeRisks     any
+	Status           any
+	Tags             any
+	Version          any
 }
 
 var Job_DeploymentsFields = ubx.FieldMap{
-		"DeploymentName": ubx.FieldSpec{WireName: "deployment_name"},
-		"Digest": ubx.FieldSpec{WireName: "digest"},
-		"GithubRepository": ubx.FieldSpec{WireName: "github_repository"},
-		"Name": ubx.FieldSpec{WireName: "name"},
-		"RuntimeRisks": ubx.FieldSpec{WireName: "runtime_risks"},
-		"Status": ubx.FieldSpec{WireName: "status"},
-		"Tags": ubx.FieldSpec{WireName: "tags"},
-		"Version": ubx.FieldSpec{WireName: "version"},
-	}
+	"DeploymentName":   ubx.FieldSpec{WireName: "deployment_name"},
+	"Digest":           ubx.FieldSpec{WireName: "digest"},
+	"GithubRepository": ubx.FieldSpec{WireName: "github_repository"},
+	"Name":             ubx.FieldSpec{WireName: "name"},
+	"RuntimeRisks":     ubx.FieldSpec{WireName: "runtime_risks"},
+	"Status":           ubx.FieldSpec{WireName: "status"},
+	"Tags":             ubx.FieldSpec{WireName: "tags"},
+	"Version":          ubx.FieldSpec{WireName: "version"},
+}
 
 type JobConfig struct {
 	// The list of deployments to record.
@@ -70,12 +66,12 @@ var Job = ubx.ResourceBinding{
 	Fields: ubx.FieldMap{
 		"Deployments": ubx.FieldSpec{
 			WireName: "deployments",
-			Kind: "list",
-			Fields: Job_DeploymentsFields,
+			Kind:     "list",
+			Fields:   Job_DeploymentsFields,
 		},
-		"LogicalEnvironment": ubx.FieldSpec{WireName: "logical_environment"},
+		"LogicalEnvironment":  ubx.FieldSpec{WireName: "logical_environment"},
 		"PhysicalEnvironment": ubx.FieldSpec{WireName: "physical_environment"},
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"Cluster": ubx.FieldSpec{WireName: "cluster"},
+		"Org":                 ubx.FieldSpec{WireName: "org"},
+		"Cluster":             ubx.FieldSpec{WireName: "cluster"},
 	},
 }

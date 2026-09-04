@@ -4,5 +4,5 @@
 # re-run `ubx sdk gen` to regenerate after a provider version bump.
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
+from .branch import Branch, BranchConfig
 from .protection import Protection, ProtectionConfig
-from .restriction_policy import RestrictionPolicy, RestrictionPolicyConfig

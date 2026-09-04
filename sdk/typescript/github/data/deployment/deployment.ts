@@ -2,28 +2,37 @@
 import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface DeploymentConfig {
-  deploymentId: number | Computed<number>;
+  environment?: string | Computed<string>;
   owner: string | Computed<string>;
   page?: number | Computed<number>;
   perPage?: number | Computed<number>;
+  ref?: string | Computed<string>;
   repo: string | Computed<string>;
+  sha?: string | Computed<string>;
+  task?: string | Computed<string>;
 }
 
 export interface DeploymentAttrs {
-  deploymentId: number;
+  environment: string;
   owner: string;
   page: number;
   perPage: number;
+  ref: string;
   repo: string;
+  sha: string;
+  task: string;
 }
 
 export const Deployment: DataSourceBinding<DeploymentConfig, DeploymentAttrs> = {
   wireType: "github_deployment",
   fields: {
-    deploymentId: "deployment_id",
+    environment: "environment",
     owner: "owner",
     page: "page",
     perPage: "per_page",
+    ref: "ref",
     repo: "repo",
+    sha: "sha",
+    task: "task",
   },
 };

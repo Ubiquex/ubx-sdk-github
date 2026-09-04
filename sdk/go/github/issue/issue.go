@@ -4,163 +4,100 @@ package issue
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Issue_ClosedBy struct {
-	// The URL of the avatar image for the user who closed the issue. (AI-inferred)
-	AvatarUrl any
-	// The email address of the user who closed the issue. This is only present if the user has a public email associated with their GitHub account; otherwise it is null. (AI-inferred)
-	Email any
-	// The URL to fetch the events associated with the user who closed the issue. This is a standard GitHub API user attribute, providing a link to the user's public events. (AI-inferred)
-	EventsUrl any
-	// The URL to the followers list of the user who closed the issue. (AI-inferred)
-	FollowersUrl any
-	// The URL to retrieve the list of users that this user follows. This is a template URL that can include the placeholder {/other_user} to check if a specific user is followed. (AI-inferred)
-	FollowingUrl any
-	// The URL to access the gists of the user who closed the issue, via the GitHub API. (AI-inferred)
-	GistsUrl any
-	// The unique Gravatar ID for the user, used to generate avatar image URLs. (AI-inferred)
-	GravatarId any
-	// The HTML URL of the GitHub profile for the user who closed the issue. (AI-inferred)
-	HtmlUrl any
-	// The unique numeric identifier of the user who closed the issue. (AI-inferred)
-	Id any
-	// The username of the user who closed the issue. (AI-inferred)
-	Login any
-	// The display name of the user who closed the issue, as provided by the user's GitHub profile. This field is optional and may be absent if the user has not set a name. (AI-inferred)
-	Name any
-	// The GraphQL node ID of the user who closed the issue. (AI-inferred)
-	NodeId any
-	// The URL to the GitHub API endpoint listing the organizations that this user belongs to. (AI-inferred)
-	OrganizationsUrl any
-	// The URL to the user's received events feed, for the user who closed the issue. (AI-inferred)
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	// URL to the GitHub API endpoint listing the repositories owned by the user who closed the issue. (AI-inferred)
-	ReposUrl any
-	// Indicates whether the user is a GitHub site administrator. (AI-inferred)
-	SiteAdmin any
-	StarredAt any
-	// The URL template for the user's starred repositories, with placeholders for {owner} and {repo} parameters. (AI-inferred)
-	StarredUrl any
-	// The URL to view the subscriptions of the user who closed the issue. This field is part of the user object returned in the `closed_by` field of an issue. (AI-inferred)
-	SubscriptionsUrl any
-	// The type of GitHub account that closed the issue, such as 'User' or 'Bot'. (AI-inferred)
-	Type any
-	// The REST API URL for the user who closed the issue. (AI-inferred)
-	Url any
-	// Indicates the user's profile visibility type, either 'public' or 'private'. In the context of the user who closed the issue. (AI-inferred)
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type Issue_IssueDependenciesSummary struct {
-	// The number of issues that are blocking this issue, i.e., the count of dependencies that must be resolved before this issue can be completed. (AI-inferred)
-	BlockedBy any
-	// The number of issues whose implementation is blocked by this issue, based on declared issue dependencies. (AI-inferred)
-	Blocking any
-	// The total number of issues that this issue is blocked by. (AI-inferred)
+	BlockedBy      any
+	Blocking       any
 	TotalBlockedBy any
-	TotalBlocking any
+	TotalBlocking  any
 }
 
 type Issue_IssueFieldValues struct {
-	// The unique identifier of the project field that this value is associated with. (AI-inferred)
 	FieldId any
-	// The value assigned to the custom issue field. The type is dynamic and depends on the custom field's definition (e.g., text, number, date, or selection). (AI-inferred)
-	Value any
+	Value   any
 }
 
 type Issue_PerformedViaGithubApp_Owner struct {
-	// The URL of the avatar image for the owner (user or organization) of the GitHub App that performed the action. (AI-inferred)
-	AvatarUrl any
-	// The timestamp (as a string in ISO 8601 format) of when the GitHub App owner account was created. (AI-inferred)
-	CreatedAt any
-	// The description of the organization that owns the GitHub App. This field is only populated when the owner is an organization. (AI-inferred)
-	Description any
-	Email any
-	// The URL to the events for this GitHub user or organization. (AI-inferred)
-	EventsUrl any
-	// The URL to the list of followers of the owner (user or organization) of the GitHub App that performed the issue. (AI-inferred)
-	FollowersUrl any
-	// The URL template for the list of users this owner is following, with a placeholder for the username (e.g., https://api.github.com/users/{username}/following). (AI-inferred)
-	FollowingUrl any
-	// The URL to fetch the owner's public gists, following the standard GitHub API URL format for user gists. (AI-inferred)
-	GistsUrl any
-	// The Gravatar ID of the GitHub App owner, used to construct the owner's avatar URL from Gravatar. (AI-inferred)
-	GravatarId any
-	// The URL to the GitHub profile of the app owner. (AI-inferred)
-	HtmlUrl any
-	// The unique numeric identifier of the user or organization that owns the GitHub App. (AI-inferred)
-	Id any
-	// The GitHub username of the owner of the GitHub App that performed the action. (AI-inferred)
-	Login any
-	// The display name of the user or organization that owns the GitHub App. (AI-inferred)
-	Name any
-	// The GraphQL node ID of the user or organization that owns the GitHub App. (AI-inferred)
-	NodeId any
-	// The URL to retrieve the list of organizations associated with this GitHub App owner, as defined by the GitHub API. (AI-inferred)
-	OrganizationsUrl any
-	// The URL to the user's received events endpoint on GitHub, containing the user's incoming events. (AI-inferred)
+	AvatarUrl         any
+	CreatedAt         any
+	Description       any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	// The URL to the list of repositories belonging to this owner (user or organization). (AI-inferred)
-	ReposUrl any
-	// Indicates whether the owner is a site administrator for the GitHub instance (e.g., on GitHub Enterprise). (AI-inferred)
-	SiteAdmin any
-	// The slug of the owner of the GitHub App that performed the action on the issue. For users and organizations, this is the lowercased, URL-friendly identifier (e.g., 'octocat'). (AI-inferred)
-	Slug any
-	StarredAt any
-	// The URL to the list of repositories starred by this owner (user or organization) of the GitHub App. (AI-inferred)
-	StarredUrl any
-	// The API endpoint URL for the owner's subscriptions, indicating resources the owner follows or is subscribed to on GitHub. (AI-inferred)
-	SubscriptionsUrl any
-	// The type of GitHub account that owns the app, either `User` or `Organization`. (AI-inferred)
-	Type any
-	UpdatedAt any
-	// The API URL for the GitHub account (user or organization) that owns the GitHub App. (AI-inferred)
-	Url any
-	// The user's profile view type, either 'public' or 'private'. (AI-inferred)
-	UserViewType any
-	// The website URL of the user or organization that owns the GitHub App which performed the action on the issue. (AI-inferred)
-	WebsiteUrl any
+	ReposUrl          any
+	SiteAdmin         any
+	Slug              any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	UpdatedAt         any
+	Url               any
+	UserViewType      any
+	WebsiteUrl        any
 }
 
 type Issue_PerformedViaGithubApp_Permissions struct {
-	// The permission level for the Checks API. Set to 'read' or 'write' to grant the GitHub App access. (AI-inferred)
-	Checks any
-	// The permission level granted to the GitHub App for accessing repository contents. (AI-inferred)
-	Contents any
-	// The permission level for deployments granted to the GitHub App. Allowed values are 'read', 'write', or 'none'. (AI-inferred)
+	Checks      any
+	Contents    any
 	Deployments any
-	// The permission level for issues granted to the GitHub App that performed the issue. (AI-inferred)
-	Issues any
-	// The permission level for metadata access granted to the GitHub App, typically 'read' or 'write'. (AI-inferred)
-	Metadata any
+	Issues      any
+	Metadata    any
 }
 
 type Issue_PerformedViaGithubApp struct {
-	// The client ID of the GitHub App that performed the action. (AI-inferred)
-	ClientId any
-	// The ISO 8601 timestamp of when the GitHub App was created. (AI-inferred)
-	CreatedAt any
-	// The description of the GitHub App that performed the action. (AI-inferred)
+	ClientId    any
+	CreatedAt   any
 	Description any
 	// The list of events for the GitHub app. Note that the `installation_target`, `security_advisory`, and `meta` events are not included because they are global events and not specific to an installation.
-	Events any
-	// The URL of the GitHub App's homepage or external reference site. (AI-inferred)
+	Events      any
 	ExternalUrl any
-	// The URL to the GitHub App's public page on GitHub. (AI-inferred)
-	HtmlUrl any
+	HtmlUrl     any
 	// Unique identifier of the GitHub app
 	Id any
 	// The number of installations associated with the GitHub app. Only returned when the integration is requesting details about itself.
 	InstallationsCount any
 	// The name of the GitHub app
-	Name any
-	// The GraphQL global node ID for the issue, usable as an identifier in GraphQL queries. (AI-inferred)
+	Name   any
 	NodeId any
-	// The user or organization that owns the GitHub app. (AI-inferred)
-	Owner any
+	Owner  any
 	// The set of permissions for the GitHub app
 	Permissions any
 	// The slug name of the GitHub app
-	Slug any
-	// The timestamp of when the GitHub App was last updated, in ISO 8601 format. (AI-inferred)
+	Slug      any
 	UpdatedAt any
 }
 
@@ -170,58 +107,42 @@ type Issue_PinnedComment_Minimized struct {
 }
 
 type Issue_PinnedComment_Pin struct {
-	// The timestamp indicating when the comment was pinned. (AI-inferred)
 	PinnedAt any
 	// A GitHub user.
 	PinnedBy any
 }
 
 type Issue_PinnedComment_Reactions struct {
-	// The number of confused reactions (the 😕 emoji) on the pinned comment. (AI-inferred)
-	Confused any
-	// The number of eyes (👀) reactions on this pinned comment. (AI-inferred)
-	Eyes any
-	// The number of heart reactions on the pinned comment. (AI-inferred)
-	Heart any
-	// The number of hooray reactions on this comment. (AI-inferred)
-	Hooray any
-	// The number of 'laugh' reactions (the 😆 emoji) on the pinned comment. (AI-inferred)
-	Laugh any
-	// The number of rocket (🚀) reactions on the pinned comment. (AI-inferred)
-	Rocket any
-	// The total number of reactions (of all types) on the pinned comment. (AI-inferred)
+	Confused   any
+	Eyes       any
+	Heart      any
+	Hooray     any
+	Laugh      any
+	Rocket     any
 	TotalCount any
-	// The API URL where this reaction can be accessed. (AI-inferred)
-	Url any
+	Url        any
 }
 
 type Issue_PinnedComment struct {
 	// How the author is associated with the repository.
 	AuthorAssociation any
 	// Contents of the issue comment
-	Body any
-	// The HTML-rendered version of the comment's body content. This field is only present if the comment body has been processed by GitHub's markdown renderer. (AI-inferred)
-	BodyHtml any
-	// The plain-text body of the pinned comment, with any Markdown or HTML formatting removed. (AI-inferred)
-	BodyText any
-	// The timestamp indicating when the pinned comment was created. (AI-inferred)
+	Body      any
+	BodyHtml  any
+	BodyText  any
 	CreatedAt any
-	// The URL to view the pinned comment on the GitHub website. (AI-inferred)
-	HtmlUrl any
+	HtmlUrl   any
 	// Unique identifier of the issue comment
-	Id any
-	// The URL of the issue to which this comment is pinned. (AI-inferred)
+	Id       any
 	IssueUrl any
 	// Details about why an issue comment was minimized.
 	Minimized any
-	NodeId any
+	NodeId    any
 	// GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
 	PerformedViaGithubApp any
 	// Context around who pinned an issue comment and when it was pinned.
-	Pin any
-	// The object summarizing reactions to the pinned comment, including total_count and per-type counts for reaction types such as +1, -1, laugh, confused, heart, hooray, rocket, and eyes. (AI-inferred)
+	Pin       any
 	Reactions any
-	// The timestamp of when the pinned comment was last updated (in RFC3339 format). (AI-inferred)
 	UpdatedAt any
 	// URL for the issue comment
 	Url any
@@ -230,51 +151,33 @@ type Issue_PinnedComment struct {
 }
 
 type Issue_PullRequest struct {
-	// The URL to the diff for this pull request. (AI-inferred)
-	DiffUrl any
-	// The URL to view the pull request on GitHub. (AI-inferred)
-	HtmlUrl any
-	// The timestamp of when the pull request was merged, if applicable. (AI-inferred)
+	DiffUrl  any
+	HtmlUrl  any
 	MergedAt any
-	// The URL to the patch file for this pull request. (AI-inferred)
 	PatchUrl any
-	// The URL of the pull request. (AI-inferred)
-	Url any
+	Url      any
 }
 
 type Issue_Repository_CodeSearchIndexStatus struct {
-	// The SHA of the commit that the lexical code search index is based on. (AI-inferred)
 	LexicalCommitSha any
-	// Indicates whether the repository's lexical search index is currently functional, allowing lexical code search to work. (AI-inferred)
-	LexicalSearchOk any
+	LexicalSearchOk  any
 }
 
 type Issue_Repository_License struct {
-	// The URL to the HTML page for this license on GitHub. (AI-inferred)
 	HtmlUrl any
-	// The SPDX license key for the repository's license (e.g., MIT, Apache-2.0, GPL-3.0). (AI-inferred)
-	Key any
-	// The full name of the license, such as 'MIT License' or 'Apache License 2.0'. (AI-inferred)
-	Name any
-	// The unique identifier for this license in GitHub's GraphQL API. (AI-inferred)
-	NodeId any
-	// The SPDX license identifier for the repository's license, such as 'MIT' or 'Apache-2.0'. (AI-inferred)
-	SpdxId any
-	// The API URL for the license information on GitHub. (AI-inferred)
-	Url any
+	Key     any
+	Name    any
+	NodeId  any
+	SpdxId  any
+	Url     any
 }
 
 type Issue_Repository_Permissions struct {
-	// Whether the current user has admin permissions on the repository. (AI-inferred)
-	Admin any
-	// Whether the user has 'maintain' permission for the repository. (AI-inferred)
+	Admin    any
 	Maintain any
-	// Whether the authenticated user has permission to pull (clone/fetch) the repository's contents. (AI-inferred)
-	Pull any
-	// Indicates whether the authenticated user has push (write) access to the repository. (AI-inferred)
-	Push any
-	// Indicates whether the user has triage permission on the repository. (AI-inferred)
-	Triage any
+	Pull     any
+	Push     any
+	Triage   any
 }
 
 type Issue_Repository struct {
@@ -292,203 +195,135 @@ type Issue_Repository struct {
 	AllowUpdateBranch any
 	// Whether anonymous git access is enabled for this repository
 	AnonymousAccessEnabled any
-	// The URL template for downloading the repository's source code archive, with placeholders for archive format and reference (e.g., zipball and ref). (AI-inferred)
-	ArchiveUrl any
+	ArchiveUrl             any
 	// Whether the repository is archived.
-	Archived any
-	// The API URL template for managing repository assignees, with an optional placeholder for a specific assignee. (AI-inferred)
+	Archived     any
 	AssigneesUrl any
-	// The URL template for accessing git blobs in the repository, with a placeholder for the blob SHA (e.g., `http://api.github.com/repos/{owner}/{repo}/git/blobs{/sha}`). (AI-inferred)
-	BlobsUrl any
-	// The URL to access the list of branches in this repository. (AI-inferred)
-	BranchesUrl any
-	// The URL used to clone the repository, typically in HTTPS or SSH format. (AI-inferred)
-	CloneUrl any
+	BlobsUrl     any
+	BranchesUrl  any
+	CloneUrl     any
 	// The status of the code search index for this repository
 	CodeSearchIndexStatus any
-	// The URL template to access the list of collaborators for the repository. In the GitHub API, this typically takes the form: https://api.github.com/repos/{owner}/{repo}/collaborators{/collaborator}. (AI-inferred)
-	CollaboratorsUrl any
-	// The API URL to retrieve the list of comments on this issue. (AI-inferred)
-	CommentsUrl any
-	// The URL template for the commits in the repository associated with this issue, often including a placeholder for a commit SHA. (AI-inferred)
-	CommitsUrl any
-	// The URL template for comparing commits in the repository, typically in the form of `https://api.github.com/repos/{owner}/{repo}/compare/{base}...{head}`. (AI-inferred)
-	CompareUrl any
-	// The API URL template for accessing the contents of the repository, as defined by GitHub's REST API. (AI-inferred)
-	ContentsUrl any
-	// The URL to access the list of contributors for this repository via the GitHub API. (AI-inferred)
-	ContributorsUrl any
-	// The creation timestamp of the repository. (AI-inferred)
-	CreatedAt any
+	CollaboratorsUrl      any
+	CommentsUrl           any
+	CommitsUrl            any
+	CompareUrl            any
+	ContentsUrl           any
+	ContributorsUrl       any
+	CreatedAt             any
 	// The default branch of the repository.
 	DefaultBranch any
 	// Whether to delete head branches when pull requests are merged
 	DeleteBranchOnMerge any
-	// The API endpoint URL for accessing the list of deployments for this repository. (AI-inferred)
-	DeploymentsUrl any
-	// The description of the GitHub repository associated with the issue. (AI-inferred)
-	Description any
+	DeploymentsUrl      any
+	Description         any
 	// Returns whether or not this repository disabled.
-	Disabled any
-	// The URL to the repository's downloads endpoint, which provides access to the downloads associated with the repository. (AI-inferred)
-	DownloadsUrl any
-	// The URL to retrieve events for the repository. (AI-inferred)
-	EventsUrl any
-	// Indicates whether the repository is a fork of another repository. (AI-inferred)
-	Fork any
-	// The number of times this repository has been forked. (AI-inferred)
-	Forks any
-	// The total number of times the repository has been forked. (AI-inferred)
-	ForksCount any
-	// The URL to list the forks of the repository. (AI-inferred)
-	ForksUrl any
-	// The full name of the repository, including the owner and repository name (e.g., 'octocat/hello-world'). (AI-inferred)
-	FullName any
-	// URL template for the git commits of the repository, with a placeholder for the commit SHA, e.g., `https://api.github.com/repos/{owner}/{repo}/git/commits{/sha}`. (AI-inferred)
+	Disabled      any
+	DownloadsUrl  any
+	EventsUrl     any
+	Fork          any
+	Forks         any
+	ForksCount    any
+	ForksUrl      any
+	FullName      any
 	GitCommitsUrl any
-	// The URL to access the git references (e.g., branches and tags) for the repository. This URL can be used to list or retrieve refs via the GitHub API. (AI-inferred)
-	GitRefsUrl any
-	// The API endpoint URL for accessing the repository's git tags. (AI-inferred)
-	GitTagsUrl any
-	// The URL to the Git repository associated with the GitHub repository, typically in the format git://github.com/owner/repository.git, used for cloning and remote operations. (AI-inferred)
-	GitUrl any
+	GitRefsUrl    any
+	GitTagsUrl    any
+	GitUrl        any
 	// Whether discussions are enabled.
 	HasDiscussions any
 	// Whether downloads are enabled.
 	HasDownloads any
 	// Whether issues are enabled.
 	HasIssues any
-	// Whether the repository has GitHub Pages enabled. (AI-inferred)
-	HasPages any
+	HasPages  any
 	// Whether projects are enabled.
 	HasProjects any
 	// Whether pull requests are enabled.
 	HasPullRequests any
 	// Whether the wiki is enabled.
-	HasWiki any
-	// The URL of the repository's homepage. (AI-inferred)
+	HasWiki  any
 	Homepage any
-	// The URL to the repository's webhooks API endpoint, used to manage hooks for the repository. (AI-inferred)
 	HooksUrl any
-	// The URL of the repository on GitHub. (AI-inferred)
-	HtmlUrl any
+	HtmlUrl  any
 	// Unique identifier of the repository
 	Id any
 	// Whether this repository acts as a template that can be used to generate new repositories.
-	IsTemplate any
-	// The URL to the issue comments endpoint for this repository. (AI-inferred)
+	IsTemplate      any
 	IssueCommentUrl any
-	// The API URL template for accessing issue events in this repository, typically containing placeholders for event numbers. (AI-inferred)
-	IssueEventsUrl any
-	// The API URL to the repository's issues endpoint, which may include a placeholder for a specific issue number. (AI-inferred)
-	IssuesUrl any
-	// The URL endpoint for the repository's deploy keys, with an optional template placeholder for a specific key ID. (AI-inferred)
-	KeysUrl any
-	// The API endpoint URL for accessing the labels of the repository, possibly containing a templated placeholder (e.g., '/labels{/name}') for a specific label name. (AI-inferred)
-	LabelsUrl any
-	// The primary programming language of the repository. (AI-inferred)
-	Language any
-	// The URL to retrieve the list of programming languages used in the repository. (AI-inferred)
-	LanguagesUrl any
+	IssueEventsUrl  any
+	IssuesUrl       any
+	KeysUrl         any
+	LabelsUrl       any
+	Language        any
+	LanguagesUrl    any
 	// License Simple
-	License any
-	// The name of the repository's master branch. (AI-inferred)
+	License      any
 	MasterBranch any
 	// The default value for a merge commit message. - `PR_TITLE` - default to the pull request's title. - `PR_BODY` - default to the pull request's body. - `BLANK` - default to a blank commit message.
 	MergeCommitMessage any
 	// The default value for a merge commit title. - `PR_TITLE` - default to the pull request's title. - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
 	MergeCommitTitle any
-	// The URL template for the merge endpoint, used to merge branches in this repository via the GitHub API. (AI-inferred)
-	MergesUrl any
-	// The URL template for accessing milestones in the repository, with a placeholder for the specific milestone number (e.g., `.../milestones{/number}`). (AI-inferred)
-	MilestonesUrl any
-	// The URL of the original repository if this repository is a mirror of another source. This is typically set for repositories that are mirrored from an external Git repository. (AI-inferred)
-	MirrorUrl any
+	MergesUrl        any
+	MilestonesUrl    any
+	MirrorUrl        any
 	// The name of the repository.
-	Name any
-	// The unique global node identifier (GraphQL ID) for the repository associated with the issue. (AI-inferred)
-	NodeId any
-	// The URL to access notifications for this repository. (AI-inferred)
+	Name             any
+	NodeId           any
 	NotificationsUrl any
-	// The number of open issues currently in the repository. (AI-inferred)
-	OpenIssues any
-	// The number of open issues in the repository. (AI-inferred)
-	OpenIssuesCount any
+	OpenIssues       any
+	OpenIssuesCount  any
 	// A GitHub user.
-	Owner any
-	// An object indicating the permission levels the authenticated user has on this repository, typically including flags such as admin, push, and pull. (AI-inferred)
+	Owner       any
 	Permissions any
 	// Whether the repository is private or public.
 	Private any
 	// The policy controlling who can create pull requests: all or collaborators_only.
 	PullRequestCreationPolicy any
-	// The API endpoint URL for pull requests in this repository, with a template placeholder for the pull request number. (AI-inferred)
-	PullsUrl any
-	// The timestamp of the last push to the repository, in ISO 8601 format (e.g., '2023-01-01T12:00:00Z'). (AI-inferred)
-	PushedAt any
-	// The URL to the releases page of the repository. (AI-inferred)
-	ReleasesUrl any
+	PullsUrl                  any
+	PushedAt                  any
+	ReleasesUrl               any
 	// The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
 	Size any
 	// The default value for a squash merge commit message: - `PR_BODY` - default to the pull request's body. - `COMMIT_MESSAGES` - default to the branch's commit messages. - `BLANK` - default to a blank commit message.
 	SquashMergeCommitMessage any
 	// The default value for a squash merge commit title: - `PR_TITLE` - default to the pull request's title. - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
 	SquashMergeCommitTitle any
-	// The SSH URL for accessing the repository over SSH, used for Git operations. (AI-inferred)
-	SshUrl any
-	// The total number of users who have starred the repository. (AI-inferred)
-	StargazersCount any
-	// The URL to the GitHub API endpoint that lists the users who have starred (stargazers) this repository. (AI-inferred)
-	StargazersUrl any
-	// The ISO 8601 timestamp of when the repository was starred by the authenticated user. (AI-inferred)
-	StarredAt any
-	// URL template to access commit statuses for the repository; replace {sha} with a commit SHA to list statuses for that commit. (AI-inferred)
-	StatusesUrl any
-	// The URL to retrieve the list of users subscribed to the repository. (AI-inferred)
-	SubscribersUrl any
-	// The API endpoint URL to manage the authenticated user's subscription to this repository's notifications. (AI-inferred)
-	SubscriptionUrl any
-	// The URL to access this repository via Subversion (SVN). (AI-inferred)
-	SvnUrl any
-	// The API URL to list the tags of the repository. (AI-inferred)
-	TagsUrl any
-	// The URL to the teams endpoint for this repository. (AI-inferred)
-	TeamsUrl any
-	// A temporary clone token that allows cloning the repository without authentication for a limited time. It is typically provided only for private repositories and expires after a short period. (AI-inferred)
-	TempCloneToken any
-	// List of topics (tags) associated with the repository that contains the issue. (AI-inferred)
-	Topics any
-	// URL template for accessing the repository's git trees. Replace the `{sha}` placeholder with a commit SHA to retrieve a specific tree. (AI-inferred)
-	TreesUrl any
-	// The timestamp of the last update to the repository, in ISO 8601 format. (AI-inferred)
-	UpdatedAt any
-	// The URL of the repository. (AI-inferred)
-	Url any
+	SshUrl                 any
+	StargazersCount        any
+	StargazersUrl          any
+	StarredAt              any
+	StatusesUrl            any
+	SubscribersUrl         any
+	SubscriptionUrl        any
+	SvnUrl                 any
+	TagsUrl                any
+	TeamsUrl               any
+	TempCloneToken         any
+	Topics                 any
+	TreesUrl               any
+	UpdatedAt              any
+	Url                    any
 	// Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
 	UseSquashPrTitleAsDefault any
 	// The repository visibility: public, private, or internal.
-	Visibility any
-	// The number of users watching (subscribed to) the repository. (AI-inferred)
-	Watchers any
-	// The number of users watching the repository. (AI-inferred)
+	Visibility    any
+	Watchers      any
 	WatchersCount any
 	// Whether to require contributors to sign off on web-based commits
 	WebCommitSignoffRequired any
 }
 
 type Issue_SubIssuesSummary struct {
-	// The number of sub-issues that have been completed, as tracked in the sub-issues summary for this GitHub issue. (AI-inferred)
-	Completed any
-	// The overall completion percentage of the sub-issues in this summary, as a number between 0 and 100. (AI-inferred)
+	Completed        any
 	PercentCompleted any
-	// The total number of sub-issues associated with this issue, as reported in the sub-issues summary. (AI-inferred)
-	Total any
+	Total            any
 }
 
 var Issue_IssueFieldValuesFields = ubx.FieldMap{
-		"FieldId": ubx.FieldSpec{WireName: "field_id"},
-		"Value": ubx.FieldSpec{WireName: "value"},
-	}
+	"FieldId": ubx.FieldSpec{WireName: "field_id"},
+	"Value":   ubx.FieldSpec{WireName: "value"},
+}
 
 type IssueConfig struct {
 	// Login for the user that this issue should be assigned to. _NOTE: Only users with push access can set the assignee for new issues. The assignee is silently dropped otherwise. **This field is closing down.**_
@@ -500,8 +335,7 @@ type IssueConfig struct {
 	// An array of issue field values to set on this issue. Each field value must include the field ID and the value to set. Issue fields are only available for organization-owned repositories with the feature enabled. Field values are silently dropped otherwise.
 	IssueFieldValues any
 	// Labels to associate with this issue. _NOTE: Only users with push access can set labels for new issues. Labels are silently dropped otherwise._
-	Labels any
-	// The milestone associated with the issue, if any. This field is computed and read-only; it cannot be set from the client. (AI-inferred)
+	Labels    any
 	Milestone any
 	// The id of the parent issue to add this issue to as a sub-issue. _NOTE: Only users with triage access to both the parent issue's repository and this repository can set the parent issue._
 	ParentIssueId any
@@ -518,7 +352,6 @@ type IssueConfig struct {
 }
 
 type IssueAttrs struct {
-	// The reason the issue is locked, if applicable. Possible values are `off-topic`, `too heated`, `resolved`, and `spam`. (AI-inferred)
 	ActiveLockReason any
 	// Login for the user that this issue should be assigned to. _NOTE: Only users with push access can set the assignee for new issues. The assignee is silently dropped otherwise. **This field is closing down.**_
 	Assignee any
@@ -527,41 +360,28 @@ type IssueAttrs struct {
 	// How the author is associated with the repository.
 	AuthorAssociation any
 	// The contents of the issue.
-	Body any
-	// The HTML-rendered version of the issue body. (AI-inferred)
+	Body     any
 	BodyHtml any
-	// The plain-text version of the issue body, with Markdown removed. (AI-inferred)
 	BodyText any
-	// The timestamp when the issue was closed, in RFC3339 format (e.g., 2023-01-01T00:00:00Z). (AI-inferred)
 	ClosedAt any
 	// A GitHub user.
-	ClosedBy any
-	// The number of comments on the GitHub issue. This value is computed and provided by GitHub. (AI-inferred)
-	Comments any
-	// The API endpoint URL that returns the comments for this issue. (AI-inferred)
-	CommentsUrl any
-	// The creation timestamp of the GitHub issue, set by the provider and returned as a string in ISO 8601 format (e.g., 2023-01-01T12:00:00Z). (AI-inferred)
-	CreatedAt any
-	// A boolean indicating whether the issue is a draft. Draft issues are hidden from non-collaborators and are not ready for review. (AI-inferred)
-	Draft any
-	// The URL to retrieve the events associated with this issue, such as labeling, closing, or reopening. (AI-inferred)
-	EventsUrl any
-	// The URL to view the issue on GitHub's website. (AI-inferred)
-	HtmlUrl any
-	Id any
+	ClosedBy                 any
+	Comments                 any
+	CommentsUrl              any
+	CreatedAt                any
+	Draft                    any
+	EventsUrl                any
+	HtmlUrl                  any
+	Id                       any
 	IssueDependenciesSummary any
 	// An array of issue field values to set on this issue. Each field value must include the field ID and the value to set. Issue fields are only available for organization-owned repositories with the feature enabled. Field values are silently dropped otherwise.
 	IssueFieldValues any
 	// Labels to associate with this issue. _NOTE: Only users with push access can set labels for new issues. Labels are silently dropped otherwise._
-	Labels any
-	// The API endpoint URL for querying the labels of this issue. (AI-inferred)
+	Labels    any
 	LabelsUrl any
-	// Indicates whether the issue is locked for comments, meaning only users with write access can comment. (AI-inferred)
-	Locked any
-	// The milestone associated with the issue, if any. This field is computed and read-only; it cannot be set from the client. (AI-inferred)
+	Locked    any
 	Milestone any
-	// The Node ID of the issue, used by GitHub's GraphQL API. (AI-inferred)
-	NodeId any
+	NodeId    any
 	// Number uniquely identifying the issue within its repository
 	Number any
 	// The id of the parent issue to add this issue to as a sub-issue. _NOTE: Only users with triage access to both the parent issue's repository and this repository can set the parent issue._
@@ -572,26 +392,21 @@ type IssueAttrs struct {
 	PerformedViaGithubApp any
 	// Comments provide a way for people to collaborate on an issue.
 	PinnedComment any
-	// The pull_request object is present when the issue is also a pull request, and contains metadata about the pull request such as its URL and merge status. (AI-inferred)
-	PullRequest any
-	// The reactions summary for the issue, containing counts of user reactions by type (e.g., thumbs up, thumbs down, laugh, hooray, confused, heart, rocket, eyes). (AI-inferred)
-	Reactions any
+	PullRequest   any
+	Reactions     any
 	// A repository on GitHub.
-	Repository any
-	// The URL of the repository in which the issue is located. (AI-inferred)
+	Repository    any
 	RepositoryUrl any
 	// State of the issue; either 'open' or 'closed'
 	State any
 	// The reason for the current state
-	StateReason any
+	StateReason      any
 	SubIssuesSummary any
-	// The URL to retrieve the timeline of events for this issue via the GitHub API. (AI-inferred)
-	TimelineUrl any
+	TimelineUrl      any
 	// The title of the issue.
 	Title any
 	// The name of the issue type to associate with this issue. _NOTE: Only users with push access can set the type for new issues. The type is silently dropped otherwise._
-	Type any
-	// The timestamp when the issue was last updated, in ISO 8601 format (e.g., 2023-01-15T10:30:00Z). This field is computed and read-only. (AI-inferred)
+	Type      any
 	UpdatedAt any
 	// URL for the issue
 	Url any
@@ -608,21 +423,21 @@ type IssueAttrs struct {
 var Issue = ubx.ResourceBinding{
 	WireType: "github_issue",
 	Fields: ubx.FieldMap{
-		"Assignee": ubx.FieldSpec{WireName: "assignee"},
+		"Assignee":  ubx.FieldSpec{WireName: "assignee"},
 		"Assignees": ubx.FieldSpec{WireName: "assignees"},
-		"Body": ubx.FieldSpec{WireName: "body"},
+		"Body":      ubx.FieldSpec{WireName: "body"},
 		"IssueFieldValues": ubx.FieldSpec{
 			WireName: "issue_field_values",
-			Kind: "list",
-			Fields: Issue_IssueFieldValuesFields,
+			Kind:     "list",
+			Fields:   Issue_IssueFieldValuesFields,
 		},
-		"Labels": ubx.FieldSpec{WireName: "labels"},
-		"Milestone": ubx.FieldSpec{WireName: "milestone"},
+		"Labels":        ubx.FieldSpec{WireName: "labels"},
+		"Milestone":     ubx.FieldSpec{WireName: "milestone"},
 		"ParentIssueId": ubx.FieldSpec{WireName: "parent_issue_id"},
-		"Title": ubx.FieldSpec{WireName: "title"},
-		"Type": ubx.FieldSpec{WireName: "type"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"IssueNumber": ubx.FieldSpec{WireName: "issue_number"},
+		"Title":         ubx.FieldSpec{WireName: "title"},
+		"Type":          ubx.FieldSpec{WireName: "type"},
+		"Owner":         ubx.FieldSpec{WireName: "owner"},
+		"Repo":          ubx.FieldSpec{WireName: "repo"},
+		"IssueNumber":   ubx.FieldSpec{WireName: "issue_number"},
 	},
 }

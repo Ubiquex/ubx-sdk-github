@@ -4,36 +4,36 @@ package get
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type BudgetUserStates_UserStates struct {
-	ConsumedAmount any
+	ConsumedAmount   any
 	OverrideBudgetId any
-	TargetAmount any
-	User any
+	TargetAmount     any
+	User             any
 }
 
 type BudgetUserStatesConfig struct {
-	BudgetId any
-	Enterprise any
-	Page any
-	PerPage any
-	SortOrder any
+	BudgetId            any
+	Enterprise          any
+	Page                any
+	PerPage             any
+	SortOrder           any
 	ThresholdLowerBound any
 	ThresholdUpperBound any
-	User any
+	User                any
 }
 
 type BudgetUserStatesAttrs struct {
-	BudgetId any
+	BudgetId   any
 	Enterprise any
 	// Indicates if there are more pages of results available.
-	HasNextPage any
-	Page any
-	PerPage any
-	SortOrder any
+	HasNextPage         any
+	Page                any
+	PerPage             any
+	SortOrder           any
 	ThresholdLowerBound any
 	ThresholdUpperBound any
 	// Total number of user state entries matching the query.
 	TotalCount any
-	User any
+	User       any
 	// Per-user state entries for the budget.
 	UserStates any
 }
@@ -41,13 +41,13 @@ type BudgetUserStatesAttrs struct {
 var BudgetUserStates = ubx.DataSourceBinding{
 	WireType: "github_get_budget_user_states",
 	Fields: ubx.FieldMap{
-		"BudgetId": ubx.FieldSpec{WireName: "budget_id"},
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"SortOrder": ubx.FieldSpec{WireName: "sort_order"},
+		"BudgetId":            ubx.FieldSpec{WireName: "budget_id"},
+		"Enterprise":          ubx.FieldSpec{WireName: "enterprise"},
+		"Page":                ubx.FieldSpec{WireName: "page"},
+		"PerPage":             ubx.FieldSpec{WireName: "per_page"},
+		"SortOrder":           ubx.FieldSpec{WireName: "sort_order"},
 		"ThresholdLowerBound": ubx.FieldSpec{WireName: "threshold_lower_bound"},
 		"ThresholdUpperBound": ubx.FieldSpec{WireName: "threshold_upper_bound"},
-		"User": ubx.FieldSpec{WireName: "user"},
+		"User":                ubx.FieldSpec{WireName: "user"},
 	},
 }

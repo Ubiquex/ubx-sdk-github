@@ -5,26 +5,25 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Repository_License struct {
 	HtmlUrl any
-	Key any
-	Name any
-	NodeId any
-	SpdxId any
-	Url any
+	Key     any
+	Name    any
+	NodeId  any
+	SpdxId  any
+	Url     any
 }
 
 type Repository_Permissions struct {
-	Admin any
+	Admin    any
 	Maintain any
-	Pull any
-	Push any
-	Triage any
+	Pull     any
+	Push     any
+	Triage   any
 }
 
 type RepositoryConfig struct {
-	Org any
-	Owner any
-	Repo any
-	TeamSlug any
+	Owner  any
+	Repo   any
+	TeamId any
 }
 
 type RepositoryAttrs struct {
@@ -38,105 +37,104 @@ type RepositoryAttrs struct {
 	AllowRebaseMerge any
 	// Whether to allow squash merges for pull requests.
 	AllowSquashMerge any
-	ArchiveUrl any
+	ArchiveUrl       any
 	// Whether the repository is archived.
-	Archived any
-	AssigneesUrl any
-	BlobsUrl any
-	BranchesUrl any
-	CloneUrl any
+	Archived         any
+	AssigneesUrl     any
+	BlobsUrl         any
+	BranchesUrl      any
+	CloneUrl         any
 	CollaboratorsUrl any
-	CommentsUrl any
-	CommitsUrl any
-	CompareUrl any
-	ContentsUrl any
-	ContributorsUrl any
-	CreatedAt any
+	CommentsUrl      any
+	CommitsUrl       any
+	CompareUrl       any
+	ContentsUrl      any
+	ContributorsUrl  any
+	CreatedAt        any
 	// The default branch of the repository.
 	DefaultBranch any
 	// Whether to delete head branches when pull requests are merged
 	DeleteBranchOnMerge any
-	DeploymentsUrl any
-	Description any
+	DeploymentsUrl      any
+	Description         any
 	// Returns whether or not this repository disabled.
-	Disabled any
-	DownloadsUrl any
-	EventsUrl any
-	Fork any
-	Forks any
-	ForksCount any
-	ForksUrl any
-	FullName any
+	Disabled      any
+	DownloadsUrl  any
+	EventsUrl     any
+	Fork          any
+	Forks         any
+	ForksCount    any
+	ForksUrl      any
+	FullName      any
 	GitCommitsUrl any
-	GitRefsUrl any
-	GitTagsUrl any
-	GitUrl any
+	GitRefsUrl    any
+	GitTagsUrl    any
+	GitUrl        any
 	// Whether downloads are enabled.
 	HasDownloads any
 	// Whether issues are enabled.
 	HasIssues any
-	HasPages any
+	HasPages  any
 	// Whether projects are enabled.
 	HasProjects any
 	// Whether the wiki is enabled.
-	HasWiki any
+	HasWiki  any
 	Homepage any
 	HooksUrl any
-	HtmlUrl any
+	HtmlUrl  any
 	// Unique identifier of the repository
 	Id any
 	// Whether this repository acts as a template that can be used to generate new repositories.
-	IsTemplate any
+	IsTemplate      any
 	IssueCommentUrl any
-	IssueEventsUrl any
-	IssuesUrl any
-	KeysUrl any
-	LabelsUrl any
-	Language any
-	LanguagesUrl any
+	IssueEventsUrl  any
+	IssuesUrl       any
+	KeysUrl         any
+	LabelsUrl       any
+	Language        any
+	LanguagesUrl    any
 	// License Simple
-	License any
-	MasterBranch any
-	MergesUrl any
+	License       any
+	MasterBranch  any
+	MergesUrl     any
 	MilestonesUrl any
-	MirrorUrl any
+	MirrorUrl     any
 	// The name of the repository.
-	Name any
-	NetworkCount any
-	NodeId any
+	Name             any
+	NetworkCount     any
+	NodeId           any
 	NotificationsUrl any
-	OpenIssues any
-	OpenIssuesCount any
-	Org any
-	Owner any
-	Permissions any
+	OpenIssues       any
+	OpenIssuesCount  any
+	Owner            any
+	Permissions      any
 	// Whether the repository is private or public.
-	Private any
-	PullsUrl any
-	PushedAt any
-	ReleasesUrl any
-	Repo any
-	RoleName any
-	Size any
-	SshUrl any
-	StargazersCount any
-	StargazersUrl any
-	StatusesUrl any
+	Private          any
+	PullsUrl         any
+	PushedAt         any
+	ReleasesUrl      any
+	Repo             any
+	RoleName         any
+	Size             any
+	SshUrl           any
+	StargazersCount  any
+	StargazersUrl    any
+	StatusesUrl      any
 	SubscribersCount any
-	SubscribersUrl any
-	SubscriptionUrl any
-	SvnUrl any
-	TagsUrl any
-	TeamSlug any
-	TeamsUrl any
-	TempCloneToken any
-	Topics any
-	TreesUrl any
-	UpdatedAt any
-	Url any
+	SubscribersUrl   any
+	SubscriptionUrl  any
+	SvnUrl           any
+	TagsUrl          any
+	TeamId           any
+	TeamsUrl         any
+	TempCloneToken   any
+	Topics           any
+	TreesUrl         any
+	UpdatedAt        any
+	Url              any
 	// The repository visibility: public, private, or internal.
-	Visibility any
-	Watchers any
+	Visibility    any
+	Watchers      any
 	WatchersCount any
 	// Whether to require contributors to sign off on web-based commits
 	WebCommitSignoffRequired any
@@ -145,9 +143,8 @@ type RepositoryAttrs struct {
 var Repository = ubx.DataSourceBinding{
 	WireType: "github_team_repository",
 	Fields: ubx.FieldMap{
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"TeamSlug": ubx.FieldSpec{WireName: "team_slug"},
+		"Owner":  ubx.FieldSpec{WireName: "owner"},
+		"Repo":   ubx.FieldSpec{WireName: "repo"},
+		"TeamId": ubx.FieldSpec{WireName: "team_id"},
 	},
 }

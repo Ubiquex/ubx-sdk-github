@@ -2,111 +2,62 @@
 import type { Computed, FieldMap, ResourceBinding } from "@ubx/sdk";
 
 export interface Full_Organization_Plan {
-  /** The number of seats that have been filled in the organization's plan. (AI-inferred) */
   filledSeats?: number | Computed<number>;
-  /** The name of the organization's plan (e.g., 'free', 'pro', 'team', 'enterprise'). (AI-inferred) */
   name: string | Computed<string>;
-  /** The number of private repositories allowed under the organization's plan. (AI-inferred) */
   privateRepos: number | Computed<number>;
-  /** The number of seats included in the organization's plan. (AI-inferred) */
   seats?: number | Computed<number>;
   space: number | Computed<number>;
 }
 
 export interface Full_Organization {
   archivedAt: string | Computed<string>;
-  /** The URL of the organization's avatar image. (AI-inferred) */
   avatarUrl: string | Computed<string>;
-  /** The billing email address for this GitHub organization. (AI-inferred) */
   billingEmail?: string | Computed<string>;
-  /** The URL of the organization's blog. (AI-inferred) */
   blog?: string | Computed<string>;
   collaborators?: number | Computed<number>;
-  /** The company name associated with the organization, if any. This field is optional and may be null or not present. (AI-inferred) */
   company?: string | Computed<string>;
-  /** Timestamp of when the organization was created, in ISO 8601 format. (AI-inferred) */
   createdAt: string | Computed<string>;
-  /** The default repository permission level for the organization. Allowed values: read, write, admin, none. (AI-inferred) */
   defaultRepositoryPermission?: string | Computed<string>;
-  /** The description of the organization that the team belongs to. (AI-inferred) */
   description: string | Computed<string>;
-  /** The total disk usage of the organization, in bytes. (AI-inferred) */
   diskUsage?: number | Computed<number>;
-  /** The email address of the GitHub organization, if set. (AI-inferred) */
   email?: string | Computed<string>;
-  /** The API endpoint URL used to retrieve events for the organization. (AI-inferred) */
   eventsUrl: string | Computed<string>;
-  /** The total number of users following the organization. (AI-inferred) */
   followers: number | Computed<number>;
-  /** The number of users that this organization follows on GitHub. (AI-inferred) */
   following: number | Computed<number>;
-  /** Indicates whether the organization has enabled its organization-level projects feature. (AI-inferred) */
   hasOrganizationProjects: boolean | Computed<boolean>;
-  /** Indicates whether the organization has repository projects enabled. (AI-inferred) */
   hasRepositoryProjects: boolean | Computed<boolean>;
-  /** The URL to access the organization's webhooks via the GitHub API. (AI-inferred) */
   hooksUrl: string | Computed<string>;
-  /** The URL to the organization's GitHub page. (AI-inferred) */
   htmlUrl: string | Computed<string>;
   id: number | Computed<number>;
-  /** Indicates whether the organization has been verified by GitHub (i.e., has a verified badge). (AI-inferred) */
   isVerified?: boolean | Computed<boolean>;
-  /** The API endpoint URL for retrieving issues belonging to the organization. (AI-inferred) */
   issuesUrl: string | Computed<string>;
-  /** The organization's public location, as specified in its GitHub profile. (AI-inferred) */
   location?: string | Computed<string>;
-  /** The organization's login name on GitHub, used as its unique identifier. (AI-inferred) */
   login: string | Computed<string>;
-  /** Indicates the types of repositories that organization members can create. Allowed values are 'all', 'private', or 'none'. (AI-inferred) */
   membersAllowedRepositoryCreationType?: string | Computed<string>;
-  /** Indicates whether organization members can create internal repositories. Internal repositories are only available to organizations within an enterprise plan. (AI-inferred) */
   membersCanCreateInternalRepositories?: boolean | Computed<boolean>;
-  /** Indicates whether organization members can create GitHub Pages sites. When true, all members can create pages; when false, only organization owners can. (AI-inferred) */
   membersCanCreatePages?: boolean | Computed<boolean>;
-  /** Indicates whether organization members are permitted to create private GitHub Pages sites. If false, only organization owners can create private pages. (AI-inferred) */
   membersCanCreatePrivatePages?: boolean | Computed<boolean>;
-  /** Indicates whether members of the organization are permitted to create private repositories. If true, members can create private repositories; if false, they cannot. (AI-inferred) */
   membersCanCreatePrivateRepositories?: boolean | Computed<boolean>;
-  /** Whether members of the organization can create public pages (e.g., GitHub Pages sites). (AI-inferred) */
   membersCanCreatePublicPages?: boolean | Computed<boolean>;
-  /** Whether non-admin members can create public repositories in the organization. (AI-inferred) */
   membersCanCreatePublicRepositories?: boolean | Computed<boolean>;
-  /** Indicates whether organization members can create repositories. When true, any member can create new repositories; when false, only organization owners can. (AI-inferred) */
   membersCanCreateRepositories?: boolean | Computed<boolean>;
-  /** Indicates whether members of the organization can fork private repositories. (AI-inferred) */
   membersCanForkPrivateRepositories?: boolean | Computed<boolean>;
-  /** The URL to access the list of members of the organization via the GitHub API. (AI-inferred) */
   membersUrl: string | Computed<string>;
-  /** The name of the organization. (AI-inferred) */
   name?: string | Computed<string>;
-  /** The GraphQL node ID of the organization. (AI-inferred) */
   nodeId: string | Computed<string>;
-  /** The number of private repositories owned by the organization. (AI-inferred) */
   ownedPrivateRepos?: number | Computed<number>;
   plan?: Full_Organization_Plan | Computed<Full_Organization_Plan>;
-  /** The number of private gists owned by the organization. (AI-inferred) */
   privateGists?: number | Computed<number>;
-  /** The number of public gists owned by the organization. (AI-inferred) */
   publicGists: number | Computed<number>;
-  /** The URL template for accessing the public members of the organization, including a placeholder for the member identifier. (AI-inferred) */
   publicMembersUrl: string | Computed<string>;
-  /** The number of public repositories owned by the organization. (AI-inferred) */
   publicRepos: number | Computed<number>;
-  /** The URL to the list of repositories belonging to the organization. This is the API endpoint for fetching the organization's repositories. (AI-inferred) */
   reposUrl: string | Computed<string>;
-  /** The total number of private repositories owned by the organization. (AI-inferred) */
   totalPrivateRepos?: number | Computed<number>;
-  /** The Twitter username associated with the GitHub organization. (AI-inferred) */
   twitterUsername?: string | Computed<string>;
-  /** Indicates whether two-factor authentication is required for all members of the organization that owns the team. (AI-inferred) */
   twoFactorRequirementEnabled?: boolean | Computed<boolean>;
-  /** The type of the GitHub account, which is 'Organization' for an organization. (AI-inferred) */
   type: string | Computed<string>;
-  /** The timestamp of when the organization was last updated. (AI-inferred) */
   updatedAt: string | Computed<string>;
-  /** The GitHub API URL for the organization. (AI-inferred) */
   url: string | Computed<string>;
-  /** Indicates whether the organization requires contributors to sign off on commits made through the web interface. When true, commit signoff is enforced for web-based commits. (AI-inferred) */
   webCommitSignoffRequired?: boolean | Computed<boolean>;
 }
 
@@ -115,17 +66,14 @@ export interface Full_Parent {
   description: string | Computed<string>;
   /** Unique identifier of the enterprise to which this team belongs */
   enterpriseId?: number | Computed<number>;
-  /** The URL to the parent team's page on GitHub. (AI-inferred) */
   htmlUrl: string | Computed<string>;
   /** Unique identifier of the team */
   id: number | Computed<number>;
   /** Distinguished Name (DN) that team maps to within LDAP environment */
   ldapDn?: string | Computed<string>;
-  /** API endpoint URL that returns the members of the parent team. It typically follows the format https://api.github.com/teams/{team_id}/members. (AI-inferred) */
   membersUrl: string | Computed<string>;
   /** Name of the team */
   name: string | Computed<string>;
-  /** The GraphQL node ID of the parent team. (AI-inferred) */
   nodeId: string | Computed<string>;
   /** The notification setting the team has set */
   notificationSetting?: string | Computed<string>;
@@ -135,9 +83,7 @@ export interface Full_Parent {
   permission: string | Computed<string>;
   /** The level of privacy this team should have */
   privacy?: string | Computed<string>;
-  /** The API URL to access the list of repositories belonging to the team. (AI-inferred) */
   repositoriesUrl: string | Computed<string>;
-  /** The slug of the parent team, used as a URL-friendly identifier in GitHub. (AI-inferred) */
   slug: string | Computed<string>;
   /** The ownership type of the team */
   type: string | Computed<string>;
@@ -176,7 +122,6 @@ export interface FullAttrs {
   description: string;
   /** Unique identifier of the enterprise to which this team belongs */
   enterpriseId: number;
-  /** The GitHub web URL for the team. (AI-inferred) */
   htmlUrl: string;
   /** Unique identifier of the team */
   id: number;
@@ -184,13 +129,10 @@ export interface FullAttrs {
   ldapDn: string;
   /** List GitHub usernames for organization members who will become team maintainers. */
   maintainers: string[];
-  /** The number of members in the team. (AI-inferred) */
   membersCount: number;
-  /** The API endpoint URL to retrieve the members of this team. (AI-inferred) */
   membersUrl: string;
   /** The name of the team. */
   name: string;
-  /** The GraphQL global node ID for the team, used as a unique identifier in GitHub's GraphQL API. (AI-inferred) */
   nodeId: string;
   /** The notification setting the team has chosen. The options are: * `notifications_enabled` - team members receive notifications when the team is @mentioned. * `notifications_disabled` - no one receives notifications. Default: `notifications_enabled` */
   notificationSetting: string;
@@ -210,15 +152,11 @@ export interface FullAttrs {
   privacy: string;
   /** The full name (e.g., "organization-name/repository-name") of repositories to add the team to. */
   repoNames: string[];
-  /** The number of repositories associated with the GitHub team. (AI-inferred) */
   reposCount: number;
-  /** The URL to list repositories belonging to the team. (AI-inferred) */
   repositoriesUrl: string;
-  /** The slug of the team, which is a URL-friendly version of the team name used in GitHub URLs. (AI-inferred) */
   slug: string;
   /** The ownership type of the team */
   type: string;
-  /** The timestamp of the last update to the team, provided as a string. This field is computed by the server and is read-only. (AI-inferred) */
   updatedAt: string;
   /** URL for the team */
   url: string;

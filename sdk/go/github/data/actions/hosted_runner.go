@@ -3,74 +3,61 @@ package actions
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
-type HostedRunner_ImageDetails struct {
-	// Display name for this image.
+type HostedRunner_Runners_ImageDetails struct {
 	DisplayName any
-	// The ID of the image. Use this ID for the `image` parameter when creating a new larger runner.
-	Id any
-	// Image size in GB.
-	SizeGb any
-	// The image provider.
-	Source any
-	// The image version of the hosted runner pool.
-	Version any
+	Id          any
+	SizeGb      any
+	Source      any
+	Version     any
 }
 
-type HostedRunner_MachineSizeDetails struct {
-	// The number of cores.
-	CpuCores any
-	// The ID used for the `size` parameter when creating a new runner.
-	Id any
-	// The available RAM for the machine spec.
-	MemoryGb any
-	// The available SSD storage for the machine spec.
+type HostedRunner_Runners_MachineSizeDetails struct {
+	CpuCores  any
+	Id        any
+	MemoryGb  any
 	StorageGb any
 }
 
-type HostedRunner_PublicIps struct {
+type HostedRunner_Runners_PublicIps struct {
 	Enabled any
-	Length any
-	Prefix any
+	Length  any
+	Prefix  any
+}
+
+type HostedRunner_Runners struct {
+	Id                 any
+	ImageDetails       any
+	ImageGen           any
+	LastActiveOn       any
+	MachineSizeDetails any
+	MaximumRunners     any
+	Name               any
+	Platform           any
+	PublicIpEnabled    any
+	PublicIps          any
+	RunnerGroupId      any
+	Status             any
 }
 
 type HostedRunnerConfig struct {
-	HostedRunnerId any
-	Org any
+	Enterprise any
+	Page       any
+	PerPage    any
 }
 
 type HostedRunnerAttrs struct {
-	HostedRunnerId any
-	// The unique identifier of the hosted runner.
-	Id any
-	// Provides details of a hosted runner image
-	ImageDetails any
-	// Whether custom image generation is enabled for the hosted runners.
-	ImageGen any
-	// The time at which the runner was last used, in ISO 8601 format.
-	LastActiveOn any
-	// Provides details of a particular machine spec.
-	MachineSizeDetails any
-	// The maximum amount of hosted runners. Runners will not scale automatically above this number. Use this setting to limit your cost.
-	MaximumRunners any
-	// The name of the hosted runner.
-	Name any
-	Org any
-	// The operating system of the image.
-	Platform any
-	// Whether public IP is enabled for the hosted runners.
-	PublicIpEnabled any
-	// The public IP ranges when public IP is enabled for the hosted runners.
-	PublicIps any
-	// The unique identifier of the group that the hosted runner belongs to.
-	RunnerGroupId any
-	// The status of the runner.
-	Status any
+	Enterprise any
+	Page       any
+	PerPage    any
+	Runners    any
+	TotalCount any
 }
 
 var HostedRunner = ubx.DataSourceBinding{
 	WireType: "github_actions_hosted_runner",
 	Fields: ubx.FieldMap{
-		"HostedRunnerId": ubx.FieldSpec{WireName: "hosted_runner_id"},
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
+		"Page":       ubx.FieldSpec{WireName: "page"},
+		"PerPage":    ubx.FieldSpec{WireName: "per_page"},
 	},
 }

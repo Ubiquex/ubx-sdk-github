@@ -3,24 +3,24 @@ import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface TeamConfig {
   enterprise: string | Computed<string>;
-  enterpriseTeam: string | Computed<string>;
   page?: number | Computed<number>;
   perPage?: number | Computed<number>;
+  roleId: number | Computed<number>;
 }
 
 export interface TeamAttrs {
   enterprise: string;
-  enterpriseTeam: string;
   page: number;
   perPage: number;
+  roleId: number;
 }
 
 export const Team: DataSourceBinding<TeamConfig, TeamAttrs> = {
   wireType: "github_team",
   fields: {
     enterprise: "enterprise",
-    enterpriseTeam: "enterprise_team",
     page: "page",
     perPage: "per_page",
+    roleId: "role_id",
   },
 };

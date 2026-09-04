@@ -8,64 +8,37 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class Comment_Reactions:
-    # Number of confused reactions on the commit comment. (AI-inferred)
     confused: Any = None
-    # Number of eye reactions (👀) on the commit comment. (AI-inferred)
     eyes: Any = None
-    # The number of heart (❤️) reactions on the commit comment. (AI-inferred)
     heart: Any = None
-    # The number of hooray reactions on the commit comment. (AI-inferred)
     hooray: Any = None
-    # The number of laugh reactions on the commit comment. (AI-inferred)
     laugh: Any = None
-    # The count of rocket reactions (🚀) on the commit comment. (AI-inferred)
     rocket: Any = None
-    # The total number of reactions of all types on the commit comment. (AI-inferred)
     total_count: Any = None
-    # The API URL that returns the reactions for the commit comment. (AI-inferred)
     url: Any = None
 
 @dataclasses.dataclass
 class Comment_User:
-    # The URL of the user's avatar image. (AI-inferred)
     avatar_url: Any = None
-    # The email address of the user who authored the commit comment, if the user has made it public. (AI-inferred)
     email: Any = None
-    # The URL to the user's events on GitHub, typically in the form https://api.github.com/users/{username}/events. (AI-inferred)
     events_url: Any = None
-    # URL to access the list of followers for this GitHub user. (AI-inferred)
     followers_url: Any = None
-    # The URL (template) for fetching the list of users this user follows, as specified in the GitHub API user object. This field is always present for a user. (AI-inferred)
     following_url: Any = None
-    # The API URL for the user's gists, typically of the form https://api.github.com/users/{username}/gists{/gist_id}. (AI-inferred)
     gists_url: Any = None
-    # The Gravatar ID for the user, used to construct their avatar image URL. (AI-inferred)
     gravatar_id: Any = None
-    # The URL to the user's GitHub profile page. (AI-inferred)
     html_url: Any = None
     id: Any = None
-    # The GitHub username of the user who created the commit comment. (AI-inferred)
     login: Any = None
-    # The name of the user associated with the commit comment. (AI-inferred)
     name: Any = None
-    # The node_id is the unique identifier for the user in GitHub's GraphQL API. This field is always present. (AI-inferred)
     node_id: Any = None
-    # The URL to fetch the list of organizations the user belongs to. (AI-inferred)
     organizations_url: Any = None
-    # The URL for the user's received events, which lists the events that the user has received. (AI-inferred)
     received_events_url: Any = None
-    # The URL to the user's public repositories on GitHub. (AI-inferred)
     repos_url: Any = None
-    # Whether the user is a GitHub site administrator. (AI-inferred)
     site_admin: Any = None
     starred_at: Any = None
-    # The URL to list the repositories starred by the user. (AI-inferred)
     starred_url: Any = None
-    # The API URL for the user's subscriptions, which lists repositories the user is watching. (AI-inferred)
     subscriptions_url: Any = None
-    # The type of GitHub user account that authored the commit comment, such as "User" for a normal account or "Bot" for a bot account. (AI-inferred)
     type: Any = None
-    # The GitHub API URL for the user, such as https://api.github.com/users/octocat. (AI-inferred)
     url: Any = None
     user_view_type: Any = None
 
@@ -94,26 +67,19 @@ class CommentAttrs:
     author_association: Any = None
     # The contents of the comment.
     body: Any = None
-    # The SHA of the commit that this comment is associated with. (AI-inferred)
     commit_id: Any = None
-    # The timestamp of when the commit comment was created, in ISO 8601 format (e.g., 2025-01-01T12:00:00Z). (AI-inferred)
     created_at: Any = None
-    # The HTML URL of the commit comment. (AI-inferred)
     html_url: Any = None
     id: Any = None
     # **Closing down notice**. Use **position** parameter instead. Line number in the file to comment on.
     line: Any = None
-    # The unique identifier assigned to the commit comment by GitHub's GraphQL API. (AI-inferred)
     node_id: Any = None
     # Relative path of the file to comment on.
     path: Any = None
     # Line index in the diff to comment on.
     position: Any = None
-    # The reactions summary for the commit comment, containing counts for each reaction type (e.g., +1, -1, laugh, hooray, confused, heart, rocket, eyes), a total count, and a URL to fetch detailed reaction information. (AI-inferred)
     reactions: Any = None
-    # The timestamp of when the commit comment was last updated. (AI-inferred)
     updated_at: Any = None
-    # The API URL that points to this commit comment. (AI-inferred)
     url: Any = None
     # A GitHub user.
     user: Any = None

@@ -8,18 +8,24 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class UserConfig:
+    enterprise: Any = None
     page: Any = None
     per_page: Any = None
+    role_id: Any = None
 
 @dataclasses.dataclass
 class UserAttrs:
+    enterprise: Any = None
     page: Any = None
     per_page: Any = None
+    role_id: Any = None
 
 User = ubx.DataSourceBinding(
     wire_type="github_user",
     fields={
+        "enterprise": ubx.FieldSpec(wire_name="enterprise"),
         "page": ubx.FieldSpec(wire_name="page"),
         "per_page": ubx.FieldSpec(wire_name="per_page"),
+        "role_id": ubx.FieldSpec(wire_name="role_id"),
     },
 )

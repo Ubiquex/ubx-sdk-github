@@ -8,27 +8,24 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class InstallationConfig:
-    enterprise: Any = None
-    installation_id: Any = None
-    org: Any = None
+    outdated: Any = None
     page: Any = None
     per_page: Any = None
+    since: Any = None
 
 @dataclasses.dataclass
 class InstallationAttrs:
-    enterprise: Any = None
-    installation_id: Any = None
-    org: Any = None
+    outdated: Any = None
     page: Any = None
     per_page: Any = None
+    since: Any = None
 
 Installation = ubx.DataSourceBinding(
     wire_type="github_installation",
     fields={
-        "enterprise": ubx.FieldSpec(wire_name="enterprise"),
-        "installation_id": ubx.FieldSpec(wire_name="installation_id"),
-        "org": ubx.FieldSpec(wire_name="org"),
+        "outdated": ubx.FieldSpec(wire_name="outdated"),
         "page": ubx.FieldSpec(wire_name="page"),
         "per_page": ubx.FieldSpec(wire_name="per_page"),
+        "since": ubx.FieldSpec(wire_name="since"),
     },
 )

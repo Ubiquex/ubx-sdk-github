@@ -19,13 +19,9 @@ export interface SecurityConfiguration_DependencyGraphAutosubmitActionOptions {
 }
 
 export interface SecurityConfiguration_SecretScanningDelegatedBypassOptions_Reviewers {
-  /** The mode of the reviewer, which must be either `ALWAYS` or `EXEMPT`. (AI-inferred) */
   mode?: string | Computed<string>;
-  /** The ID of the GitHub user or team that serves as a reviewer for delegated secret scanning bypass requests. (AI-inferred) */
   reviewerId?: number | Computed<number>;
-  /** Type of the reviewer for the delegated bypass. Valid values are `TEAM` or `ROLE`. (AI-inferred) */
   reviewerType?: string | Computed<string>;
-  /** The ID of the code security configuration that contains these secret scanning delegated bypass reviewers. (AI-inferred) */
   securityConfigurationId?: number | Computed<number>;
 }
 
@@ -113,7 +109,6 @@ export interface SecurityConfigurationAttrs {
   codeScanningOptions: SecurityConfiguration_CodeScanningOptions;
   /** The enablement status of GitHub Code Security features. */
   codeSecurity: string;
-  /** The timestamp at which the code security configuration was created, automatically set by the system. (AI-inferred) */
   createdAt: string;
   /** The enablement status of Dependabot alerts */
   dependabotAlerts: string;
@@ -161,7 +156,6 @@ export interface SecurityConfigurationAttrs {
   secretScanningValidityChecks: string;
   /** The type of the code security configuration. */
   targetType: string;
-  /** The timestamp of when the code security configuration was last updated, in ISO 8601 format. (AI-inferred) */
   updatedAt: string;
   /** The URL of the configuration */
   url: string;

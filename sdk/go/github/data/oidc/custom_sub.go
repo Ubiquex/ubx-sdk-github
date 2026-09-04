@@ -10,7 +10,7 @@ type CustomSubConfig struct {
 type CustomSubAttrs struct {
 	// Array of unique strings. Each claim key can only contain alphanumeric characters and underscores.
 	IncludeClaimKeys any
-	Org any
+	Org              any
 	// Whether to opt in to the immutable OIDC subject claim format for the organization. When `true`, new OIDC tokens will use a stable, repository-ID-based `sub` claim instead of the name-based format.
 	UseImmutableSubject any
 }

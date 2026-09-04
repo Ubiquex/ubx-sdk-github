@@ -4,9 +4,7 @@ import type { Computed, FieldMap, ResourceBinding } from "@ubx/sdk";
 export interface Ref_Object {
   /** SHA for the reference */
   sha: string | Computed<string>;
-  /** The type of Git object that this ref points to. Valid values are commit, tree, blob, and tag. (AI-inferred) */
   type: string | Computed<string>;
-  /** The API URL for the git object associated with the reference. (AI-inferred) */
   url: string | Computed<string>;
 }
 
@@ -22,15 +20,12 @@ export interface RefConfig {
 }
 
 export interface RefAttrs {
-  /** The GraphQL node ID of the git reference. (AI-inferred) */
   nodeId: string;
-  /** Details of the object that this Git ref points to, including its SHA and type (e.g., commit). (AI-inferred) */
   object: Ref_Object;
   /** The name of the fully qualified reference (ie: `refs/heads/master`). If it doesn't start with 'refs' and have at least two slashes, it will be rejected. */
   ref: string;
   /** The SHA1 value for this reference. */
   sha: string;
-  /** The API URL of the Git reference, as returned by the GitHub API. (AI-inferred) */
   url: string;
   /** path parameter, not part of the API's own resource representation */
   owner: string;

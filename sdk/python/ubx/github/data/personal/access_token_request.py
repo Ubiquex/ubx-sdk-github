@@ -8,24 +8,45 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class AccessTokenRequestConfig:
+    direction: Any = None
+    last_used_after: Any = None
+    last_used_before: Any = None
     org: Any = None
+    owner: Any = None
     page: Any = None
-    pat_request_id: Any = None
     per_page: Any = None
+    permission: Any = None
+    repository: Any = None
+    sort: Any = None
+    token_id: Any = None
 
 @dataclasses.dataclass
 class AccessTokenRequestAttrs:
+    direction: Any = None
+    last_used_after: Any = None
+    last_used_before: Any = None
     org: Any = None
+    owner: Any = None
     page: Any = None
-    pat_request_id: Any = None
     per_page: Any = None
+    permission: Any = None
+    repository: Any = None
+    sort: Any = None
+    token_id: Any = None
 
 AccessTokenRequest = ubx.DataSourceBinding(
     wire_type="github_personal_access_token_request",
     fields={
+        "direction": ubx.FieldSpec(wire_name="direction"),
+        "last_used_after": ubx.FieldSpec(wire_name="last_used_after"),
+        "last_used_before": ubx.FieldSpec(wire_name="last_used_before"),
         "org": ubx.FieldSpec(wire_name="org"),
+        "owner": ubx.FieldSpec(wire_name="owner"),
         "page": ubx.FieldSpec(wire_name="page"),
-        "pat_request_id": ubx.FieldSpec(wire_name="pat_request_id"),
         "per_page": ubx.FieldSpec(wire_name="per_page"),
+        "permission": ubx.FieldSpec(wire_name="permission"),
+        "repository": ubx.FieldSpec(wire_name="repository"),
+        "sort": ubx.FieldSpec(wire_name="sort"),
+        "token_id": ubx.FieldSpec(wire_name="token_id"),
     },
 )

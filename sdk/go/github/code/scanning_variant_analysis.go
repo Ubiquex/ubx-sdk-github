@@ -4,47 +4,28 @@ package code
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ScanningVariantAnalysis_Actor struct {
-	// The URL of the actor's avatar image. (AI-inferred)
-	AvatarUrl any
-	// The email address of the actor who triggered or is associated with the code scanning variant analysis. (AI-inferred)
-	Email any
-	// The URL at which the actor's public events can be retrieved. (AI-inferred)
-	EventsUrl any
-	// The URL to the GitHub followers list for the actor, as returned by the GitHub API. (AI-inferred)
-	FollowersUrl any
-	// The URL template for listing the users this actor is following, with an optional {/other_user} placeholder for a specific user. (AI-inferred)
-	FollowingUrl any
-	// The URL to the actor's gists list in the GitHub API. (AI-inferred)
-	GistsUrl any
-	// The unique hash identifying the user's Gravatar image, used to generate the avatar URL via Gravatar service. (AI-inferred)
-	GravatarId any
-	// The URL to the GitHub profile of the actor (user or bot) that triggered the variant analysis. (AI-inferred)
-	HtmlUrl any
-	// The numeric identifier of the user or bot account that triggered the code scanning variant analysis. (AI-inferred)
-	Id any
-	// The GitHub username (login) of the actor who initiated the variant analysis. This field is required. (AI-inferred)
-	Login any
-	Name any
-	// The GraphQL node identifier for the actor (user or bot) that triggered the variant analysis. (AI-inferred)
-	NodeId any
-	// The URL to the organizations endpoint for this actor, listing the organizations to which the actor belongs. (AI-inferred)
-	OrganizationsUrl any
-	// The URL to the actor's received events. (AI-inferred)
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	// The URL to the GitHub API endpoint that lists repositories owned by the actor. (AI-inferred)
-	ReposUrl any
-	// Whether the actor is a GitHub site administrator. (AI-inferred)
-	SiteAdmin any
-	StarredAt any
-	// The URL template to list the repositories starred by the actor. (AI-inferred)
-	StarredUrl any
-	// The API endpoint URL for the subscriptions of the actor (user or bot) that triggered the code scanning variant analysis. (AI-inferred)
-	SubscriptionsUrl any
-	Type any
-	// The GitHub API URL for the actor associated with the code scanning variant analysis. (AI-inferred)
-	Url any
-	// The user's view type, which indicates whether the user account is publicly visible or private. Possible values are 'public' and 'private'. (AI-inferred)
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type ScanningVariantAnalysis_ControllerRepo struct {
@@ -143,30 +124,20 @@ type ScanningVariantAnalysis_ControllerRepo struct {
 }
 
 type ScanningVariantAnalysis_ScannedRepositories_Repository struct {
-	// The full name of the repository, formatted as `owner/name` (e.g., `octocat/Hello-World`). (AI-inferred)
-	FullName any
-	// The unique numeric identifier of the GitHub repository. (AI-inferred)
-	Id any
-	Name any
-	// Indicates whether the repository is private (true) or public (false). (AI-inferred)
-	Private any
-	// The number of users who have starred the repository. (AI-inferred)
+	FullName        any
+	Id              any
+	Name            any
+	Private         any
 	StargazersCount any
-	// The timestamp of the last update to the repository, in ISO 8601 format. This indicates when the repository's metadata or content was last modified. (AI-inferred)
-	UpdatedAt any
+	UpdatedAt       any
 }
 
 type ScanningVariantAnalysis_ScannedRepositories struct {
-	// The current status of the variant analysis for a repository. Possible values are pending, in_progress, succeeded, failed, canceled, and timed_out. (AI-inferred)
-	AnalysisStatus any
-	// The exact size in bytes of the analysis artifact associated with this scanned repository. (AI-inferred)
+	AnalysisStatus      any
 	ArtifactSizeInBytes any
-	// The error message indicating why the analysis failed for this repository, if applicable. (AI-inferred)
-	FailureMessage any
-	// The GitHub repository that was scanned as part of the variant analysis. (AI-inferred)
-	Repository any
-	// The number of code scanning results detected in this repository for the variant analysis. (AI-inferred)
-	ResultCount any
+	FailureMessage      any
+	Repository          any
+	ResultCount         any
 }
 
 type ScanningVariantAnalysis_SkippedRepositories_AccessMismatchRepos struct {
@@ -184,14 +155,10 @@ type ScanningVariantAnalysis_SkippedRepositories_NotFoundRepos struct {
 }
 
 type ScanningVariantAnalysis_SkippedRepositories struct {
-	// An object containing a repository count and a list of repositories that were skipped because the analyzed access token does not have permission to access them. (AI-inferred)
 	AccessMismatchRepos any
-	// An object containing details about repositories that were skipped from the variant analysis due to no CodeQL database being available. (AI-inferred)
-	NoCodeqlDbRepos any
-	// An object describing repositories that could not be found during the code scanning variant analysis, and were therefore skipped. This is a required part of the skipped repositories summary. (AI-inferred)
-	NotFoundRepos any
-	// An object containing details about repositories that were skipped because they exceeded the repository limit. (AI-inferred)
-	OverLimitRepos any
+	NoCodeqlDbRepos     any
+	NotFoundRepos       any
+	OverLimitRepos      any
 }
 
 type ScanningVariantAnalysisConfig struct {
@@ -241,13 +208,11 @@ type ScanningVariantAnalysisAttrs struct {
 	// List of repository lists to run the query against. Precisely one property from `repositories`, `repository_lists` and `repository_owners` is required.
 	RepositoryLists any
 	// List of organization or user names whose repositories the query should be run against. Precisely one property from `repositories`, `repository_lists` and `repository_owners` is required.
-	RepositoryOwners any
-	// The list of repositories that were scanned as part of the GitHub code scanning variant analysis. (AI-inferred)
+	RepositoryOwners    any
 	ScannedRepositories any
 	// Information about repositories that were skipped from processing. This information is only available to the user that initiated the variant analysis.
 	SkippedRepositories any
-	// The current status of the variant analysis, which can be 'in_progress', 'succeeded', 'failed', or 'cancelled'. (AI-inferred)
-	Status any
+	Status              any
 	// The date and time at which the variant analysis was last updated, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
 	UpdatedAt any
 	// path parameter, not part of the API's own resource representation
@@ -261,13 +226,13 @@ type ScanningVariantAnalysisAttrs struct {
 var ScanningVariantAnalysis = ubx.ResourceBinding{
 	WireType: "github_code_scanning_variant_analysis",
 	Fields: ubx.FieldMap{
-		"Language": ubx.FieldSpec{WireName: "language"},
-		"QueryPack": ubx.FieldSpec{WireName: "query_pack"},
-		"Repositories": ubx.FieldSpec{WireName: "repositories"},
-		"RepositoryLists": ubx.FieldSpec{WireName: "repository_lists"},
-		"RepositoryOwners": ubx.FieldSpec{WireName: "repository_owners"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Language":                ubx.FieldSpec{WireName: "language"},
+		"QueryPack":               ubx.FieldSpec{WireName: "query_pack"},
+		"Repositories":            ubx.FieldSpec{WireName: "repositories"},
+		"RepositoryLists":         ubx.FieldSpec{WireName: "repository_lists"},
+		"RepositoryOwners":        ubx.FieldSpec{WireName: "repository_owners"},
+		"Owner":                   ubx.FieldSpec{WireName: "owner"},
+		"Repo":                    ubx.FieldSpec{WireName: "repo"},
 		"CodeqlVariantAnalysisId": ubx.FieldSpec{WireName: "codeql_variant_analysis_id"},
 	},
 }

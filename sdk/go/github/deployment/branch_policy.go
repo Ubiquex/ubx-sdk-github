@@ -22,8 +22,7 @@ type BranchPolicyAttrs struct {
 	// The unique identifier of the branch or tag policy.
 	Id any
 	// The name pattern that branches or tags must match in order to deploy to the environment. Wildcard characters will not match `/`. For example, to match branches that begin with `release/` and contain an additional single slash, use `release/*/*`. For more information about pattern matching syntax, see the [Ruby File.fnmatch documentation](https://ruby-doc.org/core-2.5.1/File.html#method-c-fnmatch).
-	Name any
-	// The GraphQL node ID for the deployment branch policy. (AI-inferred)
+	Name   any
 	NodeId any
 	// Whether this rule targets a branch or tag
 	Type any
@@ -40,11 +39,11 @@ type BranchPolicyAttrs struct {
 var BranchPolicy = ubx.ResourceBinding{
 	WireType: "github_deployment_branch_policy",
 	Fields: ubx.FieldMap{
-		"Name": ubx.FieldSpec{WireName: "name"},
-		"Type": ubx.FieldSpec{WireName: "type"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Name":            ubx.FieldSpec{WireName: "name"},
+		"Type":            ubx.FieldSpec{WireName: "type"},
+		"Owner":           ubx.FieldSpec{WireName: "owner"},
+		"Repo":            ubx.FieldSpec{WireName: "repo"},
 		"EnvironmentName": ubx.FieldSpec{WireName: "environment_name"},
-		"BranchPolicyId": ubx.FieldSpec{WireName: "branch_policy_id"},
+		"BranchPolicyId":  ubx.FieldSpec{WireName: "branch_policy_id"},
 	},
 }

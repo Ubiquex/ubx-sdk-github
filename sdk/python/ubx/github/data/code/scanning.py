@@ -8,51 +8,36 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class ScanningConfig:
-    after: Any = None
-    assignees: Any = None
-    before: Any = None
-    direction: Any = None
-    enterprise: Any = None
+    org: Any = None
     page: Any = None
     per_page: Any = None
-    sort: Any = None
-    # State of a code scanning alert.
-    state: Any = None
-    # The GUID of the tool used to generate the code scanning analysis, if provided in the uploaded SARIF data.
-    tool_guid: Any = None
-    # The name of the tool used to generate the code scanning analysis.
-    tool_name: Any = None
+    repository_name: Any = None
+    request_status: Any = None
+    requester: Any = None
+    reviewer: Any = None
+    time_period: Any = None
 
 @dataclasses.dataclass
 class ScanningAttrs:
-    after: Any = None
-    assignees: Any = None
-    before: Any = None
-    direction: Any = None
-    enterprise: Any = None
+    org: Any = None
     page: Any = None
     per_page: Any = None
-    sort: Any = None
-    # State of a code scanning alert.
-    state: Any = None
-    # The GUID of the tool used to generate the code scanning analysis, if provided in the uploaded SARIF data.
-    tool_guid: Any = None
-    # The name of the tool used to generate the code scanning analysis.
-    tool_name: Any = None
+    repository_name: Any = None
+    request_status: Any = None
+    requester: Any = None
+    reviewer: Any = None
+    time_period: Any = None
 
 Scanning = ubx.DataSourceBinding(
     wire_type="github_code_scanning",
     fields={
-        "after": ubx.FieldSpec(wire_name="after"),
-        "assignees": ubx.FieldSpec(wire_name="assignees"),
-        "before": ubx.FieldSpec(wire_name="before"),
-        "direction": ubx.FieldSpec(wire_name="direction"),
-        "enterprise": ubx.FieldSpec(wire_name="enterprise"),
+        "org": ubx.FieldSpec(wire_name="org"),
         "page": ubx.FieldSpec(wire_name="page"),
         "per_page": ubx.FieldSpec(wire_name="per_page"),
-        "sort": ubx.FieldSpec(wire_name="sort"),
-        "state": ubx.FieldSpec(wire_name="state"),
-        "tool_guid": ubx.FieldSpec(wire_name="tool_guid"),
-        "tool_name": ubx.FieldSpec(wire_name="tool_name"),
+        "repository_name": ubx.FieldSpec(wire_name="repository_name"),
+        "request_status": ubx.FieldSpec(wire_name="request_status"),
+        "requester": ubx.FieldSpec(wire_name="requester"),
+        "reviewer": ubx.FieldSpec(wire_name="reviewer"),
+        "time_period": ubx.FieldSpec(wire_name="time_period"),
     },
 )

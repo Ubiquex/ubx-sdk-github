@@ -40,10 +40,10 @@ type SpaceResourceAttrs struct {
 var SpaceResource = ubx.ResourceBinding{
 	WireType: "github_copilot_space_resource",
 	Fields: ubx.FieldMap{
-		"Metadata": ubx.FieldSpec{WireName: "metadata"},
-		"ResourceType": ubx.FieldSpec{WireName: "resource_type"},
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"SpaceNumber": ubx.FieldSpec{WireName: "space_number"},
+		"Metadata":        ubx.FieldSpec{WireName: "metadata"},
+		"ResourceType":    ubx.FieldSpec{WireName: "resource_type"},
+		"Org":             ubx.FieldSpec{WireName: "org"},
+		"SpaceNumber":     ubx.FieldSpec{WireName: "space_number"},
 		"SpaceResourceId": ubx.FieldSpec{WireName: "space_resource_id"},
 	},
 }

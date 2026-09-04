@@ -21,9 +21,9 @@ type SecurityConfigurationForRepository_Configuration_DependencyGraphAutosubmitA
 }
 
 type SecurityConfigurationForRepository_Configuration_SecretScanningDelegatedBypassOptions_Reviewers struct {
-	Mode any
-	ReviewerId any
-	ReviewerType any
+	Mode                    any
+	ReviewerId              any
+	ReviewerType            any
 	SecurityConfigurationId any
 }
 
@@ -43,7 +43,7 @@ type SecurityConfigurationForRepository_Configuration struct {
 	CodeScanningDelegatedAlertDismissal any
 	// Feature options for code scanning
 	CodeScanningOptions any
-	CreatedAt any
+	CreatedAt           any
 	// The enablement status of Dependabot alerts
 	DependabotAlerts any
 	// The enablement status of Dependabot delegated alert dismissal
@@ -88,21 +88,21 @@ type SecurityConfigurationForRepository_Configuration struct {
 	SecretScanningValidityChecks any
 	// The type of the code security configuration.
 	TargetType any
-	UpdatedAt any
+	UpdatedAt  any
 	// The URL of the configuration
 	Url any
 }
 
 type SecurityConfigurationForRepositoryConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type SecurityConfigurationForRepositoryAttrs struct {
 	// A code security configuration
 	Configuration any
-	Owner any
-	Repo any
+	Owner         any
+	Repo          any
 	// The attachment status of the code security configuration on the repository.
 	Status any
 }
@@ -111,6 +111,6 @@ var SecurityConfigurationForRepository = ubx.DataSourceBinding{
 	WireType: "github_code_security_configuration_for_repository",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

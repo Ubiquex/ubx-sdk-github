@@ -75,7 +75,6 @@ class PrivateRegistryConfigurationAttrs:
     aws_region: Any = None
     # The client ID of the Azure AD application. Required when `auth_type` is `oidc_azure`.
     client_id: Any = None
-    # Timestamp the private registry configuration was created. (AI-inferred)
     created_at: Any = None
     # The CodeArtifact domain. Required when `auth_type` is `oidc_aws`.
     domain: Any = None
@@ -107,7 +106,6 @@ class PrivateRegistryConfigurationAttrs:
     service_slug: Any = None
     # The tenant ID of the Azure AD application. Required when `auth_type` is `oidc_azure`.
     tenant_id: Any = None
-    # Timestamp the private registry configuration was last updated. (AI-inferred)
     updated_at: Any = None
     # The URL of the private registry.
     url: Any = None

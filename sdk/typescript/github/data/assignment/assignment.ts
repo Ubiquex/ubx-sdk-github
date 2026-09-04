@@ -2,13 +2,13 @@
 import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface AssignmentConfig {
-  assignmentId: number | Computed<number>;
+  classroomId: number | Computed<number>;
   page?: number | Computed<number>;
   perPage?: number | Computed<number>;
 }
 
 export interface AssignmentAttrs {
-  assignmentId: number;
+  classroomId: number;
   page: number;
   perPage: number;
 }
@@ -16,7 +16,7 @@ export interface AssignmentAttrs {
 export const Assignment: DataSourceBinding<AssignmentConfig, AssignmentAttrs> = {
   wireType: "github_assignment",
   fields: {
-    assignmentId: "assignment_id",
+    classroomId: "classroom_id",
     page: "page",
     perPage: "per_page",
   },

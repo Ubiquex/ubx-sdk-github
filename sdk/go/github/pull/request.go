@@ -4,7 +4,6 @@ package pull
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Request_Links_Comments struct {
-	// The URL to access the comments for this pull request via the GitHub API. (AI-inferred)
 	Href any
 }
 
@@ -28,49 +27,28 @@ type Request_Links struct {
 }
 
 type Request_Assignee struct {
-	// The URL of the assignee's avatar image on GitHub. (AI-inferred)
-	AvatarUrl any
-	// The email address of the user assigned to the pull request, if publicly visible. (AI-inferred)
-	Email any
-	// The URL to the events of the user assigned to the pull request, following the GitHub API user object format. (AI-inferred)
-	EventsUrl any
-	// The URL to the GitHub API endpoint that returns the list of followers for the assignee. (AI-inferred)
-	FollowersUrl any
-	// The API URL to list the users this user is following. This is a template URL that includes an optional `{/other_user}` placeholder to query a specific user's following relationship. (AI-inferred)
-	FollowingUrl any
-	// The URL to the assignee's list of gists on GitHub. (AI-inferred)
-	GistsUrl any
-	// The Gravatar ID of the assignee, used to fetch the user's avatar image from Gravatar. (AI-inferred)
-	GravatarId any
-	// The HTML URL to the GitHub profile of the assignee. (AI-inferred)
-	HtmlUrl any
-	// The numeric identifier of the GitHub user assigned to the pull request. (AI-inferred)
-	Id any
-	// The GitHub username of the user assigned to the pull request. (AI-inferred)
-	Login any
-	// The display name of the user assigned to the pull request. This field is optional and may be null if the user has not set a name. (AI-inferred)
-	Name any
-	// The global node ID of the user assigned to this pull request. (AI-inferred)
-	NodeId any
-	// The API URL that lists the organizations to which the user (assignee) belongs. This is a standard field on GitHub user objects. (AI-inferred)
-	OrganizationsUrl any
-	// The URL of the GitHub API endpoint that lists events received by the assignee user. (AI-inferred)
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	// The URL to list the repositories owned by the assignee user. (AI-inferred)
-	ReposUrl any
-	// Indicates whether the assignee is a GitHub site administrator. (AI-inferred)
-	SiteAdmin any
-	StarredAt any
-	// URL template for listing the assignee's starred repositories, with placeholders for {owner} and {repo}. (AI-inferred)
-	StarredUrl any
-	// The API URL to list repositories that the assignee is subscribed to. (AI-inferred)
-	SubscriptionsUrl any
-	// The type of the assignee's GitHub account, such as 'User' or 'Bot'. (AI-inferred)
-	Type any
-	// The GitHub API URL for the user assigned to the pull request. (AI-inferred)
-	Url any
-	// Specifies the user's view type, indicating whether the user is a public or private user. Possible values: 'public', 'private'. (AI-inferred)
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type Request_AutoMerge struct {
@@ -85,88 +63,55 @@ type Request_AutoMerge struct {
 }
 
 type Request_Labels struct {
-	// The label's color, represented as a six-character hex code (e.g., 'ffffff') without the leading '#'. (AI-inferred)
-	Color any
-	// Indicates whether the label is a default label assigned by GitHub (e.g., bug, enhancement) rather than a custom label created by the repository owner. (AI-inferred)
-	Default any
-	// A brief description of the label, explaining its meaning or purpose. (AI-inferred)
+	Color       any
+	Default     any
 	Description any
-	// The unique numeric identifier of the label attached to the pull request. (AI-inferred)
-	Id any
-	// The name of the label applied to the pull request. (AI-inferred)
-	Name any
-	// The GraphQL global node ID for the label. (AI-inferred)
-	NodeId any
-	// The API URL for this label. (AI-inferred)
-	Url any
+	Id          any
+	Name        any
+	NodeId      any
+	Url         any
 }
 
 type Request_Milestone struct {
-	// The timestamp of when the milestone was closed, in ISO 8601 format. (AI-inferred)
-	ClosedAt any
-	// The number of issues associated with this milestone that are currently closed. (AI-inferred)
+	ClosedAt     any
 	ClosedIssues any
-	// The timestamp of when the milestone was created, in ISO 8601 format (e.g., YYYY-MM-DDTHH:MM:SSZ). (AI-inferred)
-	CreatedAt any
+	CreatedAt    any
 	// A GitHub user.
-	Creator any
-	// The description of the milestone associated with the pull request. (AI-inferred)
+	Creator     any
 	Description any
-	// The due date of the milestone, in ISO 8601 format (e.g., YYYY-MM-DDTHH:MM:SSZ). This field is required, so it always has a value. (AI-inferred)
-	DueOn any
-	// The URL to view the milestone on GitHub. (AI-inferred)
-	HtmlUrl any
-	Id any
-	// The URL for the labels endpoint of this milestone, which lists the labels associated with it. (AI-inferred)
-	LabelsUrl any
-	// The node ID of the milestone in the GitHub GraphQL API. (AI-inferred)
-	NodeId any
+	DueOn       any
+	HtmlUrl     any
+	Id          any
+	LabelsUrl   any
+	NodeId      any
 	// The number of the milestone.
-	Number any
-	// The number of open issues associated with this milestone. (AI-inferred)
+	Number     any
 	OpenIssues any
 	// The state of the milestone.
 	State any
 	// The title of the milestone.
-	Title any
-	// The timestamp of the last modification to the milestone associated with the pull request. (AI-inferred)
+	Title     any
 	UpdatedAt any
-	// The API URL for the milestone. (AI-inferred)
-	Url any
+	Url       any
 }
 
 type Request_RequestedTeams struct {
-	// The description of the team that is requested for review on the pull request. (AI-inferred)
-	Description any
-	EnterpriseId any
-	// The URL to the team's page on GitHub. (AI-inferred)
-	HtmlUrl any
-	// The unique identifier assigned to the team in GitHub. (AI-inferred)
-	Id any
-	// The LDAP distinguished name (DN) of the team that has been requested to review the pull request. (AI-inferred)
-	LdapDn any
-	// URL to retrieve the members of this team, with a placeholder for a specific member. (AI-inferred)
-	MembersUrl any
-	// The name of the team that is requested for review on this pull request. (AI-inferred)
-	Name any
-	// The GraphQL node ID of the team. (AI-inferred)
-	NodeId any
-	// The team's notification setting, indicating whether notifications are enabled or disabled. Possible values: 'notifications_enabled', 'notifications_disabled'. (AI-inferred)
+	Description         any
+	EnterpriseId        any
+	HtmlUrl             any
+	Id                  any
+	LdapDn              any
+	MembersUrl          any
+	Name                any
+	NodeId              any
 	NotificationSetting any
-	// The unique identifier of the organization that owns the team requested for review on this pull request. (AI-inferred)
-	OrganizationId any
-	// The level of access the team has to the repository (e.g., 'pull', 'push', 'admin'). (AI-inferred)
-	Permission any
-	// The privacy level of the team. For GitHub teams, this can be either 'secret' or 'closed'. (AI-inferred)
-	Privacy any
-	// The API URL that points to the list of repositories belonging to this requested team. (AI-inferred)
-	RepositoriesUrl any
-	// The slug of the team, a URL-friendly identifier used in the GitHub API to reference the team. (AI-inferred)
-	Slug any
-	// The type of the requested team, either 'enterprise' or 'organization'. (AI-inferred)
-	Type any
-	// The API URL for the team, used to retrieve team details from the GitHub API. (AI-inferred)
-	Url any
+	OrganizationId      any
+	Permission          any
+	Privacy             any
+	RepositoriesUrl     any
+	Slug                any
+	Type                any
+	Url                 any
 }
 
 type Request_Stack_Base struct {
@@ -177,7 +122,6 @@ type Request_Stack_Base struct {
 }
 
 type Request_Stack struct {
-	// The pull request's base branch section, containing details such as the branch name, commit SHA, and repository information. (AI-inferred)
 	Base any
 	// The ID of the stack that this pull request belongs to.
 	Id any
@@ -215,15 +159,11 @@ type RequestConfig struct {
 }
 
 type RequestAttrs struct {
-	// The hypermedia links associated with the pull request, including URLs for related resources such as the pull request itself, its HTML page, comments, and status checks. (AI-inferred)
-	Links any
-	// The reason a pull request is currently locked, if any. Possible values include 'off-topic', 'too heated', 'resolved', and 'spam'. This field is null when the pull request is not locked. (AI-inferred)
+	Links            any
 	ActiveLockReason any
-	// The total number of lines added in the pull request's diff, as computed by GitHub. (AI-inferred)
-	Additions any
+	Additions        any
 	// A GitHub user.
-	Assignee any
-	// A list of GitHub user objects representing the users assigned to the pull request. Each object contains standard user attributes such as login, id, and node_id. (AI-inferred)
+	Assignee  any
 	Assignees any
 	// How the author is associated with the repository.
 	AuthorAssociation any
@@ -232,88 +172,59 @@ type RequestAttrs struct {
 	// The name of the branch you want the changes pulled into. This should be an existing branch on the current repository. You cannot submit a pull request to one repository that requests a merge to a base of another repository.
 	Base any
 	// The contents of the pull request.
-	Body any
-	// The number of files that have been changed in this pull request. (AI-inferred)
+	Body         any
 	ChangedFiles any
-	// The timestamp of when the pull request was closed, or null if the pull request is still open. (AI-inferred)
-	ClosedAt any
-	// Total number of comments on the pull request. (AI-inferred)
-	Comments any
-	// The URL to retrieve comments for this pull request. (AI-inferred)
-	CommentsUrl any
-	// The number of commits contained in the pull request. (AI-inferred)
-	Commits any
-	// The URL to retrieve the list of commits made in the pull request. (AI-inferred)
-	CommitsUrl any
-	// The timestamp at which the pull request was created, automatically set by the GitHub API. (AI-inferred)
-	CreatedAt any
-	// The number of lines deleted in the pull request's diff. This is computed by GitHub and reflects the total deletions across all changed files. (AI-inferred)
-	Deletions any
-	// The URL to the diff file for this pull request. (AI-inferred)
-	DiffUrl any
+	ClosedAt     any
+	Comments     any
+	CommentsUrl  any
+	Commits      any
+	CommitsUrl   any
+	CreatedAt    any
+	Deletions    any
+	DiffUrl      any
 	// Indicates whether the pull request is a draft. See "[Draft Pull Requests](https://docs.github.com/enterprise-cloud@latest/articles/about-pull-requests#draft-pull-requests)" in the GitHub Help documentation to learn more.
 	Draft any
 	// The name of the branch where your changes are implemented. For cross-repository pull requests in the same network, namespace `head` with a user like this: `username:branch`.
 	Head any
 	// The name of the repository where the changes in the pull request were made. This field is required for cross-repository pull requests if both repositories are owned by the same organization.
 	HeadRepo any
-	// The URL to the pull request's page on GitHub, typically used to open the pull request in a web browser. (AI-inferred)
-	HtmlUrl any
-	// The unique numeric identifier assigned to the pull request by GitHub. (AI-inferred)
-	Id any
+	HtmlUrl  any
+	Id       any
 	// An issue in the repository to convert to a pull request. The issue title, body, and comments will become the title, body, and comments on the new pull request. Required unless `title` is specified.
-	Issue any
-	// The GitHub API URL for the issue associated with this pull request. Since pull requests are issues, this URL points to the pull request's issue endpoint. (AI-inferred)
+	Issue    any
 	IssueUrl any
-	Labels any
-	// Indicates whether the pull request conversation is locked, restricting commenting to users with write access. This is a read-only value set by GitHub. (AI-inferred)
-	Locked any
+	Labels   any
+	Locked   any
 	// Indicates whether [maintainers can modify](https://docs.github.com/enterprise-cloud@latest/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
 	MaintainerCanModify any
-	// The SHA of the merge commit created when the pull request is merged. This value is computed by GitHub and is only populated after a successful merge. (AI-inferred)
-	MergeCommitSha any
-	// Whether the pull request is mergeable, based on absence of merge conflicts and passing of required status checks. This is computed and reflects the current state of the pull request. (AI-inferred)
-	Mergeable any
-	// The mergeability state of the pull request, such as clean, unstable, blocked, draft, or unknown. (AI-inferred)
-	MergeableState any
-	// Indicates whether the pull request has been merged (true) or not (false). (AI-inferred)
-	Merged any
-	// The timestamp (in RFC3339 format) of when the pull request was merged, or null if it has not been merged. (AI-inferred)
-	MergedAt any
+	MergeCommitSha      any
+	Mergeable           any
+	MergeableState      any
+	Merged              any
+	MergedAt            any
 	// A GitHub user.
 	MergedBy any
 	// A collection of related issues and pull requests.
 	Milestone any
-	// The GraphQL node ID for the pull request, used to identify the resource in the GitHub GraphQL API. (AI-inferred)
-	NodeId any
+	NodeId    any
 	// Number uniquely identifying the pull request within its repository.
-	Number any
-	// The URL to the patch file for this pull request. (AI-inferred)
-	PatchUrl any
-	// Whether the pull request can be rebased. (AI-inferred)
-	Rebaseable any
-	// List of users and/or teams that have been requested to review the pull request. (AI-inferred)
+	Number             any
+	PatchUrl           any
+	Rebaseable         any
 	RequestedReviewers any
-	// Teams that have been requested to review this pull request. Each item contains team details such as id, name, slug, and permissions. (AI-inferred)
-	RequestedTeams any
-	// The URL to the review comments for this pull request, provided by the GitHub API. (AI-inferred)
-	ReviewCommentUrl any
-	// The number of review comments on the pull request. (AI-inferred)
-	ReviewComments any
-	// The API endpoint URL for the list of review comments on this pull request. (AI-inferred)
-	ReviewCommentsUrl any
+	RequestedTeams     any
+	ReviewCommentUrl   any
+	ReviewComments     any
+	ReviewCommentsUrl  any
 	// The stack information associated with a pull request.
 	Stack any
 	// State of this Pull Request. Either `open` or `closed`.
-	State any
-	// The API URL to query the commit statuses associated with the pull request's head commit. (AI-inferred)
+	State       any
 	StatusesUrl any
 	// The title of the new pull request. Required unless `issue` is specified.
-	Title any
-	// The timestamp of the last update to the pull request, in ISO 8601 format (e.g., 2025-04-01T12:34:56Z). (AI-inferred)
+	Title     any
 	UpdatedAt any
-	// The API URL of the pull request, e.g., `https://api.github.com/repos/{owner}/{repo}/pulls/{number}`. (AI-inferred)
-	Url any
+	Url       any
 	// A GitHub user.
 	User any
 	// path parameter, not part of the API's own resource representation
@@ -327,16 +238,16 @@ type RequestAttrs struct {
 var Request = ubx.ResourceBinding{
 	WireType: "github_pull_request",
 	Fields: ubx.FieldMap{
-		"Base": ubx.FieldSpec{WireName: "base"},
-		"Body": ubx.FieldSpec{WireName: "body"},
-		"Draft": ubx.FieldSpec{WireName: "draft"},
-		"Head": ubx.FieldSpec{WireName: "head"},
-		"HeadRepo": ubx.FieldSpec{WireName: "head_repo"},
-		"Issue": ubx.FieldSpec{WireName: "issue"},
+		"Base":                ubx.FieldSpec{WireName: "base"},
+		"Body":                ubx.FieldSpec{WireName: "body"},
+		"Draft":               ubx.FieldSpec{WireName: "draft"},
+		"Head":                ubx.FieldSpec{WireName: "head"},
+		"HeadRepo":            ubx.FieldSpec{WireName: "head_repo"},
+		"Issue":               ubx.FieldSpec{WireName: "issue"},
 		"MaintainerCanModify": ubx.FieldSpec{WireName: "maintainer_can_modify"},
-		"Title": ubx.FieldSpec{WireName: "title"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"PullNumber": ubx.FieldSpec{WireName: "pull_number"},
+		"Title":               ubx.FieldSpec{WireName: "title"},
+		"Owner":               ubx.FieldSpec{WireName: "owner"},
+		"Repo":                ubx.FieldSpec{WireName: "repo"},
+		"PullNumber":          ubx.FieldSpec{WireName: "pull_number"},
 	},
 }

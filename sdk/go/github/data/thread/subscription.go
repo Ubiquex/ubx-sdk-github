@@ -8,14 +8,14 @@ type SubscriptionConfig struct {
 }
 
 type SubscriptionAttrs struct {
-	CreatedAt any
-	Ignored any
-	Reason any
+	CreatedAt     any
+	Ignored       any
+	Reason        any
 	RepositoryUrl any
-	Subscribed any
-	ThreadId any
-	ThreadUrl any
-	Url any
+	Subscribed    any
+	ThreadId      any
+	ThreadUrl     any
+	Url           any
 }
 
 var Subscription = ubx.DataSourceBinding{

@@ -29,9 +29,9 @@ type GroupsEnterpriseConfig struct {
 type GroupsEnterpriseAttrs struct {
 	// Whether the runner group can be used by `public` repositories.
 	AllowsPublicRepositories any
-	Default any
-	HostedRunnersUrl any
-	Id any
+	Default                  any
+	HostedRunnersUrl         any
+	Id                       any
 	// Name of the runner group.
 	Name any
 	// The identifier of a hosted compute network configuration.
@@ -39,10 +39,10 @@ type GroupsEnterpriseAttrs struct {
 	// If `true`, the runner group will be restricted to running only the workflows specified in the `selected_workflows` array.
 	RestrictedToWorkflows any
 	// List of runner IDs to add to the runner group.
-	Runners any
+	Runners    any
 	RunnersUrl any
 	// List of organization IDs that can access the runner group.
-	SelectedOrganizationIds any
+	SelectedOrganizationIds  any
 	SelectedOrganizationsUrl any
 	// List of workflows the runner group should be allowed to run. This setting will be ignored unless `restricted_to_workflows` is set to `true`.
 	SelectedWorkflows any
@@ -60,14 +60,14 @@ var GroupsEnterprise = ubx.ResourceBinding{
 	WireType: "github_runner_groups_enterprise",
 	Fields: ubx.FieldMap{
 		"AllowsPublicRepositories": ubx.FieldSpec{WireName: "allows_public_repositories"},
-		"Name": ubx.FieldSpec{WireName: "name"},
-		"NetworkConfigurationId": ubx.FieldSpec{WireName: "network_configuration_id"},
-		"RestrictedToWorkflows": ubx.FieldSpec{WireName: "restricted_to_workflows"},
-		"Runners": ubx.FieldSpec{WireName: "runners"},
-		"SelectedOrganizationIds": ubx.FieldSpec{WireName: "selected_organization_ids"},
-		"SelectedWorkflows": ubx.FieldSpec{WireName: "selected_workflows"},
-		"Visibility": ubx.FieldSpec{WireName: "visibility"},
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"RunnerGroupId": ubx.FieldSpec{WireName: "runner_group_id"},
+		"Name":                     ubx.FieldSpec{WireName: "name"},
+		"NetworkConfigurationId":   ubx.FieldSpec{WireName: "network_configuration_id"},
+		"RestrictedToWorkflows":    ubx.FieldSpec{WireName: "restricted_to_workflows"},
+		"Runners":                  ubx.FieldSpec{WireName: "runners"},
+		"SelectedOrganizationIds":  ubx.FieldSpec{WireName: "selected_organization_ids"},
+		"SelectedWorkflows":        ubx.FieldSpec{WireName: "selected_workflows"},
+		"Visibility":               ubx.FieldSpec{WireName: "visibility"},
+		"Enterprise":               ubx.FieldSpec{WireName: "enterprise"},
+		"RunnerGroupId":            ubx.FieldSpec{WireName: "runner_group_id"},
 	},
 }

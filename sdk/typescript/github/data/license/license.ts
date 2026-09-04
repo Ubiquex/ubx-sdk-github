@@ -2,29 +2,22 @@
 import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface LicenseConfig {
-  license: string | Computed<string>;
+  featured?: boolean | Computed<boolean>;
+  page?: number | Computed<number>;
+  perPage?: number | Computed<number>;
 }
 
 export interface LicenseAttrs {
-  body: string;
-  conditions: string[];
-  description: string;
   featured: boolean;
-  htmlUrl: string;
-  implementation: string;
-  key: string;
-  license: string;
-  limitations: string[];
-  name: string;
-  nodeId: string;
-  permissions: string[];
-  spdxId: string;
-  url: string;
+  page: number;
+  perPage: number;
 }
 
 export const License: DataSourceBinding<LicenseConfig, LicenseAttrs> = {
   wireType: "github_license",
   fields: {
-    license: "license",
+    featured: "featured",
+    page: "page",
+    perPage: "per_page",
   },
 };

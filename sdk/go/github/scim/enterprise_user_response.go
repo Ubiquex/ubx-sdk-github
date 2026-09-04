@@ -5,8 +5,24 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type EnterpriseUserResponse_Emails struct {
 	Primary any
-	Type any
-	Value any
+	Type    any
+	Value   any
+}
+
+type EnterpriseUserResponse_Groups struct {
+	Display any
+	Value   any
+}
+
+type EnterpriseUserResponse_Meta struct {
+	// A date and time when the user was created.
+	Created any
+	// A data and time when the user was last modified.
+	LastModified any
+	// A URL location of an object
+	Location any
+	// A type of a resource
+	ResourceType any
 }
 
 type EnterpriseUserResponse_Name struct {
@@ -23,29 +39,29 @@ type EnterpriseUserResponse_Name struct {
 type EnterpriseUserResponse_Roles struct {
 	Display any
 	Primary any
-	Type any
-	Value any
+	Type    any
+	Value   any
 }
 
 var EnterpriseUserResponse_EmailsFields = ubx.FieldMap{
-		"Primary": ubx.FieldSpec{WireName: "primary"},
-		"Type": ubx.FieldSpec{WireName: "type"},
-		"Value": ubx.FieldSpec{WireName: "value"},
-	}
+	"Primary": ubx.FieldSpec{WireName: "primary"},
+	"Type":    ubx.FieldSpec{WireName: "type"},
+	"Value":   ubx.FieldSpec{WireName: "value"},
+}
 
 var EnterpriseUserResponse_NameFields = ubx.FieldMap{
-		"FamilyName": ubx.FieldSpec{WireName: "family_name"},
-		"Formatted": ubx.FieldSpec{WireName: "formatted"},
-		"GivenName": ubx.FieldSpec{WireName: "given_name"},
-		"MiddleName": ubx.FieldSpec{WireName: "middle_name"},
-	}
+	"FamilyName": ubx.FieldSpec{WireName: "family_name"},
+	"Formatted":  ubx.FieldSpec{WireName: "formatted"},
+	"GivenName":  ubx.FieldSpec{WireName: "given_name"},
+	"MiddleName": ubx.FieldSpec{WireName: "middle_name"},
+}
 
 var EnterpriseUserResponse_RolesFields = ubx.FieldMap{
-		"Display": ubx.FieldSpec{WireName: "display"},
-		"Primary": ubx.FieldSpec{WireName: "primary"},
-		"Type": ubx.FieldSpec{WireName: "type"},
-		"Value": ubx.FieldSpec{WireName: "value"},
-	}
+	"Display": ubx.FieldSpec{WireName: "display"},
+	"Primary": ubx.FieldSpec{WireName: "primary"},
+	"Type":    ubx.FieldSpec{WireName: "type"},
+	"Value":   ubx.FieldSpec{WireName: "value"},
+}
 
 type EnterpriseUserResponseConfig struct {
 	// Whether the user active in the IdP.
@@ -56,7 +72,7 @@ type EnterpriseUserResponseConfig struct {
 	Emails any
 	// A unique identifier for the resource as defined by the provisioning client.
 	ExternalId any
-	Name any
+	Name       any
 	// The roles assigned to the user.
 	Roles any
 	// The URIs that are used to indicate the namespaces of the SCIM schemas.
@@ -78,6 +94,12 @@ type EnterpriseUserResponseAttrs struct {
 	Emails any
 	// A unique identifier for the resource as defined by the provisioning client.
 	ExternalId any
+	// Provisioned SCIM groups that the user is a member of.
+	Groups any
+	// The internally generated id for the user object.
+	Id any
+	// The metadata associated with the creation/updates to the user.
+	Meta any
 	Name any
 	// The roles assigned to the user.
 	Roles any
@@ -94,26 +116,26 @@ type EnterpriseUserResponseAttrs struct {
 var EnterpriseUserResponse = ubx.ResourceBinding{
 	WireType: "github_scim_enterprise_user_response",
 	Fields: ubx.FieldMap{
-		"Active": ubx.FieldSpec{WireName: "active"},
+		"Active":      ubx.FieldSpec{WireName: "active"},
 		"DisplayName": ubx.FieldSpec{WireName: "display_name"},
 		"Emails": ubx.FieldSpec{
 			WireName: "emails",
-			Kind: "list",
-			Fields: EnterpriseUserResponse_EmailsFields,
+			Kind:     "list",
+			Fields:   EnterpriseUserResponse_EmailsFields,
 		},
 		"ExternalId": ubx.FieldSpec{WireName: "external_id"},
 		"Name": ubx.FieldSpec{
 			WireName: "name",
-			Kind: "object",
-			Fields: EnterpriseUserResponse_NameFields,
+			Kind:     "object",
+			Fields:   EnterpriseUserResponse_NameFields,
 		},
 		"Roles": ubx.FieldSpec{
 			WireName: "roles",
-			Kind: "list",
-			Fields: EnterpriseUserResponse_RolesFields,
+			Kind:     "list",
+			Fields:   EnterpriseUserResponse_RolesFields,
 		},
-		"Schemas": ubx.FieldSpec{WireName: "schemas"},
-		"UserName": ubx.FieldSpec{WireName: "user_name"},
+		"Schemas":    ubx.FieldSpec{WireName: "schemas"},
+		"UserName":   ubx.FieldSpec{WireName: "user_name"},
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
 		"ScimUserId": ubx.FieldSpec{WireName: "scim_user_id"},
 	},

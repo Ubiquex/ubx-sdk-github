@@ -44,12 +44,12 @@ type ConfigurationAttrs struct {
 var Configuration = ubx.ResourceBinding{
 	WireType: "github_network_configuration",
 	Fields: ubx.FieldMap{
-		"ComputeService": ubx.FieldSpec{WireName: "compute_service"},
-		"FailoverNetworkEnabled": ubx.FieldSpec{WireName: "failover_network_enabled"},
+		"ComputeService":             ubx.FieldSpec{WireName: "compute_service"},
+		"FailoverNetworkEnabled":     ubx.FieldSpec{WireName: "failover_network_enabled"},
 		"FailoverNetworkSettingsIds": ubx.FieldSpec{WireName: "failover_network_settings_ids"},
-		"Name": ubx.FieldSpec{WireName: "name"},
-		"NetworkSettingsIds": ubx.FieldSpec{WireName: "network_settings_ids"},
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"NetworkConfigurationId": ubx.FieldSpec{WireName: "network_configuration_id"},
+		"Name":                       ubx.FieldSpec{WireName: "name"},
+		"NetworkSettingsIds":         ubx.FieldSpec{WireName: "network_settings_ids"},
+		"Enterprise":                 ubx.FieldSpec{WireName: "enterprise"},
+		"NetworkConfigurationId":     ubx.FieldSpec{WireName: "network_configuration_id"},
 	},
 }

@@ -8,75 +8,45 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class RequestReview_Links_Html:
-    # The URL to the HTML page for this pull request review. (AI-inferred)
     href: Any = None
 
 @dataclasses.dataclass
 class RequestReview_Links:
-    # Provides the URL to the review's HTML page on GitHub, allowing direct access to the review in the web interface. (AI-inferred)
     html: Any = None
-    # A link to the pull request that this review belongs to. The link object typically contains an `href` field with the API URL of the pull request. (AI-inferred)
     pull_request: Any = None
 
 @dataclasses.dataclass
 class RequestReview_Comments:
-    # The text content of the review comment. (AI-inferred)
     body: Any = None
-    # The line number in the pull request diff that the comment applies to, based on the current version of the file. (AI-inferred)
     line: Any = None
-    # The path to the file in the repository that the comment is associated with, relative to the repository root. (AI-inferred)
     path: Any = None
-    # The line number in the pull request diff where the comment is located. Deprecated in favor of the 'line' field. (AI-inferred)
     position: Any = None
-    # The side of the diff to which the comment applies. Valid values are 'LEFT' and 'RIGHT'. (AI-inferred)
     side: Any = None
-    # For multi-line review comments, the line number in the diff where the comment begins. This is null for single-line comments. (AI-inferred)
     start_line: Any = None
-    # Indicates which side of the diff the start of a multi-line comment applies to. Valid values are 'LEFT' or 'RIGHT', with 'RIGHT' as the default. (AI-inferred)
     start_side: Any = None
 
 @dataclasses.dataclass
 class RequestReview_User:
-    # The URL of the user's avatar image. (AI-inferred)
     avatar_url: Any = None
-    # The email address of the user who authored the pull request review. This field is only populated if the user has made their email address public on GitHub. (AI-inferred)
     email: Any = None
-    # The URL to the user's public events list. (AI-inferred)
     events_url: Any = None
-    # The URL to the list of followers for this user. (AI-inferred)
     followers_url: Any = None
-    # The URL template for the list of users that the user is following, with an optional {/other_user} placeholder. This is a standard GitHub API user field. (AI-inferred)
     following_url: Any = None
-    # The URL to the user's gists. (AI-inferred)
     gists_url: Any = None
-    # The user's Gravatar ID, a legacy identifier derived from their email address. This field is deprecated; prefer using avatar_url. (AI-inferred)
     gravatar_id: Any = None
-    # The URL to the user's GitHub profile page. (AI-inferred)
     html_url: Any = None
-    # The unique numeric identifier for the GitHub user who authored the pull request review. (AI-inferred)
     id: Any = None
-    # The GitHub username (login) of the user who submitted the pull request review. (AI-inferred)
     login: Any = None
-    # The display name of the user who created the pull request review. (AI-inferred)
     name: Any = None
-    # The GraphQL node ID of the user who authored the pull request review, used to identify the user in GitHub's GraphQL API. (AI-inferred)
     node_id: Any = None
-    # The URL to fetch the list of organizations the user belongs to via the GitHub API. (AI-inferred)
     organizations_url: Any = None
-    # The API endpoint that lists events received by this user. (AI-inferred)
     received_events_url: Any = None
-    # The URL to the list of repositories owned by the user on GitHub. (AI-inferred)
     repos_url: Any = None
-    # Boolean indicating whether the user is a site administrator for GitHub. It is present in user objects within pull request reviews, where it is true for users with site-wide admin privileges. (AI-inferred)
     site_admin: Any = None
     starred_at: Any = None
-    # URL to the list of repositories starred by this user. (AI-inferred)
     starred_url: Any = None
-    # The API URL pointing to the user's subscriptions, typically used to retrieve repositories and notifications the user is subscribed to. (AI-inferred)
     subscriptions_url: Any = None
-    # The type of GitHub account, typically 'User' or 'Organization'. (AI-inferred)
     type: Any = None
-    # The URL to the user's GitHub profile. (AI-inferred)
     url: Any = None
     user_view_type: Any = None
 
@@ -111,15 +81,12 @@ class RequestReviewConfig:
 
 @dataclasses.dataclass
 class RequestReviewAttrs:
-    # Computed list of URLs to related resources for this pull request review, typically including self, html, and pull_request links, as returned by the GitHub API. (AI-inferred)
     links: Any = None
     # How the author is associated with the repository.
     author_association: Any = None
     # **Required** when using `REQUEST_CHANGES` or `COMMENT` for the `event` parameter. The body text of the pull request review.
     body: Any = None
-    # The HTML-rendered content of the pull request review body, generated from the Markdown body. (AI-inferred)
     body_html: Any = None
-    # The plain text version of the pull request review body. (AI-inferred)
     body_text: Any = None
     # Use the following table to specify the location, destination, and contents of the draft review comment.
     comments: Any = None
@@ -127,17 +94,12 @@ class RequestReviewAttrs:
     commit_id: Any = None
     # The review action you want to perform. The review actions include: `APPROVE`, `REQUEST_CHANGES`, or `COMMENT`. By leaving this blank, you set the review action state to `PENDING`, which means you will need to [submit the pull request review](https://docs.github.com/enterprise-cloud@latest/rest/pulls/reviews#submit-a-review-for-a-pull-request) when you are ready.
     event: Any = None
-    # The GitHub URL for the pull request review. (AI-inferred)
     html_url: Any = None
     # Unique identifier of the review
     id: Any = None
-    # The unique identifier assigned by GitHub for use with the GraphQL API. (AI-inferred)
     node_id: Any = None
-    # The API URL of the pull request associated with this review. (AI-inferred)
     pull_request_url: Any = None
-    # The state of the pull request review, representing the review's outcome as reported by GitHub. (AI-inferred)
     state: Any = None
-    # The timestamp of when this pull request review was submitted, provided by the GitHub API. (AI-inferred)
     submitted_at: Any = None
     # A GitHub user.
     user: Any = None

@@ -8,46 +8,27 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class ScanningVariantAnalysis_Actor:
-    # The URL of the actor's avatar image. (AI-inferred)
     avatar_url: Any = None
-    # The email address of the actor who triggered or is associated with the code scanning variant analysis. (AI-inferred)
     email: Any = None
-    # The URL at which the actor's public events can be retrieved. (AI-inferred)
     events_url: Any = None
-    # The URL to the GitHub followers list for the actor, as returned by the GitHub API. (AI-inferred)
     followers_url: Any = None
-    # The URL template for listing the users this actor is following, with an optional {/other_user} placeholder for a specific user. (AI-inferred)
     following_url: Any = None
-    # The URL to the actor's gists list in the GitHub API. (AI-inferred)
     gists_url: Any = None
-    # The unique hash identifying the user's Gravatar image, used to generate the avatar URL via Gravatar service. (AI-inferred)
     gravatar_id: Any = None
-    # The URL to the GitHub profile of the actor (user or bot) that triggered the variant analysis. (AI-inferred)
     html_url: Any = None
-    # The numeric identifier of the user or bot account that triggered the code scanning variant analysis. (AI-inferred)
     id: Any = None
-    # The GitHub username (login) of the actor who initiated the variant analysis. This field is required. (AI-inferred)
     login: Any = None
     name: Any = None
-    # The GraphQL node identifier for the actor (user or bot) that triggered the variant analysis. (AI-inferred)
     node_id: Any = None
-    # The URL to the organizations endpoint for this actor, listing the organizations to which the actor belongs. (AI-inferred)
     organizations_url: Any = None
-    # The URL to the actor's received events. (AI-inferred)
     received_events_url: Any = None
-    # The URL to the GitHub API endpoint that lists repositories owned by the actor. (AI-inferred)
     repos_url: Any = None
-    # Whether the actor is a GitHub site administrator. (AI-inferred)
     site_admin: Any = None
     starred_at: Any = None
-    # The URL template to list the repositories starred by the actor. (AI-inferred)
     starred_url: Any = None
-    # The API endpoint URL for the subscriptions of the actor (user or bot) that triggered the code scanning variant analysis. (AI-inferred)
     subscriptions_url: Any = None
     type: Any = None
-    # The GitHub API URL for the actor associated with the code scanning variant analysis. (AI-inferred)
     url: Any = None
-    # The user's view type, which indicates whether the user account is publicly visible or private. Possible values are 'public' and 'private'. (AI-inferred)
     user_view_type: Any = None
 
 @dataclasses.dataclass
@@ -147,29 +128,19 @@ class ScanningVariantAnalysis_ControllerRepo:
 
 @dataclasses.dataclass
 class ScanningVariantAnalysis_ScannedRepositories_Repository:
-    # The full name of the repository, formatted as `owner/name` (e.g., `octocat/Hello-World`). (AI-inferred)
     full_name: Any = None
-    # The unique numeric identifier of the GitHub repository. (AI-inferred)
     id: Any = None
     name: Any = None
-    # Indicates whether the repository is private (true) or public (false). (AI-inferred)
     private: Any = None
-    # The number of users who have starred the repository. (AI-inferred)
     stargazers_count: Any = None
-    # The timestamp of the last update to the repository, in ISO 8601 format. This indicates when the repository's metadata or content was last modified. (AI-inferred)
     updated_at: Any = None
 
 @dataclasses.dataclass
 class ScanningVariantAnalysis_ScannedRepositories:
-    # The current status of the variant analysis for a repository. Possible values are pending, in_progress, succeeded, failed, canceled, and timed_out. (AI-inferred)
     analysis_status: Any = None
-    # The exact size in bytes of the analysis artifact associated with this scanned repository. (AI-inferred)
     artifact_size_in_bytes: Any = None
-    # The error message indicating why the analysis failed for this repository, if applicable. (AI-inferred)
     failure_message: Any = None
-    # The GitHub repository that was scanned as part of the variant analysis. (AI-inferred)
     repository: Any = None
-    # The number of code scanning results detected in this repository for the variant analysis. (AI-inferred)
     result_count: Any = None
 
 @dataclasses.dataclass
@@ -188,13 +159,9 @@ class ScanningVariantAnalysis_SkippedRepositories_NotFoundRepos:
 
 @dataclasses.dataclass
 class ScanningVariantAnalysis_SkippedRepositories:
-    # An object containing a repository count and a list of repositories that were skipped because the analyzed access token does not have permission to access them. (AI-inferred)
     access_mismatch_repos: Any = None
-    # An object containing details about repositories that were skipped from the variant analysis due to no CodeQL database being available. (AI-inferred)
     no_codeql_db_repos: Any = None
-    # An object describing repositories that could not be found during the code scanning variant analysis, and were therefore skipped. This is a required part of the skipped repositories summary. (AI-inferred)
     not_found_repos: Any = None
-    # An object containing details about repositories that were skipped because they exceeded the repository limit. (AI-inferred)
     over_limit_repos: Any = None
 
 @dataclasses.dataclass
@@ -246,11 +213,9 @@ class ScanningVariantAnalysisAttrs:
     repository_lists: Any = None
     # List of organization or user names whose repositories the query should be run against. Precisely one property from `repositories`, `repository_lists` and `repository_owners` is required.
     repository_owners: Any = None
-    # The list of repositories that were scanned as part of the GitHub code scanning variant analysis. (AI-inferred)
     scanned_repositories: Any = None
     # Information about repositories that were skipped from processing. This information is only available to the user that initiated the variant analysis.
     skipped_repositories: Any = None
-    # The current status of the variant analysis, which can be 'in_progress', 'succeeded', 'failed', or 'cancelled'. (AI-inferred)
     status: Any = None
     # The date and time at which the variant analysis was last updated, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
     updated_at: Any = None

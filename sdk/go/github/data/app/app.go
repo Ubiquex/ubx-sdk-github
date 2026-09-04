@@ -4,19 +4,22 @@ package app
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type AppConfig struct {
-	Page any
-	PerPage any
+	Branch any
+	Owner  any
+	Repo   any
 }
 
 type AppAttrs struct {
-	Page any
-	PerPage any
+	Branch any
+	Owner  any
+	Repo   any
 }
 
 var App = ubx.DataSourceBinding{
 	WireType: "github_app",
 	Fields: ubx.FieldMap{
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Branch": ubx.FieldSpec{WireName: "branch"},
+		"Owner":  ubx.FieldSpec{WireName: "owner"},
+		"Repo":   ubx.FieldSpec{WireName: "repo"},
 	},
 }

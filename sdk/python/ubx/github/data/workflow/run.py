@@ -7,7 +7,7 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
-class Run_Actor:
+class Run_WorkflowRuns_Actor:
     avatar_url: Any = None
     email: Any = None
     events_url: Any = None
@@ -32,29 +32,21 @@ class Run_Actor:
     user_view_type: Any = None
 
 @dataclasses.dataclass
-class Run_HeadCommit_Author:
-    # Git email address of the commit's author
+class Run_WorkflowRuns_HeadCommit_Author:
     email: Any = None
-    # Name of the commit's author
     name: Any = None
 
 @dataclasses.dataclass
-class Run_HeadCommit:
-    # Information about the Git author
+class Run_WorkflowRuns_HeadCommit:
     author: Any = None
-    # Information about the Git committer
     committer: Any = None
-    # SHA for the commit
     id: Any = None
-    # Message describing the purpose of the commit
     message: Any = None
-    # Timestamp of the commit
     timestamp: Any = None
-    # SHA for the commit's tree
     tree_id: Any = None
 
 @dataclasses.dataclass
-class Run_HeadRepository_CodeOfConduct:
+class Run_WorkflowRuns_HeadRepository_CodeOfConduct:
     body: Any = None
     html_url: Any = None
     key: Any = None
@@ -62,7 +54,7 @@ class Run_HeadRepository_CodeOfConduct:
     url: Any = None
 
 @dataclasses.dataclass
-class Run_HeadRepository_License:
+class Run_WorkflowRuns_HeadRepository_License:
     key: Any = None
     name: Any = None
     node_id: Any = None
@@ -70,7 +62,7 @@ class Run_HeadRepository_License:
     url: Any = None
 
 @dataclasses.dataclass
-class Run_HeadRepository_Permissions:
+class Run_WorkflowRuns_HeadRepository_Permissions:
     admin: Any = None
     maintain: Any = None
     pull: Any = None
@@ -78,26 +70,23 @@ class Run_HeadRepository_Permissions:
     triage: Any = None
 
 @dataclasses.dataclass
-class Run_HeadRepository_SecurityAndAnalysis_AdvancedSecurity:
+class Run_WorkflowRuns_HeadRepository_SecurityAndAnalysis_AdvancedSecurity:
     status: Any = None
 
 @dataclasses.dataclass
-class Run_HeadRepository_SecurityAndAnalysis_SecretScanningDelegatedBypassOptions_Reviewers:
+class Run_WorkflowRuns_HeadRepository_SecurityAndAnalysis_SecretScanningDelegatedBypassOptions_Reviewers:
     mode: Any = None
     reviewer_id: Any = None
     reviewer_type: Any = None
 
 @dataclasses.dataclass
-class Run_HeadRepository_SecurityAndAnalysis_SecretScanningDelegatedBypassOptions:
-    # The bypass reviewers for secret scanning delegated bypass
+class Run_WorkflowRuns_HeadRepository_SecurityAndAnalysis_SecretScanningDelegatedBypassOptions:
     reviewers: Any = None
 
 @dataclasses.dataclass
-class Run_HeadRepository_SecurityAndAnalysis:
-    # Enable or disable GitHub Advanced Security for the repository. For standalone Code Scanning or Secret Protection products, this parameter cannot be used.
+class Run_WorkflowRuns_HeadRepository_SecurityAndAnalysis:
     advanced_security: Any = None
     code_security: Any = None
-    # Enable or disable Dependabot security updates for the repository.
     dependabot_security_updates: Any = None
     secret_scanning: Any = None
     secret_scanning_ai_detection: Any = None
@@ -109,7 +98,7 @@ class Run_HeadRepository_SecurityAndAnalysis:
     secret_scanning_validity_checks: Any = None
 
 @dataclasses.dataclass
-class Run_HeadRepository:
+class Run_WorkflowRuns_HeadRepository:
     allow_forking: Any = None
     archive_url: Any = None
     archived: Any = None
@@ -117,7 +106,6 @@ class Run_HeadRepository:
     blobs_url: Any = None
     branches_url: Any = None
     clone_url: Any = None
-    # Code Of Conduct
     code_of_conduct: Any = None
     collaborators_url: Any = None
     comments_url: Any = None
@@ -126,7 +114,6 @@ class Run_HeadRepository:
     contents_url: Any = None
     contributors_url: Any = None
     created_at: Any = None
-    # The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
     custom_properties: Any = None
     default_branch: Any = None
     delete_branch_on_merge: Any = None
@@ -173,18 +160,15 @@ class Run_HeadRepository:
     notifications_url: Any = None
     open_issues: Any = None
     open_issues_count: Any = None
-    # A GitHub user.
     owner: Any = None
     permissions: Any = None
     private: Any = None
-    # The policy controlling who can create pull requests: all or collaborators_only.
     pull_request_creation_policy: Any = None
     pulls_url: Any = None
     pushed_at: Any = None
     releases_url: Any = None
     role_name: Any = None
     security_and_analysis: Any = None
-    # The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
     size: Any = None
     ssh_url: Any = None
     stargazers_count: Any = None
@@ -207,19 +191,19 @@ class Run_HeadRepository:
     web_commit_signoff_required: Any = None
 
 @dataclasses.dataclass
-class Run_PullRequests_Base_Repo:
+class Run_WorkflowRuns_PullRequests_Base_Repo:
     id: Any = None
     name: Any = None
     url: Any = None
 
 @dataclasses.dataclass
-class Run_PullRequests_Base:
+class Run_WorkflowRuns_PullRequests_Base:
     ref: Any = None
     repo: Any = None
     sha: Any = None
 
 @dataclasses.dataclass
-class Run_PullRequests:
+class Run_WorkflowRuns_PullRequests:
     base: Any = None
     head: Any = None
     id: Any = None
@@ -227,93 +211,96 @@ class Run_PullRequests:
     url: Any = None
 
 @dataclasses.dataclass
-class Run_ReferencedWorkflows:
+class Run_WorkflowRuns_ReferencedWorkflows:
     path: Any = None
     ref: Any = None
     sha: Any = None
 
 @dataclasses.dataclass
-class RunConfig:
-    exclude_pull_requests: Any = None
-    owner: Any = None
-    repo: Any = None
-    run_id: Any = None
-
-@dataclasses.dataclass
-class RunAttrs:
-    # A GitHub user.
+class Run_WorkflowRuns:
     actor: Any = None
-    # The URL to the artifacts for the workflow run.
     artifacts_url: Any = None
-    # The URL to cancel the workflow run.
     cancel_url: Any = None
-    # The ID of the associated check suite.
     check_suite_id: Any = None
-    # The node ID of the associated check suite.
     check_suite_node_id: Any = None
-    # The URL to the associated check suite.
     check_suite_url: Any = None
     conclusion: Any = None
     created_at: Any = None
-    # The event-specific title associated with the run or the run-name if set, or the value of `run-name` if it is set in the workflow.
     display_title: Any = None
     event: Any = None
-    exclude_pull_requests: Any = None
     head_branch: Any = None
-    # A commit.
     head_commit: Any = None
-    # Minimal Repository
     head_repository: Any = None
     head_repository_id: Any = None
-    # The SHA of the head commit that points to the version of the workflow being run.
     head_sha: Any = None
     html_url: Any = None
-    # The ID of the workflow run.
     id: Any = None
-    # The URL to the jobs for the workflow run.
     jobs_url: Any = None
-    # The URL to download the logs for the workflow run.
     logs_url: Any = None
-    # The name of the workflow run.
     name: Any = None
     node_id: Any = None
-    owner: Any = None
-    # The full path of the workflow
     path: Any = None
-    # The URL to the previous attempted run of this workflow, if one exists.
     previous_attempt_url: Any = None
-    # Pull requests that are open with a `head_sha` or `head_branch` that matches the workflow run. The returned pull requests do not necessarily indicate pull requests that triggered the run.
     pull_requests: Any = None
     referenced_workflows: Any = None
-    repo: Any = None
-    # Minimal Repository
     repository: Any = None
-    # The URL to rerun the workflow run.
     rerun_url: Any = None
-    # Attempt number of the run, 1 for first attempt and higher if the workflow was re-run.
     run_attempt: Any = None
-    run_id: Any = None
-    # The auto incrementing run number for the workflow run.
     run_number: Any = None
-    # The start time of the latest run. Resets on re-run.
     run_started_at: Any = None
     status: Any = None
-    # A GitHub user.
     triggering_actor: Any = None
     updated_at: Any = None
-    # The URL to the workflow run.
     url: Any = None
-    # The ID of the parent workflow.
     workflow_id: Any = None
-    # The URL to the workflow.
     workflow_url: Any = None
+
+@dataclasses.dataclass
+class RunConfig:
+    actor: Any = None
+    branch: Any = None
+    check_suite_id: Any = None
+    created: Any = None
+    event: Any = None
+    exclude_pull_requests: Any = None
+    head_sha: Any = None
+    owner: Any = None
+    page: Any = None
+    per_page: Any = None
+    repo: Any = None
+    status: Any = None
+
+@dataclasses.dataclass
+class RunAttrs:
+    actor: Any = None
+    branch: Any = None
+    check_suite_id: Any = None
+    created: Any = None
+    event: Any = None
+    exclude_pull_requests: Any = None
+    head_sha: Any = None
+    owner: Any = None
+    page: Any = None
+    per_page: Any = None
+    repo: Any = None
+    status: Any = None
+    total_count: Any = None
+    workflow_runs: Any = None
 
 Run = ubx.DataSourceBinding(
     wire_type="github_workflow_run",
     fields={
+        "actor": ubx.FieldSpec(wire_name="actor"),
+        "branch": ubx.FieldSpec(wire_name="branch"),
+        "check_suite_id": ubx.FieldSpec(wire_name="check_suite_id"),
+        "created": ubx.FieldSpec(wire_name="created"),
+        "event": ubx.FieldSpec(wire_name="event"),
         "exclude_pull_requests": ubx.FieldSpec(wire_name="exclude_pull_requests"),
+        "head_sha": ubx.FieldSpec(wire_name="head_sha"),
         "owner": ubx.FieldSpec(wire_name="owner"),
+        "page": ubx.FieldSpec(wire_name="page"),
+        "per_page": ubx.FieldSpec(wire_name="per_page"),
         "repo": ubx.FieldSpec(wire_name="repo"),
-        "run_id": ubx.FieldSpec(wire_name="run_id"),
+        "status": ubx.FieldSpec(wire_name="status"),
     },
 )

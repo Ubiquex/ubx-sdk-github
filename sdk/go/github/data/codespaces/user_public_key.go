@@ -15,6 +15,5 @@ type UserPublicKeyAttrs struct {
 
 var UserPublicKey = ubx.DataSourceBinding{
 	WireType: "github_codespaces_user_public_key",
-	Fields: ubx.FieldMap{
-	},
+	Fields:   ubx.FieldMap{},
 }

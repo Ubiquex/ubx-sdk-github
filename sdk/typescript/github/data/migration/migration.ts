@@ -2,14 +2,14 @@
 import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface MigrationConfig {
-  migrationId: number | Computed<number>;
+  exclude?: string[] | Computed<string[]>;
   org: string | Computed<string>;
   page?: number | Computed<number>;
   perPage?: number | Computed<number>;
 }
 
 export interface MigrationAttrs {
-  migrationId: number;
+  exclude: string[];
   org: string;
   page: number;
   perPage: number;
@@ -18,7 +18,7 @@ export interface MigrationAttrs {
 export const Migration: DataSourceBinding<MigrationConfig, MigrationAttrs> = {
   wireType: "github_migration",
   fields: {
-    migrationId: "migration_id",
+    exclude: "exclude",
     org: "org",
     page: "page",
     perPage: "per_page",

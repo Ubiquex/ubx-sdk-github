@@ -2,28 +2,25 @@
 import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface InstallationConfig {
-  enterprise: string | Computed<string>;
-  installationId: number | Computed<number>;
-  org: string | Computed<string>;
+  outdated?: string | Computed<string>;
   page?: number | Computed<number>;
   perPage?: number | Computed<number>;
+  since?: string | Computed<string>;
 }
 
 export interface InstallationAttrs {
-  enterprise: string;
-  installationId: number;
-  org: string;
+  outdated: string;
   page: number;
   perPage: number;
+  since: string;
 }
 
 export const Installation: DataSourceBinding<InstallationConfig, InstallationAttrs> = {
   wireType: "github_installation",
   fields: {
-    enterprise: "enterprise",
-    installationId: "installation_id",
-    org: "org",
+    outdated: "outdated",
     page: "page",
     perPage: "per_page",
+    since: "since",
   },
 };

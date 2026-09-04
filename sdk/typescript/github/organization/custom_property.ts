@@ -27,8 +27,14 @@ export interface CustomPropertyAttrs {
   defaultValue: unknown;
   /** Short description of the property. */
   description: string;
+  /** The name of the property */
+  propertyName: string;
   /** Whether the property is required. */
   required: boolean;
+  /** The source type of the property */
+  sourceType: string;
+  /** The URL that can be used to fetch, update, or delete info about this property via the API. */
+  url: string;
   /** The type of the value for the property. */
   valueType: string;
   /** Who can edit the values of the property. */

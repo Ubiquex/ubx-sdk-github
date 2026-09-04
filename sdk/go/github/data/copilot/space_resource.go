@@ -3,35 +3,31 @@ package copilot
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
+type SpaceResource_Resources struct {
+	CopilotChatAttachmentId any
+	CreatedAt               any
+	Id                      any
+	Metadata                any
+	ResourceType            any
+	UpdatedAt               any
+}
+
 type SpaceResourceConfig struct {
+	Org         any
 	SpaceNumber any
-	SpaceResourceId any
-	Username any
 }
 
 type SpaceResourceAttrs struct {
-	// The ID of the associated chat attachment, if any.
-	CopilotChatAttachmentId any
-	// The date and time the resource was created.
-	CreatedAt any
-	// The unique identifier of the resource.
-	Id any
-	// Resource-specific metadata. The keys and values depend on the resource type.
-	Metadata any
-	// The type of the resource.
-	ResourceType any
+	Org any
+	// The list of resources attached to this Copilot Space.
+	Resources   any
 	SpaceNumber any
-	SpaceResourceId any
-	// The date and time the resource was last updated.
-	UpdatedAt any
-	Username any
 }
 
 var SpaceResource = ubx.DataSourceBinding{
 	WireType: "github_copilot_space_resource",
 	Fields: ubx.FieldMap{
+		"Org":         ubx.FieldSpec{WireName: "org"},
 		"SpaceNumber": ubx.FieldSpec{WireName: "space_number"},
-		"SpaceResourceId": ubx.FieldSpec{WireName: "space_resource_id"},
-		"Username": ubx.FieldSpec{WireName: "username"},
 	},
 }

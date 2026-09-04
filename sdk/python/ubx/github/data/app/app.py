@@ -8,18 +8,21 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class AppConfig:
-    page: Any = None
-    per_page: Any = None
+    branch: Any = None
+    owner: Any = None
+    repo: Any = None
 
 @dataclasses.dataclass
 class AppAttrs:
-    page: Any = None
-    per_page: Any = None
+    branch: Any = None
+    owner: Any = None
+    repo: Any = None
 
 App = ubx.DataSourceBinding(
     wire_type="github_app",
     fields={
-        "page": ubx.FieldSpec(wire_name="page"),
-        "per_page": ubx.FieldSpec(wire_name="per_page"),
+        "branch": ubx.FieldSpec(wire_name="branch"),
+        "owner": ubx.FieldSpec(wire_name="owner"),
+        "repo": ubx.FieldSpec(wire_name="repo"),
     },
 )
