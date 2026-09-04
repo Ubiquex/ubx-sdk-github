@@ -6,6 +6,7 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 type Hook_Config struct {
 	// The media type used to serialize the payloads. Supported values include `json` and `form`. The default is `form`.
 	ContentType any
+	// Controls whether SSL verification is enabled for webhook deliveries. Set to '1' or true to ignore SSL certificate errors, or '0' or false to require valid certificates. Accepts both boolean and string values due to its dynamic type. Optional. (AI-inferred)
 	InsecureSsl any
 	Password    any
 	// If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value for [delivery signature headers](https://docs.github.com/enterprise-cloud@latest/webhooks/event-payloads/#delivery-headers).
@@ -43,18 +44,25 @@ type HookAttrs struct {
 	// Determines if notifications are sent when the webhook is triggered. Set to `true` to send notifications.
 	Active any
 	// Key/value pairs to provide settings for this webhook.
-	Config        any
-	CreatedAt     any
+	Config any
+	// The timestamp of when the organization hook was created. (AI-inferred)
+	CreatedAt any
+	// The URL to list the webhook deliveries for this organization webhook. (AI-inferred)
 	DeliveriesUrl any
 	// Determines what [events](https://docs.github.com/enterprise-cloud@latest/webhooks/event-payloads) the hook is triggered for. Set to `["*"]` to receive all possible events.
 	Events any
-	Id     any
+	// The real, numeric, globally unique identifier for this object. (AI-inferred)
+	Id any
 	// Must be passed as "web".
-	Name      any
-	PingUrl   any
-	Type      any
+	Name any
+	// The URL that can be pinged to trigger a test event for this organization webhook. (AI-inferred)
+	PingUrl any
+	// The type of the organization webhook, such as 'web'. (AI-inferred)
+	Type any
+	// The timestamp of the last update to the GitHub organization webhook, set by the system. (AI-inferred)
 	UpdatedAt any
-	Url       any
+	// The URL of the hook as returned by the GitHub API. This is the API endpoint for the hook itself (e.g., https://api.github.com/orgs/ORG/hooks/HOOK_ID), not the webhook receiver URL. (AI-inferred)
+	Url any
 	// path parameter, not part of the API's own resource representation
 	Org any
 	// path parameter, not part of the API's own resource representation

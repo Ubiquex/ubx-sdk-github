@@ -43,6 +43,7 @@ class CostCenterAttrs:
     id: Any = None
     # The name of the cost center (max length 255 characters)
     name: Any = None
+    # The real users and repositories billed against this cost center. (AI-inferred)
     resources: Any = None
     # State of the cost center.
     state: Any = None

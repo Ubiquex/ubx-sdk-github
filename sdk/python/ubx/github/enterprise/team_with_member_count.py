@@ -27,6 +27,7 @@ class TeamWithMemberCountConfig:
 
 @dataclasses.dataclass
 class TeamWithMemberCountAttrs:
+    # The real timestamp this object was created. (AI-inferred)
     created_at: Any = None
     # A description of the team.
     description: Any = None
@@ -34,10 +35,13 @@ class TeamWithMemberCountAttrs:
     group_id: Any = None
     # Retired: this field will not be returned with GHEC enterprise teams.
     group_name: Any = None
+    # The real, browsable URL for this enterprise team. (AI-inferred)
     html_url: Any = None
+    # The real, numeric, globally unique identifier for this object. (AI-inferred)
     id: Any = None
     # The number of members in the enterprise team.
     members_count: Any = None
+    # The real API URL template for listing this enterprise team's own members. (AI-inferred)
     members_url: Any = None
     # The name of the team.
     name: Any = None
@@ -45,10 +49,13 @@ class TeamWithMemberCountAttrs:
     notification_setting: Any = None
     # Specifies which organizations in the enterprise should have access to this team. Can be one of `disabled`, `selected`, or `all`. `disabled`: The team is not assigned to any organizations. This is the default when you create a new team. `selected`: The team is assigned to specific organizations. You can then use the [add organization assignments API](https://docs.github.com/enterprise-cloud@latest/rest/enterprise-teams/enterprise-team-organizations#add-organization-assignments) endpoint. `all`: The team is assigned to all current and future organizations in the enterprise.
     organization_selection_type: Any = None
+    # This enterprise team's own real, URL-safe identifier. (AI-inferred)
     slug: Any = None
     # Retired: this field is no longer supported. Whether the enterprise team should be reflected in each organization. This value cannot be set.
     sync_to_organizations: Any = None
+    # The real timestamp this object was last updated. (AI-inferred)
     updated_at: Any = None
+    # The real, canonical API URL for this object. (AI-inferred)
     url: Any = None
     # path parameter, not part of the API's own resource representation
     enterprise: Any = None

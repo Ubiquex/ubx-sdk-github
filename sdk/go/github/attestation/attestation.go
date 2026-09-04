@@ -4,15 +4,20 @@ package attestation
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Attestation_Attestations_Bundle struct {
-	DsseEnvelope         any
-	MediaType            any
+	// The DSSE envelope containing the signed attestation payload. (AI-inferred)
+	DsseEnvelope any
+	// The media type of the attestation bundle, indicating the serialization format (e.g., application/vnd.dsse.envelope.v1+json). (AI-inferred)
+	MediaType any
+	// The verification material used to validate the attestation, including the signing certificate and signature. (AI-inferred)
 	VerificationMaterial any
 }
 
 type Attestation_Attestations struct {
-	Bundle       any
-	BundleUrl    any
-	Initiator    any
+	// The attestation bundle, which contains the signed DSSE envelope and verification material for the attestation. (AI-inferred)
+	Bundle    any
+	BundleUrl any
+	Initiator any
+	// The numeric identifier of the GitHub repository associated with the attestation. (AI-inferred)
 	RepositoryId any
 }
 
@@ -34,6 +39,7 @@ type AttestationConfig struct {
 }
 
 type AttestationAttrs struct {
+	// The real attestations recorded for this subject. (AI-inferred)
 	Attestations any
 	// The attestation's Sigstore Bundle. Refer to the [Sigstore Bundle Specification](https://github.com/sigstore/protobuf-specs/blob/main/protos/sigstore_bundle.proto) for more information.
 	Bundle any

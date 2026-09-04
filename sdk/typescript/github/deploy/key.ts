@@ -17,18 +17,25 @@ export interface KeyConfig {
 }
 
 export interface KeyAttrs {
+  /** The GitHub user who added this deploy key to the repository. (AI-inferred) */
   addedBy: string;
+  /** The timestamp of when the deploy key was created, in ISO 8601 format (e.g., YYYY-MM-DDTHH:MM:SSZ). (AI-inferred) */
   createdAt: string;
+  /** Whether this deploy key is currently active. (AI-inferred) */
   enabled: boolean;
+  /** The real, numeric, globally unique identifier for this object. (AI-inferred) */
   id: number;
   /** The contents of the key. */
   key: string;
+  /** The timestamp of when the deploy key was last used, as a string. (AI-inferred) */
   lastUsed: string;
   /** If `true`, the key will only be able to read repository contents. Otherwise, the key will be able to read and write. Deploy keys with write access can perform the same actions as an organization member with admin access, or a collaborator on a personal repository. For more information, see "[Repository permission levels for an organization](https://docs.github.com/enterprise-cloud@latest/articles/repository-permission-levels-for-an-organization/)" and "[Permission levels for a user account repository](https://docs.github.com/enterprise-cloud@latest/articles/permission-levels-for-a-user-account-repository/)." */
   readOnly: boolean;
   /** A name for the key. */
   title: string;
+  /** The API URL for this deploy key. (AI-inferred) */
   url: string;
+  /** A boolean flag indicating whether the deploy key has been verified by GitHub. (AI-inferred) */
   verified: boolean;
   /** path parameter, not part of the API's own resource representation */
   owner: string;

@@ -4,47 +4,77 @@ package pull
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type RequestReview_Links_Html struct {
+	// The URL to the HTML page for this pull request review. (AI-inferred)
 	Href any
 }
 
 type RequestReview_Links struct {
-	Html        any
+	// Provides the URL to the review's HTML page on GitHub, allowing direct access to the review in the web interface. (AI-inferred)
+	Html any
+	// A link to the pull request that this review belongs to. The link object typically contains an `href` field with the API URL of the pull request. (AI-inferred)
 	PullRequest any
 }
 
 type RequestReview_Comments struct {
-	Body      any
-	Line      any
-	Path      any
-	Position  any
-	Side      any
+	// The text content of the review comment. (AI-inferred)
+	Body any
+	// The line number in the pull request diff that the comment applies to, based on the current version of the file. (AI-inferred)
+	Line any
+	// The path to the file in the repository that the comment is associated with, relative to the repository root. (AI-inferred)
+	Path any
+	// The line number in the pull request diff where the comment is located. Deprecated in favor of the 'line' field. (AI-inferred)
+	Position any
+	// The side of the diff to which the comment applies. Valid values are 'LEFT' and 'RIGHT'. (AI-inferred)
+	Side any
+	// For multi-line review comments, the line number in the diff where the comment begins. This is null for single-line comments. (AI-inferred)
 	StartLine any
+	// Indicates which side of the diff the start of a multi-line comment applies to. Valid values are 'LEFT' or 'RIGHT', with 'RIGHT' as the default. (AI-inferred)
 	StartSide any
 }
 
 type RequestReview_User struct {
-	AvatarUrl         any
-	Email             any
-	EventsUrl         any
-	FollowersUrl      any
-	FollowingUrl      any
-	GistsUrl          any
-	GravatarId        any
-	HtmlUrl           any
-	Id                any
-	Login             any
-	Name              any
-	NodeId            any
-	OrganizationsUrl  any
+	// The URL of the user's avatar image. (AI-inferred)
+	AvatarUrl any
+	// The email address of the user who authored the pull request review. This field is only populated if the user has made their email address public on GitHub. (AI-inferred)
+	Email any
+	// The URL to the user's public events list. (AI-inferred)
+	EventsUrl any
+	// The URL to the list of followers for this user. (AI-inferred)
+	FollowersUrl any
+	// The URL template for the list of users that the user is following, with an optional {/other_user} placeholder. This is a standard GitHub API user field. (AI-inferred)
+	FollowingUrl any
+	// The URL to the user's gists. (AI-inferred)
+	GistsUrl any
+	// The user's Gravatar ID, a legacy identifier derived from their email address. This field is deprecated; prefer using avatar_url. (AI-inferred)
+	GravatarId any
+	// The URL to the user's GitHub profile page. (AI-inferred)
+	HtmlUrl any
+	// The unique numeric identifier for the GitHub user who authored the pull request review. (AI-inferred)
+	Id any
+	// The GitHub username (login) of the user who submitted the pull request review. (AI-inferred)
+	Login any
+	// The display name of the user who created the pull request review. (AI-inferred)
+	Name any
+	// The GraphQL node ID of the user who authored the pull request review, used to identify the user in GitHub's GraphQL API. (AI-inferred)
+	NodeId any
+	// The URL to fetch the list of organizations the user belongs to via the GitHub API. (AI-inferred)
+	OrganizationsUrl any
+	// The API endpoint that lists events received by this user. (AI-inferred)
 	ReceivedEventsUrl any
-	ReposUrl          any
-	SiteAdmin         any
-	StarredAt         any
-	StarredUrl        any
-	SubscriptionsUrl  any
-	Type              any
-	Url               any
-	UserViewType      any
+	// The URL to the list of repositories owned by the user on GitHub. (AI-inferred)
+	ReposUrl any
+	// Boolean indicating whether the user is a site administrator for GitHub. It is present in user objects within pull request reviews, where it is true for users with site-wide admin privileges. (AI-inferred)
+	SiteAdmin any
+	StarredAt any
+	// URL to the list of repositories starred by this user. (AI-inferred)
+	StarredUrl any
+	// The API URL pointing to the user's subscriptions, typically used to retrieve repositories and notifications the user is subscribed to. (AI-inferred)
+	SubscriptionsUrl any
+	// The type of GitHub account, typically 'User' or 'Organization'. (AI-inferred)
+	Type any
+	// The URL to the user's GitHub profile. (AI-inferred)
+	Url          any
+	UserViewType any
 }
 
 var RequestReview_CommentsFields = ubx.FieldMap{
@@ -77,26 +107,34 @@ type RequestReviewConfig struct {
 }
 
 type RequestReviewAttrs struct {
+	// Computed list of URLs to related resources for this pull request review, typically including self, html, and pull_request links, as returned by the GitHub API. (AI-inferred)
 	Links any
 	// How the author is associated with the repository.
 	AuthorAssociation any
 	// **Required** when using `REQUEST_CHANGES` or `COMMENT` for the `event` parameter. The body text of the pull request review.
-	Body     any
+	Body any
+	// The HTML-rendered content of the pull request review body, generated from the Markdown body. (AI-inferred)
 	BodyHtml any
+	// The plain text version of the pull request review body. (AI-inferred)
 	BodyText any
 	// Use the following table to specify the location, destination, and contents of the draft review comment.
 	Comments any
 	// The SHA of the commit that needs a review. Not using the latest commit SHA may render your review comment outdated if a subsequent commit modifies the line you specify as the `position`. Defaults to the most recent commit in the pull request when you do not specify a value.
 	CommitId any
 	// The review action you want to perform. The review actions include: `APPROVE`, `REQUEST_CHANGES`, or `COMMENT`. By leaving this blank, you set the review action state to `PENDING`, which means you will need to [submit the pull request review](https://docs.github.com/enterprise-cloud@latest/rest/pulls/reviews#submit-a-review-for-a-pull-request) when you are ready.
-	Event   any
+	Event any
+	// The GitHub URL for the pull request review. (AI-inferred)
 	HtmlUrl any
 	// Unique identifier of the review
-	Id             any
-	NodeId         any
+	Id any
+	// The unique identifier assigned by GitHub for use with the GraphQL API. (AI-inferred)
+	NodeId any
+	// The API URL of the pull request associated with this review. (AI-inferred)
 	PullRequestUrl any
-	State          any
-	SubmittedAt    any
+	// The state of the pull request review, representing the review's outcome as reported by GitHub. (AI-inferred)
+	State any
+	// The timestamp of when this pull request review was submitted, provided by the GitHub API. (AI-inferred)
+	SubmittedAt any
 	// A GitHub user.
 	User any
 	// path parameter, not part of the API's own resource representation

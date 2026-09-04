@@ -187,7 +187,9 @@ export interface PackageConfig {
 }
 
 export interface PackageAttrs {
+  /** The real timestamp this object was created. (AI-inferred) */
   createdAt: string;
+  /** The real, browsable web URL for this object. (AI-inferred) */
   htmlUrl: string;
   /** Unique identifier of the package. */
   id: number;
@@ -195,13 +197,17 @@ export interface PackageAttrs {
   name: string;
   /** A GitHub user. */
   owner: Package_Owner;
+  /** The real type of package registry this package is published to. (AI-inferred) */
   packageType: string;
   /** Minimal Repository */
   repository: Package_Repository;
+  /** The real timestamp this object was last updated. (AI-inferred) */
   updatedAt: string;
+  /** The real, canonical API URL for this object. (AI-inferred) */
   url: string;
   /** The number of versions of the package. */
   versionCount: number;
+  /** Whether the repository is public, private, or internal. (AI-inferred) */
   visibility: string;
   /** path parameter, not part of the API's own resource representation */
   org: string;

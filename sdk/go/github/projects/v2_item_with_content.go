@@ -4,28 +4,48 @@ package projects
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type V2ItemWithContent_Creator struct {
-	AvatarUrl         any
-	Email             any
-	EventsUrl         any
-	FollowersUrl      any
-	FollowingUrl      any
-	GistsUrl          any
-	GravatarId        any
-	HtmlUrl           any
-	Id                any
-	Login             any
-	Name              any
-	NodeId            any
-	OrganizationsUrl  any
+	// The URL of the avatar image for the user who created the item. (AI-inferred)
+	AvatarUrl any
+	// The email address of the creator of the project item, if available. (AI-inferred)
+	Email any
+	// The URL to retrieve events for this creator user via the GitHub REST API. (AI-inferred)
+	EventsUrl any
+	// The URL to the follower list of the user (the creator of the project item). This is a standard GitHub API field, typically formatted as a URL template. (AI-inferred)
+	FollowersUrl any
+	// The URL template for the list of users that the creator follows, with a placeholder for the target user if checking a specific follow relationship. (AI-inferred)
+	FollowingUrl any
+	// The URL to the user's gists list, optionally with a gist ID to access a specific gist. (AI-inferred)
+	GistsUrl any
+	// The Gravatar identifier for the user, used to construct an avatar image URL. (AI-inferred)
+	GravatarId any
+	// The HTML URL of the creator's GitHub profile page. (AI-inferred)
+	HtmlUrl any
+	// The unique identifier of the user who created the Projects v2 item. (AI-inferred)
+	Id any
+	// The GitHub username of the creator. (AI-inferred)
+	Login any
+	// The display name of the creator (user or bot) of the project item. This field is optional. (AI-inferred)
+	Name any
+	// The node_id of the creator, a unique identifier assigned by GitHub for use with the GraphQL API. (AI-inferred)
+	NodeId any
+	// The API URL to list the organizations that the creator belongs to. (AI-inferred)
+	OrganizationsUrl any
+	// The URL to the GitHub API endpoint that returns the events received by the creator (the user) of the Projects v2 item. (AI-inferred)
 	ReceivedEventsUrl any
-	ReposUrl          any
-	SiteAdmin         any
-	StarredAt         any
-	StarredUrl        any
-	SubscriptionsUrl  any
-	Type              any
-	Url               any
-	UserViewType      any
+	// The URL to the user's repositories. (AI-inferred)
+	ReposUrl any
+	// Whether the creator is a GitHub site administrator. (AI-inferred)
+	SiteAdmin any
+	StarredAt any
+	// The URL template for listing repositories starred by this user. Includes `{owner}` and `{repo}` placeholders for accessing a specific starred repository. (AI-inferred)
+	StarredUrl any
+	// The URL to retrieve the subscriptions of the creator (user), typically in the format https://api.github.com/users/{username}/subscriptions. (AI-inferred)
+	SubscriptionsUrl any
+	Type             any
+	// The GitHub profile URL of the creator of the project v2 item. (AI-inferred)
+	Url any
+	// The user's membership type in the organization, either 'public' or 'private'. (AI-inferred)
+	UserViewType any
 }
 
 type V2ItemWithContentConfig struct {

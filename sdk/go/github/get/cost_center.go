@@ -38,7 +38,8 @@ type CostCenterAttrs struct {
 	// ID of the cost center.
 	Id any
 	// The name of the cost center (max length 255 characters)
-	Name      any
+	Name any
+	// The real users and repositories billed against this cost center. (AI-inferred)
 	Resources any
 	// State of the cost center.
 	State any

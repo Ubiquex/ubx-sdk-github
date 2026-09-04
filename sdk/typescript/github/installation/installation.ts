@@ -191,16 +191,25 @@ export interface InstallationConfig {
 }
 
 export interface InstallationAttrs {
+  /** The real API URL for generating an access token for this GitHub App installation. (AI-inferred) */
   accessTokensUrl: string;
+  /** The real user or organization this GitHub App is installed on. (AI-inferred) */
   account: Installation_Account;
+  /** The real GitHub App this installation belongs to. (AI-inferred) */
   appId: number;
+  /** This GitHub App's own real, URL-safe identifier. (AI-inferred) */
   appSlug: string;
   /** The Client ID of the GitHub App to install. */
   clientId: string;
+  /** The real contact email address on file for this installation, if any. (AI-inferred) */
   contactEmail: string;
+  /** The real timestamp this object was created. (AI-inferred) */
   createdAt: string;
+  /** The real webhook events this installation is subscribed to. (AI-inferred) */
   events: string[];
+  /** Whether this installation is restricted to multiple, individually-selected files. (AI-inferred) */
   hasMultipleSingleFiles: boolean;
+  /** The real, browsable URL for this installation. (AI-inferred) */
   htmlUrl: string;
   /** The ID of the installation. */
   id: number;
@@ -208,17 +217,23 @@ export interface InstallationAttrs {
   permissions: Installation_Permissions;
   /** The names of the repositories to which the installation will be granted access. This is the simple name of the repository, not the full name (e.g., `hello-world` not `octocat/hello-world`). This is only required when `repository_selection` is `selected`. */
   repositories: string[];
+  /** The real API URL for listing this installation's own accessible repositories. (AI-inferred) */
   repositoriesUrl: string;
   /** The repository selection for the GitHub App. Must be one of: * `all` - the installation can access all repositories in the organization. * `selected` - the installation can access only the listed repositories. * `none` - no repository permissions are requested. Only use when the app does not request repository permissions. */
   repositorySelection: string;
+  /** The real, single file name this installation is restricted to, if any. (AI-inferred) */
   singleFileName: string;
+  /** The real file paths this installation is restricted to, if any. (AI-inferred) */
   singleFilePaths: string[];
+  /** When this installation was suspended, if it currently is. (AI-inferred) */
   suspendedAt: string;
   /** A GitHub user. */
   suspendedBy: Installation_SuspendedBy;
   /** The ID of the user or organization this token is being scoped to. */
   targetId: number;
+  /** Whether this installation targets a user or an organization. (AI-inferred) */
   targetType: string;
+  /** The real timestamp this object was last updated. (AI-inferred) */
   updatedAt: string;
   /** path parameter, not part of the API's own resource representation */
   installationId: string;

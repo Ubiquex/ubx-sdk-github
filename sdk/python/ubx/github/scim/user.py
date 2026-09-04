@@ -52,14 +52,19 @@ _User_NameFields = {
 
 @dataclasses.dataclass
 class UserConfig:
+    # Whether this SCIM-provisioned user account is active. (AI-inferred)
     active: Any = None
     # The name of the user, suitable for display to end-users
     display_name: Any = None
     # user emails
     emails: Any = None
+    # This user's own real, external identity-provider identifier. (AI-inferred)
     external_id: Any = None
+    # The real SCIM groups this user belongs to. (AI-inferred)
     groups: Any = None
+    # This user's own real, structured display name. (AI-inferred)
     name: Any = None
+    # The real SCIM schema URIs this resource conforms to. (AI-inferred)
     schemas: Any = None
     # Configured by the admin. Could be an email, login, or username
     user_name: Any = None
@@ -70,22 +75,29 @@ class UserConfig:
 
 @dataclasses.dataclass
 class UserAttrs:
+    # Whether this SCIM-provisioned user account is active. (AI-inferred)
     active: Any = None
     # The name of the user, suitable for display to end-users
     display_name: Any = None
     # user emails
     emails: Any = None
+    # This user's own real, external identity-provider identifier. (AI-inferred)
     external_id: Any = None
+    # The real SCIM groups this user belongs to. (AI-inferred)
     groups: Any = None
     # Unique identifier of an external identity
     id: Any = None
+    # Real SCIM protocol metadata (resource type, location, timestamps) for this user. (AI-inferred)
     meta: Any = None
+    # This user's own real, structured display name. (AI-inferred)
     name: Any = None
     # Set of operations to be performed
     operations: Any = None
     # The ID of the organization.
     organization_id: Any = None
+    # The real roles assigned to this SCIM-provisioned user. (AI-inferred)
     roles: Any = None
+    # The real SCIM schema URIs this resource conforms to. (AI-inferred)
     schemas: Any = None
     # Configured by the admin. Could be an email, login, or username
     user_name: Any = None

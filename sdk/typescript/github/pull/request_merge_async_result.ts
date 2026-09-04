@@ -2,11 +2,16 @@
 import type { Computed, FieldMap, ResourceBinding } from "@ubx/sdk";
 
 export interface RequestMergeAsyncResult_Details {
+  /** The SHA of the head commit expected by the merge operation, used to verify the branch hasn't changed before merging. (AI-inferred) */
   expectedHeadSha?: string | Computed<string>;
+  /** The merge strategy or action used for the pull request merge operation, indicating how the changes are combined. (AI-inferred) */
   mergeAction?: string | Computed<string>;
+  /** The method used to merge the pull request, as recorded in the result details of an asynchronous merge operation. (AI-inferred) */
   mergeMethod?: string | Computed<string>;
   message?: string | Computed<string>;
+  /** The SHA of the merge commit created when the pull request was merged asynchronously. (AI-inferred) */
   sha?: string | Computed<string>;
+  /** A UUID string that uniquely identifies the asynchronous pull request merge operation. (AI-inferred) */
   uuid?: string | Computed<string>;
 }
 
@@ -36,6 +41,7 @@ export interface RequestMergeAsyncResultAttrs {
   commitMessage: string;
   /** Title for the automatic commit message. */
   commitTitle: string;
+  /** Real, human-readable detail about this asynchronous merge attempt's own outcome. (AI-inferred) */
   details: RequestMergeAsyncResult_Details;
   /** The action that will be taken to merge the pull request. `direct_merge` merges the pull request directly without using a merge queue; `merge_queue` adds the pull request to a merge queue; `default` selects the most appropriate option. */
   mergeAction: string;
@@ -43,6 +49,7 @@ export interface RequestMergeAsyncResultAttrs {
   mergeMethod: string;
   /** SHA that pull request head must match to allow merge. If not provided, the current head of the PR at the time of the request will be used; if the PR is pushed in between the merge being requested and being executed, the merge will be cancelled. */
   sha: string;
+  /** The current state of the asynchronous merge operation for the pull request. Possible values are `pending`, `merged`, `enqueued`, and `failed`. (AI-inferred) */
   status: string;
   /** path parameter, not part of the API's own resource representation */
   owner: string;

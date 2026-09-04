@@ -19,10 +19,15 @@ export interface BlobAttrs {
   content: string;
   /** The encoding used for `content`. Currently, `"utf-8"` and `"base64"` are supported. */
   encoding: string;
+  /** The blob's content rendered with syntax highlighting, when requested. (AI-inferred) */
   highlightedContent: string;
+  /** The blob's GraphQL node ID. (AI-inferred) */
   nodeId: string;
+  /** The SHA-1 hash identifying this blob's content. (AI-inferred) */
   sha: string;
+  /** The size of the blob's content, in bytes. (AI-inferred) */
   size: number;
+  /** The API URL for retrieving this blob. (AI-inferred) */
   url: string;
   /** path parameter, not part of the API's own resource representation */
   owner: string;

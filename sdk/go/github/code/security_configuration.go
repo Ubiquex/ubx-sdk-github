@@ -21,9 +21,13 @@ type SecurityConfiguration_DependencyGraphAutosubmitActionOptions struct {
 }
 
 type SecurityConfiguration_SecretScanningDelegatedBypassOptions_Reviewers struct {
-	Mode                    any
-	ReviewerId              any
-	ReviewerType            any
+	// The mode of the reviewer, which must be either `ALWAYS` or `EXEMPT`. (AI-inferred)
+	Mode any
+	// The ID of the GitHub user or team that serves as a reviewer for delegated secret scanning bypass requests. (AI-inferred)
+	ReviewerId any
+	// Type of the reviewer for the delegated bypass. Valid values are `TEAM` or `ROLE`. (AI-inferred)
+	ReviewerType any
+	// The ID of the code security configuration that contains these secret scanning delegated bypass reviewers. (AI-inferred)
 	SecurityConfigurationId any
 }
 
@@ -111,7 +115,8 @@ type SecurityConfigurationAttrs struct {
 	CodeScanningOptions any
 	// The enablement status of GitHub Code Security features.
 	CodeSecurity any
-	CreatedAt    any
+	// The timestamp at which the code security configuration was created, automatically set by the system. (AI-inferred)
+	CreatedAt any
 	// The enablement status of Dependabot alerts
 	DependabotAlerts any
 	// The enablement status of Dependabot delegated alert dismissal
@@ -158,7 +163,8 @@ type SecurityConfigurationAttrs struct {
 	SecretScanningValidityChecks any
 	// The type of the code security configuration.
 	TargetType any
-	UpdatedAt  any
+	// The timestamp of when the code security configuration was last updated, in ISO 8601 format. (AI-inferred)
+	UpdatedAt any
 	// The URL of the configuration
 	Url any
 	// path parameter, not part of the API's own resource representation

@@ -7,13 +7,18 @@ export interface Ruleset_Links_Html {
 }
 
 export interface Ruleset_Links {
+  /** The HTML link to the repository ruleset, as an object containing an 'href' property with the URL for viewing the ruleset in a browser. (AI-inferred) */
   html?: Ruleset_Links_Html | Computed<Ruleset_Links_Html>;
+  /** The URL to the repository ruleset resource. (AI-inferred) */
   self?: Ruleset_Links_Html | Computed<Ruleset_Links_Html>;
 }
 
 export interface Ruleset_BypassActors {
+  /** The unique identifier of the user, team, integration, or repository role that is exempt from the ruleset. (AI-inferred) */
   actorId?: number | Computed<number>;
+  /** The type of actor that can bypass the ruleset. Allowed values: Integration, OrganizationAdmin, RepositoryRole, Team, DeployKey, User. (AI-inferred) */
   actorType?: string | Computed<string>;
+  /** The bypass mode for the actor, specifying when rules can be bypassed. Allowed values: 'always' (bypass always), 'pull_request' (bypass only for pull request rules), or 'exempt' (actor is exempt from the rule). (AI-inferred) */
   bypassMode?: string | Computed<string>;
 }
 
@@ -21,11 +26,14 @@ export interface Ruleset_Conditions {
 }
 
 export interface Ruleset_Rules_Parameters {
+  /** A boolean that controls whether the 'update' rule permits merging changes into a branch using the fetch and merge method. When true, fetch and merge is allowed; when false, it is disallowed. (AI-inferred) */
   updateAllowsFetchAndMerge?: boolean | Computed<boolean>;
 }
 
 export interface Ruleset_Rules {
+  /** Rule-specific configuration parameters that vary depending on the type of rule being enforced. (AI-inferred) */
   parameters?: Ruleset_Rules_Parameters | Computed<Ruleset_Rules_Parameters>;
+  /** The type of rule in a repository ruleset. This rule has type 'creation', which restricts who can create branches in the repository. (AI-inferred) */
   type?: string | Computed<string>;
 }
 
@@ -76,6 +84,7 @@ export interface RulesetAttrs {
   bypassActors: Ruleset_BypassActors[];
   /** Conditions for an enterprise ruleset. The `conditions` object supports either of the following combinations: - `organization_id` and `repository_name` - `organization_id` and `repository_property` - `organization_name` and `repository_name` - `organization_name` and `repository_property` - `organization_property` and `repository_name` - `organization_property` and `repository_property` For branch and tag rulesets, the `conditions` object should also contain the `ref_name` property. */
   conditions: Ruleset_Conditions;
+  /** The timestamp indicating when the repository ruleset was created. (AI-inferred) */
   createdAt: string;
   /** The bypass type of the user making the API request for this ruleset. This field is only returned when querying the repository-level endpoint. */
   currentUserCanBypass: string;
@@ -85,6 +94,7 @@ export interface RulesetAttrs {
   id: number;
   /** The name of the ruleset. */
   name: string;
+  /** The GraphQL global node ID for the repository ruleset. (AI-inferred) */
   nodeId: string;
   /** An array of rules within the ruleset. */
   rules: Ruleset_Rules[];
@@ -94,6 +104,7 @@ export interface RulesetAttrs {
   sourceType: string;
   /** The target of the ruleset */
   target: string;
+  /** The timestamp of the last update to the ruleset. (AI-inferred) */
   updatedAt: string;
   /** path parameter, not part of the API's own resource representation */
   enterprise: string;

@@ -197,16 +197,25 @@ class InstallationConfig:
 
 @dataclasses.dataclass
 class InstallationAttrs:
+    # The real API URL for generating an access token for this GitHub App installation. (AI-inferred)
     access_tokens_url: Any = None
+    # The real user or organization this GitHub App is installed on. (AI-inferred)
     account: Any = None
+    # The real GitHub App this installation belongs to. (AI-inferred)
     app_id: Any = None
+    # This GitHub App's own real, URL-safe identifier. (AI-inferred)
     app_slug: Any = None
     # The Client ID of the GitHub App to install.
     client_id: Any = None
+    # The real contact email address on file for this installation, if any. (AI-inferred)
     contact_email: Any = None
+    # The real timestamp this object was created. (AI-inferred)
     created_at: Any = None
+    # The real webhook events this installation is subscribed to. (AI-inferred)
     events: Any = None
+    # Whether this installation is restricted to multiple, individually-selected files. (AI-inferred)
     has_multiple_single_files: Any = None
+    # The real, browsable URL for this installation. (AI-inferred)
     html_url: Any = None
     # The ID of the installation.
     id: Any = None
@@ -214,17 +223,23 @@ class InstallationAttrs:
     permissions: Any = None
     # The names of the repositories to which the installation will be granted access. This is the simple name of the repository, not the full name (e.g., `hello-world` not `octocat/hello-world`). This is only required when `repository_selection` is `selected`.
     repositories: Any = None
+    # The real API URL for listing this installation's own accessible repositories. (AI-inferred)
     repositories_url: Any = None
     # The repository selection for the GitHub App. Must be one of: * `all` - the installation can access all repositories in the organization. * `selected` - the installation can access only the listed repositories. * `none` - no repository permissions are requested. Only use when the app does not request repository permissions.
     repository_selection: Any = None
+    # The real, single file name this installation is restricted to, if any. (AI-inferred)
     single_file_name: Any = None
+    # The real file paths this installation is restricted to, if any. (AI-inferred)
     single_file_paths: Any = None
+    # When this installation was suspended, if it currently is. (AI-inferred)
     suspended_at: Any = None
     # A GitHub user.
     suspended_by: Any = None
     # The ID of the user or organization this token is being scoped to.
     target_id: Any = None
+    # Whether this installation targets a user or an organization. (AI-inferred)
     target_type: Any = None
+    # The real timestamp this object was last updated. (AI-inferred)
     updated_at: Any = None
     # path parameter, not part of the API's own resource representation
     installation_id: Any = None

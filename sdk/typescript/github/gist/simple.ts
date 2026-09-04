@@ -2,137 +2,235 @@
 import type { Computed, FieldMap, ResourceBinding } from "@ubx/sdk";
 
 export interface Simple_Files {
+  /** The raw content of the file within the gist. (AI-inferred) */
   content?: string | Computed<string>;
 }
 
 export interface Simple_ForkOf_Files {
+  /** The name of a file within the gist, used as the key in the gist's file map. (AI-inferred) */
   filename?: string | Computed<string>;
+  /** The programming language of the file, as detected by GitHub. Can be null if the language is not recognized. (AI-inferred) */
   language?: string | Computed<string>;
+  /** The URL to retrieve the raw content of the file. (AI-inferred) */
   rawUrl?: string | Computed<string>;
+  /** The size of the file in bytes. (AI-inferred) */
   size?: number | Computed<number>;
+  /** The MIME type of the file, such as 'text/plain' or 'application/json'. (AI-inferred) */
   type?: string | Computed<string>;
 }
 
 export interface Simple_ForkOf_Owner {
+  /** The URL of the avatar image for the owner of the forked gist. (AI-inferred) */
   avatarUrl: string | Computed<string>;
+  /** The email address of the owner if publicly available; null or omitted otherwise. (AI-inferred) */
   email?: string | Computed<string>;
+  /** The URL to the events for the owner, as provided by the GitHub API. (AI-inferred) */
   eventsUrl: string | Computed<string>;
+  /** URL to the list of followers of the gist owner. (AI-inferred) */
   followersUrl: string | Computed<string>;
+  /** The API endpoint URL that lists the users this GitHub user follows. It may include the `{/other_user}` template for retrieving a specific followed user. (AI-inferred) */
   followingUrl: string | Computed<string>;
+  /** The API URL that lists the gists belonging to this owner. (AI-inferred) */
   gistsUrl: string | Computed<string>;
+  /** The Gravatar ID of the owner, used to construct the owner's avatar image URL. (AI-inferred) */
   gravatarId: string | Computed<string>;
+  /** The URL to the owner's GitHub profile page. (AI-inferred) */
   htmlUrl: string | Computed<string>;
+  /** The unique identifier of the owner of the gist fork. (AI-inferred) */
   id: number | Computed<number>;
+  /** The GitHub username of the owner of the forked gist. (AI-inferred) */
   login: string | Computed<string>;
+  /** The display name of the owner of the forked gist. (AI-inferred) */
   name?: string | Computed<string>;
+  /** The unique global node identifier for the owner (user or organization) of the forked gist, used within GitHub's GraphQL API and REST API responses. (AI-inferred) */
   nodeId: string | Computed<string>;
+  /** The URL to the GitHub API endpoint listing the organizations the owner belongs to. (AI-inferred) */
   organizationsUrl: string | Computed<string>;
+  /** Points to the GitHub API endpoint that returns events received by this user (e.g., https://api.github.com/users/{username}/received_events). (AI-inferred) */
   receivedEventsUrl: string | Computed<string>;
+  /** The URL to the user's repositories, as provided by the GitHub API. This field links to the list of repositories owned by the owner. (AI-inferred) */
   reposUrl: string | Computed<string>;
+  /** Indicates whether the user is a GitHub site administrator. (AI-inferred) */
   siteAdmin: boolean | Computed<boolean>;
   starredAt?: string | Computed<string>;
+  /** The URL that returns the user's starred repositories. (AI-inferred) */
   starredUrl: string | Computed<string>;
+  /** The URL to list the subscriptions for the owner of the original gist. (AI-inferred) */
   subscriptionsUrl: string | Computed<string>;
+  /** The type of GitHub account that owns the gist, such as 'User' or 'Organization'. (AI-inferred) */
   type: string | Computed<string>;
+  /** The GitHub API URL for the owner of the fork. (AI-inferred) */
   url: string | Computed<string>;
+  /** Indicates whether the user is viewed as a public or private user. The value is typically 'public' or 'private'. (AI-inferred) */
   userViewType?: string | Computed<string>;
 }
 
 export interface Simple_ForkOf {
+  /** The number of comments on the gist. (AI-inferred) */
   comments: number | Computed<number>;
+  /** Whether comments are enabled on the original gist that this gist was forked from. (AI-inferred) */
   commentsEnabled?: boolean | Computed<boolean>;
+  /** The API endpoint URL for comments attached to this gist. (AI-inferred) */
   commentsUrl: string | Computed<string>;
+  /** The URL to the commit history for the original gist that this gist was forked from. (AI-inferred) */
   commitsUrl: string | Computed<string>;
+  /** The timestamp of when the gist fork was created, in ISO 8601 format (e.g., '2023-01-01T12:00:00Z'). (AI-inferred) */
   createdAt: string | Computed<string>;
+  /** The description of the gist that this gist was forked from. (AI-inferred) */
   description: string | Computed<string>;
+  /** A map of the gist's files, where each key is the filename and each value is an object describing that file (e.g., content, language). (AI-inferred) */
   files: Record<string, Simple_ForkOf_Files> | Computed<Record<string, Simple_ForkOf_Files>>;
   forks?: unknown[] | Computed<unknown[]>;
+  /** The URL to the API endpoint that returns the list of forks of the original gist from which this gist was forked. (AI-inferred) */
   forksUrl: string | Computed<string>;
+  /** The Git pull URL for the original gist that this fork was created from. (AI-inferred) */
   gitPullUrl: string | Computed<string>;
+  /** The URL to push commits to the git repository for this fork of the gist. This is typically the read-write endpoint for the fork's git repository. (AI-inferred) */
   gitPushUrl: string | Computed<string>;
+  /** The revision history of the gist, provided as a list of entries. Each entry captures a snapshot of the gist at a point in time, including metadata such as the version identifier and committed date. (AI-inferred) */
   history?: unknown[] | Computed<unknown[]>;
+  /** The URL to view the gist in a web browser. (AI-inferred) */
   htmlUrl: string | Computed<string>;
+  /** The unique identifier of the gist that this gist was forked from. (AI-inferred) */
   id: string | Computed<string>;
+  /** The GraphQL node ID of the gist that this gist was forked from. (AI-inferred) */
   nodeId: string | Computed<string>;
   /** A GitHub user. */
   owner?: Simple_ForkOf_Owner | Computed<Simple_ForkOf_Owner>;
+  /** Indicates whether the gist is public (true) or secret (false). A public gist is discoverable in GitHub's gist listing; a secret gist is unlisted but accessible to anyone with its URL. (AI-inferred) */
   public: boolean | Computed<boolean>;
+  /** Whether the gist is truncated, e.g., because it exceeds GitHub's size limits. (AI-inferred) */
   truncated?: boolean | Computed<boolean>;
+  /** The timestamp of the last update to this fork of the gist. (AI-inferred) */
   updatedAt: string | Computed<string>;
+  /** The URL of the original gist that this gist was forked from. (AI-inferred) */
   url: string | Computed<string>;
   /** A GitHub user. */
   user: Simple_ForkOf_Owner | Computed<Simple_ForkOf_Owner>;
 }
 
 export interface Simple_Forks_User_Plan {
+  /** The number of collaborators permitted under the user's GitHub plan. (AI-inferred) */
   collaborators?: number | Computed<number>;
+  /** The name of the user's GitHub plan, such as 'free' or 'pro'. (AI-inferred) */
   name?: string | Computed<string>;
+  /** The number of private repositories that the plan allows. (AI-inferred) */
   privateRepos?: number | Computed<number>;
+  /** The total amount of disk space (in megabytes) allocated to the user's private repositories as part of their plan. (AI-inferred) */
   space?: number | Computed<number>;
 }
 
 export interface Simple_Forks_User {
+  /** The URL of the user's avatar image. (AI-inferred) */
   avatarUrl?: string | Computed<string>;
+  /** The user's short biography or description as provided on their GitHub profile. (AI-inferred) */
   bio?: string | Computed<string>;
+  /** The URL of the user's personal blog or website, as provided in their GitHub profile. (AI-inferred) */
   blog?: string | Computed<string>;
   collaborators?: number | Computed<number>;
+  /** The company name associated with the user's GitHub profile, if provided. (AI-inferred) */
   company?: string | Computed<string>;
+  /** The date and time at which the user account was created. (AI-inferred) */
   createdAt?: string | Computed<string>;
+  /** The total disk space used by the user's repositories, in kilobytes. (AI-inferred) */
   diskUsage?: number | Computed<number>;
+  /** The email address of the user, if publicly available. (AI-inferred) */
   email?: string | Computed<string>;
+  /** The URL to the user's events, as provided by the GitHub API. (AI-inferred) */
   eventsUrl?: string | Computed<string>;
+  /** The number of followers of the user on GitHub. (AI-inferred) */
   followers?: number | Computed<number>;
+  /** The URL to the API endpoint listing the followers of the user who forked the gist. (AI-inferred) */
   followersUrl?: string | Computed<string>;
+  /** The number of other GitHub users that the user follows. (AI-inferred) */
   following?: number | Computed<number>;
+  /** API URL that returns the list of users this user follows. (AI-inferred) */
   followingUrl?: string | Computed<string>;
+  /** URL to the user's gists, with a template placeholder for a specific gist ID. (AI-inferred) */
   gistsUrl?: string | Computed<string>;
+  /** The user's Gravatar ID, used to construct the user's Gravatar avatar URL. May be an empty string if the user has no Gravatar. (AI-inferred) */
   gravatarId?: string | Computed<string>;
+  /** Whether the user is available for hire or open to job opportunities. (AI-inferred) */
   hireable?: boolean | Computed<boolean>;
+  /** The URL to the user's GitHub profile page. (AI-inferred) */
   htmlUrl?: string | Computed<string>;
   id?: number | Computed<number>;
+  /** The geographic location of the user as listed in their GitHub profile. (AI-inferred) */
   location?: string | Computed<string>;
+  /** The GitHub username (login) of the user who forked the gist. (AI-inferred) */
   login?: string | Computed<string>;
+  /** The GitHub user's public display name. This may differ from their login username. (AI-inferred) */
   name?: string | Computed<string>;
+  /** The globally unique node ID used to identify the user in the GitHub GraphQL API. (AI-inferred) */
   nodeId?: string | Computed<string>;
   notificationEmail?: string | Computed<string>;
+  /** The URL to the organizations endpoint for this user, which lists the public organizations the user belongs to. (AI-inferred) */
   organizationsUrl?: string | Computed<string>;
+  /** The number of private repositories owned by the user. (AI-inferred) */
   ownedPrivateRepos?: number | Computed<number>;
+  /** The GitHub plan associated with the user, containing subscription details such as plan name, storage space, and limits. (AI-inferred) */
   plan?: Simple_Forks_User_Plan | Computed<Simple_Forks_User_Plan>;
+  /** The number of private gists owned by the user. (AI-inferred) */
   privateGists?: number | Computed<number>;
+  /** The number of public gists that the user has. (AI-inferred) */
   publicGists?: number | Computed<number>;
+  /** The number of public repositories owned by the user who forked the gist. (AI-inferred) */
   publicRepos?: number | Computed<number>;
+  /** The URL to the API endpoint that lists events received by the user. (AI-inferred) */
   receivedEventsUrl?: string | Computed<string>;
+  /** The URL to the user's repositories list. (AI-inferred) */
   reposUrl?: string | Computed<string>;
+  /** Boolean flag indicating whether the GitHub user is a site administrator. (AI-inferred) */
   siteAdmin?: boolean | Computed<boolean>;
+  /** The URL to list the repositories starred by this user. (AI-inferred) */
   starredUrl?: string | Computed<string>;
+  /** The URL to the subscriptions for this user. (AI-inferred) */
   subscriptionsUrl?: string | Computed<string>;
+  /** The total count of private repositories owned by the user. (AI-inferred) */
   totalPrivateRepos?: number | Computed<number>;
+  /** The Twitter username associated with the GitHub user, if they have linked one to their profile. (AI-inferred) */
   twitterUsername?: string | Computed<string>;
+  /** The account type of the user who forked the gist, such as 'User' or 'Bot'. (AI-inferred) */
   type?: string | Computed<string>;
+  /** The timestamp indicating when the user was last updated, typically in ISO 8601 format. (AI-inferred) */
   updatedAt?: string | Computed<string>;
+  /** The GitHub API URL for the user who forked the gist. (AI-inferred) */
   url?: string | Computed<string>;
   userViewType?: string | Computed<string>;
 }
 
 export interface Simple_Forks {
+  /** The timestamp indicating when this fork was created, as a string. (AI-inferred) */
   createdAt?: string | Computed<string>;
+  /** The unique identifier of the fork. (AI-inferred) */
   id?: string | Computed<string>;
+  /** The timestamp indicating when the fork was last updated, in ISO 8601 format. (AI-inferred) */
   updatedAt?: string | Computed<string>;
+  /** The URL for this fork of the gist. (AI-inferred) */
   url?: string | Computed<string>;
+  /** Information about the GitHub user who created the fork of this gist. (AI-inferred) */
   user?: Simple_Forks_User | Computed<Simple_Forks_User>;
 }
 
 export interface Simple_History_ChangeStatus {
+  /** The number of lines added in this gist revision's change status. (AI-inferred) */
   additions?: number | Computed<number>;
+  /** The number of lines deleted in this version of the gist. (AI-inferred) */
   deletions?: number | Computed<number>;
+  /** The total number of changes (additions plus deletions) in this gist version. (AI-inferred) */
   total?: number | Computed<number>;
 }
 
 export interface Simple_History {
+  /** The change_status object summarizes the file changes for this gist revision, including counts for additions, deletions, and total changes. (AI-inferred) */
   changeStatus?: Simple_History_ChangeStatus | Computed<Simple_History_ChangeStatus>;
+  /** The timestamp of when this particular version of the gist was committed. (AI-inferred) */
   committedAt?: string | Computed<string>;
+  /** The API URL for this specific revision of the gist, as listed in the gist's history. (AI-inferred) */
   url?: string | Computed<string>;
+  /** The GitHub user who authored this gist revision. This is a user object, or null if the change was made anonymously. (AI-inferred) */
   user?: Simple_ForkOf_Owner | Computed<Simple_ForkOf_Owner>;
+  /** The commit SHA or version identifier for this gist revision. (AI-inferred) */
   version?: string | Computed<string>;
 }
 
@@ -145,16 +243,22 @@ export interface SimpleConfig {
   description?: string | Computed<string>;
   /** Names and content for the files that make up the gist */
   files: Record<string, Simple_Files> | Computed<Record<string, Simple_Files>>;
+  /** Whether the gist is public (viewable by anyone) or secret (only accessible via link). This value is computed from the GitHub API based on the gist's actual visibility. (AI-inferred) */
   public?: unknown | Computed<unknown>;
   /** path parameter, not part of the API's own resource representation */
   gistId: string | Computed<string>;
 }
 
 export interface SimpleAttrs {
+  /** The number of comments on the gist. (AI-inferred) */
   comments: number;
+  /** Indicates whether comments are enabled on the gist. This is a read-only, computed attribute. (AI-inferred) */
   commentsEnabled: boolean;
+  /** The URL to access the comments for this gist. (AI-inferred) */
   commentsUrl: string;
+  /** The API URL to list commits for this gist. (AI-inferred) */
   commitsUrl: string;
+  /** The timestamp of when the gist was created. (AI-inferred) */
   createdAt: string;
   /** Description of the gist */
   description: string;
@@ -162,20 +266,33 @@ export interface SimpleAttrs {
   files: Record<string, Simple_Files>;
   /** Gist */
   forkOf: Simple_ForkOf;
+  /** List of forks of this gist, each containing metadata such as the forking user and URL. (AI-inferred) */
   forks: Simple_Forks[];
+  /** The URL to retrieve the list of forks of this gist. (AI-inferred) */
   forksUrl: string;
+  /** The URL to pull the gist via Git, used for cloning or fetching updates. (AI-inferred) */
   gitPullUrl: string;
+  /** The Git push URL for the gist, which can be used to push commits to the gist's repository. (AI-inferred) */
   gitPushUrl: string;
+  /** The revision history of the gist, containing details about each commit, such as version, committed date, and change status. (AI-inferred) */
   history: Simple_History[];
+  /** The GitHub web page URL for the gist. (AI-inferred) */
   htmlUrl: string;
+  /** The unique identifier of the GitHub gist. (AI-inferred) */
   id: string;
+  /** The unique identifier for the gist used as the GraphQL node ID in the GitHub API. (AI-inferred) */
   nodeId: string;
   /** A GitHub user. */
   owner: Simple_ForkOf_Owner;
+  /** Whether the gist is public (viewable by anyone) or secret (only accessible via link). This value is computed from the GitHub API based on the gist's actual visibility. (AI-inferred) */
   public: unknown;
+  /** Boolean flag indicating whether the gist content has been truncated in the response. (AI-inferred) */
   truncated: boolean;
+  /** The timestamp of the last time the gist was updated. (AI-inferred) */
   updatedAt: string;
+  /** The URL of the gist. (AI-inferred) */
   url: string;
+  /** The GitHub username of the user who owns the gist. (AI-inferred) */
   user: string;
   /** path parameter, not part of the API's own resource representation */
   gistId: string;

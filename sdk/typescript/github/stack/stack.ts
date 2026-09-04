@@ -2,6 +2,7 @@
 import type { Computed, FieldMap, ResourceBinding } from "@ubx/sdk";
 
 export interface Stack_Base {
+  /** The git reference (branch, tag, or commit SHA) to use as the base for the stack. (AI-inferred) */
   ref: string | Computed<string>;
 }
 
@@ -18,14 +19,19 @@ export interface StackConfig {
 
 export interface StackAttrs {
   base: Stack_Base;
+  /** The real timestamp this object was created. (AI-inferred) */
   createdAt: string;
+  /** The real, numeric, globally unique identifier for this object. (AI-inferred) */
   id: number;
+  /** The GraphQL node ID of the GitHub stack. (AI-inferred) */
   nodeId: string;
+  /** This stacked change's own real, repository-scoped number. (AI-inferred) */
   number: number;
   /** Whether the stack has any open pull request. False when all pull requests are merged or closed. */
   open: boolean;
   /** An ordered list of pull request numbers forming the stack from bottom to top. */
   pullRequests: number[];
+  /** The real, canonical API URL for this object. (AI-inferred) */
   url: string;
   /** path parameter, not part of the API's own resource representation */
   owner: string;

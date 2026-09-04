@@ -4,87 +4,139 @@ package repository
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Advisory_Author struct {
-	AvatarUrl         any
-	Email             any
-	EventsUrl         any
-	FollowersUrl      any
-	FollowingUrl      any
-	GistsUrl          any
-	GravatarId        any
-	HtmlUrl           any
-	Id                any
-	Login             any
-	Name              any
-	NodeId            any
-	OrganizationsUrl  any
+	// The URL of the avatar image for the author of the repository advisory. (AI-inferred)
+	AvatarUrl any
+	// The email address associated with the author of the GitHub repository advisory. (AI-inferred)
+	Email any
+	// The URL to the author's events listing on GitHub, used to retrieve their public events. (AI-inferred)
+	EventsUrl any
+	// The API URL that lists the followers of the author on GitHub. (AI-inferred)
+	FollowersUrl any
+	// URL to the author's following list on GitHub. This is a templated endpoint; for example, it includes the placeholder {/other_user} to check or retrieve a specific user's following relationship. (AI-inferred)
+	FollowingUrl any
+	// The URL to the user's gists API endpoint. (AI-inferred)
+	GistsUrl any
+	// The Gravatar ID for the author. It may be an empty string if the author has not set a Gravatar, and can be used to construct the avatar URL. (AI-inferred)
+	GravatarId any
+	// The HTML URL of the author's GitHub profile. (AI-inferred)
+	HtmlUrl any
+	Id      any
+	// The GitHub username (login) of the user or organization that authored the repository advisory. (AI-inferred)
+	Login any
+	Name  any
+	// The GraphQL node ID for the author of the repository advisory. (AI-inferred)
+	NodeId any
+	// The API URL for the organizations that the author belongs to. (AI-inferred)
+	OrganizationsUrl any
+	// The URL of the GitHub API endpoint that lists events received by the author of the repository advisory. (AI-inferred)
 	ReceivedEventsUrl any
-	ReposUrl          any
-	SiteAdmin         any
-	StarredAt         any
-	StarredUrl        any
-	SubscriptionsUrl  any
-	Type              any
-	Url               any
-	UserViewType      any
+	// The URL to the list of repositories owned by the author. (AI-inferred)
+	ReposUrl any
+	// Whether the author is a GitHub site administrator. (AI-inferred)
+	SiteAdmin any
+	StarredAt any
+	// A URL template for listing repositories starred by the author, with placeholders for owner and repository names. (AI-inferred)
+	StarredUrl any
+	// The URL to the author's GitHub subscriptions endpoint (e.g., https://api.github.com/users/{username}/subscriptions). (AI-inferred)
+	SubscriptionsUrl any
+	Type             any
+	// The API URL for the author's GitHub user account, such as https://api.github.com/users/{username}. (AI-inferred)
+	Url any
+	// The visibility type of the author's GitHub user profile, indicating whether the profile is publicly visible (`public`) or private (`private`). (AI-inferred)
+	UserViewType any
 }
 
 type Advisory_CollaboratingTeams_Parent struct {
-	Description         any
-	EnterpriseId        any
-	HtmlUrl             any
-	Id                  any
-	LdapDn              any
-	MembersUrl          any
-	Name                any
+	// The description of the parent team of the collaborating team, if a parent team exists. (AI-inferred)
+	Description  any
+	EnterpriseId any
+	// The URL to the parent team's page on GitHub. (AI-inferred)
+	HtmlUrl any
+	Id      any
+	// The LDAP Distinguished Name (DN) of the parent team for the collaborating team granted access to the repository advisory. This is used when managing teams in GitHub Enterprise with LDAP synchronization. (AI-inferred)
+	LdapDn any
+	// API endpoint URL for the members of this team, typically with a template placeholder for a specific member identifier (e.g., .../members{/member}). (AI-inferred)
+	MembersUrl any
+	// The name of the team being granted write access to the repository advisory. (AI-inferred)
+	Name any
+	// The unique node ID of the team, used for identifying this collaborator in the GitHub GraphQL API. (AI-inferred)
 	NodeId              any
 	NotificationSetting any
-	OrganizationId      any
-	Permission          any
-	Privacy             any
-	RepositoriesUrl     any
-	Slug                any
-	Type                any
-	Url                 any
+	// The unique identifier of the organization that the team belongs to. (AI-inferred)
+	OrganizationId any
+	// Permission level for the team on the repository advisory. Valid values are 'read' and 'write'. (AI-inferred)
+	Permission any
+	Privacy    any
+	// The API URL to list the repositories that the team has access to. (AI-inferred)
+	RepositoriesUrl any
+	// The slug of the parent team. (AI-inferred)
+	Slug any
+	// The type of parent account that the team belongs to. Possible values are `enterprise` and `organization`. (AI-inferred)
+	Type any
+	// The URL to the GitHub API resource for this team's parent team. (AI-inferred)
+	Url any
 }
 
 type Advisory_CollaboratingTeams_Permissions struct {
+	// Indicates whether the collaborating team has admin-level permissions on the repository advisory. (AI-inferred)
 	Admin    any
 	Maintain any
-	Pull     any
-	Push     any
-	Triage   any
+	// Whether the team has pull access to the repository. (AI-inferred)
+	Pull any
+	// Whether the team has push access to the repository. (AI-inferred)
+	Push any
+	// Whether the collaborating team has 'triage' permission, allowing them to manage issues and pull requests without write access to the repository. (AI-inferred)
+	Triage any
 }
 
 type Advisory_CollaboratingTeams struct {
-	AccessSource        any
-	Description         any
-	EnterpriseId        any
-	HtmlUrl             any
-	Id                  any
-	MembersUrl          any
-	Name                any
+	// The source of access for the team collaborating on the repository advisory. Valid values are 'direct', 'organization', and 'enterprise', indicating whether the team was added directly, through an organization, or through an enterprise. (AI-inferred)
+	AccessSource any
+	// The description of the team that is collaborating on the repository advisory. (AI-inferred)
+	Description any
+	// The unique identifier of the enterprise account to which the collaborating team belongs. (AI-inferred)
+	EnterpriseId any
+	// The URL to the team's page on GitHub. (AI-inferred)
+	HtmlUrl any
+	Id      any
+	// The API URL used to access the list of members for the collaborating team in the repository advisory. (AI-inferred)
+	MembersUrl any
+	Name       any
+	// The unique identifier (node ID) for the team, used by GitHub's GraphQL API. (AI-inferred)
 	NodeId              any
 	NotificationSetting any
-	OrganizationId      any
-	Parent              any
-	Permission          any
-	Permissions         any
-	Privacy             any
-	RepositoriesUrl     any
-	Slug                any
-	Type                any
-	Url                 any
+	// The ID of the GitHub organization that the collaborating team belongs to. (AI-inferred)
+	OrganizationId any
+	Parent         any
+	// The permission level granted to the team for collaborating on the repository advisory. (AI-inferred)
+	Permission  any
+	Permissions any
+	// The privacy setting of the team collaborating on the repository advisory. Values are typically 'secret' or 'closed'. (AI-inferred)
+	Privacy any
+	// The API endpoint URL for the repositories associated with this collaborating team. (AI-inferred)
+	RepositoriesUrl any
+	// The slug of the team collaborating on the repository advisory. (AI-inferred)
+	Slug any
+	// Specifies the type of the collaborating team. Allowed values are 'enterprise' and 'organization'. (AI-inferred)
+	Type any
+	// The API URL of the collaborating team on GitHub. (AI-inferred)
+	Url any
 }
 
 type Advisory_Credits struct {
+	// The GitHub username of the user receiving credit for the advisory. (AI-inferred)
 	Login any
-	Type  any
+	// The role or classification of the credited entity in a GitHub repository advisory. Allowed values are analyst, finder, reporter, coordinator, remediation_developer, remediation_reviewer, remediation_verifier, tool, sponsor, and other. (AI-inferred)
+	Type any
 }
 
 type Advisory_CreditsDetailed struct {
+	// The state of the credit, indicating whether the credit has been accepted, declined, or is still pending. (AI-inferred)
 	State any
-	Type  any
-	User  any
+	// The role of the credited entity in the security advisory. Allowed values: analyst, finder, reporter, coordinator, remediation_developer, remediation_reviewer, remediation_verifier, tool, sponsor, other. (AI-inferred)
+	Type any
+	// The GitHub user associated with this credit entry in the advisory's detailed credits list. (AI-inferred)
+	User any
 }
 
 type Advisory_Cvss struct {
@@ -95,67 +147,108 @@ type Advisory_Cvss struct {
 }
 
 type Advisory_CvssSeverities struct {
+	// An object containing the CVSS v3 base score and vector string for the advisory. (AI-inferred)
 	CvssV3 any
+	// The CVSS v4 severity details for the advisory, including the numeric score and qualitative severity rating. (AI-inferred)
 	CvssV4 any
 }
 
 type Advisory_Cwes struct {
+	// The identifier of a Common Weakness Enumeration (CWE) entry associated with the advisory, such as "CWE-79". (AI-inferred)
 	CweId any
-	Name  any
+	// The name of the Common Weakness Enumeration (CWE) entry associated with the advisory. (AI-inferred)
+	Name any
 }
 
 type Advisory_Identifiers struct {
-	Type  any
+	// The type of the identifier, either 'CVE' or 'GHSA'. (AI-inferred)
+	Type any
+	// The value of the identifier, such as a CVE ID or GHSA ID, for the repository advisory. (AI-inferred)
 	Value any
 }
 
 type Advisory_PrivateFork struct {
-	ArchiveUrl       any
-	AssigneesUrl     any
-	BlobsUrl         any
-	BranchesUrl      any
+	// The URL to download the archive of the private fork associated with this repository advisory. (AI-inferred)
+	ArchiveUrl any
+	// The URL endpoint for accessing the assignees of the private fork associated with this repository advisory. (AI-inferred)
+	AssigneesUrl any
+	// The URL template for accessing blob (file content) resources in the private fork repository associated with the advisory. (AI-inferred)
+	BlobsUrl any
+	// The API endpoint URL for accessing the branches of the private fork. (AI-inferred)
+	BranchesUrl any
+	// The URL to access the list of collaborators for the private fork of the repository advisory. (AI-inferred)
 	CollaboratorsUrl any
-	CommentsUrl      any
-	CommitsUrl       any
-	CompareUrl       any
-	ContentsUrl      any
-	ContributorsUrl  any
-	DeploymentsUrl   any
-	Description      any
-	DownloadsUrl     any
-	EventsUrl        any
-	Fork             any
-	ForksUrl         any
-	FullName         any
-	GitCommitsUrl    any
-	GitRefsUrl       any
-	GitTagsUrl       any
-	HooksUrl         any
-	HtmlUrl          any
-	Id               any
-	IssueCommentUrl  any
-	IssueEventsUrl   any
-	IssuesUrl        any
-	KeysUrl          any
-	LabelsUrl        any
-	LanguagesUrl     any
-	MergesUrl        any
-	MilestonesUrl    any
-	Name             any
-	NodeId           any
+	// The URL to access comments on the private fork repository associated with this repository advisory. (AI-inferred)
+	CommentsUrl any
+	// The URL to the list of commits in the private fork associated with this repository advisory. (AI-inferred)
+	CommitsUrl any
+	CompareUrl any
+	// The URL template for accessing the contents of the private fork repository, typically in the format 'https://api.github.com/repos/{owner}/{repo}/contents/{+path}'. (AI-inferred)
+	ContentsUrl any
+	// The API endpoint that returns the list of contributors for the private fork associated with the repository advisory. (AI-inferred)
+	ContributorsUrl any
+	// The API URL for accessing deployments of the private fork repository associated with the advisory. (AI-inferred)
+	DeploymentsUrl any
+	Description    any
+	// The URL to the private fork's downloads endpoint, used to access downloadable files associated with that fork. (AI-inferred)
+	DownloadsUrl any
+	EventsUrl    any
+	Fork         any
+	ForksUrl     any
+	// The full name of the private fork in the format 'owner/repo'. (AI-inferred)
+	FullName any
+	// The URL to view the commits of the private fork associated with the repository advisory. This corresponds to the `git_commits_url` property of the forked repository. (AI-inferred)
+	GitCommitsUrl any
+	// The URL to the git refs endpoint for the private fork associated with the repository advisory. (AI-inferred)
+	GitRefsUrl any
+	GitTagsUrl any
+	// The URL to retrieve the hooks configured for this private fork, as per the GitHub API repository representation. (AI-inferred)
+	HooksUrl any
+	// The URL to view the private fork on GitHub. (AI-inferred)
+	HtmlUrl any
+	Id      any
+	// The API URL template for accessing comments on issues within the private fork repository, as defined by GitHub's repository object. (AI-inferred)
+	IssueCommentUrl any
+	// The URL template for listing issue events in the private fork repository. (AI-inferred)
+	IssueEventsUrl any
+	// The URL template for issues in the private fork repository, including a placeholder for the issue number (e.g., /issues{/number}). (AI-inferred)
+	IssuesUrl any
+	// The URL to the repository's deploy keys, typically used to manage SSH keys for the repository. (AI-inferred)
+	KeysUrl any
+	// The API URL template for the labels of the private fork repository, pattern: `https://api.github.com/repos/{owner}/{repo}/labels{/name}`. (AI-inferred)
+	LabelsUrl any
+	// The URL to the GitHub API endpoint that lists the programming languages used in this private fork. (AI-inferred)
+	LanguagesUrl any
+	// The API URL used to perform merge operations on this private fork. (AI-inferred)
+	MergesUrl     any
+	MilestonesUrl any
+	Name          any
+	// The unique identifier (Node ID) of the private fork, used in GitHub's GraphQL API. (AI-inferred)
+	NodeId any
+	// The URL to retrieve notifications for the private fork of the repository advisory. (AI-inferred)
 	NotificationsUrl any
 	Owner            any
-	Private          any
-	PullsUrl         any
-	ReleasesUrl      any
-	StargazersUrl    any
-	StatusesUrl      any
-	SubscribersUrl   any
-	SubscriptionUrl  any
-	TagsUrl          any
-	TeamsUrl         any
-	TreesUrl         any
-	Url              any
+	// Whether the forked repository is private (not publicly visible). (AI-inferred)
+	Private any
+	// The URL to the pull requests within the private fork created for the repository advisory. (AI-inferred)
+	PullsUrl any
+	// The URL to the releases page for the private fork associated with the repository advisory. (AI-inferred)
+	ReleasesUrl any
+	// The API endpoint URL that lists the stargazers of the private fork associated with the repository advisory. (AI-inferred)
+	StargazersUrl any
+	// The URL template for the commit statuses of the private fork, with `{sha}` replaced by a commit SHA to access statuses. (AI-inferred)
+	StatusesUrl    any
+	SubscribersUrl any
+	// The API URL to subscribe to notifications for this private fork. (AI-inferred)
+	SubscriptionUrl any
+	// The API URL to list Git tags for the private fork of the repository associated with the advisory. (AI-inferred)
+	TagsUrl any
+	// The API endpoint URL for the teams associated with the private fork of the repository. (AI-inferred)
+	TeamsUrl any
+	// The URL to the Git trees API for the private fork associated with the repository advisory. (AI-inferred)
+	TreesUrl any
+	// The URL to the private fork repository created for this advisory. (AI-inferred)
+	Url any
 }
 
 type Advisory_Submission struct {
@@ -164,14 +257,20 @@ type Advisory_Submission struct {
 }
 
 type Advisory_Vulnerabilities_Package struct {
+	// The ecosystem of the affected package, such as rubygems, npm, pip, maven, nuget, composer, go, rust, erlang, actions, pub, swift, or other. This identifies the package manager or language ecosystem to which the package belongs. (AI-inferred)
 	Ecosystem any
-	Name      any
+	// The name of the affected package within the specified ecosystem. (AI-inferred)
+	Name any
 }
 
 type Advisory_Vulnerabilities struct {
-	Package                any
-	PatchedVersions        any
-	VulnerableFunctions    any
+	// The package affected by the vulnerability, including details such as its name and ecosystem. (AI-inferred)
+	Package any
+	// The range of versions that are patched by the security advisory for this vulnerability. (AI-inferred)
+	PatchedVersions any
+	// A list of names of functions within the affected package that are vulnerable to the advisory. (AI-inferred)
+	VulnerableFunctions any
+	// The vulnerable version range for the advisory, expressed as a semantic version range (e.g., '>= 1.0.0, < 2.0.0'). (AI-inferred)
 	VulnerableVersionRange any
 }
 
@@ -233,23 +332,28 @@ type AdvisoryAttrs struct {
 	// The date and time of when the advisory was created, in ISO 8601 format.
 	CreatedAt any
 	// A list of users receiving credit for their participation in the security advisory.
-	Credits         any
+	Credits any
+	// A computed list of detailed credit objects for the security advisory, each containing information about the credited user (such as their login) and the type of credit (e.g., reporter, analyst). (AI-inferred)
 	CreditsDetailed any
 	// The Common Vulnerabilities and Exposures (CVE) ID.
-	CveId          any
-	Cvss           any
+	CveId any
+	// The Common Vulnerability Scoring System (CVSS) data for the advisory, containing the score and vector string. (AI-inferred)
+	Cvss any
+	// The CVSS severity details for the repository advisory, including the vector string and score for both CVSS v3 and v4. (AI-inferred)
 	CvssSeverities any
 	// The CVSS vector that calculates the severity of the advisory. You must choose between setting this field or `severity`.
 	CvssVectorString any
 	// A list of Common Weakness Enumeration (CWE) IDs.
 	CweIds any
-	Cwes   any
+	// The list of Common Weakness Enumeration (CWE) objects associated with the repository security advisory. (AI-inferred)
+	Cwes any
 	// A detailed description of what the advisory impacts.
 	Description any
 	// The GitHub Security Advisory ID.
 	GhsaId any
 	// The URL for the advisory.
-	HtmlUrl     any
+	HtmlUrl any
+	// A list of identifiers for the security advisory, populated by the system. These are typically CVE or GHSA IDs that reference the advisory. (AI-inferred)
 	Identifiers any
 	// A temporary private fork of the advisory's repository for collaborating on a fix.
 	PrivateFork any
@@ -262,7 +366,8 @@ type AdvisoryAttrs struct {
 	// Whether to create a temporary private fork of the repository to collaborate on a fix.
 	StartPrivateFork any
 	// The state of the advisory.
-	State      any
+	State any
+	// Details about the submission of the advisory, including the submission ID, creation timestamp, and dismissal data if applicable. (AI-inferred)
 	Submission any
 	// A short summary of the advisory.
 	Summary any

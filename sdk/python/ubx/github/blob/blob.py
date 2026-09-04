@@ -25,10 +25,15 @@ class BlobAttrs:
     content: Any = None
     # The encoding used for `content`. Currently, `"utf-8"` and `"base64"` are supported.
     encoding: Any = None
+    # The blob's content rendered with syntax highlighting, when requested. (AI-inferred)
     highlighted_content: Any = None
+    # The blob's GraphQL node ID. (AI-inferred)
     node_id: Any = None
+    # The SHA-1 hash identifying this blob's content. (AI-inferred)
     sha: Any = None
+    # The size of the blob's content, in bytes. (AI-inferred)
     size: Any = None
+    # The API URL for retrieving this blob. (AI-inferred)
     url: Any = None
     # path parameter, not part of the API's own resource representation
     owner: Any = None

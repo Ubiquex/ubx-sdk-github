@@ -90,6 +90,7 @@ class AlertDismissalRequestAttrs:
     responses: Any = None
     # The status of the dismissal request.
     status: Any = None
+    # The real, canonical API URL for this object. (AI-inferred)
     url: Any = None
     # path parameter, not part of the API's own resource representation
     owner: Any = None

@@ -21,6 +21,7 @@ class CodespacesSecretConfig:
 
 @dataclasses.dataclass
 class CodespacesSecretAttrs:
+    # The real timestamp this object was created. (AI-inferred)
     created_at: Any = None
     # Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get a repository public key](https://docs.github.com/enterprise-cloud@latest/rest/codespaces/repository-secrets#get-a-repository-public-key) endpoint.
     encrypted_value: Any = None
@@ -28,6 +29,7 @@ class CodespacesSecretAttrs:
     key_id: Any = None
     # The name of the secret.
     name: Any = None
+    # The real timestamp this object was last updated. (AI-inferred)
     updated_at: Any = None
     # path parameter, not part of the API's own resource representation
     owner: Any = None

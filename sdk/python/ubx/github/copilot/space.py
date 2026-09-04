@@ -8,24 +8,40 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class Space_Creator:
+    # The URL of the avatar image for the creator of the GitHub Copilot space. (AI-inferred)
     avatar_url: Any = None
+    # The email address of the creator of the Copilot space. (AI-inferred)
     email: Any = None
+    # The URL to retrieve events related to the creator of the Copilot space, typically the GitHub API events endpoint for the creator's user account. (AI-inferred)
     events_url: Any = None
+    # The URL endpoint to retrieve the list of followers for the creator. This follows the standard GitHub API pattern for user-related URLs. (AI-inferred)
     followers_url: Any = None
+    # The URL to the creator's following list, used to retrieve the list of users the creator follows. (AI-inferred)
     following_url: Any = None
+    # The URL template for listing the creator's gists. Contains a placeholder for the gist ID, typically formatted as 'https://api.github.com/users/{creator}/gists{/gist_id}'. (AI-inferred)
     gists_url: Any = None
+    # The user's Gravatar ID, an MD5 hash of their email address used to fetch their avatar from Gravatar. (AI-inferred)
     gravatar_id: Any = None
+    # The URL to the creator's GitHub profile page. (AI-inferred)
     html_url: Any = None
     id: Any = None
+    # The GitHub username (login) of the creator of the Copilot space. This field is required and identifies the user who created the space. (AI-inferred)
     login: Any = None
     name: Any = None
+    # The GraphQL node ID of the user who created the Copilot space. (AI-inferred)
     node_id: Any = None
+    # The URL to the API endpoint that returns the organizations to which the creator of the Copilot Space belongs. (AI-inferred)
     organizations_url: Any = None
+    # The URL to retrieve the events received by this user, as defined by the GitHub API user object. (AI-inferred)
     received_events_url: Any = None
+    # The API URL to the list of repositories owned by the creator of the GitHub Copilot space. (AI-inferred)
     repos_url: Any = None
+    # Whether the user is a site administrator on GitHub. (AI-inferred)
     site_admin: Any = None
     starred_at: Any = None
+    # The URL template for listing repositories starred by the user, with optional placeholders for owner and repo. (AI-inferred)
     starred_url: Any = None
+    # The API endpoint URL for the creator's subscriptions, typically returning the list of repositories or topics the creator is subscribed to. (AI-inferred)
     subscriptions_url: Any = None
     type: Any = None
     url: Any = None
@@ -33,30 +49,50 @@ class Space_Creator:
 
 @dataclasses.dataclass
 class Space_Owner:
+    # The URL of the GitHub profile avatar for the owner of the Copilot space. (AI-inferred)
     avatar_url: Any = None
     description: Any = None
+    # The email address of the owner of the GitHub Copilot space. (AI-inferred)
     email: Any = None
+    # The URL to the events of the owner, such as a GitHub user or organization. (AI-inferred)
     events_url: Any = None
+    # The API endpoint URL to retrieve the list of followers for this GitHub owner (user or organization). (AI-inferred)
     followers_url: Any = None
+    # The URL to retrieve the list of users the owner follows. This is a GitHub API URL and may include template placeholders for additional query parameters. (AI-inferred)
     following_url: Any = None
+    # The URL template for the user's gists, which includes an optional placeholder for a specific gist ID. (AI-inferred)
     gists_url: Any = None
+    # The unique identifier for the owner's Gravatar, used to construct the URL for their avatar image. (AI-inferred)
     gravatar_id: Any = None
     hooks_url: Any = None
+    # The HTML URL to the owner's GitHub profile page (e.g., for a user or organization). (AI-inferred)
     html_url: Any = None
     id: Any = None
+    # The URL to the issues for the owner, as defined by the GitHub API. (AI-inferred)
     issues_url: Any = None
+    # The GitHub username (login) of the owner of the Copilot space. (AI-inferred)
     login: Any = None
+    # The URL to retrieve the members of the organization that owns the Copilot space. (AI-inferred)
     members_url: Any = None
     name: Any = None
+    # The global node ID assigned by GitHub, used to identify the owner in the GraphQL API. (AI-inferred)
     node_id: Any = None
+    # The API endpoint URL to list the organizations that this owner belongs to. (AI-inferred)
     organizations_url: Any = None
+    # The URL template for accessing the public members of the owner organization, typically including a placeholder for the member identifier. (AI-inferred)
     public_members_url: Any = None
+    # The URL to the GitHub API endpoint that returns the events received by this owner. (AI-inferred)
     received_events_url: Any = None
+    # The URL to the list of repositories owned by this GitHub user or organization. (AI-inferred)
     repos_url: Any = None
+    # A boolean indicating whether the owner is a GitHub site administrator. (AI-inferred)
     site_admin: Any = None
     starred_at: Any = None
+    # The URL template to access the list of starred repositories for the owner. In GitHub's API, this string includes placeholder variables such as `{owner}` and `{repo}` that are replaced to get a concrete URL. (AI-inferred)
     starred_url: Any = None
+    # The URL to the owner's subscriptions in the GitHub API, used to list entities the owner is subscribed to. (AI-inferred)
     subscriptions_url: Any = None
+    # The type of the owner account, typically 'user' for an individual or 'organization' for an organization. (AI-inferred)
     type: Any = None
     url: Any = None
     user_view_type: Any = None
@@ -66,12 +102,14 @@ class Space_ResourcesAttributes_Metadata:
     file_path: Any = None
     name: Any = None
     number: Any = None
+    # The unique numeric identifier of the repository associated with this metadata. (AI-inferred)
     repository_id: Any = None
     text: Any = None
 
 @dataclasses.dataclass
 class Space_ResourcesAttributes:
     metadata: Any = None
+    # Specifies the type of resource, which determines how the resource content is interpreted. Allowed values: repository, github_file, free_text, github_issue, github_pull_request, media_content, uploaded_text_file. (AI-inferred)
     resource_type: Any = None
 
 _Space_ResourcesAttributes_MetadataFields = {

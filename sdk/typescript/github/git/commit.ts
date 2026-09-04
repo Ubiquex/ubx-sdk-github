@@ -11,10 +11,15 @@ export interface Commit_Author {
 }
 
 export interface Commit_Verification {
+  /** The payload that was signed for commit verification, used to verify the signature and ensure the commit's integrity. (AI-inferred) */
   payload: string | Computed<string>;
+  /** The reason explaining the commit's signature verification state. For verified commits, this is 'valid'; for unverified commits, it provides a reason like 'unsigned' or 'bad_email'. (AI-inferred) */
   reason: string | Computed<string>;
+  /** The signature of the commit, used to verify its authenticity. (AI-inferred) */
   signature: string | Computed<string>;
+  /** Whether the commit's signature is verified by GitHub. (AI-inferred) */
   verified: boolean | Computed<boolean>;
+  /** The timestamp (as a string) indicating when the commit's signature was verified, typically in ISO 8601 format. (AI-inferred) */
   verifiedAt: string | Computed<string>;
 }
 
@@ -50,9 +55,11 @@ export interface CommitAttrs {
   author: Commit_Author;
   /** Information about the person who is making the commit. By default, `committer` will use the information set in `author`. See the `author` and `committer` object below for details. */
   committer: Commit_Author;
+  /** The URL to view the commit on GitHub. (AI-inferred) */
   htmlUrl: string;
   /** The commit message */
   message: string;
+  /** The GraphQL node ID of the git commit, used for identifying the commit in the GitHub GraphQL API. (AI-inferred) */
   nodeId: string;
   /** The full SHAs of the commits that were the parents of this commit. If omitted or empty, the commit will be written as a root commit. For a single parent, an array of one SHA should be provided; for a merge commit, an array of more than one should be provided. */
   parents: string[];
@@ -62,7 +69,9 @@ export interface CommitAttrs {
   signature: string;
   /** The SHA of the tree object this commit points to */
   tree: string;
+  /** The GitHub API URL for the commit. (AI-inferred) */
   url: string;
+  /** Object containing details about the commit's signature verification status, such as whether the signature is verified and associated metadata. This field is computed and only present after the commit is created. (AI-inferred) */
   verification: Commit_Verification;
   /** path parameter, not part of the API's own resource representation */
   owner: string;

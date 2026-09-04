@@ -8,26 +8,46 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class Comment_User:
+    # The URL of the avatar image for the user who authored the gist comment. (AI-inferred)
     avatar_url: Any = None
+    # The email address associated with the user account, if provided and publicly visible. (AI-inferred)
     email: Any = None
+    # The URL to the user's public events, typically the GitHub API endpoint that lists the user's public events. (AI-inferred)
     events_url: Any = None
+    # The API endpoint URL that returns the list of followers for the user. (AI-inferred)
     followers_url: Any = None
+    # The URL template to list the GitHub users this user follows. It includes a placeholder {/other_user} to specify a particular user. (AI-inferred)
     following_url: Any = None
+    # The URL template to access the user's gists, with an optional placeholder for the gist ID (e.g., https://api.github.com/users/{username}/gists{/gist_id}). (AI-inferred)
     gists_url: Any = None
+    # The user's Gravatar hash, used to construct their avatar image URL. (AI-inferred)
     gravatar_id: Any = None
+    # The URL to the user's GitHub profile page. (AI-inferred)
     html_url: Any = None
+    # The numeric ID of the user who authored the gist comment. (AI-inferred)
     id: Any = None
+    # The GitHub username of the user who authored the gist comment. (AI-inferred)
     login: Any = None
+    # The display name of the user associated with the Gist comment, if they have set one. This field may be null if the user has not provided a name. (AI-inferred)
     name: Any = None
+    # The GraphQL node ID of the user. (AI-inferred)
     node_id: Any = None
+    # The URL to retrieve the list of organizations that the user belongs to. (AI-inferred)
     organizations_url: Any = None
+    # The URL of the API endpoint that returns events received by this user. (AI-inferred)
     received_events_url: Any = None
+    # The API endpoint URL for the user's repositories on GitHub. (AI-inferred)
     repos_url: Any = None
+    # Whether the user is a site administrator on GitHub. (AI-inferred)
     site_admin: Any = None
     starred_at: Any = None
+    # The URL template for starring repositories for the user. It contains placeholders for the repository owner and name, allowing API clients to construct the specific URL to star or unstar a repository. (AI-inferred)
     starred_url: Any = None
+    # The URL to the user's subscriptions endpoint, listing repositories the user is watching. (AI-inferred)
     subscriptions_url: Any = None
+    # The type of GitHub user account, such as 'User' or 'Organization'. (AI-inferred)
     type: Any = None
+    # The GitHub API URL for the user (e.g., https://api.github.com/users/octocat). (AI-inferred)
     url: Any = None
     user_view_type: Any = None
 
@@ -46,10 +66,15 @@ class CommentAttrs:
     author_association: Any = None
     # The comment text.
     body: Any = None
+    # The timestamp of when the comment was created, in ISO 8601 format (e.g., 2024-01-01T00:00:00Z). (AI-inferred)
     created_at: Any = None
+    # The real, numeric, globally unique identifier for this object. (AI-inferred)
     id: Any = None
+    # The GraphQL node identifier for the gist comment. (AI-inferred)
     node_id: Any = None
+    # The timestamp of the last update to the gist comment, in ISO 8601 format. (AI-inferred)
     updated_at: Any = None
+    # The URL of the GitHub gist comment. (AI-inferred)
     url: Any = None
     # A GitHub user.
     user: Any = None

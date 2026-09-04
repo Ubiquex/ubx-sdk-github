@@ -4,12 +4,17 @@ package pull
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type RequestMergeAsyncResult_Details struct {
+	// The SHA of the head commit expected by the merge operation, used to verify the branch hasn't changed before merging. (AI-inferred)
 	ExpectedHeadSha any
-	MergeAction     any
-	MergeMethod     any
-	Message         any
-	Sha             any
-	Uuid            any
+	// The merge strategy or action used for the pull request merge operation, indicating how the changes are combined. (AI-inferred)
+	MergeAction any
+	// The method used to merge the pull request, as recorded in the result details of an asynchronous merge operation. (AI-inferred)
+	MergeMethod any
+	Message     any
+	// The SHA of the merge commit created when the pull request was merged asynchronously. (AI-inferred)
+	Sha any
+	// A UUID string that uniquely identifies the asynchronous pull request merge operation. (AI-inferred)
+	Uuid any
 }
 
 type RequestMergeAsyncResultConfig struct {
@@ -38,13 +43,15 @@ type RequestMergeAsyncResultAttrs struct {
 	CommitMessage any
 	// Title for the automatic commit message.
 	CommitTitle any
-	Details     any
+	// Real, human-readable detail about this asynchronous merge attempt's own outcome. (AI-inferred)
+	Details any
 	// The action that will be taken to merge the pull request. `direct_merge` merges the pull request directly without using a merge queue; `merge_queue` adds the pull request to a merge queue; `default` selects the most appropriate option.
 	MergeAction any
 	// The merge method to use.
 	MergeMethod any
 	// SHA that pull request head must match to allow merge. If not provided, the current head of the PR at the time of the request will be used; if the PR is pushed in between the merge being requested and being executed, the merge will be cancelled.
-	Sha    any
+	Sha any
+	// The current state of the asynchronous merge operation for the pull request. Possible values are `pending`, `merged`, `enqueued`, and `failed`. (AI-inferred)
 	Status any
 	// path parameter, not part of the API's own resource representation
 	Owner any

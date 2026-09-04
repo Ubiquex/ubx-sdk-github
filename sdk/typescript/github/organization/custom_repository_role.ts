@@ -44,6 +44,7 @@ export interface CustomRepositoryRoleConfig {
 export interface CustomRepositoryRoleAttrs {
   /** The system role from which this role inherits permissions. */
   baseRole: string;
+  /** The real timestamp this object was created. (AI-inferred) */
   createdAt: string;
   /** A short description about who this role is for or what permissions it grants. */
   description: string;
@@ -55,6 +56,7 @@ export interface CustomRepositoryRoleAttrs {
   organization: CustomRepositoryRole_Organization;
   /** A list of additional permissions included in this role. */
   permissions: string[];
+  /** The real timestamp this object was last updated. (AI-inferred) */
   updatedAt: string;
   /** path parameter, not part of the API's own resource representation */
   org: string;

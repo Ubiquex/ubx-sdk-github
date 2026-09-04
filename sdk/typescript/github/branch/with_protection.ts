@@ -2,146 +2,237 @@
 import type { Computed, FieldMap, ResourceBinding } from "@ubx/sdk";
 
 export interface WithProtection_Links {
+  /** The HTML URL to the branch protection settings for the branch. (AI-inferred) */
   html: string | Computed<string>;
+  /** The URL of the branch with protection resource itself. This is the self-referential link to the current resource. (AI-inferred) */
   self: string | Computed<string>;
 }
 
 export interface WithProtection_Commit_Author {
+  /** The URL of the author's avatar image, as provided by GitHub. (AI-inferred) */
   avatarUrl?: string | Computed<string>;
+  /** The email address of the author of the commit. (AI-inferred) */
   email?: string | Computed<string>;
+  /** The URL to the events listing for the commit author's GitHub user account. (AI-inferred) */
   eventsUrl?: string | Computed<string>;
+  /** The GitHub API URL to the list of followers of this commit author. (AI-inferred) */
   followersUrl?: string | Computed<string>;
+  /** The URL template to list users this author follows, in the form 'https://api.github.com/users/{login}/following{/other_user}'. (AI-inferred) */
   followingUrl?: string | Computed<string>;
+  /** The URL to the user's gists list, typically in the format https://api.github.com/users/{username}/gists{/gist_id}. (AI-inferred) */
   gistsUrl?: string | Computed<string>;
+  /** The Gravatar ID associated with the commit author's account, used to construct the author's avatar URL. (AI-inferred) */
   gravatarId?: string | Computed<string>;
+  /** The GitHub profile URL for the commit author. (AI-inferred) */
   htmlUrl?: string | Computed<string>;
   id?: number | Computed<number>;
+  /** The GitHub username of the commit author. (AI-inferred) */
   login?: string | Computed<string>;
+  /** The name of the author of the commit, as stored in Git metadata. (AI-inferred) */
   name?: string | Computed<string>;
+  /** The unique identifier for the author as used in the GitHub GraphQL API. (AI-inferred) */
   nodeId?: string | Computed<string>;
+  /** The API URL for the organizations that the commit author belongs to. (AI-inferred) */
   organizationsUrl?: string | Computed<string>;
+  /** The URL to the API endpoint that lists events received by the author. (AI-inferred) */
   receivedEventsUrl?: string | Computed<string>;
+  /** The API endpoint URL that lists the author's public repositories. (AI-inferred) */
   reposUrl?: string | Computed<string>;
+  /** Indicates whether the author of the commit is a site administrator on GitHub. (AI-inferred) */
   siteAdmin?: boolean | Computed<boolean>;
   starredAt?: string | Computed<string>;
+  /** The URL template for repositories starred by the user. It typically includes placeholders like {/owner}{/repo} for constructing specific starred repository URLs. (AI-inferred) */
   starredUrl?: string | Computed<string>;
+  /** The URL to the GitHub API endpoint for the author's subscriptions. (AI-inferred) */
   subscriptionsUrl?: string | Computed<string>;
+  /** The type of the commit author, such as 'User' or 'Bot'. (AI-inferred) */
   type?: string | Computed<string>;
+  /** The GitHub API URL of the commit author. (AI-inferred) */
   url?: string | Computed<string>;
+  /** The user view type of the commit author, indicating whether the GitHub profile is visible as 'public' or 'private'. (AI-inferred) */
   userViewType?: string | Computed<string>;
 }
 
 export interface WithProtection_Commit_Commit_Author {
+  /** The date the commit was authored, in ISO 8601 format (e.g., 2011-04-14T16:00:49Z). (AI-inferred) */
   date?: string | Computed<string>;
+  /** The email address of the commit author. This field is optional and may be absent if the author's email is not available. (AI-inferred) */
   email?: string | Computed<string>;
+  /** The name of the author of the commit. (AI-inferred) */
   name?: string | Computed<string>;
 }
 
 export interface WithProtection_Commit_Commit_Tree {
+  /** The SHA-1 hash of the tree object that this commit references. This is a unique identifier for the tree within the repository. (AI-inferred) */
   sha: string | Computed<string>;
+  /** The GitHub API URL for this commit tree. (AI-inferred) */
   url: string | Computed<string>;
 }
 
 export interface WithProtection_Commit_Commit_Verification {
+  /** The payload that was signed for commit verification. This string contains the original signed data used to generate the commit signature. (AI-inferred) */
   payload: string | Computed<string>;
+  /** The reason for the verification status of the commit's signature, indicating why the signature is considered valid, invalid, or unsigned. (AI-inferred) */
   reason: string | Computed<string>;
+  /** The cryptographic signature (e.g., GPG) of the commit, as a string. May be empty if the commit is unsigned. (AI-inferred) */
   signature: string | Computed<string>;
+  /** Whether the commit's signature (e.g., GPG) has been verified by GitHub. (AI-inferred) */
   verified: boolean | Computed<boolean>;
+  /** The timestamp (in ISO 8601 format) indicating when the commit's signature was verified. (AI-inferred) */
   verifiedAt: string | Computed<string>;
 }
 
 export interface WithProtection_Commit_Commit {
   /** Metaproperties for Git author/committer information. */
   author: WithProtection_Commit_Commit_Author | Computed<WithProtection_Commit_Commit_Author>;
+  /** The number of comments made on this commit. (AI-inferred) */
   commentCount: number | Computed<number>;
   /** Metaproperties for Git author/committer information. */
   committer: WithProtection_Commit_Commit_Author | Computed<WithProtection_Commit_Commit_Author>;
+  /** The commit message, which summarizes the changes made in the commit. (AI-inferred) */
   message: string | Computed<string>;
+  /** The git tree object associated with this commit, containing the tree's SHA and URL. (AI-inferred) */
   tree: WithProtection_Commit_Commit_Tree | Computed<WithProtection_Commit_Commit_Tree>;
+  /** The API URL for the commit, which can be used to fetch the commit details directly. (AI-inferred) */
   url: string | Computed<string>;
+  /** Details about the verification status of the commit signature, including whether the commit signature is verified and the reason for that status. (AI-inferred) */
   verification?: WithProtection_Commit_Commit_Verification | Computed<WithProtection_Commit_Commit_Verification>;
 }
 
 export interface WithProtection_Commit_Files {
+  /** The number of lines added in this file as part of the commit. (AI-inferred) */
   additions?: number | Computed<number>;
+  /** The URL to the file's blob (content) on GitHub. (AI-inferred) */
   blobUrl?: string | Computed<string>;
+  /** The total number of changes (additions plus deletions) made to the file in this commit. (AI-inferred) */
   changes?: number | Computed<number>;
+  /** The URL to fetch the file's contents via the GitHub API. (AI-inferred) */
   contentsUrl?: string | Computed<string>;
+  /** The number of lines deleted in this file as part of the commit. (AI-inferred) */
   deletions?: number | Computed<number>;
+  /** The path or name of the file in the repository that was changed in the commit. (AI-inferred) */
   filename?: string | Computed<string>;
+  /** The patch (diff) for the file in the commit, provided as a string. This is the raw unified diff output for the file. (AI-inferred) */
   patch?: string | Computed<string>;
+  /** The previous filename if the file was renamed in this commit; otherwise empty/null. (AI-inferred) */
   previousFilename?: string | Computed<string>;
+  /** The URL to the raw content of the file, typically pointing to raw.githubusercontent.com. (AI-inferred) */
   rawUrl?: string | Computed<string>;
+  /** The SHA-1 hash of the file blob, as returned by the GitHub API, uniquely identifying the file's contents in the repository. (AI-inferred) */
   sha?: string | Computed<string>;
+  /** The status of the file in the commit, indicating how it was changed relative to its previous state. Possible values are: added, removed, modified, renamed, copied, changed, unchanged. (AI-inferred) */
   status?: string | Computed<string>;
 }
 
 export interface WithProtection_Commit_Parents {
+  /** The GitHub HTML URL for the parent commit. (AI-inferred) */
   htmlUrl?: string | Computed<string>;
+  /** The SHA (commit hash) of the parent commit. (AI-inferred) */
   sha?: string | Computed<string>;
+  /** The URL of the parent commit. (AI-inferred) */
   url?: string | Computed<string>;
 }
 
 export interface WithProtection_Commit_Stats {
+  /** The number of lines added in the commit. (AI-inferred) */
   additions?: number | Computed<number>;
+  /** The number of lines deleted in the commit. (AI-inferred) */
   deletions?: number | Computed<number>;
+  /** The total number of changes (additions and deletions) in the commit. (AI-inferred) */
   total?: number | Computed<number>;
 }
 
 export interface WithProtection_Commit {
+  /** The commit author, including details such as name and email. (AI-inferred) */
   author: WithProtection_Commit_Author | Computed<WithProtection_Commit_Author>;
+  /** The URL to the comments list for this commit, which can be used to fetch or create commit comments via the GitHub API. (AI-inferred) */
   commentsUrl: string | Computed<string>;
+  /** The commit object representing the latest commit on the branch, including metadata such as the SHA, message, and author. (AI-inferred) */
   commit: WithProtection_Commit_Commit | Computed<WithProtection_Commit_Commit>;
+  /** The committer metadata for the commit, including the name, email address, and timestamp of the person who made the commit. (AI-inferred) */
   committer: WithProtection_Commit_Author | Computed<WithProtection_Commit_Author>;
+  /** List of files modified in the commit. Each item provides information about a file change. (AI-inferred) */
   files?: WithProtection_Commit_Files[] | Computed<WithProtection_Commit_Files[]>;
+  /** The URL to view the commit on GitHub. (AI-inferred) */
   htmlUrl: string | Computed<string>;
+  /** The GraphQL node ID for the commit, used as a unique identifier in GitHub's GraphQL API. (AI-inferred) */
   nodeId: string | Computed<string>;
+  /** The list of parent commits of this commit. Each element represents a commit that is a direct ancestor of this commit, typically containing the SHA and URL of the parent commit. (AI-inferred) */
   parents: WithProtection_Commit_Parents[] | Computed<WithProtection_Commit_Parents[]>;
+  /** The SHA of the latest commit on the branch. (AI-inferred) */
   sha: string | Computed<string>;
+  /** Statistics about the commit's changes, including the number of additions, deletions, and total lines changed. (AI-inferred) */
   stats?: WithProtection_Commit_Stats | Computed<WithProtection_Commit_Stats>;
+  /** The API URL that points to the commit in the repository. (AI-inferred) */
   url: string | Computed<string>;
 }
 
 export interface WithProtection_Protection_AllowDeletions {
+  /** Set to true to allow users with push access to delete the protected branch. (AI-inferred) */
   enabled?: boolean | Computed<boolean>;
 }
 
 export interface WithProtection_Protection_EnforceAdmins {
+  /** Set to true to enforce branch protection rules for repository administrators. (AI-inferred) */
   enabled: boolean | Computed<boolean>;
+  /** The API endpoint URL for the enforcement status of administrators on this branch protection rule. (AI-inferred) */
   url: string | Computed<string>;
 }
 
 export interface WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Apps_Owner {
+  /** The URL of the avatar image for the GitHub user or organization that owns this GitHub App. (AI-inferred) */
   avatarUrl?: string | Computed<string>;
+  /** The creation timestamp of the GitHub account that owns the app, in ISO 8601 format (e.g., 2011-01-26T19:01:12Z). (AI-inferred) */
   createdAt?: string | Computed<string>;
   description?: string | Computed<string>;
+  /** Email address of the GitHub App owner (the user or organization that owns the app). (AI-inferred) */
   email?: string | Computed<string>;
+  /** The URL to retrieve the events for the owner (user or organization) of the GitHub app. This is a standard GitHub API endpoint, typically formatted like `https://api.github.com/users/{username}/events{/privacy}`. (AI-inferred) */
   eventsUrl?: string | Computed<string>;
+  /** URL to fetch the list of followers for the app owner (user or organization). (AI-inferred) */
   followersUrl?: string | Computed<string>;
+  /** The URL to the GitHub API endpoint for the list of users that the app owner follows. (AI-inferred) */
   followingUrl?: string | Computed<string>;
+  /** The API URL to the owner's gists. In the GitHub REST API, this is a templated URL, e.g., https://api.github.com/users/{owner}/gists{/gist_id}. (AI-inferred) */
   gistsUrl?: string | Computed<string>;
+  /** The Gravatar hash identifier for the GitHub App owner's avatar. (AI-inferred) */
   gravatarId?: string | Computed<string>;
+  /** The URL to the GitHub profile of the app's owner. (AI-inferred) */
   htmlUrl?: string | Computed<string>;
+  /** The numeric ID of the GitHub user or organization that owns the app. (AI-inferred) */
   id?: number | Computed<number>;
+  /** The GitHub username of the user or organization that owns the GitHub App listed in the bypass pull request allowances. This identifies the owner of the app that is allowed to bypass branch protection rules for pull request reviews. (AI-inferred) */
   login?: string | Computed<string>;
   name?: string | Computed<string>;
+  /** The GraphQL node ID of the app owner within the bypass pull request allowances. (AI-inferred) */
   nodeId?: string | Computed<string>;
+  /** The URL to the list of organizations that the app owner belongs to (GitHub API field for the owner object). (AI-inferred) */
   organizationsUrl?: string | Computed<string>;
+  /** The URL to retrieve the events received by this owner via the GitHub Events API. (AI-inferred) */
   receivedEventsUrl?: string | Computed<string>;
+  /** The URL to the GitHub API endpoint listing the repositories owned by the app's owner, e.g., 'https://api.github.com/users/octocat/repos'. (AI-inferred) */
   reposUrl?: string | Computed<string>;
+  /** Indicates whether the owner of the GitHub App is a site administrator for the GitHub instance. (AI-inferred) */
   siteAdmin?: boolean | Computed<boolean>;
   slug?: string | Computed<string>;
   starredAt?: string | Computed<string>;
+  /** The URL to list the repositories starred by the owner (user or organization). This follows the GitHub API user/org object's starred_url format, typically 'https://api.github.com/users/{username}/starred{/owner}{/repo}'. (AI-inferred) */
   starredUrl?: string | Computed<string>;
+  /** The API URL for the subscriptions of the owner of the app. (AI-inferred) */
   subscriptionsUrl?: string | Computed<string>;
+  /** The type of the GitHub account that owns the app, such as 'User' or 'Organization'. (AI-inferred) */
   type?: string | Computed<string>;
+  /** The timestamp of the last update to the owner (user or organization) of the GitHub app. (AI-inferred) */
   updatedAt?: string | Computed<string>;
+  /** The API URL of the GitHub user or organization that owns the GitHub app. (AI-inferred) */
   url?: string | Computed<string>;
+  /** Indicates whether the app owner (a user) is a public or private user. Allowed values are `public` and `private`; a private user is only visible within a GitHub Enterprise cloud or server instance. (AI-inferred) */
   userViewType?: string | Computed<string>;
   websiteUrl?: string | Computed<string>;
 }
 
 export interface WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Apps_Permissions {
+  /** The access level for the 'checks' permission of the GitHub App. Allowed values are 'read' or 'write'. (AI-inferred) */
   checks?: string | Computed<string>;
   contents?: string | Computed<string>;
   deployments?: string | Computed<string>;
@@ -150,18 +241,29 @@ export interface WithProtection_Protection_RequiredPullRequestReviews_BypassPull
 }
 
 export interface WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Apps {
+  /** The client ID of the GitHub App that is allowed to bypass pull request review requirements. (AI-inferred) */
   clientId?: string | Computed<string>;
+  /** The timestamp indicating when the GitHub App was created, in RFC3339 format. (AI-inferred) */
   createdAt?: string | Computed<string>;
   description?: string | Computed<string>;
   events?: string[] | Computed<string[]>;
+  /** The external URL of the GitHub App, typically its public homepage or website. (AI-inferred) */
   externalUrl?: string | Computed<string>;
+  /** The HTML URL of the GitHub app that is permitted to bypass the required pull request reviews. (AI-inferred) */
   htmlUrl?: string | Computed<string>;
+  /** The numeric ID of the GitHub App that is allowed to bypass pull request review requirements. This corresponds to the app's unique identifier on GitHub. (AI-inferred) */
   id?: number | Computed<number>;
+  /** The number of installations of the GitHub App. (AI-inferred) */
   installationsCount?: number | Computed<number>;
+  /** The name of a GitHub App that is allowed to bypass pull request review requirements. (AI-inferred) */
   name?: string | Computed<string>;
+  /** The GraphQL global node ID of the GitHub app. (AI-inferred) */
   nodeId?: string | Computed<string>;
+  /** The owner of the GitHub App (either a user or an organization) that is listed in the bypass pull request allowances. This object provides details about the owner, such as their login and ID. (AI-inferred) */
   owner?: WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Apps_Owner | Computed<WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Apps_Owner>;
+  /** The permissions granted to the GitHub App, represented as an object mapping permission names (e.g., 'contents', 'issues') to their access levels (e.g., 'read', 'write'). (AI-inferred) */
   permissions?: WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Apps_Permissions | Computed<WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Apps_Permissions>;
+  /** The slug of the GitHub App that can bypass pull request requirements. (AI-inferred) */
   slug?: string | Computed<string>;
   updatedAt?: string | Computed<string>;
 }
@@ -169,48 +271,82 @@ export interface WithProtection_Protection_RequiredPullRequestReviews_BypassPull
 export interface WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Teams_Parent {
   description?: string | Computed<string>;
   enterpriseId?: number | Computed<number>;
+  /** The URL of the parent team's page on GitHub. (AI-inferred) */
   htmlUrl?: string | Computed<string>;
+  /** The ID of the team that is allowed to bypass the required pull request reviews for this branch protection rule. (AI-inferred) */
   id?: number | Computed<number>;
+  /** The LDAP distinguished name (DN) of the parent team of the team allowed to bypass pull request requirements, for GitHub Enterprise. (AI-inferred) */
   ldapDn?: string | Computed<string>;
+  /** The URL to access the list of members for this team. (AI-inferred) */
   membersUrl?: string | Computed<string>;
+  /** The name of the team that is allowed to bypass pull request review requirements. (AI-inferred) */
   name?: string | Computed<string>;
+  /** The GraphQL node ID of the team that is allowed to bypass pull request requirements. (AI-inferred) */
   nodeId?: string | Computed<string>;
+  /** The notification setting of the parent team. Valid values are 'notifications_enabled', 'notifications_disabled', or 'notifications_between_team_members'. (AI-inferred) */
   notificationSetting?: string | Computed<string>;
+  /** The GitHub organization ID that the team belongs to. (AI-inferred) */
   organizationId?: number | Computed<number>;
+  /** The permission level of the parent team, such as 'admin', 'push', or 'pull'. (AI-inferred) */
   permission?: string | Computed<string>;
+  /** The privacy level of the team. Can be either 'secret' (only visible to team members) or 'closed' (visible to all organization members). (AI-inferred) */
   privacy?: string | Computed<string>;
+  /** The API URL that points to the list of repositories belonging to the parent team of a team in the bypass pull request allowances. (AI-inferred) */
   repositoriesUrl?: string | Computed<string>;
+  /** The slug of the parent team of a team that can bypass pull request requirements. GitHub team slugs are URL-friendly identifiers, such as 'engineering-team'. (AI-inferred) */
   slug?: string | Computed<string>;
+  /** The type of the parent entity for a team, indicating whether it is an enterprise or an organization. (AI-inferred) */
   type?: string | Computed<string>;
+  /** The URL of the parent team of this team, if any. (AI-inferred) */
   url?: string | Computed<string>;
 }
 
 export interface WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Teams_Permissions {
+  /** Indicates whether the team has admin permission on the repository, which allows bypassing pull request requirements. (AI-inferred) */
   admin?: boolean | Computed<boolean>;
+  /** Whether the team has maintain permission, allowing it to bypass pull request review requirements. (AI-inferred) */
   maintain?: boolean | Computed<boolean>;
+  /** Whether the team has pull (read) access to the repository. (AI-inferred) */
   pull?: boolean | Computed<boolean>;
+  /** Whether the team has push permission on the branch, allowing them to push changes. (AI-inferred) */
   push?: boolean | Computed<boolean>;
+  /** Indicates whether the team has the 'triage' permission level for the repository, which allows management of issues and pull requests without write access and permits bypassing required pull request reviews on this branch. (AI-inferred) */
   triage?: boolean | Computed<boolean>;
 }
 
 export interface WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Teams {
+  /** The source of the team's access, indicating whether the team has direct access, or access granted through an organization or enterprise. Valid values: direct, organization, enterprise. (AI-inferred) */
   accessSource?: string | Computed<string>;
   description?: string | Computed<string>;
   enterpriseId?: number | Computed<number>;
+  /** The HTML URL of the team's page on GitHub, e.g., https://github.com/orgs/ORG/teams/TEAM. (AI-inferred) */
   htmlUrl?: string | Computed<string>;
+  /** The numeric ID of the GitHub team that can bypass pull request requirements for this branch protection rule. (AI-inferred) */
   id?: number | Computed<number>;
+  /** The URL to the list of members of this team, as returned by the GitHub API. (AI-inferred) */
   membersUrl?: string | Computed<string>;
+  /** The name of the team that is granted bypass permission for pull request reviews on this branch. (AI-inferred) */
   name?: string | Computed<string>;
+  /** The GraphQL global node ID of the team that is allowed to bypass pull request requirements. (AI-inferred) */
   nodeId?: string | Computed<string>;
+  /** The team's notification setting, with allowed values 'notifications_enabled' or 'notifications_disabled'. (AI-inferred) */
   notificationSetting?: string | Computed<string>;
+  /** The ID of the organization that the team belongs to. (AI-inferred) */
   organizationId?: number | Computed<number>;
+  /** The parent team of this team in the GitHub team hierarchy. This is an object containing the same team attributes (e.g., id, slug, name), and is null when the team has no parent. (AI-inferred) */
   parent?: WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Teams_Parent | Computed<WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Teams_Parent>;
   permission?: string | Computed<string>;
+  /** Object mapping permission levels to booleans representing the team's permissions on the repository. (AI-inferred) */
   permissions?: WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Teams_Permissions | Computed<WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Teams_Permissions>;
+  /** The privacy level of the team. Allowed values are 'secret' and 'closed'. (AI-inferred) */
   privacy?: string | Computed<string>;
+  /** The API URL to retrieve the list of repositories for this team. This is a standard field on GitHub team objects, indicating where to fetch the team's repositories. (AI-inferred) */
   repositoriesUrl?: string | Computed<string>;
+  /** The slug of the team that is allowed to bypass pull request requirements. (AI-inferred) */
   slug?: string | Computed<string>;
+  /** The type of the team, either "enterprise" or "organization". (AI-inferred) */
   type?: string | Computed<string>;
+  /** The API URL of the team that is allowed to bypass pull request review requirements. (AI-inferred) */
   url?: string | Computed<string>;
 }
 
@@ -228,126 +364,207 @@ export interface WithProtection_Protection_RequiredPullRequestReviews_DismissalR
   apps?: WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Apps[] | Computed<WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Apps[]>;
   /** The list of teams with review dismissal access. */
   teams?: WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Teams[] | Computed<WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Teams[]>;
+  /** The API URL for the list of teams that are allowed to dismiss pull request reviews. (AI-inferred) */
   teamsUrl?: string | Computed<string>;
+  /** The REST API URL for these dismissal restrictions. (AI-inferred) */
   url?: string | Computed<string>;
   /** The list of users with review dismissal access. */
   users?: WithProtection_Commit_Author[] | Computed<WithProtection_Commit_Author[]>;
+  /** The API URL for the list of users allowed to dismiss pull request reviews. (AI-inferred) */
   usersUrl?: string | Computed<string>;
 }
 
 export interface WithProtection_Protection_RequiredPullRequestReviews {
   /** Allow specific users, teams, or apps to bypass pull request requirements. */
   bypassPullRequestAllowances?: WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances | Computed<WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances>;
+  /** If true, approving reviews are dismissed when new commits are pushed to the branch. (AI-inferred) */
   dismissStaleReviews: boolean | Computed<boolean>;
+  /** Configuration block for restricting which users and teams can dismiss pull request reviews. This block contains nested lists of users and teams that are allowed to dismiss reviews. (AI-inferred) */
   dismissalRestrictions?: WithProtection_Protection_RequiredPullRequestReviews_DismissalRestrictions | Computed<WithProtection_Protection_RequiredPullRequestReviews_DismissalRestrictions>;
+  /** Setting this to true requires that pull requests have at least one approval from a code owner before they can be merged. (AI-inferred) */
   requireCodeOwnerReviews: boolean | Computed<boolean>;
   /** Whether the most recent push must be approved by someone other than the person who pushed it. */
   requireLastPushApproval?: boolean | Computed<boolean>;
+  /** The number of approving reviews required before a pull request can be merged. Must be between 0 and 6. (AI-inferred) */
   requiredApprovingReviewCount?: number | Computed<number>;
   url?: string | Computed<string>;
 }
 
 export interface WithProtection_Protection_RequiredStatusChecks_Checks {
+  /** The ID of the GitHub App that must create the check. If null, any app may create the check. (AI-inferred) */
   appId?: number | Computed<number>;
+  /** The name of the status check context that must pass. This is the identifier for a GitHub App check or commit status that must succeed for the branch protection rule to be satisfied. (AI-inferred) */
   context?: string | Computed<string>;
 }
 
 export interface WithProtection_Protection_RequiredStatusChecks {
+  /** The list of status checks that must pass before a branch can be merged. Each check object includes a context (the status check identifier) and optionally an app_id to restrict to a specific GitHub App. (AI-inferred) */
   checks: WithProtection_Protection_RequiredStatusChecks_Checks[] | Computed<WithProtection_Protection_RequiredStatusChecks_Checks[]>;
+  /** List of status check context names that must pass before the branch can be merged. Each entry is the identifier of a required CI check or other status check. (AI-inferred) */
   contexts: string[] | Computed<string[]>;
+  /** The API URL that lists the required status check contexts for this branch protection rule. (AI-inferred) */
   contextsUrl?: string | Computed<string>;
+  /** The enforcement level for the required status checks. Can be 'enforce', 'non_enforce', or 'waiting'. (AI-inferred) */
   enforcementLevel?: string | Computed<string>;
+  /** Require branches to be up to date before merging. When true, the branch cannot be merged unless it is up to date with the base branch. (AI-inferred) */
   strict?: boolean | Computed<boolean>;
   url?: string | Computed<string>;
 }
 
 export interface WithProtection_Protection_Restrictions_Apps_Owner {
+  /** The URL of the avatar image for the GitHub user or organization that owns the app listed in the branch protection restrictions. (AI-inferred) */
   avatarUrl?: string | Computed<string>;
   description?: string | Computed<string>;
+  /** The URL to the events of the GitHub App's owner (user or organization), as returned by the GitHub API. (AI-inferred) */
   eventsUrl?: string | Computed<string>;
+  /** The URL to fetch the list of followers of the GitHub app owner. (AI-inferred) */
   followersUrl?: string | Computed<string>;
+  /** The URL template to list the users followed by the owner of the app, as provided by the GitHub API. This is part of the owner object associated with a restricted app. (AI-inferred) */
   followingUrl?: string | Computed<string>;
+  /** The API endpoint URL for the owner's public gists. (AI-inferred) */
   gistsUrl?: string | Computed<string>;
+  /** The user's Gravatar ID, a hash used to build the avatar URL. (AI-inferred) */
   gravatarId?: string | Computed<string>;
+  /** The URL of the hooks endpoint for the app owner, typically `https://api.github.com/users/{owner}/hooks`, used to manage webhooks for that user. (AI-inferred) */
   hooksUrl?: string | Computed<string>;
+  /** The URL of the GitHub profile page for the user or organization that owns the app, typically in the format https://github.com/{username} or https://github.com/{orgname}. (AI-inferred) */
   htmlUrl?: string | Computed<string>;
+  /** The numeric ID of the GitHub user or organization that owns the app. (AI-inferred) */
   id?: number | Computed<number>;
+  /** The URL template for issues of the owner (user or organization) of the GitHub App, as returned by the GitHub API. May contain a placeholder such as `{/number}` for specific issue numbers. (AI-inferred) */
   issuesUrl?: string | Computed<string>;
+  /** The login of the app's owner, which is the GitHub username or organization name that owns the app. (AI-inferred) */
   login?: string | Computed<string>;
+  /** The members URL of the organization that owns the GitHub App. This field is only present when the owner is an organization. (AI-inferred) */
   membersUrl?: string | Computed<string>;
+  /** The GraphQL node ID of the user or organization that owns the app. (AI-inferred) */
   nodeId?: string | Computed<string>;
+  /** The URL to the organizations endpoint for the user that owns the GitHub app. This field is present when the app owner is a user account, and it points to the list of organizations that user belongs to. (AI-inferred) */
   organizationsUrl?: string | Computed<string>;
+  /** The URL template for accessing the public members of this owner (typically an organization), with a placeholder for the member username. (AI-inferred) */
   publicMembersUrl?: string | Computed<string>;
+  /** The URL to the received events endpoint for this owner (user or organization) in the GitHub API. (AI-inferred) */
   receivedEventsUrl?: string | Computed<string>;
+  /** The API URL to the list of repositories belonging to the app owner (a GitHub user or organization). (AI-inferred) */
   reposUrl?: string | Computed<string>;
+  /** Indicates whether the user is a site administrator for the GitHub instance (e.g., GitHub Enterprise Server). (AI-inferred) */
   siteAdmin?: boolean | Computed<boolean>;
+  /** The API URL to access repositories starred by the owner of the GitHub app. (AI-inferred) */
   starredUrl?: string | Computed<string>;
+  /** The API URL to list the subscriptions (repositories watched) for this owner. (AI-inferred) */
   subscriptionsUrl?: string | Computed<string>;
+  /** The type of GitHub account that owns the app, typically 'User' or 'Organization'. (AI-inferred) */
   type?: string | Computed<string>;
+  /** The GitHub API URL for the owner of the GitHub app (either a user or organization). (AI-inferred) */
   url?: string | Computed<string>;
   userViewType?: string | Computed<string>;
 }
 
 export interface WithProtection_Protection_Restrictions_Apps_Permissions {
+  /** The permission level granted to the GitHub App for repository contents, such as 'read' or 'write'. (AI-inferred) */
   contents?: string | Computed<string>;
+  /** The permission level for issues granted to the app. (AI-inferred) */
   issues?: string | Computed<string>;
+  /** The permission level for this app's access to metadata, such as email addresses. (AI-inferred) */
   metadata?: string | Computed<string>;
+  /** The permission level for the app's single-file access within the branch protection restrictions. (AI-inferred) */
   singleFile?: string | Computed<string>;
 }
 
 export interface WithProtection_Protection_Restrictions_Apps {
+  /** The OAuth client ID of the GitHub App that is included in the branch protection restrictions. (AI-inferred) */
   clientId?: string | Computed<string>;
+  /** The date and time the GitHub App was created, in ISO 8601 format (e.g., 2011-01-26T19:06:43Z). (AI-inferred) */
   createdAt?: string | Computed<string>;
+  /** The description of the GitHub App that is allowed to push to the branch, as shown in the GitHub App registry. (AI-inferred) */
   description?: string | Computed<string>;
+  /** List of GitHub App webhook events the app is subscribed to, e.g., `push`, `pull_request`. (AI-inferred) */
   events?: string[] | Computed<string[]>;
+  /** The external URL of the GitHub App, typically the app's homepage or information page as configured in the GitHub App's settings. (AI-inferred) */
   externalUrl?: string | Computed<string>;
+  /** The URL to the app's GitHub page. (AI-inferred) */
   htmlUrl?: string | Computed<string>;
+  /** Numeric identifier of the GitHub App that is listed in the branch protection restrictions. (AI-inferred) */
   id?: number | Computed<number>;
+  /** The name of the GitHub App that is allowed to push to the branch. (AI-inferred) */
   name?: string | Computed<string>;
+  /** The GraphQL node identifier for the app. (AI-inferred) */
   nodeId?: string | Computed<string>;
+  /** The GitHub user or organization that owns the app. (AI-inferred) */
   owner?: WithProtection_Protection_Restrictions_Apps_Owner | Computed<WithProtection_Protection_Restrictions_Apps_Owner>;
+  /** The GitHub App's permissions for the repository, as an object mapping permission names to their allowed levels. (AI-inferred) */
   permissions?: WithProtection_Protection_Restrictions_Apps_Permissions | Computed<WithProtection_Protection_Restrictions_Apps_Permissions>;
+  /** The slug of the GitHub App that is allowed to push to the branch. (AI-inferred) */
   slug?: string | Computed<string>;
+  /** The timestamp of the last update to this app, in ISO 8601 format. (AI-inferred) */
   updatedAt?: string | Computed<string>;
 }
 
 export interface WithProtection_Protection_Restrictions_Users {
+  /** The URL of the GitHub user's avatar image. (AI-inferred) */
   avatarUrl?: string | Computed<string>;
+  /** The URL for the user's events on GitHub. (AI-inferred) */
   eventsUrl?: string | Computed<string>;
+  /** The URL to the user's followers list on GitHub. (AI-inferred) */
   followersUrl?: string | Computed<string>;
+  /** The URL template to list the users this user follows. Replace the {username} placeholder with the user's login. (AI-inferred) */
   followingUrl?: string | Computed<string>;
+  /** The API URL for the user's gists. (AI-inferred) */
   gistsUrl?: string | Computed<string>;
+  /** The user's Gravatar ID, a legacy identifier used for their avatar image. May be an empty string if the user has no Gravatar. (AI-inferred) */
   gravatarId?: string | Computed<string>;
+  /** The HTML URL for the user's GitHub profile. (AI-inferred) */
   htmlUrl?: string | Computed<string>;
+  /** The unique identifier of the user included in the branch protection restrictions. (AI-inferred) */
   id?: number | Computed<number>;
+  /** The GitHub username of the user allowed to push to the protected branch. (AI-inferred) */
   login?: string | Computed<string>;
+  /** The Node ID of the GitHub user who is included in the list of users restricted from pushing to the protected branch. (AI-inferred) */
   nodeId?: string | Computed<string>;
+  /** The API URL for the list of organizations that this user belongs to. (AI-inferred) */
   organizationsUrl?: string | Computed<string>;
+  /** The URL to fetch the events received by this user. (AI-inferred) */
   receivedEventsUrl?: string | Computed<string>;
+  /** The URL to the list of public repositories owned by the user. (AI-inferred) */
   reposUrl?: string | Computed<string>;
+  /** Whether the user is a GitHub site administrator. (AI-inferred) */
   siteAdmin?: boolean | Computed<boolean>;
+  /** The URL template for listing repositories starred by the user, typically in the form https://api.github.com/users/{username}/starred{/owner}{/repo}. (AI-inferred) */
   starredUrl?: string | Computed<string>;
+  /** The URL to the user's subscriptions endpoint, listing repositories the user is subscribed to. (AI-inferred) */
   subscriptionsUrl?: string | Computed<string>;
   type?: string | Computed<string>;
+  /** The GitHub API URL for the user. (AI-inferred) */
   url?: string | Computed<string>;
+  /** The type of user account (e.g., 'User' or 'Bot') that is restricted from the branch. (AI-inferred) */
   userViewType?: string | Computed<string>;
 }
 
 export interface WithProtection_Protection_Restrictions {
+  /** List of GitHub apps that are permited to push to the branch under this branch protection restriction. (AI-inferred) */
   apps: WithProtection_Protection_Restrictions_Apps[] | Computed<WithProtection_Protection_Restrictions_Apps[]>;
+  /** The API endpoint URL that returns the list of GitHub Apps with push access to the branch under these restrictions. (AI-inferred) */
   appsUrl: string | Computed<string>;
+  /** The list of teams that are allowed to push to the branch under these protection restrictions. This field is required; provide the team references that should have push access. (AI-inferred) */
   teams: WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Teams[] | Computed<WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Teams[]>;
+  /** The URL to the API endpoint that lists the teams restricted from pushing to the branch, as part of branch protection restrictions. (AI-inferred) */
   teamsUrl: string | Computed<string>;
+  /** The API URL for the branch protection restrictions, which can be used to retrieve the users, teams, and apps that are restricted. (AI-inferred) */
   url: string | Computed<string>;
+  /** A required list of user objects representing GitHub users allowed to push to the protected branch when restrictions are configured. Each object contains the user's details, such as username (login). (AI-inferred) */
   users: WithProtection_Protection_Restrictions_Users[] | Computed<WithProtection_Protection_Restrictions_Users[]>;
+  /** The API URL for the list of users who are restricted from pushing to the branch. (AI-inferred) */
   usersUrl: string | Computed<string>;
 }
 
 export interface WithProtection_Protection {
+  /** An optional branch protection setting that controls whether the branch may be deleted by users with push access. (AI-inferred) */
   allowDeletions?: WithProtection_Protection_AllowDeletions | Computed<WithProtection_Protection_AllowDeletions>;
+  /** An optional object in branch protection settings that configures whether force pushes are allowed on the protected branch. (AI-inferred) */
   allowForcePushes?: WithProtection_Protection_AllowDeletions | Computed<WithProtection_Protection_AllowDeletions>;
   /** Whether users can pull changes from upstream when the branch is locked. Set to `true` to allow fork syncing. Set to `false` to prevent fork syncing. */
   allowForkSyncing?: WithProtection_Protection_AllowDeletions | Computed<WithProtection_Protection_AllowDeletions>;
+  /** A branch protection setting that blocks the creation of branches matching the branch pattern. (AI-inferred) */
   blockCreations?: WithProtection_Protection_AllowDeletions | Computed<WithProtection_Protection_AllowDeletions>;
   enabled?: boolean | Computed<boolean>;
   /** Protected Branch Admin Enforced */
@@ -355,16 +572,21 @@ export interface WithProtection_Protection {
   /** Whether to set the branch as read-only. If this is true, users will not be able to push to the branch. */
   lockBranch?: WithProtection_Protection_AllowDeletions | Computed<WithProtection_Protection_AllowDeletions>;
   name?: string | Computed<string>;
+  /** The URL of the branch protection. (AI-inferred) */
   protectionUrl?: string | Computed<string>;
+  /** Indicates whether all conversations on a pull request must be resolved before it can be merged into the branch. When enabled, branch protection blocks merging until all review threads are resolved. (AI-inferred) */
   requiredConversationResolution?: WithProtection_Protection_AllowDeletions | Computed<WithProtection_Protection_AllowDeletions>;
+  /** Settings for requiring a linear commit history. The object contains an 'enabled' property that, when true, prevents merge commits from being pushed to the branch. (AI-inferred) */
   requiredLinearHistory?: WithProtection_Protection_AllowDeletions | Computed<WithProtection_Protection_AllowDeletions>;
   /** Protected Branch Pull Request Review */
   requiredPullRequestReviews?: WithProtection_Protection_RequiredPullRequestReviews | Computed<WithProtection_Protection_RequiredPullRequestReviews>;
+  /** A setting that requires commits on the branch to be signed with a verified signature. Configure this to enforce commit signature verification for pushes to the protected branch. (AI-inferred) */
   requiredSignatures?: WithProtection_Protection_EnforceAdmins | Computed<WithProtection_Protection_EnforceAdmins>;
   /** Protected Branch Required Status Check */
   requiredStatusChecks?: WithProtection_Protection_RequiredStatusChecks | Computed<WithProtection_Protection_RequiredStatusChecks>;
   /** Branch Restriction Policy */
   restrictions?: WithProtection_Protection_Restrictions | Computed<WithProtection_Protection_Restrictions>;
+  /** The API URL for the branch protection rule, pointing to the protection details in the GitHub REST API. (AI-inferred) */
   url?: string | Computed<string>;
 }
 
@@ -380,17 +602,23 @@ export interface WithProtectionConfig {
 }
 
 export interface WithProtectionAttrs {
+  /** The hypermedia links associated with this branch protection rule, including `self` (API URL) and `html` (web page) URLs. (AI-inferred) */
   links: WithProtection_Links;
   /** Commit */
   commit: WithProtection_Commit;
+  /** The name of the branch protected by this resource. (AI-inferred) */
   name: string;
   /** The new name of the branch. */
   newName: string;
+  /** The branch name pattern (e.g., 'main' or 'release/*') to which the branch protection rules apply. (AI-inferred) */
   pattern: string;
+  /** Indicates whether the branch is currently protected by GitHub branch protection rules. This computed value reflects the state from the GitHub API. (AI-inferred) */
   protected: boolean;
   /** Branch Protection */
   protection: WithProtection_Protection;
+  /** The API URL for the branch protection rules associated with this branch. (AI-inferred) */
   protectionUrl: string;
+  /** The number of approving reviews required on a pull request for the protected branch. (AI-inferred) */
   requiredApprovingReviewCount: number;
   /** path parameter, not part of the API's own resource representation */
   owner: string;

@@ -48,15 +48,20 @@ var User_NameFields = ubx.FieldMap{
 }
 
 type UserConfig struct {
+	// Whether this SCIM-provisioned user account is active. (AI-inferred)
 	Active any
 	// The name of the user, suitable for display to end-users
 	DisplayName any
 	// user emails
-	Emails     any
+	Emails any
+	// This user's own real, external identity-provider identifier. (AI-inferred)
 	ExternalId any
-	Groups     any
-	Name       any
-	Schemas    any
+	// The real SCIM groups this user belongs to. (AI-inferred)
+	Groups any
+	// This user's own real, structured display name. (AI-inferred)
+	Name any
+	// The real SCIM schema URIs this resource conforms to. (AI-inferred)
+	Schemas any
 	// Configured by the admin. Could be an email, login, or username
 	UserName any
 	// path parameter, not part of the API's own resource representation
@@ -66,23 +71,30 @@ type UserConfig struct {
 }
 
 type UserAttrs struct {
+	// Whether this SCIM-provisioned user account is active. (AI-inferred)
 	Active any
 	// The name of the user, suitable for display to end-users
 	DisplayName any
 	// user emails
-	Emails     any
+	Emails any
+	// This user's own real, external identity-provider identifier. (AI-inferred)
 	ExternalId any
-	Groups     any
+	// The real SCIM groups this user belongs to. (AI-inferred)
+	Groups any
 	// Unique identifier of an external identity
-	Id   any
+	Id any
+	// Real SCIM protocol metadata (resource type, location, timestamps) for this user. (AI-inferred)
 	Meta any
+	// This user's own real, structured display name. (AI-inferred)
 	Name any
 	// Set of operations to be performed
 	Operations any
 	// The ID of the organization.
 	OrganizationId any
-	Roles          any
-	Schemas        any
+	// The real roles assigned to this SCIM-provisioned user. (AI-inferred)
+	Roles any
+	// The real SCIM schema URIs this resource conforms to. (AI-inferred)
+	Schemas any
 	// Configured by the admin. Could be an email, login, or username
 	UserName any
 	// path parameter, not part of the API's own resource representation

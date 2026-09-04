@@ -4,49 +4,80 @@ package pull
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type RequestReviewComment_Links_Html struct {
+	// The URL to access the pull request review comment in the GitHub web interface. (AI-inferred)
 	Href any
 }
 
 type RequestReviewComment_Links struct {
-	Html        any
+	// The HTML URL of the pull request review comment, represented as a link object with an href field. (AI-inferred)
+	Html any
+	// The link to the pull request associated with this review comment, containing the API URL (href) to the pull request. (AI-inferred)
 	PullRequest any
-	Self        any
+	// The URL to this pull request review comment itself. (AI-inferred)
+	Self any
 }
 
 type RequestReviewComment_Reactions struct {
-	Confused   any
-	Eyes       any
-	Heart      any
-	Hooray     any
-	Laugh      any
-	Rocket     any
+	// The number of confused reactions on the pull request review comment. (AI-inferred)
+	Confused any
+	// The number of eye reactions (👀) on the pull request review comment. (AI-inferred)
+	Eyes any
+	// The count of heart (❤️) reactions on the pull request review comment. (AI-inferred)
+	Heart any
+	// The number of hooray reactions on the pull request review comment. (AI-inferred)
+	Hooray any
+	// The number of laugh reactions (😂) on the pull request review comment. (AI-inferred)
+	Laugh any
+	// The number of rocket reactions (🚀) on the review comment. (AI-inferred)
+	Rocket any
+	// The total number of reactions on the pull request review comment. (AI-inferred)
 	TotalCount any
-	Url        any
+	// The API URL for the reactions resource on the pull request review comment. (AI-inferred)
+	Url any
 }
 
 type RequestReviewComment_User struct {
-	AvatarUrl         any
-	Email             any
-	EventsUrl         any
-	FollowersUrl      any
-	FollowingUrl      any
-	GistsUrl          any
-	GravatarId        any
-	HtmlUrl           any
-	Id                any
-	Login             any
-	Name              any
-	NodeId            any
-	OrganizationsUrl  any
+	// The URL of the user's avatar image on GitHub. (AI-inferred)
+	AvatarUrl any
+	// Email address of the user who authored the review comment. This field is optional and may be empty if the user's email is not public. (AI-inferred)
+	Email any
+	// The URL to retrieve the events performed by this user, with optional placeholder for privacy filtering (e.g., https://api.github.com/users/{username}/events{/privacy}). (AI-inferred)
+	EventsUrl any
+	// The API URL for the user's followers, as defined by the GitHub REST API. (AI-inferred)
+	FollowersUrl any
+	// The URL template for the API endpoint that lists users this user follows. May include a placeholder for optionally specifying a target user. (AI-inferred)
+	FollowingUrl any
+	// The URL template for the user's gists, which may include a placeholder for a specific gist ID (e.g., https://api.github.com/users/{user}/gists{/gist_id}). (AI-inferred)
+	GistsUrl any
+	// The user's Gravatar ID, a hash used to generate the avatar image URL. (AI-inferred)
+	GravatarId any
+	// The GitHub profile URL for the user. (AI-inferred)
+	HtmlUrl any
+	Id      any
+	// The GitHub username (login) of the user associated with the review comment. (AI-inferred)
+	Login any
+	// The display name of the user who authored the pull request review comment. (AI-inferred)
+	Name any
+	// The GraphQL node ID for the user associated with the pull request review comment. (AI-inferred)
+	NodeId any
+	// The URL to the list of organizations that the user belongs to. (AI-inferred)
+	OrganizationsUrl any
+	// The URL to the user's received events in the GitHub API. (AI-inferred)
 	ReceivedEventsUrl any
-	ReposUrl          any
-	SiteAdmin         any
-	StarredAt         any
-	StarredUrl        any
-	SubscriptionsUrl  any
-	Type              any
-	Url               any
-	UserViewType      any
+	// The API URL to the user's list of repositories. (AI-inferred)
+	ReposUrl any
+	// Whether the user is a site administrator (i.e., has admin rights on the GitHub instance). (AI-inferred)
+	SiteAdmin any
+	StarredAt any
+	// The API endpoint URL that lists repositories starred by the user. (AI-inferred)
+	StarredUrl any
+	// The API endpoint URL for the user's subscriptions, e.g., https://api.github.com/users/{username}/subscriptions. (AI-inferred)
+	SubscriptionsUrl any
+	// The type of GitHub account, such as 'User' or 'Bot'. (AI-inferred)
+	Type any
+	// The API URL for the user associated with this pull request review comment. (AI-inferred)
+	Url          any
+	UserViewType any
 }
 
 type RequestReviewCommentConfig struct {
@@ -81,15 +112,19 @@ type RequestReviewCommentConfig struct {
 }
 
 type RequestReviewCommentAttrs struct {
+	// Hypermedia links to related resources for this pull request review comment, such as the comment's API endpoint, HTML view, and associated pull request. (AI-inferred)
 	Links any
 	// How the author is associated with the repository.
 	AuthorAssociation any
 	// The text of the review comment.
-	Body     any
+	Body any
+	// The rendered HTML version of the comment body. (AI-inferred)
 	BodyHtml any
+	// The plain-text version of the pull request review comment body, as computed by GitHub. (AI-inferred)
 	BodyText any
 	// The SHA of the commit needing a comment. Not using the latest commit SHA may render your comment outdated if a subsequent commit modifies the line you specify as the `position`.
-	CommitId  any
+	CommitId any
+	// The timestamp of when the pull request review comment was created, in RFC3339 format. (AI-inferred)
 	CreatedAt any
 	// The diff of the line that the comment refers to.
 	DiffHunk any
@@ -121,7 +156,8 @@ type RequestReviewCommentAttrs struct {
 	PullRequestReviewId any
 	// URL for the pull request that the review comment belongs to.
 	PullRequestUrl any
-	Reactions      any
+	// An object containing reaction summary counts (such as +1, -1, laugh, hooray, confused, heart, rocket, eyes) and the total count for this review comment, reflecting how users have reacted to it. (AI-inferred)
+	Reactions any
 	// In a split diff view, the side of the diff that the pull request's changes appear on. Can be `LEFT` or `RIGHT`. Use `LEFT` for deletions that appear in red. Use `RIGHT` for additions that appear in green or unchanged lines that appear in white and are shown for context. For a multi-line comment, side represents whether the last line of the comment range is a deletion or addition. For more information, see "[Diff view options](https://docs.github.com/enterprise-cloud@latest/articles/about-comparing-branches-in-pull-requests#diff-view-options)" in the GitHub Help documentation.
 	Side any
 	// **Required when using multi-line comments unless using `in_reply_to`**. The `start_line` is the first line in the pull request diff that your multi-line comment applies to. To learn more about multi-line comments, see "[Commenting on a pull request](https://docs.github.com/enterprise-cloud@latest/articles/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request)" in the GitHub Help documentation.
@@ -130,7 +166,8 @@ type RequestReviewCommentAttrs struct {
 	StartSide any
 	// The level at which the comment is targeted.
 	SubjectType any
-	UpdatedAt   any
+	// The timestamp of the last update to the review comment. (AI-inferred)
+	UpdatedAt any
 	// URL for the pull request review comment
 	Url any
 	// A GitHub user.

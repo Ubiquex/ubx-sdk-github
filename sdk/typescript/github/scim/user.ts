@@ -46,14 +46,19 @@ const User_NameFields: FieldMap = {
 };
 
 export interface UserConfig {
+  /** Whether this SCIM-provisioned user account is active. (AI-inferred) */
   active?: boolean | Computed<boolean>;
   /** The name of the user, suitable for display to end-users */
   displayName?: string | Computed<string>;
   /** user emails */
   emails: User_Emails[] | Computed<User_Emails[]>;
+  /** This user's own real, external identity-provider identifier. (AI-inferred) */
   externalId?: string | Computed<string>;
+  /** The real SCIM groups this user belongs to. (AI-inferred) */
   groups?: string[] | Computed<string[]>;
+  /** This user's own real, structured display name. (AI-inferred) */
   name: User_Name | Computed<User_Name>;
+  /** The real SCIM schema URIs this resource conforms to. (AI-inferred) */
   schemas?: string[] | Computed<string[]>;
   /** Configured by the admin. Could be an email, login, or username */
   userName: string | Computed<string>;
@@ -64,22 +69,29 @@ export interface UserConfig {
 }
 
 export interface UserAttrs {
+  /** Whether this SCIM-provisioned user account is active. (AI-inferred) */
   active: boolean;
   /** The name of the user, suitable for display to end-users */
   displayName: string;
   /** user emails */
   emails: User_Emails[];
+  /** This user's own real, external identity-provider identifier. (AI-inferred) */
   externalId: string;
+  /** The real SCIM groups this user belongs to. (AI-inferred) */
   groups: string[];
   /** Unique identifier of an external identity */
   id: string;
+  /** Real SCIM protocol metadata (resource type, location, timestamps) for this user. (AI-inferred) */
   meta: User_Meta;
+  /** This user's own real, structured display name. (AI-inferred) */
   name: User_Name;
   /** Set of operations to be performed */
   operations: User_Operations[];
   /** The ID of the organization. */
   organizationId: number;
+  /** The real roles assigned to this SCIM-provisioned user. (AI-inferred) */
   roles: User_Roles[];
+  /** The real SCIM schema URIs this resource conforms to. (AI-inferred) */
   schemas: string[];
   /** Configured by the admin. Could be an email, login, or username */
   userName: string;

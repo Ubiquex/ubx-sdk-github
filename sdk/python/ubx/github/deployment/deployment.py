@@ -8,75 +8,129 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class Deployment_Creator:
+    # The URL of the avatar image for the GitHub user who created the deployment. (AI-inferred)
     avatar_url: Any = None
+    # Email address of the deployment creator, if publicly available. (AI-inferred)
     email: Any = None
+    # The API endpoint that returns events for the user who created the deployment, as defined in the GitHub REST API user object. (AI-inferred)
     events_url: Any = None
+    # The GitHub API URL for the list of followers of the creator's user account. (AI-inferred)
     followers_url: Any = None
+    # URL template to retrieve the list of users this user follows. May include a placeholder for a specific other user. (AI-inferred)
     following_url: Any = None
+    # The URL template to access the user's gists. For example, 'https://api.github.com/users/{user}/gists{/gist_id}', where placeholders are substituted with actual values. (AI-inferred)
     gists_url: Any = None
+    # The user's Gravatar identifier, used as part of the URL to fetch their profile image. In GitHub API user objects, this is typically the hash of the user's Gravatar email. (AI-inferred)
     gravatar_id: Any = None
+    # The URL to the creator's GitHub profile page. (AI-inferred)
     html_url: Any = None
+    # The unique identifier of the user who created the deployment. (AI-inferred)
     id: Any = None
+    # The GitHub username of the creator (user) of the deployment. (AI-inferred)
     login: Any = None
+    # The display name of the user who created the deployment, if set. (AI-inferred)
     name: Any = None
+    # The global node ID of the creator, used for GraphQL API operations. (AI-inferred)
     node_id: Any = None
+    # The API URL that lists the organizations this user belongs to. (AI-inferred)
     organizations_url: Any = None
+    # The URL to the GitHub API endpoint that lists events received by the creator user (the user who created the deployment). (AI-inferred)
     received_events_url: Any = None
+    # The URL to list the creator's repositories on GitHub. (AI-inferred)
     repos_url: Any = None
+    # Indicates whether the user is a site administrator. (AI-inferred)
     site_admin: Any = None
+    # The ISO 8601 timestamp indicating when the creator starred the repository. (AI-inferred)
     starred_at: Any = None
+    # The URL template for the creator's starred repositories, with optional placeholders for owner and repo (e.g., https://api.github.com/users/{user}/starred{/owner}{/repo}). (AI-inferred)
     starred_url: Any = None
+    # The API endpoint URL for the creator's subscriptions, as defined in the GitHub REST API user object. (AI-inferred)
     subscriptions_url: Any = None
+    # The type of user or bot that created the deployment, such as 'User' or 'Bot'. In GitHub API, this field indicates the actor kind. (AI-inferred)
     type: Any = None
+    # The API URL for the GitHub user who created the deployment. (AI-inferred)
     url: Any = None
+    # Specifies whether the user is a public or private GitHub user, with allowed values 'public' or 'private'. (AI-inferred)
     user_view_type: Any = None
 
 @dataclasses.dataclass
 class Deployment_PerformedViaGithubApp_Owner:
+    # The URL of the avatar image for the owner of the GitHub App that performed the deployment. (AI-inferred)
     avatar_url: Any = None
     created_at: Any = None
     description: Any = None
+    # The email address associated with the GitHub account that owns the GitHub App. (AI-inferred)
     email: Any = None
+    # The URL to retrieve the events (activity) associated with this owner account, as defined by the GitHub API. (AI-inferred)
     events_url: Any = None
+    # The URL to access the list of followers for this owner via the GitHub API. (AI-inferred)
     followers_url: Any = None
+    # The URL template to retrieve the list of users that this owner follows, typically in the form https://api.github.com/users/{username}/following. (AI-inferred)
     following_url: Any = None
+    # The URL to the gists associated with this GitHub user. (AI-inferred)
     gists_url: Any = None
+    # The Gravatar ID of the owner of the GitHub App, used to construct the owner's avatar URL. (AI-inferred)
     gravatar_id: Any = None
+    # The URL to the GitHub profile of the owner (user or organization) of the GitHub App that performed the deployment. (AI-inferred)
     html_url: Any = None
     id: Any = None
+    # The username of the GitHub account that owns the GitHub App. (AI-inferred)
     login: Any = None
+    # The display name of the owner of the GitHub App that performed the deployment. (AI-inferred)
     name: Any = None
+    # The unique GraphQL node identifier for the owner (user or organization) of the GitHub App that performed the deployment. (AI-inferred)
     node_id: Any = None
+    # The URL to the organizations endpoint for the owner, which lists the organizations that the owner belongs to. (AI-inferred)
     organizations_url: Any = None
+    # The URL to the GitHub API endpoint listing events received by the owner. (AI-inferred)
     received_events_url: Any = None
+    # URL to the GitHub REST API endpoint for listing the repositories owned by this owner. (AI-inferred)
     repos_url: Any = None
+    # Indicates whether the GitHub App owner is a GitHub site administrator; typically present only when the owner is a user. (AI-inferred)
     site_admin: Any = None
     slug: Any = None
     starred_at: Any = None
+    # URL to list repositories starred by this owner, as defined by the GitHub API. Typically includes template placeholders such as `{/owner}{/repo}` for accessing specific starred repositories. (AI-inferred)
     starred_url: Any = None
+    # The API endpoint URL that lists subscriptions for this GitHub account (owner). (AI-inferred)
     subscriptions_url: Any = None
+    # The type of the GitHub App owner account, which is either 'User' or 'Organization'. (AI-inferred)
     type: Any = None
+    # The timestamp indicating when the GitHub App's owner was last updated. (AI-inferred)
     updated_at: Any = None
+    # The API URL for the GitHub user or organization that owns the GitHub App. (AI-inferred)
     url: Any = None
+    # Indicates whether the owner user account is a public or private user. Possible values are 'public' and 'private'. (AI-inferred)
     user_view_type: Any = None
+    # The website URL of the GitHub App's owner (user or organization). (AI-inferred)
     website_url: Any = None
 
 @dataclasses.dataclass
 class Deployment_PerformedViaGithubApp_Permissions:
+    # The permission level for checks-related operations. (AI-inferred)
     checks: Any = None
+    # The level of permission the GitHub App has to access repository contents. Possible values are 'read', 'write', and 'none'. (AI-inferred)
     contents: Any = None
+    # The permission level for the Deployments API. Can be 'read', 'write', or 'none'. (AI-inferred)
     deployments: Any = None
+    # The permission level for issues, controlling what the GitHub App can access and modify. (AI-inferred)
     issues: Any = None
+    # The metadata permission level for the GitHub App. Valid values are 'read' or 'write'. (AI-inferred)
     metadata: Any = None
 
 @dataclasses.dataclass
 class Deployment_PerformedViaGithubApp:
+    # The client ID of the GitHub App that performed the deployment. (AI-inferred)
     client_id: Any = None
+    # The timestamp of when the deployment was created, in ISO 8601 format. (AI-inferred)
     created_at: Any = None
+    # The description of the GitHub App that performed the deployment. (AI-inferred)
     description: Any = None
     # The list of events for the GitHub app. Note that the `installation_target`, `security_advisory`, and `meta` events are not included because they are global events and not specific to an installation.
     events: Any = None
+    # The URL of the GitHub App's homepage. This is the app's public external URL as defined in the GitHub App settings. (AI-inferred)
     external_url: Any = None
+    # The HTML URL of the GitHub App that performed the deployment. (AI-inferred)
     html_url: Any = None
     # Unique identifier of the GitHub app
     id: Any = None
@@ -84,12 +138,15 @@ class Deployment_PerformedViaGithubApp:
     installations_count: Any = None
     # The name of the GitHub app
     name: Any = None
+    # The GraphQL node identifier of the GitHub App that performed the deployment. (AI-inferred)
     node_id: Any = None
+    # The user or organization that owns the GitHub App that performed the deployment. (AI-inferred)
     owner: Any = None
     # The set of permissions for the GitHub app
     permissions: Any = None
     # The slug name of the GitHub app
     slug: Any = None
+    # The ISO 8601 timestamp indicating when the deployment record was last updated. (AI-inferred)
     updated_at: Any = None
 
 @dataclasses.dataclass
@@ -100,6 +157,7 @@ class DeploymentConfig:
     description: Any = None
     # Name for the target deployment environment (e.g., `production`, `staging`, `qa`).
     environment: Any = None
+    # The payload of the deployment, a free-form JSON object passed to the deployment task. (AI-inferred)
     payload: Any = None
     # Specifies if the given environment is one that end-users directly interact with. Default: `true` when `environment` is `production` and `false` otherwise.
     production_environment: Any = None
@@ -122,6 +180,7 @@ class DeploymentConfig:
 class DeploymentAttrs:
     # Attempts to automatically merge the default branch into the requested ref, if it's behind the default branch.
     auto_merge: Any = None
+    # The timestamp of when the deployment was created, in ISO 8601 format (e.g., 2011-01-26T19:01:12Z). (AI-inferred)
     created_at: Any = None
     # A GitHub user.
     creator: Any = None
@@ -131,8 +190,11 @@ class DeploymentAttrs:
     environment: Any = None
     # Unique identifier of the deployment
     id: Any = None
+    # The node ID of the deployment, used for identifying the resource in GraphQL API queries. (AI-inferred)
     node_id: Any = None
+    # The name of the environment as it was originally set at the time of deployment, before any subsequent renames. (AI-inferred)
     original_environment: Any = None
+    # The payload of the deployment, a free-form JSON object passed to the deployment task. (AI-inferred)
     payload: Any = None
     # GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
     performed_via_github_app: Any = None
@@ -140,16 +202,21 @@ class DeploymentAttrs:
     production_environment: Any = None
     # The ref to deploy. This can be a branch, tag, or SHA.
     ref: Any = None
+    # The URL of the repository associated with this deployment. This value is computed by the provider. (AI-inferred)
     repository_url: Any = None
     # The [status](https://docs.github.com/enterprise-cloud@latest/rest/commits/statuses) contexts to verify against commit status checks. If you omit this parameter, GitHub verifies all unique contexts before creating a deployment. To bypass checking entirely, pass an empty array. Defaults to all unique contexts.
     required_contexts: Any = None
+    # The SHA of the commit that is being deployed. (AI-inferred)
     sha: Any = None
+    # The API URL that lists the statuses associated with this deployment. (AI-inferred)
     statuses_url: Any = None
     # Specifies a task to execute (e.g., `deploy` or `deploy:migrations`).
     task: Any = None
     # Specifies if the given environment is specific to the deployment and will no longer exist at some point in the future. Default: `false`
     transient_environment: Any = None
+    # The timestamp of the last update to the deployment, in RFC3339 format. (AI-inferred)
     updated_at: Any = None
+    # The API URL for this deployment, as returned by GitHub. (AI-inferred)
     url: Any = None
     # path parameter, not part of the API's own resource representation
     owner: Any = None

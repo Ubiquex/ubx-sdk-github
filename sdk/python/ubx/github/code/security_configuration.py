@@ -25,9 +25,13 @@ class SecurityConfiguration_DependencyGraphAutosubmitActionOptions:
 
 @dataclasses.dataclass
 class SecurityConfiguration_SecretScanningDelegatedBypassOptions_Reviewers:
+    # The mode of the reviewer, which must be either `ALWAYS` or `EXEMPT`. (AI-inferred)
     mode: Any = None
+    # The ID of the GitHub user or team that serves as a reviewer for delegated secret scanning bypass requests. (AI-inferred)
     reviewer_id: Any = None
+    # Type of the reviewer for the delegated bypass. Valid values are `TEAM` or `ROLE`. (AI-inferred)
     reviewer_type: Any = None
+    # The ID of the code security configuration that contains these secret scanning delegated bypass reviewers. (AI-inferred)
     security_configuration_id: Any = None
 
 @dataclasses.dataclass
@@ -115,6 +119,7 @@ class SecurityConfigurationAttrs:
     code_scanning_options: Any = None
     # The enablement status of GitHub Code Security features.
     code_security: Any = None
+    # The timestamp at which the code security configuration was created, automatically set by the system. (AI-inferred)
     created_at: Any = None
     # The enablement status of Dependabot alerts
     dependabot_alerts: Any = None
@@ -162,6 +167,7 @@ class SecurityConfigurationAttrs:
     secret_scanning_validity_checks: Any = None
     # The type of the code security configuration.
     target_type: Any = None
+    # The timestamp of when the code security configuration was last updated, in ISO 8601 format. (AI-inferred)
     updated_at: Any = None
     # The URL of the configuration
     url: Any = None

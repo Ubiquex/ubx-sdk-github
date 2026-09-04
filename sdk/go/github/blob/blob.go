@@ -20,12 +20,17 @@ type BlobAttrs struct {
 	// The new blob's content.
 	Content any
 	// The encoding used for `content`. Currently, `"utf-8"` and `"base64"` are supported.
-	Encoding           any
+	Encoding any
+	// The blob's content rendered with syntax highlighting, when requested. (AI-inferred)
 	HighlightedContent any
-	NodeId             any
-	Sha                any
-	Size               any
-	Url                any
+	// The blob's GraphQL node ID. (AI-inferred)
+	NodeId any
+	// The SHA-1 hash identifying this blob's content. (AI-inferred)
+	Sha any
+	// The size of the blob's content, in bytes. (AI-inferred)
+	Size any
+	// The API URL for retrieving this blob. (AI-inferred)
+	Url any
 	// path parameter, not part of the API's own resource representation
 	Owner any
 	// path parameter, not part of the API's own resource representation

@@ -23,6 +23,7 @@ class DependabotSecretConfig:
 
 @dataclasses.dataclass
 class DependabotSecretAttrs:
+    # The date and time at which the variable was created, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ. (AI-inferred)
     created_at: Any = None
     # Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get an organization public key](https://docs.github.com/enterprise-cloud@latest/rest/dependabot/secrets#get-an-organization-public-key) endpoint.
     encrypted_value: Any = None
@@ -30,9 +31,11 @@ class DependabotSecretAttrs:
     key_id: Any = None
     # The name of the secret.
     name: Any = None
+    # API URL listing the repositories this organization-level Actions variable is selectively exposed to. (AI-inferred)
     selected_repositories_url: Any = None
     # An array of repository ids that can access the organization secret. You can only provide a list of repository ids when the `visibility` is set to `selected`. You can manage the list of selected repositories using the [List selected repositories for an organization secret](https://docs.github.com/enterprise-cloud@latest/rest/dependabot/secrets#list-selected-repositories-for-an-organization-secret), [Set selected repositories for an organization secret](https://docs.github.com/enterprise-cloud@latest/rest/dependabot/secrets#set-selected-repositories-for-an-organization-secret), and [Remove selected repository from an organization secret](https://docs.github.com/enterprise-cloud@latest/rest/dependabot/secrets#remove-selected-repository-from-an-organization-secret) endpoints.
     selected_repository_ids: Any = None
+    # The date and time at which the variable was last updated, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ. (AI-inferred)
     updated_at: Any = None
     # Which type of organization repositories have access to the organization secret. `selected` means only the repositories specified by `selected_repository_ids` can access the secret.
     visibility: Any = None

@@ -2,47 +2,78 @@
 import type { Computed, FieldMap, ResourceBinding } from "@ubx/sdk";
 
 export interface RequestReviewComment_Links_Html {
+  /** The URL to access the pull request review comment in the GitHub web interface. (AI-inferred) */
   href: string | Computed<string>;
 }
 
 export interface RequestReviewComment_Links {
+  /** The HTML URL of the pull request review comment, represented as a link object with an href field. (AI-inferred) */
   html: RequestReviewComment_Links_Html | Computed<RequestReviewComment_Links_Html>;
+  /** The link to the pull request associated with this review comment, containing the API URL (href) to the pull request. (AI-inferred) */
   pullRequest: RequestReviewComment_Links_Html | Computed<RequestReviewComment_Links_Html>;
+  /** The URL to this pull request review comment itself. (AI-inferred) */
   self: RequestReviewComment_Links_Html | Computed<RequestReviewComment_Links_Html>;
 }
 
 export interface RequestReviewComment_Reactions {
+  /** The number of confused reactions on the pull request review comment. (AI-inferred) */
   confused: number | Computed<number>;
+  /** The number of eye reactions (👀) on the pull request review comment. (AI-inferred) */
   eyes: number | Computed<number>;
+  /** The count of heart (❤️) reactions on the pull request review comment. (AI-inferred) */
   heart: number | Computed<number>;
+  /** The number of hooray reactions on the pull request review comment. (AI-inferred) */
   hooray: number | Computed<number>;
+  /** The number of laugh reactions (😂) on the pull request review comment. (AI-inferred) */
   laugh: number | Computed<number>;
+  /** The number of rocket reactions (🚀) on the review comment. (AI-inferred) */
   rocket: number | Computed<number>;
+  /** The total number of reactions on the pull request review comment. (AI-inferred) */
   totalCount: number | Computed<number>;
+  /** The API URL for the reactions resource on the pull request review comment. (AI-inferred) */
   url: string | Computed<string>;
 }
 
 export interface RequestReviewComment_User {
+  /** The URL of the user's avatar image on GitHub. (AI-inferred) */
   avatarUrl: string | Computed<string>;
+  /** Email address of the user who authored the review comment. This field is optional and may be empty if the user's email is not public. (AI-inferred) */
   email?: string | Computed<string>;
+  /** The URL to retrieve the events performed by this user, with optional placeholder for privacy filtering (e.g., https://api.github.com/users/{username}/events{/privacy}). (AI-inferred) */
   eventsUrl: string | Computed<string>;
+  /** The API URL for the user's followers, as defined by the GitHub REST API. (AI-inferred) */
   followersUrl: string | Computed<string>;
+  /** The URL template for the API endpoint that lists users this user follows. May include a placeholder for optionally specifying a target user. (AI-inferred) */
   followingUrl: string | Computed<string>;
+  /** The URL template for the user's gists, which may include a placeholder for a specific gist ID (e.g., https://api.github.com/users/{user}/gists{/gist_id}). (AI-inferred) */
   gistsUrl: string | Computed<string>;
+  /** The user's Gravatar ID, a hash used to generate the avatar image URL. (AI-inferred) */
   gravatarId: string | Computed<string>;
+  /** The GitHub profile URL for the user. (AI-inferred) */
   htmlUrl: string | Computed<string>;
   id: number | Computed<number>;
+  /** The GitHub username (login) of the user associated with the review comment. (AI-inferred) */
   login: string | Computed<string>;
+  /** The display name of the user who authored the pull request review comment. (AI-inferred) */
   name?: string | Computed<string>;
+  /** The GraphQL node ID for the user associated with the pull request review comment. (AI-inferred) */
   nodeId: string | Computed<string>;
+  /** The URL to the list of organizations that the user belongs to. (AI-inferred) */
   organizationsUrl: string | Computed<string>;
+  /** The URL to the user's received events in the GitHub API. (AI-inferred) */
   receivedEventsUrl: string | Computed<string>;
+  /** The API URL to the user's list of repositories. (AI-inferred) */
   reposUrl: string | Computed<string>;
+  /** Whether the user is a site administrator (i.e., has admin rights on the GitHub instance). (AI-inferred) */
   siteAdmin: boolean | Computed<boolean>;
   starredAt?: string | Computed<string>;
+  /** The API endpoint URL that lists repositories starred by the user. (AI-inferred) */
   starredUrl: string | Computed<string>;
+  /** The API endpoint URL for the user's subscriptions, e.g., https://api.github.com/users/{username}/subscriptions. (AI-inferred) */
   subscriptionsUrl: string | Computed<string>;
+  /** The type of GitHub account, such as 'User' or 'Bot'. (AI-inferred) */
   type: string | Computed<string>;
+  /** The API URL for the user associated with this pull request review comment. (AI-inferred) */
   url: string | Computed<string>;
   userViewType?: string | Computed<string>;
 }
@@ -79,15 +110,19 @@ export interface RequestReviewCommentConfig {
 }
 
 export interface RequestReviewCommentAttrs {
+  /** Hypermedia links to related resources for this pull request review comment, such as the comment's API endpoint, HTML view, and associated pull request. (AI-inferred) */
   links: RequestReviewComment_Links;
   /** How the author is associated with the repository. */
   authorAssociation: string;
   /** The text of the review comment. */
   body: string;
+  /** The rendered HTML version of the comment body. (AI-inferred) */
   bodyHtml: string;
+  /** The plain-text version of the pull request review comment body, as computed by GitHub. (AI-inferred) */
   bodyText: string;
   /** The SHA of the commit needing a comment. Not using the latest commit SHA may render your comment outdated if a subsequent commit modifies the line you specify as the `position`. */
   commitId: string;
+  /** The timestamp of when the pull request review comment was created, in RFC3339 format. (AI-inferred) */
   createdAt: string;
   /** The diff of the line that the comment refers to. */
   diffHunk: string;
@@ -119,6 +154,7 @@ export interface RequestReviewCommentAttrs {
   pullRequestReviewId: number;
   /** URL for the pull request that the review comment belongs to. */
   pullRequestUrl: string;
+  /** An object containing reaction summary counts (such as +1, -1, laugh, hooray, confused, heart, rocket, eyes) and the total count for this review comment, reflecting how users have reacted to it. (AI-inferred) */
   reactions: RequestReviewComment_Reactions;
   /** In a split diff view, the side of the diff that the pull request's changes appear on. Can be `LEFT` or `RIGHT`. Use `LEFT` for deletions that appear in red. Use `RIGHT` for additions that appear in green or unchanged lines that appear in white and are shown for context. For a multi-line comment, side represents whether the last line of the comment range is a deletion or addition. For more information, see "[Diff view options](https://docs.github.com/enterprise-cloud@latest/articles/about-comparing-branches-in-pull-requests#diff-view-options)" in the GitHub Help documentation. */
   side: string;
@@ -128,6 +164,7 @@ export interface RequestReviewCommentAttrs {
   startSide: string;
   /** The level at which the comment is targeted. */
   subjectType: string;
+  /** The timestamp of the last update to the review comment. (AI-inferred) */
   updatedAt: string;
   /** URL for the pull request review comment */
   url: string;

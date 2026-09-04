@@ -31,6 +31,7 @@ class LabelAttrs:
     id: Any = None
     # The name of the label. Emoji can be added to label names, using either native emoji or colon-style markup. For example, typing `:strawberry:` will render the emoji ![:strawberry:](https://github.githubassets.com/images/icons/emoji/unicode/1f353.png ":strawberry:"). For a full list of available emoji and codes, see "[Emoji cheat sheet](https://github.com/ikatyang/emoji-cheat-sheet)."
     name: Any = None
+    # The label's GraphQL node ID. (AI-inferred)
     node_id: Any = None
     # URL for the label
     url: Any = None

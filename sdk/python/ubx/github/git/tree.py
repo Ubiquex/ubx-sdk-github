@@ -8,10 +8,15 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class Tree_Tree:
+    # The content of the file (blob) represented by this tree entry. This field is typically populated only for blob entries, often when the tree is fetched recursively and the file is small enough to include inline. (AI-inferred)
     content: Any = None
+    # The file mode for the tree entry. Valid values are 100644 (regular file), 100755 (executable file), 040000 (subdirectory), 160000 (submodule/gitlink), and 120000 (symbolic link). (AI-inferred)
     mode: Any = None
+    # The file path relative to the repository root for the tree entry. (AI-inferred)
     path: Any = None
+    # The SHA-1 hash of the git object (blob or tree) referenced by this tree entry. (AI-inferred)
     sha: Any = None
+    # The type of the tree entry, which is one of 'blob' (file), 'tree' (subdirectory), or 'commit' (submodule). (AI-inferred)
     type: Any = None
 
 _Tree_TreeFields = {
@@ -39,10 +44,13 @@ class TreeConfig:
 class TreeAttrs:
     # The SHA1 of an existing Git tree object which will be used as the base for the new tree. If provided, a new Git tree object will be created from entries in the Git tree object pointed to by `base_tree` and entries defined in the `tree` parameter. Entries defined in the `tree` parameter will overwrite items from `base_tree` with the same `path`. If you're creating new changes on a branch, then normally you'd set `base_tree` to the SHA1 of the Git tree object of the current latest commit on the branch you're working on. If not provided, GitHub will create a new Git tree object from only the entries defined in the `tree` parameter. If you create a new commit pointing to such a tree, then all files which were a part of the parent commit's tree and were not defined in the `tree` parameter will be listed as deleted by the new commit.
     base_tree: Any = None
+    # The SHA-1 hash of the tree object, assigned by GitHub when the tree is created. (AI-inferred)
     sha: Any = None
     # Objects (of `path`, `mode`, `type`, and `sha`) specifying a tree structure.
     tree: Any = None
+    # Whether the tree is truncated due to GitHub's limits (e.g., too many entries). (AI-inferred)
     truncated: Any = None
+    # The GitHub API URL for this tree. (AI-inferred)
     url: Any = None
     # path parameter, not part of the API's own resource representation
     owner: Any = None

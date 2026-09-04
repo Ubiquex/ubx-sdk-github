@@ -29,19 +29,28 @@ type VersionConfig struct {
 }
 
 type VersionAttrs struct {
-	CreatedAt   any
-	DeletedAt   any
+	// The real timestamp this object was created. (AI-inferred)
+	CreatedAt any
+	// The real timestamp this object was deleted, if it has been. (AI-inferred)
+	DeletedAt any
+	// The real, free-text description set on this object. (AI-inferred)
 	Description any
-	HtmlUrl     any
+	// The real, browsable web URL for this object. (AI-inferred)
+	HtmlUrl any
 	// Unique identifier of the package version.
-	Id       any
-	License  any
+	Id any
+	// The real, detected open source license for this repository. (AI-inferred)
+	License any
+	// Real, structured metadata attached to this object. (AI-inferred)
 	Metadata any
 	// The name of the package version.
-	Name           any
+	Name any
+	// The real, browsable web URL for this package. (AI-inferred)
 	PackageHtmlUrl any
-	UpdatedAt      any
-	Url            any
+	// The real timestamp this object was last updated. (AI-inferred)
+	UpdatedAt any
+	// The real, canonical API URL for this object. (AI-inferred)
+	Url any
 	// path parameter, not part of the API's own resource representation
 	Org any
 	// path parameter, not part of the API's own resource representation

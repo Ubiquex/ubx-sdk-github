@@ -17,13 +17,15 @@ type SecretConfig struct {
 }
 
 type SecretAttrs struct {
+	// The real timestamp this object was created. (AI-inferred)
 	CreatedAt any
 	// Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get a repository public key](https://docs.github.com/enterprise-cloud@latest/rest/actions/secrets#get-a-repository-public-key) endpoint.
 	EncryptedValue any
 	// ID of the key you used to encrypt the secret.
 	KeyId any
 	// The name of the secret.
-	Name      any
+	Name any
+	// The real timestamp this object was last updated. (AI-inferred)
 	UpdatedAt any
 	// path parameter, not part of the API's own resource representation
 	Owner any

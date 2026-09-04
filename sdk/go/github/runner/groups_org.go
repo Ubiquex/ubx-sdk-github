@@ -28,11 +28,16 @@ type GroupsOrgConfig struct {
 
 type GroupsOrgAttrs struct {
 	// Whether the runner group can be used by `public` repositories.
-	AllowsPublicRepositories          any
-	Default                           any
-	HostedRunnersUrl                  any
-	Id                                any
-	Inherited                         any
+	AllowsPublicRepositories any
+	// Whether this runner group is the default group for the organization. (AI-inferred)
+	Default any
+	// The API URL for accessing the hosted runners associated with this runner group. (AI-inferred)
+	HostedRunnersUrl any
+	// The real, numeric, globally unique identifier for this object. (AI-inferred)
+	Id any
+	// Indicates whether the runner group is inherited from an enterprise account. (AI-inferred)
+	Inherited any
+	// Whether the runner group inherits the organization's setting for allowing public repositories. This computed value is determined by GitHub and reflects the inherited state of `allows_public_repositories`. (AI-inferred)
 	InheritedAllowsPublicRepositories any
 	// Name of the runner group.
 	Name any
@@ -41,7 +46,8 @@ type GroupsOrgAttrs struct {
 	// If `true`, the runner group will be restricted to running only the workflows specified in the `selected_workflows` array.
 	RestrictedToWorkflows any
 	// List of runner IDs to add to the runner group.
-	Runners    any
+	Runners any
+	// The API URL to fetch the list of runners belonging to this organization runner group. (AI-inferred)
 	RunnersUrl any
 	// Link to the selected repositories resource for this runner group. Not present unless visibility was set to `selected`
 	SelectedRepositoriesUrl any

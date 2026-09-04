@@ -19,17 +19,20 @@ type DependabotSecretConfig struct {
 }
 
 type DependabotSecretAttrs struct {
+	// The date and time at which the variable was created, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ. (AI-inferred)
 	CreatedAt any
 	// Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get an organization public key](https://docs.github.com/enterprise-cloud@latest/rest/dependabot/secrets#get-an-organization-public-key) endpoint.
 	EncryptedValue any
 	// ID of the key you used to encrypt the secret.
 	KeyId any
 	// The name of the secret.
-	Name                    any
+	Name any
+	// API URL listing the repositories this organization-level Actions variable is selectively exposed to. (AI-inferred)
 	SelectedRepositoriesUrl any
 	// An array of repository ids that can access the organization secret. You can only provide a list of repository ids when the `visibility` is set to `selected`. You can manage the list of selected repositories using the [List selected repositories for an organization secret](https://docs.github.com/enterprise-cloud@latest/rest/dependabot/secrets#list-selected-repositories-for-an-organization-secret), [Set selected repositories for an organization secret](https://docs.github.com/enterprise-cloud@latest/rest/dependabot/secrets#set-selected-repositories-for-an-organization-secret), and [Remove selected repository from an organization secret](https://docs.github.com/enterprise-cloud@latest/rest/dependabot/secrets#remove-selected-repository-from-an-organization-secret) endpoints.
 	SelectedRepositoryIds any
-	UpdatedAt             any
+	// The date and time at which the variable was last updated, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ. (AI-inferred)
+	UpdatedAt any
 	// Which type of organization repositories have access to the organization secret. `selected` means only the repositories specified by `selected_repository_ids` can access the secret.
 	Visibility any
 	// path parameter, not part of the API's own resource representation

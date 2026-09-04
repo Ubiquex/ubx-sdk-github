@@ -4,39 +4,66 @@ package commit
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Comment_Reactions struct {
-	Confused   any
-	Eyes       any
-	Heart      any
-	Hooray     any
-	Laugh      any
-	Rocket     any
+	// Number of confused reactions on the commit comment. (AI-inferred)
+	Confused any
+	// Number of eye reactions (👀) on the commit comment. (AI-inferred)
+	Eyes any
+	// The number of heart (❤️) reactions on the commit comment. (AI-inferred)
+	Heart any
+	// The number of hooray reactions on the commit comment. (AI-inferred)
+	Hooray any
+	// The number of laugh reactions on the commit comment. (AI-inferred)
+	Laugh any
+	// The count of rocket reactions (🚀) on the commit comment. (AI-inferred)
+	Rocket any
+	// The total number of reactions of all types on the commit comment. (AI-inferred)
 	TotalCount any
-	Url        any
+	// The API URL that returns the reactions for the commit comment. (AI-inferred)
+	Url any
 }
 
 type Comment_User struct {
-	AvatarUrl         any
-	Email             any
-	EventsUrl         any
-	FollowersUrl      any
-	FollowingUrl      any
-	GistsUrl          any
-	GravatarId        any
-	HtmlUrl           any
-	Id                any
-	Login             any
-	Name              any
-	NodeId            any
-	OrganizationsUrl  any
+	// The URL of the user's avatar image. (AI-inferred)
+	AvatarUrl any
+	// The email address of the user who authored the commit comment, if the user has made it public. (AI-inferred)
+	Email any
+	// The URL to the user's events on GitHub, typically in the form https://api.github.com/users/{username}/events. (AI-inferred)
+	EventsUrl any
+	// URL to access the list of followers for this GitHub user. (AI-inferred)
+	FollowersUrl any
+	// The URL (template) for fetching the list of users this user follows, as specified in the GitHub API user object. This field is always present for a user. (AI-inferred)
+	FollowingUrl any
+	// The API URL for the user's gists, typically of the form https://api.github.com/users/{username}/gists{/gist_id}. (AI-inferred)
+	GistsUrl any
+	// The Gravatar ID for the user, used to construct their avatar image URL. (AI-inferred)
+	GravatarId any
+	// The URL to the user's GitHub profile page. (AI-inferred)
+	HtmlUrl any
+	Id      any
+	// The GitHub username of the user who created the commit comment. (AI-inferred)
+	Login any
+	// The name of the user associated with the commit comment. (AI-inferred)
+	Name any
+	// The node_id is the unique identifier for the user in GitHub's GraphQL API. This field is always present. (AI-inferred)
+	NodeId any
+	// The URL to fetch the list of organizations the user belongs to. (AI-inferred)
+	OrganizationsUrl any
+	// The URL for the user's received events, which lists the events that the user has received. (AI-inferred)
 	ReceivedEventsUrl any
-	ReposUrl          any
-	SiteAdmin         any
-	StarredAt         any
-	StarredUrl        any
-	SubscriptionsUrl  any
-	Type              any
-	Url               any
-	UserViewType      any
+	// The URL to the user's public repositories on GitHub. (AI-inferred)
+	ReposUrl any
+	// Whether the user is a GitHub site administrator. (AI-inferred)
+	SiteAdmin any
+	StarredAt any
+	// The URL to list the repositories starred by the user. (AI-inferred)
+	StarredUrl any
+	// The API URL for the user's subscriptions, which lists repositories the user is watching. (AI-inferred)
+	SubscriptionsUrl any
+	// The type of GitHub user account that authored the commit comment, such as "User" for a normal account or "Bot" for a bot account. (AI-inferred)
+	Type any
+	// The GitHub API URL for the user, such as https://api.github.com/users/octocat. (AI-inferred)
+	Url          any
+	UserViewType any
 }
 
 type CommentConfig struct {
@@ -62,21 +89,29 @@ type CommentAttrs struct {
 	// How the author is associated with the repository.
 	AuthorAssociation any
 	// The contents of the comment.
-	Body      any
-	CommitId  any
+	Body any
+	// The SHA of the commit that this comment is associated with. (AI-inferred)
+	CommitId any
+	// The timestamp of when the commit comment was created, in ISO 8601 format (e.g., 2025-01-01T12:00:00Z). (AI-inferred)
 	CreatedAt any
-	HtmlUrl   any
-	Id        any
+	// The HTML URL of the commit comment. (AI-inferred)
+	HtmlUrl any
+	// The real, numeric, globally unique identifier for this object. (AI-inferred)
+	Id any
 	// **Closing down notice**. Use **position** parameter instead. Line number in the file to comment on.
-	Line   any
+	Line any
+	// The unique identifier assigned to the commit comment by GitHub's GraphQL API. (AI-inferred)
 	NodeId any
 	// Relative path of the file to comment on.
 	Path any
 	// Line index in the diff to comment on.
-	Position  any
+	Position any
+	// The reactions summary for the commit comment, containing counts for each reaction type (e.g., +1, -1, laugh, hooray, confused, heart, rocket, eyes), a total count, and a URL to fetch detailed reaction information. (AI-inferred)
 	Reactions any
+	// The timestamp of when the commit comment was last updated. (AI-inferred)
 	UpdatedAt any
-	Url       any
+	// The API URL that points to this commit comment. (AI-inferred)
+	Url any
 	// A GitHub user.
 	User any
 	// path parameter, not part of the API's own resource representation

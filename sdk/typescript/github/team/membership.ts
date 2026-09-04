@@ -19,6 +19,7 @@ export interface MembershipAttrs {
   role: string;
   /** The state of the user's membership in the team. */
   state: string;
+  /** The API URL for the team membership. (AI-inferred) */
   url: string;
   /** path parameter, not part of the API's own resource representation */
   org: string;

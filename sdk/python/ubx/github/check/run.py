@@ -8,56 +8,92 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class Run_Actions:
+    # A short explanation of the action, displayed to users. Maximum length is 40 characters. (AI-inferred)
     description: Any = None
+    # A short identifier for the action, maximum length of 20 characters. (AI-inferred)
     identifier: Any = None
+    # The short text label for the action button, displayed in the GitHub UI. Must be 20 characters or fewer. (AI-inferred)
     label: Any = None
 
 @dataclasses.dataclass
 class Run_App_Owner:
+    # The URL of the avatar image for the owner (user or organization). (AI-inferred)
     avatar_url: Any = None
+    # The date and time when the GitHub App owner (user or organization) was created, in ISO 8601 format. (AI-inferred)
     created_at: Any = None
+    # The description of the owner (organization or user) of the GitHub App that created this check run. (AI-inferred)
     description: Any = None
+    # The email address of the user or organization that owns the GitHub App associated with this check run. (AI-inferred)
     email: Any = None
+    # The API URL for events associated with the owner (the user or organization that owns the GitHub App). (AI-inferred)
     events_url: Any = None
+    # The API URL to retrieve the list of followers for the owner of the GitHub app. (AI-inferred)
     followers_url: Any = None
+    # The URL to the list of users that this owner follows, as provided by the GitHub API. This URL may include a template placeholder. (AI-inferred)
     following_url: Any = None
+    # The URL to fetch the owner's gists via the GitHub API. (AI-inferred)
     gists_url: Any = None
+    # The Gravatar ID for the owner's avatar. This is typically a hash of the owner's email address and is used to construct the owner's Gravatar URL. In the GitHub API, this field is often deprecated and may be an empty string; prefer using `avatar_url`. (AI-inferred)
     gravatar_id: Any = None
+    # The URL to view the owner's GitHub profile in a web browser. (AI-inferred)
     html_url: Any = None
+    # The unique identifier of the GitHub App's owner, which can be a user or an organization. (AI-inferred)
     id: Any = None
+    # The login name (username or organization name) of the GitHub App owner. (AI-inferred)
     login: Any = None
     name: Any = None
+    # The GraphQL node ID of the app's owner (user or organization). (AI-inferred)
     node_id: Any = None
+    # The API URL that lists the organizations this owner belongs to, as defined by the GitHub API owner object. (AI-inferred)
     organizations_url: Any = None
+    # The URL to the received events for the owner (user or organization). (AI-inferred)
     received_events_url: Any = None
+    # URL to the list of repositories owned by this GitHub user or organization. (AI-inferred)
     repos_url: Any = None
+    # Whether the owner (user or organization) is a site administrator for GitHub Enterprise. (AI-inferred)
     site_admin: Any = None
     slug: Any = None
     starred_at: Any = None
+    # The URL template for the owner's starred repositories, as specified by the GitHub API. It typically includes placeholders for owner and repository information. (AI-inferred)
     starred_url: Any = None
+    # The API endpoint URL for the subscriptions of the owner (user or organization), as defined by the GitHub API. (AI-inferred)
     subscriptions_url: Any = None
+    # The type of GitHub account that owns the app, such as 'User' or 'Organization'. (AI-inferred)
     type: Any = None
+    # The timestamp (ISO 8601) when the owner of the GitHub App was last updated. (AI-inferred)
     updated_at: Any = None
+    # The GitHub API URL for the owner (user or organization) of the GitHub App associated with the check run. (AI-inferred)
     url: Any = None
     user_view_type: Any = None
+    # The website URL of the owner (user or organization) of the GitHub App that created or is associated with this check run. (AI-inferred)
     website_url: Any = None
 
 @dataclasses.dataclass
 class Run_App_Permissions:
+    # The permission level for the Checks API. Valid values are 'read' or 'write'. (AI-inferred)
     checks: Any = None
+    # The level of access to repository contents granted to the GitHub App. Allowed values are read, write, or none. (AI-inferred)
     contents: Any = None
+    # The level of permission that the GitHub App has for the Deployments API. Allowed values are 'read', 'write', or 'none'. (AI-inferred)
     deployments: Any = None
+    # The permission level for the GitHub App's access to issues. Allowed values are 'read', 'write', or 'none'. (AI-inferred)
     issues: Any = None
+    # The permission level for metadata endpoints, typically 'read' or 'write'. (AI-inferred)
     metadata: Any = None
 
 @dataclasses.dataclass
 class Run_App:
+    # The public OAuth client ID of the GitHub App that created the check run. This identifier is used in OAuth flows to uniquely identify the app. (AI-inferred)
     client_id: Any = None
+    # The time when the check run was created, in ISO 8601 format (YYYY-MM-DDTHH:MM:SSZ). (AI-inferred)
     created_at: Any = None
+    # A short description of the GitHub App that created the check run. (AI-inferred)
     description: Any = None
     # The list of events for the GitHub app. Note that the `installation_target`, `security_advisory`, and `meta` events are not included because they are global events and not specific to an installation.
     events: Any = None
+    # The URL to the GitHub App's external website, as displayed in the GitHub App's public profile. (AI-inferred)
     external_url: Any = None
+    # The URL to the GitHub App's public page. (AI-inferred)
     html_url: Any = None
     # Unique identifier of the GitHub app
     id: Any = None
@@ -65,57 +101,80 @@ class Run_App:
     installations_count: Any = None
     # The name of the GitHub app
     name: Any = None
+    # The GraphQL node identifier for the app object within a GitHub check run. (AI-inferred)
     node_id: Any = None
+    # The GitHub user or organization that owns the GitHub App. Required; identifies the account responsible for the app. (AI-inferred)
     owner: Any = None
     # The set of permissions for the GitHub app
     permissions: Any = None
     # The slug name of the GitHub app
     slug: Any = None
+    # The timestamp indicating when the GitHub App was last updated, in ISO 8601 format. (AI-inferred)
     updated_at: Any = None
 
 @dataclasses.dataclass
 class Run_CheckSuite:
+    # The unique identifier of the check suite. (AI-inferred)
     id: Any = None
 
 @dataclasses.dataclass
 class Run_Deployment:
     created_at: Any = None
+    # A short description of the deployment, providing context about the deployment. (AI-inferred)
     description: Any = None
     # Name for the target deployment environment.
     environment: Any = None
     # Unique identifier of the deployment
     id: Any = None
+    # The global node identifier (node ID) for this deployment in GitHub's graph-based API system. (AI-inferred)
     node_id: Any = None
+    # The name of the environment the deployment originally targeted, before any overrides or changes. (AI-inferred)
     original_environment: Any = None
     # GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
     performed_via_github_app: Any = None
     # Specifies if the given environment is one that end-users directly interact with. Default: false.
     production_environment: Any = None
+    # The URL of the repository associated with the deployment. (AI-inferred)
     repository_url: Any = None
+    # The URL to retrieve the list of deployment statuses for this deployment. (AI-inferred)
     statuses_url: Any = None
     # Parameter to specify a task to execute
     task: Any = None
     # Specifies if the given environment is will no longer exist at some point in the future. Default: false.
     transient_environment: Any = None
+    # The timestamp of when the deployment was last updated, in ISO 8601 format. (AI-inferred)
     updated_at: Any = None
+    # The URL to the deployment resource in the GitHub API. (AI-inferred)
     url: Any = None
 
 @dataclasses.dataclass
 class Run_Output_Annotations:
+    # The level of the annotation, which can be 'notice', 'warning', or 'failure'. (AI-inferred)
     annotation_level: Any = None
+    # The column number where the annotation ends. Used with start_column to define the horizontal range of the annotation within a line. (AI-inferred)
     end_column: Any = None
+    # The line number of the end of the annotation within the source file. (AI-inferred)
     end_line: Any = None
+    # A short description of the feedback for these lines of code. Max length is 255 characters. (AI-inferred)
     message: Any = None
+    # The path of the file that this check run annotation applies to, relative to the repository root. (AI-inferred)
     path: Any = None
+    # Additional details about the annotation that GitHub does not render. (AI-inferred)
     raw_details: Any = None
+    # The start column of the annotation. Column numbers start at 1. Only valid when start_line is provided. (AI-inferred)
     start_column: Any = None
+    # The line number in the file where the annotation starts. In GitHub Check Run annotations, this identifies the beginning line of the annotation. (AI-inferred)
     start_line: Any = None
+    # The title of the annotation, providing a concise summary of the issue or finding. (AI-inferred)
     title: Any = None
 
 @dataclasses.dataclass
 class Run_Output_Images:
+    # The alternative text for the image, providing a textual description of the image content. (AI-inferred)
     alt: Any = None
+    # The caption text displayed with the image in a GitHub check run output. This brief description appears alongside the image in the GitHub UI. (AI-inferred)
     caption: Any = None
+    # The URL of the image to display in the GitHub check run output. (AI-inferred)
     image_url: Any = None
 
 @dataclasses.dataclass
@@ -136,21 +195,31 @@ class Run_Output:
 @dataclasses.dataclass
 class Run_PullRequests_Base_Repo:
     id: Any = None
+    # The name of the repository that contains the base branch of the pull request. (AI-inferred)
     name: Any = None
+    # The API URL of the repository, as returned by the GitHub API (e.g., https://api.github.com/repos/{owner}/{repo}). (AI-inferred)
     url: Any = None
 
 @dataclasses.dataclass
 class Run_PullRequests_Base:
+    # The git reference (branch or tag) of the base of the pull request. (AI-inferred)
     ref: Any = None
+    # The repository associated with the base of the pull request. (AI-inferred)
     repo: Any = None
+    # The SHA of the latest commit on the base branch of the pull request. (AI-inferred)
     sha: Any = None
 
 @dataclasses.dataclass
 class Run_PullRequests:
+    # The base branch of the pull request, containing details such as the branch reference, commit SHA, and repository information. (AI-inferred)
     base: Any = None
+    # The head of the pull request, containing details such as the source branch name, commit SHA, and repository information. (AI-inferred)
     head: Any = None
+    # The unique identifier of the pull request associated with this check run. (AI-inferred)
     id: Any = None
+    # The pull request number for the pull request associated with the check run. (AI-inferred)
     number: Any = None
+    # The URL of the pull request associated with the check run. (AI-inferred)
     url: Any = None
 
 _Run_ActionsFields = {
@@ -230,6 +299,7 @@ class RunAttrs:
     actions: Any = None
     # GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
     app: Any = None
+    # The check suite that is associated with this check run. It includes information about the suite, such as its unique identifier and the branch it applies to. (AI-inferred)
     check_suite: Any = None
     # The time the check completed. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
     completed_at: Any = None
@@ -243,11 +313,13 @@ class RunAttrs:
     external_id: Any = None
     # The SHA of the commit.
     head_sha: Any = None
+    # The URL to view the check run details on GitHub. (AI-inferred)
     html_url: Any = None
     # The id of the check.
     id: Any = None
     # The name of the check. For example, "code-coverage".
     name: Any = None
+    # The GraphQL global node ID for the check run. (AI-inferred)
     node_id: Any = None
     # Check runs can accept a variety of data in the `output` object, including a `title` and `summary` and can optionally provide descriptive details about the run.
     output: Any = None
@@ -257,6 +329,7 @@ class RunAttrs:
     started_at: Any = None
     # The current status of the check run. Only GitHub Actions can set a status of `waiting`, `pending`, or `requested`.
     status: Any = None
+    # The API URL of the check run. (AI-inferred)
     url: Any = None
     # path parameter, not part of the API's own resource representation
     owner: Any = None

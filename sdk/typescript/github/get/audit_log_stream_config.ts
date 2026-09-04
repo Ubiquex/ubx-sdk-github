@@ -48,6 +48,7 @@ export interface AuditLogStreamConfigConfig {
   enabled: boolean | Computed<boolean>;
   /** The audit log streaming provider. The name is case sensitive. */
   streamType: string | Computed<string>;
+  /** Real, vendor-specific configuration fields for this audit log streaming destination. (AI-inferred) */
   vendorSpecific: AuditLogStreamConfig_VendorSpecific | Computed<AuditLogStreamConfig_VendorSpecific>;
   /** path parameter, not part of the API's own resource representation */
   enterprise: string | Computed<string>;
@@ -56,15 +57,21 @@ export interface AuditLogStreamConfigConfig {
 }
 
 export interface AuditLogStreamConfigAttrs {
+  /** The real timestamp this object was created. (AI-inferred) */
   createdAt: string;
   /** This setting pauses or resumes a stream. */
   enabled: boolean;
+  /** The real, numeric, globally unique identifier for this object. (AI-inferred) */
   id: number;
+  /** When this audit log streaming configuration was paused, if it currently is. (AI-inferred) */
   pausedAt: string;
+  /** This audit log stream's own real, provider-specific delivery configuration. (AI-inferred) */
   streamDetails: string;
   /** The audit log streaming provider. The name is case sensitive. */
   streamType: string;
+  /** The real timestamp this object was last updated. (AI-inferred) */
   updatedAt: string;
+  /** Real, vendor-specific configuration fields for this audit log streaming destination. (AI-inferred) */
   vendorSpecific: AuditLogStreamConfig_VendorSpecific;
   /** path parameter, not part of the API's own resource representation */
   enterprise: string;
