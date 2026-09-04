@@ -21,9 +21,9 @@ type SecurityConfiguration_DependencyGraphAutosubmitActionOptions struct {
 }
 
 type SecurityConfiguration_SecretScanningDelegatedBypassOptions_Reviewers struct {
-	Mode any
-	ReviewerId any
-	ReviewerType any
+	Mode                    any
+	ReviewerId              any
+	ReviewerType            any
 	SecurityConfigurationId any
 }
 
@@ -34,7 +34,7 @@ type SecurityConfiguration_SecretScanningDelegatedBypassOptions struct {
 
 type SecurityConfigurationConfig struct {
 	ConfigurationId any
-	Org any
+	Org             any
 }
 
 type SecurityConfigurationAttrs struct {
@@ -48,8 +48,8 @@ type SecurityConfigurationAttrs struct {
 	CodeScanningDelegatedAlertDismissal any
 	// Feature options for code scanning
 	CodeScanningOptions any
-	ConfigurationId any
-	CreatedAt any
+	ConfigurationId     any
+	CreatedAt           any
 	// The enablement status of Dependabot alerts
 	DependabotAlerts any
 	// The enablement status of Dependabot delegated alert dismissal
@@ -72,7 +72,7 @@ type SecurityConfigurationAttrs struct {
 	Id any
 	// The name of the code security configuration. Must be unique within the organization.
 	Name any
-	Org any
+	Org  any
 	// The enablement status of private vulnerability reporting
 	PrivateVulnerabilityReporting any
 	// The enablement status of secret scanning
@@ -95,7 +95,7 @@ type SecurityConfigurationAttrs struct {
 	SecretScanningValidityChecks any
 	// The type of the code security configuration.
 	TargetType any
-	UpdatedAt any
+	UpdatedAt  any
 	// The URL of the configuration
 	Url any
 }
@@ -104,6 +104,6 @@ var SecurityConfiguration = ubx.DataSourceBinding{
 	WireType: "github_code_security_configuration",
 	Fields: ubx.FieldMap{
 		"ConfigurationId": ubx.FieldSpec{WireName: "configuration_id"},
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Org":             ubx.FieldSpec{WireName: "org"},
 	},
 }

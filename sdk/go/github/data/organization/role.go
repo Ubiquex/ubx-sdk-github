@@ -3,26 +3,58 @@ package organization
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
+type Role_Roles_Organization struct {
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
+	ReceivedEventsUrl any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
+}
+
+type Role_Roles struct {
+	BaseRole     any
+	CreatedAt    any
+	Description  any
+	Id           any
+	Name         any
+	Organization any
+	Permissions  any
+	Source       any
+	UpdatedAt    any
+}
+
 type RoleConfig struct {
 	Org any
-	Page any
-	PerPage any
-	RoleId any
 }
 
 type RoleAttrs struct {
 	Org any
-	Page any
-	PerPage any
-	RoleId any
+	// The list of organization roles available to the organization.
+	Roles any
+	// The total number of organization roles available to the organization.
+	TotalCount any
 }
 
 var Role = ubx.DataSourceBinding{
 	WireType: "github_organization_role",
 	Fields: ubx.FieldMap{
 		"Org": ubx.FieldSpec{WireName: "org"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"RoleId": ubx.FieldSpec{WireName: "role_id"},
 	},
 }

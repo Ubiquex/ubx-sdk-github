@@ -3,130 +3,29 @@ package member
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
-type Member_Seats_Assignee struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
-	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
-}
-
-type Member_Seats_AssigningTeam_Parent struct {
-	Description any
-	EnterpriseId any
-	HtmlUrl any
-	Id any
-	LdapDn any
-	MembersUrl any
-	Name any
-	NodeId any
-	NotificationSetting any
-	OrganizationId any
-	Permission any
-	Privacy any
-	RepositoriesUrl any
-	Slug any
-	Type any
-	Url any
-}
-
-type Member_Seats_AssigningTeam_Permissions struct {
-	Admin any
-	Maintain any
-	Pull any
-	Push any
-	Triage any
-}
-
-type Member_Seats_AssigningTeam struct {
-	AccessSource any
-	CreatedAt any
-	Description any
-	EnterpriseId any
-	GroupId any
-	GroupName any
-	HtmlUrl any
-	Id any
-	MembersUrl any
-	Name any
-	NodeId any
-	NotificationSetting any
-	OrganizationId any
-	OrganizationSelectionType any
-	Parent any
-	Permission any
-	Permissions any
-	Privacy any
-	RepositoriesUrl any
-	Slug any
-	SyncToOrganizations any
-	Type any
-	UpdatedAt any
-	Url any
-}
-
-type Member_Seats_Organization struct {
-	AvatarUrl any
-	Description any
-	EventsUrl any
-	HooksUrl any
-	Id any
-	IssuesUrl any
-	Login any
-	MembersUrl any
-	NodeId any
-	PublicMembersUrl any
-	ReposUrl any
-	Url any
-}
-
-type Member_Seats struct {
-	Assignee any
-	AssigningTeam any
-	CreatedAt any
-	LastActivityAt any
-	LastActivityEditor any
-	LastAuthenticatedAt any
-	Organization any
-	PendingCancellationDate any
-	PlanType any
-	UpdatedAt any
-}
-
 type MemberConfig struct {
-	Enterprise any
-	Username any
+	Filter  any
+	Org     any
+	Page    any
+	PerPage any
+	Role    any
 }
 
 type MemberAttrs struct {
-	Enterprise any
-	Seats any
-	// The total number of Copilot seats the enterprise is being billed for. Users with access through enterprise, enterprise teams or multiple organizations are only counted once.
-	TotalSeats any
-	Username any
+	Filter  any
+	Org     any
+	Page    any
+	PerPage any
+	Role    any
 }
 
 var Member = ubx.DataSourceBinding{
 	WireType: "github_member",
 	Fields: ubx.FieldMap{
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"Username": ubx.FieldSpec{WireName: "username"},
+		"Filter":  ubx.FieldSpec{WireName: "filter"},
+		"Org":     ubx.FieldSpec{WireName: "org"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Role":    ubx.FieldSpec{WireName: "role"},
 	},
 }

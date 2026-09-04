@@ -3,34 +3,35 @@ package network
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
+type Configuration_NetworkConfigurations struct {
+	ComputeService             any
+	CreatedOn                  any
+	FailoverNetworkEnabled     any
+	FailoverNetworkSettingsIds any
+	Id                         any
+	Name                       any
+	NetworkSettingsIds         any
+}
+
 type ConfigurationConfig struct {
-	NetworkConfigurationId any
-	Org any
+	Enterprise any
+	Page       any
+	PerPage    any
 }
 
 type ConfigurationAttrs struct {
-	// The hosted compute service the network configuration supports.
-	ComputeService any
-	// The time at which the network configuration was created, in ISO 8601 format.
-	CreatedOn any
-	// Indicates whether the failover network resource is enabled.
-	FailoverNetworkEnabled any
-	// The unique identifier of each failover network settings in the configuration.
-	FailoverNetworkSettingsIds any
-	// The unique identifier of the network configuration.
-	Id any
-	// The name of the network configuration.
-	Name any
-	NetworkConfigurationId any
-	// The unique identifier of each network settings in the configuration.
-	NetworkSettingsIds any
-	Org any
+	Enterprise            any
+	NetworkConfigurations any
+	Page                  any
+	PerPage               any
+	TotalCount            any
 }
 
 var Configuration = ubx.DataSourceBinding{
 	WireType: "github_network_configuration",
 	Fields: ubx.FieldMap{
-		"NetworkConfigurationId": ubx.FieldSpec{WireName: "network_configuration_id"},
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
+		"Page":       ubx.FieldSpec{WireName: "page"},
+		"PerPage":    ubx.FieldSpec{WireName: "per_page"},
 	},
 }

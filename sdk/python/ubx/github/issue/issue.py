@@ -8,147 +8,87 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class Issue_ClosedBy:
-    # The URL of the avatar image for the user who closed the issue. (AI-inferred)
     avatar_url: Any = None
-    # The email address of the user who closed the issue. This is only present if the user has a public email associated with their GitHub account; otherwise it is null. (AI-inferred)
     email: Any = None
-    # The URL to fetch the events associated with the user who closed the issue. This is a standard GitHub API user attribute, providing a link to the user's public events. (AI-inferred)
     events_url: Any = None
-    # The URL to the followers list of the user who closed the issue. (AI-inferred)
     followers_url: Any = None
-    # The URL to retrieve the list of users that this user follows. This is a template URL that can include the placeholder {/other_user} to check if a specific user is followed. (AI-inferred)
     following_url: Any = None
-    # The URL to access the gists of the user who closed the issue, via the GitHub API. (AI-inferred)
     gists_url: Any = None
-    # The unique Gravatar ID for the user, used to generate avatar image URLs. (AI-inferred)
     gravatar_id: Any = None
-    # The HTML URL of the GitHub profile for the user who closed the issue. (AI-inferred)
     html_url: Any = None
-    # The unique numeric identifier of the user who closed the issue. (AI-inferred)
     id: Any = None
-    # The username of the user who closed the issue. (AI-inferred)
     login: Any = None
-    # The display name of the user who closed the issue, as provided by the user's GitHub profile. This field is optional and may be absent if the user has not set a name. (AI-inferred)
     name: Any = None
-    # The GraphQL node ID of the user who closed the issue. (AI-inferred)
     node_id: Any = None
-    # The URL to the GitHub API endpoint listing the organizations that this user belongs to. (AI-inferred)
     organizations_url: Any = None
-    # The URL to the user's received events feed, for the user who closed the issue. (AI-inferred)
     received_events_url: Any = None
-    # URL to the GitHub API endpoint listing the repositories owned by the user who closed the issue. (AI-inferred)
     repos_url: Any = None
-    # Indicates whether the user is a GitHub site administrator. (AI-inferred)
     site_admin: Any = None
     starred_at: Any = None
-    # The URL template for the user's starred repositories, with placeholders for {owner} and {repo} parameters. (AI-inferred)
     starred_url: Any = None
-    # The URL to view the subscriptions of the user who closed the issue. This field is part of the user object returned in the `closed_by` field of an issue. (AI-inferred)
     subscriptions_url: Any = None
-    # The type of GitHub account that closed the issue, such as 'User' or 'Bot'. (AI-inferred)
     type: Any = None
-    # The REST API URL for the user who closed the issue. (AI-inferred)
     url: Any = None
-    # Indicates the user's profile visibility type, either 'public' or 'private'. In the context of the user who closed the issue. (AI-inferred)
     user_view_type: Any = None
 
 @dataclasses.dataclass
 class Issue_IssueDependenciesSummary:
-    # The number of issues that are blocking this issue, i.e., the count of dependencies that must be resolved before this issue can be completed. (AI-inferred)
     blocked_by: Any = None
-    # The number of issues whose implementation is blocked by this issue, based on declared issue dependencies. (AI-inferred)
     blocking: Any = None
-    # The total number of issues that this issue is blocked by. (AI-inferred)
     total_blocked_by: Any = None
     total_blocking: Any = None
 
 @dataclasses.dataclass
 class Issue_IssueFieldValues:
-    # The unique identifier of the project field that this value is associated with. (AI-inferred)
     field_id: Any = None
-    # The value assigned to the custom issue field. The type is dynamic and depends on the custom field's definition (e.g., text, number, date, or selection). (AI-inferred)
     value: Any = None
 
 @dataclasses.dataclass
 class Issue_PerformedViaGithubApp_Owner:
-    # The URL of the avatar image for the owner (user or organization) of the GitHub App that performed the action. (AI-inferred)
     avatar_url: Any = None
-    # The timestamp (as a string in ISO 8601 format) of when the GitHub App owner account was created. (AI-inferred)
     created_at: Any = None
-    # The description of the organization that owns the GitHub App. This field is only populated when the owner is an organization. (AI-inferred)
     description: Any = None
     email: Any = None
-    # The URL to the events for this GitHub user or organization. (AI-inferred)
     events_url: Any = None
-    # The URL to the list of followers of the owner (user or organization) of the GitHub App that performed the issue. (AI-inferred)
     followers_url: Any = None
-    # The URL template for the list of users this owner is following, with a placeholder for the username (e.g., https://api.github.com/users/{username}/following). (AI-inferred)
     following_url: Any = None
-    # The URL to fetch the owner's public gists, following the standard GitHub API URL format for user gists. (AI-inferred)
     gists_url: Any = None
-    # The Gravatar ID of the GitHub App owner, used to construct the owner's avatar URL from Gravatar. (AI-inferred)
     gravatar_id: Any = None
-    # The URL to the GitHub profile of the app owner. (AI-inferred)
     html_url: Any = None
-    # The unique numeric identifier of the user or organization that owns the GitHub App. (AI-inferred)
     id: Any = None
-    # The GitHub username of the owner of the GitHub App that performed the action. (AI-inferred)
     login: Any = None
-    # The display name of the user or organization that owns the GitHub App. (AI-inferred)
     name: Any = None
-    # The GraphQL node ID of the user or organization that owns the GitHub App. (AI-inferred)
     node_id: Any = None
-    # The URL to retrieve the list of organizations associated with this GitHub App owner, as defined by the GitHub API. (AI-inferred)
     organizations_url: Any = None
-    # The URL to the user's received events endpoint on GitHub, containing the user's incoming events. (AI-inferred)
     received_events_url: Any = None
-    # The URL to the list of repositories belonging to this owner (user or organization). (AI-inferred)
     repos_url: Any = None
-    # Indicates whether the owner is a site administrator for the GitHub instance (e.g., on GitHub Enterprise). (AI-inferred)
     site_admin: Any = None
-    # The slug of the owner of the GitHub App that performed the action on the issue. For users and organizations, this is the lowercased, URL-friendly identifier (e.g., 'octocat'). (AI-inferred)
     slug: Any = None
     starred_at: Any = None
-    # The URL to the list of repositories starred by this owner (user or organization) of the GitHub App. (AI-inferred)
     starred_url: Any = None
-    # The API endpoint URL for the owner's subscriptions, indicating resources the owner follows or is subscribed to on GitHub. (AI-inferred)
     subscriptions_url: Any = None
-    # The type of GitHub account that owns the app, either `User` or `Organization`. (AI-inferred)
     type: Any = None
     updated_at: Any = None
-    # The API URL for the GitHub account (user or organization) that owns the GitHub App. (AI-inferred)
     url: Any = None
-    # The user's profile view type, either 'public' or 'private'. (AI-inferred)
     user_view_type: Any = None
-    # The website URL of the user or organization that owns the GitHub App which performed the action on the issue. (AI-inferred)
     website_url: Any = None
 
 @dataclasses.dataclass
 class Issue_PerformedViaGithubApp_Permissions:
-    # The permission level for the Checks API. Set to 'read' or 'write' to grant the GitHub App access. (AI-inferred)
     checks: Any = None
-    # The permission level granted to the GitHub App for accessing repository contents. (AI-inferred)
     contents: Any = None
-    # The permission level for deployments granted to the GitHub App. Allowed values are 'read', 'write', or 'none'. (AI-inferred)
     deployments: Any = None
-    # The permission level for issues granted to the GitHub App that performed the issue. (AI-inferred)
     issues: Any = None
-    # The permission level for metadata access granted to the GitHub App, typically 'read' or 'write'. (AI-inferred)
     metadata: Any = None
 
 @dataclasses.dataclass
 class Issue_PerformedViaGithubApp:
-    # The client ID of the GitHub App that performed the action. (AI-inferred)
     client_id: Any = None
-    # The ISO 8601 timestamp of when the GitHub App was created. (AI-inferred)
     created_at: Any = None
-    # The description of the GitHub App that performed the action. (AI-inferred)
     description: Any = None
     # The list of events for the GitHub app. Note that the `installation_target`, `security_advisory`, and `meta` events are not included because they are global events and not specific to an installation.
     events: Any = None
-    # The URL of the GitHub App's homepage or external reference site. (AI-inferred)
     external_url: Any = None
-    # The URL to the GitHub App's public page on GitHub. (AI-inferred)
     html_url: Any = None
     # Unique identifier of the GitHub app
     id: Any = None
@@ -156,15 +96,12 @@ class Issue_PerformedViaGithubApp:
     installations_count: Any = None
     # The name of the GitHub app
     name: Any = None
-    # The GraphQL global node ID for the issue, usable as an identifier in GraphQL queries. (AI-inferred)
     node_id: Any = None
-    # The user or organization that owns the GitHub app. (AI-inferred)
     owner: Any = None
     # The set of permissions for the GitHub app
     permissions: Any = None
     # The slug name of the GitHub app
     slug: Any = None
-    # The timestamp of when the GitHub App was last updated, in ISO 8601 format. (AI-inferred)
     updated_at: Any = None
 
 @dataclasses.dataclass
@@ -174,28 +111,19 @@ class Issue_PinnedComment_Minimized:
 
 @dataclasses.dataclass
 class Issue_PinnedComment_Pin:
-    # The timestamp indicating when the comment was pinned. (AI-inferred)
     pinned_at: Any = None
     # A GitHub user.
     pinned_by: Any = None
 
 @dataclasses.dataclass
 class Issue_PinnedComment_Reactions:
-    # The number of confused reactions (the 😕 emoji) on the pinned comment. (AI-inferred)
     confused: Any = None
-    # The number of eyes (👀) reactions on this pinned comment. (AI-inferred)
     eyes: Any = None
-    # The number of heart reactions on the pinned comment. (AI-inferred)
     heart: Any = None
-    # The number of hooray reactions on this comment. (AI-inferred)
     hooray: Any = None
-    # The number of 'laugh' reactions (the 😆 emoji) on the pinned comment. (AI-inferred)
     laugh: Any = None
-    # The number of rocket (🚀) reactions on the pinned comment. (AI-inferred)
     rocket: Any = None
-    # The total number of reactions (of all types) on the pinned comment. (AI-inferred)
     total_count: Any = None
-    # The API URL where this reaction can be accessed. (AI-inferred)
     url: Any = None
 
 @dataclasses.dataclass
@@ -204,17 +132,12 @@ class Issue_PinnedComment:
     author_association: Any = None
     # Contents of the issue comment
     body: Any = None
-    # The HTML-rendered version of the comment's body content. This field is only present if the comment body has been processed by GitHub's markdown renderer. (AI-inferred)
     body_html: Any = None
-    # The plain-text body of the pinned comment, with any Markdown or HTML formatting removed. (AI-inferred)
     body_text: Any = None
-    # The timestamp indicating when the pinned comment was created. (AI-inferred)
     created_at: Any = None
-    # The URL to view the pinned comment on the GitHub website. (AI-inferred)
     html_url: Any = None
     # Unique identifier of the issue comment
     id: Any = None
-    # The URL of the issue to which this comment is pinned. (AI-inferred)
     issue_url: Any = None
     # Details about why an issue comment was minimized.
     minimized: Any = None
@@ -223,9 +146,7 @@ class Issue_PinnedComment:
     performed_via_github_app: Any = None
     # Context around who pinned an issue comment and when it was pinned.
     pin: Any = None
-    # The object summarizing reactions to the pinned comment, including total_count and per-type counts for reaction types such as +1, -1, laugh, confused, heart, hooray, rocket, and eyes. (AI-inferred)
     reactions: Any = None
-    # The timestamp of when the pinned comment was last updated (in RFC3339 format). (AI-inferred)
     updated_at: Any = None
     # URL for the issue comment
     url: Any = None
@@ -234,50 +155,32 @@ class Issue_PinnedComment:
 
 @dataclasses.dataclass
 class Issue_PullRequest:
-    # The URL to the diff for this pull request. (AI-inferred)
     diff_url: Any = None
-    # The URL to view the pull request on GitHub. (AI-inferred)
     html_url: Any = None
-    # The timestamp of when the pull request was merged, if applicable. (AI-inferred)
     merged_at: Any = None
-    # The URL to the patch file for this pull request. (AI-inferred)
     patch_url: Any = None
-    # The URL of the pull request. (AI-inferred)
     url: Any = None
 
 @dataclasses.dataclass
 class Issue_Repository_CodeSearchIndexStatus:
-    # The SHA of the commit that the lexical code search index is based on. (AI-inferred)
     lexical_commit_sha: Any = None
-    # Indicates whether the repository's lexical search index is currently functional, allowing lexical code search to work. (AI-inferred)
     lexical_search_ok: Any = None
 
 @dataclasses.dataclass
 class Issue_Repository_License:
-    # The URL to the HTML page for this license on GitHub. (AI-inferred)
     html_url: Any = None
-    # The SPDX license key for the repository's license (e.g., MIT, Apache-2.0, GPL-3.0). (AI-inferred)
     key: Any = None
-    # The full name of the license, such as 'MIT License' or 'Apache License 2.0'. (AI-inferred)
     name: Any = None
-    # The unique identifier for this license in GitHub's GraphQL API. (AI-inferred)
     node_id: Any = None
-    # The SPDX license identifier for the repository's license, such as 'MIT' or 'Apache-2.0'. (AI-inferred)
     spdx_id: Any = None
-    # The API URL for the license information on GitHub. (AI-inferred)
     url: Any = None
 
 @dataclasses.dataclass
 class Issue_Repository_Permissions:
-    # Whether the current user has admin permissions on the repository. (AI-inferred)
     admin: Any = None
-    # Whether the user has 'maintain' permission for the repository. (AI-inferred)
     maintain: Any = None
-    # Whether the authenticated user has permission to pull (clone/fetch) the repository's contents. (AI-inferred)
     pull: Any = None
-    # Indicates whether the authenticated user has push (write) access to the repository. (AI-inferred)
     push: Any = None
-    # Indicates whether the user has triage permission on the repository. (AI-inferred)
     triage: Any = None
 
 @dataclasses.dataclass
@@ -296,65 +199,40 @@ class Issue_Repository:
     allow_update_branch: Any = None
     # Whether anonymous git access is enabled for this repository
     anonymous_access_enabled: Any = None
-    # The URL template for downloading the repository's source code archive, with placeholders for archive format and reference (e.g., zipball and ref). (AI-inferred)
     archive_url: Any = None
     # Whether the repository is archived.
     archived: Any = None
-    # The API URL template for managing repository assignees, with an optional placeholder for a specific assignee. (AI-inferred)
     assignees_url: Any = None
-    # The URL template for accessing git blobs in the repository, with a placeholder for the blob SHA (e.g., `http://api.github.com/repos/{owner}/{repo}/git/blobs{/sha}`). (AI-inferred)
     blobs_url: Any = None
-    # The URL to access the list of branches in this repository. (AI-inferred)
     branches_url: Any = None
-    # The URL used to clone the repository, typically in HTTPS or SSH format. (AI-inferred)
     clone_url: Any = None
     # The status of the code search index for this repository
     code_search_index_status: Any = None
-    # The URL template to access the list of collaborators for the repository. In the GitHub API, this typically takes the form: https://api.github.com/repos/{owner}/{repo}/collaborators{/collaborator}. (AI-inferred)
     collaborators_url: Any = None
-    # The API URL to retrieve the list of comments on this issue. (AI-inferred)
     comments_url: Any = None
-    # The URL template for the commits in the repository associated with this issue, often including a placeholder for a commit SHA. (AI-inferred)
     commits_url: Any = None
-    # The URL template for comparing commits in the repository, typically in the form of `https://api.github.com/repos/{owner}/{repo}/compare/{base}...{head}`. (AI-inferred)
     compare_url: Any = None
-    # The API URL template for accessing the contents of the repository, as defined by GitHub's REST API. (AI-inferred)
     contents_url: Any = None
-    # The URL to access the list of contributors for this repository via the GitHub API. (AI-inferred)
     contributors_url: Any = None
-    # The creation timestamp of the repository. (AI-inferred)
     created_at: Any = None
     # The default branch of the repository.
     default_branch: Any = None
     # Whether to delete head branches when pull requests are merged
     delete_branch_on_merge: Any = None
-    # The API endpoint URL for accessing the list of deployments for this repository. (AI-inferred)
     deployments_url: Any = None
-    # The description of the GitHub repository associated with the issue. (AI-inferred)
     description: Any = None
     # Returns whether or not this repository disabled.
     disabled: Any = None
-    # The URL to the repository's downloads endpoint, which provides access to the downloads associated with the repository. (AI-inferred)
     downloads_url: Any = None
-    # The URL to retrieve events for the repository. (AI-inferred)
     events_url: Any = None
-    # Indicates whether the repository is a fork of another repository. (AI-inferred)
     fork: Any = None
-    # The number of times this repository has been forked. (AI-inferred)
     forks: Any = None
-    # The total number of times the repository has been forked. (AI-inferred)
     forks_count: Any = None
-    # The URL to list the forks of the repository. (AI-inferred)
     forks_url: Any = None
-    # The full name of the repository, including the owner and repository name (e.g., 'octocat/hello-world'). (AI-inferred)
     full_name: Any = None
-    # URL template for the git commits of the repository, with a placeholder for the commit SHA, e.g., `https://api.github.com/repos/{owner}/{repo}/git/commits{/sha}`. (AI-inferred)
     git_commits_url: Any = None
-    # The URL to access the git references (e.g., branches and tags) for the repository. This URL can be used to list or retrieve refs via the GitHub API. (AI-inferred)
     git_refs_url: Any = None
-    # The API endpoint URL for accessing the repository's git tags. (AI-inferred)
     git_tags_url: Any = None
-    # The URL to the Git repository associated with the GitHub repository, typically in the format git://github.com/owner/repository.git, used for cloning and remote operations. (AI-inferred)
     git_url: Any = None
     # Whether discussions are enabled.
     has_discussions: Any = None
@@ -362,7 +240,6 @@ class Issue_Repository:
     has_downloads: Any = None
     # Whether issues are enabled.
     has_issues: Any = None
-    # Whether the repository has GitHub Pages enabled. (AI-inferred)
     has_pages: Any = None
     # Whether projects are enabled.
     has_projects: Any = None
@@ -370,67 +247,45 @@ class Issue_Repository:
     has_pull_requests: Any = None
     # Whether the wiki is enabled.
     has_wiki: Any = None
-    # The URL of the repository's homepage. (AI-inferred)
     homepage: Any = None
-    # The URL to the repository's webhooks API endpoint, used to manage hooks for the repository. (AI-inferred)
     hooks_url: Any = None
-    # The URL of the repository on GitHub. (AI-inferred)
     html_url: Any = None
     # Unique identifier of the repository
     id: Any = None
     # Whether this repository acts as a template that can be used to generate new repositories.
     is_template: Any = None
-    # The URL to the issue comments endpoint for this repository. (AI-inferred)
     issue_comment_url: Any = None
-    # The API URL template for accessing issue events in this repository, typically containing placeholders for event numbers. (AI-inferred)
     issue_events_url: Any = None
-    # The API URL to the repository's issues endpoint, which may include a placeholder for a specific issue number. (AI-inferred)
     issues_url: Any = None
-    # The URL endpoint for the repository's deploy keys, with an optional template placeholder for a specific key ID. (AI-inferred)
     keys_url: Any = None
-    # The API endpoint URL for accessing the labels of the repository, possibly containing a templated placeholder (e.g., '/labels{/name}') for a specific label name. (AI-inferred)
     labels_url: Any = None
-    # The primary programming language of the repository. (AI-inferred)
     language: Any = None
-    # The URL to retrieve the list of programming languages used in the repository. (AI-inferred)
     languages_url: Any = None
     # License Simple
     license: Any = None
-    # The name of the repository's master branch. (AI-inferred)
     master_branch: Any = None
     # The default value for a merge commit message. - `PR_TITLE` - default to the pull request's title. - `PR_BODY` - default to the pull request's body. - `BLANK` - default to a blank commit message.
     merge_commit_message: Any = None
     # The default value for a merge commit title. - `PR_TITLE` - default to the pull request's title. - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
     merge_commit_title: Any = None
-    # The URL template for the merge endpoint, used to merge branches in this repository via the GitHub API. (AI-inferred)
     merges_url: Any = None
-    # The URL template for accessing milestones in the repository, with a placeholder for the specific milestone number (e.g., `.../milestones{/number}`). (AI-inferred)
     milestones_url: Any = None
-    # The URL of the original repository if this repository is a mirror of another source. This is typically set for repositories that are mirrored from an external Git repository. (AI-inferred)
     mirror_url: Any = None
     # The name of the repository.
     name: Any = None
-    # The unique global node identifier (GraphQL ID) for the repository associated with the issue. (AI-inferred)
     node_id: Any = None
-    # The URL to access notifications for this repository. (AI-inferred)
     notifications_url: Any = None
-    # The number of open issues currently in the repository. (AI-inferred)
     open_issues: Any = None
-    # The number of open issues in the repository. (AI-inferred)
     open_issues_count: Any = None
     # A GitHub user.
     owner: Any = None
-    # An object indicating the permission levels the authenticated user has on this repository, typically including flags such as admin, push, and pull. (AI-inferred)
     permissions: Any = None
     # Whether the repository is private or public.
     private: Any = None
     # The policy controlling who can create pull requests: all or collaborators_only.
     pull_request_creation_policy: Any = None
-    # The API endpoint URL for pull requests in this repository, with a template placeholder for the pull request number. (AI-inferred)
     pulls_url: Any = None
-    # The timestamp of the last push to the repository, in ISO 8601 format (e.g., '2023-01-01T12:00:00Z'). (AI-inferred)
     pushed_at: Any = None
-    # The URL to the releases page of the repository. (AI-inferred)
     releases_url: Any = None
     # The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
     size: Any = None
@@ -438,54 +293,34 @@ class Issue_Repository:
     squash_merge_commit_message: Any = None
     # The default value for a squash merge commit title: - `PR_TITLE` - default to the pull request's title. - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
     squash_merge_commit_title: Any = None
-    # The SSH URL for accessing the repository over SSH, used for Git operations. (AI-inferred)
     ssh_url: Any = None
-    # The total number of users who have starred the repository. (AI-inferred)
     stargazers_count: Any = None
-    # The URL to the GitHub API endpoint that lists the users who have starred (stargazers) this repository. (AI-inferred)
     stargazers_url: Any = None
-    # The ISO 8601 timestamp of when the repository was starred by the authenticated user. (AI-inferred)
     starred_at: Any = None
-    # URL template to access commit statuses for the repository; replace {sha} with a commit SHA to list statuses for that commit. (AI-inferred)
     statuses_url: Any = None
-    # The URL to retrieve the list of users subscribed to the repository. (AI-inferred)
     subscribers_url: Any = None
-    # The API endpoint URL to manage the authenticated user's subscription to this repository's notifications. (AI-inferred)
     subscription_url: Any = None
-    # The URL to access this repository via Subversion (SVN). (AI-inferred)
     svn_url: Any = None
-    # The API URL to list the tags of the repository. (AI-inferred)
     tags_url: Any = None
-    # The URL to the teams endpoint for this repository. (AI-inferred)
     teams_url: Any = None
-    # A temporary clone token that allows cloning the repository without authentication for a limited time. It is typically provided only for private repositories and expires after a short period. (AI-inferred)
     temp_clone_token: Any = None
-    # List of topics (tags) associated with the repository that contains the issue. (AI-inferred)
     topics: Any = None
-    # URL template for accessing the repository's git trees. Replace the `{sha}` placeholder with a commit SHA to retrieve a specific tree. (AI-inferred)
     trees_url: Any = None
-    # The timestamp of the last update to the repository, in ISO 8601 format. (AI-inferred)
     updated_at: Any = None
-    # The URL of the repository. (AI-inferred)
     url: Any = None
     # Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.
     use_squash_pr_title_as_default: Any = None
     # The repository visibility: public, private, or internal.
     visibility: Any = None
-    # The number of users watching (subscribed to) the repository. (AI-inferred)
     watchers: Any = None
-    # The number of users watching the repository. (AI-inferred)
     watchers_count: Any = None
     # Whether to require contributors to sign off on web-based commits
     web_commit_signoff_required: Any = None
 
 @dataclasses.dataclass
 class Issue_SubIssuesSummary:
-    # The number of sub-issues that have been completed, as tracked in the sub-issues summary for this GitHub issue. (AI-inferred)
     completed: Any = None
-    # The overall completion percentage of the sub-issues in this summary, as a number between 0 and 100. (AI-inferred)
     percent_completed: Any = None
-    # The total number of sub-issues associated with this issue, as reported in the sub-issues summary. (AI-inferred)
     total: Any = None
 
 _Issue_IssueFieldValuesFields = {
@@ -505,7 +340,6 @@ class IssueConfig:
     issue_field_values: Any = None
     # Labels to associate with this issue. _NOTE: Only users with push access can set labels for new issues. Labels are silently dropped otherwise._
     labels: Any = None
-    # The milestone associated with the issue, if any. This field is computed and read-only; it cannot be set from the client. (AI-inferred)
     milestone: Any = None
     # The id of the parent issue to add this issue to as a sub-issue. _NOTE: Only users with triage access to both the parent issue's repository and this repository can set the parent issue._
     parent_issue_id: Any = None
@@ -522,7 +356,6 @@ class IssueConfig:
 
 @dataclasses.dataclass
 class IssueAttrs:
-    # The reason the issue is locked, if applicable. Possible values are `off-topic`, `too heated`, `resolved`, and `spam`. (AI-inferred)
     active_lock_reason: Any = None
     # Login for the user that this issue should be assigned to. _NOTE: Only users with push access can set the assignee for new issues. The assignee is silently dropped otherwise. **This field is closing down.**_
     assignee: Any = None
@@ -532,25 +365,16 @@ class IssueAttrs:
     author_association: Any = None
     # The contents of the issue.
     body: Any = None
-    # The HTML-rendered version of the issue body. (AI-inferred)
     body_html: Any = None
-    # The plain-text version of the issue body, with Markdown removed. (AI-inferred)
     body_text: Any = None
-    # The timestamp when the issue was closed, in RFC3339 format (e.g., 2023-01-01T00:00:00Z). (AI-inferred)
     closed_at: Any = None
     # A GitHub user.
     closed_by: Any = None
-    # The number of comments on the GitHub issue. This value is computed and provided by GitHub. (AI-inferred)
     comments: Any = None
-    # The API endpoint URL that returns the comments for this issue. (AI-inferred)
     comments_url: Any = None
-    # The creation timestamp of the GitHub issue, set by the provider and returned as a string in ISO 8601 format (e.g., 2023-01-01T12:00:00Z). (AI-inferred)
     created_at: Any = None
-    # A boolean indicating whether the issue is a draft. Draft issues are hidden from non-collaborators and are not ready for review. (AI-inferred)
     draft: Any = None
-    # The URL to retrieve the events associated with this issue, such as labeling, closing, or reopening. (AI-inferred)
     events_url: Any = None
-    # The URL to view the issue on GitHub's website. (AI-inferred)
     html_url: Any = None
     id: Any = None
     issue_dependencies_summary: Any = None
@@ -558,13 +382,9 @@ class IssueAttrs:
     issue_field_values: Any = None
     # Labels to associate with this issue. _NOTE: Only users with push access can set labels for new issues. Labels are silently dropped otherwise._
     labels: Any = None
-    # The API endpoint URL for querying the labels of this issue. (AI-inferred)
     labels_url: Any = None
-    # Indicates whether the issue is locked for comments, meaning only users with write access can comment. (AI-inferred)
     locked: Any = None
-    # The milestone associated with the issue, if any. This field is computed and read-only; it cannot be set from the client. (AI-inferred)
     milestone: Any = None
-    # The Node ID of the issue, used by GitHub's GraphQL API. (AI-inferred)
     node_id: Any = None
     # Number uniquely identifying the issue within its repository
     number: Any = None
@@ -576,26 +396,21 @@ class IssueAttrs:
     performed_via_github_app: Any = None
     # Comments provide a way for people to collaborate on an issue.
     pinned_comment: Any = None
-    # The pull_request object is present when the issue is also a pull request, and contains metadata about the pull request such as its URL and merge status. (AI-inferred)
     pull_request: Any = None
-    # The reactions summary for the issue, containing counts of user reactions by type (e.g., thumbs up, thumbs down, laugh, hooray, confused, heart, rocket, eyes). (AI-inferred)
     reactions: Any = None
     # A repository on GitHub.
     repository: Any = None
-    # The URL of the repository in which the issue is located. (AI-inferred)
     repository_url: Any = None
     # State of the issue; either 'open' or 'closed'
     state: Any = None
     # The reason for the current state
     state_reason: Any = None
     sub_issues_summary: Any = None
-    # The URL to retrieve the timeline of events for this issue via the GitHub API. (AI-inferred)
     timeline_url: Any = None
     # The title of the issue.
     title: Any = None
     # The name of the issue type to associate with this issue. _NOTE: Only users with push access can set the type for new issues. The type is silently dropped otherwise._
     type: Any = None
-    # The timestamp when the issue was last updated, in ISO 8601 format (e.g., 2023-01-15T10:30:00Z). This field is computed and read-only. (AI-inferred)
     updated_at: Any = None
     # URL for the issue
     url: Any = None

@@ -7,34 +7,30 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
-class Agent_Organization:
-    # Unique identifier of the organization
-    id: Any = None
-    # Login of the organization
-    login: Any = None
-
-@dataclasses.dataclass
-class Agent_Repository:
-    # Full name of the repository including owner
-    full_name: Any = None
-    # Unique identifier of the repository
-    id: Any = None
-    # Name of the repository
+class Agent_CustomAgents:
+    file_path: Any = None
     name: Any = None
+    url: Any = None
 
 @dataclasses.dataclass
 class AgentConfig:
     enterprise: Any = None
+    page: Any = None
+    per_page: Any = None
 
 @dataclasses.dataclass
 class AgentAttrs:
+    # List of custom agents defined in the repository. Returns `null` if no source repository is configured.
+    custom_agents: Any = None
     enterprise: Any = None
-    organization: Any = None
-    repository: Any = None
+    page: Any = None
+    per_page: Any = None
 
 Agent = ubx.DataSourceBinding(
     wire_type="github_custom_agent",
     fields={
         "enterprise": ubx.FieldSpec(wire_name="enterprise"),
+        "page": ubx.FieldSpec(wire_name="page"),
+        "per_page": ubx.FieldSpec(wire_name="per_page"),
     },
 )

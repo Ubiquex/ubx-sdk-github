@@ -4,47 +4,28 @@ package release
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Asset_Uploader struct {
-	// The URL of the GitHub user's avatar image. (AI-inferred)
-	AvatarUrl any
-	// The email address of the uploader, if publicly available. May be null if the user has not made their email public. (AI-inferred)
-	Email any
-	// The API URL that lists events performed by this user. (AI-inferred)
-	EventsUrl any
-	// The URL to the GitHub API endpoint that lists the followers of the uploader user. (AI-inferred)
-	FollowersUrl any
-	// The URL template to list the users that this uploader follows, with a placeholder for the target user (e.g., {/other_user}). (AI-inferred)
-	FollowingUrl any
-	// The URL to the user's gists on GitHub, typically in the form 'https://api.github.com/users/{username}/gists{/gist_id}'. (AI-inferred)
-	GistsUrl any
-	// The Gravatar hash of the uploader user, used to construct their avatar image URL. (AI-inferred)
-	GravatarId any
-	// The GitHub profile URL for the user who uploaded the release asset. (AI-inferred)
-	HtmlUrl any
-	Id any
-	// The GitHub username of the user who uploaded the release asset. (AI-inferred)
-	Login any
-	// The display name of the user who uploaded the release asset. (AI-inferred)
-	Name any
-	// The GraphQL node ID of the user who uploaded the release asset. (AI-inferred)
-	NodeId any
-	// The URL to the organizations endpoint for the user who uploaded the release asset. This endpoint returns the list of organizations the uploader belongs to. (AI-inferred)
-	OrganizationsUrl any
-	// The URL to the GitHub API endpoint that lists events received by the uploader user (the user who uploaded the release asset). (AI-inferred)
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	// The URL to the list of repositories belonging to the user who uploaded the release asset. (AI-inferred)
-	ReposUrl any
-	// Indicates whether the uploader is a GitHub site administrator (e.g., on GitHub.com or GitHub Enterprise). (AI-inferred)
-	SiteAdmin any
-	StarredAt any
-	// The URL template for listing the uploader's starred GitHub repositories, with placeholders {owner} and {repo}. (AI-inferred)
-	StarredUrl any
-	// The URL to the GitHub subscriptions of the user who uploaded the release asset. (AI-inferred)
-	SubscriptionsUrl any
-	// The type of the uploader account, either 'User' or 'Organization'. (AI-inferred)
-	Type any
-	// The URL of the uploader's GitHub profile. (AI-inferred)
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type AssetConfig struct {
@@ -59,34 +40,23 @@ type AssetConfig struct {
 }
 
 type AssetAttrs struct {
-	// The browser-friendly URL for downloading the release asset. (AI-inferred)
 	BrowserDownloadUrl any
-	// The MIME type of the release asset, as reported by GitHub for the uploaded file. (AI-inferred)
-	ContentType any
-	// The timestamp of when the release asset was created, set by the API. (AI-inferred)
-	CreatedAt any
-	// The SHA-256 digest of the release asset file, computed by GitHub after upload. (AI-inferred)
-	Digest any
-	// The number of times the release asset has been downloaded. (AI-inferred)
-	DownloadCount any
-	// The unique identifier for this release asset, assigned by GitHub. (AI-inferred)
-	Id any
-	// The custom label assigned to the release asset, as returned by GitHub. (AI-inferred)
-	Label any
+	ContentType        any
+	CreatedAt          any
+	Digest             any
+	DownloadCount      any
+	Id                 any
+	Label              any
 	// The file name of the asset.
-	Name any
-	// The unique identifier for the release asset, used as a GraphQL node ID. (AI-inferred)
+	Name   any
 	NodeId any
-	// The size of the release asset file in bytes. (AI-inferred)
-	Size any
+	Size   any
 	// State of the release asset.
-	State any
-	// The timestamp of the last update to the release asset, in ISO 8601 format (e.g., 2013-02-27T19:35:32Z). (AI-inferred)
+	State     any
 	UpdatedAt any
 	// A GitHub user.
 	Uploader any
-	// The API URL for the release asset on GitHub, used for programmatic access. (AI-inferred)
-	Url any
+	Url      any
 	// path parameter, not part of the API's own resource representation
 	Owner any
 	// path parameter, not part of the API's own resource representation
@@ -100,9 +70,9 @@ type AssetAttrs struct {
 var Asset = ubx.ResourceBinding{
 	WireType: "github_release_asset",
 	Fields: ubx.FieldMap{
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"AssetId": ubx.FieldSpec{WireName: "asset_id"},
+		"Owner":     ubx.FieldSpec{WireName: "owner"},
+		"Repo":      ubx.FieldSpec{WireName: "repo"},
+		"AssetId":   ubx.FieldSpec{WireName: "asset_id"},
 		"ReleaseId": ubx.FieldSpec{WireName: "release_id"},
 	},
 }

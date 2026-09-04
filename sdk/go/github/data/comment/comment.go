@@ -4,31 +4,22 @@ package comment
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type CommentConfig struct {
-	CommentId any
-	Content any
-	Owner any
-	Page any
+	GistId  any
+	Page    any
 	PerPage any
-	Repo any
 }
 
 type CommentAttrs struct {
-	CommentId any
-	Content any
-	Owner any
-	Page any
+	GistId  any
+	Page    any
 	PerPage any
-	Repo any
 }
 
 var Comment = ubx.DataSourceBinding{
 	WireType: "github_comment",
 	Fields: ubx.FieldMap{
-		"CommentId": ubx.FieldSpec{WireName: "comment_id"},
-		"Content": ubx.FieldSpec{WireName: "content"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
+		"GistId":  ubx.FieldSpec{WireName: "gist_id"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
 	},
 }

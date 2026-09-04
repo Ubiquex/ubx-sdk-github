@@ -4,73 +4,37 @@ package secret
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ScanningConfig struct {
-	After any
-	Assignee any
-	Before any
-	Direction any
-	Enterprise any
-	ExcludeProviders any
-	ExcludeSecretTypes any
-	HideSecret any
-	IncludedMetadata any
-	IsBypassed any
-	IsMultiRepo any
-	IsPubliclyLeaked any
-	OwnerEmailHash any
-	PerPage any
-	Providers any
-	Resolution any
-	SecretType any
-	Sort any
-	State any
-	Validity any
+	Enterprise       any
+	OrganizationName any
+	Page             any
+	PerPage          any
+	RequestStatus    any
+	Requester        any
+	Reviewer         any
+	TimePeriod       any
 }
 
 type ScanningAttrs struct {
-	After any
-	Assignee any
-	Before any
-	Direction any
-	Enterprise any
-	ExcludeProviders any
-	ExcludeSecretTypes any
-	HideSecret any
-	IncludedMetadata any
-	IsBypassed any
-	IsMultiRepo any
-	IsPubliclyLeaked any
-	OwnerEmailHash any
-	PerPage any
-	Providers any
-	Resolution any
-	SecretType any
-	Sort any
-	State any
-	Validity any
+	Enterprise       any
+	OrganizationName any
+	Page             any
+	PerPage          any
+	RequestStatus    any
+	Requester        any
+	Reviewer         any
+	TimePeriod       any
 }
 
 var Scanning = ubx.DataSourceBinding{
 	WireType: "github_secret_scanning",
 	Fields: ubx.FieldMap{
-		"After": ubx.FieldSpec{WireName: "after"},
-		"Assignee": ubx.FieldSpec{WireName: "assignee"},
-		"Before": ubx.FieldSpec{WireName: "before"},
-		"Direction": ubx.FieldSpec{WireName: "direction"},
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"ExcludeProviders": ubx.FieldSpec{WireName: "exclude_providers"},
-		"ExcludeSecretTypes": ubx.FieldSpec{WireName: "exclude_secret_types"},
-		"HideSecret": ubx.FieldSpec{WireName: "hide_secret"},
-		"IncludedMetadata": ubx.FieldSpec{WireName: "included_metadata"},
-		"IsBypassed": ubx.FieldSpec{WireName: "is_bypassed"},
-		"IsMultiRepo": ubx.FieldSpec{WireName: "is_multi_repo"},
-		"IsPubliclyLeaked": ubx.FieldSpec{WireName: "is_publicly_leaked"},
-		"OwnerEmailHash": ubx.FieldSpec{WireName: "owner_email_hash"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Providers": ubx.FieldSpec{WireName: "providers"},
-		"Resolution": ubx.FieldSpec{WireName: "resolution"},
-		"SecretType": ubx.FieldSpec{WireName: "secret_type"},
-		"Sort": ubx.FieldSpec{WireName: "sort"},
-		"State": ubx.FieldSpec{WireName: "state"},
-		"Validity": ubx.FieldSpec{WireName: "validity"},
+		"Enterprise":       ubx.FieldSpec{WireName: "enterprise"},
+		"OrganizationName": ubx.FieldSpec{WireName: "organization_name"},
+		"Page":             ubx.FieldSpec{WireName: "page"},
+		"PerPage":          ubx.FieldSpec{WireName: "per_page"},
+		"RequestStatus":    ubx.FieldSpec{WireName: "request_status"},
+		"Requester":        ubx.FieldSpec{WireName: "requester"},
+		"Reviewer":         ubx.FieldSpec{WireName: "reviewer"},
+		"TimePeriod":       ubx.FieldSpec{WireName: "time_period"},
 	},
 }

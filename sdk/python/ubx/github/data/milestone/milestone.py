@@ -8,27 +8,33 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class MilestoneConfig:
-    milestone_number: Any = None
+    direction: Any = None
     owner: Any = None
     page: Any = None
     per_page: Any = None
     repo: Any = None
+    sort: Any = None
+    state: Any = None
 
 @dataclasses.dataclass
 class MilestoneAttrs:
-    milestone_number: Any = None
+    direction: Any = None
     owner: Any = None
     page: Any = None
     per_page: Any = None
     repo: Any = None
+    sort: Any = None
+    state: Any = None
 
 Milestone = ubx.DataSourceBinding(
     wire_type="github_milestone",
     fields={
-        "milestone_number": ubx.FieldSpec(wire_name="milestone_number"),
+        "direction": ubx.FieldSpec(wire_name="direction"),
         "owner": ubx.FieldSpec(wire_name="owner"),
         "page": ubx.FieldSpec(wire_name="page"),
         "per_page": ubx.FieldSpec(wire_name="per_page"),
         "repo": ubx.FieldSpec(wire_name="repo"),
+        "sort": ubx.FieldSpec(wire_name="sort"),
+        "state": ubx.FieldSpec(wire_name="state"),
     },
 )

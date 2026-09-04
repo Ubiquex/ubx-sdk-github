@@ -7,20 +7,36 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
+class Attestation_Attestations_Bundle:
+    dsse_envelope: Any = None
+    media_type: Any = None
+    verification_material: Any = None
+
+@dataclasses.dataclass
+class Attestation_Attestations:
+    bundle: Any = None
+    bundle_url: Any = None
+    initiator: Any = None
+    repository_id: Any = None
+
+@dataclasses.dataclass
 class AttestationConfig:
     after: Any = None
     before: Any = None
     org: Any = None
     per_page: Any = None
     predicate_type: Any = None
+    subject_digest: Any = None
 
 @dataclasses.dataclass
 class AttestationAttrs:
     after: Any = None
+    attestations: Any = None
     before: Any = None
     org: Any = None
     per_page: Any = None
     predicate_type: Any = None
+    subject_digest: Any = None
 
 Attestation = ubx.DataSourceBinding(
     wire_type="github_attestation",
@@ -30,5 +46,6 @@ Attestation = ubx.DataSourceBinding(
         "org": ubx.FieldSpec(wire_name="org"),
         "per_page": ubx.FieldSpec(wire_name="per_page"),
         "predicate_type": ubx.FieldSpec(wire_name="predicate_type"),
+        "subject_digest": ubx.FieldSpec(wire_name="subject_digest"),
     },
 )

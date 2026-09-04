@@ -7,29 +7,32 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
-class ProtectionRule_AvailableCustomDeploymentProtectionRuleIntegrations:
+class ProtectionRule_CustomDeploymentProtectionRules_App:
     id: Any = None
     integration_url: Any = None
     node_id: Any = None
     slug: Any = None
 
 @dataclasses.dataclass
+class ProtectionRule_CustomDeploymentProtectionRules:
+    app: Any = None
+    enabled: Any = None
+    id: Any = None
+    node_id: Any = None
+
+@dataclasses.dataclass
 class ProtectionRuleConfig:
     environment_name: Any = None
     owner: Any = None
-    page: Any = None
-    per_page: Any = None
     repo: Any = None
 
 @dataclasses.dataclass
 class ProtectionRuleAttrs:
-    available_custom_deployment_protection_rule_integrations: Any = None
+    custom_deployment_protection_rules: Any = None
     environment_name: Any = None
     owner: Any = None
-    page: Any = None
-    per_page: Any = None
     repo: Any = None
-    # The total number of custom deployment protection rule integrations available for this environment.
+    # The number of enabled custom deployment protection rules for this environment
     total_count: Any = None
 
 ProtectionRule = ubx.DataSourceBinding(
@@ -37,8 +40,6 @@ ProtectionRule = ubx.DataSourceBinding(
     fields={
         "environment_name": ubx.FieldSpec(wire_name="environment_name"),
         "owner": ubx.FieldSpec(wire_name="owner"),
-        "page": ubx.FieldSpec(wire_name="page"),
-        "per_page": ubx.FieldSpec(wire_name="per_page"),
         "repo": ubx.FieldSpec(wire_name="repo"),
     },
 )

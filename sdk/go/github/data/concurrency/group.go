@@ -5,45 +5,45 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Group_GroupMembers struct {
 	JobHtmlUrl any
-	JobId any
-	JobName any
-	JobUrl any
+	JobId      any
+	JobName    any
+	JobUrl     any
 	RunHtmlUrl any
-	RunId any
-	RunName any
-	RunUrl any
-	Status any
+	RunId      any
+	RunName    any
+	RunUrl     any
+	Status     any
 }
 
 type GroupConfig struct {
-	AheadOfJob any
-	AheadOfRun any
+	AheadOfJob           any
+	AheadOfRun           any
 	ConcurrencyGroupName any
-	Owner any
-	Repo any
+	Owner                any
+	Repo                 any
 }
 
 type GroupAttrs struct {
-	AheadOfJob any
-	AheadOfRun any
+	AheadOfJob           any
+	AheadOfRun           any
 	ConcurrencyGroupName any
-	GroupMembers any
+	GroupMembers         any
 	// The name of the concurrency group.
 	GroupName any
 	// API URL for this concurrency group.
-	GroupUrl any
-	Owner any
-	Repo any
+	GroupUrl   any
+	Owner      any
+	Repo       any
 	TotalCount any
 }
 
 var Group = ubx.DataSourceBinding{
 	WireType: "github_concurrency_group",
 	Fields: ubx.FieldMap{
-		"AheadOfJob": ubx.FieldSpec{WireName: "ahead_of_job"},
-		"AheadOfRun": ubx.FieldSpec{WireName: "ahead_of_run"},
+		"AheadOfJob":           ubx.FieldSpec{WireName: "ahead_of_job"},
+		"AheadOfRun":           ubx.FieldSpec{WireName: "ahead_of_run"},
 		"ConcurrencyGroupName": ubx.FieldSpec{WireName: "concurrency_group_name"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":                ubx.FieldSpec{WireName: "owner"},
+		"Repo":                 ubx.FieldSpec{WireName: "repo"},
 	},
 }

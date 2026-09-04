@@ -4,28 +4,28 @@ package organization
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Role_Organization struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type RoleConfig struct {
@@ -71,11 +71,11 @@ type RoleAttrs struct {
 var Role = ubx.ResourceBinding{
 	WireType: "github_organization_role",
 	Fields: ubx.FieldMap{
-		"BaseRole": ubx.FieldSpec{WireName: "base_role"},
+		"BaseRole":    ubx.FieldSpec{WireName: "base_role"},
 		"Description": ubx.FieldSpec{WireName: "description"},
-		"Name": ubx.FieldSpec{WireName: "name"},
+		"Name":        ubx.FieldSpec{WireName: "name"},
 		"Permissions": ubx.FieldSpec{WireName: "permissions"},
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"RoleId": ubx.FieldSpec{WireName: "role_id"},
+		"Org":         ubx.FieldSpec{WireName: "org"},
+		"RoleId":      ubx.FieldSpec{WireName: "role_id"},
 	},
 }

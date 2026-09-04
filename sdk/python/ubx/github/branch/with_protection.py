@@ -8,237 +8,146 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class WithProtection_Links:
-    # The HTML URL to the branch protection settings for the branch. (AI-inferred)
     html: Any = None
-    # The URL of the branch with protection resource itself. This is the self-referential link to the current resource. (AI-inferred)
     self: Any = None
 
 @dataclasses.dataclass
 class WithProtection_Commit_Author:
-    # The URL of the author's avatar image, as provided by GitHub. (AI-inferred)
     avatar_url: Any = None
-    # The email address of the author of the commit. (AI-inferred)
     email: Any = None
-    # The URL to the events listing for the commit author's GitHub user account. (AI-inferred)
     events_url: Any = None
-    # The GitHub API URL to the list of followers of this commit author. (AI-inferred)
     followers_url: Any = None
-    # The URL template to list users this author follows, in the form 'https://api.github.com/users/{login}/following{/other_user}'. (AI-inferred)
     following_url: Any = None
-    # The URL to the user's gists list, typically in the format https://api.github.com/users/{username}/gists{/gist_id}. (AI-inferred)
     gists_url: Any = None
-    # The Gravatar ID associated with the commit author's account, used to construct the author's avatar URL. (AI-inferred)
     gravatar_id: Any = None
-    # The GitHub profile URL for the commit author. (AI-inferred)
     html_url: Any = None
     id: Any = None
-    # The GitHub username of the commit author. (AI-inferred)
     login: Any = None
-    # The name of the author of the commit, as stored in Git metadata. (AI-inferred)
     name: Any = None
-    # The unique identifier for the author as used in the GitHub GraphQL API. (AI-inferred)
     node_id: Any = None
-    # The API URL for the organizations that the commit author belongs to. (AI-inferred)
     organizations_url: Any = None
-    # The URL to the API endpoint that lists events received by the author. (AI-inferred)
     received_events_url: Any = None
-    # The API endpoint URL that lists the author's public repositories. (AI-inferred)
     repos_url: Any = None
-    # Indicates whether the author of the commit is a site administrator on GitHub. (AI-inferred)
     site_admin: Any = None
     starred_at: Any = None
-    # The URL template for repositories starred by the user. It typically includes placeholders like {/owner}{/repo} for constructing specific starred repository URLs. (AI-inferred)
     starred_url: Any = None
-    # The URL to the GitHub API endpoint for the author's subscriptions. (AI-inferred)
     subscriptions_url: Any = None
-    # The type of the commit author, such as 'User' or 'Bot'. (AI-inferred)
     type: Any = None
-    # The GitHub API URL of the commit author. (AI-inferred)
     url: Any = None
-    # The user view type of the commit author, indicating whether the GitHub profile is visible as 'public' or 'private'. (AI-inferred)
     user_view_type: Any = None
 
 @dataclasses.dataclass
 class WithProtection_Commit_Commit_Author:
-    # The date the commit was authored, in ISO 8601 format (e.g., 2011-04-14T16:00:49Z). (AI-inferred)
     date: Any = None
-    # The email address of the commit author. This field is optional and may be absent if the author's email is not available. (AI-inferred)
     email: Any = None
-    # The name of the author of the commit. (AI-inferred)
     name: Any = None
 
 @dataclasses.dataclass
 class WithProtection_Commit_Commit_Tree:
-    # The SHA-1 hash of the tree object that this commit references. This is a unique identifier for the tree within the repository. (AI-inferred)
     sha: Any = None
-    # The GitHub API URL for this commit tree. (AI-inferred)
     url: Any = None
 
 @dataclasses.dataclass
 class WithProtection_Commit_Commit_Verification:
-    # The payload that was signed for commit verification. This string contains the original signed data used to generate the commit signature. (AI-inferred)
     payload: Any = None
-    # The reason for the verification status of the commit's signature, indicating why the signature is considered valid, invalid, or unsigned. (AI-inferred)
     reason: Any = None
-    # The cryptographic signature (e.g., GPG) of the commit, as a string. May be empty if the commit is unsigned. (AI-inferred)
     signature: Any = None
-    # Whether the commit's signature (e.g., GPG) has been verified by GitHub. (AI-inferred)
     verified: Any = None
-    # The timestamp (in ISO 8601 format) indicating when the commit's signature was verified. (AI-inferred)
     verified_at: Any = None
 
 @dataclasses.dataclass
 class WithProtection_Commit_Commit:
     # Metaproperties for Git author/committer information.
     author: Any = None
-    # The number of comments made on this commit. (AI-inferred)
     comment_count: Any = None
     # Metaproperties for Git author/committer information.
     committer: Any = None
-    # The commit message, which summarizes the changes made in the commit. (AI-inferred)
     message: Any = None
-    # The git tree object associated with this commit, containing the tree's SHA and URL. (AI-inferred)
     tree: Any = None
-    # The API URL for the commit, which can be used to fetch the commit details directly. (AI-inferred)
     url: Any = None
-    # Details about the verification status of the commit signature, including whether the commit signature is verified and the reason for that status. (AI-inferred)
     verification: Any = None
 
 @dataclasses.dataclass
 class WithProtection_Commit_Files:
-    # The number of lines added in this file as part of the commit. (AI-inferred)
     additions: Any = None
-    # The URL to the file's blob (content) on GitHub. (AI-inferred)
     blob_url: Any = None
-    # The total number of changes (additions plus deletions) made to the file in this commit. (AI-inferred)
     changes: Any = None
-    # The URL to fetch the file's contents via the GitHub API. (AI-inferred)
     contents_url: Any = None
-    # The number of lines deleted in this file as part of the commit. (AI-inferred)
     deletions: Any = None
-    # The path or name of the file in the repository that was changed in the commit. (AI-inferred)
     filename: Any = None
-    # The patch (diff) for the file in the commit, provided as a string. This is the raw unified diff output for the file. (AI-inferred)
     patch: Any = None
-    # The previous filename if the file was renamed in this commit; otherwise empty/null. (AI-inferred)
     previous_filename: Any = None
-    # The URL to the raw content of the file, typically pointing to raw.githubusercontent.com. (AI-inferred)
     raw_url: Any = None
-    # The SHA-1 hash of the file blob, as returned by the GitHub API, uniquely identifying the file's contents in the repository. (AI-inferred)
     sha: Any = None
-    # The status of the file in the commit, indicating how it was changed relative to its previous state. Possible values are: added, removed, modified, renamed, copied, changed, unchanged. (AI-inferred)
     status: Any = None
 
 @dataclasses.dataclass
 class WithProtection_Commit_Parents:
-    # The GitHub HTML URL for the parent commit. (AI-inferred)
     html_url: Any = None
-    # The SHA (commit hash) of the parent commit. (AI-inferred)
     sha: Any = None
-    # The URL of the parent commit. (AI-inferred)
     url: Any = None
 
 @dataclasses.dataclass
 class WithProtection_Commit_Stats:
-    # The number of lines added in the commit. (AI-inferred)
     additions: Any = None
-    # The number of lines deleted in the commit. (AI-inferred)
     deletions: Any = None
-    # The total number of changes (additions and deletions) in the commit. (AI-inferred)
     total: Any = None
 
 @dataclasses.dataclass
 class WithProtection_Commit:
-    # The commit author, including details such as name and email. (AI-inferred)
     author: Any = None
-    # The URL to the comments list for this commit, which can be used to fetch or create commit comments via the GitHub API. (AI-inferred)
     comments_url: Any = None
-    # The commit object representing the latest commit on the branch, including metadata such as the SHA, message, and author. (AI-inferred)
     commit: Any = None
-    # The committer metadata for the commit, including the name, email address, and timestamp of the person who made the commit. (AI-inferred)
     committer: Any = None
-    # List of files modified in the commit. Each item provides information about a file change. (AI-inferred)
     files: Any = None
-    # The URL to view the commit on GitHub. (AI-inferred)
     html_url: Any = None
-    # The GraphQL node ID for the commit, used as a unique identifier in GitHub's GraphQL API. (AI-inferred)
     node_id: Any = None
-    # The list of parent commits of this commit. Each element represents a commit that is a direct ancestor of this commit, typically containing the SHA and URL of the parent commit. (AI-inferred)
     parents: Any = None
-    # The SHA of the latest commit on the branch. (AI-inferred)
     sha: Any = None
-    # Statistics about the commit's changes, including the number of additions, deletions, and total lines changed. (AI-inferred)
     stats: Any = None
-    # The API URL that points to the commit in the repository. (AI-inferred)
     url: Any = None
 
 @dataclasses.dataclass
 class WithProtection_Protection_AllowDeletions:
-    # Set to true to allow users with push access to delete the protected branch. (AI-inferred)
     enabled: Any = None
 
 @dataclasses.dataclass
 class WithProtection_Protection_EnforceAdmins:
-    # Set to true to enforce branch protection rules for repository administrators. (AI-inferred)
     enabled: Any = None
-    # The API endpoint URL for the enforcement status of administrators on this branch protection rule. (AI-inferred)
     url: Any = None
 
 @dataclasses.dataclass
 class WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Apps_Owner:
-    # The URL of the avatar image for the GitHub user or organization that owns this GitHub App. (AI-inferred)
     avatar_url: Any = None
-    # The creation timestamp of the GitHub account that owns the app, in ISO 8601 format (e.g., 2011-01-26T19:01:12Z). (AI-inferred)
     created_at: Any = None
     description: Any = None
-    # Email address of the GitHub App owner (the user or organization that owns the app). (AI-inferred)
     email: Any = None
-    # The URL to retrieve the events for the owner (user or organization) of the GitHub app. This is a standard GitHub API endpoint, typically formatted like `https://api.github.com/users/{username}/events{/privacy}`. (AI-inferred)
     events_url: Any = None
-    # URL to fetch the list of followers for the app owner (user or organization). (AI-inferred)
     followers_url: Any = None
-    # The URL to the GitHub API endpoint for the list of users that the app owner follows. (AI-inferred)
     following_url: Any = None
-    # The API URL to the owner's gists. In the GitHub REST API, this is a templated URL, e.g., https://api.github.com/users/{owner}/gists{/gist_id}. (AI-inferred)
     gists_url: Any = None
-    # The Gravatar hash identifier for the GitHub App owner's avatar. (AI-inferred)
     gravatar_id: Any = None
-    # The URL to the GitHub profile of the app's owner. (AI-inferred)
     html_url: Any = None
-    # The numeric ID of the GitHub user or organization that owns the app. (AI-inferred)
     id: Any = None
-    # The GitHub username of the user or organization that owns the GitHub App listed in the bypass pull request allowances. This identifies the owner of the app that is allowed to bypass branch protection rules for pull request reviews. (AI-inferred)
     login: Any = None
     name: Any = None
-    # The GraphQL node ID of the app owner within the bypass pull request allowances. (AI-inferred)
     node_id: Any = None
-    # The URL to the list of organizations that the app owner belongs to (GitHub API field for the owner object). (AI-inferred)
     organizations_url: Any = None
-    # The URL to retrieve the events received by this owner via the GitHub Events API. (AI-inferred)
     received_events_url: Any = None
-    # The URL to the GitHub API endpoint listing the repositories owned by the app's owner, e.g., 'https://api.github.com/users/octocat/repos'. (AI-inferred)
     repos_url: Any = None
-    # Indicates whether the owner of the GitHub App is a site administrator for the GitHub instance. (AI-inferred)
     site_admin: Any = None
     slug: Any = None
     starred_at: Any = None
-    # The URL to list the repositories starred by the owner (user or organization). This follows the GitHub API user/org object's starred_url format, typically 'https://api.github.com/users/{username}/starred{/owner}{/repo}'. (AI-inferred)
     starred_url: Any = None
-    # The API URL for the subscriptions of the owner of the app. (AI-inferred)
     subscriptions_url: Any = None
-    # The type of the GitHub account that owns the app, such as 'User' or 'Organization'. (AI-inferred)
     type: Any = None
-    # The timestamp of the last update to the owner (user or organization) of the GitHub app. (AI-inferred)
     updated_at: Any = None
-    # The API URL of the GitHub user or organization that owns the GitHub app. (AI-inferred)
     url: Any = None
-    # Indicates whether the app owner (a user) is a public or private user. Allowed values are `public` and `private`; a private user is only visible within a GitHub Enterprise cloud or server instance. (AI-inferred)
     user_view_type: Any = None
     website_url: Any = None
 
 @dataclasses.dataclass
 class WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Apps_Permissions:
-    # The access level for the 'checks' permission of the GitHub App. Allowed values are 'read' or 'write'. (AI-inferred)
     checks: Any = None
     contents: Any = None
     deployments: Any = None
@@ -247,29 +156,18 @@ class WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllo
 
 @dataclasses.dataclass
 class WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Apps:
-    # The client ID of the GitHub App that is allowed to bypass pull request review requirements. (AI-inferred)
     client_id: Any = None
-    # The timestamp indicating when the GitHub App was created, in RFC3339 format. (AI-inferred)
     created_at: Any = None
     description: Any = None
     events: Any = None
-    # The external URL of the GitHub App, typically its public homepage or website. (AI-inferred)
     external_url: Any = None
-    # The HTML URL of the GitHub app that is permitted to bypass the required pull request reviews. (AI-inferred)
     html_url: Any = None
-    # The numeric ID of the GitHub App that is allowed to bypass pull request review requirements. This corresponds to the app's unique identifier on GitHub. (AI-inferred)
     id: Any = None
-    # The number of installations of the GitHub App. (AI-inferred)
     installations_count: Any = None
-    # The name of a GitHub App that is allowed to bypass pull request review requirements. (AI-inferred)
     name: Any = None
-    # The GraphQL global node ID of the GitHub app. (AI-inferred)
     node_id: Any = None
-    # The owner of the GitHub App (either a user or an organization) that is listed in the bypass pull request allowances. This object provides details about the owner, such as their login and ID. (AI-inferred)
     owner: Any = None
-    # The permissions granted to the GitHub App, represented as an object mapping permission names (e.g., 'contents', 'issues') to their access levels (e.g., 'read', 'write'). (AI-inferred)
     permissions: Any = None
-    # The slug of the GitHub App that can bypass pull request requirements. (AI-inferred)
     slug: Any = None
     updated_at: Any = None
 
@@ -277,82 +175,48 @@ class WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllo
 class WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Teams_Parent:
     description: Any = None
     enterprise_id: Any = None
-    # The URL of the parent team's page on GitHub. (AI-inferred)
     html_url: Any = None
-    # The ID of the team that is allowed to bypass the required pull request reviews for this branch protection rule. (AI-inferred)
     id: Any = None
-    # The LDAP distinguished name (DN) of the parent team of the team allowed to bypass pull request requirements, for GitHub Enterprise. (AI-inferred)
     ldap_dn: Any = None
-    # The URL to access the list of members for this team. (AI-inferred)
     members_url: Any = None
-    # The name of the team that is allowed to bypass pull request review requirements. (AI-inferred)
     name: Any = None
-    # The GraphQL node ID of the team that is allowed to bypass pull request requirements. (AI-inferred)
     node_id: Any = None
-    # The notification setting of the parent team. Valid values are 'notifications_enabled', 'notifications_disabled', or 'notifications_between_team_members'. (AI-inferred)
     notification_setting: Any = None
-    # The GitHub organization ID that the team belongs to. (AI-inferred)
     organization_id: Any = None
-    # The permission level of the parent team, such as 'admin', 'push', or 'pull'. (AI-inferred)
     permission: Any = None
-    # The privacy level of the team. Can be either 'secret' (only visible to team members) or 'closed' (visible to all organization members). (AI-inferred)
     privacy: Any = None
-    # The API URL that points to the list of repositories belonging to the parent team of a team in the bypass pull request allowances. (AI-inferred)
     repositories_url: Any = None
-    # The slug of the parent team of a team that can bypass pull request requirements. GitHub team slugs are URL-friendly identifiers, such as 'engineering-team'. (AI-inferred)
     slug: Any = None
-    # The type of the parent entity for a team, indicating whether it is an enterprise or an organization. (AI-inferred)
     type: Any = None
-    # The URL of the parent team of this team, if any. (AI-inferred)
     url: Any = None
 
 @dataclasses.dataclass
 class WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Teams_Permissions:
-    # Indicates whether the team has admin permission on the repository, which allows bypassing pull request requirements. (AI-inferred)
     admin: Any = None
-    # Whether the team has maintain permission, allowing it to bypass pull request review requirements. (AI-inferred)
     maintain: Any = None
-    # Whether the team has pull (read) access to the repository. (AI-inferred)
     pull: Any = None
-    # Whether the team has push permission on the branch, allowing them to push changes. (AI-inferred)
     push: Any = None
-    # Indicates whether the team has the 'triage' permission level for the repository, which allows management of issues and pull requests without write access and permits bypassing required pull request reviews on this branch. (AI-inferred)
     triage: Any = None
 
 @dataclasses.dataclass
 class WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Teams:
-    # The source of the team's access, indicating whether the team has direct access, or access granted through an organization or enterprise. Valid values: direct, organization, enterprise. (AI-inferred)
     access_source: Any = None
     description: Any = None
     enterprise_id: Any = None
-    # The HTML URL of the team's page on GitHub, e.g., https://github.com/orgs/ORG/teams/TEAM. (AI-inferred)
     html_url: Any = None
-    # The numeric ID of the GitHub team that can bypass pull request requirements for this branch protection rule. (AI-inferred)
     id: Any = None
-    # The URL to the list of members of this team, as returned by the GitHub API. (AI-inferred)
     members_url: Any = None
-    # The name of the team that is granted bypass permission for pull request reviews on this branch. (AI-inferred)
     name: Any = None
-    # The GraphQL global node ID of the team that is allowed to bypass pull request requirements. (AI-inferred)
     node_id: Any = None
-    # The team's notification setting, with allowed values 'notifications_enabled' or 'notifications_disabled'. (AI-inferred)
     notification_setting: Any = None
-    # The ID of the organization that the team belongs to. (AI-inferred)
     organization_id: Any = None
-    # The parent team of this team in the GitHub team hierarchy. This is an object containing the same team attributes (e.g., id, slug, name), and is null when the team has no parent. (AI-inferred)
     parent: Any = None
     permission: Any = None
-    # Object mapping permission levels to booleans representing the team's permissions on the repository. (AI-inferred)
     permissions: Any = None
-    # The privacy level of the team. Allowed values are 'secret' and 'closed'. (AI-inferred)
     privacy: Any = None
-    # The API URL to retrieve the list of repositories for this team. This is a standard field on GitHub team objects, indicating where to fetch the team's repositories. (AI-inferred)
     repositories_url: Any = None
-    # The slug of the team that is allowed to bypass pull request requirements. (AI-inferred)
     slug: Any = None
-    # The type of the team, either "enterprise" or "organization". (AI-inferred)
     type: Any = None
-    # The API URL of the team that is allowed to bypass pull request review requirements. (AI-inferred)
     url: Any = None
 
 @dataclasses.dataclass
@@ -370,207 +234,126 @@ class WithProtection_Protection_RequiredPullRequestReviews_DismissalRestrictions
     apps: Any = None
     # The list of teams with review dismissal access.
     teams: Any = None
-    # The API URL for the list of teams that are allowed to dismiss pull request reviews. (AI-inferred)
     teams_url: Any = None
-    # The REST API URL for these dismissal restrictions. (AI-inferred)
     url: Any = None
     # The list of users with review dismissal access.
     users: Any = None
-    # The API URL for the list of users allowed to dismiss pull request reviews. (AI-inferred)
     users_url: Any = None
 
 @dataclasses.dataclass
 class WithProtection_Protection_RequiredPullRequestReviews:
     # Allow specific users, teams, or apps to bypass pull request requirements.
     bypass_pull_request_allowances: Any = None
-    # If true, approving reviews are dismissed when new commits are pushed to the branch. (AI-inferred)
     dismiss_stale_reviews: Any = None
-    # Configuration block for restricting which users and teams can dismiss pull request reviews. This block contains nested lists of users and teams that are allowed to dismiss reviews. (AI-inferred)
     dismissal_restrictions: Any = None
-    # Setting this to true requires that pull requests have at least one approval from a code owner before they can be merged. (AI-inferred)
     require_code_owner_reviews: Any = None
     # Whether the most recent push must be approved by someone other than the person who pushed it.
     require_last_push_approval: Any = None
-    # The number of approving reviews required before a pull request can be merged. Must be between 0 and 6. (AI-inferred)
     required_approving_review_count: Any = None
     url: Any = None
 
 @dataclasses.dataclass
 class WithProtection_Protection_RequiredStatusChecks_Checks:
-    # The ID of the GitHub App that must create the check. If null, any app may create the check. (AI-inferred)
     app_id: Any = None
-    # The name of the status check context that must pass. This is the identifier for a GitHub App check or commit status that must succeed for the branch protection rule to be satisfied. (AI-inferred)
     context: Any = None
 
 @dataclasses.dataclass
 class WithProtection_Protection_RequiredStatusChecks:
-    # The list of status checks that must pass before a branch can be merged. Each check object includes a context (the status check identifier) and optionally an app_id to restrict to a specific GitHub App. (AI-inferred)
     checks: Any = None
-    # List of status check context names that must pass before the branch can be merged. Each entry is the identifier of a required CI check or other status check. (AI-inferred)
     contexts: Any = None
-    # The API URL that lists the required status check contexts for this branch protection rule. (AI-inferred)
     contexts_url: Any = None
-    # The enforcement level for the required status checks. Can be 'enforce', 'non_enforce', or 'waiting'. (AI-inferred)
     enforcement_level: Any = None
-    # Require branches to be up to date before merging. When true, the branch cannot be merged unless it is up to date with the base branch. (AI-inferred)
     strict: Any = None
     url: Any = None
 
 @dataclasses.dataclass
 class WithProtection_Protection_Restrictions_Apps_Owner:
-    # The URL of the avatar image for the GitHub user or organization that owns the app listed in the branch protection restrictions. (AI-inferred)
     avatar_url: Any = None
     description: Any = None
-    # The URL to the events of the GitHub App's owner (user or organization), as returned by the GitHub API. (AI-inferred)
     events_url: Any = None
-    # The URL to fetch the list of followers of the GitHub app owner. (AI-inferred)
     followers_url: Any = None
-    # The URL template to list the users followed by the owner of the app, as provided by the GitHub API. This is part of the owner object associated with a restricted app. (AI-inferred)
     following_url: Any = None
-    # The API endpoint URL for the owner's public gists. (AI-inferred)
     gists_url: Any = None
-    # The user's Gravatar ID, a hash used to build the avatar URL. (AI-inferred)
     gravatar_id: Any = None
-    # The URL of the hooks endpoint for the app owner, typically `https://api.github.com/users/{owner}/hooks`, used to manage webhooks for that user. (AI-inferred)
     hooks_url: Any = None
-    # The URL of the GitHub profile page for the user or organization that owns the app, typically in the format https://github.com/{username} or https://github.com/{orgname}. (AI-inferred)
     html_url: Any = None
-    # The numeric ID of the GitHub user or organization that owns the app. (AI-inferred)
     id: Any = None
-    # The URL template for issues of the owner (user or organization) of the GitHub App, as returned by the GitHub API. May contain a placeholder such as `{/number}` for specific issue numbers. (AI-inferred)
     issues_url: Any = None
-    # The login of the app's owner, which is the GitHub username or organization name that owns the app. (AI-inferred)
     login: Any = None
-    # The members URL of the organization that owns the GitHub App. This field is only present when the owner is an organization. (AI-inferred)
     members_url: Any = None
-    # The GraphQL node ID of the user or organization that owns the app. (AI-inferred)
     node_id: Any = None
-    # The URL to the organizations endpoint for the user that owns the GitHub app. This field is present when the app owner is a user account, and it points to the list of organizations that user belongs to. (AI-inferred)
     organizations_url: Any = None
-    # The URL template for accessing the public members of this owner (typically an organization), with a placeholder for the member username. (AI-inferred)
     public_members_url: Any = None
-    # The URL to the received events endpoint for this owner (user or organization) in the GitHub API. (AI-inferred)
     received_events_url: Any = None
-    # The API URL to the list of repositories belonging to the app owner (a GitHub user or organization). (AI-inferred)
     repos_url: Any = None
-    # Indicates whether the user is a site administrator for the GitHub instance (e.g., GitHub Enterprise Server). (AI-inferred)
     site_admin: Any = None
-    # The API URL to access repositories starred by the owner of the GitHub app. (AI-inferred)
     starred_url: Any = None
-    # The API URL to list the subscriptions (repositories watched) for this owner. (AI-inferred)
     subscriptions_url: Any = None
-    # The type of GitHub account that owns the app, typically 'User' or 'Organization'. (AI-inferred)
     type: Any = None
-    # The GitHub API URL for the owner of the GitHub app (either a user or organization). (AI-inferred)
     url: Any = None
     user_view_type: Any = None
 
 @dataclasses.dataclass
 class WithProtection_Protection_Restrictions_Apps_Permissions:
-    # The permission level granted to the GitHub App for repository contents, such as 'read' or 'write'. (AI-inferred)
     contents: Any = None
-    # The permission level for issues granted to the app. (AI-inferred)
     issues: Any = None
-    # The permission level for this app's access to metadata, such as email addresses. (AI-inferred)
     metadata: Any = None
-    # The permission level for the app's single-file access within the branch protection restrictions. (AI-inferred)
     single_file: Any = None
 
 @dataclasses.dataclass
 class WithProtection_Protection_Restrictions_Apps:
-    # The OAuth client ID of the GitHub App that is included in the branch protection restrictions. (AI-inferred)
     client_id: Any = None
-    # The date and time the GitHub App was created, in ISO 8601 format (e.g., 2011-01-26T19:06:43Z). (AI-inferred)
     created_at: Any = None
-    # The description of the GitHub App that is allowed to push to the branch, as shown in the GitHub App registry. (AI-inferred)
     description: Any = None
-    # List of GitHub App webhook events the app is subscribed to, e.g., `push`, `pull_request`. (AI-inferred)
     events: Any = None
-    # The external URL of the GitHub App, typically the app's homepage or information page as configured in the GitHub App's settings. (AI-inferred)
     external_url: Any = None
-    # The URL to the app's GitHub page. (AI-inferred)
     html_url: Any = None
-    # Numeric identifier of the GitHub App that is listed in the branch protection restrictions. (AI-inferred)
     id: Any = None
-    # The name of the GitHub App that is allowed to push to the branch. (AI-inferred)
     name: Any = None
-    # The GraphQL node identifier for the app. (AI-inferred)
     node_id: Any = None
-    # The GitHub user or organization that owns the app. (AI-inferred)
     owner: Any = None
-    # The GitHub App's permissions for the repository, as an object mapping permission names to their allowed levels. (AI-inferred)
     permissions: Any = None
-    # The slug of the GitHub App that is allowed to push to the branch. (AI-inferred)
     slug: Any = None
-    # The timestamp of the last update to this app, in ISO 8601 format. (AI-inferred)
     updated_at: Any = None
 
 @dataclasses.dataclass
 class WithProtection_Protection_Restrictions_Users:
-    # The URL of the GitHub user's avatar image. (AI-inferred)
     avatar_url: Any = None
-    # The URL for the user's events on GitHub. (AI-inferred)
     events_url: Any = None
-    # The URL to the user's followers list on GitHub. (AI-inferred)
     followers_url: Any = None
-    # The URL template to list the users this user follows. Replace the {username} placeholder with the user's login. (AI-inferred)
     following_url: Any = None
-    # The API URL for the user's gists. (AI-inferred)
     gists_url: Any = None
-    # The user's Gravatar ID, a legacy identifier used for their avatar image. May be an empty string if the user has no Gravatar. (AI-inferred)
     gravatar_id: Any = None
-    # The HTML URL for the user's GitHub profile. (AI-inferred)
     html_url: Any = None
-    # The unique identifier of the user included in the branch protection restrictions. (AI-inferred)
     id: Any = None
-    # The GitHub username of the user allowed to push to the protected branch. (AI-inferred)
     login: Any = None
-    # The Node ID of the GitHub user who is included in the list of users restricted from pushing to the protected branch. (AI-inferred)
     node_id: Any = None
-    # The API URL for the list of organizations that this user belongs to. (AI-inferred)
     organizations_url: Any = None
-    # The URL to fetch the events received by this user. (AI-inferred)
     received_events_url: Any = None
-    # The URL to the list of public repositories owned by the user. (AI-inferred)
     repos_url: Any = None
-    # Whether the user is a GitHub site administrator. (AI-inferred)
     site_admin: Any = None
-    # The URL template for listing repositories starred by the user, typically in the form https://api.github.com/users/{username}/starred{/owner}{/repo}. (AI-inferred)
     starred_url: Any = None
-    # The URL to the user's subscriptions endpoint, listing repositories the user is subscribed to. (AI-inferred)
     subscriptions_url: Any = None
     type: Any = None
-    # The GitHub API URL for the user. (AI-inferred)
     url: Any = None
-    # The type of user account (e.g., 'User' or 'Bot') that is restricted from the branch. (AI-inferred)
     user_view_type: Any = None
 
 @dataclasses.dataclass
 class WithProtection_Protection_Restrictions:
-    # List of GitHub apps that are permited to push to the branch under this branch protection restriction. (AI-inferred)
     apps: Any = None
-    # The API endpoint URL that returns the list of GitHub Apps with push access to the branch under these restrictions. (AI-inferred)
     apps_url: Any = None
-    # The list of teams that are allowed to push to the branch under these protection restrictions. This field is required; provide the team references that should have push access. (AI-inferred)
     teams: Any = None
-    # The URL to the API endpoint that lists the teams restricted from pushing to the branch, as part of branch protection restrictions. (AI-inferred)
     teams_url: Any = None
-    # The API URL for the branch protection restrictions, which can be used to retrieve the users, teams, and apps that are restricted. (AI-inferred)
     url: Any = None
-    # A required list of user objects representing GitHub users allowed to push to the protected branch when restrictions are configured. Each object contains the user's details, such as username (login). (AI-inferred)
     users: Any = None
-    # The API URL for the list of users who are restricted from pushing to the branch. (AI-inferred)
     users_url: Any = None
 
 @dataclasses.dataclass
 class WithProtection_Protection:
-    # An optional branch protection setting that controls whether the branch may be deleted by users with push access. (AI-inferred)
     allow_deletions: Any = None
-    # An optional object in branch protection settings that configures whether force pushes are allowed on the protected branch. (AI-inferred)
     allow_force_pushes: Any = None
     # Whether users can pull changes from upstream when the branch is locked. Set to `true` to allow fork syncing. Set to `false` to prevent fork syncing.
     allow_fork_syncing: Any = None
-    # A branch protection setting that blocks the creation of branches matching the branch pattern. (AI-inferred)
     block_creations: Any = None
     enabled: Any = None
     # Protected Branch Admin Enforced
@@ -578,21 +361,16 @@ class WithProtection_Protection:
     # Whether to set the branch as read-only. If this is true, users will not be able to push to the branch.
     lock_branch: Any = None
     name: Any = None
-    # The URL of the branch protection. (AI-inferred)
     protection_url: Any = None
-    # Indicates whether all conversations on a pull request must be resolved before it can be merged into the branch. When enabled, branch protection blocks merging until all review threads are resolved. (AI-inferred)
     required_conversation_resolution: Any = None
-    # Settings for requiring a linear commit history. The object contains an 'enabled' property that, when true, prevents merge commits from being pushed to the branch. (AI-inferred)
     required_linear_history: Any = None
     # Protected Branch Pull Request Review
     required_pull_request_reviews: Any = None
-    # A setting that requires commits on the branch to be signed with a verified signature. Configure this to enforce commit signature verification for pushes to the protected branch. (AI-inferred)
     required_signatures: Any = None
     # Protected Branch Required Status Check
     required_status_checks: Any = None
     # Branch Restriction Policy
     restrictions: Any = None
-    # The API URL for the branch protection rule, pointing to the protection details in the GitHub REST API. (AI-inferred)
     url: Any = None
 
 @dataclasses.dataclass
@@ -608,23 +386,17 @@ class WithProtectionConfig:
 
 @dataclasses.dataclass
 class WithProtectionAttrs:
-    # The hypermedia links associated with this branch protection rule, including `self` (API URL) and `html` (web page) URLs. (AI-inferred)
     links: Any = None
     # Commit
     commit: Any = None
-    # The name of the branch protected by this resource. (AI-inferred)
     name: Any = None
     # The new name of the branch.
     new_name: Any = None
-    # The branch name pattern (e.g., 'main' or 'release/*') to which the branch protection rules apply. (AI-inferred)
     pattern: Any = None
-    # Indicates whether the branch is currently protected by GitHub branch protection rules. This computed value reflects the state from the GitHub API. (AI-inferred)
     protected: Any = None
     # Branch Protection
     protection: Any = None
-    # The API URL for the branch protection rules associated with this branch. (AI-inferred)
     protection_url: Any = None
-    # The number of approving reviews required on a pull request for the protected branch. (AI-inferred)
     required_approving_review_count: Any = None
     # path parameter, not part of the API's own resource representation
     owner: Any = None

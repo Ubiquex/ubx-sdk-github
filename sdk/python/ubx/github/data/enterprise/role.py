@@ -7,33 +7,44 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
+class Role_Roles_Enterprise:
+    avatar_url: Any = None
+    created_at: Any = None
+    description: Any = None
+    html_url: Any = None
+    id: Any = None
+    name: Any = None
+    node_id: Any = None
+    slug: Any = None
+    updated_at: Any = None
+    website_url: Any = None
+
+@dataclasses.dataclass
+class Role_Roles:
+    created_at: Any = None
+    description: Any = None
+    enterprise: Any = None
+    id: Any = None
+    name: Any = None
+    permissions: Any = None
+    source: Any = None
+    updated_at: Any = None
+
+@dataclasses.dataclass
 class RoleConfig:
     enterprise: Any = None
-    role_id: Any = None
 
 @dataclasses.dataclass
 class RoleAttrs:
-    # The date and time the role was created.
-    created_at: Any = None
-    # A short description about who this role is for or what permissions it grants.
-    description: Any = None
     enterprise: Any = None
-    # The unique identifier of the role.
-    id: Any = None
-    # The name of the role.
-    name: Any = None
-    # A list of permissions included in this role.
-    permissions: Any = None
-    role_id: Any = None
-    # Source answers the question, "where did this role come from?"
-    source: Any = None
-    # The date and time the role was last updated.
-    updated_at: Any = None
+    # The list of enterprise roles available to the enterprise.
+    roles: Any = None
+    # The total number of enterprise roles available to the enterprise.
+    total_count: Any = None
 
 Role = ubx.DataSourceBinding(
     wire_type="github_enterprise_role",
     fields={
         "enterprise": ubx.FieldSpec(wire_name="enterprise"),
-        "role_id": ubx.FieldSpec(wire_name="role_id"),
     },
 )

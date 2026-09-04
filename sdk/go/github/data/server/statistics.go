@@ -4,22 +4,22 @@ package server
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type StatisticsConfig struct {
-	DateEnd any
-	DateStart any
+	DateEnd         any
+	DateStart       any
 	EnterpriseOrOrg any
 }
 
 type StatisticsAttrs struct {
-	DateEnd any
-	DateStart any
+	DateEnd         any
+	DateStart       any
 	EnterpriseOrOrg any
 }
 
 var Statistics = ubx.DataSourceBinding{
 	WireType: "github_server_statistics",
 	Fields: ubx.FieldMap{
-		"DateEnd": ubx.FieldSpec{WireName: "date_end"},
-		"DateStart": ubx.FieldSpec{WireName: "date_start"},
+		"DateEnd":         ubx.FieldSpec{WireName: "date_end"},
+		"DateStart":       ubx.FieldSpec{WireName: "date_start"},
 		"EnterpriseOrOrg": ubx.FieldSpec{WireName: "enterprise_or_org"},
 	},
 }

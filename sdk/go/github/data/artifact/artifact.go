@@ -3,47 +3,54 @@ package artifact
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
-type Artifact_WorkflowRun struct {
-	HeadBranch any
+type Artifact_Artifacts_WorkflowRun struct {
+	HeadBranch       any
 	HeadRepositoryId any
-	HeadSha any
-	Id any
-	RepositoryId any
+	HeadSha          any
+	Id               any
+	RepositoryId     any
+}
+
+type Artifact_Artifacts struct {
+	ArchiveDownloadUrl any
+	CreatedAt          any
+	Digest             any
+	Expired            any
+	ExpiresAt          any
+	Id                 any
+	Name               any
+	NodeId             any
+	SizeInBytes        any
+	UpdatedAt          any
+	Url                any
+	WorkflowRun        any
 }
 
 type ArtifactConfig struct {
-	ArtifactId any
-	Owner any
-	Repo any
+	Name    any
+	Owner   any
+	Page    any
+	PerPage any
+	Repo    any
 }
 
 type ArtifactAttrs struct {
-	ArchiveDownloadUrl any
-	ArtifactId any
-	CreatedAt any
-	// The SHA256 digest of the artifact. This field will only be populated on artifacts uploaded with upload-artifact v4 or newer. For older versions, this field will be null.
-	Digest any
-	// Whether or not the artifact has expired.
-	Expired any
-	ExpiresAt any
-	Id any
-	// The name of the artifact.
-	Name any
-	NodeId any
-	Owner any
-	Repo any
-	// The size in bytes of the artifact.
-	SizeInBytes any
-	UpdatedAt any
-	Url any
-	WorkflowRun any
+	Artifacts  any
+	Name       any
+	Owner      any
+	Page       any
+	PerPage    any
+	Repo       any
+	TotalCount any
 }
 
 var Artifact = ubx.DataSourceBinding{
 	WireType: "github_artifact",
 	Fields: ubx.FieldMap{
-		"ArtifactId": ubx.FieldSpec{WireName: "artifact_id"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Name":    ubx.FieldSpec{WireName: "name"},
+		"Owner":   ubx.FieldSpec{WireName: "owner"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Repo":    ubx.FieldSpec{WireName: "repo"},
 	},
 }

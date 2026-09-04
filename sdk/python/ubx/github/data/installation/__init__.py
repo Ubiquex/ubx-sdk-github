@@ -5,3 +5,4 @@
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
 from .installation import Installation, InstallationConfig
+from .request import Request, RequestConfig

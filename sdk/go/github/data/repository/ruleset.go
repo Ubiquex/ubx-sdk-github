@@ -14,8 +14,8 @@ type Ruleset_Links struct {
 }
 
 type Ruleset_BypassActors struct {
-	ActorId any
-	ActorType any
+	ActorId    any
+	ActorType  any
 	BypassMode any
 }
 
@@ -34,11 +34,11 @@ type Ruleset_Rules_Parameters struct {
 
 type Ruleset_Rules struct {
 	Parameters any
-	Type any
+	Type       any
 }
 
 type RulesetConfig struct {
-	Org any
+	Org       any
 	RulesetId any
 }
 
@@ -46,8 +46,8 @@ type RulesetAttrs struct {
 	Links any
 	// The actors that can bypass the rules in this ruleset
 	BypassActors any
-	Conditions any
-	CreatedAt any
+	Conditions   any
+	CreatedAt    any
 	// The bypass type of the user making the API request for this ruleset. This field is only returned when querying the repository-level endpoint.
 	CurrentUserCanBypass any
 	// The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page. `evaluate` is not available for the `repository` target.
@@ -55,24 +55,24 @@ type RulesetAttrs struct {
 	// The ID of the ruleset
 	Id any
 	// The name of the ruleset
-	Name any
-	NodeId any
-	Org any
-	Rules any
+	Name      any
+	NodeId    any
+	Org       any
+	Rules     any
 	RulesetId any
 	// The name of the source
 	Source any
 	// The type of the source of the ruleset
 	SourceType any
 	// The target of the ruleset
-	Target any
+	Target    any
 	UpdatedAt any
 }
 
 var Ruleset = ubx.DataSourceBinding{
 	WireType: "github_repository_ruleset",
 	Fields: ubx.FieldMap{
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Org":       ubx.FieldSpec{WireName: "org"},
 		"RulesetId": ubx.FieldSpec{WireName: "ruleset_id"},
 	},
 }

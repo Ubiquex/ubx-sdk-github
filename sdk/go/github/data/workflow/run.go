@@ -3,314 +3,301 @@ package workflow
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
-type Run_Actor struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+type Run_WorkflowRuns_Actor struct {
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
-type Run_HeadCommit_Author struct {
-	// Git email address of the commit's author
+type Run_WorkflowRuns_HeadCommit_Author struct {
 	Email any
-	// Name of the commit's author
-	Name any
+	Name  any
 }
 
-type Run_HeadCommit struct {
-	// Information about the Git author
-	Author any
-	// Information about the Git committer
+type Run_WorkflowRuns_HeadCommit struct {
+	Author    any
 	Committer any
-	// SHA for the commit
-	Id any
-	// Message describing the purpose of the commit
-	Message any
-	// Timestamp of the commit
+	Id        any
+	Message   any
 	Timestamp any
-	// SHA for the commit's tree
-	TreeId any
+	TreeId    any
 }
 
-type Run_HeadRepository_CodeOfConduct struct {
-	Body any
+type Run_WorkflowRuns_HeadRepository_CodeOfConduct struct {
+	Body    any
 	HtmlUrl any
-	Key any
-	Name any
-	Url any
+	Key     any
+	Name    any
+	Url     any
 }
 
-type Run_HeadRepository_License struct {
-	Key any
-	Name any
+type Run_WorkflowRuns_HeadRepository_License struct {
+	Key    any
+	Name   any
 	NodeId any
 	SpdxId any
-	Url any
+	Url    any
 }
 
-type Run_HeadRepository_Permissions struct {
-	Admin any
+type Run_WorkflowRuns_HeadRepository_Permissions struct {
+	Admin    any
 	Maintain any
-	Pull any
-	Push any
-	Triage any
+	Pull     any
+	Push     any
+	Triage   any
 }
 
-type Run_HeadRepository_SecurityAndAnalysis_AdvancedSecurity struct {
+type Run_WorkflowRuns_HeadRepository_SecurityAndAnalysis_AdvancedSecurity struct {
 	Status any
 }
 
-type Run_HeadRepository_SecurityAndAnalysis_SecretScanningDelegatedBypassOptions_Reviewers struct {
-	Mode any
-	ReviewerId any
+type Run_WorkflowRuns_HeadRepository_SecurityAndAnalysis_SecretScanningDelegatedBypassOptions_Reviewers struct {
+	Mode         any
+	ReviewerId   any
 	ReviewerType any
 }
 
-type Run_HeadRepository_SecurityAndAnalysis_SecretScanningDelegatedBypassOptions struct {
-	// The bypass reviewers for secret scanning delegated bypass
+type Run_WorkflowRuns_HeadRepository_SecurityAndAnalysis_SecretScanningDelegatedBypassOptions struct {
 	Reviewers any
 }
 
-type Run_HeadRepository_SecurityAndAnalysis struct {
-	// Enable or disable GitHub Advanced Security for the repository. For standalone Code Scanning or Secret Protection products, this parameter cannot be used.
-	AdvancedSecurity any
-	CodeSecurity any
-	// Enable or disable Dependabot security updates for the repository.
-	DependabotSecurityUpdates any
-	SecretScanning any
-	SecretScanningAiDetection any
+type Run_WorkflowRuns_HeadRepository_SecurityAndAnalysis struct {
+	AdvancedSecurity                      any
+	CodeSecurity                          any
+	DependabotSecurityUpdates             any
+	SecretScanning                        any
+	SecretScanningAiDetection             any
 	SecretScanningDelegatedAlertDismissal any
-	SecretScanningDelegatedBypass any
-	SecretScanningDelegatedBypassOptions any
-	SecretScanningNonProviderPatterns any
-	SecretScanningPushProtection any
-	SecretScanningValidityChecks any
+	SecretScanningDelegatedBypass         any
+	SecretScanningDelegatedBypassOptions  any
+	SecretScanningNonProviderPatterns     any
+	SecretScanningPushProtection          any
+	SecretScanningValidityChecks          any
 }
 
-type Run_HeadRepository struct {
-	AllowForking any
-	ArchiveUrl any
-	Archived any
-	AssigneesUrl any
-	BlobsUrl any
-	BranchesUrl any
-	CloneUrl any
-	// Code Of Conduct
-	CodeOfConduct any
-	CollaboratorsUrl any
-	CommentsUrl any
-	CommitsUrl any
-	CompareUrl any
-	ContentsUrl any
-	ContributorsUrl any
-	CreatedAt any
-	// The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
-	CustomProperties any
-	DefaultBranch any
-	DeleteBranchOnMerge any
-	DeploymentsUrl any
-	Description any
-	Disabled any
-	DownloadsUrl any
-	EventsUrl any
-	Fork any
-	Forks any
-	ForksCount any
-	ForksUrl any
-	FullName any
-	GitCommitsUrl any
-	GitRefsUrl any
-	GitTagsUrl any
-	GitUrl any
-	HasDiscussions any
-	HasDownloads any
-	HasIssues any
-	HasPages any
-	HasProjects any
-	HasPullRequests any
-	HasWiki any
-	Homepage any
-	HooksUrl any
-	HtmlUrl any
-	Id any
-	IsTemplate any
-	IssueCommentUrl any
-	IssueEventsUrl any
-	IssuesUrl any
-	KeysUrl any
-	LabelsUrl any
-	Language any
-	LanguagesUrl any
-	License any
-	MergesUrl any
-	MilestonesUrl any
-	MirrorUrl any
-	Name any
-	NetworkCount any
-	NodeId any
-	NotificationsUrl any
-	OpenIssues any
-	OpenIssuesCount any
-	// A GitHub user.
-	Owner any
-	Permissions any
-	Private any
-	// The policy controlling who can create pull requests: all or collaborators_only.
+type Run_WorkflowRuns_HeadRepository struct {
+	AllowForking              any
+	ArchiveUrl                any
+	Archived                  any
+	AssigneesUrl              any
+	BlobsUrl                  any
+	BranchesUrl               any
+	CloneUrl                  any
+	CodeOfConduct             any
+	CollaboratorsUrl          any
+	CommentsUrl               any
+	CommitsUrl                any
+	CompareUrl                any
+	ContentsUrl               any
+	ContributorsUrl           any
+	CreatedAt                 any
+	CustomProperties          any
+	DefaultBranch             any
+	DeleteBranchOnMerge       any
+	DeploymentsUrl            any
+	Description               any
+	Disabled                  any
+	DownloadsUrl              any
+	EventsUrl                 any
+	Fork                      any
+	Forks                     any
+	ForksCount                any
+	ForksUrl                  any
+	FullName                  any
+	GitCommitsUrl             any
+	GitRefsUrl                any
+	GitTagsUrl                any
+	GitUrl                    any
+	HasDiscussions            any
+	HasDownloads              any
+	HasIssues                 any
+	HasPages                  any
+	HasProjects               any
+	HasPullRequests           any
+	HasWiki                   any
+	Homepage                  any
+	HooksUrl                  any
+	HtmlUrl                   any
+	Id                        any
+	IsTemplate                any
+	IssueCommentUrl           any
+	IssueEventsUrl            any
+	IssuesUrl                 any
+	KeysUrl                   any
+	LabelsUrl                 any
+	Language                  any
+	LanguagesUrl              any
+	License                   any
+	MergesUrl                 any
+	MilestonesUrl             any
+	MirrorUrl                 any
+	Name                      any
+	NetworkCount              any
+	NodeId                    any
+	NotificationsUrl          any
+	OpenIssues                any
+	OpenIssuesCount           any
+	Owner                     any
+	Permissions               any
+	Private                   any
 	PullRequestCreationPolicy any
-	PullsUrl any
-	PushedAt any
-	ReleasesUrl any
-	RoleName any
-	SecurityAndAnalysis any
-	// The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
-	Size any
-	SshUrl any
-	StargazersCount any
-	StargazersUrl any
-	StatusesUrl any
-	SubscribersCount any
-	SubscribersUrl any
-	SubscriptionUrl any
-	SvnUrl any
-	TagsUrl any
-	TeamsUrl any
-	TempCloneToken any
-	Topics any
-	TreesUrl any
-	UpdatedAt any
-	Url any
-	Visibility any
-	Watchers any
-	WatchersCount any
-	WebCommitSignoffRequired any
+	PullsUrl                  any
+	PushedAt                  any
+	ReleasesUrl               any
+	RoleName                  any
+	SecurityAndAnalysis       any
+	Size                      any
+	SshUrl                    any
+	StargazersCount           any
+	StargazersUrl             any
+	StatusesUrl               any
+	SubscribersCount          any
+	SubscribersUrl            any
+	SubscriptionUrl           any
+	SvnUrl                    any
+	TagsUrl                   any
+	TeamsUrl                  any
+	TempCloneToken            any
+	Topics                    any
+	TreesUrl                  any
+	UpdatedAt                 any
+	Url                       any
+	Visibility                any
+	Watchers                  any
+	WatchersCount             any
+	WebCommitSignoffRequired  any
 }
 
-type Run_PullRequests_Base_Repo struct {
-	Id any
+type Run_WorkflowRuns_PullRequests_Base_Repo struct {
+	Id   any
 	Name any
-	Url any
+	Url  any
 }
 
-type Run_PullRequests_Base struct {
-	Ref any
+type Run_WorkflowRuns_PullRequests_Base struct {
+	Ref  any
 	Repo any
-	Sha any
+	Sha  any
 }
 
-type Run_PullRequests struct {
-	Base any
-	Head any
-	Id any
+type Run_WorkflowRuns_PullRequests struct {
+	Base   any
+	Head   any
+	Id     any
 	Number any
-	Url any
+	Url    any
 }
 
-type Run_ReferencedWorkflows struct {
+type Run_WorkflowRuns_ReferencedWorkflows struct {
 	Path any
-	Ref any
-	Sha any
+	Ref  any
+	Sha  any
+}
+
+type Run_WorkflowRuns struct {
+	Actor               any
+	ArtifactsUrl        any
+	CancelUrl           any
+	CheckSuiteId        any
+	CheckSuiteNodeId    any
+	CheckSuiteUrl       any
+	Conclusion          any
+	CreatedAt           any
+	DisplayTitle        any
+	Event               any
+	HeadBranch          any
+	HeadCommit          any
+	HeadRepository      any
+	HeadRepositoryId    any
+	HeadSha             any
+	HtmlUrl             any
+	Id                  any
+	JobsUrl             any
+	LogsUrl             any
+	Name                any
+	NodeId              any
+	Path                any
+	PreviousAttemptUrl  any
+	PullRequests        any
+	ReferencedWorkflows any
+	Repository          any
+	RerunUrl            any
+	RunAttempt          any
+	RunNumber           any
+	RunStartedAt        any
+	Status              any
+	TriggeringActor     any
+	UpdatedAt           any
+	Url                 any
+	WorkflowId          any
+	WorkflowUrl         any
 }
 
 type RunConfig struct {
+	Actor               any
+	Branch              any
+	CheckSuiteId        any
+	Created             any
+	Event               any
 	ExcludePullRequests any
-	Owner any
-	Repo any
-	RunId any
+	HeadSha             any
+	Owner               any
+	Page                any
+	PerPage             any
+	Repo                any
+	Status              any
 }
 
 type RunAttrs struct {
-	// A GitHub user.
-	Actor any
-	// The URL to the artifacts for the workflow run.
-	ArtifactsUrl any
-	// The URL to cancel the workflow run.
-	CancelUrl any
-	// The ID of the associated check suite.
-	CheckSuiteId any
-	// The node ID of the associated check suite.
-	CheckSuiteNodeId any
-	// The URL to the associated check suite.
-	CheckSuiteUrl any
-	Conclusion any
-	CreatedAt any
-	// The event-specific title associated with the run or the run-name if set, or the value of `run-name` if it is set in the workflow.
-	DisplayTitle any
-	Event any
+	Actor               any
+	Branch              any
+	CheckSuiteId        any
+	Created             any
+	Event               any
 	ExcludePullRequests any
-	HeadBranch any
-	// A commit.
-	HeadCommit any
-	// Minimal Repository
-	HeadRepository any
-	HeadRepositoryId any
-	// The SHA of the head commit that points to the version of the workflow being run.
-	HeadSha any
-	HtmlUrl any
-	// The ID of the workflow run.
-	Id any
-	// The URL to the jobs for the workflow run.
-	JobsUrl any
-	// The URL to download the logs for the workflow run.
-	LogsUrl any
-	// The name of the workflow run.
-	Name any
-	NodeId any
-	Owner any
-	// The full path of the workflow
-	Path any
-	// The URL to the previous attempted run of this workflow, if one exists.
-	PreviousAttemptUrl any
-	// Pull requests that are open with a `head_sha` or `head_branch` that matches the workflow run. The returned pull requests do not necessarily indicate pull requests that triggered the run.
-	PullRequests any
-	ReferencedWorkflows any
-	Repo any
-	// Minimal Repository
-	Repository any
-	// The URL to rerun the workflow run.
-	RerunUrl any
-	// Attempt number of the run, 1 for first attempt and higher if the workflow was re-run.
-	RunAttempt any
-	RunId any
-	// The auto incrementing run number for the workflow run.
-	RunNumber any
-	// The start time of the latest run. Resets on re-run.
-	RunStartedAt any
-	Status any
-	// A GitHub user.
-	TriggeringActor any
-	UpdatedAt any
-	// The URL to the workflow run.
-	Url any
-	// The ID of the parent workflow.
-	WorkflowId any
-	// The URL to the workflow.
-	WorkflowUrl any
+	HeadSha             any
+	Owner               any
+	Page                any
+	PerPage             any
+	Repo                any
+	Status              any
+	TotalCount          any
+	WorkflowRuns        any
 }
 
 var Run = ubx.DataSourceBinding{
 	WireType: "github_workflow_run",
 	Fields: ubx.FieldMap{
+		"Actor":               ubx.FieldSpec{WireName: "actor"},
+		"Branch":              ubx.FieldSpec{WireName: "branch"},
+		"CheckSuiteId":        ubx.FieldSpec{WireName: "check_suite_id"},
+		"Created":             ubx.FieldSpec{WireName: "created"},
+		"Event":               ubx.FieldSpec{WireName: "event"},
 		"ExcludePullRequests": ubx.FieldSpec{WireName: "exclude_pull_requests"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"RunId": ubx.FieldSpec{WireName: "run_id"},
+		"HeadSha":             ubx.FieldSpec{WireName: "head_sha"},
+		"Owner":               ubx.FieldSpec{WireName: "owner"},
+		"Page":                ubx.FieldSpec{WireName: "page"},
+		"PerPage":             ubx.FieldSpec{WireName: "per_page"},
+		"Repo":                ubx.FieldSpec{WireName: "repo"},
+		"Status":              ubx.FieldSpec{WireName: "status"},
 	},
 }

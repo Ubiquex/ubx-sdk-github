@@ -7,7 +7,7 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
-class CustomRepositoryRole_Organization:
+class CustomRepositoryRole_CustomRoles_Organization:
     avatar_url: Any = None
     email: Any = None
     events_url: Any = None
@@ -32,33 +32,30 @@ class CustomRepositoryRole_Organization:
     user_view_type: Any = None
 
 @dataclasses.dataclass
+class CustomRepositoryRole_CustomRoles:
+    base_role: Any = None
+    created_at: Any = None
+    description: Any = None
+    id: Any = None
+    name: Any = None
+    organization: Any = None
+    permissions: Any = None
+    updated_at: Any = None
+
+@dataclasses.dataclass
 class CustomRepositoryRoleConfig:
-    org: Any = None
-    role_id: Any = None
+    organization_id: Any = None
 
 @dataclasses.dataclass
 class CustomRepositoryRoleAttrs:
-    # The system role from which this role inherits permissions.
-    base_role: Any = None
-    created_at: Any = None
-    # A short description about who this role is for or what permissions it grants.
-    description: Any = None
-    # The unique identifier of the custom role.
-    id: Any = None
-    # The name of the custom role.
-    name: Any = None
-    org: Any = None
-    # A GitHub user.
-    organization: Any = None
-    # A list of additional permissions included in this role.
-    permissions: Any = None
-    role_id: Any = None
-    updated_at: Any = None
+    custom_roles: Any = None
+    organization_id: Any = None
+    # The number of custom roles in this organization
+    total_count: Any = None
 
 CustomRepositoryRole = ubx.DataSourceBinding(
     wire_type="github_organization_custom_repository_role",
     fields={
-        "org": ubx.FieldSpec(wire_name="org"),
-        "role_id": ubx.FieldSpec(wire_name="role_id"),
+        "organization_id": ubx.FieldSpec(wire_name="organization_id"),
     },
 )

@@ -4,28 +4,23 @@ package attestation
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Attestation_Attestations_Bundle struct {
-	// The DSSE envelope containing the signed attestation payload. (AI-inferred)
-	DsseEnvelope any
-	// The media type of the attestation bundle, indicating the serialization format (e.g., application/vnd.dsse.envelope.v1+json). (AI-inferred)
-	MediaType any
-	// The verification material used to validate the attestation, including the signing certificate and signature. (AI-inferred)
+	DsseEnvelope         any
+	MediaType            any
 	VerificationMaterial any
 }
 
 type Attestation_Attestations struct {
-	// The attestation bundle, which contains the signed DSSE envelope and verification material for the attestation. (AI-inferred)
-	Bundle any
-	BundleUrl any
-	Initiator any
-	// The numeric identifier of the GitHub repository associated with the attestation. (AI-inferred)
+	Bundle       any
+	BundleUrl    any
+	Initiator    any
 	RepositoryId any
 }
 
 var Attestation_Attestations_BundleFields = ubx.FieldMap{
-		"DsseEnvelope": ubx.FieldSpec{WireName: "dsse_envelope"},
-		"MediaType": ubx.FieldSpec{WireName: "media_type"},
-		"VerificationMaterial": ubx.FieldSpec{WireName: "verification_material"},
-	}
+	"DsseEnvelope":         ubx.FieldSpec{WireName: "dsse_envelope"},
+	"MediaType":            ubx.FieldSpec{WireName: "media_type"},
+	"VerificationMaterial": ubx.FieldSpec{WireName: "verification_material"},
+}
 
 type AttestationConfig struct {
 	// The attestation's Sigstore Bundle. Refer to the [Sigstore Bundle Specification](https://github.com/sigstore/protobuf-specs/blob/main/protos/sigstore_bundle.proto) for more information.
@@ -55,11 +50,11 @@ var Attestation = ubx.ResourceBinding{
 	Fields: ubx.FieldMap{
 		"Bundle": ubx.FieldSpec{
 			WireName: "bundle",
-			Kind: "object",
-			Fields: Attestation_Attestations_BundleFields,
+			Kind:     "object",
+			Fields:   Attestation_Attestations_BundleFields,
 		},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":         ubx.FieldSpec{WireName: "owner"},
+		"Repo":          ubx.FieldSpec{WireName: "repo"},
 		"SubjectDigest": ubx.FieldSpec{WireName: "subject_digest"},
 	},
 }

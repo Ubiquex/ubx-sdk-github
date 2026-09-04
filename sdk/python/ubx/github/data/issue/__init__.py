@@ -5,4 +5,7 @@
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
 from .issue import Issue, IssueConfig
-from .event import Event, EventConfig
+from .field import Field, FieldConfig
+from .field_value import FieldValue, FieldValueConfig
+from .search_result_item import SearchResultItem, SearchResultItemConfig
+from .type import Type, TypeConfig

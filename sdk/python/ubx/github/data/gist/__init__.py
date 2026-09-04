@@ -5,4 +5,3 @@
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
 from .gist import Gist, GistConfig
-from .simple import Simple, SimpleConfig

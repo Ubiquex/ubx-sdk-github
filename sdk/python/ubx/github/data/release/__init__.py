@@ -5,3 +5,4 @@
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
 from .release import Release, ReleaseConfig
+from .asset import Asset, AssetConfig

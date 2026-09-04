@@ -2,19 +2,25 @@
 import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface UserConfig {
+  enterprise: string | Computed<string>;
   page?: number | Computed<number>;
   perPage?: number | Computed<number>;
+  roleId: number | Computed<number>;
 }
 
 export interface UserAttrs {
+  enterprise: string;
   page: number;
   perPage: number;
+  roleId: number;
 }
 
 export const User: DataSourceBinding<UserConfig, UserAttrs> = {
   wireType: "github_user",
   fields: {
+    enterprise: "enterprise",
     page: "page",
     perPage: "per_page",
+    roleId: "role_id",
   },
 };

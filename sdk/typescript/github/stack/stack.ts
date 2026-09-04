@@ -2,7 +2,6 @@
 import type { Computed, FieldMap, ResourceBinding } from "@ubx/sdk";
 
 export interface Stack_Base {
-  /** The git reference (branch, tag, or commit SHA) to use as the base for the stack. (AI-inferred) */
   ref: string | Computed<string>;
 }
 
@@ -21,7 +20,6 @@ export interface StackAttrs {
   base: Stack_Base;
   createdAt: string;
   id: number;
-  /** The GraphQL node ID of the GitHub stack. (AI-inferred) */
   nodeId: string;
   number: number;
   /** Whether the stack has any open pull request. False when all pull requests are merged or closed. */

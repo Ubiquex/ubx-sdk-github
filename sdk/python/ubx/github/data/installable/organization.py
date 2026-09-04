@@ -9,14 +9,12 @@ import ubx_sdk as ubx
 @dataclasses.dataclass
 class OrganizationConfig:
     enterprise: Any = None
-    org: Any = None
     page: Any = None
     per_page: Any = None
 
 @dataclasses.dataclass
 class OrganizationAttrs:
     enterprise: Any = None
-    org: Any = None
     page: Any = None
     per_page: Any = None
 
@@ -24,7 +22,6 @@ Organization = ubx.DataSourceBinding(
     wire_type="github_installable_organization",
     fields={
         "enterprise": ubx.FieldSpec(wire_name="enterprise"),
-        "org": ubx.FieldSpec(wire_name="org"),
         "page": ubx.FieldSpec(wire_name="page"),
         "per_page": ubx.FieldSpec(wire_name="per_page"),
     },

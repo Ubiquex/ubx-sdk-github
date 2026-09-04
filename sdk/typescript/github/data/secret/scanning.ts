@@ -2,73 +2,37 @@
 import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface ScanningConfig {
-  after?: string | Computed<string>;
-  assignee?: string | Computed<string>;
-  before?: string | Computed<string>;
-  direction?: string | Computed<string>;
   enterprise: string | Computed<string>;
-  excludeProviders?: string | Computed<string>;
-  excludeSecretTypes?: string | Computed<string>;
-  hideSecret?: boolean | Computed<boolean>;
-  includedMetadata?: string | Computed<string>;
-  isBypassed?: boolean | Computed<boolean>;
-  isMultiRepo?: boolean | Computed<boolean>;
-  isPubliclyLeaked?: boolean | Computed<boolean>;
-  ownerEmailHash?: string | Computed<string>;
+  organizationName?: string | Computed<string>;
+  page?: number | Computed<number>;
   perPage?: number | Computed<number>;
-  providers?: string | Computed<string>;
-  resolution?: string | Computed<string>;
-  secretType?: string | Computed<string>;
-  sort?: string | Computed<string>;
-  state?: string | Computed<string>;
-  validity?: string | Computed<string>;
+  requestStatus?: string | Computed<string>;
+  requester?: string | Computed<string>;
+  reviewer?: string | Computed<string>;
+  timePeriod?: string | Computed<string>;
 }
 
 export interface ScanningAttrs {
-  after: string;
-  assignee: string;
-  before: string;
-  direction: string;
   enterprise: string;
-  excludeProviders: string;
-  excludeSecretTypes: string;
-  hideSecret: boolean;
-  includedMetadata: string;
-  isBypassed: boolean;
-  isMultiRepo: boolean;
-  isPubliclyLeaked: boolean;
-  ownerEmailHash: string;
+  organizationName: string;
+  page: number;
   perPage: number;
-  providers: string;
-  resolution: string;
-  secretType: string;
-  sort: string;
-  state: string;
-  validity: string;
+  requestStatus: string;
+  requester: string;
+  reviewer: string;
+  timePeriod: string;
 }
 
 export const Scanning: DataSourceBinding<ScanningConfig, ScanningAttrs> = {
   wireType: "github_secret_scanning",
   fields: {
-    after: "after",
-    assignee: "assignee",
-    before: "before",
-    direction: "direction",
     enterprise: "enterprise",
-    excludeProviders: "exclude_providers",
-    excludeSecretTypes: "exclude_secret_types",
-    hideSecret: "hide_secret",
-    includedMetadata: "included_metadata",
-    isBypassed: "is_bypassed",
-    isMultiRepo: "is_multi_repo",
-    isPubliclyLeaked: "is_publicly_leaked",
-    ownerEmailHash: "owner_email_hash",
+    organizationName: "organization_name",
+    page: "page",
     perPage: "per_page",
-    providers: "providers",
-    resolution: "resolution",
-    secretType: "secret_type",
-    sort: "sort",
-    state: "state",
-    validity: "validity",
+    requestStatus: "request_status",
+    requester: "requester",
+    reviewer: "reviewer",
+    timePeriod: "time_period",
   },
 };

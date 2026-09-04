@@ -4,63 +4,63 @@ package team
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Full_Organization_Plan struct {
-	FilledSeats any
-	Name any
+	FilledSeats  any
+	Name         any
 	PrivateRepos any
-	Seats any
-	Space any
+	Seats        any
+	Space        any
 }
 
 type Full_Organization struct {
-	ArchivedAt any
-	AvatarUrl any
-	BillingEmail any
-	Blog any
-	Collaborators any
-	Company any
-	CreatedAt any
-	DefaultRepositoryPermission any
-	Description any
-	DiskUsage any
-	Email any
-	EventsUrl any
-	Followers any
-	Following any
-	HasOrganizationProjects any
-	HasRepositoryProjects any
-	HooksUrl any
-	HtmlUrl any
-	Id any
-	IsVerified any
-	IssuesUrl any
-	Location any
-	Login any
+	ArchivedAt                           any
+	AvatarUrl                            any
+	BillingEmail                         any
+	Blog                                 any
+	Collaborators                        any
+	Company                              any
+	CreatedAt                            any
+	DefaultRepositoryPermission          any
+	Description                          any
+	DiskUsage                            any
+	Email                                any
+	EventsUrl                            any
+	Followers                            any
+	Following                            any
+	HasOrganizationProjects              any
+	HasRepositoryProjects                any
+	HooksUrl                             any
+	HtmlUrl                              any
+	Id                                   any
+	IsVerified                           any
+	IssuesUrl                            any
+	Location                             any
+	Login                                any
 	MembersAllowedRepositoryCreationType any
 	MembersCanCreateInternalRepositories any
-	MembersCanCreatePages any
-	MembersCanCreatePrivatePages any
-	MembersCanCreatePrivateRepositories any
-	MembersCanCreatePublicPages any
-	MembersCanCreatePublicRepositories any
-	MembersCanCreateRepositories any
-	MembersCanForkPrivateRepositories any
-	MembersUrl any
-	Name any
-	NodeId any
-	OwnedPrivateRepos any
-	Plan any
-	PrivateGists any
-	PublicGists any
-	PublicMembersUrl any
-	PublicRepos any
-	ReposUrl any
-	TotalPrivateRepos any
-	TwitterUsername any
-	TwoFactorRequirementEnabled any
-	Type any
-	UpdatedAt any
-	Url any
-	WebCommitSignoffRequired any
+	MembersCanCreatePages                any
+	MembersCanCreatePrivatePages         any
+	MembersCanCreatePrivateRepositories  any
+	MembersCanCreatePublicPages          any
+	MembersCanCreatePublicRepositories   any
+	MembersCanCreateRepositories         any
+	MembersCanForkPrivateRepositories    any
+	MembersUrl                           any
+	Name                                 any
+	NodeId                               any
+	OwnedPrivateRepos                    any
+	Plan                                 any
+	PrivateGists                         any
+	PublicGists                          any
+	PublicMembersUrl                     any
+	PublicRepos                          any
+	ReposUrl                             any
+	TotalPrivateRepos                    any
+	TwitterUsername                      any
+	TwoFactorRequirementEnabled          any
+	Type                                 any
+	UpdatedAt                            any
+	Url                                  any
+	WebCommitSignoffRequired             any
 }
 
 type Full_Parent struct {
@@ -68,14 +68,14 @@ type Full_Parent struct {
 	Description any
 	// Unique identifier of the enterprise to which this team belongs
 	EnterpriseId any
-	HtmlUrl any
+	HtmlUrl      any
 	// Unique identifier of the team
 	Id any
 	// Distinguished Name (DN) that team maps to within LDAP environment
-	LdapDn any
+	LdapDn     any
 	MembersUrl any
 	// Name of the team
-	Name any
+	Name   any
 	NodeId any
 	// The notification setting the team has set
 	NotificationSetting any
@@ -84,9 +84,9 @@ type Full_Parent struct {
 	// Permission that the team will have for its repositories
 	Permission any
 	// The level of privacy this team should have
-	Privacy any
+	Privacy         any
 	RepositoriesUrl any
-	Slug any
+	Slug            any
 	// The ownership type of the team
 	Type any
 	// URL for the team
@@ -98,19 +98,19 @@ type FullConfig struct {
 }
 
 type FullAttrs struct {
-	CreatedAt any
+	CreatedAt   any
 	Description any
 	// Unique identifier of the enterprise to which this team belongs
 	EnterpriseId any
-	HtmlUrl any
+	HtmlUrl      any
 	// Unique identifier of the team
 	Id any
 	// The [distinguished name](https://www.ldap.com/ldap-dns-and-rdns) (DN) of the LDAP entry to map to a team.
-	LdapDn any
+	LdapDn       any
 	MembersCount any
-	MembersUrl any
+	MembersUrl   any
 	// Name of the team
-	Name any
+	Name   any
 	NodeId any
 	// The notification setting the team has set
 	NotificationSetting any
@@ -123,13 +123,13 @@ type FullAttrs struct {
 	// Permission that the team will have for its repositories
 	Permission any
 	// The level of privacy this team should have
-	Privacy any
-	ReposCount any
+	Privacy         any
+	ReposCount      any
 	RepositoriesUrl any
-	Slug any
-	TeamId any
+	Slug            any
+	TeamId          any
 	// The ownership type of the team
-	Type any
+	Type      any
 	UpdatedAt any
 	// URL for the team
 	Url any

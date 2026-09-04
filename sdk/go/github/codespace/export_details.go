@@ -35,6 +35,6 @@ var ExportDetails = ubx.ResourceBinding{
 	WireType: "github_codespace_export_details",
 	Fields: ubx.FieldMap{
 		"CodespaceName": ubx.FieldSpec{WireName: "codespace_name"},
-		"ExportId": ubx.FieldSpec{WireName: "export_id"},
+		"ExportId":      ubx.FieldSpec{WireName: "export_id"},
 	},
 }

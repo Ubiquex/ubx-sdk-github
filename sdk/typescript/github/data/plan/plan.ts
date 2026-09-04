@@ -2,28 +2,19 @@
 import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface PlanConfig {
-  direction?: string | Computed<string>;
   page?: number | Computed<number>;
   perPage?: number | Computed<number>;
-  planId: number | Computed<number>;
-  sort?: string | Computed<string>;
 }
 
 export interface PlanAttrs {
-  direction: string;
   page: number;
   perPage: number;
-  planId: number;
-  sort: string;
 }
 
 export const Plan: DataSourceBinding<PlanConfig, PlanAttrs> = {
   wireType: "github_plan",
   fields: {
-    direction: "direction",
     page: "page",
     perPage: "per_page",
-    planId: "plan_id",
-    sort: "sort",
   },
 };

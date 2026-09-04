@@ -7,15 +7,102 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
-class Environment_BranchPolicies:
+class Environment_Environments_DeploymentBranchPolicy:
+    custom_branch_policies: Any = None
+    protected_branches: Any = None
+
+@dataclasses.dataclass
+class Environment_Environments_ProtectionRules_Reviewers_Reviewer_Parent:
+    description: Any = None
+    enterprise_id: Any = None
+    html_url: Any = None
     id: Any = None
+    ldap_dn: Any = None
+    members_url: Any = None
     name: Any = None
     node_id: Any = None
+    notification_setting: Any = None
+    organization_id: Any = None
+    permission: Any = None
+    privacy: Any = None
+    repositories_url: Any = None
+    slug: Any = None
+    type: Any = None
+    url: Any = None
+
+@dataclasses.dataclass
+class Environment_Environments_ProtectionRules_Reviewers_Reviewer_Permissions:
+    admin: Any = None
+    maintain: Any = None
+    pull: Any = None
+    push: Any = None
+    triage: Any = None
+
+@dataclasses.dataclass
+class Environment_Environments_ProtectionRules_Reviewers_Reviewer:
+    access_source: Any = None
+    avatar_url: Any = None
+    description: Any = None
+    email: Any = None
+    enterprise_id: Any = None
+    events_url: Any = None
+    followers_url: Any = None
+    following_url: Any = None
+    gists_url: Any = None
+    gravatar_id: Any = None
+    html_url: Any = None
+    id: Any = None
+    login: Any = None
+    members_url: Any = None
+    name: Any = None
+    node_id: Any = None
+    notification_setting: Any = None
+    organization_id: Any = None
+    organizations_url: Any = None
+    parent: Any = None
+    permission: Any = None
+    permissions: Any = None
+    privacy: Any = None
+    received_events_url: Any = None
+    repos_url: Any = None
+    repositories_url: Any = None
+    site_admin: Any = None
+    slug: Any = None
+    starred_at: Any = None
+    starred_url: Any = None
+    subscriptions_url: Any = None
+    type: Any = None
+    url: Any = None
+    user_view_type: Any = None
+
+@dataclasses.dataclass
+class Environment_Environments_ProtectionRules_Reviewers:
+    reviewer: Any = None
     type: Any = None
 
 @dataclasses.dataclass
+class Environment_Environments_ProtectionRules:
+    id: Any = None
+    node_id: Any = None
+    prevent_self_review: Any = None
+    reviewers: Any = None
+    type: Any = None
+    wait_timer: Any = None
+
+@dataclasses.dataclass
+class Environment_Environments:
+    created_at: Any = None
+    deployment_branch_policy: Any = None
+    html_url: Any = None
+    id: Any = None
+    name: Any = None
+    node_id: Any = None
+    protection_rules: Any = None
+    updated_at: Any = None
+    url: Any = None
+
+@dataclasses.dataclass
 class EnvironmentConfig:
-    environment_name: Any = None
     owner: Any = None
     page: Any = None
     per_page: Any = None
@@ -23,19 +110,17 @@ class EnvironmentConfig:
 
 @dataclasses.dataclass
 class EnvironmentAttrs:
-    branch_policies: Any = None
-    environment_name: Any = None
+    environments: Any = None
     owner: Any = None
     page: Any = None
     per_page: Any = None
     repo: Any = None
-    # The number of deployment branch policies for the environment.
+    # The number of environments in this repository
     total_count: Any = None
 
 Environment = ubx.DataSourceBinding(
     wire_type="github_environment",
     fields={
-        "environment_name": ubx.FieldSpec(wire_name="environment_name"),
         "owner": ubx.FieldSpec(wire_name="owner"),
         "page": ubx.FieldSpec(wire_name="page"),
         "per_page": ubx.FieldSpec(wire_name="per_page"),

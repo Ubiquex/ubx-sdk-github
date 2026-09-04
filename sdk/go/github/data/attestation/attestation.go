@@ -3,29 +3,46 @@ package attestation
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
+type Attestation_Attestations_Bundle struct {
+	DsseEnvelope         any
+	MediaType            any
+	VerificationMaterial any
+}
+
+type Attestation_Attestations struct {
+	Bundle       any
+	BundleUrl    any
+	Initiator    any
+	RepositoryId any
+}
+
 type AttestationConfig struct {
-	After any
-	Before any
-	Org any
-	PerPage any
+	After         any
+	Before        any
+	Org           any
+	PerPage       any
 	PredicateType any
+	SubjectDigest any
 }
 
 type AttestationAttrs struct {
-	After any
-	Before any
-	Org any
-	PerPage any
+	After         any
+	Attestations  any
+	Before        any
+	Org           any
+	PerPage       any
 	PredicateType any
+	SubjectDigest any
 }
 
 var Attestation = ubx.DataSourceBinding{
 	WireType: "github_attestation",
 	Fields: ubx.FieldMap{
-		"After": ubx.FieldSpec{WireName: "after"},
-		"Before": ubx.FieldSpec{WireName: "before"},
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"After":         ubx.FieldSpec{WireName: "after"},
+		"Before":        ubx.FieldSpec{WireName: "before"},
+		"Org":           ubx.FieldSpec{WireName: "org"},
+		"PerPage":       ubx.FieldSpec{WireName: "per_page"},
 		"PredicateType": ubx.FieldSpec{WireName: "predicate_type"},
+		"SubjectDigest": ubx.FieldSpec{WireName: "subject_digest"},
 	},
 }

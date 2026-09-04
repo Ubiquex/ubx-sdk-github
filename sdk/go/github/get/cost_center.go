@@ -38,7 +38,7 @@ type CostCenterAttrs struct {
 	// ID of the cost center.
 	Id any
 	// The name of the cost center (max length 255 characters)
-	Name any
+	Name      any
 	Resources any
 	// State of the cost center.
 	State any
@@ -52,8 +52,8 @@ var CostCenter = ubx.ResourceBinding{
 	WireType: "github_get_cost_center",
 	Fields: ubx.FieldMap{
 		"AiCreditPoolEnabled": ubx.FieldSpec{WireName: "ai_credit_pool_enabled"},
-		"Name": ubx.FieldSpec{WireName: "name"},
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"CostCenterId": ubx.FieldSpec{WireName: "cost_center_id"},
+		"Name":                ubx.FieldSpec{WireName: "name"},
+		"Enterprise":          ubx.FieldSpec{WireName: "enterprise"},
+		"CostCenterId":        ubx.FieldSpec{WireName: "cost_center_id"},
 	},
 }

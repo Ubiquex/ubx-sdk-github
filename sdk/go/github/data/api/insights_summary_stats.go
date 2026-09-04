@@ -6,13 +6,13 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 type InsightsSummaryStatsConfig struct {
 	MaxTimestamp any
 	MinTimestamp any
-	Org any
+	Org          any
 }
 
 type InsightsSummaryStatsAttrs struct {
 	MaxTimestamp any
 	MinTimestamp any
-	Org any
+	Org          any
 	// The total number of requests that were rate limited within the queried time period
 	RateLimitedRequestCount any
 	// The total number of requests within the queried time period
@@ -24,6 +24,6 @@ var InsightsSummaryStats = ubx.DataSourceBinding{
 	Fields: ubx.FieldMap{
 		"MaxTimestamp": ubx.FieldSpec{WireName: "max_timestamp"},
 		"MinTimestamp": ubx.FieldSpec{WireName: "min_timestamp"},
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Org":          ubx.FieldSpec{WireName: "org"},
 	},
 }

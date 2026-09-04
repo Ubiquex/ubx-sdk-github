@@ -7,34 +7,30 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
+class SpaceResource_Resources:
+    copilot_chat_attachment_id: Any = None
+    created_at: Any = None
+    id: Any = None
+    metadata: Any = None
+    resource_type: Any = None
+    updated_at: Any = None
+
+@dataclasses.dataclass
 class SpaceResourceConfig:
+    org: Any = None
     space_number: Any = None
-    space_resource_id: Any = None
-    username: Any = None
 
 @dataclasses.dataclass
 class SpaceResourceAttrs:
-    # The ID of the associated chat attachment, if any.
-    copilot_chat_attachment_id: Any = None
-    # The date and time the resource was created.
-    created_at: Any = None
-    # The unique identifier of the resource.
-    id: Any = None
-    # Resource-specific metadata. The keys and values depend on the resource type.
-    metadata: Any = None
-    # The type of the resource.
-    resource_type: Any = None
+    org: Any = None
+    # The list of resources attached to this Copilot Space.
+    resources: Any = None
     space_number: Any = None
-    space_resource_id: Any = None
-    # The date and time the resource was last updated.
-    updated_at: Any = None
-    username: Any = None
 
 SpaceResource = ubx.DataSourceBinding(
     wire_type="github_copilot_space_resource",
     fields={
+        "org": ubx.FieldSpec(wire_name="org"),
         "space_number": ubx.FieldSpec(wire_name="space_number"),
-        "space_resource_id": ubx.FieldSpec(wire_name="space_resource_id"),
-        "username": ubx.FieldSpec(wire_name="username"),
     },
 )

@@ -5,11 +5,9 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Ref_Object struct {
 	// SHA for the reference
-	Sha any
-	// The type of Git object that this ref points to. Valid values are commit, tree, blob, and tag. (AI-inferred)
+	Sha  any
 	Type any
-	// The API URL for the git object associated with the reference. (AI-inferred)
-	Url any
+	Url  any
 }
 
 type RefConfig struct {
@@ -24,15 +22,12 @@ type RefConfig struct {
 }
 
 type RefAttrs struct {
-	// The GraphQL node ID of the git reference. (AI-inferred)
 	NodeId any
-	// Details of the object that this Git ref points to, including its SHA and type (e.g., commit). (AI-inferred)
 	Object any
 	// The name of the fully qualified reference (ie: `refs/heads/master`). If it doesn't start with 'refs' and have at least two slashes, it will be rejected.
 	Ref any
 	// The SHA1 value for this reference.
 	Sha any
-	// The API URL of the Git reference, as returned by the GitHub API. (AI-inferred)
 	Url any
 	// path parameter, not part of the API's own resource representation
 	Owner any
@@ -43,9 +38,9 @@ type RefAttrs struct {
 var Ref = ubx.ResourceBinding{
 	WireType: "github_git_ref",
 	Fields: ubx.FieldMap{
-		"Ref": ubx.FieldSpec{WireName: "ref"},
-		"Sha": ubx.FieldSpec{WireName: "sha"},
+		"Ref":   ubx.FieldSpec{WireName: "ref"},
+		"Sha":   ubx.FieldSpec{WireName: "sha"},
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

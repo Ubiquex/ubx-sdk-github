@@ -4,19 +4,25 @@ package user
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type UserConfig struct {
-	Page any
-	PerPage any
+	Enterprise any
+	Page       any
+	PerPage    any
+	RoleId     any
 }
 
 type UserAttrs struct {
-	Page any
-	PerPage any
+	Enterprise any
+	Page       any
+	PerPage    any
+	RoleId     any
 }
 
 var User = ubx.DataSourceBinding{
 	WireType: "github_user",
 	Fields: ubx.FieldMap{
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
+		"Page":       ubx.FieldSpec{WireName: "page"},
+		"PerPage":    ubx.FieldSpec{WireName: "per_page"},
+		"RoleId":     ubx.FieldSpec{WireName: "role_id"},
 	},
 }

@@ -13,18 +13,13 @@ class Ruleset_Links_Html:
 
 @dataclasses.dataclass
 class Ruleset_Links:
-    # The HTML link to the repository ruleset, as an object containing an 'href' property with the URL for viewing the ruleset in a browser. (AI-inferred)
     html: Any = None
-    # The URL to the repository ruleset resource. (AI-inferred)
     self: Any = None
 
 @dataclasses.dataclass
 class Ruleset_BypassActors:
-    # The unique identifier of the user, team, integration, or repository role that is exempt from the ruleset. (AI-inferred)
     actor_id: Any = None
-    # The type of actor that can bypass the ruleset. Allowed values: Integration, OrganizationAdmin, RepositoryRole, Team, DeployKey, User. (AI-inferred)
     actor_type: Any = None
-    # The bypass mode for the actor, specifying when rules can be bypassed. Allowed values: 'always' (bypass always), 'pull_request' (bypass only for pull request rules), or 'exempt' (actor is exempt from the rule). (AI-inferred)
     bypass_mode: Any = None
 
 @dataclasses.dataclass
@@ -33,14 +28,11 @@ class Ruleset_Conditions:
 
 @dataclasses.dataclass
 class Ruleset_Rules_Parameters:
-    # A boolean that controls whether the 'update' rule permits merging changes into a branch using the fetch and merge method. When true, fetch and merge is allowed; when false, it is disallowed. (AI-inferred)
     update_allows_fetch_and_merge: Any = None
 
 @dataclasses.dataclass
 class Ruleset_Rules:
-    # Rule-specific configuration parameters that vary depending on the type of rule being enforced. (AI-inferred)
     parameters: Any = None
-    # The type of rule in a repository ruleset. This rule has type 'creation', which restricts who can create branches in the repository. (AI-inferred)
     type: Any = None
 
 _Ruleset_BypassActorsFields = {
@@ -91,7 +83,6 @@ class RulesetAttrs:
     bypass_actors: Any = None
     # Conditions for an enterprise ruleset. The `conditions` object supports either of the following combinations: - `organization_id` and `repository_name` - `organization_id` and `repository_property` - `organization_name` and `repository_name` - `organization_name` and `repository_property` - `organization_property` and `repository_name` - `organization_property` and `repository_property` For branch and tag rulesets, the `conditions` object should also contain the `ref_name` property.
     conditions: Any = None
-    # The timestamp indicating when the repository ruleset was created. (AI-inferred)
     created_at: Any = None
     # The bypass type of the user making the API request for this ruleset. This field is only returned when querying the repository-level endpoint.
     current_user_can_bypass: Any = None
@@ -101,7 +92,6 @@ class RulesetAttrs:
     id: Any = None
     # The name of the ruleset.
     name: Any = None
-    # The GraphQL global node ID for the repository ruleset. (AI-inferred)
     node_id: Any = None
     # An array of rules within the ruleset.
     rules: Any = None
@@ -111,7 +101,6 @@ class RulesetAttrs:
     source_type: Any = None
     # The target of the ruleset
     target: Any = None
-    # The timestamp of the last update to the ruleset. (AI-inferred)
     updated_at: Any = None
     # path parameter, not part of the API's own resource representation
     enterprise: Any = None

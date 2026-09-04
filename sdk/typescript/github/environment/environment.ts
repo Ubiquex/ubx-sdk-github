@@ -11,128 +11,83 @@ export interface Environment_DeploymentBranchPolicy {
 export interface Environment_ProtectionRules_Reviewers_Reviewer_Parent {
   description?: string | Computed<string>;
   enterpriseId?: number | Computed<number>;
-  /** The GitHub URL for the user or team's profile page. (AI-inferred) */
   htmlUrl?: string | Computed<string>;
-  /** The numeric ID of the user or team that is the parent of the reviewer, identifying which entity is granted review permissions. (AI-inferred) */
   id?: number | Computed<number>;
-  /** The LDAP distinguished name (DN) of the reviewer, used to identify an LDAP user or group as a reviewer in the environment's protection rules. (AI-inferred) */
   ldapDn?: string | Computed<string>;
-  /** The API URL for the list of members of the team that is the parent of this reviewer. (AI-inferred) */
   membersUrl?: string | Computed<string>;
   name?: string | Computed<string>;
   nodeId?: string | Computed<string>;
   notificationSetting?: string | Computed<string>;
-  /** The ID of the GitHub organization that owns the team referenced as a reviewer in the protection rule. (AI-inferred) */
   organizationId?: number | Computed<number>;
   permission?: string | Computed<string>;
-  /** The privacy level of the parent team of the team reviewer. Values are 'secret' or 'closed'. This is present when the reviewer is a child team. (AI-inferred) */
   privacy?: string | Computed<string>;
   repositoriesUrl?: string | Computed<string>;
-  /** The slug of the parent team of a team reviewer, if the team has a parent. (AI-inferred) */
   slug?: string | Computed<string>;
   type?: string | Computed<string>;
-  /** The GitHub API URL of the parent team of the team that is the reviewer. (AI-inferred) */
   url?: string | Computed<string>;
 }
 
 export interface Environment_ProtectionRules_Reviewers_Reviewer_Permissions {
-  /** Boolean flag indicating whether the reviewer has admin-level permissions for the environment. (AI-inferred) */
   admin?: boolean | Computed<boolean>;
-  /** Boolean flag indicating whether the reviewer has the 'maintain' permission level on the repository. (AI-inferred) */
   maintain?: boolean | Computed<boolean>;
-  /** Boolean flag indicating whether the reviewer has pull (read-only) permission on the repository. (AI-inferred) */
   pull?: boolean | Computed<boolean>;
-  /** Indicates whether the reviewer has push access to the environment. (AI-inferred) */
   push?: boolean | Computed<boolean>;
-  /** Indicates whether the reviewer has triage permission for the environment. (AI-inferred) */
   triage?: boolean | Computed<boolean>;
 }
 
 export interface Environment_ProtectionRules_Reviewers_Reviewer {
   accessSource?: string | Computed<string>;
-  /** The URL of the avatar image for the user or team that acts as the reviewer in this protection rule. (AI-inferred) */
   avatarUrl?: string | Computed<string>;
   description?: string | Computed<string>;
   email?: string | Computed<string>;
   enterpriseId?: number | Computed<number>;
-  /** The URL to retrieve events (e.g., activity) for the reviewer, typically a GitHub user. (AI-inferred) */
   eventsUrl?: string | Computed<string>;
-  /** The URL to the followers page of the reviewer's GitHub user account. (AI-inferred) */
   followersUrl?: string | Computed<string>;
-  /** The URL to the GitHub API endpoint for the list of users that this reviewer (a GitHub user) is following. This is typically a templated URL and is only present when the reviewer is a user. (AI-inferred) */
   followingUrl?: string | Computed<string>;
-  /** The URL to the user's gists list, as provided by the GitHub API. (AI-inferred) */
   gistsUrl?: string | Computed<string>;
-  /** The Gravatar ID of the user who is the reviewer, used to retrieve the user's avatar from Gravatar. (AI-inferred) */
   gravatarId?: string | Computed<string>;
-  /** The HTML URL to the GitHub page for the reviewer, either a user profile or a team page, depending on whether the reviewer is a user or a team. (AI-inferred) */
   htmlUrl?: string | Computed<string>;
-  /** The numeric ID of the user or team that is a required reviewer for the environment protection rule. (AI-inferred) */
   id?: number | Computed<number>;
-  /** The GitHub username or team slug of the reviewer. This identifies the user or team that is required to review changes to the environment. (AI-inferred) */
   login?: string | Computed<string>;
-  /** The API endpoint URL for retrieving the members of the team that acts as the required reviewer. This field is present only when the reviewer is a team, not a user. (AI-inferred) */
   membersUrl?: string | Computed<string>;
-  /** The name of the user or team that acts as a reviewer in this environment protection rule. (AI-inferred) */
   name?: string | Computed<string>;
-  /** The unique identifier (node ID) for the reviewer in GitHub's GraphQL API. (AI-inferred) */
   nodeId?: string | Computed<string>;
-  /** The notification setting for this reviewer, controlling whether notifications are sent for changes to the environment. Valid values are `notifications_enabled` and `notifications_disabled`. (AI-inferred) */
   notificationSetting?: string | Computed<string>;
-  /** The numeric ID of the GitHub organization that the team reviewer belongs to. This is used when the reviewer is a team. (AI-inferred) */
   organizationId?: number | Computed<number>;
-  /** The URL to the organizations endpoint for the reviewer, which lists the organizations the user belongs to. This is typically present for user reviewers. (AI-inferred) */
   organizationsUrl?: string | Computed<string>;
   parent?: Environment_ProtectionRules_Reviewers_Reviewer_Parent | Computed<Environment_ProtectionRules_Reviewers_Reviewer_Parent>;
   permission?: string | Computed<string>;
   permissions?: Environment_ProtectionRules_Reviewers_Reviewer_Permissions | Computed<Environment_ProtectionRules_Reviewers_Reviewer_Permissions>;
   privacy?: string | Computed<string>;
-  /** The API endpoint for events received by the user acting as the reviewer. (AI-inferred) */
   receivedEventsUrl?: string | Computed<string>;
-  /** The API URL to the reviewer's repositories (users and teams both have a `repos_url`). This is a computed attribute that reflects the repository URL of the user or team serving as the required reviewer for the environment protection rule. (AI-inferred) */
   reposUrl?: string | Computed<string>;
-  /** The URL to the list of repositories associated with the reviewer, as defined in the GitHub API. (AI-inferred) */
   repositoriesUrl?: string | Computed<string>;
-  /** Boolean indicating whether the reviewer is a site administrator. (AI-inferred) */
   siteAdmin?: boolean | Computed<boolean>;
-  /** The slug of the team that acts as a reviewer for the environment protection rule. This is used to reference a team by its GitHub slug (e.g., 'my-team'). (AI-inferred) */
   slug?: string | Computed<string>;
   starredAt?: string | Computed<string>;
-  /** The URL template for the user's starred repositories, which may contain placeholders for the owner and repository names. (AI-inferred) */
   starredUrl?: string | Computed<string>;
-  /** The GitHub API URL to the subscriptions of the reviewer (user or team), typically listing repositories the reviewer is watching or subscribed to. (AI-inferred) */
   subscriptionsUrl?: string | Computed<string>;
-  /** The type of the reviewer. Valid values are 'User' or 'Team'. (AI-inferred) */
   type?: string | Computed<string>;
   url?: string | Computed<string>;
   userViewType?: string | Computed<string>;
 }
 
 export interface Environment_ProtectionRules_Reviewers {
-  /** A user or team that must approve changes before deployment to this environment, as part of the environment's protection rules. (AI-inferred) */
   reviewer?: Environment_ProtectionRules_Reviewers_Reviewer | Computed<Environment_ProtectionRules_Reviewers_Reviewer>;
-  /** The type of reviewer, either 'User' for a user account or 'Team' for a team. (AI-inferred) */
   type?: string | Computed<string>;
 }
 
 export interface Environment_ProtectionRules {
   id?: number | Computed<number>;
-  /** The GraphQL global node ID of the protection rule. (AI-inferred) */
   nodeId?: string | Computed<string>;
-  /** When true, the user who initiated or requested the review for a deployment cannot approve or review their own request, ensuring a different reviewer is required. (AI-inferred) */
   preventSelfReview?: boolean | Computed<boolean>;
-  /** List of objects specifying users and teams that must approve jobs referencing this environment. Each reviewer object contains either a user_id or team_id. (AI-inferred) */
   reviewers?: Environment_ProtectionRules_Reviewers[] | Computed<Environment_ProtectionRules_Reviewers[]>;
-  /** The type of protection rule applied to the environment, indicating the kind of rule (e.g., required reviewers, wait timer). (AI-inferred) */
   type?: string | Computed<string>;
-  /** Number of minutes to wait before the environment can be used, as configured in the environment's protection rules. (AI-inferred) */
   waitTimer?: number | Computed<number>;
 }
 
 export interface Environment_Reviewers {
-  /** The unique identifier of an environment reviewer. (AI-inferred) */
   id?: number | Computed<number>;
-  /** The type of reviewer, either 'User' or 'Team'. (AI-inferred) */
   type?: string | Computed<string>;
 }
 
@@ -168,13 +123,11 @@ export interface EnvironmentAttrs {
   createdAt: string;
   /** The type of deployment branch policy for this environment. To allow all branches to deploy, set to `null`. */
   deploymentBranchPolicy: Environment_DeploymentBranchPolicy;
-  /** The URL to view the environment in the GitHub web interface. (AI-inferred) */
   htmlUrl: string;
   /** The id of the environment. */
   id: number;
   /** The name of the environment. */
   name: string;
-  /** The GraphQL node ID of the environment, used to identify it in GitHub's GraphQL API. (AI-inferred) */
   nodeId: string;
   /** Whether or not a user who created the job is prevented from approving their own job. */
   preventSelfReview: boolean;

@@ -5,26 +5,26 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type PermissionsCheckForDevcontainerConfig struct {
 	DevcontainerPath any
-	Owner any
-	Ref any
-	Repo any
+	Owner            any
+	Ref              any
+	Repo             any
 }
 
 type PermissionsCheckForDevcontainerAttrs struct {
 	// Whether the user has accepted the permissions defined by the devcontainer config
-	Accepted any
+	Accepted         any
 	DevcontainerPath any
-	Owner any
-	Ref any
-	Repo any
+	Owner            any
+	Ref              any
+	Repo             any
 }
 
 var PermissionsCheckForDevcontainer = ubx.DataSourceBinding{
 	WireType: "github_codespaces_permissions_check_for_devcontainer",
 	Fields: ubx.FieldMap{
 		"DevcontainerPath": ubx.FieldSpec{WireName: "devcontainer_path"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Ref": ubx.FieldSpec{WireName: "ref"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":            ubx.FieldSpec{WireName: "owner"},
+		"Ref":              ubx.FieldSpec{WireName: "ref"},
+		"Repo":             ubx.FieldSpec{WireName: "repo"},
 	},
 }

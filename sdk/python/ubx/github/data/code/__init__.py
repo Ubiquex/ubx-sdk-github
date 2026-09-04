@@ -4,19 +4,18 @@
 # re-run `ubx sdk gen` to regenerate after a provider version bump.
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
+from .frequency import Frequency, FrequencyConfig
 from .of_conduct import OfConduct, OfConductConfig
-from .quality import Quality, QualityConfig
 from .quality_finding import QualityFinding, QualityFindingConfig
 from .quality_setup import QualitySetup, QualitySetupConfig
 from .scanning import Scanning, ScanningConfig
 from .scanning_alert import ScanningAlert, ScanningAlertConfig
-from .scanning_alert_dismissal_request import ScanningAlertDismissalRequest, ScanningAlertDismissalRequestConfig
 from .scanning_analysis import ScanningAnalysis, ScanningAnalysisConfig
 from .scanning_autofix import ScanningAutofix, ScanningAutofixConfig
 from .scanning_codeql_database import ScanningCodeqlDatabase, ScanningCodeqlDatabaseConfig
 from .scanning_default_setup import ScanningDefaultSetup, ScanningDefaultSetupConfig
 from .scanning_variant_analysis_repo_task import ScanningVariantAnalysisRepoTask, ScanningVariantAnalysisRepoTaskConfig
-from .security import Security, SecurityConfig
+from .search_result_item import SearchResultItem, SearchResultItemConfig
 from .security_configuration import SecurityConfiguration, SecurityConfigurationConfig
 from .security_configuration_for_repository import SecurityConfigurationForRepository, SecurityConfigurationForRepositoryConfig
 from .security_default_configurations import SecurityDefaultConfigurations, SecurityDefaultConfigurationsConfig

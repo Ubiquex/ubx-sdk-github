@@ -8,38 +8,24 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class Key_Emails:
-    # The email address associated with the GPG key. (AI-inferred)
     email: Any = None
-    # Indicates whether the email address associated with the GPG key is verified on the GitHub account. (AI-inferred)
     verified: Any = None
 
 @dataclasses.dataclass
 class Key_Subkeys:
-    # Whether this GPG subkey can be used for certification (i.e., signing other keys). (AI-inferred)
     can_certify: Any = None
-    # Whether this GPG subkey can be used for encrypting communications. (AI-inferred)
     can_encrypt_comms: Any = None
-    # Whether this subkey has the encryption capability, specifically for encrypting storage. (AI-inferred)
     can_encrypt_storage: Any = None
-    # Whether this subkey can be used for cryptographic signing. (AI-inferred)
     can_sign: Any = None
-    # The timestamp of when the GPG subkey was created, in ISO 8601 format. (AI-inferred)
     created_at: Any = None
     emails: Any = None
-    # The date and time when this GPG subkey expires, in ISO 8601 format, or null if it never expires. (AI-inferred)
     expires_at: Any = None
     id: Any = None
-    # The unique identifier for this GPG subkey. (AI-inferred)
     key_id: Any = None
-    # The numeric ID of the primary GPG key that this subkey belongs to. (AI-inferred)
     primary_key_id: Any = None
-    # The public key data for this GPG subkey. (AI-inferred)
     public_key: Any = None
-    # The raw GPG public key data for this subkey, typically the unarmored key content as opposed to the ASCII-armored public_key. (AI-inferred)
     raw_key: Any = None
-    # Whether the GPG subkey has been revoked. (AI-inferred)
     revoked: Any = None
-    # A list of subkeys associated with this GPG key. Each subkey is an object that includes its own key ID, public key, and permission flags for signing, encryption, and certification. (AI-inferred)
     subkeys: Any = None
 
 @dataclasses.dataclass
@@ -55,34 +41,21 @@ class KeyConfig:
 class KeyAttrs:
     # A GPG key in ASCII-armored format.
     armored_public_key: Any = None
-    # Indicates whether the GPG key has the certify capability, i.e., can be used to certify other keys. (AI-inferred)
     can_certify: Any = None
-    # Indicates whether the GPG key can be used to encrypt communications. (AI-inferred)
     can_encrypt_comms: Any = None
-    # Indicates whether the GPG key can be used to encrypt storage. This computed value reflects the key's encryption capability for data at rest. (AI-inferred)
     can_encrypt_storage: Any = None
-    # A boolean indicating whether the GPG key can be used for signing. (AI-inferred)
     can_sign: Any = None
-    # The date and time when the GPG key was created, in ISO 8601 format. This value is set automatically by GitHub. (AI-inferred)
     created_at: Any = None
-    # A list of email objects associated with the GPG key, each representing an email address bound to the key. (AI-inferred)
     emails: Any = None
-    # The date and time when the GPG key expires, in ISO 8601 format (e.g., YYYY-MM-DDTHH:MM:SSZ). This field is computed by GitHub and may be null if the key does not expire. (AI-inferred)
     expires_at: Any = None
     id: Any = None
-    # The GPG key ID as returned by the GitHub API. (AI-inferred)
     key_id: Any = None
     # A descriptive name for the new key.
     name: Any = None
-    # The unique identifier for the primary key associated with this GPG key. (AI-inferred)
     primary_key_id: Any = None
-    # The ASCII-armored public key content for the GPG key. (AI-inferred)
     public_key: Any = None
-    # The raw GPG key data, typically the full ASCII-armored public key block for the GPG key. (AI-inferred)
     raw_key: Any = None
-    # True if the GPG key has been revoked. (AI-inferred)
     revoked: Any = None
-    # A list of subkeys associated with the GPG key, each containing its own key details (e.g., key ID, raw key, and associated emails). (AI-inferred)
     subkeys: Any = None
     # path parameter, not part of the API's own resource representation
     gpg_key_id: Any = None

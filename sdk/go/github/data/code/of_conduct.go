@@ -8,11 +8,11 @@ type OfConductConfig struct {
 }
 
 type OfConductAttrs struct {
-	Body any
+	Body    any
 	HtmlUrl any
-	Key any
-	Name any
-	Url any
+	Key     any
+	Name    any
+	Url     any
 }
 
 var OfConduct = ubx.DataSourceBinding{

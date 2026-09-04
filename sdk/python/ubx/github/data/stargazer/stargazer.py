@@ -9,18 +9,23 @@ import ubx_sdk as ubx
 @dataclasses.dataclass
 class StargazerConfig:
     owner: Any = None
+    page: Any = None
+    per_page: Any = None
     repo: Any = None
 
 @dataclasses.dataclass
 class StargazerAttrs:
-    count: Any = None
     owner: Any = None
+    page: Any = None
+    per_page: Any = None
     repo: Any = None
 
 Stargazer = ubx.DataSourceBinding(
     wire_type="github_stargazer",
     fields={
         "owner": ubx.FieldSpec(wire_name="owner"),
+        "page": ubx.FieldSpec(wire_name="page"),
+        "per_page": ubx.FieldSpec(wire_name="per_page"),
         "repo": ubx.FieldSpec(wire_name="repo"),
     },
 )

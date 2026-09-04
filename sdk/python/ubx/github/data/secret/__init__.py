@@ -4,10 +4,6 @@
 # re-run `ubx sdk gen` to regenerate after a provider version bump.
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
-from .secret import Secret, SecretConfig
 from .scanning import Scanning, ScanningConfig
 from .scanning_alert_with_metadata import ScanningAlertWithMetadata, ScanningAlertWithMetadataConfig
-from .scanning_bypass_request import ScanningBypassRequest, ScanningBypassRequestConfig
-from .scanning_dismissal_request import ScanningDismissalRequest, ScanningDismissalRequestConfig
 from .scanning_pattern_configuration import ScanningPatternConfiguration, ScanningPatternConfigurationConfig
-from .scanning_scan_history import ScanningScanHistory, ScanningScanHistoryConfig

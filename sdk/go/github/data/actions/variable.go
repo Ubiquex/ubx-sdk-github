@@ -3,29 +3,35 @@ package actions
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
+type Variable_Variables struct {
+	CreatedAt any
+	Name      any
+	UpdatedAt any
+	Value     any
+}
+
 type VariableConfig struct {
-	Name any
-	Owner any
-	Repo any
+	Owner   any
+	Page    any
+	PerPage any
+	Repo    any
 }
 
 type VariableAttrs struct {
-	// The date and time at which the variable was created, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
-	CreatedAt any
-	Name any
-	Owner any
-	Repo any
-	// The date and time at which the variable was last updated, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
-	UpdatedAt any
-	// The value of the variable.
-	Value any
+	Owner      any
+	Page       any
+	PerPage    any
+	Repo       any
+	TotalCount any
+	Variables  any
 }
 
 var Variable = ubx.DataSourceBinding{
 	WireType: "github_actions_variable",
 	Fields: ubx.FieldMap{
-		"Name": ubx.FieldSpec{WireName: "name"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":   ubx.FieldSpec{WireName: "owner"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Repo":    ubx.FieldSpec{WireName: "repo"},
 	},
 }

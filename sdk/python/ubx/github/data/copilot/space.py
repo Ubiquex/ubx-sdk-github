@@ -7,21 +7,120 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
+class Space_Spaces_Creator:
+    avatar_url: Any = None
+    email: Any = None
+    events_url: Any = None
+    followers_url: Any = None
+    following_url: Any = None
+    gists_url: Any = None
+    gravatar_id: Any = None
+    html_url: Any = None
+    id: Any = None
+    login: Any = None
+    name: Any = None
+    node_id: Any = None
+    organizations_url: Any = None
+    received_events_url: Any = None
+    repos_url: Any = None
+    site_admin: Any = None
+    starred_at: Any = None
+    starred_url: Any = None
+    subscriptions_url: Any = None
+    type: Any = None
+    url: Any = None
+    user_view_type: Any = None
+
+@dataclasses.dataclass
+class Space_Spaces_Owner:
+    avatar_url: Any = None
+    description: Any = None
+    email: Any = None
+    events_url: Any = None
+    followers_url: Any = None
+    following_url: Any = None
+    gists_url: Any = None
+    gravatar_id: Any = None
+    hooks_url: Any = None
+    html_url: Any = None
+    id: Any = None
+    issues_url: Any = None
+    login: Any = None
+    members_url: Any = None
+    name: Any = None
+    node_id: Any = None
+    organizations_url: Any = None
+    public_members_url: Any = None
+    received_events_url: Any = None
+    repos_url: Any = None
+    site_admin: Any = None
+    starred_at: Any = None
+    starred_url: Any = None
+    subscriptions_url: Any = None
+    type: Any = None
+    url: Any = None
+    user_view_type: Any = None
+
+@dataclasses.dataclass
+class Space_Spaces_ResourcesAttributes_Metadata:
+    copilot_chat_attachment_id: Any = None
+    file_path: Any = None
+    height: Any = None
+    media_type: Any = None
+    name: Any = None
+    number: Any = None
+    repository_id: Any = None
+    text: Any = None
+    url: Any = None
+    width: Any = None
+
+@dataclasses.dataclass
+class Space_Spaces_ResourcesAttributes:
+    copilot_chat_attachment_id: Any = None
+    created_at: Any = None
+    id: Any = None
+    metadata: Any = None
+    resource_type: Any = None
+    updated_at: Any = None
+
+@dataclasses.dataclass
+class Space_Spaces:
+    api_url: Any = None
+    base_role: Any = None
+    created_at: Any = None
+    creator: Any = None
+    description: Any = None
+    general_instructions: Any = None
+    html_url: Any = None
+    id: Any = None
+    name: Any = None
+    number: Any = None
+    owner: Any = None
+    resources_attributes: Any = None
+    updated_at: Any = None
+
+@dataclasses.dataclass
 class SpaceConfig:
+    after: Any = None
+    before: Any = None
     org: Any = None
-    space_number: Any = None
+    per_page: Any = None
 
 @dataclasses.dataclass
 class SpaceAttrs:
-    # The list of collaborators for this Copilot Space.
-    collaborators: Any = None
+    after: Any = None
+    before: Any = None
     org: Any = None
-    space_number: Any = None
+    per_page: Any = None
+    # The list of Copilot Spaces on this page of results.
+    spaces: Any = None
 
 Space = ubx.DataSourceBinding(
     wire_type="github_copilot_space",
     fields={
+        "after": ubx.FieldSpec(wire_name="after"),
+        "before": ubx.FieldSpec(wire_name="before"),
         "org": ubx.FieldSpec(wire_name="org"),
-        "space_number": ubx.FieldSpec(wire_name="space_number"),
+        "per_page": ubx.FieldSpec(wire_name="per_page"),
     },
 )

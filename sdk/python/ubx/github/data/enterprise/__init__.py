@@ -4,6 +4,5 @@
 # re-run `ubx sdk gen` to regenerate after a provider version bump.
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
-from .enterprise import Enterprise, EnterpriseConfig
 from .role import Role, RoleConfig
 from .security_analysis_settings import SecurityAnalysisSettings, SecurityAnalysisSettingsConfig

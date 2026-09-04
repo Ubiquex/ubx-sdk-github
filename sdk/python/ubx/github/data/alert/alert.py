@@ -8,34 +8,51 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class AlertConfig:
-    owner: Any = None
+    after: Any = None
+    assignees: Any = None
+    before: Any = None
+    direction: Any = None
+    enterprise: Any = None
     page: Any = None
     per_page: Any = None
-    pr: Any = None
-    # The Git reference, formatted as `refs/pull/<number>/merge`, `refs/pull/<number>/head`, `refs/heads/<branch name>` or simply `<branch name>`.
-    ref: Any = None
-    repo: Any = None
+    sort: Any = None
+    # State of a code scanning alert.
+    state: Any = None
+    # The GUID of the tool used to generate the code scanning analysis, if provided in the uploaded SARIF data.
+    tool_guid: Any = None
+    # The name of the tool used to generate the code scanning analysis.
+    tool_name: Any = None
 
 @dataclasses.dataclass
 class AlertAttrs:
-    # The security alert number.
-    alert_number: Any = None
-    owner: Any = None
+    after: Any = None
+    assignees: Any = None
+    before: Any = None
+    direction: Any = None
+    enterprise: Any = None
     page: Any = None
     per_page: Any = None
-    pr: Any = None
-    # The Git reference, formatted as `refs/pull/<number>/merge`, `refs/pull/<number>/head`, `refs/heads/<branch name>` or simply `<branch name>`.
-    ref: Any = None
-    repo: Any = None
+    sort: Any = None
+    # State of a code scanning alert.
+    state: Any = None
+    # The GUID of the tool used to generate the code scanning analysis, if provided in the uploaded SARIF data.
+    tool_guid: Any = None
+    # The name of the tool used to generate the code scanning analysis.
+    tool_name: Any = None
 
 Alert = ubx.DataSourceBinding(
     wire_type="github_alert",
     fields={
-        "owner": ubx.FieldSpec(wire_name="owner"),
+        "after": ubx.FieldSpec(wire_name="after"),
+        "assignees": ubx.FieldSpec(wire_name="assignees"),
+        "before": ubx.FieldSpec(wire_name="before"),
+        "direction": ubx.FieldSpec(wire_name="direction"),
+        "enterprise": ubx.FieldSpec(wire_name="enterprise"),
         "page": ubx.FieldSpec(wire_name="page"),
         "per_page": ubx.FieldSpec(wire_name="per_page"),
-        "pr": ubx.FieldSpec(wire_name="pr"),
-        "ref": ubx.FieldSpec(wire_name="ref"),
-        "repo": ubx.FieldSpec(wire_name="repo"),
+        "sort": ubx.FieldSpec(wire_name="sort"),
+        "state": ubx.FieldSpec(wire_name="state"),
+        "tool_guid": ubx.FieldSpec(wire_name="tool_guid"),
+        "tool_name": ubx.FieldSpec(wire_name="tool_name"),
     },
 )

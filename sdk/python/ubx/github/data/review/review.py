@@ -13,7 +13,6 @@ class ReviewConfig:
     per_page: Any = None
     pull_number: Any = None
     repo: Any = None
-    review_id: Any = None
 
 @dataclasses.dataclass
 class ReviewAttrs:
@@ -22,7 +21,6 @@ class ReviewAttrs:
     per_page: Any = None
     pull_number: Any = None
     repo: Any = None
-    review_id: Any = None
 
 Review = ubx.DataSourceBinding(
     wire_type="github_review",
@@ -32,6 +30,5 @@ Review = ubx.DataSourceBinding(
         "per_page": ubx.FieldSpec(wire_name="per_page"),
         "pull_number": ubx.FieldSpec(wire_name="pull_number"),
         "repo": ubx.FieldSpec(wire_name="repo"),
-        "review_id": ubx.FieldSpec(wire_name="review_id"),
     },
 )

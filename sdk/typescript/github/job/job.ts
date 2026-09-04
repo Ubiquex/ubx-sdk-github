@@ -2,15 +2,11 @@
 import type { Computed, FieldMap, ResourceBinding } from "@ubx/sdk";
 
 export interface Job_Deployments {
-  /** A human-readable name for a deployment associated with the job. Must be between 1 and 256 characters in length. (AI-inferred) */
   deploymentName?: string | Computed<string>;
-  /** The SHA256 digest of the container image, formatted as `sha256:` followed by 64 lowercase hexadecimal characters (e.g., `sha256:abcdef...`). This uniquely identifies the image content. (AI-inferred) */
   digest?: string | Computed<string>;
-  /** The name of the GitHub repository, up to 100 characters, containing only alphanumeric characters, dots, hyphens, and underscores. (AI-inferred) */
   githubRepository?: string | Computed<string>;
   name?: string | Computed<string>;
   runtimeRisks?: string[] | Computed<string[]>;
-  /** The status of the deployment, which can be `deployed` or `decommissioned`. (AI-inferred) */
   status?: string | Computed<string>;
   tags?: Record<string, string> | Computed<Record<string, string>>;
   version?: string | Computed<string>;

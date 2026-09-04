@@ -4,7 +4,7 @@ package team
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type MembershipConfig struct {
-	TeamId any
+	TeamId   any
 	Username any
 }
 
@@ -12,16 +12,16 @@ type MembershipAttrs struct {
 	// The role of the user in the team.
 	Role any
 	// The state of the user's membership in the team.
-	State any
-	TeamId any
-	Url any
+	State    any
+	TeamId   any
+	Url      any
 	Username any
 }
 
 var Membership = ubx.DataSourceBinding{
 	WireType: "github_team_membership",
 	Fields: ubx.FieldMap{
-		"TeamId": ubx.FieldSpec{WireName: "team_id"},
+		"TeamId":   ubx.FieldSpec{WireName: "team_id"},
 		"Username": ubx.FieldSpec{WireName: "username"},
 	},
 }

@@ -4,8 +4,10 @@
 # re-run `ubx sdk gen` to regenerate after a provider version bump.
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
+from .actions_secret import ActionsSecret, ActionsSecretConfig
 from .actions_variable import ActionsVariable, ActionsVariableConfig
 from .custom_property import CustomProperty, CustomPropertyConfig
 from .custom_repository_role import CustomRepositoryRole, CustomRepositoryRoleConfig
+from .dependabot_secret import DependabotSecret, DependabotSecretConfig
 from .role import Role, RoleConfig
 from .simple import Simple, SimpleConfig

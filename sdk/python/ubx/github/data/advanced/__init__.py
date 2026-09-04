@@ -4,4 +4,4 @@
 # re-run `ubx sdk gen` to regenerate after a provider version bump.
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
-from .security_active_committers import SecurityActiveCommitters, SecurityActiveCommittersConfig
+from .security_active_committers_repository import SecurityActiveCommittersRepository, SecurityActiveCommittersRepositoryConfig

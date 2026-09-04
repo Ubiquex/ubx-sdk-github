@@ -4,19 +4,15 @@ import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 export interface ConfigurationConfig {
   after?: string | Computed<string>;
   before?: string | Computed<string>;
-  configurationId: number | Computed<number>;
   enterprise: string | Computed<string>;
   perPage?: number | Computed<number>;
-  status?: string | Computed<string>;
 }
 
 export interface ConfigurationAttrs {
   after: string;
   before: string;
-  configurationId: number;
   enterprise: string;
   perPage: number;
-  status: string;
 }
 
 export const Configuration: DataSourceBinding<ConfigurationConfig, ConfigurationAttrs> = {
@@ -24,9 +20,7 @@ export const Configuration: DataSourceBinding<ConfigurationConfig, Configuration
   fields: {
     after: "after",
     before: "before",
-    configurationId: "configuration_id",
     enterprise: "enterprise",
     perPage: "per_page",
-    status: "status",
   },
 };

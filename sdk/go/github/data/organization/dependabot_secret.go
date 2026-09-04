@@ -3,27 +3,33 @@ package organization
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
+type DependabotSecret_Secrets struct {
+	CreatedAt               any
+	Name                    any
+	SelectedRepositoriesUrl any
+	UpdatedAt               any
+	Visibility              any
+}
+
 type DependabotSecretConfig struct {
-	Org any
-	SecretName any
+	Org     any
+	Page    any
+	PerPage any
 }
 
 type DependabotSecretAttrs struct {
-	CreatedAt any
-	// The name of the secret.
-	Name any
-	Org any
-	SecretName any
-	SelectedRepositoriesUrl any
-	UpdatedAt any
-	// Visibility of a secret
-	Visibility any
+	Org        any
+	Page       any
+	PerPage    any
+	Secrets    any
+	TotalCount any
 }
 
 var DependabotSecret = ubx.DataSourceBinding{
 	WireType: "github_organization_dependabot_secret",
 	Fields: ubx.FieldMap{
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"SecretName": ubx.FieldSpec{WireName: "secret_name"},
+		"Org":     ubx.FieldSpec{WireName: "org"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

@@ -4,4 +4,4 @@
 # re-run `ubx sdk gen` to regenerate after a provider version bump.
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
-from .rule_bypass_request import RuleBypassRequest, RuleBypassRequestConfig
+from .rule import Rule, RuleConfig

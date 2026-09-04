@@ -5,58 +5,58 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type User_Emails struct {
 	Primary any
-	Type any
-	Value any
+	Type    any
+	Value   any
 }
 
 type User_Meta struct {
-	Created any
+	Created      any
 	LastModified any
-	Location any
+	Location     any
 	ResourceType any
 }
 
 type User_Name struct {
 	FamilyName any
-	Formatted any
-	GivenName any
+	Formatted  any
+	GivenName  any
 }
 
 type User_Operations struct {
-	Op any
-	Path any
+	Op    any
+	Path  any
 	Value any
 }
 
 type User_Roles struct {
 	Display any
 	Primary any
-	Type any
-	Value any
+	Type    any
+	Value   any
 }
 
 var User_EmailsFields = ubx.FieldMap{
-		"Primary": ubx.FieldSpec{WireName: "primary"},
-		"Type": ubx.FieldSpec{WireName: "type"},
-		"Value": ubx.FieldSpec{WireName: "value"},
-	}
+	"Primary": ubx.FieldSpec{WireName: "primary"},
+	"Type":    ubx.FieldSpec{WireName: "type"},
+	"Value":   ubx.FieldSpec{WireName: "value"},
+}
 
 var User_NameFields = ubx.FieldMap{
-		"FamilyName": ubx.FieldSpec{WireName: "family_name"},
-		"Formatted": ubx.FieldSpec{WireName: "formatted"},
-		"GivenName": ubx.FieldSpec{WireName: "given_name"},
-	}
+	"FamilyName": ubx.FieldSpec{WireName: "family_name"},
+	"Formatted":  ubx.FieldSpec{WireName: "formatted"},
+	"GivenName":  ubx.FieldSpec{WireName: "given_name"},
+}
 
 type UserConfig struct {
 	Active any
 	// The name of the user, suitable for display to end-users
 	DisplayName any
 	// user emails
-	Emails any
+	Emails     any
 	ExternalId any
-	Groups any
-	Name any
-	Schemas any
+	Groups     any
+	Name       any
+	Schemas    any
 	// Configured by the admin. Could be an email, login, or username
 	UserName any
 	// path parameter, not part of the API's own resource representation
@@ -70,19 +70,19 @@ type UserAttrs struct {
 	// The name of the user, suitable for display to end-users
 	DisplayName any
 	// user emails
-	Emails any
+	Emails     any
 	ExternalId any
-	Groups any
+	Groups     any
 	// Unique identifier of an external identity
-	Id any
+	Id   any
 	Meta any
 	Name any
 	// Set of operations to be performed
 	Operations any
 	// The ID of the organization.
 	OrganizationId any
-	Roles any
-	Schemas any
+	Roles          any
+	Schemas        any
 	// Configured by the admin. Could be an email, login, or username
 	UserName any
 	// path parameter, not part of the API's own resource representation
@@ -94,23 +94,23 @@ type UserAttrs struct {
 var User = ubx.ResourceBinding{
 	WireType: "github_scim_user",
 	Fields: ubx.FieldMap{
-		"Active": ubx.FieldSpec{WireName: "active"},
+		"Active":      ubx.FieldSpec{WireName: "active"},
 		"DisplayName": ubx.FieldSpec{WireName: "display_name"},
 		"Emails": ubx.FieldSpec{
 			WireName: "emails",
-			Kind: "list",
-			Fields: User_EmailsFields,
+			Kind:     "list",
+			Fields:   User_EmailsFields,
 		},
 		"ExternalId": ubx.FieldSpec{WireName: "external_id"},
-		"Groups": ubx.FieldSpec{WireName: "groups"},
+		"Groups":     ubx.FieldSpec{WireName: "groups"},
 		"Name": ubx.FieldSpec{
 			WireName: "name",
-			Kind: "object",
-			Fields: User_NameFields,
+			Kind:     "object",
+			Fields:   User_NameFields,
 		},
-		"Schemas": ubx.FieldSpec{WireName: "schemas"},
-		"UserName": ubx.FieldSpec{WireName: "user_name"},
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Schemas":    ubx.FieldSpec{WireName: "schemas"},
+		"UserName":   ubx.FieldSpec{WireName: "user_name"},
+		"Org":        ubx.FieldSpec{WireName: "org"},
 		"ScimUserId": ubx.FieldSpec{WireName: "scim_user_id"},
 	},
 }

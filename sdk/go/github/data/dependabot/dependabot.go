@@ -4,61 +4,37 @@ package dependabot
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type DependabotConfig struct {
-	After any
-	Assignee any
-	Before any
-	Classification any
-	Direction any
-	Ecosystem any
-	Enterprise any
-	EpssPercentage any
-	Has any
-	Package any
-	PerPage any
-	Relationship any
-	Scope any
-	Severity any
-	Sort any
-	State any
+	Org            any
+	Page           any
+	PerPage        any
+	RepositoryName any
+	RequestStatus  any
+	Requester      any
+	Reviewer       any
+	TimePeriod     any
 }
 
 type DependabotAttrs struct {
-	After any
-	Assignee any
-	Before any
-	Classification any
-	Direction any
-	Ecosystem any
-	Enterprise any
-	EpssPercentage any
-	Has any
-	Package any
-	PerPage any
-	Relationship any
-	Scope any
-	Severity any
-	Sort any
-	State any
+	Org            any
+	Page           any
+	PerPage        any
+	RepositoryName any
+	RequestStatus  any
+	Requester      any
+	Reviewer       any
+	TimePeriod     any
 }
 
 var Dependabot = ubx.DataSourceBinding{
 	WireType: "github_dependabot",
 	Fields: ubx.FieldMap{
-		"After": ubx.FieldSpec{WireName: "after"},
-		"Assignee": ubx.FieldSpec{WireName: "assignee"},
-		"Before": ubx.FieldSpec{WireName: "before"},
-		"Classification": ubx.FieldSpec{WireName: "classification"},
-		"Direction": ubx.FieldSpec{WireName: "direction"},
-		"Ecosystem": ubx.FieldSpec{WireName: "ecosystem"},
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"EpssPercentage": ubx.FieldSpec{WireName: "epss_percentage"},
-		"Has": ubx.FieldSpec{WireName: "has"},
-		"Package": ubx.FieldSpec{WireName: "package"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Relationship": ubx.FieldSpec{WireName: "relationship"},
-		"Scope": ubx.FieldSpec{WireName: "scope"},
-		"Severity": ubx.FieldSpec{WireName: "severity"},
-		"Sort": ubx.FieldSpec{WireName: "sort"},
-		"State": ubx.FieldSpec{WireName: "state"},
+		"Org":            ubx.FieldSpec{WireName: "org"},
+		"Page":           ubx.FieldSpec{WireName: "page"},
+		"PerPage":        ubx.FieldSpec{WireName: "per_page"},
+		"RepositoryName": ubx.FieldSpec{WireName: "repository_name"},
+		"RequestStatus":  ubx.FieldSpec{WireName: "request_status"},
+		"Requester":      ubx.FieldSpec{WireName: "requester"},
+		"Reviewer":       ubx.FieldSpec{WireName: "reviewer"},
+		"TimePeriod":     ubx.FieldSpec{WireName: "time_period"},
 	},
 }

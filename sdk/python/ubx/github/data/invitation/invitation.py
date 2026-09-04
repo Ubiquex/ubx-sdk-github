@@ -8,24 +8,27 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class InvitationConfig:
-    invitation_id: Any = None
+    invitation_source: Any = None
     org: Any = None
     page: Any = None
     per_page: Any = None
+    role: Any = None
 
 @dataclasses.dataclass
 class InvitationAttrs:
-    invitation_id: Any = None
+    invitation_source: Any = None
     org: Any = None
     page: Any = None
     per_page: Any = None
+    role: Any = None
 
 Invitation = ubx.DataSourceBinding(
     wire_type="github_invitation",
     fields={
-        "invitation_id": ubx.FieldSpec(wire_name="invitation_id"),
+        "invitation_source": ubx.FieldSpec(wire_name="invitation_source"),
         "org": ubx.FieldSpec(wire_name="org"),
         "page": ubx.FieldSpec(wire_name="page"),
         "per_page": ubx.FieldSpec(wire_name="per_page"),
+        "role": ubx.FieldSpec(wire_name="role"),
     },
 )

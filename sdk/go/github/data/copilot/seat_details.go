@@ -3,134 +3,133 @@ package copilot
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
-type SeatDetails_Assignee struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+type SeatDetails_Seats_Assignee struct {
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
-type SeatDetails_AssigningTeam_Parent struct {
-	Description any
-	EnterpriseId any
-	HtmlUrl any
-	Id any
-	LdapDn any
-	MembersUrl any
-	Name any
-	NodeId any
+type SeatDetails_Seats_AssigningTeam_Parent struct {
+	Description         any
+	EnterpriseId        any
+	HtmlUrl             any
+	Id                  any
+	LdapDn              any
+	MembersUrl          any
+	Name                any
+	NodeId              any
 	NotificationSetting any
-	OrganizationId any
-	Permission any
-	Privacy any
-	RepositoriesUrl any
-	Slug any
-	Type any
-	Url any
+	OrganizationId      any
+	Permission          any
+	Privacy             any
+	RepositoriesUrl     any
+	Slug                any
+	Type                any
+	Url                 any
 }
 
-type SeatDetails_AssigningTeam_Permissions struct {
-	Admin any
+type SeatDetails_Seats_AssigningTeam_Permissions struct {
+	Admin    any
 	Maintain any
-	Pull any
-	Push any
-	Triage any
+	Pull     any
+	Push     any
+	Triage   any
 }
 
-type SeatDetails_AssigningTeam struct {
-	AccessSource any
-	CreatedAt any
-	Description any
-	EnterpriseId any
-	GroupId any
-	GroupName any
-	HtmlUrl any
-	Id any
-	MembersUrl any
-	Name any
-	NodeId any
-	NotificationSetting any
-	OrganizationId any
+type SeatDetails_Seats_AssigningTeam struct {
+	AccessSource              any
+	CreatedAt                 any
+	Description               any
+	EnterpriseId              any
+	GroupId                   any
+	GroupName                 any
+	HtmlUrl                   any
+	Id                        any
+	MembersUrl                any
+	Name                      any
+	NodeId                    any
+	NotificationSetting       any
+	OrganizationId            any
 	OrganizationSelectionType any
-	Parent any
-	Permission any
-	Permissions any
-	Privacy any
-	RepositoriesUrl any
-	Slug any
-	SyncToOrganizations any
-	Type any
-	UpdatedAt any
-	Url any
+	Parent                    any
+	Permission                any
+	Permissions               any
+	Privacy                   any
+	RepositoriesUrl           any
+	Slug                      any
+	SyncToOrganizations       any
+	Type                      any
+	UpdatedAt                 any
+	Url                       any
 }
 
-type SeatDetails_Organization struct {
-	AvatarUrl any
-	Description any
-	EventsUrl any
-	HooksUrl any
-	Id any
-	IssuesUrl any
-	Login any
-	MembersUrl any
-	NodeId any
+type SeatDetails_Seats_Organization struct {
+	AvatarUrl        any
+	Description      any
+	EventsUrl        any
+	HooksUrl         any
+	Id               any
+	IssuesUrl        any
+	Login            any
+	MembersUrl       any
+	NodeId           any
 	PublicMembersUrl any
-	ReposUrl any
-	Url any
+	ReposUrl         any
+	Url              any
+}
+
+type SeatDetails_Seats struct {
+	Assignee                any
+	AssigningTeam           any
+	CreatedAt               any
+	LastActivityAt          any
+	LastActivityEditor      any
+	LastAuthenticatedAt     any
+	Organization            any
+	PendingCancellationDate any
+	PlanType                any
+	UpdatedAt               any
 }
 
 type SeatDetailsConfig struct {
-	Org any
-	Username any
+	Enterprise any
+	Page       any
+	PerPage    any
 }
 
 type SeatDetailsAttrs struct {
-	// A GitHub user.
-	Assignee any
-	// The team through which the assignee is granted access to GitHub Copilot, if applicable.
-	AssigningTeam any
-	// Timestamp of when the assignee was last granted access to GitHub Copilot, in ISO 8601 format.
-	CreatedAt any
-	// Timestamp of user's last GitHub Copilot activity, in ISO 8601 format.
-	LastActivityAt any
-	// Last editor that was used by the user for a GitHub Copilot completion.
-	LastActivityEditor any
-	// Timestamp of the last time the user authenticated with GitHub Copilot, in ISO 8601 format.
-	LastAuthenticatedAt any
-	Org any
-	// A GitHub organization.
-	Organization any
-	// The pending cancellation date for the seat, in `YYYY-MM-DD` format. This will be null unless the assignee's Copilot access has been canceled during the current billing cycle. If the seat has been cancelled, this corresponds to the start of the organization's next billing cycle.
-	PendingCancellationDate any
-	// The Copilot plan of the organization, or the parent enterprise, when applicable.
-	PlanType any
-	// **Closing down notice:** This field is no longer relevant and is closing down. Use the `created_at` field to determine when the assignee was last granted access to GitHub Copilot. Timestamp of when the assignee's GitHub Copilot access was last updated, in ISO 8601 format.
-	UpdatedAt any
-	Username any
+	Enterprise any
+	Page       any
+	PerPage    any
+	Seats      any
+	// The total number of Copilot seats the enterprise is being billed for. Users with access through multiple organizations or enterprise teams are only counted once.
+	TotalSeats any
 }
 
 var SeatDetails = ubx.DataSourceBinding{
 	WireType: "github_copilot_seat_details",
 	Fields: ubx.FieldMap{
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"Username": ubx.FieldSpec{WireName: "username"},
+		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
+		"Page":       ubx.FieldSpec{WireName: "page"},
+		"PerPage":    ubx.FieldSpec{WireName: "per_page"},
 	},
 }

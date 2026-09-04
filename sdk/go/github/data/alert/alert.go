@@ -4,35 +4,52 @@ package alert
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type AlertConfig struct {
-	Owner any
-	Page any
-	PerPage any
-	Pr any
-	// The Git reference, formatted as `refs/pull/<number>/merge`, `refs/pull/<number>/head`, `refs/heads/<branch name>` or simply `<branch name>`.
-	Ref any
-	Repo any
+	After      any
+	Assignees  any
+	Before     any
+	Direction  any
+	Enterprise any
+	Page       any
+	PerPage    any
+	Sort       any
+	// State of a code scanning alert.
+	State any
+	// The GUID of the tool used to generate the code scanning analysis, if provided in the uploaded SARIF data.
+	ToolGuid any
+	// The name of the tool used to generate the code scanning analysis.
+	ToolName any
 }
 
 type AlertAttrs struct {
-	// The security alert number.
-	AlertNumber any
-	Owner any
-	Page any
-	PerPage any
-	Pr any
-	// The Git reference, formatted as `refs/pull/<number>/merge`, `refs/pull/<number>/head`, `refs/heads/<branch name>` or simply `<branch name>`.
-	Ref any
-	Repo any
+	After      any
+	Assignees  any
+	Before     any
+	Direction  any
+	Enterprise any
+	Page       any
+	PerPage    any
+	Sort       any
+	// State of a code scanning alert.
+	State any
+	// The GUID of the tool used to generate the code scanning analysis, if provided in the uploaded SARIF data.
+	ToolGuid any
+	// The name of the tool used to generate the code scanning analysis.
+	ToolName any
 }
 
 var Alert = ubx.DataSourceBinding{
 	WireType: "github_alert",
 	Fields: ubx.FieldMap{
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Pr": ubx.FieldSpec{WireName: "pr"},
-		"Ref": ubx.FieldSpec{WireName: "ref"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"After":      ubx.FieldSpec{WireName: "after"},
+		"Assignees":  ubx.FieldSpec{WireName: "assignees"},
+		"Before":     ubx.FieldSpec{WireName: "before"},
+		"Direction":  ubx.FieldSpec{WireName: "direction"},
+		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
+		"Page":       ubx.FieldSpec{WireName: "page"},
+		"PerPage":    ubx.FieldSpec{WireName: "per_page"},
+		"Sort":       ubx.FieldSpec{WireName: "sort"},
+		"State":      ubx.FieldSpec{WireName: "state"},
+		"ToolGuid":   ubx.FieldSpec{WireName: "tool_guid"},
+		"ToolName":   ubx.FieldSpec{WireName: "tool_name"},
 	},
 }

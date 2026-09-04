@@ -3,14 +3,12 @@ import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface OrganizationConfig {
   enterprise: string | Computed<string>;
-  org: string | Computed<string>;
   page?: number | Computed<number>;
   perPage?: number | Computed<number>;
 }
 
 export interface OrganizationAttrs {
   enterprise: string;
-  org: string;
   page: number;
   perPage: number;
 }
@@ -19,7 +17,6 @@ export const Organization: DataSourceBinding<OrganizationConfig, OrganizationAtt
   wireType: "github_installable_organization",
   fields: {
     enterprise: "enterprise",
-    org: "org",
     page: "page",
     perPage: "per_page",
   },

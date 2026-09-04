@@ -16,7 +16,6 @@ export interface Version_Metadata {
 }
 
 export interface VersionConfig {
-  org: string | Computed<string>;
   packageName: string | Computed<string>;
   packageType: string | Computed<string>;
   packageVersionId: number | Computed<number>;
@@ -33,7 +32,6 @@ export interface VersionAttrs {
   metadata: Version_Metadata;
   /** The name of the package version. */
   name: string;
-  org: string;
   packageHtmlUrl: string;
   packageName: string;
   packageType: string;
@@ -45,7 +43,6 @@ export interface VersionAttrs {
 export const Version: DataSourceBinding<VersionConfig, VersionAttrs> = {
   wireType: "github_package_version",
   fields: {
-    org: "org",
     packageName: "package_name",
     packageType: "package_type",
     packageVersionId: "package_version_id",

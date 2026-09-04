@@ -2,22 +2,22 @@
 import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface CommitConfig {
-  commitSha: string | Computed<string>;
-  owner: string | Computed<string>;
-  repo: string | Computed<string>;
+  gistId: string | Computed<string>;
+  page?: number | Computed<number>;
+  perPage?: number | Computed<number>;
 }
 
 export interface CommitAttrs {
-  commitSha: string;
-  owner: string;
-  repo: string;
+  gistId: string;
+  page: number;
+  perPage: number;
 }
 
 export const Commit: DataSourceBinding<CommitConfig, CommitAttrs> = {
   wireType: "github_commit",
   fields: {
-    commitSha: "commit_sha",
-    owner: "owner",
-    repo: "repo",
+    gistId: "gist_id",
+    page: "page",
+    perPage: "per_page",
   },
 };

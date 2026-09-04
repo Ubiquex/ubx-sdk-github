@@ -5,7 +5,7 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ImmutableReleasesConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type ImmutableReleasesAttrs struct {
@@ -13,14 +13,14 @@ type ImmutableReleasesAttrs struct {
 	Enabled any
 	// Whether immutable releases are enforced by the repository owner.
 	EnforcedByOwner any
-	Owner any
-	Repo any
+	Owner           any
+	Repo            any
 }
 
 var ImmutableReleases = ubx.DataSourceBinding{
 	WireType: "github_check_immutable_releases",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

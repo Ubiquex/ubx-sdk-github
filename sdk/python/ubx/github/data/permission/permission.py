@@ -7,39 +7,20 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
-class Permission_Organizations:
-    avatar_url: Any = None
-    description: Any = None
-    events_url: Any = None
-    hooks_url: Any = None
-    id: Any = None
-    issues_url: Any = None
-    login: Any = None
-    members_url: Any = None
-    node_id: Any = None
-    public_members_url: Any = None
-    repos_url: Any = None
-    url: Any = None
-
-@dataclasses.dataclass
 class PermissionConfig:
-    enterprise: Any = None
-    page: Any = None
-    per_page: Any = None
+    org: Any = None
 
 @dataclasses.dataclass
 class PermissionAttrs:
-    enterprise: Any = None
-    organizations: Any = None
-    page: Any = None
-    per_page: Any = None
-    total_count: Any = None
+    # The policy for which repositories can use Copilot cloud agent. Can be one of `all`, `selected`, or `none`.
+    enabled_repositories: Any = None
+    org: Any = None
+    # The URL for the selected repositories endpoint. Only present when `enabled_repositories` is `selected`.
+    selected_repositories_url: Any = None
 
 Permission = ubx.DataSourceBinding(
     wire_type="github_permission",
     fields={
-        "enterprise": ubx.FieldSpec(wire_name="enterprise"),
-        "page": ubx.FieldSpec(wire_name="page"),
-        "per_page": ubx.FieldSpec(wire_name="per_page"),
+        "org": ubx.FieldSpec(wire_name="org"),
     },
 )

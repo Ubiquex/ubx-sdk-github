@@ -2,82 +2,50 @@
 import type { Computed, FieldMap, ResourceBinding } from "@ubx/sdk";
 
 export interface Suite_App_Owner {
-  /** The URL of the avatar image for the owner of the GitHub App. (AI-inferred) */
   avatarUrl?: string | Computed<string>;
-  /** The timestamp indicating when the GitHub user or organization that owns the app was created. (AI-inferred) */
   createdAt?: string | Computed<string>;
   description?: string | Computed<string>;
-  /** The public email address of the owner (user or organization) of the GitHub App. (AI-inferred) */
   email?: string | Computed<string>;
-  /** The URL template for listing events for the owner (user or organization) of the GitHub App. (AI-inferred) */
   eventsUrl?: string | Computed<string>;
-  /** URL to fetch the list of followers for this owner. (AI-inferred) */
   followersUrl?: string | Computed<string>;
-  /** The URL template to list the users this GitHub owner is following. Typically contains a placeholder for the username, e.g., 'https://api.github.com/users/{owner}/following'. (AI-inferred) */
   followingUrl?: string | Computed<string>;
-  /** The URL template for the owner's gists, as returned by the GitHub API, e.g., https://api.github.com/users/{owner}/gists{/gist_id}. (AI-inferred) */
   gistsUrl?: string | Computed<string>;
-  /** The Gravatar identifier for the owner, typically a hash used to generate the owner's avatar URL. This may be an empty string if no Gravatar is associated. (AI-inferred) */
   gravatarId?: string | Computed<string>;
-  /** The HTML URL of the GitHub user or organization that owns the app. (AI-inferred) */
   htmlUrl?: string | Computed<string>;
-  /** The unique identifier for the owner (user or organization) of the GitHub App. (AI-inferred) */
   id?: number | Computed<number>;
-  /** The GitHub username or organization name of the owner of the GitHub App that created the check suite. (AI-inferred) */
   login?: string | Computed<string>;
   name?: string | Computed<string>;
-  /** The unique node identifier for the GitHub user or organization that owns the app. This is the global ID used in GraphQL API operations. (AI-inferred) */
   nodeId?: string | Computed<string>;
-  /** The URL to fetch the list of organizations that the owner belongs to. (AI-inferred) */
   organizationsUrl?: string | Computed<string>;
-  /** The API endpoint URL to retrieve events received by this owner (user or organization). (AI-inferred) */
   receivedEventsUrl?: string | Computed<string>;
-  /** The API endpoint URL to retrieve the list of repositories belonging to this owner. (AI-inferred) */
   reposUrl?: string | Computed<string>;
-  /** Indicates whether the user is a site administrator for GitHub. (AI-inferred) */
   siteAdmin?: boolean | Computed<boolean>;
   slug?: string | Computed<string>;
   starredAt?: string | Computed<string>;
-  /** The URL template to list repositories starred by the owner, with placeholders for {owner} and {repo}. (AI-inferred) */
   starredUrl?: string | Computed<string>;
-  /** The URL to list the subscriptions of the app owner (either a user or an organization) in the GitHub API. (AI-inferred) */
   subscriptionsUrl?: string | Computed<string>;
-  /** The type of GitHub account that owns the app: either "User" or "Organization". (AI-inferred) */
   type?: string | Computed<string>;
-  /** The timestamp at which this owner was last updated, in ISO 8601 format. (AI-inferred) */
   updatedAt?: string | Computed<string>;
-  /** The GitHub API URL for the owner of the app associated with the check suite. (AI-inferred) */
   url?: string | Computed<string>;
   userViewType?: string | Computed<string>;
-  /** The website URL associated with the owner (user or organization) of the GitHub app that created the check suite. (AI-inferred) */
   websiteUrl?: string | Computed<string>;
 }
 
 export interface Suite_App_Permissions {
-  /** The permission level for the GitHub Checks API, which manages check suites and check runs. Typical values are 'read', 'write', or 'none'. (AI-inferred) */
   checks?: string | Computed<string>;
-  /** The access level granted to the app for repository contents, such as code and commits. (AI-inferred) */
   contents?: string | Computed<string>;
-  /** The access level granted to the GitHub app for deployments. Typically this is one of 'read', 'write', or 'none'. (AI-inferred) */
   deployments?: string | Computed<string>;
-  /** The level of permission for issues within the GitHub app's permissions. Common allowed values are 'read', 'write', or 'none'. (AI-inferred) */
   issues?: string | Computed<string>;
-  /** The permission level for metadata resources, indicating the access granted to the GitHub App for metadata endpoints. (AI-inferred) */
   metadata?: string | Computed<string>;
 }
 
 export interface Suite_App {
-  /** The client ID of the GitHub App that owns the check suite, used to identify the app in API interactions. (AI-inferred) */
   clientId?: string | Computed<string>;
-  /** The timestamp indicating when the corresponding app was created. (AI-inferred) */
   createdAt: string | Computed<string>;
-  /** The description of the GitHub App that created the check suite. (AI-inferred) */
   description: string | Computed<string>;
   /** The list of events for the GitHub app. Note that the `installation_target`, `security_advisory`, and `meta` events are not included because they are global events and not specific to an installation. */
   events: string[] | Computed<string[]>;
-  /** The URL of the app's external website, as defined by the GitHub App. (AI-inferred) */
   externalUrl: string | Computed<string>;
-  /** The URL to the GitHub App's public landing page. (AI-inferred) */
   htmlUrl: string | Computed<string>;
   /** Unique identifier of the GitHub app */
   id: number | Computed<number>;
@@ -85,15 +53,12 @@ export interface Suite_App {
   installationsCount?: number | Computed<number>;
   /** The name of the GitHub app */
   name: string | Computed<string>;
-  /** The app's node ID, used as the unique identifier for the app in GitHub's GraphQL API. (AI-inferred) */
   nodeId: string | Computed<string>;
-  /** The user or organization that owns the GitHub App associated with the check suite. (AI-inferred) */
   owner: Suite_App_Owner | Computed<Suite_App_Owner>;
   /** The set of permissions for the GitHub app */
   permissions: Suite_App_Permissions | Computed<Suite_App_Permissions>;
   /** The slug name of the GitHub app */
   slug?: string | Computed<string>;
-  /** The ISO 8601 timestamp indicating when the GitHub App was last updated. (AI-inferred) */
   updatedAt: string | Computed<string>;
 }
 
@@ -121,129 +86,80 @@ export interface Suite_HeadCommit {
 
 export interface Suite_PullRequests_Base_Repo {
   id?: number | Computed<number>;
-  /** The name of the base repository that the pull request targets. (AI-inferred) */
   name?: string | Computed<string>;
-  /** The GitHub API URL for the base repository. (AI-inferred) */
   url?: string | Computed<string>;
 }
 
 export interface Suite_PullRequests_Base {
-  /** The name of the branch the pull request is merging into. (AI-inferred) */
   ref?: string | Computed<string>;
-  /** The repository on which the base branch of the pull request resides. Contains metadata such as the repository name, owner, and other identifying information. (AI-inferred) */
   repo?: Suite_PullRequests_Base_Repo | Computed<Suite_PullRequests_Base_Repo>;
-  /** The commit SHA of the base branch of the pull request. (AI-inferred) */
   sha?: string | Computed<string>;
 }
 
 export interface Suite_PullRequests {
-  /** The base branch and repository of the pull request. (AI-inferred) */
   base?: Suite_PullRequests_Base | Computed<Suite_PullRequests_Base>;
-  /** The head reference (branch) of the pull request, containing metadata such as the branch name, commit SHA, and repository details. (AI-inferred) */
   head?: Suite_PullRequests_Base | Computed<Suite_PullRequests_Base>;
-  /** The unique identifier of the pull request in the check suite's pull requests list. (AI-inferred) */
   id?: number | Computed<number>;
-  /** The number that identifies the pull request within its repository. (AI-inferred) */
   number?: number | Computed<number>;
-  /** The REST API URL that points to this pull request. (AI-inferred) */
   url?: string | Computed<string>;
 }
 
 export interface Suite_Repository_CodeOfConduct {
-  /** The full text of the code of conduct. (AI-inferred) */
   body?: string | Computed<string>;
-  /** The URL to the HTML page for the code of conduct. (AI-inferred) */
   htmlUrl: string | Computed<string>;
-  /** A unique string key that identifies the code of conduct (e.g., 'contributor_covenant'). (AI-inferred) */
   key: string | Computed<string>;
-  /** The name of the code of conduct. (AI-inferred) */
   name: string | Computed<string>;
-  /** The URL to the code of conduct document. (AI-inferred) */
   url: string | Computed<string>;
 }
 
 export interface Suite_Repository_License {
-  /** The unique identifier for the license, e.g., 'mit' or 'apache-2.0'. (AI-inferred) */
   key?: string | Computed<string>;
-  /** The full name of the license, such as 'MIT License' or 'Apache License 2.0'. (AI-inferred) */
   name?: string | Computed<string>;
-  /** The node_id is the GraphQL global node ID for the license object. (AI-inferred) */
   nodeId?: string | Computed<string>;
-  /** The SPDX identifier for the license, such as 'MIT' or 'Apache-2.0'. May be null if the license does not have a standard SPDX identifier. (AI-inferred) */
   spdxId?: string | Computed<string>;
-  /** The URL to the license metadata for the repository, typically the GitHub API endpoint for the license. (AI-inferred) */
   url?: string | Computed<string>;
 }
 
 export interface Suite_Repository_Owner {
-  /** The URL of the avatar image for the repository owner. (AI-inferred) */
   avatarUrl: string | Computed<string>;
-  /** The email address of the repository owner, which may be absent if not provided or not publicly available. (AI-inferred) */
   email?: string | Computed<string>;
-  /** The URL to the events associated with this owner (user or organization), typically a template URL with a {/privacy} placeholder. (AI-inferred) */
   eventsUrl: string | Computed<string>;
-  /** The URL to list the followers of this repository owner. (AI-inferred) */
   followersUrl: string | Computed<string>;
-  /** The URL template for the following resource in the GitHub API, used to list the users or organizations that this repository owner follows. (AI-inferred) */
   followingUrl: string | Computed<string>;
-  /** The URL to the owner's gists, typically including a template placeholder for a specific gist ID. (AI-inferred) */
   gistsUrl: string | Computed<string>;
-  /** The Gravatar ID for the repository owner, used to construct the owner's avatar image URL. This may be an empty string if the owner has no associated Gravatar. (AI-inferred) */
   gravatarId: string | Computed<string>;
-  /** The HTML URL of the repository owner's GitHub profile page (e.g., https://github.com/{owner}). (AI-inferred) */
   htmlUrl: string | Computed<string>;
-  /** The unique numeric identifier of the repository owner (user or organization). (AI-inferred) */
   id: number | Computed<number>;
-  /** The username or organization name of the repository owner on GitHub. (AI-inferred) */
   login: string | Computed<string>;
-  /** The display name of the repository owner, such as a user's full name or an organization's name. (AI-inferred) */
   name?: string | Computed<string>;
-  /** The GraphQL node identifier of the repository owner. (AI-inferred) */
   nodeId: string | Computed<string>;
-  /** The URL to the API endpoint that lists the organizations this repository owner is a member of. (AI-inferred) */
   organizationsUrl: string | Computed<string>;
-  /** The API endpoint URL for retrieving events received by the owner of the repository, which may be a user or an organization. (AI-inferred) */
   receivedEventsUrl: string | Computed<string>;
-  /** The API URL that lists the repositories owned by this repository owner. (AI-inferred) */
   reposUrl: string | Computed<string>;
-  /** Indicates whether the repository owner is a GitHub site administrator. (AI-inferred) */
   siteAdmin: boolean | Computed<boolean>;
   starredAt?: string | Computed<string>;
-  /** A template URL for accessing the list of repositories starred by this owner. It may contain placeholders such as {owner} and {repo} that need to be substituted with actual values. (AI-inferred) */
   starredUrl: string | Computed<string>;
-  /** The API URL to the list of subscriptions for this repository owner (user or organization). (AI-inferred) */
   subscriptionsUrl: string | Computed<string>;
-  /** The type of GitHub account that owns the repository. Possible values are 'User', 'Organization', or 'Bot'. (AI-inferred) */
   type: string | Computed<string>;
-  /** The GitHub API URL for the repository owner (user or organization). (AI-inferred) */
   url: string | Computed<string>;
   userViewType?: string | Computed<string>;
 }
 
 export interface Suite_Repository_Permissions {
-  /** Whether the authenticated user has admin access to the repository. (AI-inferred) */
   admin?: boolean | Computed<boolean>;
-  /** Indicates whether the user has maintain access to the repository. (AI-inferred) */
   maintain?: boolean | Computed<boolean>;
-  /** Whether the user has pull (read) access to the repository. (AI-inferred) */
   pull?: boolean | Computed<boolean>;
-  /** Indicates whether the user has push access to the repository (e.g., can create commits, branches, and push changes). (AI-inferred) */
   push?: boolean | Computed<boolean>;
-  /** Indicates whether the user has triage permission on the repository, allowing access to issues and pull requests without write access. (AI-inferred) */
   triage?: boolean | Computed<boolean>;
 }
 
 export interface Suite_Repository_SecurityAndAnalysis_AdvancedSecurity {
-  /** Whether GitHub Advanced Security is enabled or disabled for the repository. (AI-inferred) */
   status?: string | Computed<string>;
 }
 
 export interface Suite_Repository_SecurityAndAnalysis_SecretScanningDelegatedBypassOptions_Reviewers {
-  /** The mode for the reviewer: ALWAYS means the reviewer's approval is always required, EXEMPT means the reviewer is exempt from the approval requirement. (AI-inferred) */
   mode?: string | Computed<string>;
-  /** The numeric identifier of the user or team reviewer who can bypass secret scanning alerts for the repository. (AI-inferred) */
   reviewerId?: number | Computed<number>;
-  /** The kind of reviewer, indicating whether the reviewer is a team or a role. Allowed values: TEAM, ROLE. (AI-inferred) */
   reviewerType?: string | Computed<string>;
 }
 
@@ -258,200 +174,111 @@ export interface Suite_Repository_SecurityAndAnalysis {
   codeSecurity?: Suite_Repository_SecurityAndAnalysis_AdvancedSecurity | Computed<Suite_Repository_SecurityAndAnalysis_AdvancedSecurity>;
   /** Enable or disable Dependabot security updates for the repository. */
   dependabotSecurityUpdates?: Suite_Repository_SecurityAndAnalysis_AdvancedSecurity | Computed<Suite_Repository_SecurityAndAnalysis_AdvancedSecurity>;
-  /** The secret scanning configuration for the repository, including whether secret scanning is enabled and related settings. (AI-inferred) */
   secretScanning?: Suite_Repository_SecurityAndAnalysis_AdvancedSecurity | Computed<Suite_Repository_SecurityAndAnalysis_AdvancedSecurity>;
-  /** Object representing the status of AI-powered detection for secret scanning in the repository. Typically contains a 'status' field indicating whether the feature is 'enabled' or 'disabled'. (AI-inferred) */
   secretScanningAiDetection?: Suite_Repository_SecurityAndAnalysis_AdvancedSecurity | Computed<Suite_Repository_SecurityAndAnalysis_AdvancedSecurity>;
-  /** Settings for delegated dismissal of secret scanning alerts. The object contains configuration related to whether authorized users can dismiss alerts that are delegated to them. (AI-inferred) */
   secretScanningDelegatedAlertDismissal?: Suite_Repository_SecurityAndAnalysis_AdvancedSecurity | Computed<Suite_Repository_SecurityAndAnalysis_AdvancedSecurity>;
-  /** Settings for delegated bypass of secret scanning, which allows designated individuals to bypass secret scanning protection. (AI-inferred) */
   secretScanningDelegatedBypass?: Suite_Repository_SecurityAndAnalysis_AdvancedSecurity | Computed<Suite_Repository_SecurityAndAnalysis_AdvancedSecurity>;
-  /** Configuration for delegated bypass of secret scanning, enabling designated reviewers to approve requests to bypass secret scanning protections. (AI-inferred) */
   secretScanningDelegatedBypassOptions?: Suite_Repository_SecurityAndAnalysis_SecretScanningDelegatedBypassOptions | Computed<Suite_Repository_SecurityAndAnalysis_SecretScanningDelegatedBypassOptions>;
-  /** The custom secret scanning patterns defined in the repository's security and analysis settings, used to detect secrets not covered by default provider patterns. (AI-inferred) */
   secretScanningNonProviderPatterns?: Suite_Repository_SecurityAndAnalysis_AdvancedSecurity | Computed<Suite_Repository_SecurityAndAnalysis_AdvancedSecurity>;
-  /** Settings for secret scanning push protection on the repository, indicating whether it is enabled or disabled. (AI-inferred) */
   secretScanningPushProtection?: Suite_Repository_SecurityAndAnalysis_AdvancedSecurity | Computed<Suite_Repository_SecurityAndAnalysis_AdvancedSecurity>;
   secretScanningValidityChecks?: Suite_Repository_SecurityAndAnalysis_AdvancedSecurity | Computed<Suite_Repository_SecurityAndAnalysis_AdvancedSecurity>;
 }
 
 export interface Suite_Repository {
-  /** Whether users can fork this repository. (AI-inferred) */
   allowForking?: boolean | Computed<boolean>;
-  /** URL template for downloading the repository's archive, with placeholders for archive format and reference. (AI-inferred) */
   archiveUrl: string | Computed<string>;
-  /** Indicates whether the repository is archived (true) or not (false). (AI-inferred) */
   archived?: boolean | Computed<boolean>;
-  /** The URL template for the repository's assignees, allowing retrieval of the list of assignees or a specific assignee by username. (AI-inferred) */
   assigneesUrl: string | Computed<string>;
-  /** The URL template for accessing the repository's git blobs, typically in the format .../git/blobs{/sha}. (AI-inferred) */
   blobsUrl: string | Computed<string>;
-  /** The URL endpoint for accessing branches of this repository. It may be a URL template with a placeholder for a specific branch name. (AI-inferred) */
   branchesUrl: string | Computed<string>;
-  /** The URL to clone the repository. (AI-inferred) */
   cloneUrl?: string | Computed<string>;
   /** Code Of Conduct */
   codeOfConduct?: Suite_Repository_CodeOfConduct | Computed<Suite_Repository_CodeOfConduct>;
-  /** The API URL for accessing the list of collaborators on this repository. (AI-inferred) */
   collaboratorsUrl: string | Computed<string>;
-  /** The GitHub API URL template for the repository's comments, including a placeholder for the comment number. (AI-inferred) */
   commentsUrl: string | Computed<string>;
-  /** The API endpoint URL for the commits in the repository, used to retrieve commit information. (AI-inferred) */
   commitsUrl: string | Computed<string>;
-  /** The API URL template for comparing two commits, branches, or tags in the repository (e.g., https://api.github.com/repos/{owner}/{repo}/compare/{base}...{head}). (AI-inferred) */
   compareUrl: string | Computed<string>;
-  /** The URL to the contents of the repository. This is a template URL; the {+path} placeholder can be replaced with a file or directory path to access its contents. (AI-inferred) */
   contentsUrl: string | Computed<string>;
-  /** The API URL to access the list of contributors for this repository. (AI-inferred) */
   contributorsUrl: string | Computed<string>;
-  /** The timestamp (ISO 8601) of when the repository was created. (AI-inferred) */
   createdAt?: string | Computed<string>;
   /** The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values. */
   customProperties?: unknown | Computed<unknown>;
-  /** The name of the repository's default branch (e.g., main or master). (AI-inferred) */
   defaultBranch?: string | Computed<string>;
-  /** Indicates whether the source branch is automatically deleted when a pull request is merged. (AI-inferred) */
   deleteBranchOnMerge?: boolean | Computed<boolean>;
-  /** The URL to the deployments of this repository. (AI-inferred) */
   deploymentsUrl: string | Computed<string>;
-  /** The description of the repository, as provided by the repository owner. (AI-inferred) */
   description: string | Computed<string>;
-  /** Whether the repository is disabled (e.g., due to administrative or abuse flags). (AI-inferred) */
   disabled?: boolean | Computed<boolean>;
-  /** The URL to the repository's downloads endpoint in the GitHub API. (AI-inferred) */
   downloadsUrl: string | Computed<string>;
-  /** The GitHub API URL for the repository's events list, typically in the form https://api.github.com/repos/{owner}/{repo}/events. (AI-inferred) */
   eventsUrl: string | Computed<string>;
-  /** Indicates whether the repository is a fork of another repository. (AI-inferred) */
   fork: boolean | Computed<boolean>;
-  /** The number of forks of the repository. (AI-inferred) */
   forks?: number | Computed<number>;
-  /** The number of forks of this repository. (AI-inferred) */
   forksCount?: number | Computed<number>;
-  /** The URL to retrieve the list of forks for this repository. (AI-inferred) */
   forksUrl: string | Computed<string>;
-  /** The full repository name, including the owner, in the format `owner/repository`. (AI-inferred) */
   fullName: string | Computed<string>;
-  /** The URL template for this repository's git commits, typically including a `{/sha}` placeholder to access a specific commit. (AI-inferred) */
   gitCommitsUrl: string | Computed<string>;
-  /** The URL to the repository's git references (branches and tags) API endpoint. This may be a template URL with placeholders for specific reference identifiers. (AI-inferred) */
   gitRefsUrl: string | Computed<string>;
-  /** The URL template for accessing Git tag objects through the GitHub Git Data API. For example: `https://api.github.com/repos/{owner}/{repo}/git/tags{/sha}`. (AI-inferred) */
   gitTagsUrl: string | Computed<string>;
-  /** The Git URL of the repository, used to clone it via the Git protocol (e.g., git://github.com/octocat/Hello-World.git). (AI-inferred) */
   gitUrl?: string | Computed<string>;
-  /** Whether the repository has GitHub Discussions enabled. (AI-inferred) */
   hasDiscussions?: boolean | Computed<boolean>;
-  /** Indicates whether the repository has downloads enabled. (AI-inferred) */
   hasDownloads?: boolean | Computed<boolean>;
-  /** Indicates whether the repository has issues enabled. (AI-inferred) */
   hasIssues?: boolean | Computed<boolean>;
-  /** Indicates whether GitHub Pages is enabled for the repository. (AI-inferred) */
   hasPages?: boolean | Computed<boolean>;
-  /** Indicates whether the repository has the GitHub Projects feature enabled. (AI-inferred) */
   hasProjects?: boolean | Computed<boolean>;
   hasPullRequests?: boolean | Computed<boolean>;
-  /** Indicates whether the repository has the wiki feature enabled. (AI-inferred) */
   hasWiki?: boolean | Computed<boolean>;
-  /** The URL of the repository's homepage (website), if set. (AI-inferred) */
   homepage?: string | Computed<string>;
-  /** The URL to the hooks endpoint for the repository. (AI-inferred) */
   hooksUrl: string | Computed<string>;
-  /** The URL to view the repository on GitHub in a web browser. (AI-inferred) */
   htmlUrl: string | Computed<string>;
   id: number | Computed<number>;
-  /** Indicates whether this repository is a template repository. Template repositories can be used to generate new repositories. (AI-inferred) */
   isTemplate?: boolean | Computed<boolean>;
-  /** The URL template for issue comments in the repository, e.g., 'https://api.github.com/repos/{owner}/{repo}/issues/comments{/number}'. (AI-inferred) */
   issueCommentUrl: string | Computed<string>;
-  /** The URL to retrieve issue events for this repository via the GitHub API. (AI-inferred) */
   issueEventsUrl: string | Computed<string>;
-  /** The URL to access issues for the repository. May include a template placeholder (e.g., {/number}) for addressing specific issues. (AI-inferred) */
   issuesUrl: string | Computed<string>;
-  /** URL template for accessing the repository's deploy keys (e.g., https://api.github.com/repos/{owner}/{repo}/keys{/key_id}). (AI-inferred) */
   keysUrl: string | Computed<string>;
-  /** URL template for the repository's labels, as provided by the GitHub API. (AI-inferred) */
   labelsUrl: string | Computed<string>;
-  /** The primary programming language associated with the repository, as reported by GitHub. (AI-inferred) */
   language?: string | Computed<string>;
-  /** The URL to retrieve the programming languages used in the repository, as an API endpoint. It points to the languages resource for the associated GitHub repository. (AI-inferred) */
   languagesUrl: string | Computed<string>;
-  /** The open-source license associated with the repository, if one is configured. Provides license metadata such as key, name, and SPDX identifier. (AI-inferred) */
   license?: Suite_Repository_License | Computed<Suite_Repository_License>;
-  /** The API endpoint URL for merging pull requests in this repository. (AI-inferred) */
   mergesUrl: string | Computed<string>;
-  /** The URL template for the milestones of the repository, with placeholders for the milestone number. (AI-inferred) */
   milestonesUrl: string | Computed<string>;
-  /** The URL of the mirror repository, if this repository is a mirror. This field is null or absent when the repository is not a mirror. (AI-inferred) */
   mirrorUrl?: string | Computed<string>;
-  /** The name of the repository that the check suite belongs to. (AI-inferred) */
   name: string | Computed<string>;
-  /** The total number of forks of the repository, including the entire fork network. (AI-inferred) */
   networkCount?: number | Computed<number>;
-  /** The unique node identifier for the repository. (AI-inferred) */
   nodeId: string | Computed<string>;
-  /** The URL to the GitHub API endpoint for notifications associated with the repository. (AI-inferred) */
   notificationsUrl: string | Computed<string>;
-  /** The number of open issues in the repository. (AI-inferred) */
   openIssues?: number | Computed<number>;
-  /** The number of open issues in the repository. (AI-inferred) */
   openIssuesCount?: number | Computed<number>;
   /** A GitHub user. */
   owner: Suite_Repository_Owner | Computed<Suite_Repository_Owner>;
-  /** An object containing the permissions the current user has on the repository, typically including keys such as admin, push, and pull, each with a boolean value. (AI-inferred) */
   permissions?: Suite_Repository_Permissions | Computed<Suite_Repository_Permissions>;
-  /** Whether the repository is private (true) or public (false). (AI-inferred) */
   private: boolean | Computed<boolean>;
   /** The policy controlling who can create pull requests: all or collaborators_only. */
   pullRequestCreationPolicy?: string | Computed<string>;
-  /** URL template for pull requests in the repository, e.g., `https://api.github.com/repos/{owner}/{repo}/pulls{/number}`. (AI-inferred) */
   pullsUrl: string | Computed<string>;
-  /** The timestamp of the most recent push to the repository, in ISO 8601 format. (AI-inferred) */
   pushedAt?: string | Computed<string>;
-  /** The URL template for accessing the releases of the repository. (AI-inferred) */
   releasesUrl: string | Computed<string>;
   roleName?: string | Computed<string>;
-  /** Security and analysis settings for the repository. This object includes configuration for security features and code analysis. (AI-inferred) */
   securityAndAnalysis?: Suite_Repository_SecurityAndAnalysis | Computed<Suite_Repository_SecurityAndAnalysis>;
   /** The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0. */
   size?: number | Computed<number>;
-  /** The SSH URL of the repository, used for cloning and accessing the repository over SSH. (AI-inferred) */
   sshUrl?: string | Computed<string>;
-  /** The total number of users who have starred the repository. (AI-inferred) */
   stargazersCount?: number | Computed<number>;
-  /** The API URL to list users who have starred the repository. This is a standard GitHub API endpoint for accessing repository stargazers. (AI-inferred) */
   stargazersUrl: string | Computed<string>;
-  /** The URL template for the commit statuses of this repository. Replace the `{sha}` placeholder with a commit SHA to access its statuses. (AI-inferred) */
   statusesUrl: string | Computed<string>;
-  /** The number of users who have subscribed to the repository. (AI-inferred) */
   subscribersCount?: number | Computed<number>;
-  /** The API URL to retrieve the list of subscribers (watchers) of the repository. (AI-inferred) */
   subscribersUrl: string | Computed<string>;
-  /** The API endpoint URL for managing this repository's subscription (e.g., notifications). (AI-inferred) */
   subscriptionUrl: string | Computed<string>;
-  /** The URL to access the repository over SVN (e.g., https://github.com/owner/repo). (AI-inferred) */
   svnUrl?: string | Computed<string>;
-  /** The API URL to retrieve the list of tags for the repository. (AI-inferred) */
   tagsUrl: string | Computed<string>;
-  /** The API URL that points to the list of teams with access to this repository. (AI-inferred) */
   teamsUrl: string | Computed<string>;
-  /** A temporary token that grants permission to clone the repository, typically included when the request is authenticated as a GitHub App. (AI-inferred) */
   tempCloneToken?: string | Computed<string>;
-  /** List of GitHub topics assigned to the repository. (AI-inferred) */
   topics?: string[] | Computed<string[]>;
-  /** The URL template for the repository's Git trees endpoint. (AI-inferred) */
   treesUrl: string | Computed<string>;
-  /** The timestamp of the last update to the repository, in ISO 8601 format. (AI-inferred) */
   updatedAt?: string | Computed<string>;
-  /** The GitHub API URL for the repository, such as https://api.github.com/repos/owner/repo, associated with the check suite. (AI-inferred) */
   url: string | Computed<string>;
-  /** The visibility of the repository: public, private, or internal (for GitHub Enterprise Cloud). (AI-inferred) */
   visibility?: string | Computed<string>;
-  /** The number of users watching the repository. (AI-inferred) */
   watchers?: number | Computed<number>;
-  /** The number of users who have marked the repository to watch it (i.e., the count of repository watchers). (AI-inferred) */
   watchersCount?: number | Computed<number>;
-  /** Whether contributors are required to sign off on web-based commits for the repository. (AI-inferred) */
   webCommitSignoffRequired?: boolean | Computed<boolean>;
 }
 
@@ -467,41 +294,29 @@ export interface SuiteConfig {
 }
 
 export interface SuiteAttrs {
-  /** The SHA of the most recent commit in the check suite's associated push. (AI-inferred) */
   after: string;
   /** GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub. */
   app: Suite_App;
-  /** The SHA of the commit that preceded the push that triggered this check suite. This is only populated for check suites triggered by push events. (AI-inferred) */
   before: string;
-  /** The URL to retrieve the check runs associated with this check suite. (AI-inferred) */
   checkRunsUrl: string;
-  /** The final conclusion of the check suite after all check runs complete. Can be one of success, failure, neutral, cancelled, skipped, timed_out, action_required, startup_failure, or stale. (AI-inferred) */
   conclusion: string;
   createdAt: string;
-  /** The branch name that the head commit of the check suite is on. This value is set by GitHub. (AI-inferred) */
   headBranch: string;
   /** A commit. */
   headCommit: Suite_HeadCommit;
   /** The sha of the head commit. */
   headSha: string;
   id: number;
-  /** The number of check runs in the latest check suite. (AI-inferred) */
   latestCheckRunsCount: number;
-  /** The GraphQL node identifier for the check suite. (AI-inferred) */
   nodeId: string;
-  /** The list of pull requests that match the check suite's head_sha and head_branch. (AI-inferred) */
   pullRequests: Suite_PullRequests[];
   /** Minimal Repository */
   repository: Suite_Repository;
-  /** Indicates whether the check suite can be re-requested (i.e., re-run) by the user. (AI-inferred) */
   rerequestable: boolean;
-  /** Whether the check suite's runs can be re-requested. (AI-inferred) */
   runsRerequestable: boolean;
   /** The phase of the lifecycle that the check suite is currently in. Statuses of waiting, requested, and pending are reserved for GitHub Actions check suites. */
   status: string;
-  /** The timestamp of the last update to the check suite, in ISO 8601 format. (AI-inferred) */
   updatedAt: string;
-  /** The API URL for this check suite, as returned by GitHub. (AI-inferred) */
   url: string;
   /** path parameter, not part of the API's own resource representation */
   owner: string;

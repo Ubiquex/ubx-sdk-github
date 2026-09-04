@@ -3,6 +3,51 @@ package task
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
+type Task_Artifacts_Data struct {
+	BaseRef  any
+	GlobalId any
+	HeadRef  any
+	Id       any
+}
+
+type Task_Artifacts struct {
+	Data     any
+	Provider any
+	Type     any
+}
+
+type Task_Creator struct {
+	Id any
+}
+
+type Task_Sessions_Error struct {
+	Message any
+}
+
+type Task_Sessions_Usage struct {
+	Amount any
+	Type   any
+}
+
+type Task_Sessions struct {
+	BaseRef     any
+	CompletedAt any
+	CreatedAt   any
+	Error       any
+	HeadRef     any
+	Id          any
+	Model       any
+	Name        any
+	Owner       any
+	Prompt      any
+	Repository  any
+	State       any
+	TaskId      any
+	UpdatedAt   any
+	Usage       any
+	User        any
+}
+
 type TaskConfig struct {
 	// Base ref for new branch/PR
 	BaseRef any
@@ -16,46 +61,83 @@ type TaskConfig struct {
 	Model any
 	// The user's prompt for the agent
 	Prompt any
-	// path parameter, not part of the API's own resource representation
-	Owner any
+	// path parameter, not part of the API's own resource representation (renamed from "owner": that name is already used by a differently-typed, real response attribute)
+	OwnerPath any
 	// path parameter, not part of the API's own resource representation
 	Repo any
 	// path parameter, not part of the API's own resource representation
 	TaskId any
+	// path parameter, not part of the API's own resource representation (renamed from "owner": that name is already used by a differently-typed, real response attribute)
+	OwnerPath2 any
 }
 
 type TaskAttrs struct {
+	// Timestamp when the task was archived, null if not archived
+	ArchivedAt any
+	// Resources created by this task (PRs, branches, etc.)
+	Artifacts any
 	// Base ref for new branch/PR
 	BaseRef any
 	// Whether to create a PR.
 	CreatePullRequest any
+	// Timestamp when the task was created
+	CreatedAt any
+	// The entity who created this task
+	Creator any
+	// Type of the task creator
+	CreatorType any
 	// Optional identifier for a custom agent to use for this task. Use the custom agent's filename without the extension - for example, for a `.github/agents/performance-optimizer.agent.md` custom agent, use `performance-optimizer`.
 	CustomAgent any
 	// Head ref for existing branch/PR. If provided with `base_ref`, the agent looks up open PR context for `head_ref` targeting `base_ref` and commits to `head_ref` instead of creating a new branch.
 	HeadRef any
+	// Web URL for this task
+	HtmlUrl any
+	// Unique task identifier
+	Id any
 	// The model to use for this task. The allowed models may change over time and depend on the user's GitHub Copilot plan and organization policies. Currently supported values: `claude-sonnet-4.6`, `claude-opus-4.6`, `gpt-5.2-codex`, `gpt-5.3-codex`, `gpt-5.4`, `claude-sonnet-4.5`, `claude-opus-4.5`
 	Model any
+	// Human-readable name derived from the task prompt
+	Name any
+	// The owner of the repository
+	Owner any
 	// The user's prompt for the agent
 	Prompt any
-	// path parameter, not part of the API's own resource representation
-	Owner any
+	// The repository this task belongs to
+	Repository any
+	// Number of sessions in this task
+	SessionCount any
+	// Sessions associated with this task
+	Sessions any
+	// Current state of the task, derived from its most recent session
+	State any
+	// Timestamp of the most recent update
+	UpdatedAt any
+	// API URL for this task
+	Url any
+	// User objects of collaborators on this task
+	UserCollaborators any
+	// path parameter, not part of the API's own resource representation (renamed from "owner": that name is already used by a differently-typed, real response attribute)
+	OwnerPath any
 	// path parameter, not part of the API's own resource representation
 	Repo any
 	// path parameter, not part of the API's own resource representation
 	TaskId any
+	// path parameter, not part of the API's own resource representation (renamed from "owner": that name is already used by a differently-typed, real response attribute)
+	OwnerPath2 any
 }
 
 var Task = ubx.ResourceBinding{
 	WireType: "github_task",
 	Fields: ubx.FieldMap{
-		"BaseRef": ubx.FieldSpec{WireName: "base_ref"},
+		"BaseRef":           ubx.FieldSpec{WireName: "base_ref"},
 		"CreatePullRequest": ubx.FieldSpec{WireName: "create_pull_request"},
-		"CustomAgent": ubx.FieldSpec{WireName: "custom_agent"},
-		"HeadRef": ubx.FieldSpec{WireName: "head_ref"},
-		"Model": ubx.FieldSpec{WireName: "model"},
-		"Prompt": ubx.FieldSpec{WireName: "prompt"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"TaskId": ubx.FieldSpec{WireName: "task_id"},
+		"CustomAgent":       ubx.FieldSpec{WireName: "custom_agent"},
+		"HeadRef":           ubx.FieldSpec{WireName: "head_ref"},
+		"Model":             ubx.FieldSpec{WireName: "model"},
+		"Prompt":            ubx.FieldSpec{WireName: "prompt"},
+		"OwnerPath":         ubx.FieldSpec{WireName: "owner_path"},
+		"Repo":              ubx.FieldSpec{WireName: "repo"},
+		"TaskId":            ubx.FieldSpec{WireName: "task_id"},
+		"OwnerPath2":        ubx.FieldSpec{WireName: "owner_path2"},
 	},
 }

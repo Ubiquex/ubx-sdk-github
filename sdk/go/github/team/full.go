@@ -4,112 +4,63 @@ package team
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Full_Organization_Plan struct {
-	// The number of seats that have been filled in the organization's plan. (AI-inferred)
-	FilledSeats any
-	// The name of the organization's plan (e.g., 'free', 'pro', 'team', 'enterprise'). (AI-inferred)
-	Name any
-	// The number of private repositories allowed under the organization's plan. (AI-inferred)
+	FilledSeats  any
+	Name         any
 	PrivateRepos any
-	// The number of seats included in the organization's plan. (AI-inferred)
-	Seats any
-	Space any
+	Seats        any
+	Space        any
 }
 
 type Full_Organization struct {
-	ArchivedAt any
-	// The URL of the organization's avatar image. (AI-inferred)
-	AvatarUrl any
-	// The billing email address for this GitHub organization. (AI-inferred)
-	BillingEmail any
-	// The URL of the organization's blog. (AI-inferred)
-	Blog any
-	Collaborators any
-	// The company name associated with the organization, if any. This field is optional and may be null or not present. (AI-inferred)
-	Company any
-	// Timestamp of when the organization was created, in ISO 8601 format. (AI-inferred)
-	CreatedAt any
-	// The default repository permission level for the organization. Allowed values: read, write, admin, none. (AI-inferred)
-	DefaultRepositoryPermission any
-	// The description of the organization that the team belongs to. (AI-inferred)
-	Description any
-	// The total disk usage of the organization, in bytes. (AI-inferred)
-	DiskUsage any
-	// The email address of the GitHub organization, if set. (AI-inferred)
-	Email any
-	// The API endpoint URL used to retrieve events for the organization. (AI-inferred)
-	EventsUrl any
-	// The total number of users following the organization. (AI-inferred)
-	Followers any
-	// The number of users that this organization follows on GitHub. (AI-inferred)
-	Following any
-	// Indicates whether the organization has enabled its organization-level projects feature. (AI-inferred)
-	HasOrganizationProjects any
-	// Indicates whether the organization has repository projects enabled. (AI-inferred)
-	HasRepositoryProjects any
-	// The URL to access the organization's webhooks via the GitHub API. (AI-inferred)
-	HooksUrl any
-	// The URL to the organization's GitHub page. (AI-inferred)
-	HtmlUrl any
-	Id any
-	// Indicates whether the organization has been verified by GitHub (i.e., has a verified badge). (AI-inferred)
-	IsVerified any
-	// The API endpoint URL for retrieving issues belonging to the organization. (AI-inferred)
-	IssuesUrl any
-	// The organization's public location, as specified in its GitHub profile. (AI-inferred)
-	Location any
-	// The organization's login name on GitHub, used as its unique identifier. (AI-inferred)
-	Login any
-	// Indicates the types of repositories that organization members can create. Allowed values are 'all', 'private', or 'none'. (AI-inferred)
+	ArchivedAt                           any
+	AvatarUrl                            any
+	BillingEmail                         any
+	Blog                                 any
+	Collaborators                        any
+	Company                              any
+	CreatedAt                            any
+	DefaultRepositoryPermission          any
+	Description                          any
+	DiskUsage                            any
+	Email                                any
+	EventsUrl                            any
+	Followers                            any
+	Following                            any
+	HasOrganizationProjects              any
+	HasRepositoryProjects                any
+	HooksUrl                             any
+	HtmlUrl                              any
+	Id                                   any
+	IsVerified                           any
+	IssuesUrl                            any
+	Location                             any
+	Login                                any
 	MembersAllowedRepositoryCreationType any
-	// Indicates whether organization members can create internal repositories. Internal repositories are only available to organizations within an enterprise plan. (AI-inferred)
 	MembersCanCreateInternalRepositories any
-	// Indicates whether organization members can create GitHub Pages sites. When true, all members can create pages; when false, only organization owners can. (AI-inferred)
-	MembersCanCreatePages any
-	// Indicates whether organization members are permitted to create private GitHub Pages sites. If false, only organization owners can create private pages. (AI-inferred)
-	MembersCanCreatePrivatePages any
-	// Indicates whether members of the organization are permitted to create private repositories. If true, members can create private repositories; if false, they cannot. (AI-inferred)
-	MembersCanCreatePrivateRepositories any
-	// Whether members of the organization can create public pages (e.g., GitHub Pages sites). (AI-inferred)
-	MembersCanCreatePublicPages any
-	// Whether non-admin members can create public repositories in the organization. (AI-inferred)
-	MembersCanCreatePublicRepositories any
-	// Indicates whether organization members can create repositories. When true, any member can create new repositories; when false, only organization owners can. (AI-inferred)
-	MembersCanCreateRepositories any
-	// Indicates whether members of the organization can fork private repositories. (AI-inferred)
-	MembersCanForkPrivateRepositories any
-	// The URL to access the list of members of the organization via the GitHub API. (AI-inferred)
-	MembersUrl any
-	// The name of the organization. (AI-inferred)
-	Name any
-	// The GraphQL node ID of the organization. (AI-inferred)
-	NodeId any
-	// The number of private repositories owned by the organization. (AI-inferred)
-	OwnedPrivateRepos any
-	Plan any
-	// The number of private gists owned by the organization. (AI-inferred)
-	PrivateGists any
-	// The number of public gists owned by the organization. (AI-inferred)
-	PublicGists any
-	// The URL template for accessing the public members of the organization, including a placeholder for the member identifier. (AI-inferred)
-	PublicMembersUrl any
-	// The number of public repositories owned by the organization. (AI-inferred)
-	PublicRepos any
-	// The URL to the list of repositories belonging to the organization. This is the API endpoint for fetching the organization's repositories. (AI-inferred)
-	ReposUrl any
-	// The total number of private repositories owned by the organization. (AI-inferred)
-	TotalPrivateRepos any
-	// The Twitter username associated with the GitHub organization. (AI-inferred)
-	TwitterUsername any
-	// Indicates whether two-factor authentication is required for all members of the organization that owns the team. (AI-inferred)
-	TwoFactorRequirementEnabled any
-	// The type of the GitHub account, which is 'Organization' for an organization. (AI-inferred)
-	Type any
-	// The timestamp of when the organization was last updated. (AI-inferred)
-	UpdatedAt any
-	// The GitHub API URL for the organization. (AI-inferred)
-	Url any
-	// Indicates whether the organization requires contributors to sign off on commits made through the web interface. When true, commit signoff is enforced for web-based commits. (AI-inferred)
-	WebCommitSignoffRequired any
+	MembersCanCreatePages                any
+	MembersCanCreatePrivatePages         any
+	MembersCanCreatePrivateRepositories  any
+	MembersCanCreatePublicPages          any
+	MembersCanCreatePublicRepositories   any
+	MembersCanCreateRepositories         any
+	MembersCanForkPrivateRepositories    any
+	MembersUrl                           any
+	Name                                 any
+	NodeId                               any
+	OwnedPrivateRepos                    any
+	Plan                                 any
+	PrivateGists                         any
+	PublicGists                          any
+	PublicMembersUrl                     any
+	PublicRepos                          any
+	ReposUrl                             any
+	TotalPrivateRepos                    any
+	TwitterUsername                      any
+	TwoFactorRequirementEnabled          any
+	Type                                 any
+	UpdatedAt                            any
+	Url                                  any
+	WebCommitSignoffRequired             any
 }
 
 type Full_Parent struct {
@@ -117,17 +68,14 @@ type Full_Parent struct {
 	Description any
 	// Unique identifier of the enterprise to which this team belongs
 	EnterpriseId any
-	// The URL to the parent team's page on GitHub. (AI-inferred)
-	HtmlUrl any
+	HtmlUrl      any
 	// Unique identifier of the team
 	Id any
 	// Distinguished Name (DN) that team maps to within LDAP environment
-	LdapDn any
-	// API endpoint URL that returns the members of the parent team. It typically follows the format https://api.github.com/teams/{team_id}/members. (AI-inferred)
+	LdapDn     any
 	MembersUrl any
 	// Name of the team
-	Name any
-	// The GraphQL node ID of the parent team. (AI-inferred)
+	Name   any
 	NodeId any
 	// The notification setting the team has set
 	NotificationSetting any
@@ -136,11 +84,9 @@ type Full_Parent struct {
 	// Permission that the team will have for its repositories
 	Permission any
 	// The level of privacy this team should have
-	Privacy any
-	// The API URL to access the list of repositories belonging to the team. (AI-inferred)
+	Privacy         any
 	RepositoriesUrl any
-	// The slug of the parent team, used as a URL-friendly identifier in GitHub. (AI-inferred)
-	Slug any
+	Slug            any
 	// The ownership type of the team
 	Type any
 	// URL for the team
@@ -178,21 +124,17 @@ type FullAttrs struct {
 	Description any
 	// Unique identifier of the enterprise to which this team belongs
 	EnterpriseId any
-	// The GitHub web URL for the team. (AI-inferred)
-	HtmlUrl any
+	HtmlUrl      any
 	// Unique identifier of the team
 	Id any
 	// The [distinguished name](https://www.ldap.com/ldap-dns-and-rdns) (DN) of the LDAP entry to map to a team.
 	LdapDn any
 	// List GitHub usernames for organization members who will become team maintainers.
-	Maintainers any
-	// The number of members in the team. (AI-inferred)
+	Maintainers  any
 	MembersCount any
-	// The API endpoint URL to retrieve the members of this team. (AI-inferred)
-	MembersUrl any
+	MembersUrl   any
 	// The name of the team.
-	Name any
-	// The GraphQL global node ID for the team, used as a unique identifier in GitHub's GraphQL API. (AI-inferred)
+	Name   any
 	NodeId any
 	// The notification setting the team has chosen. The options are: * `notifications_enabled` - team members receive notifications when the team is @mentioned. * `notifications_disabled` - no one receives notifications. Default: `notifications_enabled`
 	NotificationSetting any
@@ -211,16 +153,12 @@ type FullAttrs struct {
 	// The level of privacy this team should have. The options are: **For a non-nested team:** * `secret` - only visible to organization owners and members of this team. * `closed` - visible to all members of this organization. Default: `secret` **For a parent or child team:** * `closed` - visible to all members of this organization. Default for child team: `closed`
 	Privacy any
 	// The full name (e.g., "organization-name/repository-name") of repositories to add the team to.
-	RepoNames any
-	// The number of repositories associated with the GitHub team. (AI-inferred)
-	ReposCount any
-	// The URL to list repositories belonging to the team. (AI-inferred)
+	RepoNames       any
+	ReposCount      any
 	RepositoriesUrl any
-	// The slug of the team, which is a URL-friendly version of the team name used in GitHub URLs. (AI-inferred)
-	Slug any
+	Slug            any
 	// The ownership type of the team
-	Type any
-	// The timestamp of the last update to the team, provided as a string. This field is computed by the server and is read-only. (AI-inferred)
+	Type      any
 	UpdatedAt any
 	// URL for the team
 	Url any
@@ -233,16 +171,16 @@ type FullAttrs struct {
 var Full = ubx.ResourceBinding{
 	WireType: "github_team_full",
 	Fields: ubx.FieldMap{
-		"Description": ubx.FieldSpec{WireName: "description"},
-		"Maintainers": ubx.FieldSpec{WireName: "maintainers"},
-		"Name": ubx.FieldSpec{WireName: "name"},
+		"Description":         ubx.FieldSpec{WireName: "description"},
+		"Maintainers":         ubx.FieldSpec{WireName: "maintainers"},
+		"Name":                ubx.FieldSpec{WireName: "name"},
 		"NotificationSetting": ubx.FieldSpec{WireName: "notification_setting"},
-		"ParentTeamId": ubx.FieldSpec{WireName: "parent_team_id"},
-		"ParentTeamSlug": ubx.FieldSpec{WireName: "parent_team_slug"},
-		"Permission": ubx.FieldSpec{WireName: "permission"},
-		"Privacy": ubx.FieldSpec{WireName: "privacy"},
-		"RepoNames": ubx.FieldSpec{WireName: "repo_names"},
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"TeamSlug": ubx.FieldSpec{WireName: "team_slug"},
+		"ParentTeamId":        ubx.FieldSpec{WireName: "parent_team_id"},
+		"ParentTeamSlug":      ubx.FieldSpec{WireName: "parent_team_slug"},
+		"Permission":          ubx.FieldSpec{WireName: "permission"},
+		"Privacy":             ubx.FieldSpec{WireName: "privacy"},
+		"RepoNames":           ubx.FieldSpec{WireName: "repo_names"},
+		"Org":                 ubx.FieldSpec{WireName: "org"},
+		"TeamSlug":            ubx.FieldSpec{WireName: "team_slug"},
 	},
 }

@@ -4,41 +4,41 @@ package import_
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Import_ProjectChoices struct {
-	HumanName any
+	HumanName   any
 	TfvcProject any
-	Vcs any
+	Vcs         any
 }
 
 type ImportConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type ImportAttrs struct {
-	AuthorsCount any
-	AuthorsUrl any
-	CommitCount any
-	ErrorMessage any
-	FailedStep any
-	HasLargeFiles any
-	HtmlUrl any
-	ImportPercent any
+	AuthorsCount    any
+	AuthorsUrl      any
+	CommitCount     any
+	ErrorMessage    any
+	FailedStep      any
+	HasLargeFiles   any
+	HtmlUrl         any
+	ImportPercent   any
 	LargeFilesCount any
-	LargeFilesSize any
-	Message any
-	Owner any
-	ProjectChoices any
-	PushPercent any
-	Repo any
-	RepositoryUrl any
-	Status any
-	StatusText any
-	SvcRoot any
-	SvnRoot any
-	TfvcProject any
-	Url any
-	UseLfs any
-	Vcs any
+	LargeFilesSize  any
+	Message         any
+	Owner           any
+	ProjectChoices  any
+	PushPercent     any
+	Repo            any
+	RepositoryUrl   any
+	Status          any
+	StatusText      any
+	SvcRoot         any
+	SvnRoot         any
+	TfvcProject     any
+	Url             any
+	UseLfs          any
+	Vcs             any
 	// The URL of the originating repository.
 	VcsUrl any
 }
@@ -47,6 +47,6 @@ var Import = ubx.DataSourceBinding{
 	WireType: "github_import",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

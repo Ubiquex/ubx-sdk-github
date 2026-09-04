@@ -10,7 +10,7 @@ type CacheStorageLimitForOrganizationConfig struct {
 type CacheStorageLimitForOrganizationAttrs struct {
 	// For repositories in the organization, the maximum size limit for the sum of all caches in a repository, in gigabytes.
 	MaxCacheSizeGb any
-	Org any
+	Org            any
 }
 
 var CacheStorageLimitForOrganization = ubx.DataSourceBinding{

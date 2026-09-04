@@ -7,28 +7,34 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
-class VariableConfig:
+class Variable_Variables:
+    created_at: Any = None
     name: Any = None
+    updated_at: Any = None
+    value: Any = None
+
+@dataclasses.dataclass
+class VariableConfig:
     owner: Any = None
+    page: Any = None
+    per_page: Any = None
     repo: Any = None
 
 @dataclasses.dataclass
 class VariableAttrs:
-    # The date and time at which the variable was created, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
-    created_at: Any = None
-    name: Any = None
     owner: Any = None
+    page: Any = None
+    per_page: Any = None
     repo: Any = None
-    # The date and time at which the variable was last updated, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
-    updated_at: Any = None
-    # The value of the variable.
-    value: Any = None
+    total_count: Any = None
+    variables: Any = None
 
 Variable = ubx.DataSourceBinding(
     wire_type="github_actions_variable",
     fields={
-        "name": ubx.FieldSpec(wire_name="name"),
         "owner": ubx.FieldSpec(wire_name="owner"),
+        "page": ubx.FieldSpec(wire_name="page"),
+        "per_page": ubx.FieldSpec(wire_name="per_page"),
         "repo": ubx.FieldSpec(wire_name="repo"),
     },
 )

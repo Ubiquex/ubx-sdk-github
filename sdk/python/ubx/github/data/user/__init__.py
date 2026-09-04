@@ -5,3 +5,4 @@
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
 from .user import User, UserConfig
+from .search_result_item import SearchResultItem, SearchResultItemConfig

@@ -8,33 +8,48 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class IssueConfig:
+    collab: Any = None
     direction: Any = None
-    owner: Any = None
+    filter: Any = None
+    labels: Any = None
+    orgs: Any = None
+    owned: Any = None
     page: Any = None
     per_page: Any = None
-    repo: Any = None
+    pulls: Any = None
     since: Any = None
     sort: Any = None
+    state: Any = None
 
 @dataclasses.dataclass
 class IssueAttrs:
+    collab: Any = None
     direction: Any = None
-    owner: Any = None
+    filter: Any = None
+    labels: Any = None
+    orgs: Any = None
+    owned: Any = None
     page: Any = None
     per_page: Any = None
-    repo: Any = None
+    pulls: Any = None
     since: Any = None
     sort: Any = None
+    state: Any = None
 
 Issue = ubx.DataSourceBinding(
     wire_type="github_issue",
     fields={
+        "collab": ubx.FieldSpec(wire_name="collab"),
         "direction": ubx.FieldSpec(wire_name="direction"),
-        "owner": ubx.FieldSpec(wire_name="owner"),
+        "filter": ubx.FieldSpec(wire_name="filter"),
+        "labels": ubx.FieldSpec(wire_name="labels"),
+        "orgs": ubx.FieldSpec(wire_name="orgs"),
+        "owned": ubx.FieldSpec(wire_name="owned"),
         "page": ubx.FieldSpec(wire_name="page"),
         "per_page": ubx.FieldSpec(wire_name="per_page"),
-        "repo": ubx.FieldSpec(wire_name="repo"),
+        "pulls": ubx.FieldSpec(wire_name="pulls"),
         "since": ubx.FieldSpec(wire_name="since"),
         "sort": ubx.FieldSpec(wire_name="sort"),
+        "state": ubx.FieldSpec(wire_name="state"),
     },
 )

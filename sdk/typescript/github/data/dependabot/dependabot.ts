@@ -2,61 +2,37 @@
 import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface DependabotConfig {
-  after?: string | Computed<string>;
-  assignee?: string | Computed<string>;
-  before?: string | Computed<string>;
-  classification?: string | Computed<string>;
-  direction?: string | Computed<string>;
-  ecosystem?: string | Computed<string>;
-  enterprise: string | Computed<string>;
-  epssPercentage?: string | Computed<string>;
-  has?: unknown | Computed<unknown>;
-  package?: string | Computed<string>;
+  org: string | Computed<string>;
+  page?: number | Computed<number>;
   perPage?: number | Computed<number>;
-  relationship?: string | Computed<string>;
-  scope?: string | Computed<string>;
-  severity?: string | Computed<string>;
-  sort?: string | Computed<string>;
-  state?: string | Computed<string>;
+  repositoryName?: string | Computed<string>;
+  requestStatus?: string | Computed<string>;
+  requester?: string | Computed<string>;
+  reviewer?: string | Computed<string>;
+  timePeriod?: string | Computed<string>;
 }
 
 export interface DependabotAttrs {
-  after: string;
-  assignee: string;
-  before: string;
-  classification: string;
-  direction: string;
-  ecosystem: string;
-  enterprise: string;
-  epssPercentage: string;
-  has: unknown;
-  package: string;
+  org: string;
+  page: number;
   perPage: number;
-  relationship: string;
-  scope: string;
-  severity: string;
-  sort: string;
-  state: string;
+  repositoryName: string;
+  requestStatus: string;
+  requester: string;
+  reviewer: string;
+  timePeriod: string;
 }
 
 export const Dependabot: DataSourceBinding<DependabotConfig, DependabotAttrs> = {
   wireType: "github_dependabot",
   fields: {
-    after: "after",
-    assignee: "assignee",
-    before: "before",
-    classification: "classification",
-    direction: "direction",
-    ecosystem: "ecosystem",
-    enterprise: "enterprise",
-    epssPercentage: "epss_percentage",
-    has: "has",
-    package: "package",
+    org: "org",
+    page: "page",
     perPage: "per_page",
-    relationship: "relationship",
-    scope: "scope",
-    severity: "severity",
-    sort: "sort",
-    state: "state",
+    repositoryName: "repository_name",
+    requestStatus: "request_status",
+    requester: "requester",
+    reviewer: "reviewer",
+    timePeriod: "time_period",
   },
 };

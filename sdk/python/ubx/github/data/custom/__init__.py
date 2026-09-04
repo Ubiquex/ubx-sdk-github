@@ -4,6 +4,7 @@
 # re-run `ubx sdk gen` to regenerate after a provider version bump.
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
-from .custom import Custom, CustomConfig
 from .agent import Agent, AgentConfig
+from .deployment_rule_app import DeploymentRuleApp, DeploymentRuleAppConfig
+from .pattern import Pattern, PatternConfig
 from .property import Property, PropertyConfig

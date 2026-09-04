@@ -4,21 +4,21 @@ package rule
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Suite_RuleEvaluations_RuleSource struct {
-	Id any
+	Id   any
 	Name any
 	Type any
 }
 
 type Suite_RuleEvaluations struct {
-	Details any
+	Details     any
 	Enforcement any
-	Result any
-	RuleSource any
-	RuleType any
+	Result      any
+	RuleSource  any
+	RuleType    any
 }
 
 type SuiteConfig struct {
-	Org any
+	Org         any
 	RuleSuiteId any
 }
 
@@ -34,8 +34,8 @@ type SuiteAttrs struct {
 	// The result of the rule evaluations for rules with the `active` and `evaluate` enforcement statuses, demonstrating whether rules would pass or fail if all rules in the rule suite were `active`. Null if no rules with `evaluate` enforcement status were run.
 	EvaluationResult any
 	// The unique identifier of the rule insight.
-	Id any
-	Org any
+	Id       any
+	Org      any
 	PushedAt any
 	// The ref name that the evaluation ran on.
 	Ref any
@@ -47,13 +47,13 @@ type SuiteAttrs struct {
 	Result any
 	// Details on the evaluated rules.
 	RuleEvaluations any
-	RuleSuiteId any
+	RuleSuiteId     any
 }
 
 var Suite = ubx.DataSourceBinding{
 	WireType: "github_rule_suite",
 	Fields: ubx.FieldMap{
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Org":         ubx.FieldSpec{WireName: "org"},
 		"RuleSuiteId": ubx.FieldSpec{WireName: "rule_suite_id"},
 	},
 }

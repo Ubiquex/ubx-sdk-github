@@ -7,101 +7,28 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
-class ProjectsV2_Creator:
-    avatar_url: Any = None
-    email: Any = None
-    events_url: Any = None
-    followers_url: Any = None
-    following_url: Any = None
-    gists_url: Any = None
-    gravatar_id: Any = None
-    html_url: Any = None
-    id: Any = None
-    login: Any = None
-    name: Any = None
-    node_id: Any = None
-    organizations_url: Any = None
-    received_events_url: Any = None
-    repos_url: Any = None
-    site_admin: Any = None
-    starred_at: Any = None
-    starred_url: Any = None
-    subscriptions_url: Any = None
-    type: Any = None
-    url: Any = None
-    user_view_type: Any = None
-
-@dataclasses.dataclass
-class ProjectsV2_LatestStatusUpdate:
-    # Body of the status update
-    body: Any = None
-    # The time when the status update was created.
-    created_at: Any = None
-    # A GitHub user.
-    creator: Any = None
-    # The unique identifier of the status update.
-    id: Any = None
-    # The node ID of the status update.
-    node_id: Any = None
-    # The node ID of the project that this status update belongs to.
-    project_node_id: Any = None
-    # The start date of the period covered by the update.
-    start_date: Any = None
-    # The current status.
-    status: Any = None
-    # The target date associated with the update.
-    target_date: Any = None
-    # The time when the status update was last updated.
-    updated_at: Any = None
-
-@dataclasses.dataclass
 class ProjectsV2Config:
+    after: Any = None
+    before: Any = None
     org: Any = None
-    project_number: Any = None
+    per_page: Any = None
+    q: Any = None
 
 @dataclasses.dataclass
 class ProjectsV2Attrs:
-    # The time when the project was closed.
-    closed_at: Any = None
-    # The time when the project was created.
-    created_at: Any = None
-    # A GitHub user.
-    creator: Any = None
-    # The time when the project was deleted.
-    deleted_at: Any = None
-    # A GitHub user.
-    deleted_by: Any = None
-    # A short description of the project.
-    description: Any = None
-    # The unique identifier of the project.
-    id: Any = None
-    # Whether this project is a template
-    is_template: Any = None
-    # An status update belonging to a project
-    latest_status_update: Any = None
-    # The node ID of the project.
-    node_id: Any = None
-    # The project number.
-    number: Any = None
+    after: Any = None
+    before: Any = None
     org: Any = None
-    # A GitHub user.
-    owner: Any = None
-    project_number: Any = None
-    # Whether the project is visible to anyone with access to the owner.
-    public: Any = None
-    # A concise summary of the project.
-    short_description: Any = None
-    # The current state of the project.
-    state: Any = None
-    # The project title.
-    title: Any = None
-    # The time when the project was last updated.
-    updated_at: Any = None
+    per_page: Any = None
+    q: Any = None
 
 ProjectsV2 = ubx.DataSourceBinding(
     wire_type="github_projects_v2",
     fields={
+        "after": ubx.FieldSpec(wire_name="after"),
+        "before": ubx.FieldSpec(wire_name="before"),
         "org": ubx.FieldSpec(wire_name="org"),
-        "project_number": ubx.FieldSpec(wire_name="project_number"),
+        "per_page": ubx.FieldSpec(wire_name="per_page"),
+        "q": ubx.FieldSpec(wire_name="q"),
     },
 )

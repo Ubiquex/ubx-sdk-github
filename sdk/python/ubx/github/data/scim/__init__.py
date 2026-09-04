@@ -4,6 +4,6 @@
 # re-run `ubx sdk gen` to regenerate after a provider version bump.
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
-from .enterprise_group_list import EnterpriseGroupList, EnterpriseGroupListConfig
-from .enterprise_user_list import EnterpriseUserList, EnterpriseUserListConfig
-from .user_list import UserList, UserListConfig
+from .enterprise_group_response import EnterpriseGroupResponse, EnterpriseGroupResponseConfig
+from .enterprise_user_response import EnterpriseUserResponse, EnterpriseUserResponseConfig
+from .user import User, UserConfig

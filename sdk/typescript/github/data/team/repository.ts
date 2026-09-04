@@ -19,10 +19,9 @@ export interface Repository_Permissions {
 }
 
 export interface RepositoryConfig {
-  org: string | Computed<string>;
   owner: string | Computed<string>;
   repo: string | Computed<string>;
-  teamSlug: string | Computed<string>;
+  teamId: number | Computed<number>;
 }
 
 export interface RepositoryAttrs {
@@ -105,7 +104,6 @@ export interface RepositoryAttrs {
   notificationsUrl: string;
   openIssues: number;
   openIssuesCount: number;
-  org: string;
   owner: string;
   permissions: Repository_Permissions;
   /** Whether the repository is private or public. */
@@ -125,7 +123,7 @@ export interface RepositoryAttrs {
   subscriptionUrl: string;
   svnUrl: string;
   tagsUrl: string;
-  teamSlug: string;
+  teamId: number;
   teamsUrl: string;
   tempCloneToken: string;
   topics: string[];
@@ -143,9 +141,8 @@ export interface RepositoryAttrs {
 export const Repository: DataSourceBinding<RepositoryConfig, RepositoryAttrs> = {
   wireType: "github_team_repository",
   fields: {
-    org: "org",
     owner: "owner",
     repo: "repo",
-    teamSlug: "team_slug",
+    teamId: "team_id",
   },
 };

@@ -5,21 +5,21 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type RefConfig struct {
 	Owner any
-	Ref any
-	Repo any
+	Ref   any
+	Repo  any
 }
 
 type RefAttrs struct {
 	Owner any
-	Ref any
-	Repo any
+	Ref   any
+	Repo  any
 }
 
 var Ref = ubx.DataSourceBinding{
 	WireType: "github_matching_ref",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Ref": ubx.FieldSpec{WireName: "ref"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Ref":   ubx.FieldSpec{WireName: "ref"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

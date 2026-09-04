@@ -4,59 +4,58 @@ package api
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Overview_Domains_ActionsInbound struct {
-	FullDomains any
+	FullDomains     any
 	WildcardDomains any
 }
 
 type Overview_Domains_ArtifactAttestations struct {
-	Services any
+	Services    any
 	TrustDomain any
 }
 
 type Overview_Domains struct {
-	Actions any
-	ActionsInbound any
+	Actions              any
+	ActionsInbound       any
 	ArtifactAttestations any
-	Codespaces any
-	Copilot any
-	Packages any
-	Storage any
-	Website any
+	Codespaces           any
+	Copilot              any
+	Packages             any
+	Storage              any
+	Website              any
 }
 
 type Overview_SshKeyFingerprints struct {
-	Sha256Dsa any
-	Sha256Ecdsa any
+	Sha256Dsa     any
+	Sha256Ecdsa   any
 	Sha256Ed25519 any
-	Sha256Rsa any
+	Sha256Rsa     any
 }
 
 type OverviewConfig struct {
 }
 
 type OverviewAttrs struct {
-	Actions any
-	ActionsMacos any
-	Api any
-	Codespaces any
-	CommitSigningKeys any
-	Copilot any
-	Dependabot any
-	Domains any
-	Git any
-	GithubEnterpriseImporter any
-	Hooks any
-	Importer any
-	Packages any
-	Pages any
-	SshKeyFingerprints any
-	SshKeys any
+	Actions                          any
+	ActionsMacos                     any
+	Api                              any
+	Codespaces                       any
+	CommitSigningKeys                any
+	Copilot                          any
+	Dependabot                       any
+	Domains                          any
+	Git                              any
+	GithubEnterpriseImporter         any
+	Hooks                            any
+	Importer                         any
+	Packages                         any
+	Pages                            any
+	SshKeyFingerprints               any
+	SshKeys                          any
 	VerifiablePasswordAuthentication any
-	Web any
+	Web                              any
 }
 
 var Overview = ubx.DataSourceBinding{
 	WireType: "github_api_overview",
-	Fields: ubx.FieldMap{
-	},
+	Fields:   ubx.FieldMap{},
 }

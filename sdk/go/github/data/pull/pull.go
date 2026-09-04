@@ -4,20 +4,28 @@ package pull
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type PullConfig struct {
-	Org any
+	CommitSha any
+	Owner     any
+	Page      any
+	PerPage   any
+	Repo      any
 }
 
 type PullAttrs struct {
-	// Whether the pull request creation cap is enabled
-	Enabled any
-	// The maximum number of open pull requests a user can have at one time
-	MaxOpenPullRequests any
-	Org any
+	CommitSha any
+	Owner     any
+	Page      any
+	PerPage   any
+	Repo      any
 }
 
 var Pull = ubx.DataSourceBinding{
 	WireType: "github_pull",
 	Fields: ubx.FieldMap{
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"CommitSha": ubx.FieldSpec{WireName: "commit_sha"},
+		"Owner":     ubx.FieldSpec{WireName: "owner"},
+		"Page":      ubx.FieldSpec{WireName: "page"},
+		"PerPage":   ubx.FieldSpec{WireName: "per_page"},
+		"Repo":      ubx.FieldSpec{WireName: "repo"},
 	},
 }

@@ -29,8 +29,14 @@ type CustomPropertyAttrs struct {
 	DefaultValue any
 	// Short description of the property.
 	Description any
+	// The name of the property
+	PropertyName any
 	// Whether the property is required.
 	Required any
+	// The source type of the property
+	SourceType any
+	// The URL that can be used to fetch, update, or delete info about this property via the API.
+	Url any
 	// The type of the value for the property.
 	ValueType any
 	// Who can edit the values of the property.
@@ -44,13 +50,13 @@ type CustomPropertyAttrs struct {
 var CustomProperty = ubx.ResourceBinding{
 	WireType: "github_organization_custom_property",
 	Fields: ubx.FieldMap{
-		"AllowedValues": ubx.FieldSpec{WireName: "allowed_values"},
-		"DefaultValue": ubx.FieldSpec{WireName: "default_value"},
-		"Description": ubx.FieldSpec{WireName: "description"},
-		"Required": ubx.FieldSpec{WireName: "required"},
-		"ValueType": ubx.FieldSpec{WireName: "value_type"},
-		"ValuesEditableBy": ubx.FieldSpec{WireName: "values_editable_by"},
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
+		"AllowedValues":      ubx.FieldSpec{WireName: "allowed_values"},
+		"DefaultValue":       ubx.FieldSpec{WireName: "default_value"},
+		"Description":        ubx.FieldSpec{WireName: "description"},
+		"Required":           ubx.FieldSpec{WireName: "required"},
+		"ValueType":          ubx.FieldSpec{WireName: "value_type"},
+		"ValuesEditableBy":   ubx.FieldSpec{WireName: "values_editable_by"},
+		"Enterprise":         ubx.FieldSpec{WireName: "enterprise"},
 		"CustomPropertyName": ubx.FieldSpec{WireName: "custom_property_name"},
 	},
 }

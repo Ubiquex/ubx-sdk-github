@@ -7,35 +7,29 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
+class HostedRunnerCustomImage_Images:
+    id: Any = None
+    latest_version: Any = None
+    name: Any = None
+    platform: Any = None
+    source: Any = None
+    state: Any = None
+    total_versions_size: Any = None
+    versions_count: Any = None
+
+@dataclasses.dataclass
 class HostedRunnerCustomImageConfig:
     enterprise: Any = None
-    image_definition_id: Any = None
 
 @dataclasses.dataclass
 class HostedRunnerCustomImageAttrs:
     enterprise: Any = None
-    # The ID of the image. Use this ID for the `image` parameter when creating a new larger runner.
-    id: Any = None
-    image_definition_id: Any = None
-    # The latest image version associated with the image.
-    latest_version: Any = None
-    # Display name for this image.
-    name: Any = None
-    # The operating system of the image.
-    platform: Any = None
-    # The image provider.
-    source: Any = None
-    # The number of image versions associated with the image.
-    state: Any = None
-    # Total size of all the image versions in GB.
-    total_versions_size: Any = None
-    # The number of image versions associated with the image.
-    versions_count: Any = None
+    images: Any = None
+    total_count: Any = None
 
 HostedRunnerCustomImage = ubx.DataSourceBinding(
     wire_type="github_actions_hosted_runner_custom_image",
     fields={
         "enterprise": ubx.FieldSpec(wire_name="enterprise"),
-        "image_definition_id": ubx.FieldSpec(wire_name="image_definition_id"),
     },
 )

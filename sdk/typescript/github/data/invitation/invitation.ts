@@ -2,25 +2,28 @@
 import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface InvitationConfig {
-  invitationId: number | Computed<number>;
+  invitationSource?: string | Computed<string>;
   org: string | Computed<string>;
   page?: number | Computed<number>;
   perPage?: number | Computed<number>;
+  role?: string | Computed<string>;
 }
 
 export interface InvitationAttrs {
-  invitationId: number;
+  invitationSource: string;
   org: string;
   page: number;
   perPage: number;
+  role: string;
 }
 
 export const Invitation: DataSourceBinding<InvitationConfig, InvitationAttrs> = {
   wireType: "github_invitation",
   fields: {
-    invitationId: "invitation_id",
+    invitationSource: "invitation_source",
     org: "org",
     page: "page",
     perPage: "per_page",
+    role: "role",
   },
 };

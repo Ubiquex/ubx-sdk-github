@@ -25,7 +25,6 @@ class ActionsVariableAttrs:
     created_at: Any = None
     # The name of the variable.
     name: Any = None
-    # API URL listing the repositories this organization-level Actions variable is selectively exposed to. (AI-inferred)
     selected_repositories_url: Any = None
     # An array of repository ids that can access the organization variable. You can only provide a list of repository ids when the `visibility` is set to `selected`.
     selected_repository_ids: Any = None

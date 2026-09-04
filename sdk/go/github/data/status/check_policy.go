@@ -4,32 +4,32 @@ package status
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type CheckPolicy_Checks struct {
-	AppId any
+	AppId   any
 	Context any
 }
 
 type CheckPolicyConfig struct {
 	Branch any
-	Owner any
-	Repo any
+	Owner  any
+	Repo   any
 }
 
 type CheckPolicyAttrs struct {
-	Branch any
-	Checks any
-	Contexts any
+	Branch      any
+	Checks      any
+	Contexts    any
 	ContextsUrl any
-	Owner any
-	Repo any
-	Strict any
-	Url any
+	Owner       any
+	Repo        any
+	Strict      any
+	Url         any
 }
 
 var CheckPolicy = ubx.DataSourceBinding{
 	WireType: "github_status_check_policy",
 	Fields: ubx.FieldMap{
 		"Branch": ubx.FieldSpec{WireName: "branch"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":  ubx.FieldSpec{WireName: "owner"},
+		"Repo":   ubx.FieldSpec{WireName: "repo"},
 	},
 }

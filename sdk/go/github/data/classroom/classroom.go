@@ -3,36 +3,20 @@ package classroom
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
-type Classroom_Organization struct {
-	AvatarUrl any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-}
-
 type ClassroomConfig struct {
-	ClassroomId any
+	Page    any
+	PerPage any
 }
 
 type ClassroomAttrs struct {
-	// Whether classroom is archived.
-	Archived any
-	ClassroomId any
-	// Unique identifier of the classroom.
-	Id any
-	// The name of the classroom.
-	Name any
-	// A GitHub organization.
-	Organization any
-	// The URL of the classroom on GitHub Classroom.
-	Url any
+	Page    any
+	PerPage any
 }
 
 var Classroom = ubx.DataSourceBinding{
 	WireType: "github_classroom",
 	Fields: ubx.FieldMap{
-		"ClassroomId": ubx.FieldSpec{WireName: "classroom_id"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

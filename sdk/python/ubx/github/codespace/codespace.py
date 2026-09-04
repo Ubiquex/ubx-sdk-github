@@ -8,44 +8,26 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class Codespace_BillableOwner:
-    # The URL of the avatar image for the billable owner (user or organization) associated with this codespace. (AI-inferred)
     avatar_url: Any = None
-    # The email address of the billable owner for the Codespace. This field may be empty if the owner has not associated a public email. (AI-inferred)
     email: Any = None
-    # The URL to the events for the billable owner of the codespace. (AI-inferred)
     events_url: Any = None
-    # The API URL to retrieve the list of followers of the billable owner. (AI-inferred)
     followers_url: Any = None
-    # The API URL for the list of users that this billable owner follows on GitHub. (AI-inferred)
     following_url: Any = None
-    # The API URL to the gists of the billable owner, typically a GitHub user or organization. (AI-inferred)
     gists_url: Any = None
-    # The user's Gravatar ID, a hash used to construct their Gravatar avatar URL. (AI-inferred)
     gravatar_id: Any = None
-    # The HTML URL of the billable owner's GitHub profile page (e.g., https://github.com/username). (AI-inferred)
     html_url: Any = None
     id: Any = None
-    # The GitHub username or organization name of the entity that is billed for the codespace. (AI-inferred)
     login: Any = None
-    # The name of the user or organization that is the billable owner for the codespace. (AI-inferred)
     name: Any = None
-    # The GitHub node ID of the billable owner for the codespace. (AI-inferred)
     node_id: Any = None
-    # The API URL to list the organizations that the billable owner belongs to. (AI-inferred)
     organizations_url: Any = None
-    # The URL to retrieve the events received by the billable owner. (AI-inferred)
     received_events_url: Any = None
-    # The URL to the list of repositories owned by this billable owner. (AI-inferred)
     repos_url: Any = None
-    # Whether the billable owner is a GitHub site administrator. (AI-inferred)
     site_admin: Any = None
     starred_at: Any = None
-    # The URL template for the starred repositories of the billable owner. This URL can be used to list the repositories that the owner has starred. (AI-inferred)
     starred_url: Any = None
-    # The URL to the subscriptions of the billable owner associated with the codespace. (AI-inferred)
     subscriptions_url: Any = None
     type: Any = None
-    # The API resource URL for the billable owner of the codespace, typically the GitHub user or organization that will be billed. (AI-inferred)
     url: Any = None
     user_view_type: Any = None
 
@@ -81,55 +63,36 @@ class Codespace_Machine:
 
 @dataclasses.dataclass
 class Codespace_Repository_CodeOfConduct:
-    # The full body text of the code of conduct. (AI-inferred)
     body: Any = None
-    # The URL to view the code of conduct in a web browser. (AI-inferred)
     html_url: Any = None
-    # The unique identifier for the code of conduct applied to the repository. For example, 'contributor_covenant' or 'citizen_code_of_conduct'. (AI-inferred)
     key: Any = None
-    # The name of the code of conduct. (AI-inferred)
     name: Any = None
-    # The URL to the code of conduct document for the repository. (AI-inferred)
     url: Any = None
 
 @dataclasses.dataclass
 class Codespace_Repository_License:
-    # The SPDX identifier for the repository's license, such as 'mit' or 'apache-2.0'. (AI-inferred)
     key: Any = None
-    # The human-readable name of the license associated with the repository. (AI-inferred)
     name: Any = None
-    # The GraphQL node ID of the license. (AI-inferred)
     node_id: Any = None
-    # The SPDX license identifier (e.g., 'MIT', 'Apache-2.0') for the repository's license, if defined. (AI-inferred)
     spdx_id: Any = None
-    # The URL associated with the repository's license. (AI-inferred)
     url: Any = None
 
 @dataclasses.dataclass
 class Codespace_Repository_Permissions:
-    # Indicates whether the user has admin permission on the repository associated with this codespace. (AI-inferred)
     admin: Any = None
-    # Whether the workspace has maintain-level permission on the repository. When true, the user can manage repository settings without full admin access. (AI-inferred)
     maintain: Any = None
-    # Indicates whether the user has permission to pull (read) from the repository. (AI-inferred)
     pull: Any = None
-    # Whether the user has push access to the repository. (AI-inferred)
     push: Any = None
-    # Indicates whether the user has triage permission on this repository, which grants read access and the ability to manage issues and pull requests without write access. (AI-inferred)
     triage: Any = None
 
 @dataclasses.dataclass
 class Codespace_Repository_SecurityAndAnalysis_AdvancedSecurity:
-    # Whether GitHub Advanced Security is enabled for the repository. Possible values are `enabled` or `disabled`. (AI-inferred)
     status: Any = None
 
 @dataclasses.dataclass
 class Codespace_Repository_SecurityAndAnalysis_SecretScanningDelegatedBypassOptions_Reviewers:
-    # The mode of the reviewer for the secret scanning delegated bypass. `ALWAYS` means the reviewer is always required to approve a bypass request, while `EXEMPT` means the reviewer is exempt from the approval requirement. (AI-inferred)
     mode: Any = None
-    # The numeric ID of a user or team with permission to approve delegated secret scanning bypasses. (AI-inferred)
     reviewer_id: Any = None
-    # The type of reviewer for the secret scanning delegated bypass option. Allowed values are TEAM (a team) or ROLE (a role). (AI-inferred)
     reviewer_type: Any = None
 
 @dataclasses.dataclass
@@ -141,201 +104,114 @@ class Codespace_Repository_SecurityAndAnalysis_SecretScanningDelegatedBypassOpti
 class Codespace_Repository_SecurityAndAnalysis:
     # Enable or disable GitHub Advanced Security for the repository. For standalone Code Scanning or Secret Protection products, this parameter cannot be used.
     advanced_security: Any = None
-    # The code security settings for the repository, as part of its security and analysis configuration. (AI-inferred)
     code_security: Any = None
     # Enable or disable Dependabot security updates for the repository.
     dependabot_security_updates: Any = None
-    # Configuration for GitHub secret scanning, which detects secrets such as tokens and keys committed to the repository. (AI-inferred)
     secret_scanning: Any = None
-    # An object representing the status of the AI detection feature for secret scanning in the repository. It contains a 'status' field that can be set to 'enabled' or 'disabled'. (AI-inferred)
     secret_scanning_ai_detection: Any = None
-    # An object that configures which repository roles or teams are permitted to dismiss secret scanning alerts. This is part of the repository's security and analysis settings. (AI-inferred)
     secret_scanning_delegated_alert_dismissal: Any = None
-    # Configuration for secret scanning delegated bypass, which allows specific actors to bypass push protection when a secret is detected. (AI-inferred)
     secret_scanning_delegated_bypass: Any = None
-    # Options for configuring delegated bypass of secret scanning, defining which users or teams are allowed to bypass secret scanning alerts. (AI-inferred)
     secret_scanning_delegated_bypass_options: Any = None
-    # Object defining custom secret scanning patterns that are not tied to a specific provider. These patterns allow repositories to detect additional secrets beyond those covered by GitHub's built-in provider patterns. (AI-inferred)
     secret_scanning_non_provider_patterns: Any = None
-    # Configuration for secret scanning push protection on the repository. This feature helps prevent secrets from being pushed by blocking the push if a secret is detected. (AI-inferred)
     secret_scanning_push_protection: Any = None
     secret_scanning_validity_checks: Any = None
 
 @dataclasses.dataclass
 class Codespace_Repository:
-    # Boolean indicating whether forking is allowed for this repository. (AI-inferred)
     allow_forking: Any = None
-    # The URL to download the repository's source code archive (e.g., as a zip or tar file). (AI-inferred)
     archive_url: Any = None
-    # A boolean indicating whether the repository is archived. Archived repositories are read-only and cannot be modified. (AI-inferred)
     archived: Any = None
-    # The URL to access the list of assignees for this repository. (AI-inferred)
     assignees_url: Any = None
-    # The URL template for accessing blob objects in the repository's Git database, with a placeholder for the blob SHA. (AI-inferred)
     blobs_url: Any = None
-    # The URL to the API endpoint for listing branches in this repository. (AI-inferred)
     branches_url: Any = None
-    # The HTTPS URL used to clone the repository. (AI-inferred)
     clone_url: Any = None
     # Code Of Conduct
     code_of_conduct: Any = None
-    # The URL endpoint for accessing the list of collaborators for this repository. (AI-inferred)
     collaborators_url: Any = None
-    # The URL to the GitHub API endpoint for comments associated with the repository. (AI-inferred)
     comments_url: Any = None
-    # The URL template for accessing the repository's commit history via the GitHub API. It may include a placeholder such as {/sha} to fetch individual commits. (AI-inferred)
     commits_url: Any = None
-    # The API URL template for comparing commits or branches in the repository. (AI-inferred)
     compare_url: Any = None
-    # The URL template for accessing the contents of the repository, with a placeholder for the path (e.g., https://api.github.com/repos/{owner}/{repo}/contents/{+path}). (AI-inferred)
     contents_url: Any = None
-    # The API URL that provides a list of contributors to the repository. (AI-inferred)
     contributors_url: Any = None
-    # The creation timestamp of the associated repository, represented as a string. (AI-inferred)
     created_at: Any = None
     # The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
     custom_properties: Any = None
-    # The default branch of the repository associated with the GitHub Codespace. (AI-inferred)
     default_branch: Any = None
-    # Indicates whether the repository automatically deletes branches after their pull requests are merged. (AI-inferred)
     delete_branch_on_merge: Any = None
-    # The API endpoint URL for accessing the deployments of this repository. (AI-inferred)
     deployments_url: Any = None
-    # The description of the repository that the codespace is associated with. This is the short description set on the repository's GitHub page. (AI-inferred)
     description: Any = None
-    # Whether the repository is disabled. A disabled repository is unavailable for access or use. (AI-inferred)
     disabled: Any = None
-    # The URL of the repository's downloads API endpoint, where you can list and retrieve repository download files. (AI-inferred)
     downloads_url: Any = None
-    # The URL to the repository's events. For example: https://api.github.com/repos/{owner}/{repo}/events. (AI-inferred)
     events_url: Any = None
-    # Whether the repository is a fork. (AI-inferred)
     fork: Any = None
-    # The number of forks of the repository. (AI-inferred)
     forks: Any = None
-    # The number of forks of the repository associated with the codespace. (AI-inferred)
     forks_count: Any = None
-    # The API URL to retrieve the list of forks for this repository. (AI-inferred)
     forks_url: Any = None
-    # The full name of the repository, including the owner, in the format `owner/repo`. (AI-inferred)
     full_name: Any = None
-    # The URL to the repository's git commits, pointing to the commit list for the GitHub repository associated with this codespace. (AI-inferred)
     git_commits_url: Any = None
-    # The URL template to access git refs for the repository. (AI-inferred)
     git_refs_url: Any = None
-    # The URL to the Git tags of the repository associated with the codespace. (AI-inferred)
     git_tags_url: Any = None
-    # The git URL for the repository, used to clone it over the git protocol (e.g., git://github.com/owner/repo.git). (AI-inferred)
     git_url: Any = None
-    # Indicates whether the GitHub repository has Discussions enabled. (AI-inferred)
     has_discussions: Any = None
-    # Indicates whether the repository has the GitHub Downloads feature enabled. (AI-inferred)
     has_downloads: Any = None
-    # Indicates whether the repository has the GitHub Issues feature enabled. (AI-inferred)
     has_issues: Any = None
-    # Indicates whether the repository has GitHub Pages enabled. (AI-inferred)
     has_pages: Any = None
-    # Whether the repository has the Projects feature enabled. (AI-inferred)
     has_projects: Any = None
     has_pull_requests: Any = None
-    # Indicates whether the repository has a wiki enabled. (AI-inferred)
     has_wiki: Any = None
-    # The URL of the repository's homepage, if one has been set. (AI-inferred)
     homepage: Any = None
-    # The API endpoint URL for managing webhooks in the repository. (AI-inferred)
     hooks_url: Any = None
-    # The URL of the repository on GitHub, e.g., https://github.com/owner/repo. (AI-inferred)
     html_url: Any = None
-    # The unique numeric identifier of the repository associated with the codespace. (AI-inferred)
     id: Any = None
-    # Indicates whether the repository is a template repository. Template repositories allow users to generate new repositories with the same directory structure and files. (AI-inferred)
     is_template: Any = None
-    # The URL template for issue comments in the repository, following GitHub's API format. It can be used to construct endpoints for listing, creating, or updating comments on issues. (AI-inferred)
     issue_comment_url: Any = None
-    # The API endpoint URL for issue events in this repository, following GitHub's hypermedia URL template format. (AI-inferred)
     issue_events_url: Any = None
-    # The URL to access the issues list for the repository. (AI-inferred)
     issues_url: Any = None
-    # The URL to access the repository's deploy keys, used by the GitHub API to manage key information. (AI-inferred)
     keys_url: Any = None
-    # The URL of the GitHub API endpoint for managing labels for this repository. (AI-inferred)
     labels_url: Any = None
-    # The primary programming language of the repository, as defined by GitHub's API. (AI-inferred)
     language: Any = None
-    # The URL to the GitHub API endpoint that lists the programming languages used in the repository. (AI-inferred)
     languages_url: Any = None
     license: Any = None
-    # The API URL for the merges endpoint of the repository, which can be used to check merge status or perform merges. (AI-inferred)
     merges_url: Any = None
-    # The API endpoint URL for accessing the milestones of this repository. (AI-inferred)
     milestones_url: Any = None
-    # The URL of the mirror repository, if this repository is a mirror. This property is only present for mirrored repositories. (AI-inferred)
     mirror_url: Any = None
-    # The name of the repository, without the owner/organization prefix. (AI-inferred)
     name: Any = None
     network_count: Any = None
-    # The unique identifier for the repository, used in GraphQL operations. (AI-inferred)
     node_id: Any = None
-    # The URL to access notifications for this repository, as provided by the GitHub API. (AI-inferred)
     notifications_url: Any = None
-    # The number of open issues in the repository. (AI-inferred)
     open_issues: Any = None
-    # The number of open issues in the repository. (AI-inferred)
     open_issues_count: Any = None
     # A GitHub user.
     owner: Any = None
     permissions: Any = None
-    # Specifies whether the GitHub repository is private. Set to true for a private repository, false for a public one. (AI-inferred)
     private: Any = None
     # The policy controlling who can create pull requests: all or collaborators_only.
     pull_request_creation_policy: Any = None
-    # The URL used to access pull requests for the repository. (AI-inferred)
     pulls_url: Any = None
-    # The date and time of the last push to the repository. (AI-inferred)
     pushed_at: Any = None
-    # The URL template for the repository's releases, with placeholders for additional parameters (e.g., release ID). (AI-inferred)
     releases_url: Any = None
     role_name: Any = None
-    # Security and analysis settings for the repository, including features like vulnerability alerts, dependency graph, secret scanning, and advanced security. (AI-inferred)
     security_and_analysis: Any = None
     # The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
     size: Any = None
-    # The SSH URL for cloning the repository. (AI-inferred)
     ssh_url: Any = None
-    # The number of users who have starred the repository. (AI-inferred)
     stargazers_count: Any = None
-    # The API endpoint URL for the list of stargazers of the repository. (AI-inferred)
     stargazers_url: Any = None
-    # The URL template to query commit statuses for the repository, typically containing a placeholder (e.g., `{sha}`) for the commit SHA. (AI-inferred)
     statuses_url: Any = None
-    # Number of users subscribed to the repository. (AI-inferred)
     subscribers_count: Any = None
-    # The API endpoint URL for listing the subscribers (watchers) of the repository. (AI-inferred)
     subscribers_url: Any = None
-    # The URL to subscribe to the repository for notifications, as provided by the GitHub API. (AI-inferred)
     subscription_url: Any = None
-    # The URL to access the repository via Subversion (SVN). (AI-inferred)
     svn_url: Any = None
-    # The API endpoint URL for listing tags of the repository associated with the codespace. (AI-inferred)
     tags_url: Any = None
-    # The API endpoint URL for the teams associated with the repository. (AI-inferred)
     teams_url: Any = None
-    # A temporary token used for cloning the repository. (AI-inferred)
     temp_clone_token: Any = None
-    # The list of topics associated with the repository. (AI-inferred)
     topics: Any = None
-    # URL template for accessing the repository's Git trees API endpoint, typically including placeholders for owner, repo, and tree SHA. (AI-inferred)
     trees_url: Any = None
-    # The timestamp of when the repository was last updated, formatted as an ISO 8601 string (e.g., 2024-01-01T12:34:56Z). (AI-inferred)
     updated_at: Any = None
-    # The GitHub API URL of the repository. (AI-inferred)
     url: Any = None
     visibility: Any = None
-    # Number of users watching (subscribing to) the repository. (AI-inferred)
     watchers: Any = None
-    # The number of users who have starred (watched) this repository, equivalent to stargazers_count. (AI-inferred)
     watchers_count: Any = None
-    # Indicates whether commits made via the GitHub web interface are required to include a sign-off (i.e., the repository's web commit signoff setting is enabled). (AI-inferred)
     web_commit_signoff_required: Any = None
 
 @dataclasses.dataclass
@@ -352,7 +228,6 @@ class CodespaceConfig:
 class CodespaceAttrs:
     # A GitHub user.
     billable_owner: Any = None
-    # The timestamp indicating when the codespace was created. (AI-inferred)
     created_at: Any = None
     # Path to devcontainer.json from repo root used to create Codespace.
     devcontainer_path: Any = None
@@ -391,7 +266,6 @@ class CodespaceAttrs:
     publish_url: Any = None
     # API URL for the Pull Request associated with this codespace, if any.
     pulls_url: Any = None
-    # List of recently opened folders in the Codespace, showing the paths of folders the user has accessed recently. (AI-inferred)
     recent_folders: Any = None
     # Minimal Repository
     repository: Any = None
@@ -399,7 +273,6 @@ class CodespaceAttrs:
     retention_expires_at: Any = None
     # Duration in minutes after codespace has gone idle in which it will be deleted. Must be integer minutes between 0 and 43200 (30 days).
     retention_period_minutes: Any = None
-    # Constraints applied to the codespace's runtime environment, such as allowed port privacy settings. (AI-inferred)
     runtime_constraints: Any = None
     # API URL to start this codespace.
     start_url: Any = None
@@ -407,7 +280,6 @@ class CodespaceAttrs:
     state: Any = None
     # API URL to stop this codespace.
     stop_url: Any = None
-    # The timestamp of the last update to the codespace, in ISO 8601 format. (AI-inferred)
     updated_at: Any = None
     # API URL for this codespace.
     url: Any = None

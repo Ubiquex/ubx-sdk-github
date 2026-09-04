@@ -6,19 +6,19 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 type Page_HttpsCertificate struct {
 	Description any
 	// Array of the domain set and its alternate name (if it is configured)
-	Domains any
+	Domains   any
 	ExpiresAt any
-	State any
+	State     any
 }
 
 type Page_Source struct {
 	Branch any
-	Path any
+	Path   any
 }
 
 type PageConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type PageAttrs struct {
@@ -29,18 +29,18 @@ type PageAttrs struct {
 	// Whether the Page has a custom 404 page.
 	Custom404 any
 	// The web address the Page can be accessed from.
-	HtmlUrl any
+	HtmlUrl          any
 	HttpsCertificate any
 	// Whether https is enabled on the domain
 	HttpsEnforced any
-	Owner any
+	Owner         any
 	// The timestamp when a pending domain becomes unverified.
 	PendingDomainUnverifiedAt any
 	// The state if the domain is verified
 	ProtectedDomainState any
 	// Whether the GitHub Pages site is publicly visible. If set to `true`, the site is accessible to anyone on the internet. If set to `false`, the site will only be accessible to users who have at least `read` access to the repository that published the site.
 	Public any
-	Repo any
+	Repo   any
 	Source any
 	// The status of the most recent build of the Page.
 	Status any
@@ -52,6 +52,6 @@ var Page = ubx.DataSourceBinding{
 	WireType: "github_page",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

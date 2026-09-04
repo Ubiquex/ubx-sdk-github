@@ -5,57 +5,57 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Profile_Files_CodeOfConduct struct {
 	HtmlUrl any
-	Key any
-	Name any
-	Url any
+	Key     any
+	Name    any
+	Url     any
 }
 
 type Profile_Files_CodeOfConductFile struct {
 	HtmlUrl any
-	Url any
+	Url     any
 }
 
 type Profile_Files_License struct {
 	HtmlUrl any
-	Key any
-	Name any
-	NodeId any
-	SpdxId any
-	Url any
+	Key     any
+	Name    any
+	NodeId  any
+	SpdxId  any
+	Url     any
 }
 
 type Profile_Files struct {
 	// Code of Conduct Simple
-	CodeOfConduct any
+	CodeOfConduct     any
 	CodeOfConductFile any
-	Contributing any
-	IssueTemplate any
+	Contributing      any
+	IssueTemplate     any
 	// License Simple
-	License any
+	License             any
 	PullRequestTemplate any
-	Readme any
+	Readme              any
 }
 
 type ProfileConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type ProfileAttrs struct {
 	ContentReportsEnabled any
-	Description any
-	Documentation any
-	Files any
-	HealthPercentage any
-	Owner any
-	Repo any
-	UpdatedAt any
+	Description           any
+	Documentation         any
+	Files                 any
+	HealthPercentage      any
+	Owner                 any
+	Repo                  any
+	UpdatedAt             any
 }
 
 var Profile = ubx.DataSourceBinding{
 	WireType: "github_community_profile",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

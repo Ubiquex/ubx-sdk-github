@@ -2,22 +2,25 @@
 import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface MembershipConfig {
+  enterprise: string | Computed<string>;
+  enterpriseTeam: string | Computed<string>;
   page?: number | Computed<number>;
   perPage?: number | Computed<number>;
-  state?: string | Computed<string>;
 }
 
 export interface MembershipAttrs {
+  enterprise: string;
+  enterpriseTeam: string;
   page: number;
   perPage: number;
-  state: string;
 }
 
 export const Membership: DataSourceBinding<MembershipConfig, MembershipAttrs> = {
   wireType: "github_membership",
   fields: {
+    enterprise: "enterprise",
+    enterpriseTeam: "enterprise_team",
     page: "page",
     perPage: "per_page",
-    state: "state",
   },
 };

@@ -10,9 +10,7 @@ import ubx_sdk as ubx
 class Ref_Object:
     # SHA for the reference
     sha: Any = None
-    # The type of Git object that this ref points to. Valid values are commit, tree, blob, and tag. (AI-inferred)
     type: Any = None
-    # The API URL for the git object associated with the reference. (AI-inferred)
     url: Any = None
 
 @dataclasses.dataclass
@@ -28,15 +26,12 @@ class RefConfig:
 
 @dataclasses.dataclass
 class RefAttrs:
-    # The GraphQL node ID of the git reference. (AI-inferred)
     node_id: Any = None
-    # Details of the object that this Git ref points to, including its SHA and type (e.g., commit). (AI-inferred)
     object: Any = None
     # The name of the fully qualified reference (ie: `refs/heads/master`). If it doesn't start with 'refs' and have at least two slashes, it will be rejected.
     ref: Any = None
     # The SHA1 value for this reference.
     sha: Any = None
-    # The API URL of the Git reference, as returned by the GitHub API. (AI-inferred)
     url: Any = None
     # path parameter, not part of the API's own resource representation
     owner: Any = None

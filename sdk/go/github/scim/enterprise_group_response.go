@@ -5,13 +5,24 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type EnterpriseGroupResponse_Members struct {
 	DisplayName any
-	Value any
+	Value       any
+}
+
+type EnterpriseGroupResponse_Meta struct {
+	// A date and time when the user was created.
+	Created any
+	// A data and time when the user was last modified.
+	LastModified any
+	// A URL location of an object
+	Location any
+	// A type of a resource
+	ResourceType any
 }
 
 var EnterpriseGroupResponse_MembersFields = ubx.FieldMap{
-		"DisplayName": ubx.FieldSpec{WireName: "display_name"},
-		"Value": ubx.FieldSpec{WireName: "value"},
-	}
+	"DisplayName": ubx.FieldSpec{WireName: "display_name"},
+	"Value":       ubx.FieldSpec{WireName: "value"},
+}
 
 type EnterpriseGroupResponseConfig struct {
 	// A human-readable name for a security group.
@@ -33,8 +44,12 @@ type EnterpriseGroupResponseAttrs struct {
 	DisplayName any
 	// A unique identifier for the resource as defined by the provisioning client.
 	ExternalId any
+	// The internally generated id for the group object.
+	Id any
 	// The group members.
 	Members any
+	// The metadata associated with the creation/updates to the user.
+	Meta any
 	// The URIs that are used to indicate the namespaces of the SCIM schemas.
 	Schemas any
 	// path parameter, not part of the API's own resource representation
@@ -47,14 +62,14 @@ var EnterpriseGroupResponse = ubx.ResourceBinding{
 	WireType: "github_scim_enterprise_group_response",
 	Fields: ubx.FieldMap{
 		"DisplayName": ubx.FieldSpec{WireName: "display_name"},
-		"ExternalId": ubx.FieldSpec{WireName: "external_id"},
+		"ExternalId":  ubx.FieldSpec{WireName: "external_id"},
 		"Members": ubx.FieldSpec{
 			WireName: "members",
-			Kind: "list",
-			Fields: EnterpriseGroupResponse_MembersFields,
+			Kind:     "list",
+			Fields:   EnterpriseGroupResponse_MembersFields,
 		},
-		"Schemas": ubx.FieldSpec{WireName: "schemas"},
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
+		"Schemas":     ubx.FieldSpec{WireName: "schemas"},
+		"Enterprise":  ubx.FieldSpec{WireName: "enterprise"},
 		"ScimGroupId": ubx.FieldSpec{WireName: "scim_group_id"},
 	},
 }

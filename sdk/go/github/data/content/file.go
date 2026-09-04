@@ -4,42 +4,42 @@ package content
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type File_Links struct {
-	Git any
+	Git  any
 	Html any
 	Self any
 }
 
 type FileConfig struct {
 	Owner any
-	Ref any
-	Repo any
+	Ref   any
+	Repo  any
 }
 
 type FileAttrs struct {
-	Links any
-	Content any
-	DownloadUrl any
-	Encoding any
-	GitUrl any
-	HtmlUrl any
-	Name any
-	Owner any
-	Path any
-	Ref any
-	Repo any
-	Sha any
-	Size any
+	Links           any
+	Content         any
+	DownloadUrl     any
+	Encoding        any
+	GitUrl          any
+	HtmlUrl         any
+	Name            any
+	Owner           any
+	Path            any
+	Ref             any
+	Repo            any
+	Sha             any
+	Size            any
 	SubmoduleGitUrl any
-	Target any
-	Type any
-	Url any
+	Target          any
+	Type            any
+	Url             any
 }
 
 var File = ubx.DataSourceBinding{
 	WireType: "github_content_file",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Ref": ubx.FieldSpec{WireName: "ref"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Ref":   ubx.FieldSpec{WireName: "ref"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

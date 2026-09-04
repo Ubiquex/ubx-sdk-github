@@ -19,13 +19,11 @@ type AutolinkConfig struct {
 }
 
 type AutolinkAttrs struct {
-	// The autolink reference's numeric ID. (AI-inferred)
 	Id any
 	// Whether this autolink reference matches alphanumeric characters. If true, the `<num>` parameter of the `url_template` matches alphanumeric characters `A-Z` (case insensitive), `0-9`, and `-`. If false, this autolink reference only matches numeric characters.
 	IsAlphanumeric any
 	// This prefix appended by certain characters will generate a link any time it is found in an issue, pull request, or commit.
 	KeyPrefix any
-	// Timestamp of the autolink reference's last update. (AI-inferred)
 	UpdatedAt any
 	// The URL must contain `<num>` for the reference number. `<num>` matches different characters depending on the value of `is_alphanumeric`.
 	UrlTemplate any
@@ -41,10 +39,10 @@ var Autolink = ubx.ResourceBinding{
 	WireType: "github_autolink",
 	Fields: ubx.FieldMap{
 		"IsAlphanumeric": ubx.FieldSpec{WireName: "is_alphanumeric"},
-		"KeyPrefix": ubx.FieldSpec{WireName: "key_prefix"},
-		"UrlTemplate": ubx.FieldSpec{WireName: "url_template"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"AutolinkId": ubx.FieldSpec{WireName: "autolink_id"},
+		"KeyPrefix":      ubx.FieldSpec{WireName: "key_prefix"},
+		"UrlTemplate":    ubx.FieldSpec{WireName: "url_template"},
+		"Owner":          ubx.FieldSpec{WireName: "owner"},
+		"Repo":           ubx.FieldSpec{WireName: "repo"},
+		"AutolinkId":     ubx.FieldSpec{WireName: "autolink_id"},
 	},
 }

@@ -4,42 +4,42 @@ package concurrency
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type GroupRunList_ConcurrencyGroups_GroupMembers struct {
-	JobHtmlUrl any
-	JobId any
-	JobName any
-	JobUrl any
-	Position any
+	JobHtmlUrl  any
+	JobId       any
+	JobName     any
+	JobUrl      any
+	Position    any
 	PositionUrl any
-	RunHtmlUrl any
-	RunId any
-	RunName any
-	RunUrl any
-	Status any
+	RunHtmlUrl  any
+	RunId       any
+	RunName     any
+	RunUrl      any
+	Status      any
 }
 
 type GroupRunList_ConcurrencyGroups struct {
 	GroupMembers any
-	GroupName any
-	GroupUrl any
+	GroupName    any
+	GroupUrl     any
 }
 
 type GroupRunListConfig struct {
-	After any
-	Before any
-	Owner any
+	After   any
+	Before  any
+	Owner   any
 	PerPage any
-	Repo any
-	RunId any
+	Repo    any
+	RunId   any
 }
 
 type GroupRunListAttrs struct {
-	After any
-	Before any
+	After             any
+	Before            any
 	ConcurrencyGroups any
-	Owner any
-	PerPage any
-	Repo any
-	RunId any
+	Owner             any
+	PerPage           any
+	Repo              any
+	RunId             any
 	// The total number of concurrency groups this workflow run participates in, derived from the run's configuration. This count is not filtered by whether the run currently holds or is waiting in each group, so it can include groups whose `group_members` array is empty (for example, when the run has already released its lease in that group).
 	TotalCount any
 }
@@ -47,11 +47,11 @@ type GroupRunListAttrs struct {
 var GroupRunList = ubx.DataSourceBinding{
 	WireType: "github_concurrency_group_run_list",
 	Fields: ubx.FieldMap{
-		"After": ubx.FieldSpec{WireName: "after"},
-		"Before": ubx.FieldSpec{WireName: "before"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"After":   ubx.FieldSpec{WireName: "after"},
+		"Before":  ubx.FieldSpec{WireName: "before"},
+		"Owner":   ubx.FieldSpec{WireName: "owner"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"RunId": ubx.FieldSpec{WireName: "run_id"},
+		"Repo":    ubx.FieldSpec{WireName: "repo"},
+		"RunId":   ubx.FieldSpec{WireName: "run_id"},
 	},
 }

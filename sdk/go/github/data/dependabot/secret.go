@@ -3,27 +3,34 @@ package dependabot
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
+type Secret_Secrets struct {
+	CreatedAt any
+	Name      any
+	UpdatedAt any
+}
+
 type SecretConfig struct {
-	Owner any
-	Repo any
-	SecretName any
+	Owner   any
+	Page    any
+	PerPage any
+	Repo    any
 }
 
 type SecretAttrs struct {
-	CreatedAt any
-	// The name of the secret.
-	Name any
-	Owner any
-	Repo any
-	SecretName any
-	UpdatedAt any
+	Owner      any
+	Page       any
+	PerPage    any
+	Repo       any
+	Secrets    any
+	TotalCount any
 }
 
 var Secret = ubx.DataSourceBinding{
 	WireType: "github_dependabot_secret",
 	Fields: ubx.FieldMap{
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"SecretName": ubx.FieldSpec{WireName: "secret_name"},
+		"Owner":   ubx.FieldSpec{WireName: "owner"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Repo":    ubx.FieldSpec{WireName: "repo"},
 	},
 }

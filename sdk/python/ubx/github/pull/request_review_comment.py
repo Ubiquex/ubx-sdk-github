@@ -8,78 +8,47 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class RequestReviewComment_Links_Html:
-    # The URL to access the pull request review comment in the GitHub web interface. (AI-inferred)
     href: Any = None
 
 @dataclasses.dataclass
 class RequestReviewComment_Links:
-    # The HTML URL of the pull request review comment, represented as a link object with an href field. (AI-inferred)
     html: Any = None
-    # The link to the pull request associated with this review comment, containing the API URL (href) to the pull request. (AI-inferred)
     pull_request: Any = None
-    # The URL to this pull request review comment itself. (AI-inferred)
     self: Any = None
 
 @dataclasses.dataclass
 class RequestReviewComment_Reactions:
-    # The number of confused reactions on the pull request review comment. (AI-inferred)
     confused: Any = None
-    # The number of eye reactions (👀) on the pull request review comment. (AI-inferred)
     eyes: Any = None
-    # The count of heart (❤️) reactions on the pull request review comment. (AI-inferred)
     heart: Any = None
-    # The number of hooray reactions on the pull request review comment. (AI-inferred)
     hooray: Any = None
-    # The number of laugh reactions (😂) on the pull request review comment. (AI-inferred)
     laugh: Any = None
-    # The number of rocket reactions (🚀) on the review comment. (AI-inferred)
     rocket: Any = None
-    # The total number of reactions on the pull request review comment. (AI-inferred)
     total_count: Any = None
-    # The API URL for the reactions resource on the pull request review comment. (AI-inferred)
     url: Any = None
 
 @dataclasses.dataclass
 class RequestReviewComment_User:
-    # The URL of the user's avatar image on GitHub. (AI-inferred)
     avatar_url: Any = None
-    # Email address of the user who authored the review comment. This field is optional and may be empty if the user's email is not public. (AI-inferred)
     email: Any = None
-    # The URL to retrieve the events performed by this user, with optional placeholder for privacy filtering (e.g., https://api.github.com/users/{username}/events{/privacy}). (AI-inferred)
     events_url: Any = None
-    # The API URL for the user's followers, as defined by the GitHub REST API. (AI-inferred)
     followers_url: Any = None
-    # The URL template for the API endpoint that lists users this user follows. May include a placeholder for optionally specifying a target user. (AI-inferred)
     following_url: Any = None
-    # The URL template for the user's gists, which may include a placeholder for a specific gist ID (e.g., https://api.github.com/users/{user}/gists{/gist_id}). (AI-inferred)
     gists_url: Any = None
-    # The user's Gravatar ID, a hash used to generate the avatar image URL. (AI-inferred)
     gravatar_id: Any = None
-    # The GitHub profile URL for the user. (AI-inferred)
     html_url: Any = None
     id: Any = None
-    # The GitHub username (login) of the user associated with the review comment. (AI-inferred)
     login: Any = None
-    # The display name of the user who authored the pull request review comment. (AI-inferred)
     name: Any = None
-    # The GraphQL node ID for the user associated with the pull request review comment. (AI-inferred)
     node_id: Any = None
-    # The URL to the list of organizations that the user belongs to. (AI-inferred)
     organizations_url: Any = None
-    # The URL to the user's received events in the GitHub API. (AI-inferred)
     received_events_url: Any = None
-    # The API URL to the user's list of repositories. (AI-inferred)
     repos_url: Any = None
-    # Whether the user is a site administrator (i.e., has admin rights on the GitHub instance). (AI-inferred)
     site_admin: Any = None
     starred_at: Any = None
-    # The API endpoint URL that lists repositories starred by the user. (AI-inferred)
     starred_url: Any = None
-    # The API endpoint URL for the user's subscriptions, e.g., https://api.github.com/users/{username}/subscriptions. (AI-inferred)
     subscriptions_url: Any = None
-    # The type of GitHub account, such as 'User' or 'Bot'. (AI-inferred)
     type: Any = None
-    # The API URL for the user associated with this pull request review comment. (AI-inferred)
     url: Any = None
     user_view_type: Any = None
 
@@ -116,19 +85,15 @@ class RequestReviewCommentConfig:
 
 @dataclasses.dataclass
 class RequestReviewCommentAttrs:
-    # Hypermedia links to related resources for this pull request review comment, such as the comment's API endpoint, HTML view, and associated pull request. (AI-inferred)
     links: Any = None
     # How the author is associated with the repository.
     author_association: Any = None
     # The text of the review comment.
     body: Any = None
-    # The rendered HTML version of the comment body. (AI-inferred)
     body_html: Any = None
-    # The plain-text version of the pull request review comment body, as computed by GitHub. (AI-inferred)
     body_text: Any = None
     # The SHA of the commit needing a comment. Not using the latest commit SHA may render your comment outdated if a subsequent commit modifies the line you specify as the `position`.
     commit_id: Any = None
-    # The timestamp of when the pull request review comment was created, in RFC3339 format. (AI-inferred)
     created_at: Any = None
     # The diff of the line that the comment refers to.
     diff_hunk: Any = None
@@ -160,7 +125,6 @@ class RequestReviewCommentAttrs:
     pull_request_review_id: Any = None
     # URL for the pull request that the review comment belongs to.
     pull_request_url: Any = None
-    # An object containing reaction summary counts (such as +1, -1, laugh, hooray, confused, heart, rocket, eyes) and the total count for this review comment, reflecting how users have reacted to it. (AI-inferred)
     reactions: Any = None
     # In a split diff view, the side of the diff that the pull request's changes appear on. Can be `LEFT` or `RIGHT`. Use `LEFT` for deletions that appear in red. Use `RIGHT` for additions that appear in green or unchanged lines that appear in white and are shown for context. For a multi-line comment, side represents whether the last line of the comment range is a deletion or addition. For more information, see "[Diff view options](https://docs.github.com/enterprise-cloud@latest/articles/about-comparing-branches-in-pull-requests#diff-view-options)" in the GitHub Help documentation.
     side: Any = None
@@ -170,7 +134,6 @@ class RequestReviewCommentAttrs:
     start_side: Any = None
     # The level at which the comment is targeted.
     subject_type: Any = None
-    # The timestamp of the last update to the review comment. (AI-inferred)
     updated_at: Any = None
     # URL for the pull request review comment
     url: Any = None

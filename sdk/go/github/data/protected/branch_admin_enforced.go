@@ -5,23 +5,23 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type BranchAdminEnforcedConfig struct {
 	Branch any
-	Owner any
-	Repo any
+	Owner  any
+	Repo   any
 }
 
 type BranchAdminEnforcedAttrs struct {
-	Branch any
+	Branch  any
 	Enabled any
-	Owner any
-	Repo any
-	Url any
+	Owner   any
+	Repo    any
+	Url     any
 }
 
 var BranchAdminEnforced = ubx.DataSourceBinding{
 	WireType: "github_protected_branch_admin_enforced",
 	Fields: ubx.FieldMap{
 		"Branch": ubx.FieldSpec{WireName: "branch"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":  ubx.FieldSpec{WireName: "owner"},
+		"Repo":   ubx.FieldSpec{WireName: "repo"},
 	},
 }

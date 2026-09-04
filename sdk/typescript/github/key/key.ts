@@ -11,20 +11,15 @@ export interface KeyConfig {
 }
 
 export interface KeyAttrs {
-  /** The date and time when the key was created, in ISO 8601 format (e.g., 2023-01-01T12:00:00Z). This timestamp is set by the GitHub API upon key creation. (AI-inferred) */
   createdAt: string;
   id: number;
   /** The public SSH key to add to your GitHub account. */
   key: string;
-  /** The date and time when this GitHub key was last used for authentication. (AI-inferred) */
   lastUsed: string;
-  /** Indicates whether the key is read-only (true) or has read/write access (false). (AI-inferred) */
   readOnly: boolean;
   /** A descriptive name for the new key. */
   title: string;
-  /** The GitHub API URL for this SSH key. (AI-inferred) */
   url: string;
-  /** Boolean indicating whether the key has been verified by GitHub. (AI-inferred) */
   verified: boolean;
   /** path parameter, not part of the API's own resource representation */
   keyId: string;

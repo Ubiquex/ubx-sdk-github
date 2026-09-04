@@ -4,98 +4,63 @@ package check
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Suite_App_Owner struct {
-	// The URL of the avatar image for the owner of the GitHub App. (AI-inferred)
-	AvatarUrl any
-	// The timestamp indicating when the GitHub user or organization that owns the app was created. (AI-inferred)
-	CreatedAt any
-	Description any
-	// The public email address of the owner (user or organization) of the GitHub App. (AI-inferred)
-	Email any
-	// The URL template for listing events for the owner (user or organization) of the GitHub App. (AI-inferred)
-	EventsUrl any
-	// URL to fetch the list of followers for this owner. (AI-inferred)
-	FollowersUrl any
-	// The URL template to list the users this GitHub owner is following. Typically contains a placeholder for the username, e.g., 'https://api.github.com/users/{owner}/following'. (AI-inferred)
-	FollowingUrl any
-	// The URL template for the owner's gists, as returned by the GitHub API, e.g., https://api.github.com/users/{owner}/gists{/gist_id}. (AI-inferred)
-	GistsUrl any
-	// The Gravatar identifier for the owner, typically a hash used to generate the owner's avatar URL. This may be an empty string if no Gravatar is associated. (AI-inferred)
-	GravatarId any
-	// The HTML URL of the GitHub user or organization that owns the app. (AI-inferred)
-	HtmlUrl any
-	// The unique identifier for the owner (user or organization) of the GitHub App. (AI-inferred)
-	Id any
-	// The GitHub username or organization name of the owner of the GitHub App that created the check suite. (AI-inferred)
-	Login any
-	Name any
-	// The unique node identifier for the GitHub user or organization that owns the app. This is the global ID used in GraphQL API operations. (AI-inferred)
-	NodeId any
-	// The URL to fetch the list of organizations that the owner belongs to. (AI-inferred)
-	OrganizationsUrl any
-	// The API endpoint URL to retrieve events received by this owner (user or organization). (AI-inferred)
+	AvatarUrl         any
+	CreatedAt         any
+	Description       any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	// The API endpoint URL to retrieve the list of repositories belonging to this owner. (AI-inferred)
-	ReposUrl any
-	// Indicates whether the user is a site administrator for GitHub. (AI-inferred)
-	SiteAdmin any
-	Slug any
-	StarredAt any
-	// The URL template to list repositories starred by the owner, with placeholders for {owner} and {repo}. (AI-inferred)
-	StarredUrl any
-	// The URL to list the subscriptions of the app owner (either a user or an organization) in the GitHub API. (AI-inferred)
-	SubscriptionsUrl any
-	// The type of GitHub account that owns the app: either "User" or "Organization". (AI-inferred)
-	Type any
-	// The timestamp at which this owner was last updated, in ISO 8601 format. (AI-inferred)
-	UpdatedAt any
-	// The GitHub API URL for the owner of the app associated with the check suite. (AI-inferred)
-	Url any
-	UserViewType any
-	// The website URL associated with the owner (user or organization) of the GitHub app that created the check suite. (AI-inferred)
-	WebsiteUrl any
+	ReposUrl          any
+	SiteAdmin         any
+	Slug              any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	UpdatedAt         any
+	Url               any
+	UserViewType      any
+	WebsiteUrl        any
 }
 
 type Suite_App_Permissions struct {
-	// The permission level for the GitHub Checks API, which manages check suites and check runs. Typical values are 'read', 'write', or 'none'. (AI-inferred)
-	Checks any
-	// The access level granted to the app for repository contents, such as code and commits. (AI-inferred)
-	Contents any
-	// The access level granted to the GitHub app for deployments. Typically this is one of 'read', 'write', or 'none'. (AI-inferred)
+	Checks      any
+	Contents    any
 	Deployments any
-	// The level of permission for issues within the GitHub app's permissions. Common allowed values are 'read', 'write', or 'none'. (AI-inferred)
-	Issues any
-	// The permission level for metadata resources, indicating the access granted to the GitHub App for metadata endpoints. (AI-inferred)
-	Metadata any
+	Issues      any
+	Metadata    any
 }
 
 type Suite_App struct {
-	// The client ID of the GitHub App that owns the check suite, used to identify the app in API interactions. (AI-inferred)
-	ClientId any
-	// The timestamp indicating when the corresponding app was created. (AI-inferred)
-	CreatedAt any
-	// The description of the GitHub App that created the check suite. (AI-inferred)
+	ClientId    any
+	CreatedAt   any
 	Description any
 	// The list of events for the GitHub app. Note that the `installation_target`, `security_advisory`, and `meta` events are not included because they are global events and not specific to an installation.
-	Events any
-	// The URL of the app's external website, as defined by the GitHub App. (AI-inferred)
+	Events      any
 	ExternalUrl any
-	// The URL to the GitHub App's public landing page. (AI-inferred)
-	HtmlUrl any
+	HtmlUrl     any
 	// Unique identifier of the GitHub app
 	Id any
 	// The number of installations associated with the GitHub app. Only returned when the integration is requesting details about itself.
 	InstallationsCount any
 	// The name of the GitHub app
-	Name any
-	// The app's node ID, used as the unique identifier for the app in GitHub's GraphQL API. (AI-inferred)
+	Name   any
 	NodeId any
-	// The user or organization that owns the GitHub App associated with the check suite. (AI-inferred)
-	Owner any
+	Owner  any
 	// The set of permissions for the GitHub app
 	Permissions any
 	// The slug name of the GitHub app
-	Slug any
-	// The ISO 8601 timestamp indicating when the GitHub App was last updated. (AI-inferred)
+	Slug      any
 	UpdatedAt any
 }
 
@@ -122,130 +87,81 @@ type Suite_HeadCommit struct {
 }
 
 type Suite_PullRequests_Base_Repo struct {
-	Id any
-	// The name of the base repository that the pull request targets. (AI-inferred)
+	Id   any
 	Name any
-	// The GitHub API URL for the base repository. (AI-inferred)
-	Url any
+	Url  any
 }
 
 type Suite_PullRequests_Base struct {
-	// The name of the branch the pull request is merging into. (AI-inferred)
-	Ref any
-	// The repository on which the base branch of the pull request resides. Contains metadata such as the repository name, owner, and other identifying information. (AI-inferred)
+	Ref  any
 	Repo any
-	// The commit SHA of the base branch of the pull request. (AI-inferred)
-	Sha any
+	Sha  any
 }
 
 type Suite_PullRequests struct {
-	// The base branch and repository of the pull request. (AI-inferred)
-	Base any
-	// The head reference (branch) of the pull request, containing metadata such as the branch name, commit SHA, and repository details. (AI-inferred)
-	Head any
-	// The unique identifier of the pull request in the check suite's pull requests list. (AI-inferred)
-	Id any
-	// The number that identifies the pull request within its repository. (AI-inferred)
+	Base   any
+	Head   any
+	Id     any
 	Number any
-	// The REST API URL that points to this pull request. (AI-inferred)
-	Url any
+	Url    any
 }
 
 type Suite_Repository_CodeOfConduct struct {
-	// The full text of the code of conduct. (AI-inferred)
-	Body any
-	// The URL to the HTML page for the code of conduct. (AI-inferred)
+	Body    any
 	HtmlUrl any
-	// A unique string key that identifies the code of conduct (e.g., 'contributor_covenant'). (AI-inferred)
-	Key any
-	// The name of the code of conduct. (AI-inferred)
-	Name any
-	// The URL to the code of conduct document. (AI-inferred)
-	Url any
+	Key     any
+	Name    any
+	Url     any
 }
 
 type Suite_Repository_License struct {
-	// The unique identifier for the license, e.g., 'mit' or 'apache-2.0'. (AI-inferred)
-	Key any
-	// The full name of the license, such as 'MIT License' or 'Apache License 2.0'. (AI-inferred)
-	Name any
-	// The node_id is the GraphQL global node ID for the license object. (AI-inferred)
+	Key    any
+	Name   any
 	NodeId any
-	// The SPDX identifier for the license, such as 'MIT' or 'Apache-2.0'. May be null if the license does not have a standard SPDX identifier. (AI-inferred)
 	SpdxId any
-	// The URL to the license metadata for the repository, typically the GitHub API endpoint for the license. (AI-inferred)
-	Url any
+	Url    any
 }
 
 type Suite_Repository_Owner struct {
-	// The URL of the avatar image for the repository owner. (AI-inferred)
-	AvatarUrl any
-	// The email address of the repository owner, which may be absent if not provided or not publicly available. (AI-inferred)
-	Email any
-	// The URL to the events associated with this owner (user or organization), typically a template URL with a {/privacy} placeholder. (AI-inferred)
-	EventsUrl any
-	// The URL to list the followers of this repository owner. (AI-inferred)
-	FollowersUrl any
-	// The URL template for the following resource in the GitHub API, used to list the users or organizations that this repository owner follows. (AI-inferred)
-	FollowingUrl any
-	// The URL to the owner's gists, typically including a template placeholder for a specific gist ID. (AI-inferred)
-	GistsUrl any
-	// The Gravatar ID for the repository owner, used to construct the owner's avatar image URL. This may be an empty string if the owner has no associated Gravatar. (AI-inferred)
-	GravatarId any
-	// The HTML URL of the repository owner's GitHub profile page (e.g., https://github.com/{owner}). (AI-inferred)
-	HtmlUrl any
-	// The unique numeric identifier of the repository owner (user or organization). (AI-inferred)
-	Id any
-	// The username or organization name of the repository owner on GitHub. (AI-inferred)
-	Login any
-	// The display name of the repository owner, such as a user's full name or an organization's name. (AI-inferred)
-	Name any
-	// The GraphQL node identifier of the repository owner. (AI-inferred)
-	NodeId any
-	// The URL to the API endpoint that lists the organizations this repository owner is a member of. (AI-inferred)
-	OrganizationsUrl any
-	// The API endpoint URL for retrieving events received by the owner of the repository, which may be a user or an organization. (AI-inferred)
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	// The API URL that lists the repositories owned by this repository owner. (AI-inferred)
-	ReposUrl any
-	// Indicates whether the repository owner is a GitHub site administrator. (AI-inferred)
-	SiteAdmin any
-	StarredAt any
-	// A template URL for accessing the list of repositories starred by this owner. It may contain placeholders such as {owner} and {repo} that need to be substituted with actual values. (AI-inferred)
-	StarredUrl any
-	// The API URL to the list of subscriptions for this repository owner (user or organization). (AI-inferred)
-	SubscriptionsUrl any
-	// The type of GitHub account that owns the repository. Possible values are 'User', 'Organization', or 'Bot'. (AI-inferred)
-	Type any
-	// The GitHub API URL for the repository owner (user or organization). (AI-inferred)
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type Suite_Repository_Permissions struct {
-	// Whether the authenticated user has admin access to the repository. (AI-inferred)
-	Admin any
-	// Indicates whether the user has maintain access to the repository. (AI-inferred)
+	Admin    any
 	Maintain any
-	// Whether the user has pull (read) access to the repository. (AI-inferred)
-	Pull any
-	// Indicates whether the user has push access to the repository (e.g., can create commits, branches, and push changes). (AI-inferred)
-	Push any
-	// Indicates whether the user has triage permission on the repository, allowing access to issues and pull requests without write access. (AI-inferred)
-	Triage any
+	Pull     any
+	Push     any
+	Triage   any
 }
 
 type Suite_Repository_SecurityAndAnalysis_AdvancedSecurity struct {
-	// Whether GitHub Advanced Security is enabled or disabled for the repository. (AI-inferred)
 	Status any
 }
 
 type Suite_Repository_SecurityAndAnalysis_SecretScanningDelegatedBypassOptions_Reviewers struct {
-	// The mode for the reviewer: ALWAYS means the reviewer's approval is always required, EXEMPT means the reviewer is exempt from the approval requirement. (AI-inferred)
-	Mode any
-	// The numeric identifier of the user or team reviewer who can bypass secret scanning alerts for the repository. (AI-inferred)
-	ReviewerId any
-	// The kind of reviewer, indicating whether the reviewer is a team or a role. Allowed values: TEAM, ROLE. (AI-inferred)
+	Mode         any
+	ReviewerId   any
 	ReviewerType any
 }
 
@@ -257,203 +173,114 @@ type Suite_Repository_SecurityAndAnalysis_SecretScanningDelegatedBypassOptions s
 type Suite_Repository_SecurityAndAnalysis struct {
 	// Enable or disable GitHub Advanced Security for the repository. For standalone Code Scanning or Secret Protection products, this parameter cannot be used.
 	AdvancedSecurity any
-	CodeSecurity any
+	CodeSecurity     any
 	// Enable or disable Dependabot security updates for the repository.
-	DependabotSecurityUpdates any
-	// The secret scanning configuration for the repository, including whether secret scanning is enabled and related settings. (AI-inferred)
-	SecretScanning any
-	// Object representing the status of AI-powered detection for secret scanning in the repository. Typically contains a 'status' field indicating whether the feature is 'enabled' or 'disabled'. (AI-inferred)
-	SecretScanningAiDetection any
-	// Settings for delegated dismissal of secret scanning alerts. The object contains configuration related to whether authorized users can dismiss alerts that are delegated to them. (AI-inferred)
+	DependabotSecurityUpdates             any
+	SecretScanning                        any
+	SecretScanningAiDetection             any
 	SecretScanningDelegatedAlertDismissal any
-	// Settings for delegated bypass of secret scanning, which allows designated individuals to bypass secret scanning protection. (AI-inferred)
-	SecretScanningDelegatedBypass any
-	// Configuration for delegated bypass of secret scanning, enabling designated reviewers to approve requests to bypass secret scanning protections. (AI-inferred)
-	SecretScanningDelegatedBypassOptions any
-	// The custom secret scanning patterns defined in the repository's security and analysis settings, used to detect secrets not covered by default provider patterns. (AI-inferred)
-	SecretScanningNonProviderPatterns any
-	// Settings for secret scanning push protection on the repository, indicating whether it is enabled or disabled. (AI-inferred)
-	SecretScanningPushProtection any
-	SecretScanningValidityChecks any
+	SecretScanningDelegatedBypass         any
+	SecretScanningDelegatedBypassOptions  any
+	SecretScanningNonProviderPatterns     any
+	SecretScanningPushProtection          any
+	SecretScanningValidityChecks          any
 }
 
 type Suite_Repository struct {
-	// Whether users can fork this repository. (AI-inferred)
 	AllowForking any
-	// URL template for downloading the repository's archive, with placeholders for archive format and reference. (AI-inferred)
-	ArchiveUrl any
-	// Indicates whether the repository is archived (true) or not (false). (AI-inferred)
-	Archived any
-	// The URL template for the repository's assignees, allowing retrieval of the list of assignees or a specific assignee by username. (AI-inferred)
+	ArchiveUrl   any
+	Archived     any
 	AssigneesUrl any
-	// The URL template for accessing the repository's git blobs, typically in the format .../git/blobs{/sha}. (AI-inferred)
-	BlobsUrl any
-	// The URL endpoint for accessing branches of this repository. It may be a URL template with a placeholder for a specific branch name. (AI-inferred)
-	BranchesUrl any
-	// The URL to clone the repository. (AI-inferred)
-	CloneUrl any
+	BlobsUrl     any
+	BranchesUrl  any
+	CloneUrl     any
 	// Code Of Conduct
-	CodeOfConduct any
-	// The API URL for accessing the list of collaborators on this repository. (AI-inferred)
+	CodeOfConduct    any
 	CollaboratorsUrl any
-	// The GitHub API URL template for the repository's comments, including a placeholder for the comment number. (AI-inferred)
-	CommentsUrl any
-	// The API endpoint URL for the commits in the repository, used to retrieve commit information. (AI-inferred)
-	CommitsUrl any
-	// The API URL template for comparing two commits, branches, or tags in the repository (e.g., https://api.github.com/repos/{owner}/{repo}/compare/{base}...{head}). (AI-inferred)
-	CompareUrl any
-	// The URL to the contents of the repository. This is a template URL; the {+path} placeholder can be replaced with a file or directory path to access its contents. (AI-inferred)
-	ContentsUrl any
-	// The API URL to access the list of contributors for this repository. (AI-inferred)
-	ContributorsUrl any
-	// The timestamp (ISO 8601) of when the repository was created. (AI-inferred)
-	CreatedAt any
+	CommentsUrl      any
+	CommitsUrl       any
+	CompareUrl       any
+	ContentsUrl      any
+	ContributorsUrl  any
+	CreatedAt        any
 	// The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
-	CustomProperties any
-	// The name of the repository's default branch (e.g., main or master). (AI-inferred)
-	DefaultBranch any
-	// Indicates whether the source branch is automatically deleted when a pull request is merged. (AI-inferred)
+	CustomProperties    any
+	DefaultBranch       any
 	DeleteBranchOnMerge any
-	// The URL to the deployments of this repository. (AI-inferred)
-	DeploymentsUrl any
-	// The description of the repository, as provided by the repository owner. (AI-inferred)
-	Description any
-	// Whether the repository is disabled (e.g., due to administrative or abuse flags). (AI-inferred)
-	Disabled any
-	// The URL to the repository's downloads endpoint in the GitHub API. (AI-inferred)
-	DownloadsUrl any
-	// The GitHub API URL for the repository's events list, typically in the form https://api.github.com/repos/{owner}/{repo}/events. (AI-inferred)
-	EventsUrl any
-	// Indicates whether the repository is a fork of another repository. (AI-inferred)
-	Fork any
-	// The number of forks of the repository. (AI-inferred)
-	Forks any
-	// The number of forks of this repository. (AI-inferred)
-	ForksCount any
-	// The URL to retrieve the list of forks for this repository. (AI-inferred)
-	ForksUrl any
-	// The full repository name, including the owner, in the format `owner/repository`. (AI-inferred)
-	FullName any
-	// The URL template for this repository's git commits, typically including a `{/sha}` placeholder to access a specific commit. (AI-inferred)
-	GitCommitsUrl any
-	// The URL to the repository's git references (branches and tags) API endpoint. This may be a template URL with placeholders for specific reference identifiers. (AI-inferred)
-	GitRefsUrl any
-	// The URL template for accessing Git tag objects through the GitHub Git Data API. For example: `https://api.github.com/repos/{owner}/{repo}/git/tags{/sha}`. (AI-inferred)
-	GitTagsUrl any
-	// The Git URL of the repository, used to clone it via the Git protocol (e.g., git://github.com/octocat/Hello-World.git). (AI-inferred)
-	GitUrl any
-	// Whether the repository has GitHub Discussions enabled. (AI-inferred)
-	HasDiscussions any
-	// Indicates whether the repository has downloads enabled. (AI-inferred)
-	HasDownloads any
-	// Indicates whether the repository has issues enabled. (AI-inferred)
-	HasIssues any
-	// Indicates whether GitHub Pages is enabled for the repository. (AI-inferred)
-	HasPages any
-	// Indicates whether the repository has the GitHub Projects feature enabled. (AI-inferred)
-	HasProjects any
-	HasPullRequests any
-	// Indicates whether the repository has the wiki feature enabled. (AI-inferred)
-	HasWiki any
-	// The URL of the repository's homepage (website), if set. (AI-inferred)
-	Homepage any
-	// The URL to the hooks endpoint for the repository. (AI-inferred)
-	HooksUrl any
-	// The URL to view the repository on GitHub in a web browser. (AI-inferred)
-	HtmlUrl any
-	Id any
-	// Indicates whether this repository is a template repository. Template repositories can be used to generate new repositories. (AI-inferred)
-	IsTemplate any
-	// The URL template for issue comments in the repository, e.g., 'https://api.github.com/repos/{owner}/{repo}/issues/comments{/number}'. (AI-inferred)
-	IssueCommentUrl any
-	// The URL to retrieve issue events for this repository via the GitHub API. (AI-inferred)
-	IssueEventsUrl any
-	// The URL to access issues for the repository. May include a template placeholder (e.g., {/number}) for addressing specific issues. (AI-inferred)
-	IssuesUrl any
-	// URL template for accessing the repository's deploy keys (e.g., https://api.github.com/repos/{owner}/{repo}/keys{/key_id}). (AI-inferred)
-	KeysUrl any
-	// URL template for the repository's labels, as provided by the GitHub API. (AI-inferred)
-	LabelsUrl any
-	// The primary programming language associated with the repository, as reported by GitHub. (AI-inferred)
-	Language any
-	// The URL to retrieve the programming languages used in the repository, as an API endpoint. It points to the languages resource for the associated GitHub repository. (AI-inferred)
-	LanguagesUrl any
-	// The open-source license associated with the repository, if one is configured. Provides license metadata such as key, name, and SPDX identifier. (AI-inferred)
-	License any
-	// The API endpoint URL for merging pull requests in this repository. (AI-inferred)
-	MergesUrl any
-	// The URL template for the milestones of the repository, with placeholders for the milestone number. (AI-inferred)
-	MilestonesUrl any
-	// The URL of the mirror repository, if this repository is a mirror. This field is null or absent when the repository is not a mirror. (AI-inferred)
-	MirrorUrl any
-	// The name of the repository that the check suite belongs to. (AI-inferred)
-	Name any
-	// The total number of forks of the repository, including the entire fork network. (AI-inferred)
-	NetworkCount any
-	// The unique node identifier for the repository. (AI-inferred)
-	NodeId any
-	// The URL to the GitHub API endpoint for notifications associated with the repository. (AI-inferred)
-	NotificationsUrl any
-	// The number of open issues in the repository. (AI-inferred)
-	OpenIssues any
-	// The number of open issues in the repository. (AI-inferred)
-	OpenIssuesCount any
+	DeploymentsUrl      any
+	Description         any
+	Disabled            any
+	DownloadsUrl        any
+	EventsUrl           any
+	Fork                any
+	Forks               any
+	ForksCount          any
+	ForksUrl            any
+	FullName            any
+	GitCommitsUrl       any
+	GitRefsUrl          any
+	GitTagsUrl          any
+	GitUrl              any
+	HasDiscussions      any
+	HasDownloads        any
+	HasIssues           any
+	HasPages            any
+	HasProjects         any
+	HasPullRequests     any
+	HasWiki             any
+	Homepage            any
+	HooksUrl            any
+	HtmlUrl             any
+	Id                  any
+	IsTemplate          any
+	IssueCommentUrl     any
+	IssueEventsUrl      any
+	IssuesUrl           any
+	KeysUrl             any
+	LabelsUrl           any
+	Language            any
+	LanguagesUrl        any
+	License             any
+	MergesUrl           any
+	MilestonesUrl       any
+	MirrorUrl           any
+	Name                any
+	NetworkCount        any
+	NodeId              any
+	NotificationsUrl    any
+	OpenIssues          any
+	OpenIssuesCount     any
 	// A GitHub user.
-	Owner any
-	// An object containing the permissions the current user has on the repository, typically including keys such as admin, push, and pull, each with a boolean value. (AI-inferred)
+	Owner       any
 	Permissions any
-	// Whether the repository is private (true) or public (false). (AI-inferred)
-	Private any
+	Private     any
 	// The policy controlling who can create pull requests: all or collaborators_only.
 	PullRequestCreationPolicy any
-	// URL template for pull requests in the repository, e.g., `https://api.github.com/repos/{owner}/{repo}/pulls{/number}`. (AI-inferred)
-	PullsUrl any
-	// The timestamp of the most recent push to the repository, in ISO 8601 format. (AI-inferred)
-	PushedAt any
-	// The URL template for accessing the releases of the repository. (AI-inferred)
-	ReleasesUrl any
-	RoleName any
-	// Security and analysis settings for the repository. This object includes configuration for security features and code analysis. (AI-inferred)
-	SecurityAndAnalysis any
+	PullsUrl                  any
+	PushedAt                  any
+	ReleasesUrl               any
+	RoleName                  any
+	SecurityAndAnalysis       any
 	// The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
-	Size any
-	// The SSH URL of the repository, used for cloning and accessing the repository over SSH. (AI-inferred)
-	SshUrl any
-	// The total number of users who have starred the repository. (AI-inferred)
-	StargazersCount any
-	// The API URL to list users who have starred the repository. This is a standard GitHub API endpoint for accessing repository stargazers. (AI-inferred)
-	StargazersUrl any
-	// The URL template for the commit statuses of this repository. Replace the `{sha}` placeholder with a commit SHA to access its statuses. (AI-inferred)
-	StatusesUrl any
-	// The number of users who have subscribed to the repository. (AI-inferred)
-	SubscribersCount any
-	// The API URL to retrieve the list of subscribers (watchers) of the repository. (AI-inferred)
-	SubscribersUrl any
-	// The API endpoint URL for managing this repository's subscription (e.g., notifications). (AI-inferred)
-	SubscriptionUrl any
-	// The URL to access the repository over SVN (e.g., https://github.com/owner/repo). (AI-inferred)
-	SvnUrl any
-	// The API URL to retrieve the list of tags for the repository. (AI-inferred)
-	TagsUrl any
-	// The API URL that points to the list of teams with access to this repository. (AI-inferred)
-	TeamsUrl any
-	// A temporary token that grants permission to clone the repository, typically included when the request is authenticated as a GitHub App. (AI-inferred)
-	TempCloneToken any
-	// List of GitHub topics assigned to the repository. (AI-inferred)
-	Topics any
-	// The URL template for the repository's Git trees endpoint. (AI-inferred)
-	TreesUrl any
-	// The timestamp of the last update to the repository, in ISO 8601 format. (AI-inferred)
-	UpdatedAt any
-	// The GitHub API URL for the repository, such as https://api.github.com/repos/owner/repo, associated with the check suite. (AI-inferred)
-	Url any
-	// The visibility of the repository: public, private, or internal (for GitHub Enterprise Cloud). (AI-inferred)
-	Visibility any
-	// The number of users watching the repository. (AI-inferred)
-	Watchers any
-	// The number of users who have marked the repository to watch it (i.e., the count of repository watchers). (AI-inferred)
-	WatchersCount any
-	// Whether contributors are required to sign off on web-based commits for the repository. (AI-inferred)
+	Size                     any
+	SshUrl                   any
+	StargazersCount          any
+	StargazersUrl            any
+	StatusesUrl              any
+	SubscribersCount         any
+	SubscribersUrl           any
+	SubscriptionUrl          any
+	SvnUrl                   any
+	TagsUrl                  any
+	TeamsUrl                 any
+	TempCloneToken           any
+	Topics                   any
+	TreesUrl                 any
+	UpdatedAt                any
+	Url                      any
+	Visibility               any
+	Watchers                 any
+	WatchersCount            any
 	WebCommitSignoffRequired any
 }
 
@@ -469,42 +296,30 @@ type SuiteConfig struct {
 }
 
 type SuiteAttrs struct {
-	// The SHA of the most recent commit in the check suite's associated push. (AI-inferred)
 	After any
 	// GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
-	App any
-	// The SHA of the commit that preceded the push that triggered this check suite. This is only populated for check suites triggered by push events. (AI-inferred)
-	Before any
-	// The URL to retrieve the check runs associated with this check suite. (AI-inferred)
+	App          any
+	Before       any
 	CheckRunsUrl any
-	// The final conclusion of the check suite after all check runs complete. Can be one of success, failure, neutral, cancelled, skipped, timed_out, action_required, startup_failure, or stale. (AI-inferred)
-	Conclusion any
-	CreatedAt any
-	// The branch name that the head commit of the check suite is on. This value is set by GitHub. (AI-inferred)
-	HeadBranch any
+	Conclusion   any
+	CreatedAt    any
+	HeadBranch   any
 	// A commit.
 	HeadCommit any
 	// The sha of the head commit.
-	HeadSha any
-	Id any
-	// The number of check runs in the latest check suite. (AI-inferred)
+	HeadSha              any
+	Id                   any
 	LatestCheckRunsCount any
-	// The GraphQL node identifier for the check suite. (AI-inferred)
-	NodeId any
-	// The list of pull requests that match the check suite's head_sha and head_branch. (AI-inferred)
-	PullRequests any
+	NodeId               any
+	PullRequests         any
 	// Minimal Repository
-	Repository any
-	// Indicates whether the check suite can be re-requested (i.e., re-run) by the user. (AI-inferred)
-	Rerequestable any
-	// Whether the check suite's runs can be re-requested. (AI-inferred)
+	Repository        any
+	Rerequestable     any
 	RunsRerequestable any
 	// The phase of the lifecycle that the check suite is currently in. Statuses of waiting, requested, and pending are reserved for GitHub Actions check suites.
-	Status any
-	// The timestamp of the last update to the check suite, in ISO 8601 format. (AI-inferred)
+	Status    any
 	UpdatedAt any
-	// The API URL for this check suite, as returned by GitHub. (AI-inferred)
-	Url any
+	Url       any
 	// path parameter, not part of the API's own resource representation
 	Owner any
 	// path parameter, not part of the API's own resource representation
@@ -516,9 +331,9 @@ type SuiteAttrs struct {
 var Suite = ubx.ResourceBinding{
 	WireType: "github_check_suite",
 	Fields: ubx.FieldMap{
-		"HeadSha": ubx.FieldSpec{WireName: "head_sha"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"HeadSha":      ubx.FieldSpec{WireName: "head_sha"},
+		"Owner":        ubx.FieldSpec{WireName: "owner"},
+		"Repo":         ubx.FieldSpec{WireName: "repo"},
 		"CheckSuiteId": ubx.FieldSpec{WireName: "check_suite_id"},
 	},
 }

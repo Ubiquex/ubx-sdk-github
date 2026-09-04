@@ -7,7 +7,6 @@ export interface ReviewConfig {
   perPage?: number | Computed<number>;
   pullNumber: number | Computed<number>;
   repo: string | Computed<string>;
-  reviewId: number | Computed<number>;
 }
 
 export interface ReviewAttrs {
@@ -16,7 +15,6 @@ export interface ReviewAttrs {
   perPage: number;
   pullNumber: number;
   repo: string;
-  reviewId: number;
 }
 
 export const Review: DataSourceBinding<ReviewConfig, ReviewAttrs> = {
@@ -27,6 +25,5 @@ export const Review: DataSourceBinding<ReviewConfig, ReviewAttrs> = {
     perPage: "per_page",
     pullNumber: "pull_number",
     repo: "repo",
-    reviewId: "review_id",
   },
 };

@@ -14,8 +14,8 @@ type ScanningAnalysis_Tool struct {
 
 type ScanningAnalysisConfig struct {
 	AnalysisId any
-	Owner any
-	Repo any
+	Owner      any
+	Repo       any
 }
 
 type ScanningAnalysisAttrs struct {
@@ -31,12 +31,12 @@ type ScanningAnalysisAttrs struct {
 	Deletable any
 	// Identifies the variable values associated with the environment in which this analysis was performed.
 	Environment any
-	Error any
+	Error       any
 	// Unique identifier for this analysis.
-	Id any
+	Id    any
 	Owner any
 	// The Git reference, formatted as `refs/pull/<number>/merge`, `refs/pull/<number>/head`, `refs/heads/<branch name>` or simply `<branch name>`.
-	Ref any
+	Ref  any
 	Repo any
 	// The total number of results in the analysis.
 	ResultsCount any
@@ -44,7 +44,7 @@ type ScanningAnalysisAttrs struct {
 	RulesCount any
 	// An identifier for the upload.
 	SarifId any
-	Tool any
+	Tool    any
 	// The REST API URL of the analysis resource.
 	Url any
 	// Warning generated when processing the analysis
@@ -55,7 +55,7 @@ var ScanningAnalysis = ubx.DataSourceBinding{
 	WireType: "github_code_scanning_analysis",
 	Fields: ubx.FieldMap{
 		"AnalysisId": ubx.FieldSpec{WireName: "analysis_id"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":      ubx.FieldSpec{WireName: "owner"},
+		"Repo":       ubx.FieldSpec{WireName: "repo"},
 	},
 }

@@ -13,23 +13,18 @@ type Commit_Author struct {
 }
 
 type Commit_Verification struct {
-	// The payload that was signed for commit verification, used to verify the signature and ensure the commit's integrity. (AI-inferred)
-	Payload any
-	// The reason explaining the commit's signature verification state. For verified commits, this is 'valid'; for unverified commits, it provides a reason like 'unsigned' or 'bad_email'. (AI-inferred)
-	Reason any
-	// The signature of the commit, used to verify its authenticity. (AI-inferred)
-	Signature any
-	// Whether the commit's signature is verified by GitHub. (AI-inferred)
-	Verified any
-	// The timestamp (as a string) indicating when the commit's signature was verified, typically in ISO 8601 format. (AI-inferred)
+	Payload    any
+	Reason     any
+	Signature  any
+	Verified   any
 	VerifiedAt any
 }
 
 var Commit_AuthorFields = ubx.FieldMap{
-		"Date": ubx.FieldSpec{WireName: "date"},
-		"Email": ubx.FieldSpec{WireName: "email"},
-		"Name": ubx.FieldSpec{WireName: "name"},
-	}
+	"Date":  ubx.FieldSpec{WireName: "date"},
+	"Email": ubx.FieldSpec{WireName: "email"},
+	"Name":  ubx.FieldSpec{WireName: "name"},
+}
 
 type CommitConfig struct {
 	// Information about the author of the commit. By default, the `author` will be the authenticated user and the current date. See the `author` and `committer` object below for details.
@@ -57,12 +52,10 @@ type CommitAttrs struct {
 	Author any
 	// Information about the person who is making the commit. By default, `committer` will use the information set in `author`. See the `author` and `committer` object below for details.
 	Committer any
-	// The URL to view the commit on GitHub. (AI-inferred)
-	HtmlUrl any
+	HtmlUrl   any
 	// The commit message
 	Message any
-	// The GraphQL node ID of the git commit, used for identifying the commit in the GitHub GraphQL API. (AI-inferred)
-	NodeId any
+	NodeId  any
 	// The full SHAs of the commits that were the parents of this commit. If omitted or empty, the commit will be written as a root commit. For a single parent, an array of one SHA should be provided; for a merge commit, an array of more than one should be provided.
 	Parents any
 	// SHA for the commit
@@ -70,10 +63,8 @@ type CommitAttrs struct {
 	// The [PGP signature](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) of the commit. GitHub adds the signature to the `gpgsig` header of the created commit. For a commit signature to be verifiable by Git or GitHub, it must be an ASCII-armored detached PGP signature over the string commit as it would be written to the object database. To pass a `signature` parameter, you need to first manually create a valid PGP signature, which can be complicated. You may find it easier to [use the command line](https://git-scm.com/book/id/v2/Git-Tools-Signing-Your-Work) to create signed commits.
 	Signature any
 	// The SHA of the tree object this commit points to
-	Tree any
-	// The GitHub API URL for the commit. (AI-inferred)
-	Url any
-	// Object containing details about the commit's signature verification status, such as whether the signature is verified and associated metadata. This field is computed and only present after the commit is created. (AI-inferred)
+	Tree         any
+	Url          any
 	Verification any
 	// path parameter, not part of the API's own resource representation
 	Owner any
@@ -88,20 +79,20 @@ var Commit = ubx.ResourceBinding{
 	Fields: ubx.FieldMap{
 		"Author": ubx.FieldSpec{
 			WireName: "author",
-			Kind: "object",
-			Fields: Commit_AuthorFields,
+			Kind:     "object",
+			Fields:   Commit_AuthorFields,
 		},
 		"Committer": ubx.FieldSpec{
 			WireName: "committer",
-			Kind: "object",
-			Fields: Commit_AuthorFields,
+			Kind:     "object",
+			Fields:   Commit_AuthorFields,
 		},
-		"Message": ubx.FieldSpec{WireName: "message"},
-		"Parents": ubx.FieldSpec{WireName: "parents"},
+		"Message":   ubx.FieldSpec{WireName: "message"},
+		"Parents":   ubx.FieldSpec{WireName: "parents"},
 		"Signature": ubx.FieldSpec{WireName: "signature"},
-		"Tree": ubx.FieldSpec{WireName: "tree"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Tree":      ubx.FieldSpec{WireName: "tree"},
+		"Owner":     ubx.FieldSpec{WireName: "owner"},
+		"Repo":      ubx.FieldSpec{WireName: "repo"},
 		"CommitSha": ubx.FieldSpec{WireName: "commit_sha"},
 	},
 }

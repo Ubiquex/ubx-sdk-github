@@ -8,33 +8,21 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class OrgConfig:
-    after: Any = None
-    before: Any = None
-    include: Any = None
-    order: Any = None
-    org: Any = None
+    page: Any = None
     per_page: Any = None
-    phrase: Any = None
+    state: Any = None
 
 @dataclasses.dataclass
 class OrgAttrs:
-    after: Any = None
-    before: Any = None
-    include: Any = None
-    order: Any = None
-    org: Any = None
+    page: Any = None
     per_page: Any = None
-    phrase: Any = None
+    state: Any = None
 
 Org = ubx.DataSourceBinding(
     wire_type="github_org",
     fields={
-        "after": ubx.FieldSpec(wire_name="after"),
-        "before": ubx.FieldSpec(wire_name="before"),
-        "include": ubx.FieldSpec(wire_name="include"),
-        "order": ubx.FieldSpec(wire_name="order"),
-        "org": ubx.FieldSpec(wire_name="org"),
+        "page": ubx.FieldSpec(wire_name="page"),
         "per_page": ubx.FieldSpec(wire_name="per_page"),
-        "phrase": ubx.FieldSpec(wire_name="phrase"),
+        "state": ubx.FieldSpec(wire_name="state"),
     },
 )

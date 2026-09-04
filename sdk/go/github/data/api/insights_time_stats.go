@@ -4,25 +4,25 @@ package api
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type InsightsTimeStatsConfig struct {
-	MaxTimestamp any
-	MinTimestamp any
-	Org any
+	MaxTimestamp       any
+	MinTimestamp       any
+	Org                any
 	TimestampIncrement any
 }
 
 type InsightsTimeStatsAttrs struct {
-	MaxTimestamp any
-	MinTimestamp any
-	Org any
+	MaxTimestamp       any
+	MinTimestamp       any
+	Org                any
 	TimestampIncrement any
 }
 
 var InsightsTimeStats = ubx.DataSourceBinding{
 	WireType: "github_api_insights_time_stats",
 	Fields: ubx.FieldMap{
-		"MaxTimestamp": ubx.FieldSpec{WireName: "max_timestamp"},
-		"MinTimestamp": ubx.FieldSpec{WireName: "min_timestamp"},
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"MaxTimestamp":       ubx.FieldSpec{WireName: "max_timestamp"},
+		"MinTimestamp":       ubx.FieldSpec{WireName: "min_timestamp"},
+		"Org":                ubx.FieldSpec{WireName: "org"},
 		"TimestampIncrement": ubx.FieldSpec{WireName: "timestamp_increment"},
 	},
 }

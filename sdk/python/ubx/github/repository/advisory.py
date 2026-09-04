@@ -8,138 +8,86 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class Advisory_Author:
-    # The URL of the avatar image for the author of the repository advisory. (AI-inferred)
     avatar_url: Any = None
-    # The email address associated with the author of the GitHub repository advisory. (AI-inferred)
     email: Any = None
-    # The URL to the author's events listing on GitHub, used to retrieve their public events. (AI-inferred)
     events_url: Any = None
-    # The API URL that lists the followers of the author on GitHub. (AI-inferred)
     followers_url: Any = None
-    # URL to the author's following list on GitHub. This is a templated endpoint; for example, it includes the placeholder {/other_user} to check or retrieve a specific user's following relationship. (AI-inferred)
     following_url: Any = None
-    # The URL to the user's gists API endpoint. (AI-inferred)
     gists_url: Any = None
-    # The Gravatar ID for the author. It may be an empty string if the author has not set a Gravatar, and can be used to construct the avatar URL. (AI-inferred)
     gravatar_id: Any = None
-    # The HTML URL of the author's GitHub profile. (AI-inferred)
     html_url: Any = None
     id: Any = None
-    # The GitHub username (login) of the user or organization that authored the repository advisory. (AI-inferred)
     login: Any = None
     name: Any = None
-    # The GraphQL node ID for the author of the repository advisory. (AI-inferred)
     node_id: Any = None
-    # The API URL for the organizations that the author belongs to. (AI-inferred)
     organizations_url: Any = None
-    # The URL of the GitHub API endpoint that lists events received by the author of the repository advisory. (AI-inferred)
     received_events_url: Any = None
-    # The URL to the list of repositories owned by the author. (AI-inferred)
     repos_url: Any = None
-    # Whether the author is a GitHub site administrator. (AI-inferred)
     site_admin: Any = None
     starred_at: Any = None
-    # A URL template for listing repositories starred by the author, with placeholders for owner and repository names. (AI-inferred)
     starred_url: Any = None
-    # The URL to the author's GitHub subscriptions endpoint (e.g., https://api.github.com/users/{username}/subscriptions). (AI-inferred)
     subscriptions_url: Any = None
     type: Any = None
-    # The API URL for the author's GitHub user account, such as https://api.github.com/users/{username}. (AI-inferred)
     url: Any = None
-    # The visibility type of the author's GitHub user profile, indicating whether the profile is publicly visible (`public`) or private (`private`). (AI-inferred)
     user_view_type: Any = None
 
 @dataclasses.dataclass
 class Advisory_CollaboratingTeams_Parent:
-    # The description of the parent team of the collaborating team, if a parent team exists. (AI-inferred)
     description: Any = None
     enterprise_id: Any = None
-    # The URL to the parent team's page on GitHub. (AI-inferred)
     html_url: Any = None
     id: Any = None
-    # The LDAP Distinguished Name (DN) of the parent team for the collaborating team granted access to the repository advisory. This is used when managing teams in GitHub Enterprise with LDAP synchronization. (AI-inferred)
     ldap_dn: Any = None
-    # API endpoint URL for the members of this team, typically with a template placeholder for a specific member identifier (e.g., .../members{/member}). (AI-inferred)
     members_url: Any = None
-    # The name of the team being granted write access to the repository advisory. (AI-inferred)
     name: Any = None
-    # The unique node ID of the team, used for identifying this collaborator in the GitHub GraphQL API. (AI-inferred)
     node_id: Any = None
     notification_setting: Any = None
-    # The unique identifier of the organization that the team belongs to. (AI-inferred)
     organization_id: Any = None
-    # Permission level for the team on the repository advisory. Valid values are 'read' and 'write'. (AI-inferred)
     permission: Any = None
     privacy: Any = None
-    # The API URL to list the repositories that the team has access to. (AI-inferred)
     repositories_url: Any = None
-    # The slug of the parent team. (AI-inferred)
     slug: Any = None
-    # The type of parent account that the team belongs to. Possible values are `enterprise` and `organization`. (AI-inferred)
     type: Any = None
-    # The URL to the GitHub API resource for this team's parent team. (AI-inferred)
     url: Any = None
 
 @dataclasses.dataclass
 class Advisory_CollaboratingTeams_Permissions:
-    # Indicates whether the collaborating team has admin-level permissions on the repository advisory. (AI-inferred)
     admin: Any = None
     maintain: Any = None
-    # Whether the team has pull access to the repository. (AI-inferred)
     pull: Any = None
-    # Whether the team has push access to the repository. (AI-inferred)
     push: Any = None
-    # Whether the collaborating team has 'triage' permission, allowing them to manage issues and pull requests without write access to the repository. (AI-inferred)
     triage: Any = None
 
 @dataclasses.dataclass
 class Advisory_CollaboratingTeams:
-    # The source of access for the team collaborating on the repository advisory. Valid values are 'direct', 'organization', and 'enterprise', indicating whether the team was added directly, through an organization, or through an enterprise. (AI-inferred)
     access_source: Any = None
-    # The description of the team that is collaborating on the repository advisory. (AI-inferred)
     description: Any = None
-    # The unique identifier of the enterprise account to which the collaborating team belongs. (AI-inferred)
     enterprise_id: Any = None
-    # The URL to the team's page on GitHub. (AI-inferred)
     html_url: Any = None
     id: Any = None
-    # The API URL used to access the list of members for the collaborating team in the repository advisory. (AI-inferred)
     members_url: Any = None
     name: Any = None
-    # The unique identifier (node ID) for the team, used by GitHub's GraphQL API. (AI-inferred)
     node_id: Any = None
     notification_setting: Any = None
-    # The ID of the GitHub organization that the collaborating team belongs to. (AI-inferred)
     organization_id: Any = None
     parent: Any = None
-    # The permission level granted to the team for collaborating on the repository advisory. (AI-inferred)
     permission: Any = None
     permissions: Any = None
-    # The privacy setting of the team collaborating on the repository advisory. Values are typically 'secret' or 'closed'. (AI-inferred)
     privacy: Any = None
-    # The API endpoint URL for the repositories associated with this collaborating team. (AI-inferred)
     repositories_url: Any = None
-    # The slug of the team collaborating on the repository advisory. (AI-inferred)
     slug: Any = None
-    # Specifies the type of the collaborating team. Allowed values are 'enterprise' and 'organization'. (AI-inferred)
     type: Any = None
-    # The API URL of the collaborating team on GitHub. (AI-inferred)
     url: Any = None
 
 @dataclasses.dataclass
 class Advisory_Credits:
-    # The GitHub username of the user receiving credit for the advisory. (AI-inferred)
     login: Any = None
-    # The role or classification of the credited entity in a GitHub repository advisory. Allowed values are analyst, finder, reporter, coordinator, remediation_developer, remediation_reviewer, remediation_verifier, tool, sponsor, and other. (AI-inferred)
     type: Any = None
 
 @dataclasses.dataclass
 class Advisory_CreditsDetailed:
-    # The state of the credit, indicating whether the credit has been accepted, declined, or is still pending. (AI-inferred)
     state: Any = None
-    # The role of the credited entity in the security advisory. Allowed values: analyst, finder, reporter, coordinator, remediation_developer, remediation_reviewer, remediation_verifier, tool, sponsor, other. (AI-inferred)
     type: Any = None
-    # The GitHub user associated with this credit entry in the advisory's detailed credits list. (AI-inferred)
     user: Any = None
 
 @dataclasses.dataclass
@@ -151,107 +99,66 @@ class Advisory_Cvss:
 
 @dataclasses.dataclass
 class Advisory_CvssSeverities:
-    # An object containing the CVSS v3 base score and vector string for the advisory. (AI-inferred)
     cvss_v3: Any = None
-    # The CVSS v4 severity details for the advisory, including the numeric score and qualitative severity rating. (AI-inferred)
     cvss_v4: Any = None
 
 @dataclasses.dataclass
 class Advisory_Cwes:
-    # The identifier of a Common Weakness Enumeration (CWE) entry associated with the advisory, such as "CWE-79". (AI-inferred)
     cwe_id: Any = None
-    # The name of the Common Weakness Enumeration (CWE) entry associated with the advisory. (AI-inferred)
     name: Any = None
 
 @dataclasses.dataclass
 class Advisory_Identifiers:
-    # The type of the identifier, either 'CVE' or 'GHSA'. (AI-inferred)
     type: Any = None
-    # The value of the identifier, such as a CVE ID or GHSA ID, for the repository advisory. (AI-inferred)
     value: Any = None
 
 @dataclasses.dataclass
 class Advisory_PrivateFork:
-    # The URL to download the archive of the private fork associated with this repository advisory. (AI-inferred)
     archive_url: Any = None
-    # The URL endpoint for accessing the assignees of the private fork associated with this repository advisory. (AI-inferred)
     assignees_url: Any = None
-    # The URL template for accessing blob (file content) resources in the private fork repository associated with the advisory. (AI-inferred)
     blobs_url: Any = None
-    # The API endpoint URL for accessing the branches of the private fork. (AI-inferred)
     branches_url: Any = None
-    # The URL to access the list of collaborators for the private fork of the repository advisory. (AI-inferred)
     collaborators_url: Any = None
-    # The URL to access comments on the private fork repository associated with this repository advisory. (AI-inferred)
     comments_url: Any = None
-    # The URL to the list of commits in the private fork associated with this repository advisory. (AI-inferred)
     commits_url: Any = None
     compare_url: Any = None
-    # The URL template for accessing the contents of the private fork repository, typically in the format 'https://api.github.com/repos/{owner}/{repo}/contents/{+path}'. (AI-inferred)
     contents_url: Any = None
-    # The API endpoint that returns the list of contributors for the private fork associated with the repository advisory. (AI-inferred)
     contributors_url: Any = None
-    # The API URL for accessing deployments of the private fork repository associated with the advisory. (AI-inferred)
     deployments_url: Any = None
     description: Any = None
-    # The URL to the private fork's downloads endpoint, used to access downloadable files associated with that fork. (AI-inferred)
     downloads_url: Any = None
     events_url: Any = None
     fork: Any = None
     forks_url: Any = None
-    # The full name of the private fork in the format 'owner/repo'. (AI-inferred)
     full_name: Any = None
-    # The URL to view the commits of the private fork associated with the repository advisory. This corresponds to the `git_commits_url` property of the forked repository. (AI-inferred)
     git_commits_url: Any = None
-    # The URL to the git refs endpoint for the private fork associated with the repository advisory. (AI-inferred)
     git_refs_url: Any = None
     git_tags_url: Any = None
-    # The URL to retrieve the hooks configured for this private fork, as per the GitHub API repository representation. (AI-inferred)
     hooks_url: Any = None
-    # The URL to view the private fork on GitHub. (AI-inferred)
     html_url: Any = None
     id: Any = None
-    # The API URL template for accessing comments on issues within the private fork repository, as defined by GitHub's repository object. (AI-inferred)
     issue_comment_url: Any = None
-    # The URL template for listing issue events in the private fork repository. (AI-inferred)
     issue_events_url: Any = None
-    # The URL template for issues in the private fork repository, including a placeholder for the issue number (e.g., /issues{/number}). (AI-inferred)
     issues_url: Any = None
-    # The URL to the repository's deploy keys, typically used to manage SSH keys for the repository. (AI-inferred)
     keys_url: Any = None
-    # The API URL template for the labels of the private fork repository, pattern: `https://api.github.com/repos/{owner}/{repo}/labels{/name}`. (AI-inferred)
     labels_url: Any = None
-    # The URL to the GitHub API endpoint that lists the programming languages used in this private fork. (AI-inferred)
     languages_url: Any = None
-    # The API URL used to perform merge operations on this private fork. (AI-inferred)
     merges_url: Any = None
     milestones_url: Any = None
     name: Any = None
-    # The unique identifier (Node ID) of the private fork, used in GitHub's GraphQL API. (AI-inferred)
     node_id: Any = None
-    # The URL to retrieve notifications for the private fork of the repository advisory. (AI-inferred)
     notifications_url: Any = None
     owner: Any = None
-    # Whether the forked repository is private (not publicly visible). (AI-inferred)
     private: Any = None
-    # The URL to the pull requests within the private fork created for the repository advisory. (AI-inferred)
     pulls_url: Any = None
-    # The URL to the releases page for the private fork associated with the repository advisory. (AI-inferred)
     releases_url: Any = None
-    # The API endpoint URL that lists the stargazers of the private fork associated with the repository advisory. (AI-inferred)
     stargazers_url: Any = None
-    # The URL template for the commit statuses of the private fork, with `{sha}` replaced by a commit SHA to access statuses. (AI-inferred)
     statuses_url: Any = None
     subscribers_url: Any = None
-    # The API URL to subscribe to notifications for this private fork. (AI-inferred)
     subscription_url: Any = None
-    # The API URL to list Git tags for the private fork of the repository associated with the advisory. (AI-inferred)
     tags_url: Any = None
-    # The API endpoint URL for the teams associated with the private fork of the repository. (AI-inferred)
     teams_url: Any = None
-    # The URL to the Git trees API for the private fork associated with the repository advisory. (AI-inferred)
     trees_url: Any = None
-    # The URL to the private fork repository created for this advisory. (AI-inferred)
     url: Any = None
 
 @dataclasses.dataclass
@@ -261,20 +168,14 @@ class Advisory_Submission:
 
 @dataclasses.dataclass
 class Advisory_Vulnerabilities_Package:
-    # The ecosystem of the affected package, such as rubygems, npm, pip, maven, nuget, composer, go, rust, erlang, actions, pub, swift, or other. This identifies the package manager or language ecosystem to which the package belongs. (AI-inferred)
     ecosystem: Any = None
-    # The name of the affected package within the specified ecosystem. (AI-inferred)
     name: Any = None
 
 @dataclasses.dataclass
 class Advisory_Vulnerabilities:
-    # The package affected by the vulnerability, including details such as its name and ecosystem. (AI-inferred)
     package: Any = None
-    # The range of versions that are patched by the security advisory for this vulnerability. (AI-inferred)
     patched_versions: Any = None
-    # A list of names of functions within the affected package that are vulnerable to the advisory. (AI-inferred)
     vulnerable_functions: Any = None
-    # The vulnerable version range for the advisory, expressed as a semantic version range (e.g., '>= 1.0.0, < 2.0.0'). (AI-inferred)
     vulnerable_version_range: Any = None
 
 _Advisory_CreditsFields = {
@@ -337,19 +238,15 @@ class AdvisoryAttrs:
     created_at: Any = None
     # A list of users receiving credit for their participation in the security advisory.
     credits: Any = None
-    # A computed list of detailed credit objects for the security advisory, each containing information about the credited user (such as their login) and the type of credit (e.g., reporter, analyst). (AI-inferred)
     credits_detailed: Any = None
     # The Common Vulnerabilities and Exposures (CVE) ID.
     cve_id: Any = None
-    # The Common Vulnerability Scoring System (CVSS) data for the advisory, containing the score and vector string. (AI-inferred)
     cvss: Any = None
-    # The CVSS severity details for the repository advisory, including the vector string and score for both CVSS v3 and v4. (AI-inferred)
     cvss_severities: Any = None
     # The CVSS vector that calculates the severity of the advisory. You must choose between setting this field or `severity`.
     cvss_vector_string: Any = None
     # A list of Common Weakness Enumeration (CWE) IDs.
     cwe_ids: Any = None
-    # The list of Common Weakness Enumeration (CWE) objects associated with the repository security advisory. (AI-inferred)
     cwes: Any = None
     # A detailed description of what the advisory impacts.
     description: Any = None
@@ -357,7 +254,6 @@ class AdvisoryAttrs:
     ghsa_id: Any = None
     # The URL for the advisory.
     html_url: Any = None
-    # A list of identifiers for the security advisory, populated by the system. These are typically CVE or GHSA IDs that reference the advisory. (AI-inferred)
     identifiers: Any = None
     # A temporary private fork of the advisory's repository for collaborating on a fix.
     private_fork: Any = None
@@ -371,7 +267,6 @@ class AdvisoryAttrs:
     start_private_fork: Any = None
     # The state of the advisory.
     state: Any = None
-    # Details about the submission of the advisory, including the submission ID, creation timestamp, and dismissal data if applicable. (AI-inferred)
     submission: Any = None
     # A short summary of the advisory.
     summary: Any = None

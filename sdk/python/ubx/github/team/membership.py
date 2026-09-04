@@ -25,7 +25,6 @@ class MembershipAttrs:
     role: Any = None
     # The state of the user's membership in the team.
     state: Any = None
-    # The API URL for the team membership. (AI-inferred)
     url: Any = None
     # path parameter, not part of the API's own resource representation
     org: Any = None

@@ -2,15 +2,10 @@
 import type { Computed, FieldMap, ResourceBinding } from "@ubx/sdk";
 
 export interface Tree_Tree {
-  /** The content of the file (blob) represented by this tree entry. This field is typically populated only for blob entries, often when the tree is fetched recursively and the file is small enough to include inline. (AI-inferred) */
   content?: string | Computed<string>;
-  /** The file mode for the tree entry. Valid values are 100644 (regular file), 100755 (executable file), 040000 (subdirectory), 160000 (submodule/gitlink), and 120000 (symbolic link). (AI-inferred) */
   mode?: string | Computed<string>;
-  /** The file path relative to the repository root for the tree entry. (AI-inferred) */
   path?: string | Computed<string>;
-  /** The SHA-1 hash of the git object (blob or tree) referenced by this tree entry. (AI-inferred) */
   sha?: string | Computed<string>;
-  /** The type of the tree entry, which is one of 'blob' (file), 'tree' (subdirectory), or 'commit' (submodule). (AI-inferred) */
   type?: string | Computed<string>;
 }
 
@@ -38,13 +33,10 @@ export interface TreeConfig {
 export interface TreeAttrs {
   /** The SHA1 of an existing Git tree object which will be used as the base for the new tree. If provided, a new Git tree object will be created from entries in the Git tree object pointed to by `base_tree` and entries defined in the `tree` parameter. Entries defined in the `tree` parameter will overwrite items from `base_tree` with the same `path`. If you're creating new changes on a branch, then normally you'd set `base_tree` to the SHA1 of the Git tree object of the current latest commit on the branch you're working on. If not provided, GitHub will create a new Git tree object from only the entries defined in the `tree` parameter. If you create a new commit pointing to such a tree, then all files which were a part of the parent commit's tree and were not defined in the `tree` parameter will be listed as deleted by the new commit. */
   baseTree: string;
-  /** The SHA-1 hash of the tree object, assigned by GitHub when the tree is created. (AI-inferred) */
   sha: string;
   /** Objects (of `path`, `mode`, `type`, and `sha`) specifying a tree structure. */
   tree: Tree_Tree[];
-  /** Whether the tree is truncated due to GitHub's limits (e.g., too many entries). (AI-inferred) */
   truncated: boolean;
-  /** The GitHub API URL for this tree. (AI-inferred) */
   url: string;
   /** path parameter, not part of the API's own resource representation */
   owner: string;

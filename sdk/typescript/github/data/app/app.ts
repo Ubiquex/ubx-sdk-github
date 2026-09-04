@@ -2,19 +2,22 @@
 import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface AppConfig {
-  page?: number | Computed<number>;
-  perPage?: number | Computed<number>;
+  branch: string | Computed<string>;
+  owner: string | Computed<string>;
+  repo: string | Computed<string>;
 }
 
 export interface AppAttrs {
-  page: number;
-  perPage: number;
+  branch: string;
+  owner: string;
+  repo: string;
 }
 
 export const App: DataSourceBinding<AppConfig, AppAttrs> = {
   wireType: "github_app",
   fields: {
-    page: "page",
-    perPage: "per_page",
+    branch: "branch",
+    owner: "owner",
+    repo: "repo",
   },
 };

@@ -4,25 +4,46 @@ package personal
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type AccessTokenRequestConfig struct {
-	Org any
-	Page any
-	PatRequestId any
-	PerPage any
+	Direction      any
+	LastUsedAfter  any
+	LastUsedBefore any
+	Org            any
+	Owner          any
+	Page           any
+	PerPage        any
+	Permission     any
+	Repository     any
+	Sort           any
+	TokenId        any
 }
 
 type AccessTokenRequestAttrs struct {
-	Org any
-	Page any
-	PatRequestId any
-	PerPage any
+	Direction      any
+	LastUsedAfter  any
+	LastUsedBefore any
+	Org            any
+	Owner          any
+	Page           any
+	PerPage        any
+	Permission     any
+	Repository     any
+	Sort           any
+	TokenId        any
 }
 
 var AccessTokenRequest = ubx.DataSourceBinding{
 	WireType: "github_personal_access_token_request",
 	Fields: ubx.FieldMap{
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PatRequestId": ubx.FieldSpec{WireName: "pat_request_id"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Direction":      ubx.FieldSpec{WireName: "direction"},
+		"LastUsedAfter":  ubx.FieldSpec{WireName: "last_used_after"},
+		"LastUsedBefore": ubx.FieldSpec{WireName: "last_used_before"},
+		"Org":            ubx.FieldSpec{WireName: "org"},
+		"Owner":          ubx.FieldSpec{WireName: "owner"},
+		"Page":           ubx.FieldSpec{WireName: "page"},
+		"PerPage":        ubx.FieldSpec{WireName: "per_page"},
+		"Permission":     ubx.FieldSpec{WireName: "permission"},
+		"Repository":     ubx.FieldSpec{WireName: "repository"},
+		"Sort":           ubx.FieldSpec{WireName: "sort"},
+		"TokenId":        ubx.FieldSpec{WireName: "token_id"},
 	},
 }

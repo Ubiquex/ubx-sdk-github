@@ -5,24 +5,24 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type TeamConfig struct {
 	Enterprise any
-	EnterpriseTeam any
-	Page any
-	PerPage any
+	Page       any
+	PerPage    any
+	RoleId     any
 }
 
 type TeamAttrs struct {
 	Enterprise any
-	EnterpriseTeam any
-	Page any
-	PerPage any
+	Page       any
+	PerPage    any
+	RoleId     any
 }
 
 var Team = ubx.DataSourceBinding{
 	WireType: "github_team",
 	Fields: ubx.FieldMap{
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"EnterpriseTeam": ubx.FieldSpec{WireName: "enterprise_team"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Page":       ubx.FieldSpec{WireName: "page"},
+		"PerPage":    ubx.FieldSpec{WireName: "per_page"},
+		"RoleId":     ubx.FieldSpec{WireName: "role_id"},
 	},
 }

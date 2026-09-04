@@ -4,33 +4,33 @@ package installation
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Installation_Account struct {
-	AvatarUrl any
-	CreatedAt any
-	Description any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	CreatedAt         any
+	Description       any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	Slug any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	UpdatedAt any
-	Url any
-	UserViewType any
-	WebsiteUrl any
+	ReposUrl          any
+	SiteAdmin         any
+	Slug              any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	UpdatedAt         any
+	Url               any
+	UserViewType      any
+	WebsiteUrl        any
 }
 
 type Installation_Permissions struct {
@@ -153,28 +153,28 @@ type Installation_Permissions struct {
 }
 
 type Installation_SuspendedBy struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type InstallationConfig struct {
@@ -194,34 +194,34 @@ type InstallationConfig struct {
 
 type InstallationAttrs struct {
 	AccessTokensUrl any
-	Account any
-	AppId any
-	AppSlug any
+	Account         any
+	AppId           any
+	AppSlug         any
 	// The Client ID of the GitHub App to install.
-	ClientId any
-	ContactEmail any
-	CreatedAt any
-	Events any
+	ClientId               any
+	ContactEmail           any
+	CreatedAt              any
+	Events                 any
 	HasMultipleSingleFiles any
-	HtmlUrl any
+	HtmlUrl                any
 	// The ID of the installation.
 	Id any
 	// The permissions granted to the fine-grained access token.
 	Permissions any
 	// The names of the repositories to which the installation will be granted access. This is the simple name of the repository, not the full name (e.g., `hello-world` not `octocat/hello-world`). This is only required when `repository_selection` is `selected`.
-	Repositories any
+	Repositories    any
 	RepositoriesUrl any
 	// The repository selection for the GitHub App. Must be one of: * `all` - the installation can access all repositories in the organization. * `selected` - the installation can access only the listed repositories. * `none` - no repository permissions are requested. Only use when the app does not request repository permissions.
 	RepositorySelection any
-	SingleFileName any
-	SingleFilePaths any
-	SuspendedAt any
+	SingleFileName      any
+	SingleFilePaths     any
+	SuspendedAt         any
 	// A GitHub user.
 	SuspendedBy any
 	// The ID of the user or organization this token is being scoped to.
-	TargetId any
+	TargetId   any
 	TargetType any
-	UpdatedAt any
+	UpdatedAt  any
 	// path parameter, not part of the API's own resource representation
 	InstallationId any
 	// path parameter, not part of the API's own resource representation
@@ -233,11 +233,11 @@ type InstallationAttrs struct {
 var Installation = ubx.ResourceBinding{
 	WireType: "github_installation",
 	Fields: ubx.FieldMap{
-		"ClientId": ubx.FieldSpec{WireName: "client_id"},
-		"Repositories": ubx.FieldSpec{WireName: "repositories"},
+		"ClientId":            ubx.FieldSpec{WireName: "client_id"},
+		"Repositories":        ubx.FieldSpec{WireName: "repositories"},
 		"RepositorySelection": ubx.FieldSpec{WireName: "repository_selection"},
-		"InstallationId": ubx.FieldSpec{WireName: "installation_id"},
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"InstallationId":      ubx.FieldSpec{WireName: "installation_id"},
+		"Enterprise":          ubx.FieldSpec{WireName: "enterprise"},
+		"Org":                 ubx.FieldSpec{WireName: "org"},
 	},
 }

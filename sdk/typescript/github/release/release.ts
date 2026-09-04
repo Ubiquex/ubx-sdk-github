@@ -2,97 +2,55 @@
 import type { Computed, FieldMap, ResourceBinding } from "@ubx/sdk";
 
 export interface Release_Assets_Uploader {
-  /** The URL for the uploader's avatar image. (AI-inferred) */
   avatarUrl?: string | Computed<string>;
-  /** The email address of the user who uploaded the release asset. (AI-inferred) */
   email?: string | Computed<string>;
-  /** The URL to the events endpoint for the uploader user, providing access to the user's public events. (AI-inferred) */
   eventsUrl?: string | Computed<string>;
-  /** The API URL to the uploader's list of followers on GitHub. (AI-inferred) */
   followersUrl?: string | Computed<string>;
-  /** The URL to the GitHub API endpoint that lists the users this uploader is following. (AI-inferred) */
   followingUrl?: string | Computed<string>;
-  /** The URL to the user's gists. (AI-inferred) */
   gistsUrl?: string | Computed<string>;
-  /** The Gravatar ID for the user, which is the MD5 hash of the user's email address. It is used to construct the user's avatar URL via Gravatar. In current API responses, this field is often an empty string. (AI-inferred) */
   gravatarId?: string | Computed<string>;
-  /** The URL to the uploader's GitHub profile page. (AI-inferred) */
   htmlUrl?: string | Computed<string>;
-  /** The unique numeric identifier for the GitHub user who uploaded the release asset. (AI-inferred) */
   id?: number | Computed<number>;
-  /** The GitHub username of the user who uploaded the release asset. (AI-inferred) */
   login?: string | Computed<string>;
-  /** The display name of the user who uploaded the release asset. (AI-inferred) */
   name?: string | Computed<string>;
-  /** The unique identifier for the uploader's user object in GitHub's GraphQL API. (AI-inferred) */
   nodeId?: string | Computed<string>;
-  /** The API URL to fetch the list of organizations the uploader belongs to, typically in the form https://api.github.com/users/{username}/orgs. (AI-inferred) */
   organizationsUrl?: string | Computed<string>;
-  /** The URL to the received events endpoint for the uploader user, providing a list of events that this user has received. (AI-inferred) */
   receivedEventsUrl?: string | Computed<string>;
-  /** The API endpoint URL that lists the repositories owned by the uploader user. (AI-inferred) */
   reposUrl?: string | Computed<string>;
-  /** Whether the uploader is a site administrator on GitHub. (AI-inferred) */
   siteAdmin?: boolean | Computed<boolean>;
   starredAt?: string | Computed<string>;
-  /** The URL to retrieve the list of repositories starred by this uploader user. (AI-inferred) */
   starredUrl?: string | Computed<string>;
-  /** The API endpoint URL for the uploader user's GitHub subscriptions, typically pointing to a list of repositories the user is subscribed to. (AI-inferred) */
   subscriptionsUrl?: string | Computed<string>;
-  /** The type of GitHub user account that uploaded the asset. Typically 'User' or 'Bot'. (AI-inferred) */
   type?: string | Computed<string>;
-  /** The GitHub API URL for the uploader user. (AI-inferred) */
   url?: string | Computed<string>;
   userViewType?: string | Computed<string>;
 }
 
 export interface Release_Assets {
-  /** The URL to download the release asset directly in a browser. This is the web-based link that users can visit to download the file without using the API. (AI-inferred) */
   browserDownloadUrl?: string | Computed<string>;
-  /** The MIME type of the release asset, e.g., application/zip or application/x-gzip. (AI-inferred) */
   contentType?: string | Computed<string>;
-  /** The date and time when the GitHub release asset was created, formatted as an ISO 8601 timestamp. (AI-inferred) */
   createdAt?: string | Computed<string>;
-  /** The cryptographic digest (typically SHA-256) of the release asset file, used to verify its integrity. (AI-inferred) */
   digest?: string | Computed<string>;
-  /** Number of times this release asset has been downloaded. (AI-inferred) */
   downloadCount?: number | Computed<number>;
-  /** The unique identifier for the release asset, as assigned by GitHub. (AI-inferred) */
   id?: number | Computed<number>;
-  /** The user-defined label for the release asset, which is displayed in the GitHub UI; may be null if no label is set. (AI-inferred) */
   label?: string | Computed<string>;
-  /** The name of the release asset, typically the filename. (AI-inferred) */
   name?: string | Computed<string>;
-  /** The GraphQL node ID of the release asset. (AI-inferred) */
   nodeId?: string | Computed<string>;
-  /** The size of the release asset in bytes. (AI-inferred) */
   size?: number | Computed<number>;
-  /** The state of the release asset, either `uploaded` or `open`. (AI-inferred) */
   state?: string | Computed<string>;
-  /** The timestamp of when the release asset was last updated. (AI-inferred) */
   updatedAt?: string | Computed<string>;
-  /** The GitHub user who uploaded the release asset. This is a user object containing standard GitHub user fields such as login, id, and avatar_url. (AI-inferred) */
   uploader?: Release_Assets_Uploader | Computed<Release_Assets_Uploader>;
-  /** The API URL for the release asset. (AI-inferred) */
   url?: string | Computed<string>;
 }
 
 export interface Release_Reactions {
-  /** The number of users who reacted with the 'confused' emoji to this release. (AI-inferred) */
   confused: number | Computed<number>;
-  /** The number of 'eyes' emoji reactions on the release. (AI-inferred) */
   eyes: number | Computed<number>;
-  /** The count of heart reactions (❤️) on the release. (AI-inferred) */
   heart: number | Computed<number>;
-  /** The number of 'hooray' reactions (🎉) on the GitHub release. (AI-inferred) */
   hooray: number | Computed<number>;
-  /** The number of users who reacted with the 'laugh' (😂) emoji on this GitHub release. (AI-inferred) */
   laugh: number | Computed<number>;
-  /** The count of rocket (🚀) reactions on the GitHub release. (AI-inferred) */
   rocket: number | Computed<number>;
-  /** The total count of reactions on the release. (AI-inferred) */
   totalCount: number | Computed<number>;
-  /** The URL to the API endpoint that returns the reactions for this GitHub release. (AI-inferred) */
   url: string | Computed<string>;
 }
 
@@ -124,19 +82,14 @@ export interface ReleaseConfig {
 }
 
 export interface ReleaseAttrs {
-  /** The list of release assets (files) attached to the GitHub release. (AI-inferred) */
   assets: Release_Assets[];
-  /** The API URL for the assets associated with this GitHub release. (AI-inferred) */
   assetsUrl: string;
   /** A GitHub user. */
   author: Release_Assets_Uploader;
   /** Text describing the contents of the tag. */
   body: string;
-  /** The rendered HTML version of the release body or description. (AI-inferred) */
   bodyHtml: string;
-  /** The full body text of the GitHub release, typically containing release notes or a description. (AI-inferred) */
   bodyText: string;
-  /** The timestamp of when the release was created, in ISO 8601 format (e.g., 2023-01-01T00:00:00Z). (AI-inferred) */
   createdAt: string;
   /** If specified, a discussion of the specified category is created and linked to the release. The value must be a category that already exists in the repository. For more information, see "[Managing categories for discussions in your repository](https://docs.github.com/enterprise-cloud@latest/discussions/managing-discussions-for-your-community/managing-categories-for-discussions-in-your-repository)." */
   discussionCategoryName: string;
@@ -146,9 +99,7 @@ export interface ReleaseAttrs {
   draft: boolean;
   /** Whether to automatically generate the name and body for this release. If `name` is specified, the specified name will be used; otherwise, a name will be automatically generated. If `body` is specified, the body will be pre-pended to the automatically generated notes. */
   generateReleaseNotes: boolean;
-  /** The GitHub web URL where the release can be viewed. (AI-inferred) */
   htmlUrl: string;
-  /** The unique numeric identifier for the release, automatically assigned by GitHub when the release is created. (AI-inferred) */
   id: number;
   /** Whether or not the release is immutable. */
   immutable: boolean;
@@ -157,27 +108,19 @@ export interface ReleaseAttrs {
   mentionsCount: number;
   /** The name of the release. */
   name: string;
-  /** The GraphQL Node ID of the GitHub release. (AI-inferred) */
   nodeId: string;
   /** `true` to identify the release as a prerelease. `false` to identify the release as a full release. */
   prerelease: boolean;
-  /** The timestamp of when the release was published. This field is computed and cannot be set by the user. (AI-inferred) */
   publishedAt: string;
-  /** An object summarizing reactions to the release, mapping each reaction type (e.g., +1, -1, laugh, hooray) to the count received. This field is automatically computed and read-only. (AI-inferred) */
   reactions: Release_Reactions;
   /** The name of the tag. */
   tagName: string;
-  /** The URL to download the tarball source archive for this release. (AI-inferred) */
   tarballUrl: string;
   /** Specifies the commitish value that determines where the Git tag is created from. Can be any branch or commit SHA. Unused if the Git tag already exists. Default: the repository's default branch. */
   targetCommitish: string;
-  /** The timestamp of the last update to the release, in ISO 8601 format (e.g., '2023-01-15T12:34:56Z'). This value is set by the system and cannot be modified directly. (AI-inferred) */
   updatedAt: string;
-  /** The URL endpoint for uploading assets to this GitHub release. It is a computed, read-only value and typically includes a placeholder for the asset name. (AI-inferred) */
   uploadUrl: string;
-  /** The API URL that points to this release on GitHub (e.g., https://api.github.com/repos/{owner}/{repo}/releases/{id}). (AI-inferred) */
   url: string;
-  /** The URL of the zip archive of the source code for this release. (AI-inferred) */
   zipballUrl: string;
   /** path parameter, not part of the API's own resource representation */
   owner: string;

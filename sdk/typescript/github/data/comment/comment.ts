@@ -2,31 +2,22 @@
 import type { Computed, FieldMap, DataSourceBinding } from "@ubx/sdk";
 
 export interface CommentConfig {
-  commentId: number | Computed<number>;
-  content?: string | Computed<string>;
-  owner: string | Computed<string>;
+  gistId: string | Computed<string>;
   page?: number | Computed<number>;
   perPage?: number | Computed<number>;
-  repo: string | Computed<string>;
 }
 
 export interface CommentAttrs {
-  commentId: number;
-  content: string;
-  owner: string;
+  gistId: string;
   page: number;
   perPage: number;
-  repo: string;
 }
 
 export const Comment: DataSourceBinding<CommentConfig, CommentAttrs> = {
   wireType: "github_comment",
   fields: {
-    commentId: "comment_id",
-    content: "content",
-    owner: "owner",
+    gistId: "gist_id",
     page: "page",
     perPage: "per_page",
-    repo: "repo",
   },
 };

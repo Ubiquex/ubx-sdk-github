@@ -4,22 +4,22 @@ package assignment
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type AssignmentConfig struct {
-	AssignmentId any
-	Page any
-	PerPage any
+	ClassroomId any
+	Page        any
+	PerPage     any
 }
 
 type AssignmentAttrs struct {
-	AssignmentId any
-	Page any
-	PerPage any
+	ClassroomId any
+	Page        any
+	PerPage     any
 }
 
 var Assignment = ubx.DataSourceBinding{
 	WireType: "github_assignment",
 	Fields: ubx.FieldMap{
-		"AssignmentId": ubx.FieldSpec{WireName: "assignment_id"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"ClassroomId": ubx.FieldSpec{WireName: "classroom_id"},
+		"Page":        ubx.FieldSpec{WireName: "page"},
+		"PerPage":     ubx.FieldSpec{WireName: "per_page"},
 	},
 }

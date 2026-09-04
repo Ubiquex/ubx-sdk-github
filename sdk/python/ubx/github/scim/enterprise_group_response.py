@@ -11,6 +11,17 @@ class EnterpriseGroupResponse_Members:
     display_name: Any = None
     value: Any = None
 
+@dataclasses.dataclass
+class EnterpriseGroupResponse_Meta:
+    # A date and time when the user was created.
+    created: Any = None
+    # A data and time when the user was last modified.
+    last_modified: Any = None
+    # A URL location of an object
+    location: Any = None
+    # A type of a resource
+    resource_type: Any = None
+
 _EnterpriseGroupResponse_MembersFields = {
     "display_name": ubx.FieldSpec(wire_name="display_name"),
     "value": ubx.FieldSpec(wire_name="value"),
@@ -37,8 +48,12 @@ class EnterpriseGroupResponseAttrs:
     display_name: Any = None
     # A unique identifier for the resource as defined by the provisioning client.
     external_id: Any = None
+    # The internally generated id for the group object.
+    id: Any = None
     # The group members.
     members: Any = None
+    # The metadata associated with the creation/updates to the user.
+    meta: Any = None
     # The URIs that are used to indicate the namespaces of the SCIM schemas.
     schemas: Any = None
     # path parameter, not part of the API's own resource representation

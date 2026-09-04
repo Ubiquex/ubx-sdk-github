@@ -25,10 +25,9 @@ class Repository_Permissions:
 
 @dataclasses.dataclass
 class RepositoryConfig:
-    org: Any = None
     owner: Any = None
     repo: Any = None
-    team_slug: Any = None
+    team_id: Any = None
 
 @dataclasses.dataclass
 class RepositoryAttrs:
@@ -111,7 +110,6 @@ class RepositoryAttrs:
     notifications_url: Any = None
     open_issues: Any = None
     open_issues_count: Any = None
-    org: Any = None
     owner: Any = None
     permissions: Any = None
     # Whether the repository is private or public.
@@ -131,7 +129,7 @@ class RepositoryAttrs:
     subscription_url: Any = None
     svn_url: Any = None
     tags_url: Any = None
-    team_slug: Any = None
+    team_id: Any = None
     teams_url: Any = None
     temp_clone_token: Any = None
     topics: Any = None
@@ -148,9 +146,8 @@ class RepositoryAttrs:
 Repository = ubx.DataSourceBinding(
     wire_type="github_team_repository",
     fields={
-        "org": ubx.FieldSpec(wire_name="org"),
         "owner": ubx.FieldSpec(wire_name="owner"),
         "repo": ubx.FieldSpec(wire_name="repo"),
-        "team_slug": ubx.FieldSpec(wire_name="team_slug"),
+        "team_id": ubx.FieldSpec(wire_name="team_id"),
     },
 )

@@ -7,28 +7,163 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
+class Run_CheckRuns_App_Owner:
+    avatar_url: Any = None
+    created_at: Any = None
+    description: Any = None
+    email: Any = None
+    events_url: Any = None
+    followers_url: Any = None
+    following_url: Any = None
+    gists_url: Any = None
+    gravatar_id: Any = None
+    html_url: Any = None
+    id: Any = None
+    login: Any = None
+    name: Any = None
+    node_id: Any = None
+    organizations_url: Any = None
+    received_events_url: Any = None
+    repos_url: Any = None
+    site_admin: Any = None
+    slug: Any = None
+    starred_at: Any = None
+    starred_url: Any = None
+    subscriptions_url: Any = None
+    type: Any = None
+    updated_at: Any = None
+    url: Any = None
+    user_view_type: Any = None
+    website_url: Any = None
+
+@dataclasses.dataclass
+class Run_CheckRuns_App_Permissions:
+    checks: Any = None
+    contents: Any = None
+    deployments: Any = None
+    issues: Any = None
+    metadata: Any = None
+
+@dataclasses.dataclass
+class Run_CheckRuns_App:
+    client_id: Any = None
+    created_at: Any = None
+    description: Any = None
+    events: Any = None
+    external_url: Any = None
+    html_url: Any = None
+    id: Any = None
+    installations_count: Any = None
+    name: Any = None
+    node_id: Any = None
+    owner: Any = None
+    permissions: Any = None
+    slug: Any = None
+    updated_at: Any = None
+
+@dataclasses.dataclass
+class Run_CheckRuns_CheckSuite:
+    id: Any = None
+
+@dataclasses.dataclass
+class Run_CheckRuns_Deployment:
+    created_at: Any = None
+    description: Any = None
+    environment: Any = None
+    id: Any = None
+    node_id: Any = None
+    original_environment: Any = None
+    performed_via_github_app: Any = None
+    production_environment: Any = None
+    repository_url: Any = None
+    statuses_url: Any = None
+    task: Any = None
+    transient_environment: Any = None
+    updated_at: Any = None
+    url: Any = None
+
+@dataclasses.dataclass
+class Run_CheckRuns_Output:
+    annotations_count: Any = None
+    annotations_url: Any = None
+    summary: Any = None
+    text: Any = None
+    title: Any = None
+
+@dataclasses.dataclass
+class Run_CheckRuns_PullRequests_Base_Repo:
+    id: Any = None
+    name: Any = None
+    url: Any = None
+
+@dataclasses.dataclass
+class Run_CheckRuns_PullRequests_Base:
+    ref: Any = None
+    repo: Any = None
+    sha: Any = None
+
+@dataclasses.dataclass
+class Run_CheckRuns_PullRequests:
+    base: Any = None
+    head: Any = None
+    id: Any = None
+    number: Any = None
+    url: Any = None
+
+@dataclasses.dataclass
+class Run_CheckRuns:
+    app: Any = None
+    check_suite: Any = None
+    completed_at: Any = None
+    conclusion: Any = None
+    deployment: Any = None
+    details_url: Any = None
+    external_id: Any = None
+    head_sha: Any = None
+    html_url: Any = None
+    id: Any = None
+    name: Any = None
+    node_id: Any = None
+    output: Any = None
+    pull_requests: Any = None
+    started_at: Any = None
+    status: Any = None
+    url: Any = None
+
+@dataclasses.dataclass
 class RunConfig:
-    check_run_id: Any = None
+    check_name: Any = None
+    check_suite_id: Any = None
+    filter: Any = None
     owner: Any = None
     page: Any = None
     per_page: Any = None
     repo: Any = None
+    status: Any = None
 
 @dataclasses.dataclass
 class RunAttrs:
-    check_run_id: Any = None
+    check_name: Any = None
+    check_runs: Any = None
+    check_suite_id: Any = None
+    filter: Any = None
     owner: Any = None
     page: Any = None
     per_page: Any = None
     repo: Any = None
+    status: Any = None
+    total_count: Any = None
 
 Run = ubx.DataSourceBinding(
     wire_type="github_check_run",
     fields={
-        "check_run_id": ubx.FieldSpec(wire_name="check_run_id"),
+        "check_name": ubx.FieldSpec(wire_name="check_name"),
+        "check_suite_id": ubx.FieldSpec(wire_name="check_suite_id"),
+        "filter": ubx.FieldSpec(wire_name="filter"),
         "owner": ubx.FieldSpec(wire_name="owner"),
         "page": ubx.FieldSpec(wire_name="page"),
         "per_page": ubx.FieldSpec(wire_name="per_page"),
         "repo": ubx.FieldSpec(wire_name="repo"),
+        "status": ubx.FieldSpec(wire_name="status"),
     },
 )

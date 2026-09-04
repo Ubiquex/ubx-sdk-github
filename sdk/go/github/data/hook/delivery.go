@@ -26,7 +26,7 @@ type DeliveryAttrs struct {
 	Action any
 	// Time when the delivery was delivered.
 	DeliveredAt any
-	DeliveryId any
+	DeliveryId  any
 	// Time spent delivering.
 	Duration any
 	// The event that triggered the delivery.
@@ -41,8 +41,8 @@ type DeliveryAttrs struct {
 	Redelivery any
 	// The id of the repository associated with this event.
 	RepositoryId any
-	Request any
-	Response any
+	Request      any
+	Response     any
 	// Description of the status of the attempted delivery
 	Status any
 	// Status code received when delivery was made.

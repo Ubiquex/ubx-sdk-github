@@ -2,40 +2,24 @@
 import type { Computed, FieldMap, ResourceBinding } from "@ubx/sdk";
 
 export interface Space_Creator {
-  /** The URL of the avatar image for the creator of the GitHub Copilot space. (AI-inferred) */
   avatarUrl: string | Computed<string>;
-  /** The email address of the creator of the Copilot space. (AI-inferred) */
   email?: string | Computed<string>;
-  /** The URL to retrieve events related to the creator of the Copilot space, typically the GitHub API events endpoint for the creator's user account. (AI-inferred) */
   eventsUrl: string | Computed<string>;
-  /** The URL endpoint to retrieve the list of followers for the creator. This follows the standard GitHub API pattern for user-related URLs. (AI-inferred) */
   followersUrl: string | Computed<string>;
-  /** The URL to the creator's following list, used to retrieve the list of users the creator follows. (AI-inferred) */
   followingUrl: string | Computed<string>;
-  /** The URL template for listing the creator's gists. Contains a placeholder for the gist ID, typically formatted as 'https://api.github.com/users/{creator}/gists{/gist_id}'. (AI-inferred) */
   gistsUrl: string | Computed<string>;
-  /** The user's Gravatar ID, an MD5 hash of their email address used to fetch their avatar from Gravatar. (AI-inferred) */
   gravatarId: string | Computed<string>;
-  /** The URL to the creator's GitHub profile page. (AI-inferred) */
   htmlUrl: string | Computed<string>;
   id: number | Computed<number>;
-  /** The GitHub username (login) of the creator of the Copilot space. This field is required and identifies the user who created the space. (AI-inferred) */
   login: string | Computed<string>;
   name?: string | Computed<string>;
-  /** The GraphQL node ID of the user who created the Copilot space. (AI-inferred) */
   nodeId: string | Computed<string>;
-  /** The URL to the API endpoint that returns the organizations to which the creator of the Copilot Space belongs. (AI-inferred) */
   organizationsUrl: string | Computed<string>;
-  /** The URL to retrieve the events received by this user, as defined by the GitHub API user object. (AI-inferred) */
   receivedEventsUrl: string | Computed<string>;
-  /** The API URL to the list of repositories owned by the creator of the GitHub Copilot space. (AI-inferred) */
   reposUrl: string | Computed<string>;
-  /** Whether the user is a site administrator on GitHub. (AI-inferred) */
   siteAdmin: boolean | Computed<boolean>;
   starredAt?: string | Computed<string>;
-  /** The URL template for listing repositories starred by the user, with optional placeholders for owner and repo. (AI-inferred) */
   starredUrl: string | Computed<string>;
-  /** The API endpoint URL for the creator's subscriptions, typically returning the list of repositories or topics the creator is subscribed to. (AI-inferred) */
   subscriptionsUrl: string | Computed<string>;
   type: string | Computed<string>;
   url: string | Computed<string>;
@@ -43,50 +27,30 @@ export interface Space_Creator {
 }
 
 export interface Space_Owner {
-  /** The URL of the GitHub profile avatar for the owner of the Copilot space. (AI-inferred) */
   avatarUrl?: string | Computed<string>;
   description?: string | Computed<string>;
-  /** The email address of the owner of the GitHub Copilot space. (AI-inferred) */
   email?: string | Computed<string>;
-  /** The URL to the events of the owner, such as a GitHub user or organization. (AI-inferred) */
   eventsUrl?: string | Computed<string>;
-  /** The API endpoint URL to retrieve the list of followers for this GitHub owner (user or organization). (AI-inferred) */
   followersUrl?: string | Computed<string>;
-  /** The URL to retrieve the list of users the owner follows. This is a GitHub API URL and may include template placeholders for additional query parameters. (AI-inferred) */
   followingUrl?: string | Computed<string>;
-  /** The URL template for the user's gists, which includes an optional placeholder for a specific gist ID. (AI-inferred) */
   gistsUrl?: string | Computed<string>;
-  /** The unique identifier for the owner's Gravatar, used to construct the URL for their avatar image. (AI-inferred) */
   gravatarId?: string | Computed<string>;
   hooksUrl?: string | Computed<string>;
-  /** The HTML URL to the owner's GitHub profile page (e.g., for a user or organization). (AI-inferred) */
   htmlUrl?: string | Computed<string>;
   id?: number | Computed<number>;
-  /** The URL to the issues for the owner, as defined by the GitHub API. (AI-inferred) */
   issuesUrl?: string | Computed<string>;
-  /** The GitHub username (login) of the owner of the Copilot space. (AI-inferred) */
   login?: string | Computed<string>;
-  /** The URL to retrieve the members of the organization that owns the Copilot space. (AI-inferred) */
   membersUrl?: string | Computed<string>;
   name?: string | Computed<string>;
-  /** The global node ID assigned by GitHub, used to identify the owner in the GraphQL API. (AI-inferred) */
   nodeId?: string | Computed<string>;
-  /** The API endpoint URL to list the organizations that this owner belongs to. (AI-inferred) */
   organizationsUrl?: string | Computed<string>;
-  /** The URL template for accessing the public members of the owner organization, typically including a placeholder for the member identifier. (AI-inferred) */
   publicMembersUrl?: string | Computed<string>;
-  /** The URL to the GitHub API endpoint that returns the events received by this owner. (AI-inferred) */
   receivedEventsUrl?: string | Computed<string>;
-  /** The URL to the list of repositories owned by this GitHub user or organization. (AI-inferred) */
   reposUrl?: string | Computed<string>;
-  /** A boolean indicating whether the owner is a GitHub site administrator. (AI-inferred) */
   siteAdmin?: boolean | Computed<boolean>;
   starredAt?: string | Computed<string>;
-  /** The URL template to access the list of starred repositories for the owner. In GitHub's API, this string includes placeholder variables such as `{owner}` and `{repo}` that are replaced to get a concrete URL. (AI-inferred) */
   starredUrl?: string | Computed<string>;
-  /** The URL to the owner's subscriptions in the GitHub API, used to list entities the owner is subscribed to. (AI-inferred) */
   subscriptionsUrl?: string | Computed<string>;
-  /** The type of the owner account, typically 'user' for an individual or 'organization' for an organization. (AI-inferred) */
   type?: string | Computed<string>;
   url?: string | Computed<string>;
   userViewType?: string | Computed<string>;
@@ -96,14 +60,12 @@ export interface Space_ResourcesAttributes_Metadata {
   filePath?: string | Computed<string>;
   name?: string | Computed<string>;
   number?: number | Computed<number>;
-  /** The unique numeric identifier of the repository associated with this metadata. (AI-inferred) */
   repositoryId?: number | Computed<number>;
   text?: string | Computed<string>;
 }
 
 export interface Space_ResourcesAttributes {
   metadata?: Space_ResourcesAttributes_Metadata | Computed<Space_ResourcesAttributes_Metadata>;
-  /** Specifies the type of resource, which determines how the resource content is interpreted. Allowed values: repository, github_file, free_text, github_issue, github_pull_request, media_content, uploaded_text_file. (AI-inferred) */
   resourceType?: string | Computed<string>;
 }
 

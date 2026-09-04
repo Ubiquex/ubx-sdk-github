@@ -4,146 +4,88 @@ package deployment
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Status_Creator struct {
-	// The URL of the avatar image for the user or bot that created the deployment status. (AI-inferred)
-	AvatarUrl any
-	// The email address of the user who created the deployment status. This field may be null if the user does not have a public email address or if the email is not accessible in the API context. (AI-inferred)
-	Email any
-	// The events URL for the user, as provided by the GitHub API. This is a URL template that can be used to retrieve events associated with the user, such as https://api.github.com/users/{username}/events{/privacy}. (AI-inferred)
-	EventsUrl any
-	// The URL to the API endpoint for the list of followers of the user. (AI-inferred)
-	FollowersUrl any
-	// The API URL to the list of users the creator follows, with a template placeholder for specifying another user. (AI-inferred)
-	FollowingUrl any
-	// The API URL for the user's gists, typically including an optional template placeholder for a specific gist ID. (AI-inferred)
-	GistsUrl any
-	// The Gravatar ID of the user, a hash used to construct the user's Gravatar avatar URL. (AI-inferred)
-	GravatarId any
-	// The GitHub profile URL for the creator (user) of the deployment status. (AI-inferred)
-	HtmlUrl any
-	Id any
-	// The GitHub username of the creator of the deployment status. (AI-inferred)
-	Login any
-	// The display name of the user who created the deployment status. (AI-inferred)
-	Name any
-	// The global node ID of the user who created the deployment status. (AI-inferred)
-	NodeId any
-	// The URL to list the organizations that the user (the creator of the deployment status) belongs to, per the GitHub API. (AI-inferred)
-	OrganizationsUrl any
-	// The URL to retrieve the events received by the user. (AI-inferred)
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	// The API URL for the repositories belonging to this user (the creator of the deployment status). (AI-inferred)
-	ReposUrl any
-	// Whether the user is a GitHub site administrator. (AI-inferred)
-	SiteAdmin any
-	StarredAt any
-	// The URL template to list repositories starred by the user, with placeholders for owner and repo (e.g., https://api.github.com/users/{user}/starred{/owner}{/repo}). This field is always included in the creator user object. (AI-inferred)
-	StarredUrl any
-	// The API URL to the list of repositories the user is subscribed to (i.e., watching), typically in the format 'https://api.github.com/users/{username}/subscriptions'. (AI-inferred)
-	SubscriptionsUrl any
-	// The type of GitHub account that created the deployment status, such as 'User' or 'Bot'. (AI-inferred)
-	Type any
-	// The URL to the GitHub profile of the user who created the deployment status. (AI-inferred)
-	Url any
-	// The user's view type, indicating whether the user is a public or private user. Possible values are `public` and `private`. (AI-inferred)
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type Status_PerformedViaGithubApp_Owner struct {
-	// The URL to the avatar image for the owner (user or organization) of the GitHub App that performed the deployment. (AI-inferred)
-	AvatarUrl any
-	// The timestamp when the owner account was created, represented as a string. (AI-inferred)
-	CreatedAt any
-	Description any
-	// Email address of the owner of the GitHub App that performed the deployment. (AI-inferred)
-	Email any
-	// The URL to the owner's public events on GitHub. This is a template URL that can be used to fetch event listings for the owner (user or organization). (AI-inferred)
-	EventsUrl any
-	// The URL to fetch the list of followers of the owner. (AI-inferred)
-	FollowersUrl any
-	// The API URL to retrieve a list of users this GitHub user follows. May include a placeholder like {/other_user} for checking a specific user. (AI-inferred)
-	FollowingUrl any
-	// The URL template to the owner's public gists on GitHub. It follows the pattern `https://api.github.com/users/{username}/gists{/gist_id}` where `{username}` is the owner's login and `{/gist_id}` is an optional placeholder for a specific gist. (AI-inferred)
-	GistsUrl any
-	// The user's Gravatar ID, a hash string used to construct the avatar URL for the owner of the GitHub app. (AI-inferred)
-	GravatarId any
-	// The HTML URL to the GitHub profile of the owner (user or organization). (AI-inferred)
-	HtmlUrl any
-	// Numeric identifier for the GitHub account (user or organization) that owns the GitHub App which performed the deployment status. (AI-inferred)
-	Id any
-	// The GitHub username of the account that owns the GitHub App. (AI-inferred)
-	Login any
-	// The display name of the user or organization that owns the GitHub App. (AI-inferred)
-	Name any
-	// The GraphQL node ID of the owner object, used for querying in GitHub's GraphQL API. (AI-inferred)
-	NodeId any
-	// The API URL to retrieve the list of organizations that the owner belongs to, applicable when the owner is a user. (AI-inferred)
-	OrganizationsUrl any
-	// URL to the received events endpoint for this GitHub owner (user or organization). (AI-inferred)
+	AvatarUrl         any
+	CreatedAt         any
+	Description       any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	// The URL to the list of repositories belonging to the owner (user or organization). (AI-inferred)
-	ReposUrl any
-	// Indicates whether the owner is a site administrator on GitHub. (AI-inferred)
-	SiteAdmin any
-	// The URL-friendly slug for the owner of the GitHub App. In GitHub's API, this is typically the organization's login, used as the identifier in GitHub URLs. (AI-inferred)
-	Slug any
-	StarredAt any
-	// The URL template for listing the repositories starred by the user. In the GitHub API, this is typically in the form https://api.github.com/users/{user}/starred{/owner}{/repo}. (AI-inferred)
-	StarredUrl any
-	// The API URL to list the subscriptions of this owner (user or organization). For example, for a user it would be https://api.github.com/users/{username}/subscriptions. (AI-inferred)
-	SubscriptionsUrl any
-	// The type of the GitHub account that owns the app. This is either 'User' or 'Organization'. (AI-inferred)
-	Type any
-	// The timestamp of the last update to the owner of the GitHub App, in ISO 8601 format. (AI-inferred)
-	UpdatedAt any
-	// The URL to the GitHub user or organization that owns the GitHub App. (AI-inferred)
-	Url any
-	// A string indicating the user's visibility type, with possible values 'public' or 'private'. This field is typically present for enterprise-managed users. (AI-inferred)
-	UserViewType any
-	// The URL of the website listed on the GitHub owner's profile. (AI-inferred)
-	WebsiteUrl any
+	ReposUrl          any
+	SiteAdmin         any
+	Slug              any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	UpdatedAt         any
+	Url               any
+	UserViewType      any
+	WebsiteUrl        any
 }
 
 type Status_PerformedViaGithubApp_Permissions struct {
-	// The permission level for checks (read, write, or none) granted to the GitHub App. (AI-inferred)
-	Checks any
-	// The permission level for the GitHub App's access to repository contents, typically 'read', 'write', or 'none'. (AI-inferred)
-	Contents any
-	// The permission level the GitHub App has for deployments, typically 'read', 'write', or 'none'. (AI-inferred)
+	Checks      any
+	Contents    any
 	Deployments any
-	// The permission level for issues in the GitHub App's permissions. (AI-inferred)
-	Issues any
-	// The metadata permission for the GitHub App. Allowed value is 'read' only, as metadata access cannot be granted write permissions. (AI-inferred)
-	Metadata any
+	Issues      any
+	Metadata    any
 }
 
 type Status_PerformedViaGithubApp struct {
-	// The client ID of the GitHub App that performed the deployment. This field is optional and present only when the deployment status was performed via a GitHub App. (AI-inferred)
-	ClientId any
-	// The date and time when the GitHub App that performed the deployment was created, in ISO 8601 format. (AI-inferred)
-	CreatedAt any
-	// A short description of the GitHub App that performed the deployment status. (AI-inferred)
+	ClientId    any
+	CreatedAt   any
 	Description any
 	// The list of events for the GitHub app. Note that the `installation_target`, `security_advisory`, and `meta` events are not included because they are global events and not specific to an installation.
-	Events any
-	// The external URL (homepage) of the GitHub App that performed the deployment status. (AI-inferred)
+	Events      any
 	ExternalUrl any
-	// The URL to the GitHub App's public page on GitHub. (AI-inferred)
-	HtmlUrl any
+	HtmlUrl     any
 	// Unique identifier of the GitHub app
 	Id any
 	// The number of installations associated with the GitHub app. Only returned when the integration is requesting details about itself.
 	InstallationsCount any
 	// The name of the GitHub app
-	Name any
-	// The GraphQL node identifier of the GitHub App that performed the deployment. (AI-inferred)
+	Name   any
 	NodeId any
-	// The user or organization that owns the GitHub App which performed the deployment status. (AI-inferred)
-	Owner any
+	Owner  any
 	// The set of permissions for the GitHub app
 	Permissions any
 	// The slug name of the GitHub app
-	Slug any
-	// The date and time at which the GitHub App was last updated, in ISO 8601 format. (AI-inferred)
+	Slug      any
 	UpdatedAt any
 }
 
@@ -175,11 +117,9 @@ type StatusConfig struct {
 type StatusAttrs struct {
 	// Adds a new `inactive` status to all prior non-transient, non-production environment deployments with the same repository and `environment` name as the created status's deployment. An `inactive` status is only added to deployments that had a `success` state. Default: `true`
 	AutoInactive any
-	// The timestamp of when the deployment status was created, in ISO 8601 format (e.g., 2023-05-01T12:00:00Z). (AI-inferred)
-	CreatedAt any
+	CreatedAt    any
 	// A GitHub user.
-	Creator any
-	// The URL to the associated deployment in the GitHub API or web interface. (AI-inferred)
+	Creator       any
 	DeploymentUrl any
 	// A short description of the status. The maximum description length is 140 characters.
 	Description any
@@ -187,24 +127,19 @@ type StatusAttrs struct {
 	Environment any
 	// Sets the URL for accessing your environment. Default: `""`
 	EnvironmentUrl any
-	// The unique numeric identifier for the deployment status, generated by GitHub. (AI-inferred)
-	Id any
+	Id             any
 	// The full URL of the deployment's output. This parameter replaces `target_url`. We will continue to accept `target_url` to support legacy uses, but we recommend replacing `target_url` with `log_url`. Setting `log_url` will automatically set `target_url` to the same value. Default: `""`
 	LogUrl any
-	// The GraphQL node ID of the deployment status, generated by GitHub and used to identify the object in GitHub's GraphQL API. (AI-inferred)
 	NodeId any
 	// GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
 	PerformedViaGithubApp any
-	// The API URL for the repository associated with this deployment status. (AI-inferred)
-	RepositoryUrl any
+	RepositoryUrl         any
 	// The state of the status. When you set a transient deployment to `inactive`, the deployment will be shown as `destroyed` in GitHub.
 	State any
 	// The target URL to associate with this status. This URL should contain output to keep the user updated while the task is running or serve as historical information for what happened in the deployment. > [!NOTE] > It's recommended to use the `log_url` parameter, which replaces `target_url`.
 	TargetUrl any
-	// The timestamp of when the deployment status was last updated. (AI-inferred)
 	UpdatedAt any
-	// The API URL that uniquely identifies this deployment status. This is a computed value set by GitHub when the status is created. (AI-inferred)
-	Url any
+	Url       any
 	// path parameter, not part of the API's own resource representation
 	Owner any
 	// path parameter, not part of the API's own resource representation
@@ -218,16 +153,16 @@ type StatusAttrs struct {
 var Status = ubx.ResourceBinding{
 	WireType: "github_deployment_status",
 	Fields: ubx.FieldMap{
-		"AutoInactive": ubx.FieldSpec{WireName: "auto_inactive"},
-		"Description": ubx.FieldSpec{WireName: "description"},
-		"Environment": ubx.FieldSpec{WireName: "environment"},
+		"AutoInactive":   ubx.FieldSpec{WireName: "auto_inactive"},
+		"Description":    ubx.FieldSpec{WireName: "description"},
+		"Environment":    ubx.FieldSpec{WireName: "environment"},
 		"EnvironmentUrl": ubx.FieldSpec{WireName: "environment_url"},
-		"LogUrl": ubx.FieldSpec{WireName: "log_url"},
-		"State": ubx.FieldSpec{WireName: "state"},
-		"TargetUrl": ubx.FieldSpec{WireName: "target_url"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"DeploymentId": ubx.FieldSpec{WireName: "deployment_id"},
-		"StatusId": ubx.FieldSpec{WireName: "status_id"},
+		"LogUrl":         ubx.FieldSpec{WireName: "log_url"},
+		"State":          ubx.FieldSpec{WireName: "state"},
+		"TargetUrl":      ubx.FieldSpec{WireName: "target_url"},
+		"Owner":          ubx.FieldSpec{WireName: "owner"},
+		"Repo":           ubx.FieldSpec{WireName: "repo"},
+		"DeploymentId":   ubx.FieldSpec{WireName: "deployment_id"},
+		"StatusId":       ubx.FieldSpec{WireName: "status_id"},
 	},
 }

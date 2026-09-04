@@ -5,3 +5,4 @@
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
 from .codespace import Codespace, CodespaceConfig
+from .machine import Machine, MachineConfig

@@ -21,8 +21,7 @@ type MembershipAttrs struct {
 	Role any
 	// The state of the user's membership in the team.
 	State any
-	// The API URL for the team membership. (AI-inferred)
-	Url any
+	Url   any
 	// path parameter, not part of the API's own resource representation
 	Org any
 	// path parameter, not part of the API's own resource representation
@@ -36,10 +35,10 @@ type MembershipAttrs struct {
 var Membership = ubx.ResourceBinding{
 	WireType: "github_team_membership",
 	Fields: ubx.FieldMap{
-		"Role": ubx.FieldSpec{WireName: "role"},
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Role":     ubx.FieldSpec{WireName: "role"},
+		"Org":      ubx.FieldSpec{WireName: "org"},
 		"TeamSlug": ubx.FieldSpec{WireName: "team_slug"},
 		"Username": ubx.FieldSpec{WireName: "username"},
-		"TeamId": ubx.FieldSpec{WireName: "team_id"},
+		"TeamId":   ubx.FieldSpec{WireName: "team_id"},
 	},
 }

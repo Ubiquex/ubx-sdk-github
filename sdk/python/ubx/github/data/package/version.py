@@ -22,7 +22,6 @@ class Version_Metadata:
 
 @dataclasses.dataclass
 class VersionConfig:
-    org: Any = None
     package_name: Any = None
     package_type: Any = None
     package_version_id: Any = None
@@ -39,7 +38,6 @@ class VersionAttrs:
     metadata: Any = None
     # The name of the package version.
     name: Any = None
-    org: Any = None
     package_html_url: Any = None
     package_name: Any = None
     package_type: Any = None
@@ -50,7 +48,6 @@ class VersionAttrs:
 Version = ubx.DataSourceBinding(
     wire_type="github_package_version",
     fields={
-        "org": ubx.FieldSpec(wire_name="org"),
         "package_name": ubx.FieldSpec(wire_name="package_name"),
         "package_type": ubx.FieldSpec(wire_name="package_type"),
         "package_version_id": ubx.FieldSpec(wire_name="package_version_id"),

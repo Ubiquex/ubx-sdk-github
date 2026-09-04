@@ -8,21 +8,21 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class CommitConfig:
-    commit_sha: Any = None
-    owner: Any = None
-    repo: Any = None
+    gist_id: Any = None
+    page: Any = None
+    per_page: Any = None
 
 @dataclasses.dataclass
 class CommitAttrs:
-    commit_sha: Any = None
-    owner: Any = None
-    repo: Any = None
+    gist_id: Any = None
+    page: Any = None
+    per_page: Any = None
 
 Commit = ubx.DataSourceBinding(
     wire_type="github_commit",
     fields={
-        "commit_sha": ubx.FieldSpec(wire_name="commit_sha"),
-        "owner": ubx.FieldSpec(wire_name="owner"),
-        "repo": ubx.FieldSpec(wire_name="repo"),
+        "gist_id": ubx.FieldSpec(wire_name="gist_id"),
+        "page": ubx.FieldSpec(wire_name="page"),
+        "per_page": ubx.FieldSpec(wire_name="per_page"),
     },
 )

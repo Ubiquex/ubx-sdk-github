@@ -5,7 +5,5 @@
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
 from .dependabot import Dependabot, DependabotConfig
-from .alert import Alert, AlertConfig
 from .public_key import PublicKey, PublicKeyConfig
-from .repository_access_details import RepositoryAccessDetails, RepositoryAccessDetailsConfig
 from .secret import Secret, SecretConfig

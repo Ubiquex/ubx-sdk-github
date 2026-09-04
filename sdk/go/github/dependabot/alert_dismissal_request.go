@@ -5,8 +5,8 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type AlertDismissalRequest_Data struct {
 	AlertNumber any
-	AlertTitle any
-	Reason any
+	AlertTitle  any
+	Reason      any
 }
 
 type AlertDismissalRequest_Organization struct {
@@ -34,10 +34,10 @@ type AlertDismissalRequest_Requester struct {
 
 type AlertDismissalRequest_Responses struct {
 	CreatedAt any
-	Id any
-	Message any
-	Reviewer any
-	Status any
+	Id        any
+	Message   any
+	Reviewer  any
+	Status    any
 }
 
 type AlertDismissalRequestConfig struct {
@@ -86,7 +86,7 @@ type AlertDismissalRequestAttrs struct {
 	Responses any
 	// The status of the dismissal request.
 	Status any
-	Url any
+	Url    any
 	// path parameter, not part of the API's own resource representation
 	Owner any
 	// path parameter, not part of the API's own resource representation
@@ -99,9 +99,9 @@ var AlertDismissalRequest = ubx.ResourceBinding{
 	WireType: "github_dependabot_alert_dismissal_request",
 	Fields: ubx.FieldMap{
 		"DismissedComment": ubx.FieldSpec{WireName: "dismissed_comment"},
-		"DismissedReason": ubx.FieldSpec{WireName: "dismissed_reason"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"AlertNumber": ubx.FieldSpec{WireName: "alert_number"},
+		"DismissedReason":  ubx.FieldSpec{WireName: "dismissed_reason"},
+		"Owner":            ubx.FieldSpec{WireName: "owner"},
+		"Repo":             ubx.FieldSpec{WireName: "repo"},
+		"AlertNumber":      ubx.FieldSpec{WireName: "alert_number"},
 	},
 }

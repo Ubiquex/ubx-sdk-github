@@ -14,7 +14,7 @@ type Feed_Links struct {
 	// Hypermedia Link with Type
 	CurrentUserActor any
 	// Hypermedia Link with Type
-	CurrentUserOrganization any
+	CurrentUserOrganization  any
 	CurrentUserOrganizations any
 	// Hypermedia Link with Type
 	CurrentUserPublic any
@@ -34,23 +34,22 @@ type FeedConfig struct {
 }
 
 type FeedAttrs struct {
-	Links any
-	CurrentUserActorUrl any
-	CurrentUserOrganizationUrl any
+	Links                       any
+	CurrentUserActorUrl         any
+	CurrentUserOrganizationUrl  any
 	CurrentUserOrganizationUrls any
-	CurrentUserPublicUrl any
-	CurrentUserUrl any
+	CurrentUserPublicUrl        any
+	CurrentUserUrl              any
 	// A feed of discussions for a given repository and category.
 	RepositoryDiscussionsCategoryUrl any
 	// A feed of discussions for a given repository.
 	RepositoryDiscussionsUrl any
-	SecurityAdvisoriesUrl any
-	TimelineUrl any
-	UserUrl any
+	SecurityAdvisoriesUrl    any
+	TimelineUrl              any
+	UserUrl                  any
 }
 
 var Feed = ubx.DataSourceBinding{
 	WireType: "github_feed",
-	Fields: ubx.FieldMap{
-	},
+	Fields:   ubx.FieldMap{},
 }

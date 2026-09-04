@@ -4,43 +4,43 @@ package api
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type InsightsRouteStatsConfig struct {
-	ActorId any
-	ActorType any
+	ActorId           any
+	ActorType         any
 	ApiRouteSubstring any
-	Direction any
-	MaxTimestamp any
-	MinTimestamp any
-	Org any
-	Page any
-	PerPage any
-	Sort any
+	Direction         any
+	MaxTimestamp      any
+	MinTimestamp      any
+	Org               any
+	Page              any
+	PerPage           any
+	Sort              any
 }
 
 type InsightsRouteStatsAttrs struct {
-	ActorId any
-	ActorType any
+	ActorId           any
+	ActorType         any
 	ApiRouteSubstring any
-	Direction any
-	MaxTimestamp any
-	MinTimestamp any
-	Org any
-	Page any
-	PerPage any
-	Sort any
+	Direction         any
+	MaxTimestamp      any
+	MinTimestamp      any
+	Org               any
+	Page              any
+	PerPage           any
+	Sort              any
 }
 
 var InsightsRouteStats = ubx.DataSourceBinding{
 	WireType: "github_api_insights_route_stats",
 	Fields: ubx.FieldMap{
-		"ActorId": ubx.FieldSpec{WireName: "actor_id"},
-		"ActorType": ubx.FieldSpec{WireName: "actor_type"},
+		"ActorId":           ubx.FieldSpec{WireName: "actor_id"},
+		"ActorType":         ubx.FieldSpec{WireName: "actor_type"},
 		"ApiRouteSubstring": ubx.FieldSpec{WireName: "api_route_substring"},
-		"Direction": ubx.FieldSpec{WireName: "direction"},
-		"MaxTimestamp": ubx.FieldSpec{WireName: "max_timestamp"},
-		"MinTimestamp": ubx.FieldSpec{WireName: "min_timestamp"},
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Sort": ubx.FieldSpec{WireName: "sort"},
+		"Direction":         ubx.FieldSpec{WireName: "direction"},
+		"MaxTimestamp":      ubx.FieldSpec{WireName: "max_timestamp"},
+		"MinTimestamp":      ubx.FieldSpec{WireName: "min_timestamp"},
+		"Org":               ubx.FieldSpec{WireName: "org"},
+		"Page":              ubx.FieldSpec{WireName: "page"},
+		"PerPage":           ubx.FieldSpec{WireName: "per_page"},
+		"Sort":              ubx.FieldSpec{WireName: "sort"},
 	},
 }

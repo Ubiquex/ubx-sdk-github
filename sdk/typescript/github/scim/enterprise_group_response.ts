@@ -6,6 +6,17 @@ export interface EnterpriseGroupResponse_Members {
   value?: string | Computed<string>;
 }
 
+export interface EnterpriseGroupResponse_Meta {
+  /** A date and time when the user was created. */
+  created?: string | Computed<string>;
+  /** A data and time when the user was last modified. */
+  lastModified?: string | Computed<string>;
+  /** A URL location of an object */
+  location?: string | Computed<string>;
+  /** A type of a resource */
+  resourceType: string | Computed<string>;
+}
+
 const EnterpriseGroupResponse_MembersFields: FieldMap = {
   displayName: "display_name",
   value: "value",
@@ -31,8 +42,12 @@ export interface EnterpriseGroupResponseAttrs {
   displayName: string;
   /** A unique identifier for the resource as defined by the provisioning client. */
   externalId: string;
+  /** The internally generated id for the group object. */
+  id: string;
   /** The group members. */
   members: EnterpriseGroupResponse_Members[];
+  /** The metadata associated with the creation/updates to the user. */
+  meta: EnterpriseGroupResponse_Meta;
   /** The URIs that are used to indicate the namespaces of the SCIM schemas. */
   schemas: string[];
   /** path parameter, not part of the API's own resource representation */
