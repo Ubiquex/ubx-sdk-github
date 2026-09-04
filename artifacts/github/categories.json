@@ -866,6 +866,258 @@
   },
   "github_workflow_run": {
    "label": "Actions"
+  },
+  "github_accepted_assignment": {
+   "label": "Classroom"
+  },
+  "github_accessible_repository": {
+   "label": "Enterprise"
+  },
+  "github_account": {
+   "label": "Billing"
+  },
+  "github_advisory": {
+   "label": "Security Advisories"
+  },
+  "github_analyse": {
+   "label": "Code Scanning"
+  },
+  "github_annotation": {
+   "label": "Checks"
+  },
+  "github_approval": {
+   "label": "Actions"
+  },
+  "github_asset": {
+   "label": "Repositories"
+  },
+  "github_assignee": {
+   "label": "Issues"
+  },
+  "github_author": {
+   "label": "Repositories"
+  },
+  "github_block": {
+   "label": "Organizations"
+  },
+  "github_blocked_by": {
+   "label": "Issues"
+  },
+  "github_blocking": {
+   "label": "Issues"
+  },
+  "github_branches_where_head": {
+   "label": "Repositories"
+  },
+  "github_bypass_list": {
+   "label": "Rulesets"
+  },
+  "github_campaign": {
+   "label": "Campaigns"
+  },
+  "github_code_frequency": {
+   "label": "Repositories"
+  },
+  "github_collaborator": {
+   "label": "Repositories"
+  },
+  "github_conflict": {
+   "label": "Organizations"
+  },
+  "github_context": {
+   "label": "Repositories"
+  },
+  "github_contributor": {
+   "label": "Repositories"
+  },
+  "github_count": {
+   "label": "Repositories"
+  },
+  "github_creation_cap": {
+   "label": "Pull Requests"
+  },
+  "github_credential_authorization": {
+   "label": "Organizations"
+  },
+  "github_custom_pattern": {
+   "label": "Organizations"
+  },
+  "github_database": {
+   "label": "Code Scanning"
+  },
+  "github_delivery": {
+   "label": "Webhooks"
+  },
+  "github_devcontainer": {
+   "label": "Codespaces"
+  },
+  "github_download": {
+   "label": "Audit Log Streaming"
+  },
+  "github_email": {
+   "label": "Users"
+  },
+  "github_failed_invitation": {
+   "label": "Organizations"
+  },
+  "github_field": {
+   "label": "Projects"
+  },
+  "github_file": {
+   "label": "Pull Requests"
+  },
+  "github_finding": {
+   "label": "Code Scanning"
+  },
+  "github_fine_grained_permission": {
+   "label": "Organizations"
+  },
+  "github_follower": {
+   "label": "Users"
+  },
+  "github_following": {
+   "label": "Users"
+  },
+  "github_fork": {
+   "label": "Gists"
+  },
+  "github_generate_report": {
+   "label": "Dependency Graph"
+  },
+  "github_grade": {
+   "label": "Classroom"
+  },
+  "github_installation_request": {
+   "label": "GitHub Apps"
+  },
+  "github_instance": {
+   "label": "Code Scanning"
+  },
+  "github_interaction_limit": {
+   "label": "Organizations"
+  },
+  "github_issue_field": {
+   "label": "Issues"
+  },
+  "github_issue_field_value": {
+   "label": "Issues"
+  },
+  "github_issue_type": {
+   "label": "Issues"
+  },
+  "github_item": {
+   "label": "Projects"
+  },
+  "github_large_file": {
+   "label": "Repositories"
+  },
+  "github_new": {
+   "label": "Codespaces"
+  },
+  "github_notification": {
+   "label": "Notifications"
+  },
+  "github_octocat": {
+   "label": "Meta"
+  },
+  "github_organization_fine_grained_permission": {
+   "label": "Organizations"
+  },
+  "github_outside_collaborator": {
+   "label": "Organizations"
+  },
+  "github_path": {
+   "label": "Code Scanning"
+  },
+  "github_pending_deployment": {
+   "label": "Actions"
+  },
+  "github_platform": {
+   "label": "Codespaces"
+  },
+  "github_private_vulnerability_reporting": {
+   "label": "Security Advisories"
+  },
+  "github_public": {
+   "label": "Meta"
+  },
+  "github_public_email": {
+   "label": "Meta"
+  },
+  "github_public_key": {
+   "label": "Meta"
+  },
+  "github_public_member": {
+   "label": "Meta"
+  },
+  "github_punch_card": {
+   "label": "Repositories"
+  },
+  "github_push_rule": {
+   "label": "Secret Scanning"
+  },
+  "github_reaction": {
+   "label": "Repositories"
+  },
+  "github_referrer": {
+   "label": "Repositories"
+  },
+  "github_repository_fine_grained_permission": {
+   "label": "Repositories"
+  },
+  "github_repository_invitation": {
+   "label": "Repositories"
+  },
+  "github_schema": {
+   "label": "Audit Log Streaming"
+  },
+  "github_security_advisory": {
+   "label": "Security Advisories"
+  },
+  "github_security_manager": {
+   "label": "Organizations"
+  },
+  "github_self_hosted_runner": {
+   "label": "Hosted Compute"
+  },
+  "github_social_account": {
+   "label": "Users"
+  },
+  "github_source": {
+   "label": "Audit Log Streaming"
+  },
+  "github_starred": {
+   "label": "Users"
+  },
+  "github_statuse": {
+   "label": "Repositories"
+  },
+  "github_storage_record": {
+   "label": "Repositories"
+  },
+  "github_sub_issue": {
+   "label": "Issues"
+  },
+  "github_subscriber": {
+   "label": "Repositories"
+  },
+  "github_subscription": {
+   "label": "Users"
+  },
+  "github_suggestion": {
+   "label": "Issues"
+  },
+  "github_tag": {
+   "label": "Git"
+  },
+  "github_timeline": {
+   "label": "Issues"
+  },
+  "github_value": {
+   "label": "Organizations"
+  },
+  "github_version": {
+   "label": "Packages"
   }
  },
  "services": {}
