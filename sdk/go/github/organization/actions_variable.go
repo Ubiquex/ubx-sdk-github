@@ -20,7 +20,8 @@ type ActionsVariableAttrs struct {
 	// The date and time at which the variable was created, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
 	CreatedAt any
 	// The name of the variable.
-	Name                    any
+	Name any
+	// API URL listing the repositories this organization-level Actions variable is selectively exposed to. (AI-inferred)
 	SelectedRepositoriesUrl any
 	// An array of repository ids that can access the organization variable. You can only provide a list of repository ids when the `visibility` is set to `selected`.
 	SelectedRepositoryIds any

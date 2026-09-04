@@ -193,7 +193,9 @@ class PackageConfig:
 
 @dataclasses.dataclass
 class PackageAttrs:
+    # The real timestamp this object was created. (AI-inferred)
     created_at: Any = None
+    # The real, browsable web URL for this object. (AI-inferred)
     html_url: Any = None
     # Unique identifier of the package.
     id: Any = None
@@ -201,13 +203,17 @@ class PackageAttrs:
     name: Any = None
     # A GitHub user.
     owner: Any = None
+    # The real type of package registry this package is published to. (AI-inferred)
     package_type: Any = None
     # Minimal Repository
     repository: Any = None
+    # The real timestamp this object was last updated. (AI-inferred)
     updated_at: Any = None
+    # The real, canonical API URL for this object. (AI-inferred)
     url: Any = None
     # The number of versions of the package.
     version_count: Any = None
+    # Whether the repository is public, private, or internal. (AI-inferred)
     visibility: Any = None
     # path parameter, not part of the API's own resource representation
     org: Any = None

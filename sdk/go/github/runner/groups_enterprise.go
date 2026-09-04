@@ -29,9 +29,12 @@ type GroupsEnterpriseConfig struct {
 type GroupsEnterpriseAttrs struct {
 	// Whether the runner group can be used by `public` repositories.
 	AllowsPublicRepositories any
-	Default                  any
-	HostedRunnersUrl         any
-	Id                       any
+	// Whether this is the enterprise's own default self-hosted runner group. (AI-inferred)
+	Default any
+	// The real API URL for listing this runner group's own hosted runners. (AI-inferred)
+	HostedRunnersUrl any
+	// The real, numeric, globally unique identifier for this object. (AI-inferred)
+	Id any
 	// Name of the runner group.
 	Name any
 	// The identifier of a hosted compute network configuration.
@@ -39,10 +42,12 @@ type GroupsEnterpriseAttrs struct {
 	// If `true`, the runner group will be restricted to running only the workflows specified in the `selected_workflows` array.
 	RestrictedToWorkflows any
 	// List of runner IDs to add to the runner group.
-	Runners    any
+	Runners any
+	// The real API URL for listing this runner group's own self-hosted runners. (AI-inferred)
 	RunnersUrl any
 	// List of organization IDs that can access the runner group.
-	SelectedOrganizationIds  any
+	SelectedOrganizationIds any
+	// The real API URL for listing which organizations this runner group is selectively granted to. (AI-inferred)
 	SelectedOrganizationsUrl any
 	// List of workflows the runner group should be allowed to run. This setting will be ignored unless `restricted_to_workflows` is set to `true`.
 	SelectedWorkflows any

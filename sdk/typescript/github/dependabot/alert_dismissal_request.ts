@@ -84,6 +84,7 @@ export interface AlertDismissalRequestAttrs {
   responses: AlertDismissalRequest_Responses[];
   /** The status of the dismissal request. */
   status: string;
+  /** The real, canonical API URL for this object. (AI-inferred) */
   url: string;
   /** path parameter, not part of the API's own resource representation */
   owner: string;

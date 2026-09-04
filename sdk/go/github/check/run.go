@@ -4,114 +4,173 @@ package check
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Run_Actions struct {
+	// A short explanation of the action, displayed to users. Maximum length is 40 characters. (AI-inferred)
 	Description any
-	Identifier  any
-	Label       any
+	// A short identifier for the action, maximum length of 20 characters. (AI-inferred)
+	Identifier any
+	// The short text label for the action button, displayed in the GitHub UI. Must be 20 characters or fewer. (AI-inferred)
+	Label any
 }
 
 type Run_App_Owner struct {
-	AvatarUrl         any
-	CreatedAt         any
-	Description       any
-	Email             any
-	EventsUrl         any
-	FollowersUrl      any
-	FollowingUrl      any
-	GistsUrl          any
-	GravatarId        any
-	HtmlUrl           any
-	Id                any
-	Login             any
-	Name              any
-	NodeId            any
-	OrganizationsUrl  any
+	// The URL of the avatar image for the owner (user or organization). (AI-inferred)
+	AvatarUrl any
+	// The date and time when the GitHub App owner (user or organization) was created, in ISO 8601 format. (AI-inferred)
+	CreatedAt any
+	// The description of the owner (organization or user) of the GitHub App that created this check run. (AI-inferred)
+	Description any
+	// The email address of the user or organization that owns the GitHub App associated with this check run. (AI-inferred)
+	Email any
+	// The API URL for events associated with the owner (the user or organization that owns the GitHub App). (AI-inferred)
+	EventsUrl any
+	// The API URL to retrieve the list of followers for the owner of the GitHub app. (AI-inferred)
+	FollowersUrl any
+	// The URL to the list of users that this owner follows, as provided by the GitHub API. This URL may include a template placeholder. (AI-inferred)
+	FollowingUrl any
+	// The URL to fetch the owner's gists via the GitHub API. (AI-inferred)
+	GistsUrl any
+	// The Gravatar ID for the owner's avatar. This is typically a hash of the owner's email address and is used to construct the owner's Gravatar URL. In the GitHub API, this field is often deprecated and may be an empty string; prefer using `avatar_url`. (AI-inferred)
+	GravatarId any
+	// The URL to view the owner's GitHub profile in a web browser. (AI-inferred)
+	HtmlUrl any
+	// The unique identifier of the GitHub App's owner, which can be a user or an organization. (AI-inferred)
+	Id any
+	// The login name (username or organization name) of the GitHub App owner. (AI-inferred)
+	Login any
+	Name  any
+	// The GraphQL node ID of the app's owner (user or organization). (AI-inferred)
+	NodeId any
+	// The API URL that lists the organizations this owner belongs to, as defined by the GitHub API owner object. (AI-inferred)
+	OrganizationsUrl any
+	// The URL to the received events for the owner (user or organization). (AI-inferred)
 	ReceivedEventsUrl any
-	ReposUrl          any
-	SiteAdmin         any
-	Slug              any
-	StarredAt         any
-	StarredUrl        any
-	SubscriptionsUrl  any
-	Type              any
-	UpdatedAt         any
-	Url               any
-	UserViewType      any
-	WebsiteUrl        any
+	// URL to the list of repositories owned by this GitHub user or organization. (AI-inferred)
+	ReposUrl any
+	// Whether the owner (user or organization) is a site administrator for GitHub Enterprise. (AI-inferred)
+	SiteAdmin any
+	Slug      any
+	StarredAt any
+	// The URL template for the owner's starred repositories, as specified by the GitHub API. It typically includes placeholders for owner and repository information. (AI-inferred)
+	StarredUrl any
+	// The API endpoint URL for the subscriptions of the owner (user or organization), as defined by the GitHub API. (AI-inferred)
+	SubscriptionsUrl any
+	// The type of GitHub account that owns the app, such as 'User' or 'Organization'. (AI-inferred)
+	Type any
+	// The timestamp (ISO 8601) when the owner of the GitHub App was last updated. (AI-inferred)
+	UpdatedAt any
+	// The GitHub API URL for the owner (user or organization) of the GitHub App associated with the check run. (AI-inferred)
+	Url          any
+	UserViewType any
+	// The website URL of the owner (user or organization) of the GitHub App that created or is associated with this check run. (AI-inferred)
+	WebsiteUrl any
 }
 
 type Run_App_Permissions struct {
-	Checks      any
-	Contents    any
+	// The permission level for the Checks API. Valid values are 'read' or 'write'. (AI-inferred)
+	Checks any
+	// The level of access to repository contents granted to the GitHub App. Allowed values are read, write, or none. (AI-inferred)
+	Contents any
+	// The level of permission that the GitHub App has for the Deployments API. Allowed values are 'read', 'write', or 'none'. (AI-inferred)
 	Deployments any
-	Issues      any
-	Metadata    any
+	// The permission level for the GitHub App's access to issues. Allowed values are 'read', 'write', or 'none'. (AI-inferred)
+	Issues any
+	// The permission level for metadata endpoints, typically 'read' or 'write'. (AI-inferred)
+	Metadata any
 }
 
 type Run_App struct {
-	ClientId    any
-	CreatedAt   any
+	// The public OAuth client ID of the GitHub App that created the check run. This identifier is used in OAuth flows to uniquely identify the app. (AI-inferred)
+	ClientId any
+	// The time when the check run was created, in ISO 8601 format (YYYY-MM-DDTHH:MM:SSZ). (AI-inferred)
+	CreatedAt any
+	// A short description of the GitHub App that created the check run. (AI-inferred)
 	Description any
 	// The list of events for the GitHub app. Note that the `installation_target`, `security_advisory`, and `meta` events are not included because they are global events and not specific to an installation.
-	Events      any
+	Events any
+	// The URL to the GitHub App's external website, as displayed in the GitHub App's public profile. (AI-inferred)
 	ExternalUrl any
-	HtmlUrl     any
+	// The URL to the GitHub App's public page. (AI-inferred)
+	HtmlUrl any
 	// Unique identifier of the GitHub app
 	Id any
 	// The number of installations associated with the GitHub app. Only returned when the integration is requesting details about itself.
 	InstallationsCount any
 	// The name of the GitHub app
-	Name   any
+	Name any
+	// The GraphQL node identifier for the app object within a GitHub check run. (AI-inferred)
 	NodeId any
-	Owner  any
+	// The GitHub user or organization that owns the GitHub App. Required; identifies the account responsible for the app. (AI-inferred)
+	Owner any
 	// The set of permissions for the GitHub app
 	Permissions any
 	// The slug name of the GitHub app
-	Slug      any
+	Slug any
+	// The timestamp indicating when the GitHub App was last updated, in ISO 8601 format. (AI-inferred)
 	UpdatedAt any
 }
 
 type Run_CheckSuite struct {
+	// The unique identifier of the check suite. (AI-inferred)
 	Id any
 }
 
 type Run_Deployment struct {
-	CreatedAt   any
+	CreatedAt any
+	// A short description of the deployment, providing context about the deployment. (AI-inferred)
 	Description any
 	// Name for the target deployment environment.
 	Environment any
 	// Unique identifier of the deployment
-	Id                  any
-	NodeId              any
+	Id any
+	// The global node identifier (node ID) for this deployment in GitHub's graph-based API system. (AI-inferred)
+	NodeId any
+	// The name of the environment the deployment originally targeted, before any overrides or changes. (AI-inferred)
 	OriginalEnvironment any
 	// GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
 	PerformedViaGithubApp any
 	// Specifies if the given environment is one that end-users directly interact with. Default: false.
 	ProductionEnvironment any
-	RepositoryUrl         any
-	StatusesUrl           any
+	// The URL of the repository associated with the deployment. (AI-inferred)
+	RepositoryUrl any
+	// The URL to retrieve the list of deployment statuses for this deployment. (AI-inferred)
+	StatusesUrl any
 	// Parameter to specify a task to execute
 	Task any
 	// Specifies if the given environment is will no longer exist at some point in the future. Default: false.
 	TransientEnvironment any
-	UpdatedAt            any
-	Url                  any
+	// The timestamp of when the deployment was last updated, in ISO 8601 format. (AI-inferred)
+	UpdatedAt any
+	// The URL to the deployment resource in the GitHub API. (AI-inferred)
+	Url any
 }
 
 type Run_Output_Annotations struct {
+	// The level of the annotation, which can be 'notice', 'warning', or 'failure'. (AI-inferred)
 	AnnotationLevel any
-	EndColumn       any
-	EndLine         any
-	Message         any
-	Path            any
-	RawDetails      any
-	StartColumn     any
-	StartLine       any
-	Title           any
+	// The column number where the annotation ends. Used with start_column to define the horizontal range of the annotation within a line. (AI-inferred)
+	EndColumn any
+	// The line number of the end of the annotation within the source file. (AI-inferred)
+	EndLine any
+	// A short description of the feedback for these lines of code. Max length is 255 characters. (AI-inferred)
+	Message any
+	// The path of the file that this check run annotation applies to, relative to the repository root. (AI-inferred)
+	Path any
+	// Additional details about the annotation that GitHub does not render. (AI-inferred)
+	RawDetails any
+	// The start column of the annotation. Column numbers start at 1. Only valid when start_line is provided. (AI-inferred)
+	StartColumn any
+	// The line number in the file where the annotation starts. In GitHub Check Run annotations, this identifies the beginning line of the annotation. (AI-inferred)
+	StartLine any
+	// The title of the annotation, providing a concise summary of the issue or finding. (AI-inferred)
+	Title any
 }
 
 type Run_Output_Images struct {
-	Alt      any
-	Caption  any
+	// The alternative text for the image, providing a textual description of the image content. (AI-inferred)
+	Alt any
+	// The caption text displayed with the image in a GitHub check run output. This brief description appears alongside the image in the GitHub UI. (AI-inferred)
+	Caption any
+	// The URL of the image to display in the GitHub check run output. (AI-inferred)
 	ImageUrl any
 }
 
@@ -131,23 +190,33 @@ type Run_Output struct {
 }
 
 type Run_PullRequests_Base_Repo struct {
-	Id   any
+	Id any
+	// The name of the repository that contains the base branch of the pull request. (AI-inferred)
 	Name any
-	Url  any
+	// The API URL of the repository, as returned by the GitHub API (e.g., https://api.github.com/repos/{owner}/{repo}). (AI-inferred)
+	Url any
 }
 
 type Run_PullRequests_Base struct {
-	Ref  any
+	// The git reference (branch or tag) of the base of the pull request. (AI-inferred)
+	Ref any
+	// The repository associated with the base of the pull request. (AI-inferred)
 	Repo any
-	Sha  any
+	// The SHA of the latest commit on the base branch of the pull request. (AI-inferred)
+	Sha any
 }
 
 type Run_PullRequests struct {
-	Base   any
-	Head   any
-	Id     any
+	// The base branch of the pull request, containing details such as the branch reference, commit SHA, and repository information. (AI-inferred)
+	Base any
+	// The head of the pull request, containing details such as the source branch name, commit SHA, and repository information. (AI-inferred)
+	Head any
+	// The unique identifier of the pull request associated with this check run. (AI-inferred)
+	Id any
+	// The pull request number for the pull request associated with the check run. (AI-inferred)
 	Number any
-	Url    any
+	// The URL of the pull request associated with the check run. (AI-inferred)
+	Url any
 }
 
 var Run_ActionsFields = ubx.FieldMap{
@@ -225,7 +294,8 @@ type RunAttrs struct {
 	// Displays a button on GitHub that can be clicked to alert your app to do additional tasks. For example, a code linting app can display a button that automatically fixes detected errors. The button created in this object is displayed after the check run completes. When a user clicks the button, GitHub sends the [`check_run.requested_action` webhook](https://docs.github.com/enterprise-cloud@latest/webhooks/event-payloads/#check_run) to your app. Each action includes a `label`, `identifier` and `description`. A maximum of three actions are accepted. To learn more about check runs and requested actions, see "[Check runs and requested actions](https://docs.github.com/enterprise-cloud@latest/rest/guides/using-the-rest-api-to-interact-with-checks#check-runs-and-requested-actions)."
 	Actions any
 	// GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
-	App        any
+	App any
+	// The check suite that is associated with this check run. It includes information about the suite, such as its unique identifier and the branch it applies to. (AI-inferred)
 	CheckSuite any
 	// The time the check completed. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
 	CompletedAt any
@@ -239,11 +309,13 @@ type RunAttrs struct {
 	ExternalId any
 	// The SHA of the commit.
 	HeadSha any
+	// The URL to view the check run details on GitHub. (AI-inferred)
 	HtmlUrl any
 	// The id of the check.
 	Id any
 	// The name of the check. For example, "code-coverage".
-	Name   any
+	Name any
+	// The GraphQL global node ID for the check run. (AI-inferred)
 	NodeId any
 	// Check runs can accept a variety of data in the `output` object, including a `title` and `summary` and can optionally provide descriptive details about the run.
 	Output any
@@ -253,7 +325,8 @@ type RunAttrs struct {
 	StartedAt any
 	// The current status of the check run. Only GitHub Actions can set a status of `waiting`, `pending`, or `requested`.
 	Status any
-	Url    any
+	// The API URL of the check run. (AI-inferred)
+	Url any
 	// path parameter, not part of the API's own resource representation
 	Owner any
 	// path parameter, not part of the API's own resource representation

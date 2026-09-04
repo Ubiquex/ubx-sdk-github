@@ -86,7 +86,8 @@ type AlertDismissalRequestAttrs struct {
 	Responses any
 	// The status of the dismissal request.
 	Status any
-	Url    any
+	// The real, canonical API URL for this object. (AI-inferred)
+	Url any
 	// path parameter, not part of the API's own resource representation
 	Owner any
 	// path parameter, not part of the API's own resource representation

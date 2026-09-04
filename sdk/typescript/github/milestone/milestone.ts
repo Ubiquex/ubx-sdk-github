@@ -2,26 +2,46 @@
 import type { Computed, FieldMap, ResourceBinding } from "@ubx/sdk";
 
 export interface Milestone_Creator {
+  /** The URL of the avatar image for the user who created the milestone. (AI-inferred) */
   avatarUrl: string | Computed<string>;
+  /** The email address of the user who created the milestone, if that user has made their email public. (AI-inferred) */
   email?: string | Computed<string>;
+  /** The API URL for events associated with the creator of the milestone. In GitHub's API, this field typically points to an endpoint like 'https://api.github.com/users/{username}/events{/privacy}'. (AI-inferred) */
   eventsUrl: string | Computed<string>;
+  /** The URL to list the followers of the user, i.e., the creator of the milestone. (AI-inferred) */
   followersUrl: string | Computed<string>;
+  /** URL template to access the list of users that this user follows. This is part of the user object for the milestone creator. (AI-inferred) */
   followingUrl: string | Computed<string>;
+  /** URL template for the user's gists, including an optional gist ID placeholder. (AI-inferred) */
   gistsUrl: string | Computed<string>;
+  /** The user's Gravatar ID, a legacy identifier used to construct avatar URLs. May be empty and is deprecated in favor of avatar_url. (AI-inferred) */
   gravatarId: string | Computed<string>;
+  /** The URL to the creator's GitHub profile page. (AI-inferred) */
   htmlUrl: string | Computed<string>;
+  /** The unique identifier of the GitHub user who created the milestone. (AI-inferred) */
   id: number | Computed<number>;
+  /** The GitHub username of the milestone creator. (AI-inferred) */
   login: string | Computed<string>;
+  /** The display name of the user who created the milestone, if available. (AI-inferred) */
   name?: string | Computed<string>;
+  /** The global node identifier for the creator user, usable in GraphQL queries. (AI-inferred) */
   nodeId: string | Computed<string>;
+  /** The URL to the list of organizations that the creator belongs to. (AI-inferred) */
   organizationsUrl: string | Computed<string>;
+  /** The URL to the GitHub API endpoint that lists events received by the user. (AI-inferred) */
   receivedEventsUrl: string | Computed<string>;
+  /** The URL to list the repositories owned by the milestone creator. (AI-inferred) */
   reposUrl: string | Computed<string>;
+  /** Whether the user is a site administrator. (AI-inferred) */
   siteAdmin: boolean | Computed<boolean>;
   starredAt?: string | Computed<string>;
+  /** The URL template for the user's starred repositories, including placeholders for owner and repo (e.g., https://api.github.com/users/{user}/starred{/owner}{/repo}). (AI-inferred) */
   starredUrl: string | Computed<string>;
+  /** The API URL for the creator's subscriptions on GitHub. (AI-inferred) */
   subscriptionsUrl: string | Computed<string>;
+  /** The type of GitHub account that created the milestone, such as 'User' or 'Organization'. (AI-inferred) */
   type: string | Computed<string>;
+  /** The URL of the creator's GitHub profile. (AI-inferred) */
   url: string | Computed<string>;
   userViewType?: string | Computed<string>;
 }
@@ -44,8 +64,11 @@ export interface MilestoneConfig {
 }
 
 export interface MilestoneAttrs {
+  /** The date and time when the milestone was closed, formatted as an ISO 8601 timestamp. This field is null if the milestone has not been closed. (AI-inferred) */
   closedAt: string;
+  /** The number of issues in this milestone that have been closed. (AI-inferred) */
   closedIssues: number;
+  /** The timestamp indicating when the milestone was created, in ISO 8601 format (UTC). (AI-inferred) */
   createdAt: string;
   /** A GitHub user. */
   creator: Milestone_Creator;
@@ -53,18 +76,25 @@ export interface MilestoneAttrs {
   description: string;
   /** The milestone due date. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`. */
   dueOn: string;
+  /** The URL to view the milestone on GitHub. (AI-inferred) */
   htmlUrl: string;
+  /** The real, numeric, globally unique identifier for this object. (AI-inferred) */
   id: number;
+  /** The API URL for the labels associated with this milestone. (AI-inferred) */
   labelsUrl: string;
+  /** The node ID of the milestone, used for GraphQL API operations. (AI-inferred) */
   nodeId: string;
   /** The number of the milestone. */
   number: number;
+  /** The number of open issues associated with this milestone. (AI-inferred) */
   openIssues: number;
   /** The state of the milestone. Either `open` or `closed`. */
   state: string;
   /** The title of the milestone. */
   title: string;
+  /** The timestamp of when the milestone was last updated, in ISO 8601 format. (AI-inferred) */
   updatedAt: string;
+  /** The API URL for the milestone, e.g., https://api.github.com/repos/{owner}/{repo}/milestones/{number}. (AI-inferred) */
   url: string;
   /** path parameter, not part of the API's own resource representation */
   owner: string;

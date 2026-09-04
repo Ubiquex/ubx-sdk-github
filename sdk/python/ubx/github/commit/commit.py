@@ -8,84 +8,135 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class Commit_Author:
+    # The URL of the author's avatar image on GitHub. (AI-inferred)
     avatar_url: Any = None
+    # The email address of the author of the commit. (AI-inferred)
     email: Any = None
+    # The URL of the author's GitHub user events, typically in the form 'https://api.github.com/users/{username}/events{/privacy}'. (AI-inferred)
     events_url: Any = None
+    # The URL to the author's GitHub followers list. (AI-inferred)
     followers_url: Any = None
+    # The URL template for the GitHub API endpoint that lists the users this author follows. It may contain placeholders for the username and optional other_user parameter. (AI-inferred)
     following_url: Any = None
+    # The URL to the author's list of gists on GitHub. (AI-inferred)
     gists_url: Any = None
+    # The Gravatar ID of the commit author, used to retrieve the author's avatar image. (AI-inferred)
     gravatar_id: Any = None
+    # The URL to the author's GitHub profile. (AI-inferred)
     html_url: Any = None
+    # The unique numeric identifier assigned to the GitHub user who authored the commit. (AI-inferred)
     id: Any = None
+    # The GitHub username of the author. (AI-inferred)
     login: Any = None
+    # The name of the author who made the commit. (AI-inferred)
     name: Any = None
+    # The GraphQL node ID of the commit author, used to uniquely identify the author across GitHub's GraphQL API. (AI-inferred)
     node_id: Any = None
+    # The URL to the GitHub API endpoint that lists the organizations the author is a member of. (AI-inferred)
     organizations_url: Any = None
+    # The URL to the received events for this user, typically in the form https://api.github.com/users/{username}/received_events. (AI-inferred)
     received_events_url: Any = None
+    # The URL to the list of repositories owned by the author. This follows the GitHub API format for a user's repositories endpoint. (AI-inferred)
     repos_url: Any = None
+    # Whether the GitHub user is a site administrator. (AI-inferred)
     site_admin: Any = None
     starred_at: Any = None
+    # A URL template to retrieve the list of repositories starred by the commit author, typically in the format `https://api.github.com/users/{user}/starred{/owner}{/repo}`. This field is populated when the author is a known GitHub user. (AI-inferred)
     starred_url: Any = None
+    # The URL to the GitHub API endpoint for the commit author's subscriptions (e.g., watched repositories). (AI-inferred)
     subscriptions_url: Any = None
     type: Any = None
+    # The GitHub API URL for the author of the commit, pointing to the user's API endpoint (e.g., https://api.github.com/users/octocat). (AI-inferred)
     url: Any = None
     user_view_type: Any = None
 
 @dataclasses.dataclass
 class Commit_Commit_Author:
+    # The date and time when the commit was authored, in ISO 8601 format. (AI-inferred)
     date: Any = None
+    # The email address of the author of the commit, as recorded in the Git commit metadata. (AI-inferred)
     email: Any = None
+    # The display name of the author of the commit. (AI-inferred)
     name: Any = None
 
 @dataclasses.dataclass
 class Commit_Commit_Tree:
+    # The SHA-1 hash of the commit tree. (AI-inferred)
     sha: Any = None
+    # The URL of the GitHub tree object, pointing to the API endpoint for this tree. (AI-inferred)
     url: Any = None
 
 @dataclasses.dataclass
 class Commit_Commit_Verification:
+    # The payload that was signed for verification, as a string. (AI-inferred)
     payload: Any = None
+    # The reason explaining the commit's verification status, such as why a signature is valid, invalid, or unsigned. (AI-inferred)
     reason: Any = None
+    # The GPG signature of the commit, if the commit was signed; otherwise an empty string. (AI-inferred)
     signature: Any = None
+    # Indicates whether the commit's GPG signature was successfully verified. (AI-inferred)
     verified: Any = None
+    # The ISO 8601 timestamp indicating when the commit's signature verification was performed. (AI-inferred)
     verified_at: Any = None
 
 @dataclasses.dataclass
 class Commit_Commit:
     # Metaproperties for Git author/committer information.
     author: Any = None
+    # The number of comments on the commit. (AI-inferred)
     comment_count: Any = None
     # Metaproperties for Git author/committer information.
     committer: Any = None
+    # The commit message text. (AI-inferred)
     message: Any = None
+    # The tree object associated with the commit, containing the SHA and URL of the tree. (AI-inferred)
     tree: Any = None
+    # The API URL that points to this commit in the GitHub API. (AI-inferred)
     url: Any = None
+    # Details about the verification of the commit's signature, including whether the signature is verified and the reason for the verification result. (AI-inferred)
     verification: Any = None
 
 @dataclasses.dataclass
 class Commit_Files:
+    # The number of lines added in this file as part of the commit. (AI-inferred)
     additions: Any = None
+    # URL to the blob (file content) for this file on GitHub. (AI-inferred)
     blob_url: Any = None
+    # The total number of changes (additions and deletions) for the file in the commit. (AI-inferred)
     changes: Any = None
+    # API endpoint URL that provides access to the file's contents on GitHub, typically used to retrieve the file content or metadata for this commit. (AI-inferred)
     contents_url: Any = None
+    # The number of lines deleted in this file in the commit. (AI-inferred)
     deletions: Any = None
+    # The name of the file as it appears in the commit, including the path relative to the repository root. (AI-inferred)
     filename: Any = None
+    # The patch (diff) for the file in the commit, showing the changes made to that file. (AI-inferred)
     patch: Any = None
+    # The original filename of a file that was renamed in the commit. This field is only present when the file was renamed; otherwise it is null. (AI-inferred)
     previous_filename: Any = None
+    # The URL to the raw content of the file in the repository. (AI-inferred)
     raw_url: Any = None
+    # The blob SHA hash of the file's contents within the repository. (AI-inferred)
     sha: Any = None
+    # The status of the file in the commit, indicating the type of change. Possible values are: added, removed, modified, renamed, copied, changed, or unchanged. (AI-inferred)
     status: Any = None
 
 @dataclasses.dataclass
 class Commit_Parents:
+    # The HTML URL for the parent commit on GitHub, i.e., the web page that shows the commit details. (AI-inferred)
     html_url: Any = None
+    # The full SHA of the parent commit. (AI-inferred)
     sha: Any = None
+    # The GitHub API URL for the parent commit. (AI-inferred)
     url: Any = None
 
 @dataclasses.dataclass
 class Commit_Stats:
+    # The number of lines added in this commit. (AI-inferred)
     additions: Any = None
+    # The number of lines deleted in the commit. (AI-inferred)
     deletions: Any = None
+    # Total number of lines changed in the commit (additions plus deletions). (AI-inferred)
     total: Any = None
 
 @dataclasses.dataclass
@@ -105,22 +156,33 @@ class CommitConfig:
 
 @dataclasses.dataclass
 class CommitAttrs:
+    # The author of the commit, containing details such as name, email, and date. (AI-inferred)
     author: Any = None
     # The name of the base branch that the head will be merged into.
     base: Any = None
+    # The URL to the commit comments endpoint, which lists comments made on the commit. (AI-inferred)
     comments_url: Any = None
+    # The nested object containing commit metadata such as author, committer, message, and tree information, separate from the top-level SHA. (AI-inferred)
     commit: Any = None
     # Commit message to use for the merge commit. If omitted, a default message will be used.
     commit_message: Any = None
+    # An object containing information about the user who committed the change, including name, email, and commit timestamp. (AI-inferred)
     committer: Any = None
+    # A list of files affected by the commit, with details about each change such as file name and status. (AI-inferred)
     files: Any = None
     # The head to merge. This can be a branch name or a commit SHA1.
     head: Any = None
+    # The GitHub URL to view this commit on the web. (AI-inferred)
     html_url: Any = None
+    # The GraphQL node identifier for the commit. (AI-inferred)
     node_id: Any = None
+    # List of parent commit objects for this commit. Each object contains the SHA and URL of the parent commit. (AI-inferred)
     parents: Any = None
+    # The SHA-1 checksum that uniquely identifies the commit. (AI-inferred)
     sha: Any = None
+    # Statistics about the commit, including the number of additions, deletions, and total changes. (AI-inferred)
     stats: Any = None
+    # The GitHub API URL for this commit. (AI-inferred)
     url: Any = None
     # path parameter, not part of the API's own resource representation
     owner: Any = None

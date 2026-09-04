@@ -49,7 +49,8 @@ type AuditLogStreamConfigConfig struct {
 	// This setting pauses or resumes a stream.
 	Enabled any
 	// The audit log streaming provider. The name is case sensitive.
-	StreamType     any
+	StreamType any
+	// Real, vendor-specific configuration fields for this audit log streaming destination. (AI-inferred)
 	VendorSpecific any
 	// path parameter, not part of the API's own resource representation
 	Enterprise any
@@ -58,15 +59,21 @@ type AuditLogStreamConfigConfig struct {
 }
 
 type AuditLogStreamConfigAttrs struct {
+	// The real timestamp this object was created. (AI-inferred)
 	CreatedAt any
 	// This setting pauses or resumes a stream.
-	Enabled       any
-	Id            any
-	PausedAt      any
+	Enabled any
+	// The real, numeric, globally unique identifier for this object. (AI-inferred)
+	Id any
+	// When this audit log streaming configuration was paused, if it currently is. (AI-inferred)
+	PausedAt any
+	// This audit log stream's own real, provider-specific delivery configuration. (AI-inferred)
 	StreamDetails any
 	// The audit log streaming provider. The name is case sensitive.
-	StreamType     any
-	UpdatedAt      any
+	StreamType any
+	// The real timestamp this object was last updated. (AI-inferred)
+	UpdatedAt any
+	// Real, vendor-specific configuration fields for this audit log streaming destination. (AI-inferred)
 	VendorSpecific any
 	// path parameter, not part of the API's own resource representation
 	Enterprise any

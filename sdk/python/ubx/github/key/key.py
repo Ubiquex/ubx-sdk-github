@@ -17,15 +17,21 @@ class KeyConfig:
 
 @dataclasses.dataclass
 class KeyAttrs:
+    # The date and time when the key was created, in ISO 8601 format (e.g., 2023-01-01T12:00:00Z). This timestamp is set by the GitHub API upon key creation. (AI-inferred)
     created_at: Any = None
+    # The real, numeric, globally unique identifier for this object. (AI-inferred)
     id: Any = None
     # The public SSH key to add to your GitHub account.
     key: Any = None
+    # The date and time when this GitHub key was last used for authentication. (AI-inferred)
     last_used: Any = None
+    # Indicates whether the key is read-only (true) or has read/write access (false). (AI-inferred)
     read_only: Any = None
     # A descriptive name for the new key.
     title: Any = None
+    # The GitHub API URL for this SSH key. (AI-inferred)
     url: Any = None
+    # Boolean indicating whether the key has been verified by GitHub. (AI-inferred)
     verified: Any = None
     # path parameter, not part of the API's own resource representation
     key_id: Any = None

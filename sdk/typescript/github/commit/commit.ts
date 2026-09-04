@@ -2,84 +2,135 @@
 import type { Computed, FieldMap, ResourceBinding } from "@ubx/sdk";
 
 export interface Commit_Author {
+  /** The URL of the author's avatar image on GitHub. (AI-inferred) */
   avatarUrl?: string | Computed<string>;
+  /** The email address of the author of the commit. (AI-inferred) */
   email?: string | Computed<string>;
+  /** The URL of the author's GitHub user events, typically in the form 'https://api.github.com/users/{username}/events{/privacy}'. (AI-inferred) */
   eventsUrl?: string | Computed<string>;
+  /** The URL to the author's GitHub followers list. (AI-inferred) */
   followersUrl?: string | Computed<string>;
+  /** The URL template for the GitHub API endpoint that lists the users this author follows. It may contain placeholders for the username and optional other_user parameter. (AI-inferred) */
   followingUrl?: string | Computed<string>;
+  /** The URL to the author's list of gists on GitHub. (AI-inferred) */
   gistsUrl?: string | Computed<string>;
+  /** The Gravatar ID of the commit author, used to retrieve the author's avatar image. (AI-inferred) */
   gravatarId?: string | Computed<string>;
+  /** The URL to the author's GitHub profile. (AI-inferred) */
   htmlUrl?: string | Computed<string>;
+  /** The unique numeric identifier assigned to the GitHub user who authored the commit. (AI-inferred) */
   id?: number | Computed<number>;
+  /** The GitHub username of the author. (AI-inferred) */
   login?: string | Computed<string>;
+  /** The name of the author who made the commit. (AI-inferred) */
   name?: string | Computed<string>;
+  /** The GraphQL node ID of the commit author, used to uniquely identify the author across GitHub's GraphQL API. (AI-inferred) */
   nodeId?: string | Computed<string>;
+  /** The URL to the GitHub API endpoint that lists the organizations the author is a member of. (AI-inferred) */
   organizationsUrl?: string | Computed<string>;
+  /** The URL to the received events for this user, typically in the form https://api.github.com/users/{username}/received_events. (AI-inferred) */
   receivedEventsUrl?: string | Computed<string>;
+  /** The URL to the list of repositories owned by the author. This follows the GitHub API format for a user's repositories endpoint. (AI-inferred) */
   reposUrl?: string | Computed<string>;
+  /** Whether the GitHub user is a site administrator. (AI-inferred) */
   siteAdmin?: boolean | Computed<boolean>;
   starredAt?: string | Computed<string>;
+  /** A URL template to retrieve the list of repositories starred by the commit author, typically in the format `https://api.github.com/users/{user}/starred{/owner}{/repo}`. This field is populated when the author is a known GitHub user. (AI-inferred) */
   starredUrl?: string | Computed<string>;
+  /** The URL to the GitHub API endpoint for the commit author's subscriptions (e.g., watched repositories). (AI-inferred) */
   subscriptionsUrl?: string | Computed<string>;
   type?: string | Computed<string>;
+  /** The GitHub API URL for the author of the commit, pointing to the user's API endpoint (e.g., https://api.github.com/users/octocat). (AI-inferred) */
   url?: string | Computed<string>;
   userViewType?: string | Computed<string>;
 }
 
 export interface Commit_Commit_Author {
+  /** The date and time when the commit was authored, in ISO 8601 format. (AI-inferred) */
   date?: string | Computed<string>;
+  /** The email address of the author of the commit, as recorded in the Git commit metadata. (AI-inferred) */
   email?: string | Computed<string>;
+  /** The display name of the author of the commit. (AI-inferred) */
   name?: string | Computed<string>;
 }
 
 export interface Commit_Commit_Tree {
+  /** The SHA-1 hash of the commit tree. (AI-inferred) */
   sha: string | Computed<string>;
+  /** The URL of the GitHub tree object, pointing to the API endpoint for this tree. (AI-inferred) */
   url: string | Computed<string>;
 }
 
 export interface Commit_Commit_Verification {
+  /** The payload that was signed for verification, as a string. (AI-inferred) */
   payload: string | Computed<string>;
+  /** The reason explaining the commit's verification status, such as why a signature is valid, invalid, or unsigned. (AI-inferred) */
   reason: string | Computed<string>;
+  /** The GPG signature of the commit, if the commit was signed; otherwise an empty string. (AI-inferred) */
   signature: string | Computed<string>;
+  /** Indicates whether the commit's GPG signature was successfully verified. (AI-inferred) */
   verified: boolean | Computed<boolean>;
+  /** The ISO 8601 timestamp indicating when the commit's signature verification was performed. (AI-inferred) */
   verifiedAt: string | Computed<string>;
 }
 
 export interface Commit_Commit {
   /** Metaproperties for Git author/committer information. */
   author: Commit_Commit_Author | Computed<Commit_Commit_Author>;
+  /** The number of comments on the commit. (AI-inferred) */
   commentCount: number | Computed<number>;
   /** Metaproperties for Git author/committer information. */
   committer: Commit_Commit_Author | Computed<Commit_Commit_Author>;
+  /** The commit message text. (AI-inferred) */
   message: string | Computed<string>;
+  /** The tree object associated with the commit, containing the SHA and URL of the tree. (AI-inferred) */
   tree: Commit_Commit_Tree | Computed<Commit_Commit_Tree>;
+  /** The API URL that points to this commit in the GitHub API. (AI-inferred) */
   url: string | Computed<string>;
+  /** Details about the verification of the commit's signature, including whether the signature is verified and the reason for the verification result. (AI-inferred) */
   verification?: Commit_Commit_Verification | Computed<Commit_Commit_Verification>;
 }
 
 export interface Commit_Files {
+  /** The number of lines added in this file as part of the commit. (AI-inferred) */
   additions?: number | Computed<number>;
+  /** URL to the blob (file content) for this file on GitHub. (AI-inferred) */
   blobUrl?: string | Computed<string>;
+  /** The total number of changes (additions and deletions) for the file in the commit. (AI-inferred) */
   changes?: number | Computed<number>;
+  /** API endpoint URL that provides access to the file's contents on GitHub, typically used to retrieve the file content or metadata for this commit. (AI-inferred) */
   contentsUrl?: string | Computed<string>;
+  /** The number of lines deleted in this file in the commit. (AI-inferred) */
   deletions?: number | Computed<number>;
+  /** The name of the file as it appears in the commit, including the path relative to the repository root. (AI-inferred) */
   filename?: string | Computed<string>;
+  /** The patch (diff) for the file in the commit, showing the changes made to that file. (AI-inferred) */
   patch?: string | Computed<string>;
+  /** The original filename of a file that was renamed in the commit. This field is only present when the file was renamed; otherwise it is null. (AI-inferred) */
   previousFilename?: string | Computed<string>;
+  /** The URL to the raw content of the file in the repository. (AI-inferred) */
   rawUrl?: string | Computed<string>;
+  /** The blob SHA hash of the file's contents within the repository. (AI-inferred) */
   sha?: string | Computed<string>;
+  /** The status of the file in the commit, indicating the type of change. Possible values are: added, removed, modified, renamed, copied, changed, or unchanged. (AI-inferred) */
   status?: string | Computed<string>;
 }
 
 export interface Commit_Parents {
+  /** The HTML URL for the parent commit on GitHub, i.e., the web page that shows the commit details. (AI-inferred) */
   htmlUrl?: string | Computed<string>;
+  /** The full SHA of the parent commit. (AI-inferred) */
   sha?: string | Computed<string>;
+  /** The GitHub API URL for the parent commit. (AI-inferred) */
   url?: string | Computed<string>;
 }
 
 export interface Commit_Stats {
+  /** The number of lines added in this commit. (AI-inferred) */
   additions?: number | Computed<number>;
+  /** The number of lines deleted in the commit. (AI-inferred) */
   deletions?: number | Computed<number>;
+  /** Total number of lines changed in the commit (additions plus deletions). (AI-inferred) */
   total?: number | Computed<number>;
 }
 
@@ -99,22 +150,33 @@ export interface CommitConfig {
 }
 
 export interface CommitAttrs {
+  /** The author of the commit, containing details such as name, email, and date. (AI-inferred) */
   author: Commit_Author;
   /** The name of the base branch that the head will be merged into. */
   base: string;
+  /** The URL to the commit comments endpoint, which lists comments made on the commit. (AI-inferred) */
   commentsUrl: string;
+  /** The nested object containing commit metadata such as author, committer, message, and tree information, separate from the top-level SHA. (AI-inferred) */
   commit: Commit_Commit;
   /** Commit message to use for the merge commit. If omitted, a default message will be used. */
   commitMessage: string;
+  /** An object containing information about the user who committed the change, including name, email, and commit timestamp. (AI-inferred) */
   committer: Commit_Author;
+  /** A list of files affected by the commit, with details about each change such as file name and status. (AI-inferred) */
   files: Commit_Files[];
   /** The head to merge. This can be a branch name or a commit SHA1. */
   head: string;
+  /** The GitHub URL to view this commit on the web. (AI-inferred) */
   htmlUrl: string;
+  /** The GraphQL node identifier for the commit. (AI-inferred) */
   nodeId: string;
+  /** List of parent commit objects for this commit. Each object contains the SHA and URL of the parent commit. (AI-inferred) */
   parents: Commit_Parents[];
+  /** The SHA-1 checksum that uniquely identifies the commit. (AI-inferred) */
   sha: string;
+  /** Statistics about the commit, including the number of additions, deletions, and total changes. (AI-inferred) */
   stats: Commit_Stats;
+  /** The GitHub API URL for this commit. (AI-inferred) */
   url: string;
   /** path parameter, not part of the API's own resource representation */
   owner: string;

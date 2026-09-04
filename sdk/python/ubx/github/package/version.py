@@ -33,18 +33,27 @@ class VersionConfig:
 
 @dataclasses.dataclass
 class VersionAttrs:
+    # The real timestamp this object was created. (AI-inferred)
     created_at: Any = None
+    # The real timestamp this object was deleted, if it has been. (AI-inferred)
     deleted_at: Any = None
+    # The real, free-text description set on this object. (AI-inferred)
     description: Any = None
+    # The real, browsable web URL for this object. (AI-inferred)
     html_url: Any = None
     # Unique identifier of the package version.
     id: Any = None
+    # The real, detected open source license for this repository. (AI-inferred)
     license: Any = None
+    # Real, structured metadata attached to this object. (AI-inferred)
     metadata: Any = None
     # The name of the package version.
     name: Any = None
+    # The real, browsable web URL for this package. (AI-inferred)
     package_html_url: Any = None
+    # The real timestamp this object was last updated. (AI-inferred)
     updated_at: Any = None
+    # The real, canonical API URL for this object. (AI-inferred)
     url: Any = None
     # path parameter, not part of the API's own resource representation
     org: Any = None

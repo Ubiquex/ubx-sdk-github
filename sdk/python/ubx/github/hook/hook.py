@@ -10,6 +10,7 @@ import ubx_sdk as ubx
 class Hook_Config:
     # The media type used to serialize the payloads. Supported values include `json` and `form`. The default is `form`.
     content_type: Any = None
+    # Controls whether GitHub disables SSL verification when delivering webhook payloads. Accepts '0' or false to enable verification, and '1' or true to allow insecure connections (e.g., self-signed certificates). Optional. (AI-inferred)
     insecure_ssl: Any = None
     # If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value for [delivery signature headers](https://docs.github.com/enterprise-cloud@latest/webhooks/event-payloads/#delivery-headers).
     secret: Any = None
@@ -18,8 +19,11 @@ class Hook_Config:
 
 @dataclasses.dataclass
 class Hook_LastResponse:
+    # The HTTP response code received from the last webhook delivery. (AI-inferred)
     code: Any = None
+    # A string describing the response status of the last webhook delivery. (AI-inferred)
     message: Any = None
+    # The status of the most recent delivery for this webhook, indicating whether it succeeded or failed. (AI-inferred)
     status: Any = None
 
 _Hook_ConfigFields = {
@@ -52,19 +56,27 @@ class HookAttrs:
     active: Any = None
     # Key/value pairs to provide settings for this webhook.
     config: Any = None
+    # The timestamp indicating when the webhook was created, in ISO 8601 format. (AI-inferred)
     created_at: Any = None
+    # The URL to the API endpoint for listing deliveries of this webhook. (AI-inferred)
     deliveries_url: Any = None
     # Determines what [events](https://docs.github.com/enterprise-cloud@latest/webhooks/event-payloads) the hook is triggered for.
     events: Any = None
     # Unique identifier of the webhook.
     id: Any = None
+    # The last response received from the webhook's target URL, providing status and message from the most recent delivery. (AI-inferred)
     last_response: Any = None
     # Use `web` to create a webhook. Default: `web`. This parameter only accepts the value `web`.
     name: Any = None
+    # The URL to ping the webhook to trigger a test event, as provided by the GitHub API. (AI-inferred)
     ping_url: Any = None
+    # The URL used to test the GitHub webhook by sending a test payload. (AI-inferred)
     test_url: Any = None
+    # The type of the hook, which is always 'Repository' for a repository-level hook. (AI-inferred)
     type: Any = None
+    # The timestamp indicating when the GitHub hook was last updated. (AI-inferred)
     updated_at: Any = None
+    # The URL of the webhook in the GitHub API. (AI-inferred)
     url: Any = None
     # path parameter, not part of the API's own resource representation
     owner: Any = None

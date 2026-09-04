@@ -11,85 +11,130 @@ type Environment_DeploymentBranchPolicy struct {
 }
 
 type Environment_ProtectionRules_Reviewers_Reviewer_Parent struct {
-	Description         any
-	EnterpriseId        any
-	HtmlUrl             any
-	Id                  any
-	LdapDn              any
+	Description  any
+	EnterpriseId any
+	// The GitHub URL for the user or team's profile page. (AI-inferred)
+	HtmlUrl any
+	// The numeric ID of the user or team that is the parent of the reviewer, identifying which entity is granted review permissions. (AI-inferred)
+	Id any
+	// The LDAP distinguished name (DN) of the reviewer, used to identify an LDAP user or group as a reviewer in the environment's protection rules. (AI-inferred)
+	LdapDn any
+	// The API URL for the list of members of the team that is the parent of this reviewer. (AI-inferred)
 	MembersUrl          any
 	Name                any
 	NodeId              any
 	NotificationSetting any
-	OrganizationId      any
-	Permission          any
-	Privacy             any
-	RepositoriesUrl     any
-	Slug                any
-	Type                any
-	Url                 any
+	// The ID of the GitHub organization that owns the team referenced as a reviewer in the protection rule. (AI-inferred)
+	OrganizationId any
+	Permission     any
+	// The privacy level of the parent team of the team reviewer. Values are 'secret' or 'closed'. This is present when the reviewer is a child team. (AI-inferred)
+	Privacy         any
+	RepositoriesUrl any
+	// The slug of the parent team of a team reviewer, if the team has a parent. (AI-inferred)
+	Slug any
+	Type any
+	// The GitHub API URL of the parent team of the team that is the reviewer. (AI-inferred)
+	Url any
 }
 
 type Environment_ProtectionRules_Reviewers_Reviewer_Permissions struct {
-	Admin    any
+	// Boolean flag indicating whether the reviewer has admin-level permissions for the environment. (AI-inferred)
+	Admin any
+	// Boolean flag indicating whether the reviewer has the 'maintain' permission level on the repository. (AI-inferred)
 	Maintain any
-	Pull     any
-	Push     any
-	Triage   any
+	// Boolean flag indicating whether the reviewer has pull (read-only) permission on the repository. (AI-inferred)
+	Pull any
+	// Indicates whether the reviewer has push access to the environment. (AI-inferred)
+	Push any
+	// Indicates whether the reviewer has triage permission for the environment. (AI-inferred)
+	Triage any
 }
 
 type Environment_ProtectionRules_Reviewers_Reviewer struct {
-	AccessSource        any
-	AvatarUrl           any
-	Description         any
-	Email               any
-	EnterpriseId        any
-	EventsUrl           any
-	FollowersUrl        any
-	FollowingUrl        any
-	GistsUrl            any
-	GravatarId          any
-	HtmlUrl             any
-	Id                  any
-	Login               any
-	MembersUrl          any
-	Name                any
-	NodeId              any
+	AccessSource any
+	// The URL of the avatar image for the user or team that acts as the reviewer in this protection rule. (AI-inferred)
+	AvatarUrl    any
+	Description  any
+	Email        any
+	EnterpriseId any
+	// The URL to retrieve events (e.g., activity) for the reviewer, typically a GitHub user. (AI-inferred)
+	EventsUrl any
+	// The URL to the followers page of the reviewer's GitHub user account. (AI-inferred)
+	FollowersUrl any
+	// The URL to the GitHub API endpoint for the list of users that this reviewer (a GitHub user) is following. This is typically a templated URL and is only present when the reviewer is a user. (AI-inferred)
+	FollowingUrl any
+	// The URL to the user's gists list, as provided by the GitHub API. (AI-inferred)
+	GistsUrl any
+	// The Gravatar ID of the user who is the reviewer, used to retrieve the user's avatar from Gravatar. (AI-inferred)
+	GravatarId any
+	// The HTML URL to the GitHub page for the reviewer, either a user profile or a team page, depending on whether the reviewer is a user or a team. (AI-inferred)
+	HtmlUrl any
+	// The numeric ID of the user or team that is a required reviewer for the environment protection rule. (AI-inferred)
+	Id any
+	// The GitHub username or team slug of the reviewer. This identifies the user or team that is required to review changes to the environment. (AI-inferred)
+	Login any
+	// The API endpoint URL for retrieving the members of the team that acts as the required reviewer. This field is present only when the reviewer is a team, not a user. (AI-inferred)
+	MembersUrl any
+	// The name of the user or team that acts as a reviewer in this environment protection rule. (AI-inferred)
+	Name any
+	// The unique identifier (node ID) for the reviewer in GitHub's GraphQL API. (AI-inferred)
+	NodeId any
+	// The notification setting for this reviewer, controlling whether notifications are sent for changes to the environment. Valid values are `notifications_enabled` and `notifications_disabled`. (AI-inferred)
 	NotificationSetting any
-	OrganizationId      any
-	OrganizationsUrl    any
-	Parent              any
-	Permission          any
-	Permissions         any
-	Privacy             any
-	ReceivedEventsUrl   any
-	ReposUrl            any
-	RepositoriesUrl     any
-	SiteAdmin           any
-	Slug                any
-	StarredAt           any
-	StarredUrl          any
-	SubscriptionsUrl    any
-	Type                any
-	Url                 any
-	UserViewType        any
+	// The numeric ID of the GitHub organization that the team reviewer belongs to. This is used when the reviewer is a team. (AI-inferred)
+	OrganizationId any
+	// The URL to the organizations endpoint for the reviewer, which lists the organizations the user belongs to. This is typically present for user reviewers. (AI-inferred)
+	OrganizationsUrl any
+	Parent           any
+	Permission       any
+	Permissions      any
+	Privacy          any
+	// The API endpoint for events received by the user acting as the reviewer. (AI-inferred)
+	ReceivedEventsUrl any
+	// The API URL to the reviewer's repositories (users and teams both have a `repos_url`). This is a computed attribute that reflects the repository URL of the user or team serving as the required reviewer for the environment protection rule. (AI-inferred)
+	ReposUrl any
+	// The URL to the list of repositories associated with the reviewer, as defined in the GitHub API. (AI-inferred)
+	RepositoriesUrl any
+	// Boolean indicating whether the reviewer is a site administrator. (AI-inferred)
+	SiteAdmin any
+	// The slug of the team that acts as a reviewer for the environment protection rule. This is used to reference a team by its GitHub slug (e.g., 'my-team'). (AI-inferred)
+	Slug      any
+	StarredAt any
+	// The URL template for the user's starred repositories, which may contain placeholders for the owner and repository names. (AI-inferred)
+	StarredUrl any
+	// The GitHub API URL to the subscriptions of the reviewer (user or team), typically listing repositories the reviewer is watching or subscribed to. (AI-inferred)
+	SubscriptionsUrl any
+	// The type of the reviewer. Valid values are 'User' or 'Team'. (AI-inferred)
+	Type         any
+	Url          any
+	UserViewType any
 }
 
 type Environment_ProtectionRules_Reviewers struct {
+	// A user or team that must approve changes before deployment to this environment, as part of the environment's protection rules. (AI-inferred)
 	Reviewer any
-	Type     any
+	// The type of reviewer, either 'User' for a user account or 'Team' for a team. (AI-inferred)
+	Type any
 }
 
 type Environment_ProtectionRules struct {
-	Id                any
-	NodeId            any
+	Id any
+	// The GraphQL global node ID of the protection rule. (AI-inferred)
+	NodeId any
+	// When true, the user who initiated or requested the review for a deployment cannot approve or review their own request, ensuring a different reviewer is required. (AI-inferred)
 	PreventSelfReview any
-	Reviewers         any
-	Type              any
-	WaitTimer         any
+	// List of objects specifying users and teams that must approve jobs referencing this environment. Each reviewer object contains either a user_id or team_id. (AI-inferred)
+	Reviewers any
+	// The type of protection rule applied to the environment, indicating the kind of rule (e.g., required reviewers, wait timer). (AI-inferred)
+	Type any
+	// Number of minutes to wait before the environment can be used, as configured in the environment's protection rules. (AI-inferred)
+	WaitTimer any
 }
 
 type Environment_Reviewers struct {
-	Id   any
+	// The unique identifier of an environment reviewer. (AI-inferred)
+	Id any
+	// The type of reviewer, either 'User' or 'Team'. (AI-inferred)
 	Type any
 }
 
@@ -125,11 +170,13 @@ type EnvironmentAttrs struct {
 	CreatedAt any
 	// The type of deployment branch policy for this environment. To allow all branches to deploy, set to `null`.
 	DeploymentBranchPolicy any
-	HtmlUrl                any
+	// The URL to view the environment in the GitHub web interface. (AI-inferred)
+	HtmlUrl any
 	// The id of the environment.
 	Id any
 	// The name of the environment.
-	Name   any
+	Name any
+	// The GraphQL node ID of the environment, used to identify it in GitHub's GraphQL API. (AI-inferred)
 	NodeId any
 	// Whether or not a user who created the job is prevented from approving their own job.
 	PreventSelfReview any
@@ -139,7 +186,8 @@ type EnvironmentAttrs struct {
 	Reviewers any
 	// The time that the environment was last updated, in ISO 8601 format.
 	UpdatedAt any
-	Url       any
+	// The real, canonical API URL for this object. (AI-inferred)
+	Url any
 	// The amount of time to delay a job after the job is initially triggered. The time (in minutes) must be an integer between 0 and 43,200 (30 days).
 	WaitTimer any
 	// path parameter, not part of the API's own resource representation

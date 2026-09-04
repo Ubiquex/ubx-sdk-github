@@ -54,6 +54,7 @@ class AuditLogStreamConfigConfig:
     enabled: Any = None
     # The audit log streaming provider. The name is case sensitive.
     stream_type: Any = None
+    # Real, vendor-specific configuration fields for this audit log streaming destination. (AI-inferred)
     vendor_specific: Any = None
     # path parameter, not part of the API's own resource representation
     enterprise: Any = None
@@ -62,15 +63,21 @@ class AuditLogStreamConfigConfig:
 
 @dataclasses.dataclass
 class AuditLogStreamConfigAttrs:
+    # The real timestamp this object was created. (AI-inferred)
     created_at: Any = None
     # This setting pauses or resumes a stream.
     enabled: Any = None
+    # The real, numeric, globally unique identifier for this object. (AI-inferred)
     id: Any = None
+    # When this audit log streaming configuration was paused, if it currently is. (AI-inferred)
     paused_at: Any = None
+    # This audit log stream's own real, provider-specific delivery configuration. (AI-inferred)
     stream_details: Any = None
     # The audit log streaming provider. The name is case sensitive.
     stream_type: Any = None
+    # The real timestamp this object was last updated. (AI-inferred)
     updated_at: Any = None
+    # Real, vendor-specific configuration fields for this audit log streaming destination. (AI-inferred)
     vendor_specific: Any = None
     # path parameter, not part of the API's own resource representation
     enterprise: Any = None

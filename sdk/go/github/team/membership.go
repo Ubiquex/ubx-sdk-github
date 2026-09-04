@@ -21,7 +21,8 @@ type MembershipAttrs struct {
 	Role any
 	// The state of the user's membership in the team.
 	State any
-	Url   any
+	// The API URL for the team membership. (AI-inferred)
+	Url any
 	// path parameter, not part of the API's own resource representation
 	Org any
 	// path parameter, not part of the API's own resource representation

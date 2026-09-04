@@ -8,26 +8,45 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class Migration_Owner:
+    # The URL of the avatar image for the owner of the GitHub migration. (AI-inferred)
     avatar_url: Any = None
     email: Any = None
+    # URL to the events of the owner (user or organization), as provided by the GitHub API. (AI-inferred)
     events_url: Any = None
+    # The URL to the GitHub API endpoint for the list of followers of the owner. (AI-inferred)
     followers_url: Any = None
+    # The URL template to list users this owner follows, optionally with another user as a query parameter to check if the owner follows that user. (AI-inferred)
     following_url: Any = None
+    # The URL to the owner's gists endpoint. (AI-inferred)
     gists_url: Any = None
+    # The Gravatar ID for the owner's avatar image, as used by GitHub. (AI-inferred)
     gravatar_id: Any = None
+    # The GitHub web URL for the owner (user or organization) that owns the migration. (AI-inferred)
     html_url: Any = None
+    # The unique identifier of the owner (user or organization) associated with the GitHub migration. (AI-inferred)
     id: Any = None
+    # The GitHub username or organization login for the owner of the migration. (AI-inferred)
     login: Any = None
     name: Any = None
+    # The node ID of the GitHub migration owner (user or organization), used as a unique identifier in the GitHub API. (AI-inferred)
     node_id: Any = None
+    # The URL to the GitHub API endpoint that lists the organizations associated with this owner account (e.g., https://api.github.com/users/{login}/orgs). (AI-inferred)
     organizations_url: Any = None
+    # The URL to retrieve the list of events received by this GitHub owner. (AI-inferred)
     received_events_url: Any = None
+    # The API endpoint URL for the owner's repositories. (AI-inferred)
     repos_url: Any = None
+    # Boolean indicating whether the owner is a GitHub site administrator. This is a required field in the migration owner object. (AI-inferred)
     site_admin: Any = None
+    # The timestamp indicating when the owner starred this repository. Typically in RFC3339 format and present only if the owner has starred the repository. (AI-inferred)
     starred_at: Any = None
+    # The URL template for the repositories starred by this owner, e.g., https://api.github.com/users/{owner}/starred{/owner}{/repo}. (AI-inferred)
     starred_url: Any = None
+    # The URL to the owner's subscriptions list, used to retrieve the subscriptions for the migration owner. (AI-inferred)
     subscriptions_url: Any = None
+    # The type of the GitHub account that owns the migration, such as 'User' or 'Organization'. (AI-inferred)
     type: Any = None
+    # The URL to the owner's GitHub API resource for the migration, such as an organization or user. (AI-inferred)
     url: Any = None
     user_view_type: Any = None
 
@@ -49,6 +68,7 @@ class MigrationConfig:
     lock_repositories: Any = None
     # Indicates whether this should only include organization metadata (repositories array should be empty and will ignore other flags).
     org_metadata_only: Any = None
+    # The list of repositories to include in the migration. Each item typically identifies a repository (e.g., in 'owner/name' format) that will be migrated. (AI-inferred)
     repositories: Any = None
     # path parameter, not part of the API's own resource representation
     org: Any = None
@@ -57,7 +77,9 @@ class MigrationConfig:
 
 @dataclasses.dataclass
 class MigrationAttrs:
+    # The URL at which the migration archive can be downloaded. This value is computed and only available after the migration completes. (AI-inferred)
     archive_url: Any = None
+    # The timestamp for when the GitHub migration was created. (AI-inferred)
     created_at: Any = None
     # Exclude attributes from the API response to improve performance
     exclude: Any = None
@@ -71,18 +93,25 @@ class MigrationAttrs:
     exclude_owner_projects: Any = None
     # Do not include releases in the migration
     exclude_releases: Any = None
+    # The real, globally unique identifier for this migration. (AI-inferred)
     guid: Any = None
+    # The real, numeric, globally unique identifier for this object. (AI-inferred)
     id: Any = None
     # Lock the repositories being migrated at the start of the migration
     lock_repositories: Any = None
+    # The GraphQL node identifier for this migration, used to access it via the GitHub GraphQL API. (AI-inferred)
     node_id: Any = None
     # Indicates whether this should only include organization metadata (repositories array should be empty and will ignore other flags).
     org_metadata_only: Any = None
     # A GitHub user.
     owner: Any = None
+    # The list of repositories to include in the migration. Each item typically identifies a repository (e.g., in 'owner/name' format) that will be migrated. (AI-inferred)
     repositories: Any = None
+    # The real, current state of this object. (AI-inferred)
     state: Any = None
+    # The real timestamp this object was last updated. (AI-inferred)
     updated_at: Any = None
+    # The GitHub API URL for this migration. (AI-inferred)
     url: Any = None
     # path parameter, not part of the API's own resource representation
     org: Any = None

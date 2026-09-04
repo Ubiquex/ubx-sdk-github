@@ -38,8 +38,10 @@ type HostedRunner_MachineSizeDetails struct {
 
 type HostedRunner_PublicIps struct {
 	Enabled any
-	Length  any
-	Prefix  any
+	// The network prefix length in bits for the IP range assigned to this hosted runner. For instance, 28 represents a /28 subnet. (AI-inferred)
+	Length any
+	// The IP prefix in CIDR notation (e.g., '192.0.2.0/24') that defines a public IP range associated with the hosted runner. (AI-inferred)
+	Prefix any
 }
 
 var HostedRunner_ImageFields = ubx.FieldMap{

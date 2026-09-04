@@ -13,8 +13,10 @@ type SigningKeyConfig struct {
 }
 
 type SigningKeyAttrs struct {
+	// Timestamp the SSH signing key was added to the account. (AI-inferred)
 	CreatedAt any
-	Id        any
+	// The SSH signing key's numeric ID. (AI-inferred)
+	Id any
 	// The public SSH key to add to your GitHub account. For more information, see "[Checking for existing SSH keys](https://docs.github.com/enterprise-cloud@latest/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)."
 	Key any
 	// A descriptive name for the new key.

@@ -8,26 +8,46 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class Milestone_Creator:
+    # The URL of the avatar image for the user who created the milestone. (AI-inferred)
     avatar_url: Any = None
+    # The email address of the user who created the milestone, if that user has made their email public. (AI-inferred)
     email: Any = None
+    # The API URL for events associated with the creator of the milestone. In GitHub's API, this field typically points to an endpoint like 'https://api.github.com/users/{username}/events{/privacy}'. (AI-inferred)
     events_url: Any = None
+    # The URL to list the followers of the user, i.e., the creator of the milestone. (AI-inferred)
     followers_url: Any = None
+    # URL template to access the list of users that this user follows. This is part of the user object for the milestone creator. (AI-inferred)
     following_url: Any = None
+    # URL template for the user's gists, including an optional gist ID placeholder. (AI-inferred)
     gists_url: Any = None
+    # The user's Gravatar ID, a legacy identifier used to construct avatar URLs. May be empty and is deprecated in favor of avatar_url. (AI-inferred)
     gravatar_id: Any = None
+    # The URL to the creator's GitHub profile page. (AI-inferred)
     html_url: Any = None
+    # The unique identifier of the GitHub user who created the milestone. (AI-inferred)
     id: Any = None
+    # The GitHub username of the milestone creator. (AI-inferred)
     login: Any = None
+    # The display name of the user who created the milestone, if available. (AI-inferred)
     name: Any = None
+    # The global node identifier for the creator user, usable in GraphQL queries. (AI-inferred)
     node_id: Any = None
+    # The URL to the list of organizations that the creator belongs to. (AI-inferred)
     organizations_url: Any = None
+    # The URL to the GitHub API endpoint that lists events received by the user. (AI-inferred)
     received_events_url: Any = None
+    # The URL to list the repositories owned by the milestone creator. (AI-inferred)
     repos_url: Any = None
+    # Whether the user is a site administrator. (AI-inferred)
     site_admin: Any = None
     starred_at: Any = None
+    # The URL template for the user's starred repositories, including placeholders for owner and repo (e.g., https://api.github.com/users/{user}/starred{/owner}{/repo}). (AI-inferred)
     starred_url: Any = None
+    # The API URL for the creator's subscriptions on GitHub. (AI-inferred)
     subscriptions_url: Any = None
+    # The type of GitHub account that created the milestone, such as 'User' or 'Organization'. (AI-inferred)
     type: Any = None
+    # The URL of the creator's GitHub profile. (AI-inferred)
     url: Any = None
     user_view_type: Any = None
 
@@ -50,8 +70,11 @@ class MilestoneConfig:
 
 @dataclasses.dataclass
 class MilestoneAttrs:
+    # The date and time when the milestone was closed, formatted as an ISO 8601 timestamp. This field is null if the milestone has not been closed. (AI-inferred)
     closed_at: Any = None
+    # The number of issues in this milestone that have been closed. (AI-inferred)
     closed_issues: Any = None
+    # The timestamp indicating when the milestone was created, in ISO 8601 format (UTC). (AI-inferred)
     created_at: Any = None
     # A GitHub user.
     creator: Any = None
@@ -59,18 +82,25 @@ class MilestoneAttrs:
     description: Any = None
     # The milestone due date. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
     due_on: Any = None
+    # The URL to view the milestone on GitHub. (AI-inferred)
     html_url: Any = None
+    # The real, numeric, globally unique identifier for this object. (AI-inferred)
     id: Any = None
+    # The API URL for the labels associated with this milestone. (AI-inferred)
     labels_url: Any = None
+    # The node ID of the milestone, used for GraphQL API operations. (AI-inferred)
     node_id: Any = None
     # The number of the milestone.
     number: Any = None
+    # The number of open issues associated with this milestone. (AI-inferred)
     open_issues: Any = None
     # The state of the milestone. Either `open` or `closed`.
     state: Any = None
     # The title of the milestone.
     title: Any = None
+    # The timestamp of when the milestone was last updated, in ISO 8601 format. (AI-inferred)
     updated_at: Any = None
+    # The API URL for the milestone, e.g., https://api.github.com/repos/{owner}/{repo}/milestones/{number}. (AI-inferred)
     url: Any = None
     # path parameter, not part of the API's own resource representation
     owner: Any = None

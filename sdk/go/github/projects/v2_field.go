@@ -9,26 +9,33 @@ type V2Field_Configuration_Iterations_Title struct {
 }
 
 type V2Field_Configuration_Iterations struct {
+	// Indicates whether this iteration has been marked as completed. When true, the iteration is considered finished, which may affect how it is displayed in the project. (AI-inferred)
 	Completed any
-	Duration  any
-	Id        any
+	// The duration of each iteration in days. (AI-inferred)
+	Duration any
+	Id       any
+	// The start date of the iteration, in ISO 8601 format (YYYY-MM-DD), used to define the iteration's time period. (AI-inferred)
 	StartDate any
-	Title     any
+	// The title of the iteration in the GitHub Projects v2 field's iteration configuration. (AI-inferred)
+	Title any
 }
 
 type V2Field_Configuration struct {
 	// The duration of the iteration in days.
-	Duration   any
+	Duration any
+	// A list of iteration objects that define the iteration field's configuration in GitHub Projects v2, including details like title, start date, and duration. (AI-inferred)
 	Iterations any
 	// The day of the week when the iteration starts.
 	StartDay any
 }
 
 type V2Field_Options struct {
+	// The color of the option, used for display in the GitHub Projects UI. Must be one of: GRAY, RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE, PINK. (AI-inferred)
 	Color       any
 	Description any
-	Id          any
-	Name        any
+	// The unique identifier for this option within the GitHub Projects v2 field. (AI-inferred)
+	Id   any
+	Name any
 }
 
 type V2FieldConfig struct {

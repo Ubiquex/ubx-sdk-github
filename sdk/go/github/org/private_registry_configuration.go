@@ -70,7 +70,8 @@ type PrivateRegistryConfigurationAttrs struct {
 	// The AWS region. Required when `auth_type` is `oidc_aws`.
 	AwsRegion any
 	// The client ID of the Azure AD application. Required when `auth_type` is `oidc_azure`.
-	ClientId  any
+	ClientId any
+	// Timestamp the private registry configuration was created. (AI-inferred)
 	CreatedAt any
 	// The CodeArtifact domain. Required when `auth_type` is `oidc_aws`.
 	Domain any
@@ -101,7 +102,8 @@ type PrivateRegistryConfigurationAttrs struct {
 	// The Cloudsmith service account slug. Required when `auth_type` is `oidc_cloudsmith`.
 	ServiceSlug any
 	// The tenant ID of the Azure AD application. Required when `auth_type` is `oidc_azure`.
-	TenantId  any
+	TenantId any
+	// Timestamp the private registry configuration was last updated. (AI-inferred)
 	UpdatedAt any
 	// The URL of the private registry.
 	Url any

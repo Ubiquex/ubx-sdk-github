@@ -13,15 +13,21 @@ type KeyConfig struct {
 }
 
 type KeyAttrs struct {
+	// The date and time when the key was created, in ISO 8601 format (e.g., 2023-01-01T12:00:00Z). This timestamp is set by the GitHub API upon key creation. (AI-inferred)
 	CreatedAt any
-	Id        any
+	// The real, numeric, globally unique identifier for this object. (AI-inferred)
+	Id any
 	// The public SSH key to add to your GitHub account.
-	Key      any
+	Key any
+	// The date and time when this GitHub key was last used for authentication. (AI-inferred)
 	LastUsed any
+	// Indicates whether the key is read-only (true) or has read/write access (false). (AI-inferred)
 	ReadOnly any
 	// A descriptive name for the new key.
-	Title    any
-	Url      any
+	Title any
+	// The GitHub API URL for this SSH key. (AI-inferred)
+	Url any
+	// Boolean indicating whether the key has been verified by GitHub. (AI-inferred)
 	Verified any
 	// path parameter, not part of the API's own resource representation
 	KeyId any

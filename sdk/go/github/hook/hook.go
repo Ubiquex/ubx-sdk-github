@@ -6,6 +6,7 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 type Hook_Config struct {
 	// The media type used to serialize the payloads. Supported values include `json` and `form`. The default is `form`.
 	ContentType any
+	// Controls whether GitHub disables SSL verification when delivering webhook payloads. Accepts '0' or false to enable verification, and '1' or true to allow insecure connections (e.g., self-signed certificates). Optional. (AI-inferred)
 	InsecureSsl any
 	// If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value for [delivery signature headers](https://docs.github.com/enterprise-cloud@latest/webhooks/event-payloads/#delivery-headers).
 	Secret any
@@ -14,9 +15,12 @@ type Hook_Config struct {
 }
 
 type Hook_LastResponse struct {
-	Code    any
+	// The HTTP response code received from the last webhook delivery. (AI-inferred)
+	Code any
+	// A string describing the response status of the last webhook delivery. (AI-inferred)
 	Message any
-	Status  any
+	// The status of the most recent delivery for this webhook, indicating whether it succeeded or failed. (AI-inferred)
+	Status any
 }
 
 var Hook_ConfigFields = ubx.FieldMap{
@@ -47,21 +51,29 @@ type HookAttrs struct {
 	// Determines if notifications are sent when the webhook is triggered. Set to `true` to send notifications.
 	Active any
 	// Key/value pairs to provide settings for this webhook.
-	Config        any
-	CreatedAt     any
+	Config any
+	// The timestamp indicating when the webhook was created, in ISO 8601 format. (AI-inferred)
+	CreatedAt any
+	// The URL to the API endpoint for listing deliveries of this webhook. (AI-inferred)
 	DeliveriesUrl any
 	// Determines what [events](https://docs.github.com/enterprise-cloud@latest/webhooks/event-payloads) the hook is triggered for.
 	Events any
 	// Unique identifier of the webhook.
-	Id           any
+	Id any
+	// The last response received from the webhook's target URL, providing status and message from the most recent delivery. (AI-inferred)
 	LastResponse any
 	// Use `web` to create a webhook. Default: `web`. This parameter only accepts the value `web`.
-	Name      any
-	PingUrl   any
-	TestUrl   any
-	Type      any
+	Name any
+	// The URL to ping the webhook to trigger a test event, as provided by the GitHub API. (AI-inferred)
+	PingUrl any
+	// The URL used to test the GitHub webhook by sending a test payload. (AI-inferred)
+	TestUrl any
+	// The type of the hook, which is always 'Repository' for a repository-level hook. (AI-inferred)
+	Type any
+	// The timestamp indicating when the GitHub hook was last updated. (AI-inferred)
 	UpdatedAt any
-	Url       any
+	// The URL of the webhook in the GitHub API. (AI-inferred)
+	Url any
 	// path parameter, not part of the API's own resource representation
 	Owner any
 	// path parameter, not part of the API's own resource representation

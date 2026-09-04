@@ -23,6 +23,7 @@ type TeamWithMemberCountConfig struct {
 }
 
 type TeamWithMemberCountAttrs struct {
+	// The real timestamp this object was created. (AI-inferred)
 	CreatedAt any
 	// A description of the team.
 	Description any
@@ -30,22 +31,28 @@ type TeamWithMemberCountAttrs struct {
 	GroupId any
 	// Retired: this field will not be returned with GHEC enterprise teams.
 	GroupName any
-	HtmlUrl   any
-	Id        any
+	// The real, browsable URL for this enterprise team. (AI-inferred)
+	HtmlUrl any
+	// The real, numeric, globally unique identifier for this object. (AI-inferred)
+	Id any
 	// The number of members in the enterprise team.
 	MembersCount any
-	MembersUrl   any
+	// The real API URL template for listing this enterprise team's own members. (AI-inferred)
+	MembersUrl any
 	// The name of the team.
 	Name any
 	// The notification setting the team is set to. The options are: * `notifications_enabled` - team members receive notifications when the team is @mentioned. * `notifications_disabled` - no one receives notifications. Default: `notifications_enabled`
 	NotificationSetting any
 	// Specifies which organizations in the enterprise should have access to this team. Can be one of `disabled`, `selected`, or `all`. `disabled`: The team is not assigned to any organizations. This is the default when you create a new team. `selected`: The team is assigned to specific organizations. You can then use the [add organization assignments API](https://docs.github.com/enterprise-cloud@latest/rest/enterprise-teams/enterprise-team-organizations#add-organization-assignments) endpoint. `all`: The team is assigned to all current and future organizations in the enterprise.
 	OrganizationSelectionType any
-	Slug                      any
+	// This enterprise team's own real, URL-safe identifier. (AI-inferred)
+	Slug any
 	// Retired: this field is no longer supported. Whether the enterprise team should be reflected in each organization. This value cannot be set.
 	SyncToOrganizations any
-	UpdatedAt           any
-	Url                 any
+	// The real timestamp this object was last updated. (AI-inferred)
+	UpdatedAt any
+	// The real, canonical API URL for this object. (AI-inferred)
+	Url any
 	// path parameter, not part of the API's own resource representation
 	Enterprise any
 	// path parameter, not part of the API's own resource representation

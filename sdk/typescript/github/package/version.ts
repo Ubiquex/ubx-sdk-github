@@ -27,18 +27,27 @@ export interface VersionConfig {
 }
 
 export interface VersionAttrs {
+  /** The real timestamp this object was created. (AI-inferred) */
   createdAt: string;
+  /** The real timestamp this object was deleted, if it has been. (AI-inferred) */
   deletedAt: string;
+  /** The real, free-text description set on this object. (AI-inferred) */
   description: string;
+  /** The real, browsable web URL for this object. (AI-inferred) */
   htmlUrl: string;
   /** Unique identifier of the package version. */
   id: number;
+  /** The real, detected open source license for this repository. (AI-inferred) */
   license: string;
+  /** Real, structured metadata attached to this object. (AI-inferred) */
   metadata: Version_Metadata;
   /** The name of the package version. */
   name: string;
+  /** The real, browsable web URL for this package. (AI-inferred) */
   packageHtmlUrl: string;
+  /** The real timestamp this object was last updated. (AI-inferred) */
   updatedAt: string;
+  /** The real, canonical API URL for this object. (AI-inferred) */
   url: string;
   /** path parameter, not part of the API's own resource representation */
   org: string;

@@ -15,6 +15,7 @@ export interface CodespacesSecretConfig {
 }
 
 export interface CodespacesSecretAttrs {
+  /** The real timestamp this object was created. (AI-inferred) */
   createdAt: string;
   /** Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get a repository public key](https://docs.github.com/enterprise-cloud@latest/rest/codespaces/repository-secrets#get-a-repository-public-key) endpoint. */
   encryptedValue: string;
@@ -22,6 +23,7 @@ export interface CodespacesSecretAttrs {
   keyId: string;
   /** The name of the secret. */
   name: string;
+  /** The real timestamp this object was last updated. (AI-inferred) */
   updatedAt: string;
   /** path parameter, not part of the API's own resource representation */
   owner: string;

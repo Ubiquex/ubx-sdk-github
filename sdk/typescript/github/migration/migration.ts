@@ -2,26 +2,45 @@
 import type { Computed, FieldMap, ResourceBinding } from "@ubx/sdk";
 
 export interface Migration_Owner {
+  /** The URL of the avatar image for the owner of the GitHub migration. (AI-inferred) */
   avatarUrl: string | Computed<string>;
   email?: string | Computed<string>;
+  /** URL to the events of the owner (user or organization), as provided by the GitHub API. (AI-inferred) */
   eventsUrl: string | Computed<string>;
+  /** The URL to the GitHub API endpoint for the list of followers of the owner. (AI-inferred) */
   followersUrl: string | Computed<string>;
+  /** The URL template to list users this owner follows, optionally with another user as a query parameter to check if the owner follows that user. (AI-inferred) */
   followingUrl: string | Computed<string>;
+  /** The URL to the owner's gists endpoint. (AI-inferred) */
   gistsUrl: string | Computed<string>;
+  /** The Gravatar ID for the owner's avatar image, as used by GitHub. (AI-inferred) */
   gravatarId: string | Computed<string>;
+  /** The GitHub web URL for the owner (user or organization) that owns the migration. (AI-inferred) */
   htmlUrl: string | Computed<string>;
+  /** The unique identifier of the owner (user or organization) associated with the GitHub migration. (AI-inferred) */
   id: number | Computed<number>;
+  /** The GitHub username or organization login for the owner of the migration. (AI-inferred) */
   login: string | Computed<string>;
   name?: string | Computed<string>;
+  /** The node ID of the GitHub migration owner (user or organization), used as a unique identifier in the GitHub API. (AI-inferred) */
   nodeId: string | Computed<string>;
+  /** The URL to the GitHub API endpoint that lists the organizations associated with this owner account (e.g., https://api.github.com/users/{login}/orgs). (AI-inferred) */
   organizationsUrl: string | Computed<string>;
+  /** The URL to retrieve the list of events received by this GitHub owner. (AI-inferred) */
   receivedEventsUrl: string | Computed<string>;
+  /** The API endpoint URL for the owner's repositories. (AI-inferred) */
   reposUrl: string | Computed<string>;
+  /** Boolean indicating whether the owner is a GitHub site administrator. This is a required field in the migration owner object. (AI-inferred) */
   siteAdmin: boolean | Computed<boolean>;
+  /** The timestamp indicating when the owner starred this repository. Typically in RFC3339 format and present only if the owner has starred the repository. (AI-inferred) */
   starredAt?: string | Computed<string>;
+  /** The URL template for the repositories starred by this owner, e.g., https://api.github.com/users/{owner}/starred{/owner}{/repo}. (AI-inferred) */
   starredUrl: string | Computed<string>;
+  /** The URL to the owner's subscriptions list, used to retrieve the subscriptions for the migration owner. (AI-inferred) */
   subscriptionsUrl: string | Computed<string>;
+  /** The type of the GitHub account that owns the migration, such as 'User' or 'Organization'. (AI-inferred) */
   type: string | Computed<string>;
+  /** The URL to the owner's GitHub API resource for the migration, such as an organization or user. (AI-inferred) */
   url: string | Computed<string>;
   userViewType?: string | Computed<string>;
 }
@@ -43,6 +62,7 @@ export interface MigrationConfig {
   lockRepositories?: boolean | Computed<boolean>;
   /** Indicates whether this should only include organization metadata (repositories array should be empty and will ignore other flags). */
   orgMetadataOnly?: boolean | Computed<boolean>;
+  /** The list of repositories to include in the migration. Each item typically identifies a repository (e.g., in 'owner/name' format) that will be migrated. (AI-inferred) */
   repositories: string[] | Computed<string[]>;
   /** path parameter, not part of the API's own resource representation */
   org: string | Computed<string>;
@@ -51,7 +71,9 @@ export interface MigrationConfig {
 }
 
 export interface MigrationAttrs {
+  /** The URL at which the migration archive can be downloaded. This value is computed and only available after the migration completes. (AI-inferred) */
   archiveUrl: string;
+  /** The timestamp for when the GitHub migration was created. (AI-inferred) */
   createdAt: string;
   /** Exclude attributes from the API response to improve performance */
   exclude: string[];
@@ -65,18 +87,25 @@ export interface MigrationAttrs {
   excludeOwnerProjects: boolean;
   /** Do not include releases in the migration */
   excludeReleases: boolean;
+  /** The real, globally unique identifier for this migration. (AI-inferred) */
   guid: string;
+  /** The real, numeric, globally unique identifier for this object. (AI-inferred) */
   id: number;
   /** Lock the repositories being migrated at the start of the migration */
   lockRepositories: boolean;
+  /** The GraphQL node identifier for this migration, used to access it via the GitHub GraphQL API. (AI-inferred) */
   nodeId: string;
   /** Indicates whether this should only include organization metadata (repositories array should be empty and will ignore other flags). */
   orgMetadataOnly: boolean;
   /** A GitHub user. */
   owner: Migration_Owner;
+  /** The list of repositories to include in the migration. Each item typically identifies a repository (e.g., in 'owner/name' format) that will be migrated. (AI-inferred) */
   repositories: string[];
+  /** The real, current state of this object. (AI-inferred) */
   state: string;
+  /** The real timestamp this object was last updated. (AI-inferred) */
   updatedAt: string;
+  /** The GitHub API URL for this migration. (AI-inferred) */
   url: string;
   /** path parameter, not part of the API's own resource representation */
   org: string;

@@ -4,70 +4,108 @@ package copilot
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Space_Creator struct {
-	AvatarUrl         any
-	Email             any
-	EventsUrl         any
-	FollowersUrl      any
-	FollowingUrl      any
-	GistsUrl          any
-	GravatarId        any
-	HtmlUrl           any
-	Id                any
-	Login             any
-	Name              any
-	NodeId            any
-	OrganizationsUrl  any
+	// The URL of the avatar image for the creator of the GitHub Copilot space. (AI-inferred)
+	AvatarUrl any
+	// The email address of the creator of the Copilot space. (AI-inferred)
+	Email any
+	// The URL to retrieve events related to the creator of the Copilot space, typically the GitHub API events endpoint for the creator's user account. (AI-inferred)
+	EventsUrl any
+	// The URL endpoint to retrieve the list of followers for the creator. This follows the standard GitHub API pattern for user-related URLs. (AI-inferred)
+	FollowersUrl any
+	// The URL to the creator's following list, used to retrieve the list of users the creator follows. (AI-inferred)
+	FollowingUrl any
+	// The URL template for listing the creator's gists. Contains a placeholder for the gist ID, typically formatted as 'https://api.github.com/users/{creator}/gists{/gist_id}'. (AI-inferred)
+	GistsUrl any
+	// The user's Gravatar ID, an MD5 hash of their email address used to fetch their avatar from Gravatar. (AI-inferred)
+	GravatarId any
+	// The URL to the creator's GitHub profile page. (AI-inferred)
+	HtmlUrl any
+	Id      any
+	// The GitHub username (login) of the creator of the Copilot space. This field is required and identifies the user who created the space. (AI-inferred)
+	Login any
+	Name  any
+	// The GraphQL node ID of the user who created the Copilot space. (AI-inferred)
+	NodeId any
+	// The URL to the API endpoint that returns the organizations to which the creator of the Copilot Space belongs. (AI-inferred)
+	OrganizationsUrl any
+	// The URL to retrieve the events received by this user, as defined by the GitHub API user object. (AI-inferred)
 	ReceivedEventsUrl any
-	ReposUrl          any
-	SiteAdmin         any
-	StarredAt         any
-	StarredUrl        any
-	SubscriptionsUrl  any
-	Type              any
-	Url               any
-	UserViewType      any
+	// The API URL to the list of repositories owned by the creator of the GitHub Copilot space. (AI-inferred)
+	ReposUrl any
+	// Whether the user is a site administrator on GitHub. (AI-inferred)
+	SiteAdmin any
+	StarredAt any
+	// The URL template for listing repositories starred by the user, with optional placeholders for owner and repo. (AI-inferred)
+	StarredUrl any
+	// The API endpoint URL for the creator's subscriptions, typically returning the list of repositories or topics the creator is subscribed to. (AI-inferred)
+	SubscriptionsUrl any
+	Type             any
+	Url              any
+	UserViewType     any
 }
 
 type Space_Owner struct {
-	AvatarUrl         any
-	Description       any
-	Email             any
-	EventsUrl         any
-	FollowersUrl      any
-	FollowingUrl      any
-	GistsUrl          any
-	GravatarId        any
-	HooksUrl          any
-	HtmlUrl           any
-	Id                any
-	IssuesUrl         any
-	Login             any
-	MembersUrl        any
-	Name              any
-	NodeId            any
-	OrganizationsUrl  any
-	PublicMembersUrl  any
+	// The URL of the GitHub profile avatar for the owner of the Copilot space. (AI-inferred)
+	AvatarUrl   any
+	Description any
+	// The email address of the owner of the GitHub Copilot space. (AI-inferred)
+	Email any
+	// The URL to the events of the owner, such as a GitHub user or organization. (AI-inferred)
+	EventsUrl any
+	// The API endpoint URL to retrieve the list of followers for this GitHub owner (user or organization). (AI-inferred)
+	FollowersUrl any
+	// The URL to retrieve the list of users the owner follows. This is a GitHub API URL and may include template placeholders for additional query parameters. (AI-inferred)
+	FollowingUrl any
+	// The URL template for the user's gists, which includes an optional placeholder for a specific gist ID. (AI-inferred)
+	GistsUrl any
+	// The unique identifier for the owner's Gravatar, used to construct the URL for their avatar image. (AI-inferred)
+	GravatarId any
+	HooksUrl   any
+	// The HTML URL to the owner's GitHub profile page (e.g., for a user or organization). (AI-inferred)
+	HtmlUrl any
+	Id      any
+	// The URL to the issues for the owner, as defined by the GitHub API. (AI-inferred)
+	IssuesUrl any
+	// The GitHub username (login) of the owner of the Copilot space. (AI-inferred)
+	Login any
+	// The URL to retrieve the members of the organization that owns the Copilot space. (AI-inferred)
+	MembersUrl any
+	Name       any
+	// The global node ID assigned by GitHub, used to identify the owner in the GraphQL API. (AI-inferred)
+	NodeId any
+	// The API endpoint URL to list the organizations that this owner belongs to. (AI-inferred)
+	OrganizationsUrl any
+	// The URL template for accessing the public members of the owner organization, typically including a placeholder for the member identifier. (AI-inferred)
+	PublicMembersUrl any
+	// The URL to the GitHub API endpoint that returns the events received by this owner. (AI-inferred)
 	ReceivedEventsUrl any
-	ReposUrl          any
-	SiteAdmin         any
-	StarredAt         any
-	StarredUrl        any
-	SubscriptionsUrl  any
-	Type              any
-	Url               any
-	UserViewType      any
+	// The URL to the list of repositories owned by this GitHub user or organization. (AI-inferred)
+	ReposUrl any
+	// A boolean indicating whether the owner is a GitHub site administrator. (AI-inferred)
+	SiteAdmin any
+	StarredAt any
+	// The URL template to access the list of starred repositories for the owner. In GitHub's API, this string includes placeholder variables such as `{owner}` and `{repo}` that are replaced to get a concrete URL. (AI-inferred)
+	StarredUrl any
+	// The URL to the owner's subscriptions in the GitHub API, used to list entities the owner is subscribed to. (AI-inferred)
+	SubscriptionsUrl any
+	// The type of the owner account, typically 'user' for an individual or 'organization' for an organization. (AI-inferred)
+	Type         any
+	Url          any
+	UserViewType any
 }
 
 type Space_ResourcesAttributes_Metadata struct {
-	FilePath     any
-	Name         any
-	Number       any
+	FilePath any
+	Name     any
+	Number   any
+	// The unique numeric identifier of the repository associated with this metadata. (AI-inferred)
 	RepositoryId any
 	Text         any
 }
 
 type Space_ResourcesAttributes struct {
-	Metadata     any
+	Metadata any
+	// Specifies the type of resource, which determines how the resource content is interpreted. Allowed values: repository, github_file, free_text, github_issue, github_pull_request, media_content, uploaded_text_file. (AI-inferred)
 	ResourceType any
 }
 

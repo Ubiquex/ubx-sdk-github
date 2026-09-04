@@ -27,8 +27,11 @@ export interface GroupsEnterpriseConfig {
 export interface GroupsEnterpriseAttrs {
   /** Whether the runner group can be used by `public` repositories. */
   allowsPublicRepositories: boolean;
+  /** Whether this is the enterprise's own default self-hosted runner group. (AI-inferred) */
   default: boolean;
+  /** The real API URL for listing this runner group's own hosted runners. (AI-inferred) */
   hostedRunnersUrl: string;
+  /** The real, numeric, globally unique identifier for this object. (AI-inferred) */
   id: number;
   /** Name of the runner group. */
   name: string;
@@ -38,9 +41,11 @@ export interface GroupsEnterpriseAttrs {
   restrictedToWorkflows: boolean;
   /** List of runner IDs to add to the runner group. */
   runners: number[];
+  /** The real API URL for listing this runner group's own self-hosted runners. (AI-inferred) */
   runnersUrl: string;
   /** List of organization IDs that can access the runner group. */
   selectedOrganizationIds: number[];
+  /** The real API URL for listing which organizations this runner group is selectively granted to. (AI-inferred) */
   selectedOrganizationsUrl: string;
   /** List of workflows the runner group should be allowed to run. This setting will be ignored unless `restricted_to_workflows` is set to `true`. */
   selectedWorkflows: string[];

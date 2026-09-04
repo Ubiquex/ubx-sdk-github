@@ -45,7 +45,8 @@ type CustomRepositoryRoleConfig struct {
 
 type CustomRepositoryRoleAttrs struct {
 	// The system role from which this role inherits permissions.
-	BaseRole  any
+	BaseRole any
+	// The real timestamp this object was created. (AI-inferred)
 	CreatedAt any
 	// A short description about who this role is for or what permissions it grants.
 	Description any
@@ -57,7 +58,8 @@ type CustomRepositoryRoleAttrs struct {
 	Organization any
 	// A list of additional permissions included in this role.
 	Permissions any
-	UpdatedAt   any
+	// The real timestamp this object was last updated. (AI-inferred)
+	UpdatedAt any
 	// path parameter, not part of the API's own resource representation
 	Org any
 	// path parameter, not part of the API's own resource representation

@@ -4,56 +4,98 @@ package release
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Release_Assets_Uploader struct {
-	AvatarUrl         any
-	Email             any
-	EventsUrl         any
-	FollowersUrl      any
-	FollowingUrl      any
-	GistsUrl          any
-	GravatarId        any
-	HtmlUrl           any
-	Id                any
-	Login             any
-	Name              any
-	NodeId            any
-	OrganizationsUrl  any
+	// The URL for the uploader's avatar image. (AI-inferred)
+	AvatarUrl any
+	// The email address of the user who uploaded the release asset. (AI-inferred)
+	Email any
+	// The URL to the events endpoint for the uploader user, providing access to the user's public events. (AI-inferred)
+	EventsUrl any
+	// The API URL to the uploader's list of followers on GitHub. (AI-inferred)
+	FollowersUrl any
+	// The URL to the GitHub API endpoint that lists the users this uploader is following. (AI-inferred)
+	FollowingUrl any
+	// The URL to the user's gists. (AI-inferred)
+	GistsUrl any
+	// The Gravatar ID for the user, which is the MD5 hash of the user's email address. It is used to construct the user's avatar URL via Gravatar. In current API responses, this field is often an empty string. (AI-inferred)
+	GravatarId any
+	// The URL to the uploader's GitHub profile page. (AI-inferred)
+	HtmlUrl any
+	// The unique numeric identifier for the GitHub user who uploaded the release asset. (AI-inferred)
+	Id any
+	// The GitHub username of the user who uploaded the release asset. (AI-inferred)
+	Login any
+	// The display name of the user who uploaded the release asset. (AI-inferred)
+	Name any
+	// The unique identifier for the uploader's user object in GitHub's GraphQL API. (AI-inferred)
+	NodeId any
+	// The API URL to fetch the list of organizations the uploader belongs to, typically in the form https://api.github.com/users/{username}/orgs. (AI-inferred)
+	OrganizationsUrl any
+	// The URL to the received events endpoint for the uploader user, providing a list of events that this user has received. (AI-inferred)
 	ReceivedEventsUrl any
-	ReposUrl          any
-	SiteAdmin         any
-	StarredAt         any
-	StarredUrl        any
-	SubscriptionsUrl  any
-	Type              any
-	Url               any
-	UserViewType      any
+	// The API endpoint URL that lists the repositories owned by the uploader user. (AI-inferred)
+	ReposUrl any
+	// Whether the uploader is a site administrator on GitHub. (AI-inferred)
+	SiteAdmin any
+	StarredAt any
+	// The URL to retrieve the list of repositories starred by this uploader user. (AI-inferred)
+	StarredUrl any
+	// The API endpoint URL for the uploader user's GitHub subscriptions, typically pointing to a list of repositories the user is subscribed to. (AI-inferred)
+	SubscriptionsUrl any
+	// The type of GitHub user account that uploaded the asset. Typically 'User' or 'Bot'. (AI-inferred)
+	Type any
+	// The GitHub API URL for the uploader user. (AI-inferred)
+	Url          any
+	UserViewType any
 }
 
 type Release_Assets struct {
+	// The URL to download the release asset directly in a browser. This is the web-based link that users can visit to download the file without using the API. (AI-inferred)
 	BrowserDownloadUrl any
-	ContentType        any
-	CreatedAt          any
-	Digest             any
-	DownloadCount      any
-	Id                 any
-	Label              any
-	Name               any
-	NodeId             any
-	Size               any
-	State              any
-	UpdatedAt          any
-	Uploader           any
-	Url                any
+	// The MIME type of the release asset, e.g., application/zip or application/x-gzip. (AI-inferred)
+	ContentType any
+	// The date and time when the GitHub release asset was created, formatted as an ISO 8601 timestamp. (AI-inferred)
+	CreatedAt any
+	// The cryptographic digest (typically SHA-256) of the release asset file, used to verify its integrity. (AI-inferred)
+	Digest any
+	// Number of times this release asset has been downloaded. (AI-inferred)
+	DownloadCount any
+	// The unique identifier for the release asset, as assigned by GitHub. (AI-inferred)
+	Id any
+	// The user-defined label for the release asset, which is displayed in the GitHub UI; may be null if no label is set. (AI-inferred)
+	Label any
+	// The name of the release asset, typically the filename. (AI-inferred)
+	Name any
+	// The GraphQL node ID of the release asset. (AI-inferred)
+	NodeId any
+	// The size of the release asset in bytes. (AI-inferred)
+	Size any
+	// The state of the release asset, either `uploaded` or `open`. (AI-inferred)
+	State any
+	// The timestamp of when the release asset was last updated. (AI-inferred)
+	UpdatedAt any
+	// The GitHub user who uploaded the release asset. This is a user object containing standard GitHub user fields such as login, id, and avatar_url. (AI-inferred)
+	Uploader any
+	// The API URL for the release asset. (AI-inferred)
+	Url any
 }
 
 type Release_Reactions struct {
-	Confused   any
-	Eyes       any
-	Heart      any
-	Hooray     any
-	Laugh      any
-	Rocket     any
+	// The number of users who reacted with the 'confused' emoji to this release. (AI-inferred)
+	Confused any
+	// The number of 'eyes' emoji reactions on the release. (AI-inferred)
+	Eyes any
+	// The count of heart reactions (❤️) on the release. (AI-inferred)
+	Heart any
+	// The number of 'hooray' reactions (🎉) on the GitHub release. (AI-inferred)
+	Hooray any
+	// The number of users who reacted with the 'laugh' (😂) emoji on this GitHub release. (AI-inferred)
+	Laugh any
+	// The count of rocket (🚀) reactions on the GitHub release. (AI-inferred)
+	Rocket any
+	// The total count of reactions on the release. (AI-inferred)
 	TotalCount any
-	Url        any
+	// The URL to the API endpoint that returns the reactions for this GitHub release. (AI-inferred)
+	Url any
 }
 
 type ReleaseConfig struct {
@@ -84,14 +126,19 @@ type ReleaseConfig struct {
 }
 
 type ReleaseAttrs struct {
-	Assets    any
+	// The list of release assets (files) attached to the GitHub release. (AI-inferred)
+	Assets any
+	// The API URL for the assets associated with this GitHub release. (AI-inferred)
 	AssetsUrl any
 	// A GitHub user.
 	Author any
 	// Text describing the contents of the tag.
-	Body      any
-	BodyHtml  any
-	BodyText  any
+	Body any
+	// The rendered HTML version of the release body or description. (AI-inferred)
+	BodyHtml any
+	// The full body text of the GitHub release, typically containing release notes or a description. (AI-inferred)
+	BodyText any
+	// The timestamp of when the release was created, in ISO 8601 format (e.g., 2023-01-01T00:00:00Z). (AI-inferred)
 	CreatedAt any
 	// If specified, a discussion of the specified category is created and linked to the release. The value must be a category that already exists in the repository. For more information, see "[Managing categories for discussions in your repository](https://docs.github.com/enterprise-cloud@latest/discussions/managing-discussions-for-your-community/managing-categories-for-discussions-in-your-repository)."
 	DiscussionCategoryName any
@@ -101,29 +148,40 @@ type ReleaseAttrs struct {
 	Draft any
 	// Whether to automatically generate the name and body for this release. If `name` is specified, the specified name will be used; otherwise, a name will be automatically generated. If `body` is specified, the body will be pre-pended to the automatically generated notes.
 	GenerateReleaseNotes any
-	HtmlUrl              any
-	Id                   any
+	// The GitHub web URL where the release can be viewed. (AI-inferred)
+	HtmlUrl any
+	// The unique numeric identifier for the release, automatically assigned by GitHub when the release is created. (AI-inferred)
+	Id any
 	// Whether or not the release is immutable.
 	Immutable any
 	// Specifies whether this release should be set as the latest release for the repository. Drafts and prereleases cannot be set as latest. Defaults to `true` for newly published releases. `legacy` specifies that the latest release should be determined based on the release creation date and higher semantic version.
-	MakeLatest    any
+	MakeLatest any
+	// The real number of user mentions in this release's own generated notes. (AI-inferred)
 	MentionsCount any
 	// The name of the release.
-	Name   any
+	Name any
+	// The GraphQL Node ID of the GitHub release. (AI-inferred)
 	NodeId any
 	// `true` to identify the release as a prerelease. `false` to identify the release as a full release.
-	Prerelease  any
+	Prerelease any
+	// The timestamp of when the release was published. This field is computed and cannot be set by the user. (AI-inferred)
 	PublishedAt any
-	Reactions   any
+	// An object summarizing reactions to the release, mapping each reaction type (e.g., +1, -1, laugh, hooray) to the count received. This field is automatically computed and read-only. (AI-inferred)
+	Reactions any
 	// The name of the tag.
-	TagName    any
+	TagName any
+	// The URL to download the tarball source archive for this release. (AI-inferred)
 	TarballUrl any
 	// Specifies the commitish value that determines where the Git tag is created from. Can be any branch or commit SHA. Unused if the Git tag already exists. Default: the repository's default branch.
 	TargetCommitish any
-	UpdatedAt       any
-	UploadUrl       any
-	Url             any
-	ZipballUrl      any
+	// The timestamp of the last update to the release, in ISO 8601 format (e.g., '2023-01-15T12:34:56Z'). This value is set by the system and cannot be modified directly. (AI-inferred)
+	UpdatedAt any
+	// The URL endpoint for uploading assets to this GitHub release. It is a computed, read-only value and typically includes a placeholder for the asset name. (AI-inferred)
+	UploadUrl any
+	// The API URL that points to this release on GitHub (e.g., https://api.github.com/repos/{owner}/{repo}/releases/{id}). (AI-inferred)
+	Url any
+	// The URL of the zip archive of the source code for this release. (AI-inferred)
+	ZipballUrl any
 	// path parameter, not part of the API's own resource representation
 	Owner any
 	// path parameter, not part of the API's own resource representation

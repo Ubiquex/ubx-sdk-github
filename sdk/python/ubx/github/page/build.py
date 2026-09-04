@@ -8,31 +8,53 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class Build_Error:
+    # The error message describing why the page build failed. (AI-inferred)
     message: Any = None
 
 @dataclasses.dataclass
 class Build_Pusher:
+    # The URL of the avatar image for the GitHub user who pushed the build. (AI-inferred)
     avatar_url: Any = None
+    # The email address of the user who pushed the commit that triggered the page build. This may be null if the user has kept their email private. (AI-inferred)
     email: Any = None
+    # The URL to the events of this user on GitHub. (AI-inferred)
     events_url: Any = None
+    # The URL to the list of followers of the pusher user. (AI-inferred)
     followers_url: Any = None
+    # The URL template to list the users this user follows. It may include a placeholder such as {/other_user} for fetching specific follow relationships. (AI-inferred)
     following_url: Any = None
+    # The URL template for accessing the user's gists, typically in the format https://api.github.com/users/{username}/gists{/gist_id}. (AI-inferred)
     gists_url: Any = None
+    # The Gravatar ID for the pusher, an MD5 hash of their email used to construct their avatar URL. (AI-inferred)
     gravatar_id: Any = None
+    # The GitHub profile URL for the user who pushed the commit that triggered the page build. (AI-inferred)
     html_url: Any = None
+    # The unique identifier of the user who pushed the GitHub Pages build. (AI-inferred)
     id: Any = None
+    # The GitHub username of the user who pushed the commit that triggered the page build. This field is always present. (AI-inferred)
     login: Any = None
+    # The display name of the user who pushed the commit that triggered this GitHub Pages build. (AI-inferred)
     name: Any = None
+    # The GraphQL node identifier for the pusher (the user who triggered the page build). (AI-inferred)
     node_id: Any = None
+    # The URL to the list of organizations associated with the pusher's GitHub account. (AI-inferred)
     organizations_url: Any = None
+    # The URL to the received events endpoint for the user who pushed the commit that triggered the page build. (AI-inferred)
     received_events_url: Any = None
+    # The URL to the user's public repositories on GitHub. (AI-inferred)
     repos_url: Any = None
+    # Whether the user who pushed the commit is a GitHub site administrator. (AI-inferred)
     site_admin: Any = None
     starred_at: Any = None
+    # The URL template for the user's starred repositories, with optional placeholders for owner and repo (e.g., https://api.github.com/users/{user}/starred{/owner}{/repo}). (AI-inferred)
     starred_url: Any = None
+    # The URL to the list of subscriptions for the user who pushed the page build. (AI-inferred)
     subscriptions_url: Any = None
+    # The type of GitHub account that pushed the build, either 'User' or 'Organization'. (AI-inferred)
     type: Any = None
+    # The URL of the user who pushed the commit that triggered the page build. This is typically the GitHub API URL for the user (e.g., https://api.github.com/users/{username}). (AI-inferred)
     url: Any = None
+    # Indicates whether the user is a public or private user. Possible values are 'public' and 'private'. (AI-inferred)
     user_view_type: Any = None
 
 @dataclasses.dataclass
@@ -46,14 +68,21 @@ class BuildConfig:
 
 @dataclasses.dataclass
 class BuildAttrs:
+    # The SHA of the commit that this page build was triggered by or built from. (AI-inferred)
     commit: Any = None
+    # The date and time when the page build was created. This value is set by GitHub and is not editable. (AI-inferred)
     created_at: Any = None
+    # The duration of the page build, in seconds, as computed by the system after the build completes. (AI-inferred)
     duration: Any = None
+    # An object containing error details for the GitHub Pages build, if any. This computed field is present only when the build encounters an error. (AI-inferred)
     error: Any = None
     # A GitHub user.
     pusher: Any = None
+    # The current status of the GitHub Pages build. Possible values include `queued`, `in_progress`, `errored`, `cancelled`, and `built`. (AI-inferred)
     status: Any = None
+    # The timestamp of when the page build was last updated. (AI-inferred)
     updated_at: Any = None
+    # The URL of the built page. (AI-inferred)
     url: Any = None
     # path parameter, not part of the API's own resource representation
     owner: Any = None

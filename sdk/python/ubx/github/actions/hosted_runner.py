@@ -42,7 +42,9 @@ class HostedRunner_MachineSizeDetails:
 @dataclasses.dataclass
 class HostedRunner_PublicIps:
     enabled: Any = None
+    # The network prefix length in bits for the IP range assigned to this hosted runner. For instance, 28 represents a /28 subnet. (AI-inferred)
     length: Any = None
+    # The IP prefix in CIDR notation (e.g., '192.0.2.0/24') that defines a public IP range associated with the hosted runner. (AI-inferred)
     prefix: Any = None
 
 _HostedRunner_ImageFields = {

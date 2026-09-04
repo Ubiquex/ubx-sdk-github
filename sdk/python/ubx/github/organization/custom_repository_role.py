@@ -50,6 +50,7 @@ class CustomRepositoryRoleConfig:
 class CustomRepositoryRoleAttrs:
     # The system role from which this role inherits permissions.
     base_role: Any = None
+    # The real timestamp this object was created. (AI-inferred)
     created_at: Any = None
     # A short description about who this role is for or what permissions it grants.
     description: Any = None
@@ -61,6 +62,7 @@ class CustomRepositoryRoleAttrs:
     organization: Any = None
     # A list of additional permissions included in this role.
     permissions: Any = None
+    # The real timestamp this object was last updated. (AI-inferred)
     updated_at: Any = None
     # path parameter, not part of the API's own resource representation
     org: Any = None

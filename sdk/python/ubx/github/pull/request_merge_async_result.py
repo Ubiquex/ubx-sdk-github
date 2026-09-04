@@ -8,11 +8,16 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class RequestMergeAsyncResult_Details:
+    # The SHA of the head commit expected by the merge operation, used to verify the branch hasn't changed before merging. (AI-inferred)
     expected_head_sha: Any = None
+    # The merge strategy or action used for the pull request merge operation, indicating how the changes are combined. (AI-inferred)
     merge_action: Any = None
+    # The method used to merge the pull request, as recorded in the result details of an asynchronous merge operation. (AI-inferred)
     merge_method: Any = None
     message: Any = None
+    # The SHA of the merge commit created when the pull request was merged asynchronously. (AI-inferred)
     sha: Any = None
+    # A UUID string that uniquely identifies the asynchronous pull request merge operation. (AI-inferred)
     uuid: Any = None
 
 @dataclasses.dataclass
@@ -42,6 +47,7 @@ class RequestMergeAsyncResultAttrs:
     commit_message: Any = None
     # Title for the automatic commit message.
     commit_title: Any = None
+    # Real, human-readable detail about this asynchronous merge attempt's own outcome. (AI-inferred)
     details: Any = None
     # The action that will be taken to merge the pull request. `direct_merge` merges the pull request directly without using a merge queue; `merge_queue` adds the pull request to a merge queue; `default` selects the most appropriate option.
     merge_action: Any = None
@@ -49,6 +55,7 @@ class RequestMergeAsyncResultAttrs:
     merge_method: Any = None
     # SHA that pull request head must match to allow merge. If not provided, the current head of the PR at the time of the request will be used; if the PR is pushed in between the merge being requested and being executed, the merge will be cancelled.
     sha: Any = None
+    # The current state of the asynchronous merge operation for the pull request. Possible values are `pending`, `merged`, `enqueued`, and `failed`. (AI-inferred)
     status: Any = None
     # path parameter, not part of the API's own resource representation
     owner: Any = None

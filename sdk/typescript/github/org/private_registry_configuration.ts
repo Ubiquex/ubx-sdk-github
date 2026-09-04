@@ -69,6 +69,7 @@ export interface PrivateRegistryConfigurationAttrs {
   awsRegion: string;
   /** The client ID of the Azure AD application. Required when `auth_type` is `oidc_azure`. */
   clientId: string;
+  /** Timestamp the private registry configuration was created. (AI-inferred) */
   createdAt: string;
   /** The CodeArtifact domain. Required when `auth_type` is `oidc_aws`. */
   domain: string;
@@ -100,6 +101,7 @@ export interface PrivateRegistryConfigurationAttrs {
   serviceSlug: string;
   /** The tenant ID of the Azure AD application. Required when `auth_type` is `oidc_azure`. */
   tenantId: string;
+  /** Timestamp the private registry configuration was last updated. (AI-inferred) */
   updatedAt: string;
   /** The URL of the private registry. */
   url: string;

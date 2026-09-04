@@ -4,6 +4,7 @@ package stack
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Stack_Base struct {
+	// The git reference (branch, tag, or commit SHA) to use as the base for the stack. (AI-inferred)
 	Ref any
 }
 
@@ -19,16 +20,21 @@ type StackConfig struct {
 }
 
 type StackAttrs struct {
-	Base      any
+	Base any
+	// The real timestamp this object was created. (AI-inferred)
 	CreatedAt any
-	Id        any
-	NodeId    any
-	Number    any
+	// The real, numeric, globally unique identifier for this object. (AI-inferred)
+	Id any
+	// The GraphQL node ID of the GitHub stack. (AI-inferred)
+	NodeId any
+	// This stacked change's own real, repository-scoped number. (AI-inferred)
+	Number any
 	// Whether the stack has any open pull request. False when all pull requests are merged or closed.
 	Open any
 	// An ordered list of pull request numbers forming the stack from bottom to top.
 	PullRequests any
-	Url          any
+	// The real, canonical API URL for this object. (AI-inferred)
+	Url any
 	// path parameter, not part of the API's own resource representation
 	Owner any
 	// path parameter, not part of the API's own resource representation

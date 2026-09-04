@@ -9,106 +9,171 @@ type Comment_Minimized struct {
 }
 
 type Comment_PerformedViaGithubApp_Owner struct {
-	AvatarUrl         any
-	CreatedAt         any
-	Description       any
-	Email             any
-	EventsUrl         any
-	FollowersUrl      any
-	FollowingUrl      any
-	GistsUrl          any
-	GravatarId        any
-	HtmlUrl           any
-	Id                any
-	Login             any
-	Name              any
-	NodeId            any
-	OrganizationsUrl  any
+	// The URL of the avatar image for the owner of the GitHub App that performed the comment. (AI-inferred)
+	AvatarUrl any
+	// The timestamp of when the GitHub App owner account was created, in ISO 8601 format (e.g., '2011-01-26T19:01:12Z'). (AI-inferred)
+	CreatedAt any
+	// The description of the organization that owns the GitHub App which performed the action. This field is typically populated when the owner is an organization. (AI-inferred)
+	Description any
+	// The public email address of the owner of the GitHub App, if configured. This may be null if no public email is set. (AI-inferred)
+	Email any
+	// URL to the events of the owner (user or organization) of the GitHub App. (AI-inferred)
+	EventsUrl any
+	// The URL to the API endpoint that lists this user's followers. (AI-inferred)
+	FollowersUrl any
+	// The URL to retrieve the list of users this owner follows. In the GitHub API, this is typically a templated URL like 'https://api.github.com/users/{username}/following'. (AI-inferred)
+	FollowingUrl any
+	// The URL to the gists list for the GitHub user, typically in the format https://api.github.com/users/{username}/gists{/gist_id}. (AI-inferred)
+	GistsUrl any
+	// The Gravatar ID for the owner's avatar, a hash used to retrieve the avatar from Gravatar. (AI-inferred)
+	GravatarId any
+	// The URL to the GitHub profile of the owner (a user or organization) of the GitHub App that performed the comment. (AI-inferred)
+	HtmlUrl any
+	Id      any
+	// The GitHub username or organization name of the owner of the GitHub App that performed the action. (AI-inferred)
+	Login any
+	// The display name of the GitHub App's owner, which can be a user or an organization. (AI-inferred)
+	Name any
+	// The GraphQL node identifier for the owner (user or organization) of the GitHub App that performed the comment. (AI-inferred)
+	NodeId any
+	// The API URL to the list of organizations that the owner belongs to, as defined by the GitHub API. (AI-inferred)
+	OrganizationsUrl any
+	// The URL to retrieve events received by this user (the owner of the GitHub App). (AI-inferred)
 	ReceivedEventsUrl any
-	ReposUrl          any
-	SiteAdmin         any
-	Slug              any
-	StarredAt         any
-	StarredUrl        any
-	SubscriptionsUrl  any
-	Type              any
-	UpdatedAt         any
-	Url               any
-	UserViewType      any
-	WebsiteUrl        any
+	// The URL to the list of repositories owned by this owner. (AI-inferred)
+	ReposUrl any
+	// Whether the user is a site administrator for the GitHub instance. (AI-inferred)
+	SiteAdmin any
+	// The slug of the owner of the GitHub App that performed the comment. (AI-inferred)
+	Slug      any
+	StarredAt any
+	// The URL template for listing repositories starred by the owner of the GitHub App, typically in the form `https://api.github.com/users/{owner}/starred{/owner}{/repo}`. (AI-inferred)
+	StarredUrl any
+	// The API URL for subscribing to notifications for the owner (user or organization) of the GitHub App. (AI-inferred)
+	SubscriptionsUrl any
+	// The type of the owner account associated with the GitHub App, indicating whether it is a user or an organization. (AI-inferred)
+	Type any
+	// The date and time at which the owner of the GitHub App that performed the comment was last updated. (AI-inferred)
+	UpdatedAt any
+	// The GitHub API URL for the user or organization that owns the GitHub App. (AI-inferred)
+	Url          any
+	UserViewType any
+	// The website URL of the user or organization that owns the GitHub App. (AI-inferred)
+	WebsiteUrl any
 }
 
 type Comment_PerformedViaGithubApp_Permissions struct {
-	Checks      any
-	Contents    any
+	// The level of permission for check runs and check suites. Allowed values are 'read', 'write', or 'none'. (AI-inferred)
+	Checks any
+	// The level of permission the GitHub App has for repository contents, such as 'read' or 'write'. (AI-inferred)
+	Contents any
+	// The level of permission the GitHub App has for the Deployments API. Typical values are 'read', 'write', or 'none'. (AI-inferred)
 	Deployments any
-	Issues      any
-	Metadata    any
+	// The permission level for issues granted to the GitHub App. Possible values are 'read', 'write', or 'admin'. (AI-inferred)
+	Issues any
+	// The permission level for metadata access for this GitHub App. (AI-inferred)
+	Metadata any
 }
 
 type Comment_PerformedViaGithubApp struct {
-	ClientId    any
-	CreatedAt   any
+	// The client ID of the GitHub App that performed the comment. (AI-inferred)
+	ClientId any
+	// The date and time the GitHub App was created, in ISO 8601 format. (AI-inferred)
+	CreatedAt any
+	// The description of the GitHub App that performed the comment. (AI-inferred)
 	Description any
 	// The list of events for the GitHub app. Note that the `installation_target`, `security_advisory`, and `meta` events are not included because they are global events and not specific to an installation.
-	Events      any
+	Events any
+	// The URL to the GitHub App's external website. (AI-inferred)
 	ExternalUrl any
-	HtmlUrl     any
+	// The URL to the GitHub App's page on GitHub. (AI-inferred)
+	HtmlUrl any
 	// Unique identifier of the GitHub app
 	Id any
 	// The number of installations associated with the GitHub app. Only returned when the integration is requesting details about itself.
 	InstallationsCount any
 	// The name of the GitHub app
-	Name   any
+	Name any
+	// The GraphQL node ID of the GitHub App that performed the issue comment. (AI-inferred)
 	NodeId any
-	Owner  any
+	// The user or organization that owns the GitHub App that performed the comment. (AI-inferred)
+	Owner any
 	// The set of permissions for the GitHub app
 	Permissions any
 	// The slug name of the GitHub app
-	Slug      any
+	Slug any
+	// The timestamp of the last update to the GitHub App that performed the comment, in ISO 8601 format (e.g., YYYY-MM-DDTHH:MM:SSZ). (AI-inferred)
 	UpdatedAt any
 }
 
 type Comment_Pin_PinnedBy struct {
-	AvatarUrl         any
-	Email             any
-	EventsUrl         any
-	FollowersUrl      any
-	FollowingUrl      any
-	GistsUrl          any
-	GravatarId        any
-	HtmlUrl           any
-	Id                any
-	Login             any
-	Name              any
-	NodeId            any
-	OrganizationsUrl  any
+	// The URL of the avatar image for the user who pinned the comment. (AI-inferred)
+	AvatarUrl any
+	// Email address of the user who pinned the comment, if publicly available. (AI-inferred)
+	Email any
+	// The URL to the user's public events on GitHub, as an API endpoint for fetching the events performed by the user. (AI-inferred)
+	EventsUrl any
+	// The URL to retrieve the list of followers of the pinned user via the GitHub API. (AI-inferred)
+	FollowersUrl any
+	// The URL to this user's following list, providing the API endpoint for the users they follow. (AI-inferred)
+	FollowingUrl any
+	// URL to the user's gists list. (AI-inferred)
+	GistsUrl any
+	// The user's Gravatar ID, used to construct the avatar URL. Deprecated in favor of avatar_url in the user object. (AI-inferred)
+	GravatarId any
+	// The URL of the GitHub profile for the user who pinned the comment. (AI-inferred)
+	HtmlUrl any
+	// The unique identifier of the user who pinned the issue comment. (AI-inferred)
+	Id any
+	// The GitHub username of the user who pinned the issue comment. This field is required and always present. (AI-inferred)
+	Login any
+	// The display name of the user who pinned the comment. (AI-inferred)
+	Name any
+	// The GraphQL node identifier for the user who pinned the issue comment, used as a unique identifier in GitHub's GraphQL API. (AI-inferred)
+	NodeId any
+	// The API endpoint URL for the list of organizations that the user belongs to, as provided in the GitHub user object. (AI-inferred)
+	OrganizationsUrl any
+	// The URL to the user's received events endpoint on GitHub, which returns events that have been delivered to the user. (AI-inferred)
 	ReceivedEventsUrl any
-	ReposUrl          any
-	SiteAdmin         any
-	StarredAt         any
-	StarredUrl        any
-	SubscriptionsUrl  any
-	Type              any
-	Url               any
-	UserViewType      any
+	// URL to the GitHub API endpoint listing the repositories of the user who pinned the comment. (AI-inferred)
+	ReposUrl any
+	// Indicates whether the user who pinned the comment has GitHub site administrator privileges. (AI-inferred)
+	SiteAdmin  any
+	StarredAt  any
+	StarredUrl any
+	// The URL to the API endpoint listing the subscriptions of the user or organization. (AI-inferred)
+	SubscriptionsUrl any
+	// The type of GitHub account that pinned the comment, such as 'User' or 'Bot'. (AI-inferred)
+	Type any
+	// The URL of the user who pinned the issue comment. (AI-inferred)
+	Url          any
+	UserViewType any
 }
 
 type Comment_Pin struct {
+	// The timestamp when the issue comment was pinned. (AI-inferred)
 	PinnedAt any
 	// A GitHub user.
 	PinnedBy any
 }
 
 type Comment_Reactions struct {
-	Confused   any
-	Eyes       any
-	Heart      any
-	Hooray     any
-	Laugh      any
-	Rocket     any
+	// Number of confused reactions on the GitHub issue comment. (AI-inferred)
+	Confused any
+	// The number of "eyes" reactions (👀) on the comment. (AI-inferred)
+	Eyes any
+	// The number of heart reactions on the issue comment. (AI-inferred)
+	Heart any
+	// The number of 'hooray' reactions (🎉) on the GitHub issue comment. (AI-inferred)
+	Hooray any
+	// The number of laugh reactions on the issue comment. (AI-inferred)
+	Laugh any
+	// The number of rocket reactions (🚀) on the comment. (AI-inferred)
+	Rocket any
+	// The total number of reactions on the issue comment, summing across all reaction types. (AI-inferred)
 	TotalCount any
-	Url        any
+	// The REST API URL to retrieve the list of reactions for this comment. (AI-inferred)
+	Url any
 }
 
 type CommentConfig struct {
@@ -124,22 +189,30 @@ type CommentAttrs struct {
 	// How the author is associated with the repository.
 	AuthorAssociation any
 	// Contents of the issue comment
-	Body      any
-	BodyHtml  any
-	BodyText  any
+	Body any
+	// The rendered HTML of the issue comment body. (AI-inferred)
+	BodyHtml any
+	// The plain text version of the comment body, with markdown formatting removed. (AI-inferred)
+	BodyText any
+	// The timestamp of when the issue comment was created, in ISO 8601 format (e.g., 2023-04-01T12:00:00Z). (AI-inferred)
 	CreatedAt any
-	HtmlUrl   any
+	// The URL of the issue comment on GitHub. (AI-inferred)
+	HtmlUrl any
 	// Unique identifier of the issue comment
-	Id       any
+	Id any
+	// The URL of the issue comment on GitHub. (AI-inferred)
 	IssueUrl any
 	// Details about why an issue comment was minimized.
 	Minimized any
-	NodeId    any
+	// The GraphQL Node ID of the issue comment, useful for API interactions. (AI-inferred)
+	NodeId any
 	// GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
 	PerformedViaGithubApp any
 	// Context around who pinned an issue comment and when it was pinned.
-	Pin       any
+	Pin any
+	// The reactions summary for the issue comment, providing counts for each reaction type (e.g., +1, -1, laugh, hooray, confused, heart, rocket, eyes) and a total count. (AI-inferred)
 	Reactions any
+	// The time at which the comment was last modified, as a string. Because this field is computed, it is always provided by the system and cannot be set by users. (AI-inferred)
 	UpdatedAt any
 	// URL for the issue comment
 	Url any

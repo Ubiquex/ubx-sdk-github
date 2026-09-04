@@ -4,28 +4,46 @@ package codespace
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Codespace_BillableOwner struct {
-	AvatarUrl         any
-	Email             any
-	EventsUrl         any
-	FollowersUrl      any
-	FollowingUrl      any
-	GistsUrl          any
-	GravatarId        any
-	HtmlUrl           any
-	Id                any
-	Login             any
-	Name              any
-	NodeId            any
-	OrganizationsUrl  any
+	// The URL of the avatar image for the billable owner (user or organization) associated with this codespace. (AI-inferred)
+	AvatarUrl any
+	// The email address of the billable owner for the Codespace. This field may be empty if the owner has not associated a public email. (AI-inferred)
+	Email any
+	// The URL to the events for the billable owner of the codespace. (AI-inferred)
+	EventsUrl any
+	// The API URL to retrieve the list of followers of the billable owner. (AI-inferred)
+	FollowersUrl any
+	// The API URL for the list of users that this billable owner follows on GitHub. (AI-inferred)
+	FollowingUrl any
+	// The API URL to the gists of the billable owner, typically a GitHub user or organization. (AI-inferred)
+	GistsUrl any
+	// The user's Gravatar ID, a hash used to construct their Gravatar avatar URL. (AI-inferred)
+	GravatarId any
+	// The HTML URL of the billable owner's GitHub profile page (e.g., https://github.com/username). (AI-inferred)
+	HtmlUrl any
+	Id      any
+	// The GitHub username or organization name of the entity that is billed for the codespace. (AI-inferred)
+	Login any
+	// The name of the user or organization that is the billable owner for the codespace. (AI-inferred)
+	Name any
+	// The GitHub node ID of the billable owner for the codespace. (AI-inferred)
+	NodeId any
+	// The API URL to list the organizations that the billable owner belongs to. (AI-inferred)
+	OrganizationsUrl any
+	// The URL to retrieve the events received by the billable owner. (AI-inferred)
 	ReceivedEventsUrl any
-	ReposUrl          any
-	SiteAdmin         any
-	StarredAt         any
-	StarredUrl        any
-	SubscriptionsUrl  any
-	Type              any
-	Url               any
-	UserViewType      any
+	// The URL to the list of repositories owned by this billable owner. (AI-inferred)
+	ReposUrl any
+	// Whether the billable owner is a GitHub site administrator. (AI-inferred)
+	SiteAdmin any
+	StarredAt any
+	// The URL template for the starred repositories of the billable owner. This URL can be used to list the repositories that the owner has starred. (AI-inferred)
+	StarredUrl any
+	// The URL to the subscriptions of the billable owner associated with the codespace. (AI-inferred)
+	SubscriptionsUrl any
+	Type             any
+	// The API resource URL for the billable owner of the codespace, typically the GitHub user or organization that will be billed. (AI-inferred)
+	Url          any
+	UserViewType any
 }
 
 type Codespace_GitStatus struct {
@@ -59,36 +77,55 @@ type Codespace_Machine struct {
 }
 
 type Codespace_Repository_CodeOfConduct struct {
-	Body    any
+	// The full body text of the code of conduct. (AI-inferred)
+	Body any
+	// The URL to view the code of conduct in a web browser. (AI-inferred)
 	HtmlUrl any
-	Key     any
-	Name    any
-	Url     any
+	// The unique identifier for the code of conduct applied to the repository. For example, 'contributor_covenant' or 'citizen_code_of_conduct'. (AI-inferred)
+	Key any
+	// The name of the code of conduct. (AI-inferred)
+	Name any
+	// The URL to the code of conduct document for the repository. (AI-inferred)
+	Url any
 }
 
 type Codespace_Repository_License struct {
-	Key    any
-	Name   any
+	// The SPDX identifier for the repository's license, such as 'mit' or 'apache-2.0'. (AI-inferred)
+	Key any
+	// The human-readable name of the license associated with the repository. (AI-inferred)
+	Name any
+	// The GraphQL node ID of the license. (AI-inferred)
 	NodeId any
+	// The SPDX license identifier (e.g., 'MIT', 'Apache-2.0') for the repository's license, if defined. (AI-inferred)
 	SpdxId any
-	Url    any
+	// The URL associated with the repository's license. (AI-inferred)
+	Url any
 }
 
 type Codespace_Repository_Permissions struct {
-	Admin    any
+	// Indicates whether the user has admin permission on the repository associated with this codespace. (AI-inferred)
+	Admin any
+	// Whether the workspace has maintain-level permission on the repository. When true, the user can manage repository settings without full admin access. (AI-inferred)
 	Maintain any
-	Pull     any
-	Push     any
-	Triage   any
+	// Indicates whether the user has permission to pull (read) from the repository. (AI-inferred)
+	Pull any
+	// Whether the user has push access to the repository. (AI-inferred)
+	Push any
+	// Indicates whether the user has triage permission on this repository, which grants read access and the ability to manage issues and pull requests without write access. (AI-inferred)
+	Triage any
 }
 
 type Codespace_Repository_SecurityAndAnalysis_AdvancedSecurity struct {
+	// Whether GitHub Advanced Security is enabled for the repository. Possible values are `enabled` or `disabled`. (AI-inferred)
 	Status any
 }
 
 type Codespace_Repository_SecurityAndAnalysis_SecretScanningDelegatedBypassOptions_Reviewers struct {
-	Mode         any
-	ReviewerId   any
+	// The mode of the reviewer for the secret scanning delegated bypass. `ALWAYS` means the reviewer is always required to approve a bypass request, while `EXEMPT` means the reviewer is exempt from the approval requirement. (AI-inferred)
+	Mode any
+	// The numeric ID of a user or team with permission to approve delegated secret scanning bypasses. (AI-inferred)
+	ReviewerId any
+	// The type of reviewer for the secret scanning delegated bypass option. Allowed values are TEAM (a team) or ROLE (a role). (AI-inferred)
 	ReviewerType any
 }
 
@@ -100,114 +137,201 @@ type Codespace_Repository_SecurityAndAnalysis_SecretScanningDelegatedBypassOptio
 type Codespace_Repository_SecurityAndAnalysis struct {
 	// Enable or disable GitHub Advanced Security for the repository. For standalone Code Scanning or Secret Protection products, this parameter cannot be used.
 	AdvancedSecurity any
-	CodeSecurity     any
+	// The code security settings for the repository, as part of its security and analysis configuration. (AI-inferred)
+	CodeSecurity any
 	// Enable or disable Dependabot security updates for the repository.
-	DependabotSecurityUpdates             any
-	SecretScanning                        any
-	SecretScanningAiDetection             any
+	DependabotSecurityUpdates any
+	// Configuration for GitHub secret scanning, which detects secrets such as tokens and keys committed to the repository. (AI-inferred)
+	SecretScanning any
+	// An object representing the status of the AI detection feature for secret scanning in the repository. It contains a 'status' field that can be set to 'enabled' or 'disabled'. (AI-inferred)
+	SecretScanningAiDetection any
+	// An object that configures which repository roles or teams are permitted to dismiss secret scanning alerts. This is part of the repository's security and analysis settings. (AI-inferred)
 	SecretScanningDelegatedAlertDismissal any
-	SecretScanningDelegatedBypass         any
-	SecretScanningDelegatedBypassOptions  any
-	SecretScanningNonProviderPatterns     any
-	SecretScanningPushProtection          any
-	SecretScanningValidityChecks          any
+	// Configuration for secret scanning delegated bypass, which allows specific actors to bypass push protection when a secret is detected. (AI-inferred)
+	SecretScanningDelegatedBypass any
+	// Options for configuring delegated bypass of secret scanning, defining which users or teams are allowed to bypass secret scanning alerts. (AI-inferred)
+	SecretScanningDelegatedBypassOptions any
+	// Object defining custom secret scanning patterns that are not tied to a specific provider. These patterns allow repositories to detect additional secrets beyond those covered by GitHub's built-in provider patterns. (AI-inferred)
+	SecretScanningNonProviderPatterns any
+	// Configuration for secret scanning push protection on the repository. This feature helps prevent secrets from being pushed by blocking the push if a secret is detected. (AI-inferred)
+	SecretScanningPushProtection any
+	SecretScanningValidityChecks any
 }
 
 type Codespace_Repository struct {
+	// Boolean indicating whether forking is allowed for this repository. (AI-inferred)
 	AllowForking any
-	ArchiveUrl   any
-	Archived     any
+	// The URL to download the repository's source code archive (e.g., as a zip or tar file). (AI-inferred)
+	ArchiveUrl any
+	// A boolean indicating whether the repository is archived. Archived repositories are read-only and cannot be modified. (AI-inferred)
+	Archived any
+	// The URL to access the list of assignees for this repository. (AI-inferred)
 	AssigneesUrl any
-	BlobsUrl     any
-	BranchesUrl  any
-	CloneUrl     any
+	// The URL template for accessing blob objects in the repository's Git database, with a placeholder for the blob SHA. (AI-inferred)
+	BlobsUrl any
+	// The URL to the API endpoint for listing branches in this repository. (AI-inferred)
+	BranchesUrl any
+	// The HTTPS URL used to clone the repository. (AI-inferred)
+	CloneUrl any
 	// Code Of Conduct
-	CodeOfConduct    any
+	CodeOfConduct any
+	// The URL endpoint for accessing the list of collaborators for this repository. (AI-inferred)
 	CollaboratorsUrl any
-	CommentsUrl      any
-	CommitsUrl       any
-	CompareUrl       any
-	ContentsUrl      any
-	ContributorsUrl  any
-	CreatedAt        any
+	// The URL to the GitHub API endpoint for comments associated with the repository. (AI-inferred)
+	CommentsUrl any
+	// The URL template for accessing the repository's commit history via the GitHub API. It may include a placeholder such as {/sha} to fetch individual commits. (AI-inferred)
+	CommitsUrl any
+	// The API URL template for comparing commits or branches in the repository. (AI-inferred)
+	CompareUrl any
+	// The URL template for accessing the contents of the repository, with a placeholder for the path (e.g., https://api.github.com/repos/{owner}/{repo}/contents/{+path}). (AI-inferred)
+	ContentsUrl any
+	// The API URL that provides a list of contributors to the repository. (AI-inferred)
+	ContributorsUrl any
+	// The creation timestamp of the associated repository, represented as a string. (AI-inferred)
+	CreatedAt any
 	// The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
-	CustomProperties    any
-	DefaultBranch       any
+	CustomProperties any
+	// The default branch of the repository associated with the GitHub Codespace. (AI-inferred)
+	DefaultBranch any
+	// Indicates whether the repository automatically deletes branches after their pull requests are merged. (AI-inferred)
 	DeleteBranchOnMerge any
-	DeploymentsUrl      any
-	Description         any
-	Disabled            any
-	DownloadsUrl        any
-	EventsUrl           any
-	Fork                any
-	Forks               any
-	ForksCount          any
-	ForksUrl            any
-	FullName            any
-	GitCommitsUrl       any
-	GitRefsUrl          any
-	GitTagsUrl          any
-	GitUrl              any
-	HasDiscussions      any
-	HasDownloads        any
-	HasIssues           any
-	HasPages            any
-	HasProjects         any
-	HasPullRequests     any
-	HasWiki             any
-	Homepage            any
-	HooksUrl            any
-	HtmlUrl             any
-	Id                  any
-	IsTemplate          any
-	IssueCommentUrl     any
-	IssueEventsUrl      any
-	IssuesUrl           any
-	KeysUrl             any
-	LabelsUrl           any
-	Language            any
-	LanguagesUrl        any
-	License             any
-	MergesUrl           any
-	MilestonesUrl       any
-	MirrorUrl           any
-	Name                any
-	NetworkCount        any
-	NodeId              any
-	NotificationsUrl    any
-	OpenIssues          any
-	OpenIssuesCount     any
+	// The API endpoint URL for accessing the deployments of this repository. (AI-inferred)
+	DeploymentsUrl any
+	// The description of the repository that the codespace is associated with. This is the short description set on the repository's GitHub page. (AI-inferred)
+	Description any
+	// Whether the repository is disabled. A disabled repository is unavailable for access or use. (AI-inferred)
+	Disabled any
+	// The URL of the repository's downloads API endpoint, where you can list and retrieve repository download files. (AI-inferred)
+	DownloadsUrl any
+	// The URL to the repository's events. For example: https://api.github.com/repos/{owner}/{repo}/events. (AI-inferred)
+	EventsUrl any
+	// Whether the repository is a fork. (AI-inferred)
+	Fork any
+	// The number of forks of the repository. (AI-inferred)
+	Forks any
+	// The number of forks of the repository associated with the codespace. (AI-inferred)
+	ForksCount any
+	// The API URL to retrieve the list of forks for this repository. (AI-inferred)
+	ForksUrl any
+	// The full name of the repository, including the owner, in the format `owner/repo`. (AI-inferred)
+	FullName any
+	// The URL to the repository's git commits, pointing to the commit list for the GitHub repository associated with this codespace. (AI-inferred)
+	GitCommitsUrl any
+	// The URL template to access git refs for the repository. (AI-inferred)
+	GitRefsUrl any
+	// The URL to the Git tags of the repository associated with the codespace. (AI-inferred)
+	GitTagsUrl any
+	// The git URL for the repository, used to clone it over the git protocol (e.g., git://github.com/owner/repo.git). (AI-inferred)
+	GitUrl any
+	// Indicates whether the GitHub repository has Discussions enabled. (AI-inferred)
+	HasDiscussions any
+	// Indicates whether the repository has the GitHub Downloads feature enabled. (AI-inferred)
+	HasDownloads any
+	// Indicates whether the repository has the GitHub Issues feature enabled. (AI-inferred)
+	HasIssues any
+	// Indicates whether the repository has GitHub Pages enabled. (AI-inferred)
+	HasPages any
+	// Whether the repository has the Projects feature enabled. (AI-inferred)
+	HasProjects     any
+	HasPullRequests any
+	// Indicates whether the repository has a wiki enabled. (AI-inferred)
+	HasWiki any
+	// The URL of the repository's homepage, if one has been set. (AI-inferred)
+	Homepage any
+	// The API endpoint URL for managing webhooks in the repository. (AI-inferred)
+	HooksUrl any
+	// The URL of the repository on GitHub, e.g., https://github.com/owner/repo. (AI-inferred)
+	HtmlUrl any
+	// The unique numeric identifier of the repository associated with the codespace. (AI-inferred)
+	Id any
+	// Indicates whether the repository is a template repository. Template repositories allow users to generate new repositories with the same directory structure and files. (AI-inferred)
+	IsTemplate any
+	// The URL template for issue comments in the repository, following GitHub's API format. It can be used to construct endpoints for listing, creating, or updating comments on issues. (AI-inferred)
+	IssueCommentUrl any
+	// The API endpoint URL for issue events in this repository, following GitHub's hypermedia URL template format. (AI-inferred)
+	IssueEventsUrl any
+	// The URL to access the issues list for the repository. (AI-inferred)
+	IssuesUrl any
+	// The URL to access the repository's deploy keys, used by the GitHub API to manage key information. (AI-inferred)
+	KeysUrl any
+	// The URL of the GitHub API endpoint for managing labels for this repository. (AI-inferred)
+	LabelsUrl any
+	// The primary programming language of the repository, as defined by GitHub's API. (AI-inferred)
+	Language any
+	// The URL to the GitHub API endpoint that lists the programming languages used in the repository. (AI-inferred)
+	LanguagesUrl any
+	License      any
+	// The API URL for the merges endpoint of the repository, which can be used to check merge status or perform merges. (AI-inferred)
+	MergesUrl any
+	// The API endpoint URL for accessing the milestones of this repository. (AI-inferred)
+	MilestonesUrl any
+	// The URL of the mirror repository, if this repository is a mirror. This property is only present for mirrored repositories. (AI-inferred)
+	MirrorUrl any
+	// The name of the repository, without the owner/organization prefix. (AI-inferred)
+	Name         any
+	NetworkCount any
+	// The unique identifier for the repository, used in GraphQL operations. (AI-inferred)
+	NodeId any
+	// The URL to access notifications for this repository, as provided by the GitHub API. (AI-inferred)
+	NotificationsUrl any
+	// The number of open issues in the repository. (AI-inferred)
+	OpenIssues any
+	// The number of open issues in the repository. (AI-inferred)
+	OpenIssuesCount any
 	// A GitHub user.
 	Owner       any
 	Permissions any
-	Private     any
+	// Specifies whether the GitHub repository is private. Set to true for a private repository, false for a public one. (AI-inferred)
+	Private any
 	// The policy controlling who can create pull requests: all or collaborators_only.
 	PullRequestCreationPolicy any
-	PullsUrl                  any
-	PushedAt                  any
-	ReleasesUrl               any
-	RoleName                  any
-	SecurityAndAnalysis       any
+	// The URL used to access pull requests for the repository. (AI-inferred)
+	PullsUrl any
+	// The date and time of the last push to the repository. (AI-inferred)
+	PushedAt any
+	// The URL template for the repository's releases, with placeholders for additional parameters (e.g., release ID). (AI-inferred)
+	ReleasesUrl any
+	RoleName    any
+	// Security and analysis settings for the repository, including features like vulnerability alerts, dependency graph, secret scanning, and advanced security. (AI-inferred)
+	SecurityAndAnalysis any
 	// The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
-	Size                     any
-	SshUrl                   any
-	StargazersCount          any
-	StargazersUrl            any
-	StatusesUrl              any
-	SubscribersCount         any
-	SubscribersUrl           any
-	SubscriptionUrl          any
-	SvnUrl                   any
-	TagsUrl                  any
-	TeamsUrl                 any
-	TempCloneToken           any
-	Topics                   any
-	TreesUrl                 any
-	UpdatedAt                any
-	Url                      any
-	Visibility               any
-	Watchers                 any
-	WatchersCount            any
+	Size any
+	// The SSH URL for cloning the repository. (AI-inferred)
+	SshUrl any
+	// The number of users who have starred the repository. (AI-inferred)
+	StargazersCount any
+	// The API endpoint URL for the list of stargazers of the repository. (AI-inferred)
+	StargazersUrl any
+	// The URL template to query commit statuses for the repository, typically containing a placeholder (e.g., `{sha}`) for the commit SHA. (AI-inferred)
+	StatusesUrl any
+	// Number of users subscribed to the repository. (AI-inferred)
+	SubscribersCount any
+	// The API endpoint URL for listing the subscribers (watchers) of the repository. (AI-inferred)
+	SubscribersUrl any
+	// The URL to subscribe to the repository for notifications, as provided by the GitHub API. (AI-inferred)
+	SubscriptionUrl any
+	// The URL to access the repository via Subversion (SVN). (AI-inferred)
+	SvnUrl any
+	// The API endpoint URL for listing tags of the repository associated with the codespace. (AI-inferred)
+	TagsUrl any
+	// The API endpoint URL for the teams associated with the repository. (AI-inferred)
+	TeamsUrl any
+	// A temporary token used for cloning the repository. (AI-inferred)
+	TempCloneToken any
+	// The list of topics associated with the repository. (AI-inferred)
+	Topics any
+	// URL template for accessing the repository's Git trees API endpoint, typically including placeholders for owner, repo, and tree SHA. (AI-inferred)
+	TreesUrl any
+	// The timestamp of when the repository was last updated, formatted as an ISO 8601 string (e.g., 2024-01-01T12:34:56Z). (AI-inferred)
+	UpdatedAt any
+	// The GitHub API URL of the repository. (AI-inferred)
+	Url        any
+	Visibility any
+	// Number of users watching (subscribing to) the repository. (AI-inferred)
+	Watchers any
+	// The number of users who have starred (watched) this repository, equivalent to stargazers_count. (AI-inferred)
+	WatchersCount any
+	// Indicates whether commits made via the GitHub web interface are required to include a sign-off (i.e., the repository's web commit signoff setting is enabled). (AI-inferred)
 	WebCommitSignoffRequired any
 }
 
@@ -224,7 +348,8 @@ type CodespaceConfig struct {
 type CodespaceAttrs struct {
 	// A GitHub user.
 	BillableOwner any
-	CreatedAt     any
+	// The timestamp indicating when the codespace was created. (AI-inferred)
+	CreatedAt any
 	// Path to devcontainer.json from repo root used to create Codespace.
 	DevcontainerPath any
 	// Display name for this codespace.
@@ -233,7 +358,8 @@ type CodespaceAttrs struct {
 	EnvironmentId any
 	// Details about the codespace's git repository.
 	GitStatus any
-	Id        any
+	// The real, numeric, globally unique identifier for this object. (AI-inferred)
+	Id any
 	// The number of minutes of inactivity after which this codespace will be automatically stopped.
 	IdleTimeoutMinutes any
 	// Text to show user when codespace idle timeout minutes has been overriden by an organization policy
@@ -261,7 +387,8 @@ type CodespaceAttrs struct {
 	// API URL to publish this codespace to a new repository.
 	PublishUrl any
 	// API URL for the Pull Request associated with this codespace, if any.
-	PullsUrl      any
+	PullsUrl any
+	// List of recently opened folders in the Codespace, showing the paths of folders the user has accessed recently. (AI-inferred)
 	RecentFolders any
 	// Minimal Repository
 	Repository any
@@ -269,13 +396,15 @@ type CodespaceAttrs struct {
 	RetentionExpiresAt any
 	// Duration in minutes after codespace has gone idle in which it will be deleted. Must be integer minutes between 0 and 43200 (30 days).
 	RetentionPeriodMinutes any
-	RuntimeConstraints     any
+	// Constraints applied to the codespace's runtime environment, such as allowed port privacy settings. (AI-inferred)
+	RuntimeConstraints any
 	// API URL to start this codespace.
 	StartUrl any
 	// State of this codespace.
 	State any
 	// API URL to stop this codespace.
-	StopUrl   any
+	StopUrl any
+	// The timestamp of the last update to the codespace, in ISO 8601 format. (AI-inferred)
 	UpdatedAt any
 	// API URL for this codespace.
 	Url any

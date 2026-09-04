@@ -75,105 +75,173 @@ class RepositoryAttrs:
     allow_rebase_merge: Any = None
     # Whether to allow squash merges for pull requests.
     allow_squash_merge: Any = None
+    # The URL template for downloading a repository archive, with placeholders for archive format and reference. (AI-inferred)
     archive_url: Any = None
     # Whether the repository is archived.
     archived: Any = None
+    # The URL to the repository's assignees endpoint, optionally templated for a specific user (e.g., {/user}). (AI-inferred)
     assignees_url: Any = None
+    # The URL template for accessing blob objects in the repository's Git database, with a placeholder for the blob SHA (e.g., `http://api.github.com/repos/{owner}/{repo}/git/blobs{/sha}`). (AI-inferred)
     blobs_url: Any = None
+    # The API endpoint URL for listing branches in this repository. (AI-inferred)
     branches_url: Any = None
+    # The HTTPS URL used to clone the repository. (AI-inferred)
     clone_url: Any = None
+    # The URL to the collaborators endpoint for this repository, used to access the list of collaborators via the GitHub API. (AI-inferred)
     collaborators_url: Any = None
+    # The API URL template for retrieving repository comments, optionally including a comment number. Example: https://api.github.com/repos/{owner}/{repo}/comments{/number} (AI-inferred)
     comments_url: Any = None
+    # The API endpoint URL for accessing the repository's commits, including a template placeholder '{/sha}' for targeting individual commits. (AI-inferred)
     commits_url: Any = None
+    # The URL used to compare two revisions of the repository, such as branches or tags. (AI-inferred)
     compare_url: Any = None
+    # The URL template to access repository contents via the GitHub API, with a placeholder for the file path (e.g., https://api.github.com/repos/{owner}/{repo}/contents/{+path}). (AI-inferred)
     contents_url: Any = None
+    # The API URL to retrieve the list of contributors for the repository. (AI-inferred)
     contributors_url: Any = None
+    # The system-generated timestamp of when the repository was created. (AI-inferred)
     created_at: Any = None
     # The default branch of the repository.
     default_branch: Any = None
     # Whether to delete head branches when pull requests are merged
     delete_branch_on_merge: Any = None
+    # The API endpoint URL for accessing and managing deployments of the repository. (AI-inferred)
     deployments_url: Any = None
+    # A short description of the repository. Optional; if omitted, computed by GitHub. (AI-inferred)
     description: Any = None
     # Returns whether or not this repository disabled.
     disabled: Any = None
+    # The API endpoint URL for the downloads associated with this repository. (AI-inferred)
     downloads_url: Any = None
+    # The URL to the events endpoint for the repository, providing information about repository events. (AI-inferred)
     events_url: Any = None
+    # Whether the repository is a fork of another repository. (AI-inferred)
     fork: Any = None
+    # The number of forks of this repository. (AI-inferred)
     forks: Any = None
+    # Number of forks of the repository. (AI-inferred)
     forks_count: Any = None
+    # The API URL for listing the forks of the repository. (AI-inferred)
     forks_url: Any = None
+    # The full repository name in the format 'owner/name'. (AI-inferred)
     full_name: Any = None
+    # The API URL template for accessing the repository's git commits, typically with an optional SHA placeholder. (AI-inferred)
     git_commits_url: Any = None
+    # The URL to the git refs endpoint for the repository. (AI-inferred)
     git_refs_url: Any = None
+    # The URL to the repository's git tags. (AI-inferred)
     git_tags_url: Any = None
+    # The git:// protocol URL for the repository, as returned by the GitHub API. (AI-inferred)
     git_url: Any = None
     # Whether downloads are enabled.
     has_downloads: Any = None
     # Whether issues are enabled.
     has_issues: Any = None
+    # Indicates whether GitHub Pages is enabled for this repository. (AI-inferred)
     has_pages: Any = None
     # Whether projects are enabled.
     has_projects: Any = None
     # Whether the wiki is enabled.
     has_wiki: Any = None
+    # A URL with more information about the repository. Optional; if omitted, computed by GitHub. (AI-inferred)
     homepage: Any = None
+    # The API endpoint URL for managing webhooks on the repository. (AI-inferred)
     hooks_url: Any = None
+    # The URL to the repository's HTML page on GitHub. (AI-inferred)
     html_url: Any = None
     # Unique identifier of the repository
     id: Any = None
     # Whether this repository acts as a template that can be used to generate new repositories.
     is_template: Any = None
+    # The API URL template for accessing issue comments in the repository, with a placeholder for the comment number. (AI-inferred)
     issue_comment_url: Any = None
+    # The API URL for events related to issues in the repository. This is a computed value provided by the GitHub API. (AI-inferred)
     issue_events_url: Any = None
+    # The URL to access the list of issues for this repository. (AI-inferred)
     issues_url: Any = None
+    # The API endpoint URL to retrieve the deploy keys for this repository. This field is computed and read-only. (AI-inferred)
     keys_url: Any = None
+    # The URL to the labels in the repository, as provided by the GitHub API. (AI-inferred)
     labels_url: Any = None
+    # The primary language used in the repository. (AI-inferred)
     language: Any = None
+    # The API endpoint URL that returns the programming languages used in the repository, with the byte count for each language. (AI-inferred)
     languages_url: Any = None
     # License Simple
     license: Any = None
+    # The name of the default branch of the repository, typically 'master' or 'main', as configured for the GitHub repository. (AI-inferred)
     master_branch: Any = None
+    # The API endpoint URL for merging branches or pull requests in the repository. (AI-inferred)
     merges_url: Any = None
+    # The API URL for the milestones of this repository. (AI-inferred)
     milestones_url: Any = None
+    # The URL of the original repository if this repository is a mirror; otherwise, null. This value is set by GitHub. (AI-inferred)
     mirror_url: Any = None
     # The name of the repository.
     name: Any = None
+    # The number of forks of the repository. (AI-inferred)
     network_count: Any = None
+    # A stable, unique identifier for the repository, generated by GitHub and used to reference the repository in the GraphQL API. (AI-inferred)
     node_id: Any = None
+    # The URL to the repository's notifications API endpoint. (AI-inferred)
     notifications_url: Any = None
+    # The number of open issues currently tracked in the repository. (AI-inferred)
     open_issues: Any = None
+    # The number of open issues in the repository, as reported by the GitHub API. (AI-inferred)
     open_issues_count: Any = None
     # A GitHub user.
     owner: Any = None
     # The permission to grant the team on this repository. We accept the following permissions to be set: `pull`, `triage`, `push`, `maintain`, `admin` and you can also specify a custom repository role name, if the owning organization has defined any. If no permission is specified, the team's `permission` attribute will be used to determine what permission to grant the team on this repository.
     permission: Any = None
+    # The repository permissions object contains boolean flags indicating the level of access the authenticated user has for the repository, such as 'admin', 'push', and 'pull'. (AI-inferred)
     permissions: Any = None
     # Whether the repository is private or public.
     private: Any = None
+    # The API URL for pull requests in this repository (e.g., https://api.github.com/repos/{owner}/{repo}/pulls{/number}). (AI-inferred)
     pulls_url: Any = None
+    # The timestamp of the last push to the repository, in ISO 8601 format. (AI-inferred)
     pushed_at: Any = None
+    # URL template for accessing the releases of the repository. It may include a placeholder for a specific release ID and is intended for use with API requests. (AI-inferred)
     releases_url: Any = None
+    # The real name of the permission role granted here. (AI-inferred)
     role_name: Any = None
+    # The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0. (AI-inferred)
     size: Any = None
+    # The URL to clone the repository over SSH. (AI-inferred)
     ssh_url: Any = None
+    # The number of users who have starred the repository on GitHub. (AI-inferred)
     stargazers_count: Any = None
+    # The URL to the GitHub API endpoint that lists the users who have starred this repository. (AI-inferred)
     stargazers_url: Any = None
+    # The URL template for the commit statuses of the repository, with the placeholder {sha} to be replaced by a specific commit SHA. (AI-inferred)
     statuses_url: Any = None
+    # The number of subscribers (users who have subscribed to repository notifications) for this GitHub repository. This is a computed value provided by the GitHub API. (AI-inferred)
     subscribers_count: Any = None
+    # URL to retrieve the list of users who have subscribed to (watching) this repository. (AI-inferred)
     subscribers_url: Any = None
+    # The API URL to subscribe to notifications for this repository. (AI-inferred)
     subscription_url: Any = None
+    # The URL to access the repository through Subversion (SVN), e.g., https://github.com/owner/repo. (AI-inferred)
     svn_url: Any = None
+    # The URL to fetch the repository's tags via the GitHub API. (AI-inferred)
     tags_url: Any = None
+    # The API URL for the teams associated with this repository. (AI-inferred)
     teams_url: Any = None
+    # A temporary token that can be used to clone the repository. (AI-inferred)
     temp_clone_token: Any = None
+    # The list of topic names associated with the repository. (AI-inferred)
     topics: Any = None
+    # URL template for the repository's git trees, used to access tree objects. Contains a placeholder for the tree SHA. (AI-inferred)
     trees_url: Any = None
+    # The timestamp of when the repository was last updated, in ISO 8601 format. This value is set by the system and cannot be modified. (AI-inferred)
     updated_at: Any = None
+    # The GitHub API URL for the repository (e.g., https://api.github.com/repos/owner/repo). This field is computed and read-only. (AI-inferred)
     url: Any = None
     # The repository visibility: public, private, or internal.
     visibility: Any = None
+    # The number of users who are watching the repository, i.e., have subscribed to receive notifications for activity in the repository. This is a computed, read-only field. (AI-inferred)
     watchers: Any = None
+    # The number of users who are watching the repository (i.e., subscribed to receive notifications about it). This is typically equal to the repository's subscribers count. (AI-inferred)
     watchers_count: Any = None
     # Whether to require contributors to sign off on web-based commits
     web_commit_signoff_required: Any = None

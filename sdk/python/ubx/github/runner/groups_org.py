@@ -33,10 +33,15 @@ class GroupsOrgConfig:
 class GroupsOrgAttrs:
     # Whether the runner group can be used by `public` repositories.
     allows_public_repositories: Any = None
+    # Whether this runner group is the default group for the organization. (AI-inferred)
     default: Any = None
+    # The API URL for accessing the hosted runners associated with this runner group. (AI-inferred)
     hosted_runners_url: Any = None
+    # The real, numeric, globally unique identifier for this object. (AI-inferred)
     id: Any = None
+    # Indicates whether the runner group is inherited from an enterprise account. (AI-inferred)
     inherited: Any = None
+    # Whether the runner group inherits the organization's setting for allowing public repositories. This computed value is determined by GitHub and reflects the inherited state of `allows_public_repositories`. (AI-inferred)
     inherited_allows_public_repositories: Any = None
     # Name of the runner group.
     name: Any = None
@@ -46,6 +51,7 @@ class GroupsOrgAttrs:
     restricted_to_workflows: Any = None
     # List of runner IDs to add to the runner group.
     runners: Any = None
+    # The API URL to fetch the list of runners belonging to this organization runner group. (AI-inferred)
     runners_url: Any = None
     # Link to the selected repositories resource for this runner group. Not present unless visibility was set to `selected`
     selected_repositories_url: Any = None

@@ -2,37 +2,64 @@
 import type { Computed, FieldMap, ResourceBinding } from "@ubx/sdk";
 
 export interface Comment_Reactions {
+  /** Number of confused reactions on the commit comment. (AI-inferred) */
   confused: number | Computed<number>;
+  /** Number of eye reactions (👀) on the commit comment. (AI-inferred) */
   eyes: number | Computed<number>;
+  /** The number of heart (❤️) reactions on the commit comment. (AI-inferred) */
   heart: number | Computed<number>;
+  /** The number of hooray reactions on the commit comment. (AI-inferred) */
   hooray: number | Computed<number>;
+  /** The number of laugh reactions on the commit comment. (AI-inferred) */
   laugh: number | Computed<number>;
+  /** The count of rocket reactions (🚀) on the commit comment. (AI-inferred) */
   rocket: number | Computed<number>;
+  /** The total number of reactions of all types on the commit comment. (AI-inferred) */
   totalCount: number | Computed<number>;
+  /** The API URL that returns the reactions for the commit comment. (AI-inferred) */
   url: string | Computed<string>;
 }
 
 export interface Comment_User {
+  /** The URL of the user's avatar image. (AI-inferred) */
   avatarUrl: string | Computed<string>;
+  /** The email address of the user who authored the commit comment, if the user has made it public. (AI-inferred) */
   email?: string | Computed<string>;
+  /** The URL to the user's events on GitHub, typically in the form https://api.github.com/users/{username}/events. (AI-inferred) */
   eventsUrl: string | Computed<string>;
+  /** URL to access the list of followers for this GitHub user. (AI-inferred) */
   followersUrl: string | Computed<string>;
+  /** The URL (template) for fetching the list of users this user follows, as specified in the GitHub API user object. This field is always present for a user. (AI-inferred) */
   followingUrl: string | Computed<string>;
+  /** The API URL for the user's gists, typically of the form https://api.github.com/users/{username}/gists{/gist_id}. (AI-inferred) */
   gistsUrl: string | Computed<string>;
+  /** The Gravatar ID for the user, used to construct their avatar image URL. (AI-inferred) */
   gravatarId: string | Computed<string>;
+  /** The URL to the user's GitHub profile page. (AI-inferred) */
   htmlUrl: string | Computed<string>;
   id: number | Computed<number>;
+  /** The GitHub username of the user who created the commit comment. (AI-inferred) */
   login: string | Computed<string>;
+  /** The name of the user associated with the commit comment. (AI-inferred) */
   name?: string | Computed<string>;
+  /** The node_id is the unique identifier for the user in GitHub's GraphQL API. This field is always present. (AI-inferred) */
   nodeId: string | Computed<string>;
+  /** The URL to fetch the list of organizations the user belongs to. (AI-inferred) */
   organizationsUrl: string | Computed<string>;
+  /** The URL for the user's received events, which lists the events that the user has received. (AI-inferred) */
   receivedEventsUrl: string | Computed<string>;
+  /** The URL to the user's public repositories on GitHub. (AI-inferred) */
   reposUrl: string | Computed<string>;
+  /** Whether the user is a GitHub site administrator. (AI-inferred) */
   siteAdmin: boolean | Computed<boolean>;
   starredAt?: string | Computed<string>;
+  /** The URL to list the repositories starred by the user. (AI-inferred) */
   starredUrl: string | Computed<string>;
+  /** The API URL for the user's subscriptions, which lists repositories the user is watching. (AI-inferred) */
   subscriptionsUrl: string | Computed<string>;
+  /** The type of GitHub user account that authored the commit comment, such as "User" for a normal account or "Bot" for a bot account. (AI-inferred) */
   type: string | Computed<string>;
+  /** The GitHub API URL for the user, such as https://api.github.com/users/octocat. (AI-inferred) */
   url: string | Computed<string>;
   userViewType?: string | Computed<string>;
 }
@@ -61,19 +88,27 @@ export interface CommentAttrs {
   authorAssociation: string;
   /** The contents of the comment. */
   body: string;
+  /** The SHA of the commit that this comment is associated with. (AI-inferred) */
   commitId: string;
+  /** The timestamp of when the commit comment was created, in ISO 8601 format (e.g., 2025-01-01T12:00:00Z). (AI-inferred) */
   createdAt: string;
+  /** The HTML URL of the commit comment. (AI-inferred) */
   htmlUrl: string;
+  /** The real, numeric, globally unique identifier for this object. (AI-inferred) */
   id: number;
   /** **Closing down notice**. Use **position** parameter instead. Line number in the file to comment on. */
   line: number;
+  /** The unique identifier assigned to the commit comment by GitHub's GraphQL API. (AI-inferred) */
   nodeId: string;
   /** Relative path of the file to comment on. */
   path: string;
   /** Line index in the diff to comment on. */
   position: number;
+  /** The reactions summary for the commit comment, containing counts for each reaction type (e.g., +1, -1, laugh, hooray, confused, heart, rocket, eyes), a total count, and a URL to fetch detailed reaction information. (AI-inferred) */
   reactions: Comment_Reactions;
+  /** The timestamp of when the commit comment was last updated. (AI-inferred) */
   updatedAt: string;
+  /** The API URL that points to this commit comment. (AI-inferred) */
   url: string;
   /** A GitHub user. */
   user: Comment_User;

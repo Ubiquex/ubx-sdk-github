@@ -4,47 +4,75 @@ package org
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Membership_Organization struct {
-	AvatarUrl        any
-	Description      any
-	EventsUrl        any
-	HooksUrl         any
-	Id               any
-	IssuesUrl        any
-	Login            any
-	MembersUrl       any
-	NodeId           any
+	// The URL of the avatar image for the organization. (AI-inferred)
+	AvatarUrl any
+	// The description of the GitHub organization. (AI-inferred)
+	Description any
+	// The URL to retrieve public events for the organization. (AI-inferred)
+	EventsUrl any
+	// The API URL for the hooks (webhooks) associated with the organization. (AI-inferred)
+	HooksUrl any
+	Id       any
+	// The GitHub API URL template for accessing issues belonging to the organization, such as https://api.github.com/orgs/{org}/issues. (AI-inferred)
+	IssuesUrl any
+	// The login (username) of the GitHub organization. (AI-inferred)
+	Login any
+	// The URL template for the organization's members list. It includes a {member} placeholder for accessing a specific member, e.g., https://api.github.com/orgs/{org}/members{/member}. (AI-inferred)
+	MembersUrl any
+	// The unique identifier for the organization in GitHub's GraphQL API. (AI-inferred)
+	NodeId any
+	// The URL template for listing the organization's public members, with an optional `{/member}` placeholder to target a specific member. (AI-inferred)
 	PublicMembersUrl any
-	ReposUrl         any
-	Url              any
+	// The API URL that lists the repositories belonging to the organization. (AI-inferred)
+	ReposUrl any
+	Url      any
 }
 
 type Membership_Permissions struct {
+	// Whether the member has permission to create repositories within the organization. (AI-inferred)
 	CanCreateRepository any
 }
 
 type Membership_User struct {
-	AvatarUrl         any
-	Email             any
-	EventsUrl         any
-	FollowersUrl      any
-	FollowingUrl      any
-	GistsUrl          any
-	GravatarId        any
-	HtmlUrl           any
-	Id                any
-	Login             any
-	Name              any
-	NodeId            any
-	OrganizationsUrl  any
+	// URL of the user's avatar image. (AI-inferred)
+	AvatarUrl any
+	// The email address of the GitHub user, if available. (AI-inferred)
+	Email any
+	// The API URL to retrieve this user's events. (AI-inferred)
+	EventsUrl any
+	// The URL to the GitHub API endpoint for this user's followers list. (AI-inferred)
+	FollowersUrl any
+	// The URL to list the users this user is following. May include a `{/other_user}` placeholder for retrieving a specific following relationship. (AI-inferred)
+	FollowingUrl any
+	// The URL template for accessing the user's gists, such as https://api.github.com/users/{username}/gists{/gist_id}. (AI-inferred)
+	GistsUrl any
+	// The unique identifier for the user's Gravatar image, used to retrieve the user's avatar. (AI-inferred)
+	GravatarId any
+	// The URL to the user's GitHub profile. (AI-inferred)
+	HtmlUrl any
+	Id      any
+	// The GitHub username (login) of the user who is a member of the organization. (AI-inferred)
+	Login any
+	Name  any
+	// The GraphQL node ID of the user. (AI-inferred)
+	NodeId any
+	// The URL to the user's organizations endpoint, which lists the organizations the user belongs to. (AI-inferred)
+	OrganizationsUrl any
+	// The URL to the received events endpoint for the user, which lists events that the user has received. (AI-inferred)
 	ReceivedEventsUrl any
-	ReposUrl          any
-	SiteAdmin         any
-	StarredAt         any
-	StarredUrl        any
-	SubscriptionsUrl  any
-	Type              any
-	Url               any
-	UserViewType      any
+	// The URL to the list of repositories associated with this user. (AI-inferred)
+	ReposUrl any
+	// Boolean flag indicating whether the user is a site administrator for the GitHub instance (i.e., has admin access across all of GitHub, not just the organization). (AI-inferred)
+	SiteAdmin any
+	StarredAt any
+	// The templated URL to list repositories starred by this user. It includes placeholders for repository owner and name, e.g., https://api.github.com/users/USERNAME/starred{/owner}{/repo}. (AI-inferred)
+	StarredUrl any
+	// The URL to the user's subscriptions API endpoint. (AI-inferred)
+	SubscriptionsUrl any
+	Type             any
+	// The GitHub API URL for the user. (AI-inferred)
+	Url          any
+	UserViewType any
 }
 
 type MembershipConfig struct {
@@ -62,14 +90,16 @@ type MembershipAttrs struct {
 	// The slugs of the enterprise teams providing the user with indirect membership in the organization. A limit of 100 enterprise team slugs is returned.
 	EnterpriseTeamsProvidingIndirectMembership any
 	// A GitHub organization.
-	Organization    any
+	Organization any
+	// The URL of the GitHub organization associated with this membership. (AI-inferred)
 	OrganizationUrl any
 	Permissions     any
 	// The role to give the user in the organization. Can be one of: * `admin` - The user will become an owner of the organization. * `member` - The user will become a non-owner member of the organization.
 	Role any
 	// The state of the member in the organization. The `pending` state indicates the user has not yet accepted an invitation.
 	State any
-	Url   any
+	// The real, canonical API URL for this object. (AI-inferred)
+	Url any
 	// A GitHub user.
 	User any
 	// path parameter, not part of the API's own resource representation

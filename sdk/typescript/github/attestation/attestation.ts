@@ -2,15 +2,20 @@
 import type { Computed, FieldMap, ResourceBinding } from "@ubx/sdk";
 
 export interface Attestation_Attestations_Bundle {
+  /** The DSSE envelope containing the signed attestation payload. (AI-inferred) */
   dsseEnvelope?: unknown | Computed<unknown>;
+  /** The media type of the attestation bundle, indicating the serialization format (e.g., application/vnd.dsse.envelope.v1+json). (AI-inferred) */
   mediaType?: string | Computed<string>;
+  /** The verification material used to validate the attestation, including the signing certificate and signature. (AI-inferred) */
   verificationMaterial?: unknown | Computed<unknown>;
 }
 
 export interface Attestation_Attestations {
+  /** The attestation bundle, which contains the signed DSSE envelope and verification material for the attestation. (AI-inferred) */
   bundle?: Attestation_Attestations_Bundle | Computed<Attestation_Attestations_Bundle>;
   bundleUrl?: string | Computed<string>;
   initiator?: string | Computed<string>;
+  /** The numeric identifier of the GitHub repository associated with the attestation. (AI-inferred) */
   repositoryId?: number | Computed<number>;
 }
 
@@ -32,6 +37,7 @@ export interface AttestationConfig {
 }
 
 export interface AttestationAttrs {
+  /** The real attestations recorded for this subject. (AI-inferred) */
   attestations: Attestation_Attestations[];
   /** The attestation's Sigstore Bundle. Refer to the [Sigstore Bundle Specification](https://github.com/sigstore/protobuf-specs/blob/main/protos/sigstore_bundle.proto) for more information. */
   bundle: Attestation_Attestations_Bundle;

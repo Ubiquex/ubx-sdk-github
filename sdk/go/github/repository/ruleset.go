@@ -9,13 +9,18 @@ type Ruleset_Links_Html struct {
 }
 
 type Ruleset_Links struct {
+	// The HTML link to the repository ruleset, as an object containing an 'href' property with the URL for viewing the ruleset in a browser. (AI-inferred)
 	Html any
+	// The URL to the repository ruleset resource. (AI-inferred)
 	Self any
 }
 
 type Ruleset_BypassActors struct {
-	ActorId    any
-	ActorType  any
+	// The unique identifier of the user, team, integration, or repository role that is exempt from the ruleset. (AI-inferred)
+	ActorId any
+	// The type of actor that can bypass the ruleset. Allowed values: Integration, OrganizationAdmin, RepositoryRole, Team, DeployKey, User. (AI-inferred)
+	ActorType any
+	// The bypass mode for the actor, specifying when rules can be bypassed. Allowed values: 'always' (bypass always), 'pull_request' (bypass only for pull request rules), or 'exempt' (actor is exempt from the rule). (AI-inferred)
 	BypassMode any
 }
 
@@ -23,12 +28,15 @@ type Ruleset_Conditions struct {
 }
 
 type Ruleset_Rules_Parameters struct {
+	// A boolean that controls whether the 'update' rule permits merging changes into a branch using the fetch and merge method. When true, fetch and merge is allowed; when false, it is disallowed. (AI-inferred)
 	UpdateAllowsFetchAndMerge any
 }
 
 type Ruleset_Rules struct {
+	// Rule-specific configuration parameters that vary depending on the type of rule being enforced. (AI-inferred)
 	Parameters any
-	Type       any
+	// The type of rule in a repository ruleset. This rule has type 'creation', which restricts who can create branches in the repository. (AI-inferred)
+	Type any
 }
 
 var Ruleset_BypassActorsFields = ubx.FieldMap{
@@ -77,7 +85,8 @@ type RulesetAttrs struct {
 	BypassActors any
 	// Conditions for an enterprise ruleset. The `conditions` object supports either of the following combinations: - `organization_id` and `repository_name` - `organization_id` and `repository_property` - `organization_name` and `repository_name` - `organization_name` and `repository_property` - `organization_property` and `repository_name` - `organization_property` and `repository_property` For branch and tag rulesets, the `conditions` object should also contain the `ref_name` property.
 	Conditions any
-	CreatedAt  any
+	// The timestamp indicating when the repository ruleset was created. (AI-inferred)
+	CreatedAt any
 	// The bypass type of the user making the API request for this ruleset. This field is only returned when querying the repository-level endpoint.
 	CurrentUserCanBypass any
 	// The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page. `evaluate` is not available for the `repository` target.
@@ -85,7 +94,8 @@ type RulesetAttrs struct {
 	// The ID of the ruleset
 	Id any
 	// The name of the ruleset.
-	Name   any
+	Name any
+	// The GraphQL global node ID for the repository ruleset. (AI-inferred)
 	NodeId any
 	// An array of rules within the ruleset.
 	Rules any
@@ -94,7 +104,8 @@ type RulesetAttrs struct {
 	// The type of the source of the ruleset
 	SourceType any
 	// The target of the ruleset
-	Target    any
+	Target any
+	// The timestamp of the last update to the ruleset. (AI-inferred)
 	UpdatedAt any
 	// path parameter, not part of the API's own resource representation
 	Enterprise any

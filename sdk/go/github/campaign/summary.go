@@ -13,7 +13,9 @@ type Summary_AlertStats struct {
 }
 
 type Summary_CodeScanningAlerts struct {
+	// The list of alert numbers for the code scanning alerts in this campaign summary. (AI-inferred)
 	AlertNumbers any
+	// The numeric identifier of the repository in which the code scanning alert was found. (AI-inferred)
 	RepositoryId any
 }
 

@@ -189,22 +189,28 @@ type PackageConfig struct {
 }
 
 type PackageAttrs struct {
+	// The real timestamp this object was created. (AI-inferred)
 	CreatedAt any
-	HtmlUrl   any
+	// The real, browsable web URL for this object. (AI-inferred)
+	HtmlUrl any
 	// Unique identifier of the package.
 	Id any
 	// The name of the package.
 	Name any
 	// A GitHub user.
-	Owner       any
+	Owner any
+	// The real type of package registry this package is published to. (AI-inferred)
 	PackageType any
 	// Minimal Repository
 	Repository any
-	UpdatedAt  any
-	Url        any
+	// The real timestamp this object was last updated. (AI-inferred)
+	UpdatedAt any
+	// The real, canonical API URL for this object. (AI-inferred)
+	Url any
 	// The number of versions of the package.
 	VersionCount any
-	Visibility   any
+	// Whether the repository is public, private, or internal. (AI-inferred)
+	Visibility any
 	// path parameter, not part of the API's own resource representation
 	Org any
 	// path parameter, not part of the API's own resource representation

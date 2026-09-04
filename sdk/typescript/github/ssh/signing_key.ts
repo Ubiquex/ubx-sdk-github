@@ -11,7 +11,9 @@ export interface SigningKeyConfig {
 }
 
 export interface SigningKeyAttrs {
+  /** Timestamp the SSH signing key was added to the account. (AI-inferred) */
   createdAt: string;
+  /** The SSH signing key's numeric ID. (AI-inferred) */
   id: number;
   /** The public SSH key to add to your GitHub account. For more information, see "[Checking for existing SSH keys](https://docs.github.com/enterprise-cloud@latest/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)." */
   key: string;

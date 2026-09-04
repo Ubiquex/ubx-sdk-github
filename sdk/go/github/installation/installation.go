@@ -193,35 +193,50 @@ type InstallationConfig struct {
 }
 
 type InstallationAttrs struct {
+	// The real API URL for generating an access token for this GitHub App installation. (AI-inferred)
 	AccessTokensUrl any
-	Account         any
-	AppId           any
-	AppSlug         any
+	// The real user or organization this GitHub App is installed on. (AI-inferred)
+	Account any
+	// The real GitHub App this installation belongs to. (AI-inferred)
+	AppId any
+	// This GitHub App's own real, URL-safe identifier. (AI-inferred)
+	AppSlug any
 	// The Client ID of the GitHub App to install.
-	ClientId               any
-	ContactEmail           any
-	CreatedAt              any
-	Events                 any
+	ClientId any
+	// The real contact email address on file for this installation, if any. (AI-inferred)
+	ContactEmail any
+	// The real timestamp this object was created. (AI-inferred)
+	CreatedAt any
+	// The real webhook events this installation is subscribed to. (AI-inferred)
+	Events any
+	// Whether this installation is restricted to multiple, individually-selected files. (AI-inferred)
 	HasMultipleSingleFiles any
-	HtmlUrl                any
+	// The real, browsable URL for this installation. (AI-inferred)
+	HtmlUrl any
 	// The ID of the installation.
 	Id any
 	// The permissions granted to the fine-grained access token.
 	Permissions any
 	// The names of the repositories to which the installation will be granted access. This is the simple name of the repository, not the full name (e.g., `hello-world` not `octocat/hello-world`). This is only required when `repository_selection` is `selected`.
-	Repositories    any
+	Repositories any
+	// The real API URL for listing this installation's own accessible repositories. (AI-inferred)
 	RepositoriesUrl any
 	// The repository selection for the GitHub App. Must be one of: * `all` - the installation can access all repositories in the organization. * `selected` - the installation can access only the listed repositories. * `none` - no repository permissions are requested. Only use when the app does not request repository permissions.
 	RepositorySelection any
-	SingleFileName      any
-	SingleFilePaths     any
-	SuspendedAt         any
+	// The real, single file name this installation is restricted to, if any. (AI-inferred)
+	SingleFileName any
+	// The real file paths this installation is restricted to, if any. (AI-inferred)
+	SingleFilePaths any
+	// When this installation was suspended, if it currently is. (AI-inferred)
+	SuspendedAt any
 	// A GitHub user.
 	SuspendedBy any
 	// The ID of the user or organization this token is being scoped to.
-	TargetId   any
+	TargetId any
+	// Whether this installation targets a user or an organization. (AI-inferred)
 	TargetType any
-	UpdatedAt  any
+	// The real timestamp this object was last updated. (AI-inferred)
+	UpdatedAt any
 	// path parameter, not part of the API's own resource representation
 	InstallationId any
 	// path parameter, not part of the API's own resource representation

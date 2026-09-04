@@ -4,85 +4,136 @@ package commit
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Commit_Author struct {
-	AvatarUrl         any
-	Email             any
-	EventsUrl         any
-	FollowersUrl      any
-	FollowingUrl      any
-	GistsUrl          any
-	GravatarId        any
-	HtmlUrl           any
-	Id                any
-	Login             any
-	Name              any
-	NodeId            any
-	OrganizationsUrl  any
+	// The URL of the author's avatar image on GitHub. (AI-inferred)
+	AvatarUrl any
+	// The email address of the author of the commit. (AI-inferred)
+	Email any
+	// The URL of the author's GitHub user events, typically in the form 'https://api.github.com/users/{username}/events{/privacy}'. (AI-inferred)
+	EventsUrl any
+	// The URL to the author's GitHub followers list. (AI-inferred)
+	FollowersUrl any
+	// The URL template for the GitHub API endpoint that lists the users this author follows. It may contain placeholders for the username and optional other_user parameter. (AI-inferred)
+	FollowingUrl any
+	// The URL to the author's list of gists on GitHub. (AI-inferred)
+	GistsUrl any
+	// The Gravatar ID of the commit author, used to retrieve the author's avatar image. (AI-inferred)
+	GravatarId any
+	// The URL to the author's GitHub profile. (AI-inferred)
+	HtmlUrl any
+	// The unique numeric identifier assigned to the GitHub user who authored the commit. (AI-inferred)
+	Id any
+	// The GitHub username of the author. (AI-inferred)
+	Login any
+	// The name of the author who made the commit. (AI-inferred)
+	Name any
+	// The GraphQL node ID of the commit author, used to uniquely identify the author across GitHub's GraphQL API. (AI-inferred)
+	NodeId any
+	// The URL to the GitHub API endpoint that lists the organizations the author is a member of. (AI-inferred)
+	OrganizationsUrl any
+	// The URL to the received events for this user, typically in the form https://api.github.com/users/{username}/received_events. (AI-inferred)
 	ReceivedEventsUrl any
-	ReposUrl          any
-	SiteAdmin         any
-	StarredAt         any
-	StarredUrl        any
-	SubscriptionsUrl  any
-	Type              any
-	Url               any
-	UserViewType      any
+	// The URL to the list of repositories owned by the author. This follows the GitHub API format for a user's repositories endpoint. (AI-inferred)
+	ReposUrl any
+	// Whether the GitHub user is a site administrator. (AI-inferred)
+	SiteAdmin any
+	StarredAt any
+	// A URL template to retrieve the list of repositories starred by the commit author, typically in the format `https://api.github.com/users/{user}/starred{/owner}{/repo}`. This field is populated when the author is a known GitHub user. (AI-inferred)
+	StarredUrl any
+	// The URL to the GitHub API endpoint for the commit author's subscriptions (e.g., watched repositories). (AI-inferred)
+	SubscriptionsUrl any
+	Type             any
+	// The GitHub API URL for the author of the commit, pointing to the user's API endpoint (e.g., https://api.github.com/users/octocat). (AI-inferred)
+	Url          any
+	UserViewType any
 }
 
 type Commit_Commit_Author struct {
-	Date  any
+	// The date and time when the commit was authored, in ISO 8601 format. (AI-inferred)
+	Date any
+	// The email address of the author of the commit, as recorded in the Git commit metadata. (AI-inferred)
 	Email any
-	Name  any
+	// The display name of the author of the commit. (AI-inferred)
+	Name any
 }
 
 type Commit_Commit_Tree struct {
+	// The SHA-1 hash of the commit tree. (AI-inferred)
 	Sha any
+	// The URL of the GitHub tree object, pointing to the API endpoint for this tree. (AI-inferred)
 	Url any
 }
 
 type Commit_Commit_Verification struct {
-	Payload    any
-	Reason     any
-	Signature  any
-	Verified   any
+	// The payload that was signed for verification, as a string. (AI-inferred)
+	Payload any
+	// The reason explaining the commit's verification status, such as why a signature is valid, invalid, or unsigned. (AI-inferred)
+	Reason any
+	// The GPG signature of the commit, if the commit was signed; otherwise an empty string. (AI-inferred)
+	Signature any
+	// Indicates whether the commit's GPG signature was successfully verified. (AI-inferred)
+	Verified any
+	// The ISO 8601 timestamp indicating when the commit's signature verification was performed. (AI-inferred)
 	VerifiedAt any
 }
 
 type Commit_Commit struct {
 	// Metaproperties for Git author/committer information.
-	Author       any
+	Author any
+	// The number of comments on the commit. (AI-inferred)
 	CommentCount any
 	// Metaproperties for Git author/committer information.
-	Committer    any
-	Message      any
-	Tree         any
-	Url          any
+	Committer any
+	// The commit message text. (AI-inferred)
+	Message any
+	// The tree object associated with the commit, containing the SHA and URL of the tree. (AI-inferred)
+	Tree any
+	// The API URL that points to this commit in the GitHub API. (AI-inferred)
+	Url any
+	// Details about the verification of the commit's signature, including whether the signature is verified and the reason for the verification result. (AI-inferred)
 	Verification any
 }
 
 type Commit_Files struct {
-	Additions        any
-	BlobUrl          any
-	Changes          any
-	ContentsUrl      any
-	Deletions        any
-	Filename         any
-	Patch            any
+	// The number of lines added in this file as part of the commit. (AI-inferred)
+	Additions any
+	// URL to the blob (file content) for this file on GitHub. (AI-inferred)
+	BlobUrl any
+	// The total number of changes (additions and deletions) for the file in the commit. (AI-inferred)
+	Changes any
+	// API endpoint URL that provides access to the file's contents on GitHub, typically used to retrieve the file content or metadata for this commit. (AI-inferred)
+	ContentsUrl any
+	// The number of lines deleted in this file in the commit. (AI-inferred)
+	Deletions any
+	// The name of the file as it appears in the commit, including the path relative to the repository root. (AI-inferred)
+	Filename any
+	// The patch (diff) for the file in the commit, showing the changes made to that file. (AI-inferred)
+	Patch any
+	// The original filename of a file that was renamed in the commit. This field is only present when the file was renamed; otherwise it is null. (AI-inferred)
 	PreviousFilename any
-	RawUrl           any
-	Sha              any
-	Status           any
+	// The URL to the raw content of the file in the repository. (AI-inferred)
+	RawUrl any
+	// The blob SHA hash of the file's contents within the repository. (AI-inferred)
+	Sha any
+	// The status of the file in the commit, indicating the type of change. Possible values are: added, removed, modified, renamed, copied, changed, or unchanged. (AI-inferred)
+	Status any
 }
 
 type Commit_Parents struct {
+	// The HTML URL for the parent commit on GitHub, i.e., the web page that shows the commit details. (AI-inferred)
 	HtmlUrl any
-	Sha     any
-	Url     any
+	// The full SHA of the parent commit. (AI-inferred)
+	Sha any
+	// The GitHub API URL for the parent commit. (AI-inferred)
+	Url any
 }
 
 type Commit_Stats struct {
+	// The number of lines added in this commit. (AI-inferred)
 	Additions any
+	// The number of lines deleted in the commit. (AI-inferred)
 	Deletions any
-	Total     any
+	// Total number of lines changed in the commit (additions plus deletions). (AI-inferred)
+	Total any
 }
 
 type CommitConfig struct {
@@ -101,23 +152,34 @@ type CommitConfig struct {
 }
 
 type CommitAttrs struct {
+	// The author of the commit, containing details such as name, email, and date. (AI-inferred)
 	Author any
 	// The name of the base branch that the head will be merged into.
-	Base        any
+	Base any
+	// The URL to the commit comments endpoint, which lists comments made on the commit. (AI-inferred)
 	CommentsUrl any
-	Commit      any
+	// The nested object containing commit metadata such as author, committer, message, and tree information, separate from the top-level SHA. (AI-inferred)
+	Commit any
 	// Commit message to use for the merge commit. If omitted, a default message will be used.
 	CommitMessage any
-	Committer     any
-	Files         any
+	// An object containing information about the user who committed the change, including name, email, and commit timestamp. (AI-inferred)
+	Committer any
+	// A list of files affected by the commit, with details about each change such as file name and status. (AI-inferred)
+	Files any
 	// The head to merge. This can be a branch name or a commit SHA1.
-	Head    any
+	Head any
+	// The GitHub URL to view this commit on the web. (AI-inferred)
 	HtmlUrl any
-	NodeId  any
+	// The GraphQL node identifier for the commit. (AI-inferred)
+	NodeId any
+	// List of parent commit objects for this commit. Each object contains the SHA and URL of the parent commit. (AI-inferred)
 	Parents any
-	Sha     any
-	Stats   any
-	Url     any
+	// The SHA-1 checksum that uniquely identifies the commit. (AI-inferred)
+	Sha any
+	// Statistics about the commit, including the number of additions, deletions, and total changes. (AI-inferred)
+	Stats any
+	// The GitHub API URL for this commit. (AI-inferred)
+	Url any
 	// path parameter, not part of the API's own resource representation
 	Owner any
 	// path parameter, not part of the API's own resource representation

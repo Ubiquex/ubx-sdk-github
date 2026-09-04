@@ -33,8 +33,11 @@ class GroupsEnterpriseConfig:
 class GroupsEnterpriseAttrs:
     # Whether the runner group can be used by `public` repositories.
     allows_public_repositories: Any = None
+    # Whether this is the enterprise's own default self-hosted runner group. (AI-inferred)
     default: Any = None
+    # The real API URL for listing this runner group's own hosted runners. (AI-inferred)
     hosted_runners_url: Any = None
+    # The real, numeric, globally unique identifier for this object. (AI-inferred)
     id: Any = None
     # Name of the runner group.
     name: Any = None
@@ -44,9 +47,11 @@ class GroupsEnterpriseAttrs:
     restricted_to_workflows: Any = None
     # List of runner IDs to add to the runner group.
     runners: Any = None
+    # The real API URL for listing this runner group's own self-hosted runners. (AI-inferred)
     runners_url: Any = None
     # List of organization IDs that can access the runner group.
     selected_organization_ids: Any = None
+    # The real API URL for listing which organizations this runner group is selectively granted to. (AI-inferred)
     selected_organizations_url: Any = None
     # List of workflows the runner group should be allowed to run. This setting will be ignored unless `restricted_to_workflows` is set to `true`.
     selected_workflows: Any = None

@@ -11,18 +11,30 @@ type SimpleConfig struct {
 }
 
 type SimpleAttrs struct {
-	AvatarUrl        any
-	Description      any
-	EventsUrl        any
-	HooksUrl         any
-	Id               any
-	IssuesUrl        any
-	Login            any
-	MembersUrl       any
-	NodeId           any
+	// The URL of the organization's avatar image. (AI-inferred)
+	AvatarUrl any
+	// The description of the GitHub organization, as set by its administrators and returned by the GitHub API. (AI-inferred)
+	Description any
+	// The URL to retrieve the organization's public events. This is typically an API endpoint that returns a list of events associated with the organization. (AI-inferred)
+	EventsUrl any
+	// The URL of the organization's webhooks API endpoint, such as `https://api.github.com/orgs/:org/hooks`. (AI-inferred)
+	HooksUrl any
+	// The unique numeric identifier of the GitHub organization. (AI-inferred)
+	Id any
+	// The API URL that can be used to access issues associated with the organization. (AI-inferred)
+	IssuesUrl any
+	// The login name of the GitHub organization. (AI-inferred)
+	Login any
+	// The API URL that points to the list of members of this organization. (AI-inferred)
+	MembersUrl any
+	// The GraphQL node identifier for the organization. (AI-inferred)
+	NodeId any
+	// The URL to list public members of the organization. (AI-inferred)
 	PublicMembersUrl any
-	ReposUrl         any
-	Url              any
+	// The URL to the list of repositories belonging to the organization. (AI-inferred)
+	ReposUrl any
+	// The GitHub API URL for the organization. (AI-inferred)
+	Url any
 	// path parameter, not part of the API's own resource representation
 	Enterprise any
 	// path parameter, not part of the API's own resource representation

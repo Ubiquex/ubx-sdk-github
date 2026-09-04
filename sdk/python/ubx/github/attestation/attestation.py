@@ -8,15 +8,20 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class Attestation_Attestations_Bundle:
+    # The DSSE envelope containing the signed attestation payload. (AI-inferred)
     dsse_envelope: Any = None
+    # The media type of the attestation bundle, indicating the serialization format (e.g., application/vnd.dsse.envelope.v1+json). (AI-inferred)
     media_type: Any = None
+    # The verification material used to validate the attestation, including the signing certificate and signature. (AI-inferred)
     verification_material: Any = None
 
 @dataclasses.dataclass
 class Attestation_Attestations:
+    # The attestation bundle, which contains the signed DSSE envelope and verification material for the attestation. (AI-inferred)
     bundle: Any = None
     bundle_url: Any = None
     initiator: Any = None
+    # The numeric identifier of the GitHub repository associated with the attestation. (AI-inferred)
     repository_id: Any = None
 
 _Attestation_Attestations_BundleFields = {
@@ -38,6 +43,7 @@ class AttestationConfig:
 
 @dataclasses.dataclass
 class AttestationAttrs:
+    # The real attestations recorded for this subject. (AI-inferred)
     attestations: Any = None
     # The attestation's Sigstore Bundle. Refer to the [Sigstore Bundle Specification](https://github.com/sigstore/protobuf-specs/blob/main/protos/sigstore_bundle.proto) for more information.
     bundle: Any = None

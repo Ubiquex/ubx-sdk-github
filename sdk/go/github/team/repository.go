@@ -71,105 +71,173 @@ type RepositoryAttrs struct {
 	AllowRebaseMerge any
 	// Whether to allow squash merges for pull requests.
 	AllowSquashMerge any
-	ArchiveUrl       any
+	// The URL template for downloading a repository archive, with placeholders for archive format and reference. (AI-inferred)
+	ArchiveUrl any
 	// Whether the repository is archived.
-	Archived         any
-	AssigneesUrl     any
-	BlobsUrl         any
-	BranchesUrl      any
-	CloneUrl         any
+	Archived any
+	// The URL to the repository's assignees endpoint, optionally templated for a specific user (e.g., {/user}). (AI-inferred)
+	AssigneesUrl any
+	// The URL template for accessing blob objects in the repository's Git database, with a placeholder for the blob SHA (e.g., `http://api.github.com/repos/{owner}/{repo}/git/blobs{/sha}`). (AI-inferred)
+	BlobsUrl any
+	// The API endpoint URL for listing branches in this repository. (AI-inferred)
+	BranchesUrl any
+	// The HTTPS URL used to clone the repository. (AI-inferred)
+	CloneUrl any
+	// The URL to the collaborators endpoint for this repository, used to access the list of collaborators via the GitHub API. (AI-inferred)
 	CollaboratorsUrl any
-	CommentsUrl      any
-	CommitsUrl       any
-	CompareUrl       any
-	ContentsUrl      any
-	ContributorsUrl  any
-	CreatedAt        any
+	// The API URL template for retrieving repository comments, optionally including a comment number. Example: https://api.github.com/repos/{owner}/{repo}/comments{/number} (AI-inferred)
+	CommentsUrl any
+	// The API endpoint URL for accessing the repository's commits, including a template placeholder '{/sha}' for targeting individual commits. (AI-inferred)
+	CommitsUrl any
+	// The URL used to compare two revisions of the repository, such as branches or tags. (AI-inferred)
+	CompareUrl any
+	// The URL template to access repository contents via the GitHub API, with a placeholder for the file path (e.g., https://api.github.com/repos/{owner}/{repo}/contents/{+path}). (AI-inferred)
+	ContentsUrl any
+	// The API URL to retrieve the list of contributors for the repository. (AI-inferred)
+	ContributorsUrl any
+	// The system-generated timestamp of when the repository was created. (AI-inferred)
+	CreatedAt any
 	// The default branch of the repository.
 	DefaultBranch any
 	// Whether to delete head branches when pull requests are merged
 	DeleteBranchOnMerge any
-	DeploymentsUrl      any
-	Description         any
+	// The API endpoint URL for accessing and managing deployments of the repository. (AI-inferred)
+	DeploymentsUrl any
+	// A short description of the repository. Optional; if omitted, computed by GitHub. (AI-inferred)
+	Description any
 	// Returns whether or not this repository disabled.
-	Disabled      any
-	DownloadsUrl  any
-	EventsUrl     any
-	Fork          any
-	Forks         any
-	ForksCount    any
-	ForksUrl      any
-	FullName      any
+	Disabled any
+	// The API endpoint URL for the downloads associated with this repository. (AI-inferred)
+	DownloadsUrl any
+	// The URL to the events endpoint for the repository, providing information about repository events. (AI-inferred)
+	EventsUrl any
+	// Whether the repository is a fork of another repository. (AI-inferred)
+	Fork any
+	// The number of forks of this repository. (AI-inferred)
+	Forks any
+	// Number of forks of the repository. (AI-inferred)
+	ForksCount any
+	// The API URL for listing the forks of the repository. (AI-inferred)
+	ForksUrl any
+	// The full repository name in the format 'owner/name'. (AI-inferred)
+	FullName any
+	// The API URL template for accessing the repository's git commits, typically with an optional SHA placeholder. (AI-inferred)
 	GitCommitsUrl any
-	GitRefsUrl    any
-	GitTagsUrl    any
-	GitUrl        any
+	// The URL to the git refs endpoint for the repository. (AI-inferred)
+	GitRefsUrl any
+	// The URL to the repository's git tags. (AI-inferred)
+	GitTagsUrl any
+	// The git:// protocol URL for the repository, as returned by the GitHub API. (AI-inferred)
+	GitUrl any
 	// Whether downloads are enabled.
 	HasDownloads any
 	// Whether issues are enabled.
 	HasIssues any
-	HasPages  any
+	// Indicates whether GitHub Pages is enabled for this repository. (AI-inferred)
+	HasPages any
 	// Whether projects are enabled.
 	HasProjects any
 	// Whether the wiki is enabled.
-	HasWiki  any
+	HasWiki any
+	// A URL with more information about the repository. Optional; if omitted, computed by GitHub. (AI-inferred)
 	Homepage any
+	// The API endpoint URL for managing webhooks on the repository. (AI-inferred)
 	HooksUrl any
-	HtmlUrl  any
+	// The URL to the repository's HTML page on GitHub. (AI-inferred)
+	HtmlUrl any
 	// Unique identifier of the repository
 	Id any
 	// Whether this repository acts as a template that can be used to generate new repositories.
-	IsTemplate      any
+	IsTemplate any
+	// The API URL template for accessing issue comments in the repository, with a placeholder for the comment number. (AI-inferred)
 	IssueCommentUrl any
-	IssueEventsUrl  any
-	IssuesUrl       any
-	KeysUrl         any
-	LabelsUrl       any
-	Language        any
-	LanguagesUrl    any
+	// The API URL for events related to issues in the repository. This is a computed value provided by the GitHub API. (AI-inferred)
+	IssueEventsUrl any
+	// The URL to access the list of issues for this repository. (AI-inferred)
+	IssuesUrl any
+	// The API endpoint URL to retrieve the deploy keys for this repository. This field is computed and read-only. (AI-inferred)
+	KeysUrl any
+	// The URL to the labels in the repository, as provided by the GitHub API. (AI-inferred)
+	LabelsUrl any
+	// The primary language used in the repository. (AI-inferred)
+	Language any
+	// The API endpoint URL that returns the programming languages used in the repository, with the byte count for each language. (AI-inferred)
+	LanguagesUrl any
 	// License Simple
-	License       any
-	MasterBranch  any
-	MergesUrl     any
+	License any
+	// The name of the default branch of the repository, typically 'master' or 'main', as configured for the GitHub repository. (AI-inferred)
+	MasterBranch any
+	// The API endpoint URL for merging branches or pull requests in the repository. (AI-inferred)
+	MergesUrl any
+	// The API URL for the milestones of this repository. (AI-inferred)
 	MilestonesUrl any
-	MirrorUrl     any
+	// The URL of the original repository if this repository is a mirror; otherwise, null. This value is set by GitHub. (AI-inferred)
+	MirrorUrl any
 	// The name of the repository.
-	Name             any
-	NetworkCount     any
-	NodeId           any
+	Name any
+	// The number of forks of the repository. (AI-inferred)
+	NetworkCount any
+	// A stable, unique identifier for the repository, generated by GitHub and used to reference the repository in the GraphQL API. (AI-inferred)
+	NodeId any
+	// The URL to the repository's notifications API endpoint. (AI-inferred)
 	NotificationsUrl any
-	OpenIssues       any
-	OpenIssuesCount  any
+	// The number of open issues currently tracked in the repository. (AI-inferred)
+	OpenIssues any
+	// The number of open issues in the repository, as reported by the GitHub API. (AI-inferred)
+	OpenIssuesCount any
 	// A GitHub user.
 	Owner any
 	// The permission to grant the team on this repository. We accept the following permissions to be set: `pull`, `triage`, `push`, `maintain`, `admin` and you can also specify a custom repository role name, if the owning organization has defined any. If no permission is specified, the team's `permission` attribute will be used to determine what permission to grant the team on this repository.
-	Permission  any
+	Permission any
+	// The repository permissions object contains boolean flags indicating the level of access the authenticated user has for the repository, such as 'admin', 'push', and 'pull'. (AI-inferred)
 	Permissions any
 	// Whether the repository is private or public.
-	Private          any
-	PullsUrl         any
-	PushedAt         any
-	ReleasesUrl      any
-	RoleName         any
-	Size             any
-	SshUrl           any
-	StargazersCount  any
-	StargazersUrl    any
-	StatusesUrl      any
+	Private any
+	// The API URL for pull requests in this repository (e.g., https://api.github.com/repos/{owner}/{repo}/pulls{/number}). (AI-inferred)
+	PullsUrl any
+	// The timestamp of the last push to the repository, in ISO 8601 format. (AI-inferred)
+	PushedAt any
+	// URL template for accessing the releases of the repository. It may include a placeholder for a specific release ID and is intended for use with API requests. (AI-inferred)
+	ReleasesUrl any
+	// The real name of the permission role granted here. (AI-inferred)
+	RoleName any
+	// The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0. (AI-inferred)
+	Size any
+	// The URL to clone the repository over SSH. (AI-inferred)
+	SshUrl any
+	// The number of users who have starred the repository on GitHub. (AI-inferred)
+	StargazersCount any
+	// The URL to the GitHub API endpoint that lists the users who have starred this repository. (AI-inferred)
+	StargazersUrl any
+	// The URL template for the commit statuses of the repository, with the placeholder {sha} to be replaced by a specific commit SHA. (AI-inferred)
+	StatusesUrl any
+	// The number of subscribers (users who have subscribed to repository notifications) for this GitHub repository. This is a computed value provided by the GitHub API. (AI-inferred)
 	SubscribersCount any
-	SubscribersUrl   any
-	SubscriptionUrl  any
-	SvnUrl           any
-	TagsUrl          any
-	TeamsUrl         any
-	TempCloneToken   any
-	Topics           any
-	TreesUrl         any
-	UpdatedAt        any
-	Url              any
+	// URL to retrieve the list of users who have subscribed to (watching) this repository. (AI-inferred)
+	SubscribersUrl any
+	// The API URL to subscribe to notifications for this repository. (AI-inferred)
+	SubscriptionUrl any
+	// The URL to access the repository through Subversion (SVN), e.g., https://github.com/owner/repo. (AI-inferred)
+	SvnUrl any
+	// The URL to fetch the repository's tags via the GitHub API. (AI-inferred)
+	TagsUrl any
+	// The API URL for the teams associated with this repository. (AI-inferred)
+	TeamsUrl any
+	// A temporary token that can be used to clone the repository. (AI-inferred)
+	TempCloneToken any
+	// The list of topic names associated with the repository. (AI-inferred)
+	Topics any
+	// URL template for the repository's git trees, used to access tree objects. Contains a placeholder for the tree SHA. (AI-inferred)
+	TreesUrl any
+	// The timestamp of when the repository was last updated, in ISO 8601 format. This value is set by the system and cannot be modified. (AI-inferred)
+	UpdatedAt any
+	// The GitHub API URL for the repository (e.g., https://api.github.com/repos/owner/repo). This field is computed and read-only. (AI-inferred)
+	Url any
 	// The repository visibility: public, private, or internal.
-	Visibility    any
-	Watchers      any
+	Visibility any
+	// The number of users who are watching the repository, i.e., have subscribed to receive notifications for activity in the repository. This is a computed, read-only field. (AI-inferred)
+	Watchers any
+	// The number of users who are watching the repository (i.e., subscribed to receive notifications about it). This is typically equal to the repository's subscribers count. (AI-inferred)
 	WatchersCount any
 	// Whether to require contributors to sign off on web-based commits
 	WebCommitSignoffRequired any

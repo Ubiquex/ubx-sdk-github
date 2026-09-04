@@ -7,50 +7,84 @@ export interface Comment_Minimized {
 }
 
 export interface Comment_PerformedViaGithubApp_Owner {
+  /** The URL of the avatar image for the owner of the GitHub App that performed the comment. (AI-inferred) */
   avatarUrl?: string | Computed<string>;
+  /** The timestamp of when the GitHub App owner account was created, in ISO 8601 format (e.g., '2011-01-26T19:01:12Z'). (AI-inferred) */
   createdAt?: string | Computed<string>;
+  /** The description of the organization that owns the GitHub App which performed the action. This field is typically populated when the owner is an organization. (AI-inferred) */
   description?: string | Computed<string>;
+  /** The public email address of the owner of the GitHub App, if configured. This may be null if no public email is set. (AI-inferred) */
   email?: string | Computed<string>;
+  /** URL to the events of the owner (user or organization) of the GitHub App. (AI-inferred) */
   eventsUrl?: string | Computed<string>;
+  /** The URL to the API endpoint that lists this user's followers. (AI-inferred) */
   followersUrl?: string | Computed<string>;
+  /** The URL to retrieve the list of users this owner follows. In the GitHub API, this is typically a templated URL like 'https://api.github.com/users/{username}/following'. (AI-inferred) */
   followingUrl?: string | Computed<string>;
+  /** The URL to the gists list for the GitHub user, typically in the format https://api.github.com/users/{username}/gists{/gist_id}. (AI-inferred) */
   gistsUrl?: string | Computed<string>;
+  /** The Gravatar ID for the owner's avatar, a hash used to retrieve the avatar from Gravatar. (AI-inferred) */
   gravatarId?: string | Computed<string>;
+  /** The URL to the GitHub profile of the owner (a user or organization) of the GitHub App that performed the comment. (AI-inferred) */
   htmlUrl?: string | Computed<string>;
   id?: number | Computed<number>;
+  /** The GitHub username or organization name of the owner of the GitHub App that performed the action. (AI-inferred) */
   login?: string | Computed<string>;
+  /** The display name of the GitHub App's owner, which can be a user or an organization. (AI-inferred) */
   name?: string | Computed<string>;
+  /** The GraphQL node identifier for the owner (user or organization) of the GitHub App that performed the comment. (AI-inferred) */
   nodeId?: string | Computed<string>;
+  /** The API URL to the list of organizations that the owner belongs to, as defined by the GitHub API. (AI-inferred) */
   organizationsUrl?: string | Computed<string>;
+  /** The URL to retrieve events received by this user (the owner of the GitHub App). (AI-inferred) */
   receivedEventsUrl?: string | Computed<string>;
+  /** The URL to the list of repositories owned by this owner. (AI-inferred) */
   reposUrl?: string | Computed<string>;
+  /** Whether the user is a site administrator for the GitHub instance. (AI-inferred) */
   siteAdmin?: boolean | Computed<boolean>;
+  /** The slug of the owner of the GitHub App that performed the comment. (AI-inferred) */
   slug?: string | Computed<string>;
   starredAt?: string | Computed<string>;
+  /** The URL template for listing repositories starred by the owner of the GitHub App, typically in the form `https://api.github.com/users/{owner}/starred{/owner}{/repo}`. (AI-inferred) */
   starredUrl?: string | Computed<string>;
+  /** The API URL for subscribing to notifications for the owner (user or organization) of the GitHub App. (AI-inferred) */
   subscriptionsUrl?: string | Computed<string>;
+  /** The type of the owner account associated with the GitHub App, indicating whether it is a user or an organization. (AI-inferred) */
   type?: string | Computed<string>;
+  /** The date and time at which the owner of the GitHub App that performed the comment was last updated. (AI-inferred) */
   updatedAt?: string | Computed<string>;
+  /** The GitHub API URL for the user or organization that owns the GitHub App. (AI-inferred) */
   url?: string | Computed<string>;
   userViewType?: string | Computed<string>;
+  /** The website URL of the user or organization that owns the GitHub App. (AI-inferred) */
   websiteUrl?: string | Computed<string>;
 }
 
 export interface Comment_PerformedViaGithubApp_Permissions {
+  /** The level of permission for check runs and check suites. Allowed values are 'read', 'write', or 'none'. (AI-inferred) */
   checks?: string | Computed<string>;
+  /** The level of permission the GitHub App has for repository contents, such as 'read' or 'write'. (AI-inferred) */
   contents?: string | Computed<string>;
+  /** The level of permission the GitHub App has for the Deployments API. Typical values are 'read', 'write', or 'none'. (AI-inferred) */
   deployments?: string | Computed<string>;
+  /** The permission level for issues granted to the GitHub App. Possible values are 'read', 'write', or 'admin'. (AI-inferred) */
   issues?: string | Computed<string>;
+  /** The permission level for metadata access for this GitHub App. (AI-inferred) */
   metadata?: string | Computed<string>;
 }
 
 export interface Comment_PerformedViaGithubApp {
+  /** The client ID of the GitHub App that performed the comment. (AI-inferred) */
   clientId?: string | Computed<string>;
+  /** The date and time the GitHub App was created, in ISO 8601 format. (AI-inferred) */
   createdAt: string | Computed<string>;
+  /** The description of the GitHub App that performed the comment. (AI-inferred) */
   description: string | Computed<string>;
   /** The list of events for the GitHub app. Note that the `installation_target`, `security_advisory`, and `meta` events are not included because they are global events and not specific to an installation. */
   events: string[] | Computed<string[]>;
+  /** The URL to the GitHub App's external website. (AI-inferred) */
   externalUrl: string | Computed<string>;
+  /** The URL to the GitHub App's page on GitHub. (AI-inferred) */
   htmlUrl: string | Computed<string>;
   /** Unique identifier of the GitHub app */
   id: number | Computed<number>;
@@ -58,54 +92,85 @@ export interface Comment_PerformedViaGithubApp {
   installationsCount?: number | Computed<number>;
   /** The name of the GitHub app */
   name: string | Computed<string>;
+  /** The GraphQL node ID of the GitHub App that performed the issue comment. (AI-inferred) */
   nodeId: string | Computed<string>;
+  /** The user or organization that owns the GitHub App that performed the comment. (AI-inferred) */
   owner: Comment_PerformedViaGithubApp_Owner | Computed<Comment_PerformedViaGithubApp_Owner>;
   /** The set of permissions for the GitHub app */
   permissions: Comment_PerformedViaGithubApp_Permissions | Computed<Comment_PerformedViaGithubApp_Permissions>;
   /** The slug name of the GitHub app */
   slug?: string | Computed<string>;
+  /** The timestamp of the last update to the GitHub App that performed the comment, in ISO 8601 format (e.g., YYYY-MM-DDTHH:MM:SSZ). (AI-inferred) */
   updatedAt: string | Computed<string>;
 }
 
 export interface Comment_Pin_PinnedBy {
+  /** The URL of the avatar image for the user who pinned the comment. (AI-inferred) */
   avatarUrl: string | Computed<string>;
+  /** Email address of the user who pinned the comment, if publicly available. (AI-inferred) */
   email?: string | Computed<string>;
+  /** The URL to the user's public events on GitHub, as an API endpoint for fetching the events performed by the user. (AI-inferred) */
   eventsUrl: string | Computed<string>;
+  /** The URL to retrieve the list of followers of the pinned user via the GitHub API. (AI-inferred) */
   followersUrl: string | Computed<string>;
+  /** The URL to this user's following list, providing the API endpoint for the users they follow. (AI-inferred) */
   followingUrl: string | Computed<string>;
+  /** URL to the user's gists list. (AI-inferred) */
   gistsUrl: string | Computed<string>;
+  /** The user's Gravatar ID, used to construct the avatar URL. Deprecated in favor of avatar_url in the user object. (AI-inferred) */
   gravatarId: string | Computed<string>;
+  /** The URL of the GitHub profile for the user who pinned the comment. (AI-inferred) */
   htmlUrl: string | Computed<string>;
+  /** The unique identifier of the user who pinned the issue comment. (AI-inferred) */
   id: number | Computed<number>;
+  /** The GitHub username of the user who pinned the issue comment. This field is required and always present. (AI-inferred) */
   login: string | Computed<string>;
+  /** The display name of the user who pinned the comment. (AI-inferred) */
   name?: string | Computed<string>;
+  /** The GraphQL node identifier for the user who pinned the issue comment, used as a unique identifier in GitHub's GraphQL API. (AI-inferred) */
   nodeId: string | Computed<string>;
+  /** The API endpoint URL for the list of organizations that the user belongs to, as provided in the GitHub user object. (AI-inferred) */
   organizationsUrl: string | Computed<string>;
+  /** The URL to the user's received events endpoint on GitHub, which returns events that have been delivered to the user. (AI-inferred) */
   receivedEventsUrl: string | Computed<string>;
+  /** URL to the GitHub API endpoint listing the repositories of the user who pinned the comment. (AI-inferred) */
   reposUrl: string | Computed<string>;
+  /** Indicates whether the user who pinned the comment has GitHub site administrator privileges. (AI-inferred) */
   siteAdmin: boolean | Computed<boolean>;
   starredAt?: string | Computed<string>;
   starredUrl: string | Computed<string>;
+  /** The URL to the API endpoint listing the subscriptions of the user or organization. (AI-inferred) */
   subscriptionsUrl: string | Computed<string>;
+  /** The type of GitHub account that pinned the comment, such as 'User' or 'Bot'. (AI-inferred) */
   type: string | Computed<string>;
+  /** The URL of the user who pinned the issue comment. (AI-inferred) */
   url: string | Computed<string>;
   userViewType?: string | Computed<string>;
 }
 
 export interface Comment_Pin {
+  /** The timestamp when the issue comment was pinned. (AI-inferred) */
   pinnedAt: string | Computed<string>;
   /** A GitHub user. */
   pinnedBy: Comment_Pin_PinnedBy | Computed<Comment_Pin_PinnedBy>;
 }
 
 export interface Comment_Reactions {
+  /** Number of confused reactions on the GitHub issue comment. (AI-inferred) */
   confused: number | Computed<number>;
+  /** The number of "eyes" reactions (👀) on the comment. (AI-inferred) */
   eyes: number | Computed<number>;
+  /** The number of heart reactions on the issue comment. (AI-inferred) */
   heart: number | Computed<number>;
+  /** The number of 'hooray' reactions (🎉) on the GitHub issue comment. (AI-inferred) */
   hooray: number | Computed<number>;
+  /** The number of laugh reactions on the issue comment. (AI-inferred) */
   laugh: number | Computed<number>;
+  /** The number of rocket reactions (🚀) on the comment. (AI-inferred) */
   rocket: number | Computed<number>;
+  /** The total number of reactions on the issue comment, summing across all reaction types. (AI-inferred) */
   totalCount: number | Computed<number>;
+  /** The REST API URL to retrieve the list of reactions for this comment. (AI-inferred) */
   url: string | Computed<string>;
 }
 
@@ -123,21 +188,29 @@ export interface CommentAttrs {
   authorAssociation: string;
   /** Contents of the issue comment */
   body: string;
+  /** The rendered HTML of the issue comment body. (AI-inferred) */
   bodyHtml: string;
+  /** The plain text version of the comment body, with markdown formatting removed. (AI-inferred) */
   bodyText: string;
+  /** The timestamp of when the issue comment was created, in ISO 8601 format (e.g., 2023-04-01T12:00:00Z). (AI-inferred) */
   createdAt: string;
+  /** The URL of the issue comment on GitHub. (AI-inferred) */
   htmlUrl: string;
   /** Unique identifier of the issue comment */
   id: number;
+  /** The URL of the issue comment on GitHub. (AI-inferred) */
   issueUrl: string;
   /** Details about why an issue comment was minimized. */
   minimized: Comment_Minimized;
+  /** The GraphQL Node ID of the issue comment, useful for API interactions. (AI-inferred) */
   nodeId: string;
   /** GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub. */
   performedViaGithubApp: Comment_PerformedViaGithubApp;
   /** Context around who pinned an issue comment and when it was pinned. */
   pin: Comment_Pin;
+  /** The reactions summary for the issue comment, providing counts for each reaction type (e.g., +1, -1, laugh, hooray, confused, heart, rocket, eyes) and a total count. (AI-inferred) */
   reactions: Comment_Reactions;
+  /** The time at which the comment was last modified, as a string. Because this field is computed, it is always provided by the system and cannot be set by users. (AI-inferred) */
   updatedAt: string;
   /** URL for the issue comment */
   url: string;

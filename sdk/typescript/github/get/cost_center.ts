@@ -37,6 +37,7 @@ export interface CostCenterAttrs {
   id: string;
   /** The name of the cost center (max length 255 characters) */
   name: string;
+  /** The real users and repositories billed against this cost center. (AI-inferred) */
   resources: CostCenter_Resources[];
   /** State of the cost center. */
   state: string;

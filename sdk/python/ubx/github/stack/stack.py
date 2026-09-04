@@ -8,6 +8,7 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class Stack_Base:
+    # The git reference (branch, tag, or commit SHA) to use as the base for the stack. (AI-inferred)
     ref: Any = None
 
 @dataclasses.dataclass
@@ -24,14 +25,19 @@ class StackConfig:
 @dataclasses.dataclass
 class StackAttrs:
     base: Any = None
+    # The real timestamp this object was created. (AI-inferred)
     created_at: Any = None
+    # The real, numeric, globally unique identifier for this object. (AI-inferred)
     id: Any = None
+    # The GraphQL node ID of the GitHub stack. (AI-inferred)
     node_id: Any = None
+    # This stacked change's own real, repository-scoped number. (AI-inferred)
     number: Any = None
     # Whether the stack has any open pull request. False when all pull requests are merged or closed.
     open: Any = None
     # An ordered list of pull request numbers forming the stack from bottom to top.
     pull_requests: Any = None
+    # The real, canonical API URL for this object. (AI-inferred)
     url: Any = None
     # path parameter, not part of the API's own resource representation
     owner: Any = None

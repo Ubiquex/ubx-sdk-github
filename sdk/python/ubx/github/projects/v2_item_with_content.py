@@ -8,27 +8,47 @@ import ubx_sdk as ubx
 
 @dataclasses.dataclass
 class V2ItemWithContent_Creator:
+    # The URL of the avatar image for the user who created the item. (AI-inferred)
     avatar_url: Any = None
+    # The email address of the creator of the project item, if available. (AI-inferred)
     email: Any = None
+    # The URL to retrieve events for this creator user via the GitHub REST API. (AI-inferred)
     events_url: Any = None
+    # The URL to the follower list of the user (the creator of the project item). This is a standard GitHub API field, typically formatted as a URL template. (AI-inferred)
     followers_url: Any = None
+    # The URL template for the list of users that the creator follows, with a placeholder for the target user if checking a specific follow relationship. (AI-inferred)
     following_url: Any = None
+    # The URL to the user's gists list, optionally with a gist ID to access a specific gist. (AI-inferred)
     gists_url: Any = None
+    # The Gravatar identifier for the user, used to construct an avatar image URL. (AI-inferred)
     gravatar_id: Any = None
+    # The HTML URL of the creator's GitHub profile page. (AI-inferred)
     html_url: Any = None
+    # The unique identifier of the user who created the Projects v2 item. (AI-inferred)
     id: Any = None
+    # The GitHub username of the creator. (AI-inferred)
     login: Any = None
+    # The display name of the creator (user or bot) of the project item. This field is optional. (AI-inferred)
     name: Any = None
+    # The node_id of the creator, a unique identifier assigned by GitHub for use with the GraphQL API. (AI-inferred)
     node_id: Any = None
+    # The API URL to list the organizations that the creator belongs to. (AI-inferred)
     organizations_url: Any = None
+    # The URL to the GitHub API endpoint that returns the events received by the creator (the user) of the Projects v2 item. (AI-inferred)
     received_events_url: Any = None
+    # The URL to the user's repositories. (AI-inferred)
     repos_url: Any = None
+    # Whether the creator is a GitHub site administrator. (AI-inferred)
     site_admin: Any = None
     starred_at: Any = None
+    # The URL template for listing repositories starred by this user. Includes `{owner}` and `{repo}` placeholders for accessing a specific starred repository. (AI-inferred)
     starred_url: Any = None
+    # The URL to retrieve the subscriptions of the creator (user), typically in the format https://api.github.com/users/{username}/subscriptions. (AI-inferred)
     subscriptions_url: Any = None
     type: Any = None
+    # The GitHub profile URL of the creator of the project v2 item. (AI-inferred)
     url: Any = None
+    # The user's membership type in the organization, either 'public' or 'private'. (AI-inferred)
     user_view_type: Any = None
 
 @dataclasses.dataclass

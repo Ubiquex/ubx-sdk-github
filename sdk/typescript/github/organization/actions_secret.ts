@@ -17,6 +17,7 @@ export interface ActionsSecretConfig {
 }
 
 export interface ActionsSecretAttrs {
+  /** The date and time at which the variable was created, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ. (AI-inferred) */
   createdAt: string;
   /** Value for your secret, encrypted with [LibSodium](https://libsodium.gitbook.io/doc/bindings_for_other_languages) using the public key retrieved from the [Get an organization public key](https://docs.github.com/enterprise-cloud@latest/rest/actions/secrets#get-an-organization-public-key) endpoint. */
   encryptedValue: string;
@@ -24,9 +25,11 @@ export interface ActionsSecretAttrs {
   keyId: string;
   /** The name of the secret. */
   name: string;
+  /** API URL listing the repositories this organization-level Actions variable is selectively exposed to. (AI-inferred) */
   selectedRepositoriesUrl: string;
   /** An array of repository ids that can access the organization secret. You can only provide a list of repository ids when the `visibility` is set to `selected`. You can manage the list of selected repositories using the [List selected repositories for an organization secret](https://docs.github.com/enterprise-cloud@latest/rest/actions/secrets#list-selected-repositories-for-an-organization-secret), [Set selected repositories for an organization secret](https://docs.github.com/enterprise-cloud@latest/rest/actions/secrets#set-selected-repositories-for-an-organization-secret), and [Remove selected repository from an organization secret](https://docs.github.com/enterprise-cloud@latest/rest/actions/secrets#remove-selected-repository-from-an-organization-secret) endpoints. */
   selectedRepositoryIds: number[];
+  /** The date and time at which the variable was last updated, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ. (AI-inferred) */
   updatedAt: string;
   /** Which type of organization repositories have access to the organization secret. `selected` means only the repositories specified by `selected_repository_ids` can access the secret. */
   visibility: string;
