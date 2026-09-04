@@ -132,6 +132,9 @@
   "github_branch_with_protection": {
    "label": "Repositories"
   },
+  "github_build": {
+   "label": "Repositories"
+  },
   "github_budget": {
    "label": "Billing"
   },
