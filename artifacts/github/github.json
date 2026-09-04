@@ -8,6 +8,7 @@
     "updated_at": "The real timestamp this object was last updated."
   },
   "github_attestation": {
+    "attestations": "The real attestations recorded for this subject.",
     "attestations.bundle": "The attestation bundle, which contains the signed DSSE envelope and verification material for the attestation.",
     "attestations.bundle.dsse_envelope": "The DSSE envelope containing the signed attestation payload.",
     "attestations.bundle.media_type": "The media type of the attestation bundle, indicating the serialization format (e.g., application/vnd.dsse.envelope.v1+json).",
@@ -597,7 +598,9 @@
     "before": "The SHA of the commit that preceded the push that triggered this check suite. This is only populated for check suites triggered by push events.",
     "check_runs_url": "The URL to retrieve the check runs associated with this check suite.",
     "conclusion": "The final conclusion of the check suite after all check runs complete. Can be one of success, failure, neutral, cancelled, skipped, timed_out, action_required, startup_failure, or stale.",
+    "created_at": "The real timestamp this object was created.",
     "head_branch": "The branch name that the head commit of the check suite is on. This value is set by GitHub.",
+    "id": "The real, numeric, globally unique identifier for this object.",
     "latest_check_runs_count": "The number of check runs in the latest check suite.",
     "node_id": "The GraphQL node identifier for the check suite.",
     "pull_requests": "The list of pull requests that match the check suite's head_sha and head_branch.",
@@ -858,6 +861,7 @@
     "billable_owner.subscriptions_url": "The URL to the subscriptions of the billable owner associated with the codespace.",
     "billable_owner.url": "The API resource URL for the billable owner of the codespace, typically the GitHub user or organization that will be billed.",
     "created_at": "The timestamp indicating when the codespace was created.",
+    "id": "The real, numeric, globally unique identifier for this object.",
     "owner.avatar_url": "The URL of the avatar image for the owner (a user or organization) of the codespace.",
     "owner.email": "The email address of the owner of the codespace.",
     "owner.events_url": "The URL to the owner's public events.",
@@ -1105,6 +1109,7 @@
     "commit_id": "The SHA of the commit that this comment is associated with.",
     "created_at": "The timestamp of when the commit comment was created, in ISO 8601 format (e.g., 2025-01-01T12:00:00Z).",
     "html_url": "The HTML URL of the commit comment.",
+    "id": "The real, numeric, globally unique identifier for this object.",
     "node_id": "The unique identifier assigned to the commit comment by GitHub's GraphQL API.",
     "reactions": "The reactions summary for the commit comment, containing counts for each reaction type (e.g., +1, -1, laugh, hooray, confused, heart, rocket, eyes), a total count, and a URL to fetch detailed reaction information.",
     "reactions.confused": "Number of confused reactions on the commit comment.",
@@ -1177,6 +1182,9 @@
     "resources_attributes.metadata.repository_id": "The unique numeric identifier of the repository associated with this metadata.",
     "resources_attributes.resource_type": "Specifies the type of resource, which determines how the resource content is interpreted. Allowed values: repository, github_file, free_text, github_issue, github_pull_request, media_content, uploaded_text_file."
   },
+  "github_dependabot_alert_dismissal_request": {
+    "url": "The real, canonical API URL for this object."
+  },
   "github_dependabot_secret": {
     "created_at": "The real timestamp this object was created.",
     "updated_at": "The real timestamp this object was last updated."
@@ -1184,6 +1192,8 @@
   "github_deploy_key": {
     "added_by": "The GitHub user who added this deploy key to the repository.",
     "created_at": "The timestamp of when the deploy key was created, in ISO 8601 format (e.g., YYYY-MM-DDTHH:MM:SSZ).",
+    "enabled": "Whether this deploy key is currently active.",
+    "id": "The real, numeric, globally unique identifier for this object.",
     "last_used": "The timestamp of when the deploy key was last used, as a string.",
     "url": "The API URL for this deploy key.",
     "verified": "A boolean flag indicating whether the deploy key has been verified by GitHub."
@@ -1334,6 +1344,15 @@
     "updated_at": "Automatically generated timestamp indicating the last time the team was updated. Computed by GitHub after `ship`.",
     "url": "The GitHub API URL for this team. Computed by GitHub after `ship`."
   },
+  "github_enterprise_team_with_member_count": {
+    "created_at": "The real timestamp this object was created.",
+    "html_url": "The real, browsable URL for this enterprise team.",
+    "id": "The real, numeric, globally unique identifier for this object.",
+    "members_url": "The real API URL template for listing this enterprise team's own members.",
+    "slug": "This enterprise team's own real, URL-safe identifier.",
+    "updated_at": "The real timestamp this object was last updated.",
+    "url": "The real, canonical API URL for this object."
+  },
   "github_environment": {
     "html_url": "The URL to view the environment in the GitHub web interface.",
     "node_id": "The GraphQL node ID of the environment, used to identify it in GitHub's GraphQL API.",
@@ -1381,7 +1400,8 @@
     "protection_rules.type": "The type of protection rule applied to the environment, indicating the kind of rule (e.g., required reviewers, wait timer).",
     "protection_rules.wait_timer": "Number of minutes to wait before the environment can be used, as configured in the environment's protection rules.",
     "reviewers.id": "The unique identifier of an environment reviewer.",
-    "reviewers.type": "The type of reviewer, either 'User' or 'Team'."
+    "reviewers.type": "The type of reviewer, either 'User' or 'Team'.",
+    "url": "The real, canonical API URL for this object."
   },
   "github_full_repository": {
     "allow_forking": "Whether users can fork the repository. This value is computed and read-only, taken from the repository's current settings.",
@@ -1813,8 +1833,20 @@
     "watchers_count": "The number of users who are watching the repository (i.e., subscribed to receive notifications about it). This is typically equal to the repository's subscribers count.",
     "web_commit_signoff_required": "Indicates whether the repository requires contributors to sign off on web-based commits. When true, commits made through the GitHub web interface must include a 'Signed-off-by' trailer."
   },
+  "github_get_audit_log_stream_config": {
+    "created_at": "The real timestamp this object was created.",
+    "id": "The real, numeric, globally unique identifier for this object.",
+    "paused_at": "When this audit log streaming configuration was paused, if it currently is.",
+    "stream_details": "This audit log stream's own real, provider-specific delivery configuration.",
+    "updated_at": "The real timestamp this object was last updated.",
+    "vendor_specific": "Real, vendor-specific configuration fields for this audit log streaming destination."
+  },
+  "github_get_cost_center": {
+    "resources": "The real users and repositories billed against this cost center."
+  },
   "github_gist_comment": {
     "created_at": "The timestamp of when the comment was created, in ISO 8601 format (e.g., 2024-01-01T00:00:00Z).",
+    "id": "The real, numeric, globally unique identifier for this object.",
     "node_id": "The GraphQL node identifier for the gist comment.",
     "updated_at": "The timestamp of the last update to the gist comment, in ISO 8601 format.",
     "url": "The URL of the GitHub gist comment.",
@@ -2065,6 +2097,7 @@
     "emails.email": "The email address associated with the GPG key.",
     "emails.verified": "Indicates whether the email address associated with the GPG key is verified on the GitHub account.",
     "expires_at": "The date and time when the GPG key expires, in ISO 8601 format (e.g., YYYY-MM-DDTHH:MM:SSZ). This field is computed by GitHub and may be null if the key does not expire.",
+    "id": "The real, numeric, globally unique identifier for this object.",
     "key_id": "The GPG key ID as returned by the GitHub API.",
     "primary_key_id": "The unique identifier for the primary key associated with this GPG key.",
     "public_key": "The ASCII-armored public key content for the GPG key.",
@@ -2087,7 +2120,7 @@
     "subkeys.subkeys": "A list of subkeys associated with this GPG key. Each subkey is an object that includes its own key ID, public key, and permission flags for signing, encryption, and certification."
   },
   "github_hook": {
-    "config.insecure_ssl": "Controls whether GitHub disables SSL verification when delivering webhook payloads. Accepts '0' or false to enable verification, and '1' or true to allow insecure connections (e.g., self-signed certificates).",
+    "config.insecure_ssl": "Controls whether GitHub disables SSL verification when delivering webhook payloads. Accepts '0' or false to enable verification, and '1' or true to allow insecure connections (e.g., self-signed certificates). Optional.",
     "created_at": "The timestamp indicating when the webhook was created, in ISO 8601 format.",
     "deliveries_url": "The URL to the API endpoint for listing deliveries of this webhook.",
     "last_response": "The last response received from the webhook's target URL, providing status and message from the most recent delivery.",
@@ -2099,6 +2132,23 @@
     "type": "The type of the hook, which is always 'Repository' for a repository-level hook.",
     "updated_at": "The timestamp indicating when the GitHub hook was last updated.",
     "url": "The URL of the webhook in the GitHub API."
+  },
+  "github_installation": {
+    "access_tokens_url": "The real API URL for generating an access token for this GitHub App installation.",
+    "account": "The real user or organization this GitHub App is installed on.",
+    "app_id": "The real GitHub App this installation belongs to.",
+    "app_slug": "This GitHub App's own real, URL-safe identifier.",
+    "contact_email": "The real contact email address on file for this installation, if any.",
+    "created_at": "The real timestamp this object was created.",
+    "events": "The real webhook events this installation is subscribed to.",
+    "has_multiple_single_files": "Whether this installation is restricted to multiple, individually-selected files.",
+    "html_url": "The real, browsable URL for this installation.",
+    "repositories_url": "The real API URL for listing this installation's own accessible repositories.",
+    "single_file_name": "The real, single file name this installation is restricted to, if any.",
+    "single_file_paths": "The real file paths this installation is restricted to, if any.",
+    "suspended_at": "When this installation was suspended, if it currently is.",
+    "target_type": "Whether this installation targets a user or an organization.",
+    "updated_at": "The real timestamp this object was last updated."
   },
   "github_issue": {
     "active_lock_reason": "The reason the issue is locked, if applicable. Possible values are `off-topic`, `too heated`, `resolved`, and `spam`.",
@@ -2132,6 +2182,8 @@
     "draft": "A boolean indicating whether the issue is a draft. Draft issues are hidden from non-collaborators and are not ready for review.",
     "events_url": "The URL to retrieve the events associated with this issue, such as labeling, closing, or reopening.",
     "html_url": "The URL to view the issue on GitHub's website.",
+    "id": "The real, numeric, globally unique identifier for this object.",
+    "issue_dependencies_summary": "The real count of this issue's own blocking and blocked-by dependencies.",
     "issue_dependencies_summary.blocked_by": "The number of issues that are blocking this issue, i.e., the count of dependencies that must be resolved before this issue can be completed.",
     "issue_dependencies_summary.blocking": "The number of issues whose implementation is blocked by this issue, based on declared issue dependencies.",
     "issue_dependencies_summary.total_blocked_by": "The total number of issues that this issue is blocked by.",
@@ -2511,6 +2563,7 @@
   },
   "github_key": {
     "created_at": "The date and time when the key was created, in ISO 8601 format (e.g., 2023-01-01T12:00:00Z). This timestamp is set by the GitHub API upon key creation.",
+    "id": "The real, numeric, globally unique identifier for this object.",
     "last_used": "The date and time when this GitHub key was last used for authentication.",
     "read_only": "Indicates whether the key is read-only (true) or has read/write access (false).",
     "url": "The GitHub API URL for this SSH key.",
@@ -2522,6 +2575,8 @@
   "github_migration": {
     "archive_url": "The URL at which the migration archive can be downloaded. This value is computed and only available after the migration completes.",
     "created_at": "The timestamp for when the GitHub migration was created.",
+    "guid": "The real, globally unique identifier for this migration.",
+    "id": "The real, numeric, globally unique identifier for this object.",
     "node_id": "The GraphQL node identifier for this migration, used to access it via the GitHub GraphQL API.",
     "owner.avatar_url": "The URL of the avatar image for the owner of the GitHub migration.",
     "owner.events_url": "URL to the events of the owner (user or organization), as provided by the GitHub API.",
@@ -2543,6 +2598,8 @@
     "owner.type": "The type of the GitHub account that owns the migration, such as 'User' or 'Organization'.",
     "owner.url": "The URL to the owner's GitHub API resource for the migration, such as an organization or user.",
     "repositories": "The list of repositories to include in the migration. Each item typically identifies a repository (e.g., in 'owner/name' format) that will be migrated.",
+    "state": "The real, current state of this object.",
+    "updated_at": "The real timestamp this object was last updated.",
     "url": "The GitHub API URL for this migration."
   },
   "github_milestone": {
@@ -2570,6 +2627,7 @@
     "creator.type": "The type of GitHub account that created the milestone, such as 'User' or 'Organization'.",
     "creator.url": "The URL of the creator's GitHub profile.",
     "html_url": "The URL to view the milestone on GitHub.",
+    "id": "The real, numeric, globally unique identifier for this object.",
     "labels_url": "The API URL for the labels associated with this milestone.",
     "node_id": "The node ID of the milestone, used for GraphQL API operations.",
     "open_issues": "The number of open issues associated with this milestone.",
@@ -2577,9 +2635,10 @@
     "url": "The API URL for the milestone, e.g., https://api.github.com/repos/{owner}/{repo}/milestones/{number}."
   },
   "github_org_hook": {
-    "config.insecure_ssl": "Controls whether SSL verification is enabled for webhook deliveries. Set to '1' or true to ignore SSL certificate errors, or '0' or false to require valid certificates. Accepts both boolean and string values due to its dynamic type.",
+    "config.insecure_ssl": "Controls whether SSL verification is enabled for webhook deliveries. Set to '1' or true to ignore SSL certificate errors, or '0' or false to require valid certificates. Accepts both boolean and string values due to its dynamic type. Optional.",
     "created_at": "The timestamp of when the organization hook was created.",
     "deliveries_url": "The URL to list the webhook deliveries for this organization webhook.",
+    "id": "The real, numeric, globally unique identifier for this object.",
     "ping_url": "The URL that can be pinged to trigger a test event for this organization webhook.",
     "type": "The type of the organization webhook, such as 'web'.",
     "updated_at": "The timestamp of the last update to the GitHub organization webhook, set by the system.",
@@ -2598,6 +2657,7 @@
     "organization.repos_url": "The API URL that lists the repositories belonging to the organization.",
     "organization_url": "The URL of the GitHub organization associated with this membership.",
     "permissions.can_create_repository": "Whether the member has permission to create repositories within the organization.",
+    "url": "The real, canonical API URL for this object.",
     "user.avatar_url": "URL of the user's avatar image.",
     "user.email": "The email address of the GitHub user, if available.",
     "user.events_url": "The API URL to retrieve this user's events.",
@@ -2627,6 +2687,10 @@
   },
   "github_organization_actions_variable": {
     "selected_repositories_url": "API URL listing the repositories this organization-level Actions variable is selectively exposed to."
+  },
+  "github_organization_custom_repository_role": {
+    "created_at": "The real timestamp this object was created.",
+    "updated_at": "The real timestamp this object was last updated."
   },
   "github_organization_dependabot_secret": {
     "created_at": "The date and time at which the variable was created, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.",
@@ -2948,6 +3012,7 @@
     "user.url": "The API URL for the GitHub user, e.g., https://api.github.com/users/{username}."
   },
   "github_pull_request_merge_async_result": {
+    "details": "Real, human-readable detail about this asynchronous merge attempt's own outcome.",
     "details.expected_head_sha": "The SHA of the head commit expected by the merge operation, used to verify the branch hasn't changed before merging.",
     "details.merge_action": "The merge strategy or action used for the pull request merge operation, indicating how the changes are combined.",
     "details.merge_method": "The method used to merge the pull request, as recorded in the result details of an asynchronous merge operation.",
@@ -3101,6 +3166,7 @@
     "created_at": "The timestamp of when the release was created, in ISO 8601 format (e.g., 2023-01-01T00:00:00Z).",
     "html_url": "The GitHub web URL where the release can be viewed.",
     "id": "The unique numeric identifier for the release, automatically assigned by GitHub when the release is created.",
+    "mentions_count": "The real number of user mentions in this release's own generated notes.",
     "node_id": "The GraphQL Node ID of the GitHub release.",
     "published_at": "The timestamp of when the release was published. This field is computed and cannot be set by the user.",
     "reactions": "An object summarizing reactions to the release, mapping each reaction type (e.g., +1, -1, laugh, hooray) to the count received. This field is automatically computed and read-only.",
@@ -3349,16 +3415,34 @@
     "rules.type": "The type of rule in a repository ruleset. This rule has type 'creation', which restricts who can create branches in the repository.",
     "updated_at": "The timestamp of the last update to the ruleset."
   },
+  "github_runner_groups_enterprise": {
+    "default": "Whether this is the enterprise's own default self-hosted runner group.",
+    "hosted_runners_url": "The real API URL for listing this runner group's own hosted runners.",
+    "id": "The real, numeric, globally unique identifier for this object.",
+    "runners_url": "The real API URL for listing this runner group's own self-hosted runners.",
+    "selected_organizations_url": "The real API URL for listing which organizations this runner group is selectively granted to."
+  },
   "github_runner_groups_org": {
     "default": "Whether this runner group is the default group for the organization.",
     "hosted_runners_url": "The API URL for accessing the hosted runners associated with this runner group.",
+    "id": "The real, numeric, globally unique identifier for this object.",
     "inherited": "Indicates whether the runner group is inherited from an enterprise account.",
     "inherited_allows_public_repositories": "Whether the runner group inherits the organization's setting for allowing public repositories. This computed value is determined by GitHub and reflects the inherited state of `allows_public_repositories`.",
     "runners_url": "The API URL to fetch the list of runners belonging to this organization runner group."
   },
+  "github_scim_user": {
+    "active": "Whether this SCIM-provisioned user account is active.",
+    "external_id": "This user's own real, external identity-provider identifier.",
+    "groups": "The real SCIM groups this user belongs to.",
+    "meta": "Real SCIM protocol metadata (resource type, location, timestamps) for this user.",
+    "name": "This user's own real, structured display name.",
+    "roles": "The real roles assigned to this SCIM-provisioned user.",
+    "schemas": "The real SCIM schema URIs this resource conforms to."
+  },
   "github_simple_user": {
     "avatar_url": "The URL of the user's avatar image.",
     "email": "The public email address of the user, as configured in their GitHub profile; may be null if not set.",
+    "events_url": "The real API URL template for listing this user's own public events.",
     "followers_url": "The URL to retrieve the list of followers for this user.",
     "following_url": "The URL to the GitHub API endpoint that lists the users this user follows. This field is computed by the API and read-only.",
     "gists_url": "The URL template for the user's public gists, including an optional gist ID placeholder (e.g., https://api.github.com/users/{user}/gists{/gist_id}).",
@@ -3376,7 +3460,8 @@
     "starred_url": "The URL template to list repositories starred by the user, with placeholders for owner and repo.",
     "subscriptions_url": "The URL to the user's subscriptions endpoint, providing a link to the resources the user is subscribed to.",
     "type": "The type of GitHub account, which is typically 'User' or 'Organization'.",
-    "url": "The API URL for the user resource."
+    "url": "The API URL for the user resource.",
+    "user_view_type": "Whether this user is being viewed as a public or private account, from the requester's own perspective."
   },
   "github_ssh_signing_key": {
     "created_at": "Timestamp the SSH signing key was added to the account.",
@@ -3384,9 +3469,14 @@
   },
   "github_stack": {
     "base.ref": "The git reference (branch, tag, or commit SHA) to use as the base for the stack.",
-    "node_id": "The GraphQL node ID of the GitHub stack."
+    "created_at": "The real timestamp this object was created.",
+    "id": "The real, numeric, globally unique identifier for this object.",
+    "node_id": "The GraphQL node ID of the GitHub stack.",
+    "number": "This stacked change's own real, repository-scoped number.",
+    "url": "The real, canonical API URL for this object."
   },
   "github_team_full": {
+    "created_at": "The real timestamp this object was created.",
     "html_url": "The GitHub web URL for the team.",
     "members_count": "The number of members in the team.",
     "members_url": "The API endpoint URL to retrieve the members of this team.",
