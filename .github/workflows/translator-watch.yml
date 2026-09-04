@@ -183,9 +183,29 @@ jobs:
           git clone --depth=1 --recurse-submodules \
             "https://github.com/Ubiquex/ubiquex.git" \
             "${{ runner.temp }}/ubiquex-src"
-          git clone --depth=1 --branch "${{ steps.latest.outputs.tag }}" \
-            "https://github.com/Ubiquex/ubx-provider-dynamic.git" \
-            "${{ runner.temp }}/ubx-provider-dynamic-src"
+
+          dir="${{ runner.temp }}/ubx-provider-dynamic-src"
+          git clone --depth=1 "https://github.com/Ubiquex/ubx-provider-dynamic.git" "$dir"
+          cd "$dir"
+          target="${{ steps.latest.outputs.commit }}"
+          # Move the local main branch to the target commit instead of a
+          # detached `--branch <tag>` checkout. --require-clean-provenance's
+          # own "unpushed" check (cli/dynamicprovider.go) resolves @{u} and
+          # needs a named branch with a remote-tracking ref -- a detached
+          # tag checkout has neither, and fails the check even though the
+          # tag is genuinely pushed (confirmed live, UBI-249: this exact
+          # failure on the very first real dispatch of this workflow,
+          # against both ubx-sdk-azure and ubx-sdk-github). The target
+          # commit is always an ancestor of main under this repo's real
+          # tagging discipline (every tag is cut directly on main), so
+          # `rev-list @{u}..HEAD --count` correctly reports 0 after this
+          # reset -- main's own upstream (origin/main) stays intact, only
+          # its local tip moves.
+          if ! git cat-file -e "$target^{commit}" 2>/dev/null; then
+            git fetch --depth=1 origin "$target" 2>/dev/null || git fetch --unshallow origin
+          fi
+          git reset --hard "$target"
+          cd - >/dev/null
 
       - name: Set up Go
         if: steps.compare.outputs.state == 'candidate'
