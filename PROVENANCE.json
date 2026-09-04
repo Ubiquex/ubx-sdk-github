@@ -1,7 +1,7 @@
 {
   "source": "local-checkout",
-  "repo_path": "/Users/roozbeh/Ubiquex/ubx-provider-dynamic",
-  "commit": "37de07931e78285dddc49d8224ba379e50070ba9",
+  "repo_path": "/home/runner/work/_temp/ubx-provider-dynamic-src",
+  "commit": "dba9b68a8e62998398b14b04df33457eb7bc5769",
   "dirty": false,
   "unpushed": false,
   "schema_pinned": true,
