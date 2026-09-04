@@ -1,0 +1,13 @@
+{
+  "runbook": "write-artifacts",
+  "target": "github",
+  "started": "2026-09-04",
+  "updated": "2026-09-04",
+  "hops": [
+    {
+      "id": "close-ubi250-field-gaps",
+      "status": "done",
+      "note": "UBI-250's fix (BuildTopLevel resolves top-level allOf composition) added new depth-0 fields to resources and data sources that already existed and were already fully covered. Real coverage check against a fresh --dump-ir found 623 gaps (94 missing intro, 529 missing field description), 0 missing category. Closed in one batch: 400 field descriptions via a canonical pass over 30 shared parameter/field names (per_page, page, owner, repo, org, and others) reusing this repo's own already-established canonical text where it existed; 129 field descriptions authored individually; 94 real intros authored individually against each wire's own real fields, not templated. Verified via a live coverage_check.py recompute: 0 gaps."
+    }
+  ]
+}
