@@ -4,19 +4,19 @@ package email
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type EmailConfig struct {
-	Page    any
+	Page any
 	PerPage any
 }
 
 type EmailAttrs struct {
-	Page    any
+	Page any
 	PerPage any
 }
 
 var Email = ubx.DataSourceBinding{
 	WireType: "github_email",
 	Fields: ubx.FieldMap{
-		"Page":    ubx.FieldSpec{WireName: "page"},
+		"Page": ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

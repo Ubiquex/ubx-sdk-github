@@ -4,5 +4,5 @@
 # re-run `ubx sdk gen` to regenerate after a provider version bump.
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
-from .commit_status import CommitStatus, CommitStatusConfig
-from .user import User, UserConfig
+from .commit_status_list import CommitStatusList, CommitStatusListConfig
+from .user_list import UserList, UserListConfig

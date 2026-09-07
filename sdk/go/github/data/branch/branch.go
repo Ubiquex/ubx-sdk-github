@@ -4,28 +4,28 @@ package branch
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type BranchConfig struct {
-	Owner     any
-	Page      any
-	PerPage   any
+	Owner any
+	Page any
+	PerPage any
 	Protected any
-	Repo      any
+	Repo any
 }
 
 type BranchAttrs struct {
-	Owner     any
-	Page      any
-	PerPage   any
+	Owner any
+	Page any
+	PerPage any
 	Protected any
-	Repo      any
+	Repo any
 }
 
 var Branch = ubx.DataSourceBinding{
 	WireType: "github_branch",
 	Fields: ubx.FieldMap{
-		"Owner":     ubx.FieldSpec{WireName: "owner"},
-		"Page":      ubx.FieldSpec{WireName: "page"},
-		"PerPage":   ubx.FieldSpec{WireName: "per_page"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Page": ubx.FieldSpec{WireName: "page"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 		"Protected": ubx.FieldSpec{WireName: "protected"},
-		"Repo":      ubx.FieldSpec{WireName: "repo"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
 	},
 }

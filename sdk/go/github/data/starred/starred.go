@@ -4,22 +4,22 @@ package starred
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type StarredConfig struct {
-	Page    any
+	Page any
 	PerPage any
-	Since   any
+	Since any
 }
 
 type StarredAttrs struct {
-	Page    any
+	Page any
 	PerPage any
-	Since   any
+	Since any
 }
 
 var Starred = ubx.DataSourceBinding{
 	WireType: "github_starred",
 	Fields: ubx.FieldMap{
-		"Page":    ubx.FieldSpec{WireName: "page"},
+		"Page": ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Since":   ubx.FieldSpec{WireName: "since"},
+		"Since": ubx.FieldSpec{WireName: "since"},
 	},
 }

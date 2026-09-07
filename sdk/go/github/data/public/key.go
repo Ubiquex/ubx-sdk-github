@@ -12,7 +12,7 @@ type KeyAttrs struct {
 	Key any
 	// The identifier for the key.
 	KeyId any
-	Org   any
+	Org any
 }
 
 var Key = ubx.DataSourceBinding{

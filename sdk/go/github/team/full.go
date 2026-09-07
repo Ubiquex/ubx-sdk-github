@@ -22,7 +22,7 @@ type Full_Organization struct {
 	// The billing email address for this GitHub organization. (AI-inferred)
 	BillingEmail any
 	// The URL of the organization's blog. (AI-inferred)
-	Blog          any
+	Blog any
 	Collaborators any
 	// The company name associated with the organization, if any. This field is optional and may be null or not present. (AI-inferred)
 	Company any
@@ -50,7 +50,7 @@ type Full_Organization struct {
 	HooksUrl any
 	// The URL to the organization's GitHub page. (AI-inferred)
 	HtmlUrl any
-	Id      any
+	Id any
 	// Indicates whether the organization has been verified by GitHub (i.e., has a verified badge). (AI-inferred)
 	IsVerified any
 	// The API endpoint URL for retrieving issues belonging to the organization. (AI-inferred)
@@ -85,7 +85,7 @@ type Full_Organization struct {
 	NodeId any
 	// The number of private repositories owned by the organization. (AI-inferred)
 	OwnedPrivateRepos any
-	Plan              any
+	Plan any
 	// The number of private gists owned by the organization. (AI-inferred)
 	PrivateGists any
 	// The number of public gists owned by the organization. (AI-inferred)
@@ -234,16 +234,16 @@ type FullAttrs struct {
 var Full = ubx.ResourceBinding{
 	WireType: "github_team_full",
 	Fields: ubx.FieldMap{
-		"Description":         ubx.FieldSpec{WireName: "description"},
-		"Maintainers":         ubx.FieldSpec{WireName: "maintainers"},
-		"Name":                ubx.FieldSpec{WireName: "name"},
+		"Description": ubx.FieldSpec{WireName: "description"},
+		"Maintainers": ubx.FieldSpec{WireName: "maintainers"},
+		"Name": ubx.FieldSpec{WireName: "name"},
 		"NotificationSetting": ubx.FieldSpec{WireName: "notification_setting"},
-		"ParentTeamId":        ubx.FieldSpec{WireName: "parent_team_id"},
-		"ParentTeamSlug":      ubx.FieldSpec{WireName: "parent_team_slug"},
-		"Permission":          ubx.FieldSpec{WireName: "permission"},
-		"Privacy":             ubx.FieldSpec{WireName: "privacy"},
-		"RepoNames":           ubx.FieldSpec{WireName: "repo_names"},
-		"Org":                 ubx.FieldSpec{WireName: "org"},
-		"TeamSlug":            ubx.FieldSpec{WireName: "team_slug"},
+		"ParentTeamId": ubx.FieldSpec{WireName: "parent_team_id"},
+		"ParentTeamSlug": ubx.FieldSpec{WireName: "parent_team_slug"},
+		"Permission": ubx.FieldSpec{WireName: "permission"},
+		"Privacy": ubx.FieldSpec{WireName: "privacy"},
+		"RepoNames": ubx.FieldSpec{WireName: "repo_names"},
+		"Org": ubx.FieldSpec{WireName: "org"},
+		"TeamSlug": ubx.FieldSpec{WireName: "team_slug"},
 	},
 }

@@ -5,44 +5,44 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Repository_License struct {
 	HtmlUrl any
-	Key     any
-	Name    any
-	NodeId  any
-	SpdxId  any
-	Url     any
+	Key any
+	Name any
+	NodeId any
+	SpdxId any
+	Url any
 }
 
 type Repository_Owner struct {
-	AvatarUrl         any
-	Email             any
-	EventsUrl         any
-	FollowersUrl      any
-	FollowingUrl      any
-	GistsUrl          any
-	GravatarId        any
-	HtmlUrl           any
-	Id                any
-	Login             any
-	Name              any
-	NodeId            any
-	OrganizationsUrl  any
+	AvatarUrl any
+	Email any
+	EventsUrl any
+	FollowersUrl any
+	FollowingUrl any
+	GistsUrl any
+	GravatarId any
+	HtmlUrl any
+	Id any
+	Login any
+	Name any
+	NodeId any
+	OrganizationsUrl any
 	ReceivedEventsUrl any
-	ReposUrl          any
-	SiteAdmin         any
-	StarredAt         any
-	StarredUrl        any
-	SubscriptionsUrl  any
-	Type              any
-	Url               any
-	UserViewType      any
+	ReposUrl any
+	SiteAdmin any
+	StarredAt any
+	StarredUrl any
+	SubscriptionsUrl any
+	Type any
+	Url any
+	UserViewType any
 }
 
 type Repository_Permissions struct {
-	Admin    any
+	Admin any
 	Maintain any
-	Pull     any
-	Push     any
-	Triage   any
+	Pull any
+	Push any
+	Triage any
 }
 
 type RepositoryConfig struct {
@@ -257,10 +257,10 @@ var Repository = ubx.ResourceBinding{
 	WireType: "github_team_repository",
 	Fields: ubx.FieldMap{
 		"Permission": ubx.FieldSpec{WireName: "permission"},
-		"Org":        ubx.FieldSpec{WireName: "org"},
-		"TeamSlug":   ubx.FieldSpec{WireName: "team_slug"},
-		"OwnerPath":  ubx.FieldSpec{WireName: "owner_path"},
-		"Repo":       ubx.FieldSpec{WireName: "repo"},
+		"Org": ubx.FieldSpec{WireName: "org"},
+		"TeamSlug": ubx.FieldSpec{WireName: "team_slug"},
+		"OwnerPath": ubx.FieldSpec{WireName: "owner_path"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
 		"OwnerPath2": ubx.FieldSpec{WireName: "owner_path2"},
 	},
 }

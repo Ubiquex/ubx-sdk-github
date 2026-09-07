@@ -5,18 +5,18 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ListConfig struct {
 	Owner any
-	Repo  any
+	Repo any
 }
 
 type ListAttrs struct {
 	Owner any
-	Repo  any
+	Repo any
 }
 
 var List = ubx.DataSourceBinding{
 	WireType: "github_bypass_list",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo":  ubx.FieldSpec{WireName: "repo"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
 	},
 }

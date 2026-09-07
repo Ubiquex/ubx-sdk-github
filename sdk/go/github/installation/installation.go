@@ -4,33 +4,33 @@ package installation
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Installation_Account struct {
-	AvatarUrl         any
-	CreatedAt         any
-	Description       any
-	Email             any
-	EventsUrl         any
-	FollowersUrl      any
-	FollowingUrl      any
-	GistsUrl          any
-	GravatarId        any
-	HtmlUrl           any
-	Id                any
-	Login             any
-	Name              any
-	NodeId            any
-	OrganizationsUrl  any
+	AvatarUrl any
+	CreatedAt any
+	Description any
+	Email any
+	EventsUrl any
+	FollowersUrl any
+	FollowingUrl any
+	GistsUrl any
+	GravatarId any
+	HtmlUrl any
+	Id any
+	Login any
+	Name any
+	NodeId any
+	OrganizationsUrl any
 	ReceivedEventsUrl any
-	ReposUrl          any
-	SiteAdmin         any
-	Slug              any
-	StarredAt         any
-	StarredUrl        any
-	SubscriptionsUrl  any
-	Type              any
-	UpdatedAt         any
-	Url               any
-	UserViewType      any
-	WebsiteUrl        any
+	ReposUrl any
+	SiteAdmin any
+	Slug any
+	StarredAt any
+	StarredUrl any
+	SubscriptionsUrl any
+	Type any
+	UpdatedAt any
+	Url any
+	UserViewType any
+	WebsiteUrl any
 }
 
 type Installation_Permissions struct {
@@ -153,28 +153,28 @@ type Installation_Permissions struct {
 }
 
 type Installation_SuspendedBy struct {
-	AvatarUrl         any
-	Email             any
-	EventsUrl         any
-	FollowersUrl      any
-	FollowingUrl      any
-	GistsUrl          any
-	GravatarId        any
-	HtmlUrl           any
-	Id                any
-	Login             any
-	Name              any
-	NodeId            any
-	OrganizationsUrl  any
+	AvatarUrl any
+	Email any
+	EventsUrl any
+	FollowersUrl any
+	FollowingUrl any
+	GistsUrl any
+	GravatarId any
+	HtmlUrl any
+	Id any
+	Login any
+	Name any
+	NodeId any
+	OrganizationsUrl any
 	ReceivedEventsUrl any
-	ReposUrl          any
-	SiteAdmin         any
-	StarredAt         any
-	StarredUrl        any
-	SubscriptionsUrl  any
-	Type              any
-	Url               any
-	UserViewType      any
+	ReposUrl any
+	SiteAdmin any
+	StarredAt any
+	StarredUrl any
+	SubscriptionsUrl any
+	Type any
+	Url any
+	UserViewType any
 }
 
 type InstallationConfig struct {
@@ -248,11 +248,11 @@ type InstallationAttrs struct {
 var Installation = ubx.ResourceBinding{
 	WireType: "github_installation",
 	Fields: ubx.FieldMap{
-		"ClientId":            ubx.FieldSpec{WireName: "client_id"},
-		"Repositories":        ubx.FieldSpec{WireName: "repositories"},
+		"ClientId": ubx.FieldSpec{WireName: "client_id"},
+		"Repositories": ubx.FieldSpec{WireName: "repositories"},
 		"RepositorySelection": ubx.FieldSpec{WireName: "repository_selection"},
-		"InstallationId":      ubx.FieldSpec{WireName: "installation_id"},
-		"Enterprise":          ubx.FieldSpec{WireName: "enterprise"},
-		"Org":                 ubx.FieldSpec{WireName: "org"},
+		"InstallationId": ubx.FieldSpec{WireName: "installation_id"},
+		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
+		"Org": ubx.FieldSpec{WireName: "org"},
 	},
 }

@@ -56,7 +56,7 @@ type Issue_IssueDependenciesSummary struct {
 	Blocking any
 	// The total number of issues that this issue is blocked by. (AI-inferred)
 	TotalBlockedBy any
-	TotalBlocking  any
+	TotalBlocking any
 }
 
 type Issue_IssueFieldValues struct {
@@ -73,7 +73,7 @@ type Issue_PerformedViaGithubApp_Owner struct {
 	CreatedAt any
 	// The description of the organization that owns the GitHub App. This field is only populated when the owner is an organization. (AI-inferred)
 	Description any
-	Email       any
+	Email any
 	// The URL to the events for this GitHub user or organization. (AI-inferred)
 	EventsUrl any
 	// The URL to the list of followers of the owner (user or organization) of the GitHub App that performed the issue. (AI-inferred)
@@ -103,14 +103,14 @@ type Issue_PerformedViaGithubApp_Owner struct {
 	// Indicates whether the owner is a site administrator for the GitHub instance (e.g., on GitHub Enterprise). (AI-inferred)
 	SiteAdmin any
 	// The slug of the owner of the GitHub App that performed the action on the issue. For users and organizations, this is the lowercased, URL-friendly identifier (e.g., 'octocat'). (AI-inferred)
-	Slug      any
+	Slug any
 	StarredAt any
 	// The URL to the list of repositories starred by this owner (user or organization) of the GitHub App. (AI-inferred)
 	StarredUrl any
 	// The API endpoint URL for the owner's subscriptions, indicating resources the owner follows or is subscribed to on GitHub. (AI-inferred)
 	SubscriptionsUrl any
 	// The type of GitHub account that owns the app, either `User` or `Organization`. (AI-inferred)
-	Type      any
+	Type any
 	UpdatedAt any
 	// The API URL for the GitHub account (user or organization) that owns the GitHub App. (AI-inferred)
 	Url any
@@ -214,7 +214,7 @@ type Issue_PinnedComment struct {
 	IssueUrl any
 	// Details about why an issue comment was minimized.
 	Minimized any
-	NodeId    any
+	NodeId any
 	// GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
 	PerformedViaGithubApp any
 	// Context around who pinned an issue comment and when it was pinned.
@@ -486,9 +486,9 @@ type Issue_SubIssuesSummary struct {
 }
 
 var Issue_IssueFieldValuesFields = ubx.FieldMap{
-	"FieldId": ubx.FieldSpec{WireName: "field_id"},
-	"Value":   ubx.FieldSpec{WireName: "value"},
-}
+		"FieldId": ubx.FieldSpec{WireName: "field_id"},
+		"Value": ubx.FieldSpec{WireName: "value"},
+	}
 
 type IssueConfig struct {
 	// Login for the user that this issue should be assigned to. _NOTE: Only users with push access can set the assignee for new issues. The assignee is silently dropped otherwise. **This field is closing down.**_
@@ -585,7 +585,7 @@ type IssueAttrs struct {
 	// State of the issue; either 'open' or 'closed'
 	State any
 	// The reason for the current state
-	StateReason      any
+	StateReason any
 	SubIssuesSummary any
 	// The URL to retrieve the timeline of events for this issue via the GitHub API. (AI-inferred)
 	TimelineUrl any
@@ -610,21 +610,21 @@ type IssueAttrs struct {
 var Issue = ubx.ResourceBinding{
 	WireType: "github_issue",
 	Fields: ubx.FieldMap{
-		"Assignee":  ubx.FieldSpec{WireName: "assignee"},
+		"Assignee": ubx.FieldSpec{WireName: "assignee"},
 		"Assignees": ubx.FieldSpec{WireName: "assignees"},
-		"Body":      ubx.FieldSpec{WireName: "body"},
+		"Body": ubx.FieldSpec{WireName: "body"},
 		"IssueFieldValues": ubx.FieldSpec{
 			WireName: "issue_field_values",
-			Kind:     "list",
-			Fields:   Issue_IssueFieldValuesFields,
+			Kind: "list",
+			Fields: Issue_IssueFieldValuesFields,
 		},
-		"Labels":        ubx.FieldSpec{WireName: "labels"},
-		"Milestone":     ubx.FieldSpec{WireName: "milestone"},
+		"Labels": ubx.FieldSpec{WireName: "labels"},
+		"Milestone": ubx.FieldSpec{WireName: "milestone"},
 		"ParentIssueId": ubx.FieldSpec{WireName: "parent_issue_id"},
-		"Title":         ubx.FieldSpec{WireName: "title"},
-		"Type":          ubx.FieldSpec{WireName: "type"},
-		"Owner":         ubx.FieldSpec{WireName: "owner"},
-		"Repo":          ubx.FieldSpec{WireName: "repo"},
-		"IssueNumber":   ubx.FieldSpec{WireName: "issue_number"},
+		"Title": ubx.FieldSpec{WireName: "title"},
+		"Type": ubx.FieldSpec{WireName: "type"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"IssueNumber": ubx.FieldSpec{WireName: "issue_number"},
 	},
 }

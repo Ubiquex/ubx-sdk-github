@@ -4,8 +4,8 @@
 # re-run `ubx sdk gen` to regenerate after a provider version bump.
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
-from .org_secret import OrgSecret, OrgSecretConfig
+from .org_secret_list import OrgSecretList, OrgSecretListConfig
 from .permissions_check_for_devcontainer import PermissionsCheckForDevcontainer, PermissionsCheckForDevcontainerConfig
 from .public_key import PublicKey, PublicKeyConfig
-from .secret import Secret, SecretConfig
+from .secret_list import SecretList, SecretListConfig
 from .user_public_key import UserPublicKey, UserPublicKeyConfig

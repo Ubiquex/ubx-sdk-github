@@ -7,7 +7,7 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
-class Space_Spaces_Creator:
+class Space_Creator:
     avatar_url: Any = None
     email: Any = None
     events_url: Any = None
@@ -32,7 +32,7 @@ class Space_Spaces_Creator:
     user_view_type: Any = None
 
 @dataclasses.dataclass
-class Space_Spaces_Owner:
+class Space_Owner:
     avatar_url: Any = None
     description: Any = None
     email: Any = None
@@ -62,7 +62,7 @@ class Space_Spaces_Owner:
     user_view_type: Any = None
 
 @dataclasses.dataclass
-class Space_Spaces_ResourcesAttributes_Metadata:
+class Space_ResourcesAttributes_Metadata:
     copilot_chat_attachment_id: Any = None
     file_path: Any = None
     height: Any = None
@@ -75,7 +75,7 @@ class Space_Spaces_ResourcesAttributes_Metadata:
     width: Any = None
 
 @dataclasses.dataclass
-class Space_Spaces_ResourcesAttributes:
+class Space_ResourcesAttributes:
     copilot_chat_attachment_id: Any = None
     created_at: Any = None
     id: Any = None
@@ -84,43 +84,45 @@ class Space_Spaces_ResourcesAttributes:
     updated_at: Any = None
 
 @dataclasses.dataclass
-class Space_Spaces:
-    api_url: Any = None
-    base_role: Any = None
-    created_at: Any = None
-    creator: Any = None
-    description: Any = None
-    general_instructions: Any = None
-    html_url: Any = None
-    id: Any = None
-    name: Any = None
-    number: Any = None
-    owner: Any = None
-    resources_attributes: Any = None
-    updated_at: Any = None
-
-@dataclasses.dataclass
 class SpaceConfig:
-    after: Any = None
-    before: Any = None
-    org: Any = None
-    per_page: Any = None
+    space_number: Any = None
+    username: Any = None
 
 @dataclasses.dataclass
 class SpaceAttrs:
-    after: Any = None
-    before: Any = None
-    org: Any = None
-    per_page: Any = None
-    # The list of Copilot Spaces on this page of results.
-    spaces: Any = None
+    # The API URL of the space.
+    api_url: Any = None
+    # The base role that determines default permissions. - `no_access`: No default access - `reader`: Default read permissions - `writer`: Default write permissions (organization spaces only) - `admin`: Default admin permissions (organization spaces only)
+    base_role: Any = None
+    # The date and time the space was created.
+    created_at: Any = None
+    # A GitHub user.
+    creator: Any = None
+    # A description of the space.
+    description: Any = None
+    # General instructions for the Copilot Space.
+    general_instructions: Any = None
+    # The HTML URL of the space.
+    html_url: Any = None
+    # The unique identifier of the space.
+    id: Any = None
+    # The display name of the space.
+    name: Any = None
+    # The number that identifies the space within its owner.
+    number: Any = None
+    # The user or organization that owns this space.
+    owner: Any = None
+    # Resources attached to the space.
+    resources_attributes: Any = None
+    space_number: Any = None
+    # The date and time the space was last updated.
+    updated_at: Any = None
+    username: Any = None
 
 Space = ubx.DataSourceBinding(
     wire_type="github_copilot_space",
     fields={
-        "after": ubx.FieldSpec(wire_name="after"),
-        "before": ubx.FieldSpec(wire_name="before"),
-        "org": ubx.FieldSpec(wire_name="org"),
-        "per_page": ubx.FieldSpec(wire_name="per_page"),
+        "space_number": ubx.FieldSpec(wire_name="space_number"),
+        "username": ubx.FieldSpec(wire_name="username"),
     },
 )

@@ -44,7 +44,7 @@ type Release_Assets_Uploader struct {
 	// The type of GitHub user account that uploaded the asset. Typically 'User' or 'Bot'. (AI-inferred)
 	Type any
 	// The GitHub API URL for the uploader user. (AI-inferred)
-	Url          any
+	Url any
 	UserViewType any
 }
 
@@ -193,17 +193,17 @@ type ReleaseAttrs struct {
 var Release = ubx.ResourceBinding{
 	WireType: "github_release",
 	Fields: ubx.FieldMap{
-		"Body":                   ubx.FieldSpec{WireName: "body"},
+		"Body": ubx.FieldSpec{WireName: "body"},
 		"DiscussionCategoryName": ubx.FieldSpec{WireName: "discussion_category_name"},
-		"Draft":                  ubx.FieldSpec{WireName: "draft"},
-		"GenerateReleaseNotes":   ubx.FieldSpec{WireName: "generate_release_notes"},
-		"MakeLatest":             ubx.FieldSpec{WireName: "make_latest"},
-		"Name":                   ubx.FieldSpec{WireName: "name"},
-		"Prerelease":             ubx.FieldSpec{WireName: "prerelease"},
-		"TagName":                ubx.FieldSpec{WireName: "tag_name"},
-		"TargetCommitish":        ubx.FieldSpec{WireName: "target_commitish"},
-		"Owner":                  ubx.FieldSpec{WireName: "owner"},
-		"Repo":                   ubx.FieldSpec{WireName: "repo"},
-		"Tag":                    ubx.FieldSpec{WireName: "tag"},
+		"Draft": ubx.FieldSpec{WireName: "draft"},
+		"GenerateReleaseNotes": ubx.FieldSpec{WireName: "generate_release_notes"},
+		"MakeLatest": ubx.FieldSpec{WireName: "make_latest"},
+		"Name": ubx.FieldSpec{WireName: "name"},
+		"Prerelease": ubx.FieldSpec{WireName: "prerelease"},
+		"TagName": ubx.FieldSpec{WireName: "tag_name"},
+		"TargetCommitish": ubx.FieldSpec{WireName: "target_commitish"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Tag": ubx.FieldSpec{WireName: "tag"},
 	},
 }

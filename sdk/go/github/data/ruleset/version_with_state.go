@@ -4,23 +4,23 @@ package ruleset
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type VersionWithState_Actor struct {
-	Id   any
+	Id any
 	Type any
 }
 
 type VersionWithStateConfig struct {
 	Enterprise any
-	RulesetId  any
-	VersionId  any
+	RulesetId any
+	VersionId any
 }
 
 type VersionWithStateAttrs struct {
 	// The actor who updated the ruleset
-	Actor      any
+	Actor any
 	Enterprise any
-	RulesetId  any
+	RulesetId any
 	// The state of the ruleset version
-	State     any
+	State any
 	UpdatedAt any
 	VersionId any
 }
@@ -29,7 +29,7 @@ var VersionWithState = ubx.DataSourceBinding{
 	WireType: "github_ruleset_version_with_state",
 	Fields: ubx.FieldMap{
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"RulesetId":  ubx.FieldSpec{WireName: "ruleset_id"},
-		"VersionId":  ubx.FieldSpec{WireName: "version_id"},
+		"RulesetId": ubx.FieldSpec{WireName: "ruleset_id"},
+		"VersionId": ubx.FieldSpec{WireName: "version_id"},
 	},
 }

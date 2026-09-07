@@ -4,22 +4,22 @@ package block
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type BlockConfig struct {
-	Org     any
-	Page    any
+	Org any
+	Page any
 	PerPage any
 }
 
 type BlockAttrs struct {
-	Org     any
-	Page    any
+	Org any
+	Page any
 	PerPage any
 }
 
 var Block = ubx.DataSourceBinding{
 	WireType: "github_block",
 	Fields: ubx.FieldMap{
-		"Org":     ubx.FieldSpec{WireName: "org"},
-		"Page":    ubx.FieldSpec{WireName: "page"},
+		"Org": ubx.FieldSpec{WireName: "org"},
+		"Page": ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

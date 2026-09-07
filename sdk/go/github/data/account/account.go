@@ -5,27 +5,27 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type AccountConfig struct {
 	Direction any
-	Page      any
-	PerPage   any
-	PlanId    any
-	Sort      any
+	Page any
+	PerPage any
+	PlanId any
+	Sort any
 }
 
 type AccountAttrs struct {
 	Direction any
-	Page      any
-	PerPage   any
-	PlanId    any
-	Sort      any
+	Page any
+	PerPage any
+	PlanId any
+	Sort any
 }
 
 var Account = ubx.DataSourceBinding{
 	WireType: "github_account",
 	Fields: ubx.FieldMap{
 		"Direction": ubx.FieldSpec{WireName: "direction"},
-		"Page":      ubx.FieldSpec{WireName: "page"},
-		"PerPage":   ubx.FieldSpec{WireName: "per_page"},
-		"PlanId":    ubx.FieldSpec{WireName: "plan_id"},
-		"Sort":      ubx.FieldSpec{WireName: "sort"},
+		"Page": ubx.FieldSpec{WireName: "page"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"PlanId": ubx.FieldSpec{WireName: "plan_id"},
+		"Sort": ubx.FieldSpec{WireName: "sort"},
 	},
 }

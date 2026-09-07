@@ -9,7 +9,7 @@ type PlatformConfig struct {
 
 type PlatformAttrs struct {
 	Enterprise any
-	Platforms  any
+	Platforms any
 	TotalCount any
 }
 

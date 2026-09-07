@@ -4,5 +4,5 @@
 # re-run `ubx sdk gen` to regenerate after a provider version bump.
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
-from .codespace import Codespace, CodespaceConfig
-from .machine import Machine, MachineConfig
+from .list import List, ListConfig
+from .machine_list import MachineList, MachineListConfig

@@ -5,21 +5,21 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type LicenseConfig struct {
 	Featured any
-	Page     any
-	PerPage  any
+	Page any
+	PerPage any
 }
 
 type LicenseAttrs struct {
 	Featured any
-	Page     any
-	PerPage  any
+	Page any
+	PerPage any
 }
 
 var License = ubx.DataSourceBinding{
 	WireType: "github_license",
 	Fields: ubx.FieldMap{
 		"Featured": ubx.FieldSpec{WireName: "featured"},
-		"Page":     ubx.FieldSpec{WireName: "page"},
-		"PerPage":  ubx.FieldSpec{WireName: "per_page"},
+		"Page": ubx.FieldSpec{WireName: "page"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

@@ -4,22 +4,22 @@ package failed
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type InvitationConfig struct {
-	Org     any
-	Page    any
+	Org any
+	Page any
 	PerPage any
 }
 
 type InvitationAttrs struct {
-	Org     any
-	Page    any
+	Org any
+	Page any
 	PerPage any
 }
 
 var Invitation = ubx.DataSourceBinding{
 	WireType: "github_failed_invitation",
 	Fields: ubx.FieldMap{
-		"Org":     ubx.FieldSpec{WireName: "org"},
-		"Page":    ubx.FieldSpec{WireName: "page"},
+		"Org": ubx.FieldSpec{WireName: "org"},
+		"Page": ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

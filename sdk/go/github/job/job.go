@@ -10,24 +10,24 @@ type Job_Deployments struct {
 	Digest any
 	// The name of the GitHub repository, up to 100 characters, containing only alphanumeric characters, dots, hyphens, and underscores. (AI-inferred)
 	GithubRepository any
-	Name             any
-	RuntimeRisks     any
+	Name any
+	RuntimeRisks any
 	// The status of the deployment, which can be `deployed` or `decommissioned`. (AI-inferred)
-	Status  any
-	Tags    any
+	Status any
+	Tags any
 	Version any
 }
 
 var Job_DeploymentsFields = ubx.FieldMap{
-	"DeploymentName":   ubx.FieldSpec{WireName: "deployment_name"},
-	"Digest":           ubx.FieldSpec{WireName: "digest"},
-	"GithubRepository": ubx.FieldSpec{WireName: "github_repository"},
-	"Name":             ubx.FieldSpec{WireName: "name"},
-	"RuntimeRisks":     ubx.FieldSpec{WireName: "runtime_risks"},
-	"Status":           ubx.FieldSpec{WireName: "status"},
-	"Tags":             ubx.FieldSpec{WireName: "tags"},
-	"Version":          ubx.FieldSpec{WireName: "version"},
-}
+		"DeploymentName": ubx.FieldSpec{WireName: "deployment_name"},
+		"Digest": ubx.FieldSpec{WireName: "digest"},
+		"GithubRepository": ubx.FieldSpec{WireName: "github_repository"},
+		"Name": ubx.FieldSpec{WireName: "name"},
+		"RuntimeRisks": ubx.FieldSpec{WireName: "runtime_risks"},
+		"Status": ubx.FieldSpec{WireName: "status"},
+		"Tags": ubx.FieldSpec{WireName: "tags"},
+		"Version": ubx.FieldSpec{WireName: "version"},
+	}
 
 type JobConfig struct {
 	// The list of deployments to record.
@@ -70,12 +70,12 @@ var Job = ubx.ResourceBinding{
 	Fields: ubx.FieldMap{
 		"Deployments": ubx.FieldSpec{
 			WireName: "deployments",
-			Kind:     "list",
-			Fields:   Job_DeploymentsFields,
+			Kind: "list",
+			Fields: Job_DeploymentsFields,
 		},
-		"LogicalEnvironment":  ubx.FieldSpec{WireName: "logical_environment"},
+		"LogicalEnvironment": ubx.FieldSpec{WireName: "logical_environment"},
 		"PhysicalEnvironment": ubx.FieldSpec{WireName: "physical_environment"},
-		"Org":                 ubx.FieldSpec{WireName: "org"},
-		"Cluster":             ubx.FieldSpec{WireName: "cluster"},
+		"Org": ubx.FieldSpec{WireName: "org"},
+		"Cluster": ubx.FieldSpec{WireName: "cluster"},
 	},
 }

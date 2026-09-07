@@ -38,10 +38,10 @@ type ActionsVariableAttrs struct {
 var ActionsVariable = ubx.ResourceBinding{
 	WireType: "github_organization_actions_variable",
 	Fields: ubx.FieldMap{
-		"Name":                  ubx.FieldSpec{WireName: "name"},
+		"Name": ubx.FieldSpec{WireName: "name"},
 		"SelectedRepositoryIds": ubx.FieldSpec{WireName: "selected_repository_ids"},
-		"Value":                 ubx.FieldSpec{WireName: "value"},
-		"Visibility":            ubx.FieldSpec{WireName: "visibility"},
-		"Org":                   ubx.FieldSpec{WireName: "org"},
+		"Value": ubx.FieldSpec{WireName: "value"},
+		"Visibility": ubx.FieldSpec{WireName: "visibility"},
+		"Org": ubx.FieldSpec{WireName: "org"},
 	},
 }

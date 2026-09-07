@@ -4,28 +4,28 @@ package asset
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type AssetConfig struct {
-	Owner     any
-	Page      any
-	PerPage   any
+	Owner any
+	Page any
+	PerPage any
 	ReleaseId any
-	Repo      any
+	Repo any
 }
 
 type AssetAttrs struct {
-	Owner     any
-	Page      any
-	PerPage   any
+	Owner any
+	Page any
+	PerPage any
 	ReleaseId any
-	Repo      any
+	Repo any
 }
 
 var Asset = ubx.DataSourceBinding{
 	WireType: "github_asset",
 	Fields: ubx.FieldMap{
-		"Owner":     ubx.FieldSpec{WireName: "owner"},
-		"Page":      ubx.FieldSpec{WireName: "page"},
-		"PerPage":   ubx.FieldSpec{WireName: "per_page"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Page": ubx.FieldSpec{WireName: "page"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 		"ReleaseId": ubx.FieldSpec{WireName: "release_id"},
-		"Repo":      ubx.FieldSpec{WireName: "repo"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
 	},
 }

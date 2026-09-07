@@ -42,10 +42,10 @@ type BlobAttrs struct {
 var Blob = ubx.ResourceBinding{
 	WireType: "github_blob",
 	Fields: ubx.FieldMap{
-		"Content":  ubx.FieldSpec{WireName: "content"},
+		"Content": ubx.FieldSpec{WireName: "content"},
 		"Encoding": ubx.FieldSpec{WireName: "encoding"},
-		"Owner":    ubx.FieldSpec{WireName: "owner"},
-		"Repo":     ubx.FieldSpec{WireName: "repo"},
-		"FileSha":  ubx.FieldSpec{WireName: "file_sha"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"FileSha": ubx.FieldSpec{WireName: "file_sha"},
 	},
 }

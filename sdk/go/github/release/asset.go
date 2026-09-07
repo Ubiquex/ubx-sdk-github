@@ -20,7 +20,7 @@ type Asset_Uploader struct {
 	GravatarId any
 	// The GitHub profile URL for the user who uploaded the release asset. (AI-inferred)
 	HtmlUrl any
-	Id      any
+	Id any
 	// The GitHub username of the user who uploaded the release asset. (AI-inferred)
 	Login any
 	// The display name of the user who uploaded the release asset. (AI-inferred)
@@ -43,7 +43,7 @@ type Asset_Uploader struct {
 	// The type of the uploader account, either 'User' or 'Organization'. (AI-inferred)
 	Type any
 	// The URL of the uploader's GitHub profile. (AI-inferred)
-	Url          any
+	Url any
 	UserViewType any
 }
 
@@ -100,9 +100,9 @@ type AssetAttrs struct {
 var Asset = ubx.ResourceBinding{
 	WireType: "github_release_asset",
 	Fields: ubx.FieldMap{
-		"Owner":     ubx.FieldSpec{WireName: "owner"},
-		"Repo":      ubx.FieldSpec{WireName: "repo"},
-		"AssetId":   ubx.FieldSpec{WireName: "asset_id"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"AssetId": ubx.FieldSpec{WireName: "asset_id"},
 		"ReleaseId": ubx.FieldSpec{WireName: "release_id"},
 	},
 }

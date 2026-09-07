@@ -41,10 +41,10 @@ var Autolink = ubx.ResourceBinding{
 	WireType: "github_autolink",
 	Fields: ubx.FieldMap{
 		"IsAlphanumeric": ubx.FieldSpec{WireName: "is_alphanumeric"},
-		"KeyPrefix":      ubx.FieldSpec{WireName: "key_prefix"},
-		"UrlTemplate":    ubx.FieldSpec{WireName: "url_template"},
-		"Owner":          ubx.FieldSpec{WireName: "owner"},
-		"Repo":           ubx.FieldSpec{WireName: "repo"},
-		"AutolinkId":     ubx.FieldSpec{WireName: "autolink_id"},
+		"KeyPrefix": ubx.FieldSpec{WireName: "key_prefix"},
+		"UrlTemplate": ubx.FieldSpec{WireName: "url_template"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"AutolinkId": ubx.FieldSpec{WireName: "autolink_id"},
 	},
 }

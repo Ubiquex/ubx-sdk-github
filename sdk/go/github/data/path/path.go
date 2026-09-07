@@ -5,18 +5,18 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type PathConfig struct {
 	Owner any
-	Repo  any
+	Repo any
 }
 
 type PathAttrs struct {
 	Owner any
-	Repo  any
+	Repo any
 }
 
 var Path = ubx.DataSourceBinding{
 	WireType: "github_path",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo":  ubx.FieldSpec{WireName: "repo"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
 	},
 }

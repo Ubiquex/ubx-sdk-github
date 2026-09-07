@@ -5,6 +5,6 @@
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
 from .agent import Agent, AgentConfig
-from .deployment_rule_app import DeploymentRuleApp, DeploymentRuleAppConfig
+from .deployment_rule_app_list import DeploymentRuleAppList, DeploymentRuleAppListConfig
 from .pattern import Pattern, PatternConfig
 from .property import Property, PropertyConfig

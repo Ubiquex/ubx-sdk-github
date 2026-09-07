@@ -95,6 +95,8 @@ class UserAttrs:
     operations: Any = None
     # The ID of the organization.
     organization_id: Any = None
+    # The URL of the linked GitHub user's profile.
+    profile_url: Any = None
     # The real roles assigned to this SCIM-provisioned user. (AI-inferred)
     roles: Any = None
     # The real SCIM schema URIs this resource conforms to. (AI-inferred)

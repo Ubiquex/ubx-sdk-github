@@ -4,22 +4,22 @@ package org
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type OrgConfig struct {
-	Page    any
+	Page any
 	PerPage any
-	State   any
+	State any
 }
 
 type OrgAttrs struct {
-	Page    any
+	Page any
 	PerPage any
-	State   any
+	State any
 }
 
 var Org = ubx.DataSourceBinding{
 	WireType: "github_org",
 	Fields: ubx.FieldMap{
-		"Page":    ubx.FieldSpec{WireName: "page"},
+		"Page": ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"State":   ubx.FieldSpec{WireName: "state"},
+		"State": ubx.FieldSpec{WireName: "state"},
 	},
 }

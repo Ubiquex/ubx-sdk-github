@@ -4,4 +4,4 @@
 # re-run `ubx sdk gen` to regenerate after a provider version bump.
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
-from .studio_subscription_assignment import StudioSubscriptionAssignment, StudioSubscriptionAssignmentConfig
+from .studio_subscription_assignment_list import StudioSubscriptionAssignmentList, StudioSubscriptionAssignmentListConfig

@@ -5,13 +5,13 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type DeploymentConfig struct {
 	Owner any
-	Repo  any
+	Repo any
 	RunId any
 }
 
 type DeploymentAttrs struct {
 	Owner any
-	Repo  any
+	Repo any
 	RunId any
 }
 
@@ -19,7 +19,7 @@ var Deployment = ubx.DataSourceBinding{
 	WireType: "github_pending_deployment",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo":  ubx.FieldSpec{WireName: "repo"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
 		"RunId": ubx.FieldSpec{WireName: "run_id"},
 	},
 }

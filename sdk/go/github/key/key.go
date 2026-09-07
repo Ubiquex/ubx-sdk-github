@@ -36,7 +36,7 @@ type KeyAttrs struct {
 var Key = ubx.ResourceBinding{
 	WireType: "github_key",
 	Fields: ubx.FieldMap{
-		"Key":   ubx.FieldSpec{WireName: "key"},
+		"Key": ubx.FieldSpec{WireName: "key"},
 		"Title": ubx.FieldSpec{WireName: "title"},
 		"KeyId": ubx.FieldSpec{WireName: "key_id"},
 	},

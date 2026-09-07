@@ -9,5 +9,6 @@ from .collaborator_permission import CollaboratorPermission, CollaboratorPermiss
 from .fine_grained_permission import FineGrainedPermission, FineGrainedPermissionConfig
 from .hash_algorithm import HashAlgorithm, HashAlgorithmConfig
 from .invitation import Invitation, InvitationConfig
+from .list import List, ListConfig
 from .ruleset import Ruleset, RulesetConfig
 from .subscription import Subscription, SubscriptionConfig

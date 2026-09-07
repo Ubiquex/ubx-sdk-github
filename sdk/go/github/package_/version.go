@@ -12,8 +12,8 @@ type Version_Metadata_Docker struct {
 }
 
 type Version_Metadata struct {
-	Container   any
-	Docker      any
+	Container any
+	Docker any
 	PackageType any
 }
 
@@ -64,9 +64,9 @@ type VersionAttrs struct {
 var Version = ubx.ResourceBinding{
 	WireType: "github_package_version",
 	Fields: ubx.FieldMap{
-		"Org":              ubx.FieldSpec{WireName: "org"},
-		"PackageType":      ubx.FieldSpec{WireName: "package_type"},
-		"PackageName":      ubx.FieldSpec{WireName: "package_name"},
+		"Org": ubx.FieldSpec{WireName: "org"},
+		"PackageType": ubx.FieldSpec{WireName: "package_type"},
+		"PackageName": ubx.FieldSpec{WireName: "package_name"},
 		"PackageVersionId": ubx.FieldSpec{WireName: "package_version_id"},
 	},
 }
