@@ -4,31 +4,31 @@ package version
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type VersionConfig struct {
-	Org any
+	Org         any
 	PackageName any
 	PackageType any
-	Page any
-	PerPage any
-	State any
+	Page        any
+	PerPage     any
+	State       any
 }
 
 type VersionAttrs struct {
-	Org any
+	Org         any
 	PackageName any
 	PackageType any
-	Page any
-	PerPage any
-	State any
+	Page        any
+	PerPage     any
+	State       any
 }
 
 var Version = ubx.DataSourceBinding{
 	WireType: "github_version",
 	Fields: ubx.FieldMap{
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Org":         ubx.FieldSpec{WireName: "org"},
 		"PackageName": ubx.FieldSpec{WireName: "package_name"},
 		"PackageType": ubx.FieldSpec{WireName: "package_type"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"State": ubx.FieldSpec{WireName: "state"},
+		"Page":        ubx.FieldSpec{WireName: "page"},
+		"PerPage":     ubx.FieldSpec{WireName: "per_page"},
+		"State":       ubx.FieldSpec{WireName: "state"},
 	},
 }

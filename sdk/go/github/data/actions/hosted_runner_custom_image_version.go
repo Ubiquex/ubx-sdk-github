@@ -4,15 +4,15 @@ package actions
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type HostedRunnerCustomImageVersionConfig struct {
-	Enterprise any
+	Enterprise        any
 	ImageDefinitionId any
-	Version any
+	Version           any
 }
 
 type HostedRunnerCustomImageVersionAttrs struct {
 	// The creation date time of the image version.
-	CreatedOn any
-	Enterprise any
+	CreatedOn         any
+	Enterprise        any
 	ImageDefinitionId any
 	// Image version size in GB.
 	SizeGb any
@@ -20,14 +20,14 @@ type HostedRunnerCustomImageVersionAttrs struct {
 	State any
 	// The image version status details.
 	StateDetails any
-	Version any
+	Version      any
 }
 
 var HostedRunnerCustomImageVersion = ubx.DataSourceBinding{
 	WireType: "github_actions_hosted_runner_custom_image_version",
 	Fields: ubx.FieldMap{
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
+		"Enterprise":        ubx.FieldSpec{WireName: "enterprise"},
 		"ImageDefinitionId": ubx.FieldSpec{WireName: "image_definition_id"},
-		"Version": ubx.FieldSpec{WireName: "version"},
+		"Version":           ubx.FieldSpec{WireName: "version"},
 	},
 }

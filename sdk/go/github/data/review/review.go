@@ -4,28 +4,28 @@ package review
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ReviewConfig struct {
-	Owner any
-	Page any
-	PerPage any
+	Owner      any
+	Page       any
+	PerPage    any
 	PullNumber any
-	Repo any
+	Repo       any
 }
 
 type ReviewAttrs struct {
-	Owner any
-	Page any
-	PerPage any
+	Owner      any
+	Page       any
+	PerPage    any
 	PullNumber any
-	Repo any
+	Repo       any
 }
 
 var Review = ubx.DataSourceBinding{
 	WireType: "github_review",
 	Fields: ubx.FieldMap{
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Owner":      ubx.FieldSpec{WireName: "owner"},
+		"Page":       ubx.FieldSpec{WireName: "page"},
+		"PerPage":    ubx.FieldSpec{WireName: "per_page"},
 		"PullNumber": ubx.FieldSpec{WireName: "pull_number"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":       ubx.FieldSpec{WireName: "repo"},
 	},
 }

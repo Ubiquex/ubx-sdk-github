@@ -5,24 +5,24 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type InstallationConfig struct {
 	Outdated any
-	Page any
-	PerPage any
-	Since any
+	Page     any
+	PerPage  any
+	Since    any
 }
 
 type InstallationAttrs struct {
 	Outdated any
-	Page any
-	PerPage any
-	Since any
+	Page     any
+	PerPage  any
+	Since    any
 }
 
 var Installation = ubx.DataSourceBinding{
 	WireType: "github_installation",
 	Fields: ubx.FieldMap{
 		"Outdated": ubx.FieldSpec{WireName: "outdated"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Since": ubx.FieldSpec{WireName: "since"},
+		"Page":     ubx.FieldSpec{WireName: "page"},
+		"PerPage":  ubx.FieldSpec{WireName: "per_page"},
+		"Since":    ubx.FieldSpec{WireName: "since"},
 	},
 }

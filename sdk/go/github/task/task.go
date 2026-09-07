@@ -4,16 +4,16 @@ package task
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Task_Artifacts_Data struct {
-	BaseRef any
+	BaseRef  any
 	GlobalId any
-	HeadRef any
-	Id any
+	HeadRef  any
+	Id       any
 }
 
 type Task_Artifacts struct {
-	Data any
+	Data     any
 	Provider any
-	Type any
+	Type     any
 }
 
 type Task_Creator struct {
@@ -26,26 +26,26 @@ type Task_Sessions_Error struct {
 
 type Task_Sessions_Usage struct {
 	Amount any
-	Type any
+	Type   any
 }
 
 type Task_Sessions struct {
-	BaseRef any
+	BaseRef     any
 	CompletedAt any
-	CreatedAt any
-	Error any
-	HeadRef any
-	Id any
-	Model any
-	Name any
-	Owner any
-	Prompt any
-	Repository any
-	State any
-	TaskId any
-	UpdatedAt any
-	Usage any
-	User any
+	CreatedAt   any
+	Error       any
+	HeadRef     any
+	Id          any
+	Model       any
+	Name        any
+	Owner       any
+	Prompt      any
+	Repository  any
+	State       any
+	TaskId      any
+	UpdatedAt   any
+	Usage       any
+	User        any
 }
 
 type TaskConfig struct {
@@ -129,15 +129,15 @@ type TaskAttrs struct {
 var Task = ubx.ResourceBinding{
 	WireType: "github_task",
 	Fields: ubx.FieldMap{
-		"BaseRef": ubx.FieldSpec{WireName: "base_ref"},
+		"BaseRef":           ubx.FieldSpec{WireName: "base_ref"},
 		"CreatePullRequest": ubx.FieldSpec{WireName: "create_pull_request"},
-		"CustomAgent": ubx.FieldSpec{WireName: "custom_agent"},
-		"HeadRef": ubx.FieldSpec{WireName: "head_ref"},
-		"Model": ubx.FieldSpec{WireName: "model"},
-		"Prompt": ubx.FieldSpec{WireName: "prompt"},
-		"OwnerPath": ubx.FieldSpec{WireName: "owner_path"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"TaskId": ubx.FieldSpec{WireName: "task_id"},
-		"OwnerPath2": ubx.FieldSpec{WireName: "owner_path2"},
+		"CustomAgent":       ubx.FieldSpec{WireName: "custom_agent"},
+		"HeadRef":           ubx.FieldSpec{WireName: "head_ref"},
+		"Model":             ubx.FieldSpec{WireName: "model"},
+		"Prompt":            ubx.FieldSpec{WireName: "prompt"},
+		"OwnerPath":         ubx.FieldSpec{WireName: "owner_path"},
+		"Repo":              ubx.FieldSpec{WireName: "repo"},
+		"TaskId":            ubx.FieldSpec{WireName: "task_id"},
+		"OwnerPath2":        ubx.FieldSpec{WireName: "owner_path2"},
 	},
 }

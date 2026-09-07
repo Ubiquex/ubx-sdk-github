@@ -4,24 +4,24 @@ package external
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Groups_Groups struct {
-	GroupId any
+	GroupId   any
 	GroupName any
 	UpdatedAt any
 }
 
 type GroupsConfig struct {
 	DisplayName any
-	Org any
-	Page any
-	PerPage any
+	Org         any
+	Page        any
+	PerPage     any
 }
 
 type GroupsAttrs struct {
 	DisplayName any
 	// An array of external groups available to be mapped to a team
-	Groups any
-	Org any
-	Page any
+	Groups  any
+	Org     any
+	Page    any
 	PerPage any
 }
 
@@ -29,8 +29,8 @@ var Groups = ubx.DataSourceBinding{
 	WireType: "github_external_groups",
 	Fields: ubx.FieldMap{
 		"DisplayName": ubx.FieldSpec{WireName: "display_name"},
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Org":         ubx.FieldSpec{WireName: "org"},
+		"Page":        ubx.FieldSpec{WireName: "page"},
+		"PerPage":     ubx.FieldSpec{WireName: "per_page"},
 	},
 }

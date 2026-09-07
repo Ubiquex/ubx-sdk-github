@@ -4,34 +4,34 @@ package code
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ScanningCodeqlDatabase_Uploader struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type ScanningCodeqlDatabaseConfig struct {
 	Language any
-	Owner any
-	Repo any
+	Owner    any
+	Repo     any
 }
 
 type ScanningCodeqlDatabaseAttrs struct {
@@ -42,12 +42,12 @@ type ScanningCodeqlDatabaseAttrs struct {
 	// The date and time at which the CodeQL database was created, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
 	CreatedAt any
 	// The ID of the CodeQL database.
-	Id any
+	Id       any
 	Language any
 	// The name of the CodeQL database.
-	Name any
+	Name  any
 	Owner any
-	Repo any
+	Repo  any
 	// The size of the CodeQL database file in bytes.
 	Size any
 	// The date and time at which the CodeQL database was last updated, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
@@ -62,7 +62,7 @@ var ScanningCodeqlDatabase = ubx.DataSourceBinding{
 	WireType: "github_code_scanning_codeql_database",
 	Fields: ubx.FieldMap{
 		"Language": ubx.FieldSpec{WireName: "language"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":    ubx.FieldSpec{WireName: "owner"},
+		"Repo":     ubx.FieldSpec{WireName: "repo"},
 	},
 }

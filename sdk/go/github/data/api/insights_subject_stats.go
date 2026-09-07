@@ -4,37 +4,37 @@ package api
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type InsightsSubjectStatsConfig struct {
-	Direction any
-	MaxTimestamp any
-	MinTimestamp any
-	Org any
-	Page any
-	PerPage any
-	Sort any
+	Direction            any
+	MaxTimestamp         any
+	MinTimestamp         any
+	Org                  any
+	Page                 any
+	PerPage              any
+	Sort                 any
 	SubjectNameSubstring any
 }
 
 type InsightsSubjectStatsAttrs struct {
-	Direction any
-	MaxTimestamp any
-	MinTimestamp any
-	Org any
-	Page any
-	PerPage any
-	Sort any
+	Direction            any
+	MaxTimestamp         any
+	MinTimestamp         any
+	Org                  any
+	Page                 any
+	PerPage              any
+	Sort                 any
 	SubjectNameSubstring any
 }
 
 var InsightsSubjectStats = ubx.DataSourceBinding{
 	WireType: "github_api_insights_subject_stats",
 	Fields: ubx.FieldMap{
-		"Direction": ubx.FieldSpec{WireName: "direction"},
-		"MaxTimestamp": ubx.FieldSpec{WireName: "max_timestamp"},
-		"MinTimestamp": ubx.FieldSpec{WireName: "min_timestamp"},
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Sort": ubx.FieldSpec{WireName: "sort"},
+		"Direction":            ubx.FieldSpec{WireName: "direction"},
+		"MaxTimestamp":         ubx.FieldSpec{WireName: "max_timestamp"},
+		"MinTimestamp":         ubx.FieldSpec{WireName: "min_timestamp"},
+		"Org":                  ubx.FieldSpec{WireName: "org"},
+		"Page":                 ubx.FieldSpec{WireName: "page"},
+		"PerPage":              ubx.FieldSpec{WireName: "per_page"},
+		"Sort":                 ubx.FieldSpec{WireName: "sort"},
 		"SubjectNameSubstring": ubx.FieldSpec{WireName: "subject_name_substring"},
 	},
 }

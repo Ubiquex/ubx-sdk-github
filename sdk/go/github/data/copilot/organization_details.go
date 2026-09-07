@@ -27,7 +27,7 @@ type OrganizationDetailsAttrs struct {
 	Cli any
 	// The organization policy for allowing or disallowing Copilot Chat in the IDE.
 	IdeChat any
-	Org any
+	Org     any
 	// The Copilot plan of the organization, or the parent enterprise, when applicable.
 	PlanType any
 	// The organization policy for allowing or disallowing Copilot features on GitHub.com.

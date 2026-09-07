@@ -5,14 +5,14 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type CustomSubRepoConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type CustomSubRepoAttrs struct {
 	// Array of unique strings. Each claim key can only contain alphanumeric characters and underscores.
 	IncludeClaimKeys any
-	Owner any
-	Repo any
+	Owner            any
+	Repo             any
 	// The current `sub` claim prefix for this repository.
 	SubClaimPrefix any
 	// Whether to use the default template or not. If `true`, the `include_claim_keys` field is ignored.
@@ -25,6 +25,6 @@ var CustomSubRepo = ubx.DataSourceBinding{
 	WireType: "github_oidc_custom_sub_repo",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

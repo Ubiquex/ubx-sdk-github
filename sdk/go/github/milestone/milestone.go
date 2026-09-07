@@ -44,7 +44,7 @@ type Milestone_Creator struct {
 	// The type of GitHub account that created the milestone, such as 'User' or 'Organization'. (AI-inferred)
 	Type any
 	// The URL of the creator's GitHub profile. (AI-inferred)
-	Url any
+	Url          any
 	UserViewType any
 }
 
@@ -109,12 +109,12 @@ type MilestoneAttrs struct {
 var Milestone = ubx.ResourceBinding{
 	WireType: "github_milestone",
 	Fields: ubx.FieldMap{
-		"Description": ubx.FieldSpec{WireName: "description"},
-		"DueOn": ubx.FieldSpec{WireName: "due_on"},
-		"State": ubx.FieldSpec{WireName: "state"},
-		"Title": ubx.FieldSpec{WireName: "title"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Description":     ubx.FieldSpec{WireName: "description"},
+		"DueOn":           ubx.FieldSpec{WireName: "due_on"},
+		"State":           ubx.FieldSpec{WireName: "state"},
+		"Title":           ubx.FieldSpec{WireName: "title"},
+		"Owner":           ubx.FieldSpec{WireName: "owner"},
+		"Repo":            ubx.FieldSpec{WireName: "repo"},
 		"MilestoneNumber": ubx.FieldSpec{WireName: "milestone_number"},
 	},
 }

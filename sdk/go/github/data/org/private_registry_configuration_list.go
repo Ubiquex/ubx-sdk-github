@@ -4,51 +4,51 @@ package org
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type PrivateRegistryConfigurationList_Configurations struct {
-	AccountId any
-	ApiHost any
-	Audience any
-	AuthType any
-	AwsRegion any
-	ClientId any
-	CreatedAt any
-	Domain any
-	DomainOwner any
-	IdentityMappingName any
-	JfrogOidcProviderName any
-	Name any
-	Namespace any
-	RegistryType any
-	ReplacesBase any
-	RoleName any
-	ServiceAccount any
-	ServiceSlug any
-	TenantId any
-	UpdatedAt any
-	Url any
-	Username any
-	Visibility any
+	AccountId                any
+	ApiHost                  any
+	Audience                 any
+	AuthType                 any
+	AwsRegion                any
+	ClientId                 any
+	CreatedAt                any
+	Domain                   any
+	DomainOwner              any
+	IdentityMappingName      any
+	JfrogOidcProviderName    any
+	Name                     any
+	Namespace                any
+	RegistryType             any
+	ReplacesBase             any
+	RoleName                 any
+	ServiceAccount           any
+	ServiceSlug              any
+	TenantId                 any
+	UpdatedAt                any
+	Url                      any
+	Username                 any
+	Visibility               any
 	WorkloadIdentityProvider any
 }
 
 type PrivateRegistryConfigurationListConfig struct {
-	Org any
-	Page any
+	Org     any
+	Page    any
 	PerPage any
 }
 
 type PrivateRegistryConfigurationListAttrs struct {
 	Configurations any
-	Org any
-	Page any
-	PerPage any
-	TotalCount any
+	Org            any
+	Page           any
+	PerPage        any
+	TotalCount     any
 }
 
 var PrivateRegistryConfigurationList = ubx.DataSourceBinding{
 	WireType: "github_org_private_registry_configuration_list",
 	Fields: ubx.FieldMap{
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"Page": ubx.FieldSpec{WireName: "page"},
+		"Org":     ubx.FieldSpec{WireName: "org"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

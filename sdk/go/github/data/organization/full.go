@@ -4,11 +4,11 @@ package organization
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Full_Plan struct {
-	FilledSeats any
-	Name any
+	FilledSeats  any
+	Name         any
 	PrivateRepos any
-	Seats any
-	Space any
+	Seats        any
+	Space        any
 }
 
 type FullConfig struct {
@@ -18,16 +18,16 @@ type FullConfig struct {
 type FullAttrs struct {
 	// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/enterprise-cloud@latest/rest/code-security/configurations) instead. Whether GitHub Advanced Security is enabled for new repositories and repositories transferred to this organization. This field is only visible to organization owners or members of a team with the security manager role.
 	AdvancedSecurityEnabledForNewRepositories any
-	ArchivedAt any
-	AvatarUrl any
-	BillingEmail any
-	Blog any
+	ArchivedAt                                any
+	AvatarUrl                                 any
+	BillingEmail                              any
+	Blog                                      any
 	// The number of collaborators on private repositories. This field may be null if the number of private repositories is over 50,000.
 	Collaborators any
-	Company any
-	CreatedAt any
+	Company       any
+	CreatedAt     any
 	// The default branch for repositories created in this organization.
-	DefaultRepositoryBranch any
+	DefaultRepositoryBranch     any
 	DefaultRepositoryPermission any
 	// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/enterprise-cloud@latest/rest/code-security/configurations) instead. Whether Dependabot alerts are automatically enabled for new repositories and repositories transferred to this organization. This field is only visible to organization owners or members of a team with the security manager role.
 	DependabotAlertsEnabledForNewRepositories any
@@ -36,50 +36,50 @@ type FullAttrs struct {
 	// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/enterprise-cloud@latest/rest/code-security/configurations) instead. Whether dependency graph is automatically enabled for new repositories and repositories transferred to this organization. This field is only visible to organization owners or members of a team with the security manager role.
 	DependencyGraphEnabledForNewRepositories any
 	// Controls whether or not deploy keys may be added and used for repositories in the organization.
-	DeployKeysEnabledForRepositories any
-	Description any
-	DiskUsage any
+	DeployKeysEnabledForRepositories       any
+	Description                            any
+	DiskUsage                              any
 	DisplayCommenterFullNameSettingEnabled any
-	Email any
-	EventsUrl any
-	Followers any
-	Following any
-	HasOrganizationProjects any
-	HasRepositoryProjects any
-	HooksUrl any
-	HtmlUrl any
-	Id any
-	IsVerified any
-	IssuesUrl any
-	Location any
-	Login any
-	MembersAllowedRepositoryCreationType any
-	MembersCanChangeRepoVisibility any
-	MembersCanCreateInternalRepositories any
-	MembersCanCreatePages any
-	MembersCanCreatePrivatePages any
-	MembersCanCreatePrivateRepositories any
-	MembersCanCreatePublicPages any
-	MembersCanCreatePublicRepositories any
-	MembersCanCreateRepositories any
-	MembersCanCreateTeams any
-	MembersCanDeleteIssues any
-	MembersCanDeleteRepositories any
-	MembersCanForkPrivateRepositories any
-	MembersCanInviteOutsideCollaborators any
-	MembersCanViewDependencyInsights any
-	MembersUrl any
-	Name any
-	NodeId any
-	Org any
-	OwnedPrivateRepos any
-	Plan any
-	PrivateGists any
-	PublicGists any
-	PublicMembersUrl any
-	PublicRepos any
-	ReadersCanCreateDiscussions any
-	ReposUrl any
+	Email                                  any
+	EventsUrl                              any
+	Followers                              any
+	Following                              any
+	HasOrganizationProjects                any
+	HasRepositoryProjects                  any
+	HooksUrl                               any
+	HtmlUrl                                any
+	Id                                     any
+	IsVerified                             any
+	IssuesUrl                              any
+	Location                               any
+	Login                                  any
+	MembersAllowedRepositoryCreationType   any
+	MembersCanChangeRepoVisibility         any
+	MembersCanCreateInternalRepositories   any
+	MembersCanCreatePages                  any
+	MembersCanCreatePrivatePages           any
+	MembersCanCreatePrivateRepositories    any
+	MembersCanCreatePublicPages            any
+	MembersCanCreatePublicRepositories     any
+	MembersCanCreateRepositories           any
+	MembersCanCreateTeams                  any
+	MembersCanDeleteIssues                 any
+	MembersCanDeleteRepositories           any
+	MembersCanForkPrivateRepositories      any
+	MembersCanInviteOutsideCollaborators   any
+	MembersCanViewDependencyInsights       any
+	MembersUrl                             any
+	Name                                   any
+	NodeId                                 any
+	Org                                    any
+	OwnedPrivateRepos                      any
+	Plan                                   any
+	PrivateGists                           any
+	PublicGists                            any
+	PublicMembersUrl                       any
+	PublicRepos                            any
+	ReadersCanCreateDiscussions            any
+	ReposUrl                               any
 	// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/enterprise-cloud@latest/rest/code-security/configurations) instead. Whether secret scanning is automatically enabled for new repositories and repositories transferred to this organization. This field is only visible to organization owners or members of a team with the security manager role.
 	SecretScanningEnabledForNewRepositories any
 	// An optional URL string to display to contributors who are blocked from pushing a secret.
@@ -90,13 +90,13 @@ type FullAttrs struct {
 	SecretScanningPushProtectionEnabledForNewRepositories any
 	// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/enterprise-cloud@latest/rest/code-security/configurations) instead. Whether secret scanning automatic validity checks on supported partner tokens is enabled for all repositories under this organization.
 	SecretScanningValidityChecksEnabled any
-	TotalPrivateRepos any
-	TwitterUsername any
-	TwoFactorRequirementEnabled any
-	Type any
-	UpdatedAt any
-	Url any
-	WebCommitSignoffRequired any
+	TotalPrivateRepos                   any
+	TwitterUsername                     any
+	TwoFactorRequirementEnabled         any
+	Type                                any
+	UpdatedAt                           any
+	Url                                 any
+	WebCommitSignoffRequired            any
 }
 
 var Full = ubx.DataSourceBinding{

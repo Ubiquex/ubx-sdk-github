@@ -4,28 +4,28 @@ package stack
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type StackConfig struct {
-	Owner any
-	Page any
-	PerPage any
+	Owner       any
+	Page        any
+	PerPage     any
 	PullRequest any
-	Repo any
+	Repo        any
 }
 
 type StackAttrs struct {
-	Owner any
-	Page any
-	PerPage any
+	Owner       any
+	Page        any
+	PerPage     any
 	PullRequest any
-	Repo any
+	Repo        any
 }
 
 var Stack = ubx.DataSourceBinding{
 	WireType: "github_stack",
 	Fields: ubx.FieldMap{
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Owner":       ubx.FieldSpec{WireName: "owner"},
+		"Page":        ubx.FieldSpec{WireName: "page"},
+		"PerPage":     ubx.FieldSpec{WireName: "per_page"},
 		"PullRequest": ubx.FieldSpec{WireName: "pull_request"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":        ubx.FieldSpec{WireName: "repo"},
 	},
 }

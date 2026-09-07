@@ -5,20 +5,20 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type HashAlgorithmConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type HashAlgorithmAttrs struct {
 	// The Git hash algorithm used by this repository.
 	HashAlgorithm any
-	Owner any
-	Repo any
+	Owner         any
+	Repo          any
 }
 
 var HashAlgorithm = ubx.DataSourceBinding{
 	WireType: "github_repository_hash_algorithm",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

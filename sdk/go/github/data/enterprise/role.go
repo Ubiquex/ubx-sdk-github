@@ -5,7 +5,7 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type RoleConfig struct {
 	Enterprise any
-	RoleId any
+	RoleId     any
 }
 
 type RoleAttrs struct {
@@ -13,14 +13,14 @@ type RoleAttrs struct {
 	CreatedAt any
 	// A short description about who this role is for or what permissions it grants.
 	Description any
-	Enterprise any
+	Enterprise  any
 	// The unique identifier of the role.
 	Id any
 	// The name of the role.
 	Name any
 	// A list of permissions included in this role.
 	Permissions any
-	RoleId any
+	RoleId      any
 	// Source answers the question, "where did this role come from?"
 	Source any
 	// The date and time the role was last updated.
@@ -31,6 +31,6 @@ var Role = ubx.DataSourceBinding{
 	WireType: "github_enterprise_role",
 	Fields: ubx.FieldMap{
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"RoleId": ubx.FieldSpec{WireName: "role_id"},
+		"RoleId":     ubx.FieldSpec{WireName: "role_id"},
 	},
 }

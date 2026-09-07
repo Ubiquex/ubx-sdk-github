@@ -46,11 +46,11 @@ type ReportExportAttrs struct {
 var ReportExport = ubx.ResourceBinding{
 	WireType: "github_usage_report_export",
 	Fields: ubx.FieldMap{
-		"EndDate": ubx.FieldSpec{WireName: "end_date"},
+		"EndDate":    ubx.FieldSpec{WireName: "end_date"},
 		"ReportType": ubx.FieldSpec{WireName: "report_type"},
-		"SendEmail": ubx.FieldSpec{WireName: "send_email"},
-		"StartDate": ubx.FieldSpec{WireName: "start_date"},
+		"SendEmail":  ubx.FieldSpec{WireName: "send_email"},
+		"StartDate":  ubx.FieldSpec{WireName: "start_date"},
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"ReportId": ubx.FieldSpec{WireName: "report_id"},
+		"ReportId":   ubx.FieldSpec{WireName: "report_id"},
 	},
 }

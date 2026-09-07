@@ -4,19 +4,19 @@ package installation
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type RequestConfig struct {
-	Page any
+	Page    any
 	PerPage any
 }
 
 type RequestAttrs struct {
-	Page any
+	Page    any
 	PerPage any
 }
 
 var Request = ubx.DataSourceBinding{
 	WireType: "github_installation_request",
 	Fields: ubx.FieldMap{
-		"Page": ubx.FieldSpec{WireName: "page"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

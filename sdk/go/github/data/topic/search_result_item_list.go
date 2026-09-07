@@ -4,10 +4,10 @@ package topic
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type SearchResultItemList_Items_Aliases_TopicRelation struct {
-	Id any
-	Name any
+	Id           any
+	Name         any
 	RelationType any
-	TopicId any
+	TopicId      any
 }
 
 type SearchResultItemList_Items_Aliases struct {
@@ -16,56 +16,56 @@ type SearchResultItemList_Items_Aliases struct {
 
 type SearchResultItemList_Items_TextMatches_Matches struct {
 	Indices any
-	Text any
+	Text    any
 }
 
 type SearchResultItemList_Items_TextMatches struct {
-	Fragment any
-	Matches any
+	Fragment   any
+	Matches    any
 	ObjectType any
-	ObjectUrl any
-	Property any
+	ObjectUrl  any
+	Property   any
 }
 
 type SearchResultItemList_Items struct {
-	Aliases any
-	CreatedAt any
-	CreatedBy any
-	Curated any
-	Description any
-	DisplayName any
-	Featured any
-	LogoUrl any
-	Name any
-	Related any
-	Released any
-	RepositoryCount any
-	Score any
+	Aliases          any
+	CreatedAt        any
+	CreatedBy        any
+	Curated          any
+	Description      any
+	DisplayName      any
+	Featured         any
+	LogoUrl          any
+	Name             any
+	Related          any
+	Released         any
+	RepositoryCount  any
+	Score            any
 	ShortDescription any
-	TextMatches any
-	UpdatedAt any
+	TextMatches      any
+	UpdatedAt        any
 }
 
 type SearchResultItemListConfig struct {
-	Page any
+	Page    any
 	PerPage any
-	Q any
+	Q       any
 }
 
 type SearchResultItemListAttrs struct {
 	IncompleteResults any
-	Items any
-	Page any
-	PerPage any
-	Q any
-	TotalCount any
+	Items             any
+	Page              any
+	PerPage           any
+	Q                 any
+	TotalCount        any
 }
 
 var SearchResultItemList = ubx.DataSourceBinding{
 	WireType: "github_topic_search_result_item_list",
 	Fields: ubx.FieldMap{
-		"Page": ubx.FieldSpec{WireName: "page"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Q": ubx.FieldSpec{WireName: "q"},
+		"Q":       ubx.FieldSpec{WireName: "q"},
 	},
 }

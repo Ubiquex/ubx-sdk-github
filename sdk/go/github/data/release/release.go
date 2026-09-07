@@ -4,25 +4,25 @@ package release
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ReleaseConfig struct {
-	Owner any
-	Page any
+	Owner   any
+	Page    any
 	PerPage any
-	Repo any
+	Repo    any
 }
 
 type ReleaseAttrs struct {
-	Owner any
-	Page any
+	Owner   any
+	Page    any
 	PerPage any
-	Repo any
+	Repo    any
 }
 
 var Release = ubx.DataSourceBinding{
 	WireType: "github_release",
 	Fields: ubx.FieldMap{
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
+		"Owner":   ubx.FieldSpec{WireName: "owner"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":    ubx.FieldSpec{WireName: "repo"},
 	},
 }

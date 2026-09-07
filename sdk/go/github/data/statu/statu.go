@@ -5,18 +5,18 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type StatuConfig struct {
 	Enterprise any
-	JobId any
+	JobId      any
 }
 
 type StatuAttrs struct {
 	Enterprise any
-	JobId any
+	JobId      any
 }
 
 var Statu = ubx.DataSourceBinding{
 	WireType: "github_statu",
 	Fields: ubx.FieldMap{
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"JobId": ubx.FieldSpec{WireName: "job_id"},
+		"JobId":      ubx.FieldSpec{WireName: "job_id"},
 	},
 }

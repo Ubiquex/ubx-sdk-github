@@ -10,7 +10,7 @@ type RequestMergeAsyncResult_Details struct {
 	MergeAction any
 	// The method used to merge the pull request, as recorded in the result details of an asynchronous merge operation. (AI-inferred)
 	MergeMethod any
-	Message any
+	Message     any
 	// The SHA of the merge commit created when the pull request was merged asynchronously. (AI-inferred)
 	Sha any
 	// A UUID string that uniquely identifies the asynchronous pull request merge operation. (AI-inferred)
@@ -67,13 +67,13 @@ var RequestMergeAsyncResult = ubx.ResourceBinding{
 	WireType: "github_pull_request_merge_async_result",
 	Fields: ubx.FieldMap{
 		"CommitMessage": ubx.FieldSpec{WireName: "commit_message"},
-		"CommitTitle": ubx.FieldSpec{WireName: "commit_title"},
-		"MergeAction": ubx.FieldSpec{WireName: "merge_action"},
-		"MergeMethod": ubx.FieldSpec{WireName: "merge_method"},
-		"Sha": ubx.FieldSpec{WireName: "sha"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"PullNumber": ubx.FieldSpec{WireName: "pull_number"},
-		"Uuid": ubx.FieldSpec{WireName: "uuid"},
+		"CommitTitle":   ubx.FieldSpec{WireName: "commit_title"},
+		"MergeAction":   ubx.FieldSpec{WireName: "merge_action"},
+		"MergeMethod":   ubx.FieldSpec{WireName: "merge_method"},
+		"Sha":           ubx.FieldSpec{WireName: "sha"},
+		"Owner":         ubx.FieldSpec{WireName: "owner"},
+		"Repo":          ubx.FieldSpec{WireName: "repo"},
+		"PullNumber":    ubx.FieldSpec{WireName: "pull_number"},
+		"Uuid":          ubx.FieldSpec{WireName: "uuid"},
 	},
 }

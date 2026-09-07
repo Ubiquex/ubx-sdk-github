@@ -40,26 +40,25 @@ type Ruleset_Rules struct {
 }
 
 var Ruleset_BypassActorsFields = ubx.FieldMap{
-		"ActorId": ubx.FieldSpec{WireName: "actor_id"},
-		"ActorType": ubx.FieldSpec{WireName: "actor_type"},
-		"BypassMode": ubx.FieldSpec{WireName: "bypass_mode"},
-	}
+	"ActorId":    ubx.FieldSpec{WireName: "actor_id"},
+	"ActorType":  ubx.FieldSpec{WireName: "actor_type"},
+	"BypassMode": ubx.FieldSpec{WireName: "bypass_mode"},
+}
 
-var Ruleset_ConditionsFields = ubx.FieldMap{
-	}
+var Ruleset_ConditionsFields = ubx.FieldMap{}
 
 var Ruleset_Rules_ParametersFields = ubx.FieldMap{
-		"UpdateAllowsFetchAndMerge": ubx.FieldSpec{WireName: "update_allows_fetch_and_merge"},
-	}
+	"UpdateAllowsFetchAndMerge": ubx.FieldSpec{WireName: "update_allows_fetch_and_merge"},
+}
 
 var Ruleset_RulesFields = ubx.FieldMap{
-		"Parameters": ubx.FieldSpec{
-			WireName: "parameters",
-			Kind: "object",
-			Fields: Ruleset_Rules_ParametersFields,
-		},
-		"Type": ubx.FieldSpec{WireName: "type"},
-	}
+	"Parameters": ubx.FieldSpec{
+		WireName: "parameters",
+		Kind:     "object",
+		Fields:   Ruleset_Rules_ParametersFields,
+	},
+	"Type": ubx.FieldSpec{WireName: "type"},
+}
 
 type RulesetConfig struct {
 	// The actors that can bypass the rules in this ruleset
@@ -119,23 +118,23 @@ var Ruleset = ubx.ResourceBinding{
 	Fields: ubx.FieldMap{
 		"BypassActors": ubx.FieldSpec{
 			WireName: "bypass_actors",
-			Kind: "list",
-			Fields: Ruleset_BypassActorsFields,
+			Kind:     "list",
+			Fields:   Ruleset_BypassActorsFields,
 		},
 		"Conditions": ubx.FieldSpec{
 			WireName: "conditions",
-			Kind: "object",
-			Fields: Ruleset_ConditionsFields,
+			Kind:     "object",
+			Fields:   Ruleset_ConditionsFields,
 		},
 		"Enforcement": ubx.FieldSpec{WireName: "enforcement"},
-		"Name": ubx.FieldSpec{WireName: "name"},
+		"Name":        ubx.FieldSpec{WireName: "name"},
 		"Rules": ubx.FieldSpec{
 			WireName: "rules",
-			Kind: "list",
-			Fields: Ruleset_RulesFields,
+			Kind:     "list",
+			Fields:   Ruleset_RulesFields,
 		},
-		"Target": ubx.FieldSpec{WireName: "target"},
+		"Target":     ubx.FieldSpec{WireName: "target"},
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"RulesetId": ubx.FieldSpec{WireName: "ruleset_id"},
+		"RulesetId":  ubx.FieldSpec{WireName: "ruleset_id"},
 	},
 }

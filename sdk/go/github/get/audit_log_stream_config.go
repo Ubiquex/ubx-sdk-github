@@ -4,46 +4,46 @@ package get
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type AuditLogStreamConfig_VendorSpecific struct {
-	ArnRole any
-	AuthenticationType any
-	Bucket any
-	Container any
-	Domain any
-	EncryptedAccessKeyId any
-	EncryptedConnstring any
+	ArnRole                  any
+	AuthenticationType       any
+	Bucket                   any
+	Container                any
+	Domain                   any
+	EncryptedAccessKeyId     any
+	EncryptedConnstring      any
 	EncryptedJsonCredentials any
-	EncryptedSasUrl any
-	EncryptedSecretKey any
-	EncryptedToken any
-	KeyId any
-	Name any
-	Path any
-	Port any
-	Region any
-	Site any
-	SslVerify any
+	EncryptedSasUrl          any
+	EncryptedSecretKey       any
+	EncryptedToken           any
+	KeyId                    any
+	Name                     any
+	Path                     any
+	Port                     any
+	Region                   any
+	Site                     any
+	SslVerify                any
 }
 
 var AuditLogStreamConfig_VendorSpecificFields = ubx.FieldMap{
-		"ArnRole": ubx.FieldSpec{WireName: "arn_role"},
-		"AuthenticationType": ubx.FieldSpec{WireName: "authentication_type"},
-		"Bucket": ubx.FieldSpec{WireName: "bucket"},
-		"Container": ubx.FieldSpec{WireName: "container"},
-		"Domain": ubx.FieldSpec{WireName: "domain"},
-		"EncryptedAccessKeyId": ubx.FieldSpec{WireName: "encrypted_access_key_id"},
-		"EncryptedConnstring": ubx.FieldSpec{WireName: "encrypted_connstring"},
-		"EncryptedJsonCredentials": ubx.FieldSpec{WireName: "encrypted_json_credentials"},
-		"EncryptedSasUrl": ubx.FieldSpec{WireName: "encrypted_sas_url"},
-		"EncryptedSecretKey": ubx.FieldSpec{WireName: "encrypted_secret_key"},
-		"EncryptedToken": ubx.FieldSpec{WireName: "encrypted_token"},
-		"KeyId": ubx.FieldSpec{WireName: "key_id"},
-		"Name": ubx.FieldSpec{WireName: "name"},
-		"Path": ubx.FieldSpec{WireName: "path"},
-		"Port": ubx.FieldSpec{WireName: "port"},
-		"Region": ubx.FieldSpec{WireName: "region"},
-		"Site": ubx.FieldSpec{WireName: "site"},
-		"SslVerify": ubx.FieldSpec{WireName: "ssl_verify"},
-	}
+	"ArnRole":                  ubx.FieldSpec{WireName: "arn_role"},
+	"AuthenticationType":       ubx.FieldSpec{WireName: "authentication_type"},
+	"Bucket":                   ubx.FieldSpec{WireName: "bucket"},
+	"Container":                ubx.FieldSpec{WireName: "container"},
+	"Domain":                   ubx.FieldSpec{WireName: "domain"},
+	"EncryptedAccessKeyId":     ubx.FieldSpec{WireName: "encrypted_access_key_id"},
+	"EncryptedConnstring":      ubx.FieldSpec{WireName: "encrypted_connstring"},
+	"EncryptedJsonCredentials": ubx.FieldSpec{WireName: "encrypted_json_credentials"},
+	"EncryptedSasUrl":          ubx.FieldSpec{WireName: "encrypted_sas_url"},
+	"EncryptedSecretKey":       ubx.FieldSpec{WireName: "encrypted_secret_key"},
+	"EncryptedToken":           ubx.FieldSpec{WireName: "encrypted_token"},
+	"KeyId":                    ubx.FieldSpec{WireName: "key_id"},
+	"Name":                     ubx.FieldSpec{WireName: "name"},
+	"Path":                     ubx.FieldSpec{WireName: "path"},
+	"Port":                     ubx.FieldSpec{WireName: "port"},
+	"Region":                   ubx.FieldSpec{WireName: "region"},
+	"Site":                     ubx.FieldSpec{WireName: "site"},
+	"SslVerify":                ubx.FieldSpec{WireName: "ssl_verify"},
+}
 
 type AuditLogStreamConfigConfig struct {
 	// This setting pauses or resumes a stream.
@@ -84,14 +84,14 @@ type AuditLogStreamConfigAttrs struct {
 var AuditLogStreamConfig = ubx.ResourceBinding{
 	WireType: "github_get_audit_log_stream_config",
 	Fields: ubx.FieldMap{
-		"Enabled": ubx.FieldSpec{WireName: "enabled"},
+		"Enabled":    ubx.FieldSpec{WireName: "enabled"},
 		"StreamType": ubx.FieldSpec{WireName: "stream_type"},
 		"VendorSpecific": ubx.FieldSpec{
 			WireName: "vendor_specific",
-			Kind: "object",
-			Fields: AuditLogStreamConfig_VendorSpecificFields,
+			Kind:     "object",
+			Fields:   AuditLogStreamConfig_VendorSpecificFields,
 		},
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"StreamId": ubx.FieldSpec{WireName: "stream_id"},
+		"StreamId":   ubx.FieldSpec{WireName: "stream_id"},
 	},
 }

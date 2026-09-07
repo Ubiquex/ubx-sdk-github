@@ -4,14 +4,14 @@ package actions
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type HostedRunnerCustomImageConfig struct {
-	Enterprise any
+	Enterprise        any
 	ImageDefinitionId any
 }
 
 type HostedRunnerCustomImageAttrs struct {
 	Enterprise any
 	// The ID of the image. Use this ID for the `image` parameter when creating a new larger runner.
-	Id any
+	Id                any
 	ImageDefinitionId any
 	// The latest image version associated with the image.
 	LatestVersion any
@@ -32,7 +32,7 @@ type HostedRunnerCustomImageAttrs struct {
 var HostedRunnerCustomImage = ubx.DataSourceBinding{
 	WireType: "github_actions_hosted_runner_custom_image",
 	Fields: ubx.FieldMap{
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
+		"Enterprise":        ubx.FieldSpec{WireName: "enterprise"},
 		"ImageDefinitionId": ubx.FieldSpec{WireName: "image_definition_id"},
 	},
 }

@@ -21,10 +21,10 @@ type Key_Subkeys struct {
 	CanSign any
 	// The timestamp of when the GPG subkey was created, in ISO 8601 format. (AI-inferred)
 	CreatedAt any
-	Emails any
+	Emails    any
 	// The date and time when this GPG subkey expires, in ISO 8601 format, or null if it never expires. (AI-inferred)
 	ExpiresAt any
-	Id any
+	Id        any
 	// The unique identifier for this GPG subkey. (AI-inferred)
 	KeyId any
 	// The numeric ID of the primary GPG key that this subkey belongs to. (AI-inferred)
@@ -89,7 +89,7 @@ var Key = ubx.ResourceBinding{
 	WireType: "github_gpg_key",
 	Fields: ubx.FieldMap{
 		"ArmoredPublicKey": ubx.FieldSpec{WireName: "armored_public_key"},
-		"Name": ubx.FieldSpec{WireName: "name"},
-		"GpgKeyId": ubx.FieldSpec{WireName: "gpg_key_id"},
+		"Name":             ubx.FieldSpec{WireName: "name"},
+		"GpgKeyId":         ubx.FieldSpec{WireName: "gpg_key_id"},
 	},
 }

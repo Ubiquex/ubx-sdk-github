@@ -4,52 +4,52 @@ package pages
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type HealthCheck_AltDomain struct {
-	CaaError any
-	DnsResolves any
-	EnforcesHttps any
-	HasCnameRecord any
-	HasMxRecordsPresent any
-	Host any
-	HttpsError any
-	IsARecord any
-	IsApexDomain any
-	IsCloudflareIp any
-	IsCnameToFastly any
-	IsCnameToGithubUserDomain any
+	CaaError                      any
+	DnsResolves                   any
+	EnforcesHttps                 any
+	HasCnameRecord                any
+	HasMxRecordsPresent           any
+	Host                          any
+	HttpsError                    any
+	IsARecord                     any
+	IsApexDomain                  any
+	IsCloudflareIp                any
+	IsCnameToFastly               any
+	IsCnameToGithubUserDomain     any
 	IsCnameToPagesDotGithubDotCom any
-	IsFastlyIp any
-	IsHttpsEligible any
-	IsNonGithubPagesIpPresent any
-	IsOldIpAddress any
-	IsPagesDomain any
-	IsPointedToGithubPagesIp any
-	IsProxied any
-	IsServedByPages any
-	IsValid any
-	IsValidDomain any
-	Nameservers any
-	Reason any
-	RespondsToHttps any
-	ShouldBeARecord any
-	Uri any
+	IsFastlyIp                    any
+	IsHttpsEligible               any
+	IsNonGithubPagesIpPresent     any
+	IsOldIpAddress                any
+	IsPagesDomain                 any
+	IsPointedToGithubPagesIp      any
+	IsProxied                     any
+	IsServedByPages               any
+	IsValid                       any
+	IsValidDomain                 any
+	Nameservers                   any
+	Reason                        any
+	RespondsToHttps               any
+	ShouldBeARecord               any
+	Uri                           any
 }
 
 type HealthCheckConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type HealthCheckAttrs struct {
 	AltDomain any
-	Domain any
-	Owner any
-	Repo any
+	Domain    any
+	Owner     any
+	Repo      any
 }
 
 var HealthCheck = ubx.DataSourceBinding{
 	WireType: "github_pages_health_check",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

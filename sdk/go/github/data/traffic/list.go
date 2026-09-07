@@ -4,23 +4,23 @@ package traffic
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type List_Clones struct {
-	Count any
+	Count     any
 	Timestamp any
-	Uniques any
+	Uniques   any
 }
 
 type ListConfig struct {
 	Owner any
-	Per any
-	Repo any
+	Per   any
+	Repo  any
 }
 
 type ListAttrs struct {
-	Clones any
-	Count any
-	Owner any
-	Per any
-	Repo any
+	Clones  any
+	Count   any
+	Owner   any
+	Per     any
+	Repo    any
 	Uniques any
 }
 
@@ -28,7 +28,7 @@ var List = ubx.DataSourceBinding{
 	WireType: "github_traffic_list",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Per": ubx.FieldSpec{WireName: "per"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Per":   ubx.FieldSpec{WireName: "per"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

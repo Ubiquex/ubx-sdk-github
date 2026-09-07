@@ -4,27 +4,27 @@ package enterprise
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type RoleList_Roles_Enterprise struct {
-	AvatarUrl any
-	CreatedAt any
+	AvatarUrl   any
+	CreatedAt   any
 	Description any
-	HtmlUrl any
-	Id any
-	Name any
-	NodeId any
-	Slug any
-	UpdatedAt any
-	WebsiteUrl any
+	HtmlUrl     any
+	Id          any
+	Name        any
+	NodeId      any
+	Slug        any
+	UpdatedAt   any
+	WebsiteUrl  any
 }
 
 type RoleList_Roles struct {
-	CreatedAt any
+	CreatedAt   any
 	Description any
-	Enterprise any
-	Id any
-	Name any
+	Enterprise  any
+	Id          any
+	Name        any
 	Permissions any
-	Source any
-	UpdatedAt any
+	Source      any
+	UpdatedAt   any
 }
 
 type RoleListConfig struct {

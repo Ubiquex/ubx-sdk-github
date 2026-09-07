@@ -5,7 +5,7 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type QualitySetupConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type QualitySetupAttrs struct {
@@ -13,8 +13,8 @@ type QualitySetupAttrs struct {
 	AiFindingsOption any
 	// Languages to be analyzed.
 	Languages any
-	Owner any
-	Repo any
+	Owner     any
+	Repo      any
 	// Runner label to be used if the runner type is labeled.
 	RunnerLabel any
 	// Runner type to be used.
@@ -31,6 +31,6 @@ var QualitySetup = ubx.DataSourceBinding{
 	WireType: "github_code_quality_setup",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

@@ -26,10 +26,10 @@ type Tag_Verification struct {
 }
 
 var Tag_TaggerFields = ubx.FieldMap{
-		"Date": ubx.FieldSpec{WireName: "date"},
-		"Email": ubx.FieldSpec{WireName: "email"},
-		"Name": ubx.FieldSpec{WireName: "name"},
-	}
+	"Date":  ubx.FieldSpec{WireName: "date"},
+	"Email": ubx.FieldSpec{WireName: "email"},
+	"Name":  ubx.FieldSpec{WireName: "name"},
+}
 
 type TagConfig struct {
 	// The tag message.
@@ -81,16 +81,16 @@ var Tag = ubx.ResourceBinding{
 	WireType: "github_git_tag",
 	Fields: ubx.FieldMap{
 		"Message": ubx.FieldSpec{WireName: "message"},
-		"Object": ubx.FieldSpec{WireName: "object"},
-		"Tag": ubx.FieldSpec{WireName: "tag"},
+		"Object":  ubx.FieldSpec{WireName: "object"},
+		"Tag":     ubx.FieldSpec{WireName: "tag"},
 		"Tagger": ubx.FieldSpec{
 			WireName: "tagger",
-			Kind: "object",
-			Fields: Tag_TaggerFields,
+			Kind:     "object",
+			Fields:   Tag_TaggerFields,
 		},
-		"Type": ubx.FieldSpec{WireName: "type"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Type":   ubx.FieldSpec{WireName: "type"},
+		"Owner":  ubx.FieldSpec{WireName: "owner"},
+		"Repo":   ubx.FieldSpec{WireName: "repo"},
 		"TagSha": ubx.FieldSpec{WireName: "tag_sha"},
 	},
 }

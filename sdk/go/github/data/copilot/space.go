@@ -4,85 +4,85 @@ package copilot
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Space_Creator struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type Space_Owner struct {
-	AvatarUrl any
-	Description any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HooksUrl any
-	HtmlUrl any
-	Id any
-	IssuesUrl any
-	Login any
-	MembersUrl any
-	Name any
-	NodeId any
-	OrganizationsUrl any
-	PublicMembersUrl any
+	AvatarUrl         any
+	Description       any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HooksUrl          any
+	HtmlUrl           any
+	Id                any
+	IssuesUrl         any
+	Login             any
+	MembersUrl        any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
+	PublicMembersUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type Space_ResourcesAttributes_Metadata struct {
 	CopilotChatAttachmentId any
-	FilePath any
-	Height any
-	MediaType any
-	Name any
-	Number any
-	RepositoryId any
-	Text any
-	Url any
-	Width any
+	FilePath                any
+	Height                  any
+	MediaType               any
+	Name                    any
+	Number                  any
+	RepositoryId            any
+	Text                    any
+	Url                     any
+	Width                   any
 }
 
 type Space_ResourcesAttributes struct {
 	CopilotChatAttachmentId any
-	CreatedAt any
-	Id any
-	Metadata any
-	ResourceType any
-	UpdatedAt any
+	CreatedAt               any
+	Id                      any
+	Metadata                any
+	ResourceType            any
+	UpdatedAt               any
 }
 
 type SpaceConfig struct {
 	SpaceNumber any
-	Username any
+	Username    any
 }
 
 type SpaceAttrs struct {
@@ -110,16 +110,16 @@ type SpaceAttrs struct {
 	Owner any
 	// Resources attached to the space.
 	ResourcesAttributes any
-	SpaceNumber any
+	SpaceNumber         any
 	// The date and time the space was last updated.
 	UpdatedAt any
-	Username any
+	Username  any
 }
 
 var Space = ubx.DataSourceBinding{
 	WireType: "github_copilot_space",
 	Fields: ubx.FieldMap{
 		"SpaceNumber": ubx.FieldSpec{WireName: "space_number"},
-		"Username": ubx.FieldSpec{WireName: "username"},
+		"Username":    ubx.FieldSpec{WireName: "username"},
 	},
 }

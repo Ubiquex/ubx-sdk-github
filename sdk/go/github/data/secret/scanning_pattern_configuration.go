@@ -4,18 +4,18 @@ package secret
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ScanningPatternConfiguration_CustomPatternOverrides struct {
-	AlertTotal any
+	AlertTotal           any
 	AlertTotalPercentage any
-	BypassRate any
+	BypassRate           any
 	CustomPatternVersion any
-	DefaultSetting any
-	DisplayName any
-	EnterpriseSetting any
-	FalsePositiveRate any
-	FalsePositives any
-	Setting any
-	Slug any
-	TokenType any
+	DefaultSetting       any
+	DisplayName          any
+	EnterpriseSetting    any
+	FalsePositiveRate    any
+	FalsePositives       any
+	Setting              any
+	Slug                 any
+	TokenType            any
 }
 
 type ScanningPatternConfigurationConfig struct {
@@ -25,7 +25,7 @@ type ScanningPatternConfigurationConfig struct {
 type ScanningPatternConfigurationAttrs struct {
 	// Overrides for custom patterns defined by the organization.
 	CustomPatternOverrides any
-	Enterprise any
+	Enterprise             any
 	// The version of the entity. This is used to confirm you're updating the current version of the entity and mitigate unintentionally overriding someone else's update.
 	PatternConfigVersion any
 	// Overrides for partner patterns.

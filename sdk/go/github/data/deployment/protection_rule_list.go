@@ -4,30 +4,30 @@ package deployment
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ProtectionRuleList_CustomDeploymentProtectionRules_App struct {
-	Id any
+	Id             any
 	IntegrationUrl any
-	NodeId any
-	Slug any
+	NodeId         any
+	Slug           any
 }
 
 type ProtectionRuleList_CustomDeploymentProtectionRules struct {
-	App any
+	App     any
 	Enabled any
-	Id any
-	NodeId any
+	Id      any
+	NodeId  any
 }
 
 type ProtectionRuleListConfig struct {
 	EnvironmentName any
-	Owner any
-	Repo any
+	Owner           any
+	Repo            any
 }
 
 type ProtectionRuleListAttrs struct {
 	CustomDeploymentProtectionRules any
-	EnvironmentName any
-	Owner any
-	Repo any
+	EnvironmentName                 any
+	Owner                           any
+	Repo                            any
 	// The number of enabled custom deployment protection rules for this environment
 	TotalCount any
 }
@@ -36,7 +36,7 @@ var ProtectionRuleList = ubx.DataSourceBinding{
 	WireType: "github_deployment_protection_rule_list",
 	Fields: ubx.FieldMap{
 		"EnvironmentName": ubx.FieldSpec{WireName: "environment_name"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":           ubx.FieldSpec{WireName: "owner"},
+		"Repo":            ubx.FieldSpec{WireName: "repo"},
 	},
 }

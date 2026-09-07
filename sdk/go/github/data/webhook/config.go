@@ -18,6 +18,5 @@ type ConfigAttrs struct {
 
 var Config = ubx.DataSourceBinding{
 	WireType: "github_webhook_config",
-	Fields: ubx.FieldMap{
-	},
+	Fields:   ubx.FieldMap{},
 }

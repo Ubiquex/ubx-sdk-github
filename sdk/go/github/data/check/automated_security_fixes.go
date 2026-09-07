@@ -5,22 +5,22 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type AutomatedSecurityFixesConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type AutomatedSecurityFixesAttrs struct {
 	// Whether Dependabot security updates are enabled for the repository.
 	Enabled any
-	Owner any
+	Owner   any
 	// Whether Dependabot security updates are paused for the repository.
 	Paused any
-	Repo any
+	Repo   any
 }
 
 var AutomatedSecurityFixes = ubx.DataSourceBinding{
 	WireType: "github_check_automated_security_fixes",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

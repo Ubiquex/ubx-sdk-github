@@ -12,7 +12,7 @@ type GetDefaultWorkflowPermissionsAttrs struct {
 	CanApprovePullRequestReviews any
 	// The default workflow permissions granted to the GITHUB_TOKEN when running workflows.
 	DefaultWorkflowPermissions any
-	Enterprise any
+	Enterprise                 any
 }
 
 var GetDefaultWorkflowPermissions = ubx.DataSourceBinding{

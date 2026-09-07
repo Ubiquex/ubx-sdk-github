@@ -40,10 +40,10 @@ type LabelAttrs struct {
 var Label = ubx.ResourceBinding{
 	WireType: "github_label",
 	Fields: ubx.FieldMap{
-		"Color": ubx.FieldSpec{WireName: "color"},
+		"Color":       ubx.FieldSpec{WireName: "color"},
 		"Description": ubx.FieldSpec{WireName: "description"},
-		"Name": ubx.FieldSpec{WireName: "name"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Name":        ubx.FieldSpec{WireName: "name"},
+		"Owner":       ubx.FieldSpec{WireName: "owner"},
+		"Repo":        ubx.FieldSpec{WireName: "repo"},
 	},
 }

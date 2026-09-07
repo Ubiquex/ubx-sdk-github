@@ -50,13 +50,13 @@ type CustomPropertyAttrs struct {
 var CustomProperty = ubx.ResourceBinding{
 	WireType: "github_organization_custom_property",
 	Fields: ubx.FieldMap{
-		"AllowedValues": ubx.FieldSpec{WireName: "allowed_values"},
-		"DefaultValue": ubx.FieldSpec{WireName: "default_value"},
-		"Description": ubx.FieldSpec{WireName: "description"},
-		"Required": ubx.FieldSpec{WireName: "required"},
-		"ValueType": ubx.FieldSpec{WireName: "value_type"},
-		"ValuesEditableBy": ubx.FieldSpec{WireName: "values_editable_by"},
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
+		"AllowedValues":      ubx.FieldSpec{WireName: "allowed_values"},
+		"DefaultValue":       ubx.FieldSpec{WireName: "default_value"},
+		"Description":        ubx.FieldSpec{WireName: "description"},
+		"Required":           ubx.FieldSpec{WireName: "required"},
+		"ValueType":          ubx.FieldSpec{WireName: "value_type"},
+		"ValuesEditableBy":   ubx.FieldSpec{WireName: "values_editable_by"},
+		"Enterprise":         ubx.FieldSpec{WireName: "enterprise"},
 		"CustomPropertyName": ubx.FieldSpec{WireName: "custom_property_name"},
 	},
 }

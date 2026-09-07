@@ -4,31 +4,31 @@ package timeline
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type TimelineConfig struct {
-	Exclude any
+	Exclude     any
 	IssueNumber any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
+	Owner       any
+	Page        any
+	PerPage     any
+	Repo        any
 }
 
 type TimelineAttrs struct {
-	Exclude any
+	Exclude     any
 	IssueNumber any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
+	Owner       any
+	Page        any
+	PerPage     any
+	Repo        any
 }
 
 var Timeline = ubx.DataSourceBinding{
 	WireType: "github_timeline",
 	Fields: ubx.FieldMap{
-		"Exclude": ubx.FieldSpec{WireName: "exclude"},
+		"Exclude":     ubx.FieldSpec{WireName: "exclude"},
 		"IssueNumber": ubx.FieldSpec{WireName: "issue_number"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":       ubx.FieldSpec{WireName: "owner"},
+		"Page":        ubx.FieldSpec{WireName: "page"},
+		"PerPage":     ubx.FieldSpec{WireName: "per_page"},
+		"Repo":        ubx.FieldSpec{WireName: "repo"},
 	},
 }

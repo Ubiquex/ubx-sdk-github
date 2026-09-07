@@ -46,28 +46,28 @@ type Repository_Organization struct {
 	GravatarId any
 	// The URL to the organization's GitHub web page. (AI-inferred)
 	HtmlUrl any
-	Id any
+	Id      any
 	// The unique GitHub username (login) for the organization. (AI-inferred)
 	Login any
 	// The name of the organization that owns the repository. (AI-inferred)
 	Name any
 	// The GraphQL node ID for the organization, used for identifying the organization in GitHub's GraphQL API. (AI-inferred)
-	NodeId any
+	NodeId           any
 	OrganizationsUrl any
 	// The API URL that lists events received by the organization. This points to the organization's received events endpoint in the GitHub API. (AI-inferred)
 	ReceivedEventsUrl any
 	// The URL to the organization's repositories endpoint in the GitHub API, typically used to fetch the list of repositories belonging to the organization. (AI-inferred)
 	ReposUrl any
 	// Whether this organization account has site administrator privileges on GitHub. (AI-inferred)
-	SiteAdmin any
-	StarredAt any
+	SiteAdmin  any
+	StarredAt  any
 	StarredUrl any
 	// The API endpoint that returns the subscriptions for the organization. (AI-inferred)
 	SubscriptionsUrl any
 	// The type of account; for an organization, this is always 'Organization'. (AI-inferred)
 	Type any
 	// The URL of the organization. (AI-inferred)
-	Url any
+	Url          any
 	UserViewType any
 }
 
@@ -254,7 +254,7 @@ type Repository_Parent struct {
 	StargazersCount any
 	// The URL to access the list of users who have starred the parent repository. (AI-inferred)
 	StargazersUrl any
-	StarredAt any
+	StarredAt     any
 	// The URL template for accessing commit statuses associated with the repository, with `{sha}` as the commit SHA placeholder. (AI-inferred)
 	StatusesUrl any
 	// The API URL for listing subscribers (watchers) of the parent repository. This is part of the GitHub Repository object and follows the standard GitHub API URL format. (AI-inferred)
@@ -266,7 +266,7 @@ type Repository_Parent struct {
 	// The URL to the repository's tags endpoint, which lists the tags associated with the repository. (AI-inferred)
 	TagsUrl any
 	// The URL to access the teams associated with the parent repository. (AI-inferred)
-	TeamsUrl any
+	TeamsUrl       any
 	TempCloneToken any
 	// The list of topics associated with the parent repository. (AI-inferred)
 	Topics any
@@ -310,7 +310,7 @@ type Repository_SecurityAndAnalysis_SecretScanningDelegatedBypassOptions struct 
 type Repository_SecurityAndAnalysis struct {
 	// Enable or disable GitHub Advanced Security for the repository. For standalone Code Scanning or Secret Protection products, this parameter cannot be used.
 	AdvancedSecurity any
-	CodeSecurity any
+	CodeSecurity     any
 	// Enable or disable Dependabot security updates for the repository.
 	DependabotSecurityUpdates any
 	// The secret scanning configuration and status for the repository, which detects known types of secrets accidentally committed to the repository. (AI-inferred)
@@ -323,7 +323,7 @@ type Repository_SecurityAndAnalysis struct {
 	SecretScanningDelegatedBypass any
 	// Settings for delegating bypass of secret scanning push protection. Use this to specify which actors can bypass secret scanning alerts and optionally require reviews for bypasses. (AI-inferred)
 	SecretScanningDelegatedBypassOptions any
-	SecretScanningNonProviderPatterns any
+	SecretScanningNonProviderPatterns    any
 	// Configuration for secret scanning push protection, which blocks pushes that contain detected secrets from being successfully pushed to the repository. (AI-inferred)
 	SecretScanningPushProtection any
 	SecretScanningValidityChecks any
@@ -610,30 +610,30 @@ type RepositoryAttrs struct {
 var Repository = ubx.ResourceBinding{
 	WireType: "github_full_repository",
 	Fields: ubx.FieldMap{
-		"AllowAutoMerge": ubx.FieldSpec{WireName: "allow_auto_merge"},
-		"AllowMergeCommit": ubx.FieldSpec{WireName: "allow_merge_commit"},
-		"AllowRebaseMerge": ubx.FieldSpec{WireName: "allow_rebase_merge"},
-		"AllowSquashMerge": ubx.FieldSpec{WireName: "allow_squash_merge"},
-		"AutoInit": ubx.FieldSpec{WireName: "auto_init"},
-		"DeleteBranchOnMerge": ubx.FieldSpec{WireName: "delete_branch_on_merge"},
-		"Description": ubx.FieldSpec{WireName: "description"},
-		"GitignoreTemplate": ubx.FieldSpec{WireName: "gitignore_template"},
-		"HasDiscussions": ubx.FieldSpec{WireName: "has_discussions"},
-		"HasDownloads": ubx.FieldSpec{WireName: "has_downloads"},
-		"HasIssues": ubx.FieldSpec{WireName: "has_issues"},
-		"HasProjects": ubx.FieldSpec{WireName: "has_projects"},
-		"HasWiki": ubx.FieldSpec{WireName: "has_wiki"},
-		"Homepage": ubx.FieldSpec{WireName: "homepage"},
-		"IsTemplate": ubx.FieldSpec{WireName: "is_template"},
-		"LicenseTemplate": ubx.FieldSpec{WireName: "license_template"},
-		"MergeCommitMessage": ubx.FieldSpec{WireName: "merge_commit_message"},
-		"MergeCommitTitle": ubx.FieldSpec{WireName: "merge_commit_title"},
-		"Name": ubx.FieldSpec{WireName: "name"},
-		"Private": ubx.FieldSpec{WireName: "private"},
+		"AllowAutoMerge":           ubx.FieldSpec{WireName: "allow_auto_merge"},
+		"AllowMergeCommit":         ubx.FieldSpec{WireName: "allow_merge_commit"},
+		"AllowRebaseMerge":         ubx.FieldSpec{WireName: "allow_rebase_merge"},
+		"AllowSquashMerge":         ubx.FieldSpec{WireName: "allow_squash_merge"},
+		"AutoInit":                 ubx.FieldSpec{WireName: "auto_init"},
+		"DeleteBranchOnMerge":      ubx.FieldSpec{WireName: "delete_branch_on_merge"},
+		"Description":              ubx.FieldSpec{WireName: "description"},
+		"GitignoreTemplate":        ubx.FieldSpec{WireName: "gitignore_template"},
+		"HasDiscussions":           ubx.FieldSpec{WireName: "has_discussions"},
+		"HasDownloads":             ubx.FieldSpec{WireName: "has_downloads"},
+		"HasIssues":                ubx.FieldSpec{WireName: "has_issues"},
+		"HasProjects":              ubx.FieldSpec{WireName: "has_projects"},
+		"HasWiki":                  ubx.FieldSpec{WireName: "has_wiki"},
+		"Homepage":                 ubx.FieldSpec{WireName: "homepage"},
+		"IsTemplate":               ubx.FieldSpec{WireName: "is_template"},
+		"LicenseTemplate":          ubx.FieldSpec{WireName: "license_template"},
+		"MergeCommitMessage":       ubx.FieldSpec{WireName: "merge_commit_message"},
+		"MergeCommitTitle":         ubx.FieldSpec{WireName: "merge_commit_title"},
+		"Name":                     ubx.FieldSpec{WireName: "name"},
+		"Private":                  ubx.FieldSpec{WireName: "private"},
 		"SquashMergeCommitMessage": ubx.FieldSpec{WireName: "squash_merge_commit_message"},
-		"SquashMergeCommitTitle": ubx.FieldSpec{WireName: "squash_merge_commit_title"},
-		"TeamId": ubx.FieldSpec{WireName: "team_id"},
-		"OwnerPath": ubx.FieldSpec{WireName: "owner_path"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"SquashMergeCommitTitle":   ubx.FieldSpec{WireName: "squash_merge_commit_title"},
+		"TeamId":                   ubx.FieldSpec{WireName: "team_id"},
+		"OwnerPath":                ubx.FieldSpec{WireName: "owner_path"},
+		"Repo":                     ubx.FieldSpec{WireName: "repo"},
 	},
 }

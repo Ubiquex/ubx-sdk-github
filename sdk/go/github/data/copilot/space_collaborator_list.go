@@ -4,21 +4,21 @@ package copilot
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type SpaceCollaboratorListConfig struct {
-	Org any
+	Org         any
 	SpaceNumber any
 }
 
 type SpaceCollaboratorListAttrs struct {
 	// The list of collaborators for this Copilot Space.
 	Collaborators any
-	Org any
-	SpaceNumber any
+	Org           any
+	SpaceNumber   any
 }
 
 var SpaceCollaboratorList = ubx.DataSourceBinding{
 	WireType: "github_copilot_space_collaborator_list",
 	Fields: ubx.FieldMap{
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Org":         ubx.FieldSpec{WireName: "org"},
 		"SpaceNumber": ubx.FieldSpec{WireName: "space_number"},
 	},
 }

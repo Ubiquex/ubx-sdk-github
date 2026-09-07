@@ -4,141 +4,141 @@ package check
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type SuiteList_CheckSuites_App_Owner struct {
-	AvatarUrl any
-	CreatedAt any
-	Description any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	CreatedAt         any
+	Description       any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	Slug any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	UpdatedAt any
-	Url any
-	UserViewType any
-	WebsiteUrl any
+	ReposUrl          any
+	SiteAdmin         any
+	Slug              any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	UpdatedAt         any
+	Url               any
+	UserViewType      any
+	WebsiteUrl        any
 }
 
 type SuiteList_CheckSuites_App_Permissions struct {
-	Checks any
-	Contents any
+	Checks      any
+	Contents    any
 	Deployments any
-	Issues any
-	Metadata any
+	Issues      any
+	Metadata    any
 }
 
 type SuiteList_CheckSuites_App struct {
-	ClientId any
-	CreatedAt any
-	Description any
-	Events any
-	ExternalUrl any
-	HtmlUrl any
-	Id any
+	ClientId           any
+	CreatedAt          any
+	Description        any
+	Events             any
+	ExternalUrl        any
+	HtmlUrl            any
+	Id                 any
 	InstallationsCount any
-	Name any
-	NodeId any
-	Owner any
-	Permissions any
-	Slug any
-	UpdatedAt any
+	Name               any
+	NodeId             any
+	Owner              any
+	Permissions        any
+	Slug               any
+	UpdatedAt          any
 }
 
 type SuiteList_CheckSuites_HeadCommit_Author struct {
 	Email any
-	Name any
+	Name  any
 }
 
 type SuiteList_CheckSuites_HeadCommit struct {
-	Author any
+	Author    any
 	Committer any
-	Id any
-	Message any
+	Id        any
+	Message   any
 	Timestamp any
-	TreeId any
+	TreeId    any
 }
 
 type SuiteList_CheckSuites_PullRequests_Base_Repo struct {
-	Id any
+	Id   any
 	Name any
-	Url any
+	Url  any
 }
 
 type SuiteList_CheckSuites_PullRequests_Base struct {
-	Ref any
+	Ref  any
 	Repo any
-	Sha any
+	Sha  any
 }
 
 type SuiteList_CheckSuites_PullRequests struct {
-	Base any
-	Head any
-	Id any
+	Base   any
+	Head   any
+	Id     any
 	Number any
-	Url any
+	Url    any
 }
 
 type SuiteList_CheckSuites_Repository_CodeOfConduct struct {
-	Body any
+	Body    any
 	HtmlUrl any
-	Key any
-	Name any
-	Url any
+	Key     any
+	Name    any
+	Url     any
 }
 
 type SuiteList_CheckSuites_Repository_License struct {
-	Key any
-	Name any
+	Key    any
+	Name   any
 	NodeId any
 	SpdxId any
-	Url any
+	Url    any
 }
 
 type SuiteList_CheckSuites_Repository_Owner struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type SuiteList_CheckSuites_Repository_Permissions struct {
-	Admin any
+	Admin    any
 	Maintain any
-	Pull any
-	Push any
-	Triage any
+	Pull     any
+	Push     any
+	Triage   any
 }
 
 type SuiteList_CheckSuites_Repository_SecurityAndAnalysis_AdvancedSecurity struct {
@@ -146,8 +146,8 @@ type SuiteList_CheckSuites_Repository_SecurityAndAnalysis_AdvancedSecurity struc
 }
 
 type SuiteList_CheckSuites_Repository_SecurityAndAnalysis_SecretScanningDelegatedBypassOptions_Reviewers struct {
-	Mode any
-	ReviewerId any
+	Mode         any
+	ReviewerId   any
 	ReviewerType any
 }
 
@@ -156,165 +156,165 @@ type SuiteList_CheckSuites_Repository_SecurityAndAnalysis_SecretScanningDelegate
 }
 
 type SuiteList_CheckSuites_Repository_SecurityAndAnalysis struct {
-	AdvancedSecurity any
-	CodeSecurity any
-	DependabotSecurityUpdates any
-	SecretScanning any
-	SecretScanningAiDetection any
+	AdvancedSecurity                      any
+	CodeSecurity                          any
+	DependabotSecurityUpdates             any
+	SecretScanning                        any
+	SecretScanningAiDetection             any
 	SecretScanningDelegatedAlertDismissal any
-	SecretScanningDelegatedBypass any
-	SecretScanningDelegatedBypassOptions any
-	SecretScanningNonProviderPatterns any
-	SecretScanningPushProtection any
-	SecretScanningValidityChecks any
+	SecretScanningDelegatedBypass         any
+	SecretScanningDelegatedBypassOptions  any
+	SecretScanningNonProviderPatterns     any
+	SecretScanningPushProtection          any
+	SecretScanningValidityChecks          any
 }
 
 type SuiteList_CheckSuites_Repository struct {
-	AllowForking any
-	ArchiveUrl any
-	Archived any
-	AssigneesUrl any
-	BlobsUrl any
-	BranchesUrl any
-	CloneUrl any
-	CodeOfConduct any
-	CollaboratorsUrl any
-	CommentsUrl any
-	CommitsUrl any
-	CompareUrl any
-	ContentsUrl any
-	ContributorsUrl any
-	CreatedAt any
-	CustomProperties any
-	DefaultBranch any
-	DeleteBranchOnMerge any
-	DeploymentsUrl any
-	Description any
-	Disabled any
-	DownloadsUrl any
-	EventsUrl any
-	Fork any
-	Forks any
-	ForksCount any
-	ForksUrl any
-	FullName any
-	GitCommitsUrl any
-	GitRefsUrl any
-	GitTagsUrl any
-	GitUrl any
-	HasDiscussions any
-	HasDownloads any
-	HasIssues any
-	HasPages any
-	HasProjects any
-	HasPullRequests any
-	HasWiki any
-	Homepage any
-	HooksUrl any
-	HtmlUrl any
-	Id any
-	IsTemplate any
-	IssueCommentUrl any
-	IssueEventsUrl any
-	IssuesUrl any
-	KeysUrl any
-	LabelsUrl any
-	Language any
-	LanguagesUrl any
-	License any
-	MergesUrl any
-	MilestonesUrl any
-	MirrorUrl any
-	Name any
-	NetworkCount any
-	NodeId any
-	NotificationsUrl any
-	OpenIssues any
-	OpenIssuesCount any
-	Owner any
-	Permissions any
-	Private any
+	AllowForking              any
+	ArchiveUrl                any
+	Archived                  any
+	AssigneesUrl              any
+	BlobsUrl                  any
+	BranchesUrl               any
+	CloneUrl                  any
+	CodeOfConduct             any
+	CollaboratorsUrl          any
+	CommentsUrl               any
+	CommitsUrl                any
+	CompareUrl                any
+	ContentsUrl               any
+	ContributorsUrl           any
+	CreatedAt                 any
+	CustomProperties          any
+	DefaultBranch             any
+	DeleteBranchOnMerge       any
+	DeploymentsUrl            any
+	Description               any
+	Disabled                  any
+	DownloadsUrl              any
+	EventsUrl                 any
+	Fork                      any
+	Forks                     any
+	ForksCount                any
+	ForksUrl                  any
+	FullName                  any
+	GitCommitsUrl             any
+	GitRefsUrl                any
+	GitTagsUrl                any
+	GitUrl                    any
+	HasDiscussions            any
+	HasDownloads              any
+	HasIssues                 any
+	HasPages                  any
+	HasProjects               any
+	HasPullRequests           any
+	HasWiki                   any
+	Homepage                  any
+	HooksUrl                  any
+	HtmlUrl                   any
+	Id                        any
+	IsTemplate                any
+	IssueCommentUrl           any
+	IssueEventsUrl            any
+	IssuesUrl                 any
+	KeysUrl                   any
+	LabelsUrl                 any
+	Language                  any
+	LanguagesUrl              any
+	License                   any
+	MergesUrl                 any
+	MilestonesUrl             any
+	MirrorUrl                 any
+	Name                      any
+	NetworkCount              any
+	NodeId                    any
+	NotificationsUrl          any
+	OpenIssues                any
+	OpenIssuesCount           any
+	Owner                     any
+	Permissions               any
+	Private                   any
 	PullRequestCreationPolicy any
-	PullsUrl any
-	PushedAt any
-	ReleasesUrl any
-	RoleName any
-	SecurityAndAnalysis any
-	Size any
-	SshUrl any
-	StargazersCount any
-	StargazersUrl any
-	StatusesUrl any
-	SubscribersCount any
-	SubscribersUrl any
-	SubscriptionUrl any
-	SvnUrl any
-	TagsUrl any
-	TeamsUrl any
-	TempCloneToken any
-	Topics any
-	TreesUrl any
-	UpdatedAt any
-	Url any
-	Visibility any
-	Watchers any
-	WatchersCount any
-	WebCommitSignoffRequired any
+	PullsUrl                  any
+	PushedAt                  any
+	ReleasesUrl               any
+	RoleName                  any
+	SecurityAndAnalysis       any
+	Size                      any
+	SshUrl                    any
+	StargazersCount           any
+	StargazersUrl             any
+	StatusesUrl               any
+	SubscribersCount          any
+	SubscribersUrl            any
+	SubscriptionUrl           any
+	SvnUrl                    any
+	TagsUrl                   any
+	TeamsUrl                  any
+	TempCloneToken            any
+	Topics                    any
+	TreesUrl                  any
+	UpdatedAt                 any
+	Url                       any
+	Visibility                any
+	Watchers                  any
+	WatchersCount             any
+	WebCommitSignoffRequired  any
 }
 
 type SuiteList_CheckSuites struct {
-	After any
-	App any
-	Before any
-	CheckRunsUrl any
-	Conclusion any
-	CreatedAt any
-	HeadBranch any
-	HeadCommit any
-	HeadSha any
-	Id any
+	After                any
+	App                  any
+	Before               any
+	CheckRunsUrl         any
+	Conclusion           any
+	CreatedAt            any
+	HeadBranch           any
+	HeadCommit           any
+	HeadSha              any
+	Id                   any
 	LatestCheckRunsCount any
-	NodeId any
-	PullRequests any
-	Repository any
-	Rerequestable any
-	RunsRerequestable any
-	Status any
-	UpdatedAt any
-	Url any
+	NodeId               any
+	PullRequests         any
+	Repository           any
+	Rerequestable        any
+	RunsRerequestable    any
+	Status               any
+	UpdatedAt            any
+	Url                  any
 }
 
 type SuiteListConfig struct {
-	AppId any
+	AppId     any
 	CheckName any
-	Owner any
-	Page any
-	PerPage any
-	Ref any
-	Repo any
+	Owner     any
+	Page      any
+	PerPage   any
+	Ref       any
+	Repo      any
 }
 
 type SuiteListAttrs struct {
-	AppId any
-	CheckName any
+	AppId       any
+	CheckName   any
 	CheckSuites any
-	Owner any
-	Page any
-	PerPage any
-	Ref any
-	Repo any
-	TotalCount any
+	Owner       any
+	Page        any
+	PerPage     any
+	Ref         any
+	Repo        any
+	TotalCount  any
 }
 
 var SuiteList = ubx.DataSourceBinding{
 	WireType: "github_check_suite_list",
 	Fields: ubx.FieldMap{
-		"AppId": ubx.FieldSpec{WireName: "app_id"},
+		"AppId":     ubx.FieldSpec{WireName: "app_id"},
 		"CheckName": ubx.FieldSpec{WireName: "check_name"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Ref": ubx.FieldSpec{WireName: "ref"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":     ubx.FieldSpec{WireName: "owner"},
+		"Page":      ubx.FieldSpec{WireName: "page"},
+		"PerPage":   ubx.FieldSpec{WireName: "per_page"},
+		"Ref":       ubx.FieldSpec{WireName: "ref"},
+		"Repo":      ubx.FieldSpec{WireName: "repo"},
 	},
 }

@@ -5,7 +5,7 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ConfigurationConfig struct {
 	NetworkConfigurationId any
-	Org any
+	Org                    any
 }
 
 type ConfigurationAttrs struct {
@@ -20,17 +20,17 @@ type ConfigurationAttrs struct {
 	// The unique identifier of the network configuration.
 	Id any
 	// The name of the network configuration.
-	Name any
+	Name                   any
 	NetworkConfigurationId any
 	// The unique identifier of each network settings in the configuration.
 	NetworkSettingsIds any
-	Org any
+	Org                any
 }
 
 var Configuration = ubx.DataSourceBinding{
 	WireType: "github_network_configuration",
 	Fields: ubx.FieldMap{
 		"NetworkConfigurationId": ubx.FieldSpec{WireName: "network_configuration_id"},
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Org":                    ubx.FieldSpec{WireName: "org"},
 	},
 }

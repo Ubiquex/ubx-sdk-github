@@ -4,30 +4,30 @@ package codespace
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type MachineList_Machines struct {
-	Cpus any
-	DisplayName any
-	MemoryInBytes any
-	Name any
-	OperatingSystem any
+	Cpus                 any
+	DisplayName          any
+	MemoryInBytes        any
+	Name                 any
+	OperatingSystem      any
 	PrebuildAvailability any
-	StorageInBytes any
+	StorageInBytes       any
 }
 
 type MachineListConfig struct {
 	ClientIp any
 	Location any
-	Owner any
-	Ref any
-	Repo any
+	Owner    any
+	Ref      any
+	Repo     any
 }
 
 type MachineListAttrs struct {
-	ClientIp any
-	Location any
-	Machines any
-	Owner any
-	Ref any
-	Repo any
+	ClientIp   any
+	Location   any
+	Machines   any
+	Owner      any
+	Ref        any
+	Repo       any
 	TotalCount any
 }
 
@@ -36,8 +36,8 @@ var MachineList = ubx.DataSourceBinding{
 	Fields: ubx.FieldMap{
 		"ClientIp": ubx.FieldSpec{WireName: "client_ip"},
 		"Location": ubx.FieldSpec{WireName: "location"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Ref": ubx.FieldSpec{WireName: "ref"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":    ubx.FieldSpec{WireName: "owner"},
+		"Ref":      ubx.FieldSpec{WireName: "ref"},
+		"Repo":     ubx.FieldSpec{WireName: "repo"},
 	},
 }

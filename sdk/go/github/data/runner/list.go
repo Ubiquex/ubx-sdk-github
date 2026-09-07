@@ -4,45 +4,45 @@ package runner
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type List_Runners_Labels struct {
-	Id any
+	Id   any
 	Name any
 	Type any
 }
 
 type List_Runners struct {
-	Busy any
-	Ephemeral any
-	Id any
-	Labels any
-	Name any
-	Os any
+	Busy          any
+	Ephemeral     any
+	Id            any
+	Labels        any
+	Name          any
+	Os            any
 	RunnerGroupId any
-	Status any
-	Version any
+	Status        any
+	Version       any
 }
 
 type ListConfig struct {
-	Enterprise any
-	Page any
-	PerPage any
+	Enterprise    any
+	Page          any
+	PerPage       any
 	RunnerGroupId any
 }
 
 type ListAttrs struct {
-	Enterprise any
-	Page any
-	PerPage any
+	Enterprise    any
+	Page          any
+	PerPage       any
 	RunnerGroupId any
-	Runners any
-	TotalCount any
+	Runners       any
+	TotalCount    any
 }
 
 var List = ubx.DataSourceBinding{
 	WireType: "github_runner_list",
 	Fields: ubx.FieldMap{
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Enterprise":    ubx.FieldSpec{WireName: "enterprise"},
+		"Page":          ubx.FieldSpec{WireName: "page"},
+		"PerPage":       ubx.FieldSpec{WireName: "per_page"},
 		"RunnerGroupId": ubx.FieldSpec{WireName: "runner_group_id"},
 	},
 }

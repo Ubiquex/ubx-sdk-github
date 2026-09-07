@@ -4,25 +4,25 @@ package assignee
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type AssigneeConfig struct {
-	Owner any
-	Page any
+	Owner   any
+	Page    any
 	PerPage any
-	Repo any
+	Repo    any
 }
 
 type AssigneeAttrs struct {
-	Owner any
-	Page any
+	Owner   any
+	Page    any
 	PerPage any
-	Repo any
+	Repo    any
 }
 
 var Assignee = ubx.DataSourceBinding{
 	WireType: "github_assignee",
 	Fields: ubx.FieldMap{
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
+		"Owner":   ubx.FieldSpec{WireName: "owner"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":    ubx.FieldSpec{WireName: "repo"},
 	},
 }

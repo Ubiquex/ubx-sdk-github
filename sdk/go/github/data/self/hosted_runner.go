@@ -10,7 +10,7 @@ type HostedRunnerConfig struct {
 type HostedRunnerAttrs struct {
 	// When true, repository-level runners will be disabled across all organizations in the enterprise
 	DisableSelfHostedRunnersForAllOrgs any
-	Enterprise any
+	Enterprise                         any
 }
 
 var HostedRunner = ubx.DataSourceBinding{

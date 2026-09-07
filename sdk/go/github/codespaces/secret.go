@@ -38,9 +38,9 @@ type SecretAttrs struct {
 var Secret = ubx.ResourceBinding{
 	WireType: "github_codespaces_secret",
 	Fields: ubx.FieldMap{
-		"EncryptedValue": ubx.FieldSpec{WireName: "encrypted_value"},
-		"KeyId": ubx.FieldSpec{WireName: "key_id"},
+		"EncryptedValue":        ubx.FieldSpec{WireName: "encrypted_value"},
+		"KeyId":                 ubx.FieldSpec{WireName: "key_id"},
 		"SelectedRepositoryIds": ubx.FieldSpec{WireName: "selected_repository_ids"},
-		"SecretName": ubx.FieldSpec{WireName: "secret_name"},
+		"SecretName":            ubx.FieldSpec{WireName: "secret_name"},
 	},
 }

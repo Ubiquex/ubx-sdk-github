@@ -4,37 +4,37 @@ package secret
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ScanningConfig struct {
-	Enterprise any
+	Enterprise       any
 	OrganizationName any
-	Page any
-	PerPage any
-	RequestStatus any
-	Requester any
-	Reviewer any
-	TimePeriod any
+	Page             any
+	PerPage          any
+	RequestStatus    any
+	Requester        any
+	Reviewer         any
+	TimePeriod       any
 }
 
 type ScanningAttrs struct {
-	Enterprise any
+	Enterprise       any
 	OrganizationName any
-	Page any
-	PerPage any
-	RequestStatus any
-	Requester any
-	Reviewer any
-	TimePeriod any
+	Page             any
+	PerPage          any
+	RequestStatus    any
+	Requester        any
+	Reviewer         any
+	TimePeriod       any
 }
 
 var Scanning = ubx.DataSourceBinding{
 	WireType: "github_secret_scanning",
 	Fields: ubx.FieldMap{
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
+		"Enterprise":       ubx.FieldSpec{WireName: "enterprise"},
 		"OrganizationName": ubx.FieldSpec{WireName: "organization_name"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"RequestStatus": ubx.FieldSpec{WireName: "request_status"},
-		"Requester": ubx.FieldSpec{WireName: "requester"},
-		"Reviewer": ubx.FieldSpec{WireName: "reviewer"},
-		"TimePeriod": ubx.FieldSpec{WireName: "time_period"},
+		"Page":             ubx.FieldSpec{WireName: "page"},
+		"PerPage":          ubx.FieldSpec{WireName: "per_page"},
+		"RequestStatus":    ubx.FieldSpec{WireName: "request_status"},
+		"Requester":        ubx.FieldSpec{WireName: "requester"},
+		"Reviewer":         ubx.FieldSpec{WireName: "reviewer"},
+		"TimePeriod":       ubx.FieldSpec{WireName: "time_period"},
 	},
 }

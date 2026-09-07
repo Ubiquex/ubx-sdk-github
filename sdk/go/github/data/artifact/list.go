@@ -4,53 +4,53 @@ package artifact
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type List_Artifacts_WorkflowRun struct {
-	HeadBranch any
+	HeadBranch       any
 	HeadRepositoryId any
-	HeadSha any
-	Id any
-	RepositoryId any
+	HeadSha          any
+	Id               any
+	RepositoryId     any
 }
 
 type List_Artifacts struct {
 	ArchiveDownloadUrl any
-	CreatedAt any
-	Digest any
-	Expired any
-	ExpiresAt any
-	Id any
-	Name any
-	NodeId any
-	SizeInBytes any
-	UpdatedAt any
-	Url any
-	WorkflowRun any
+	CreatedAt          any
+	Digest             any
+	Expired            any
+	ExpiresAt          any
+	Id                 any
+	Name               any
+	NodeId             any
+	SizeInBytes        any
+	UpdatedAt          any
+	Url                any
+	WorkflowRun        any
 }
 
 type ListConfig struct {
-	Name any
-	Owner any
-	Page any
+	Name    any
+	Owner   any
+	Page    any
 	PerPage any
-	Repo any
+	Repo    any
 }
 
 type ListAttrs struct {
-	Artifacts any
-	Name any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
+	Artifacts  any
+	Name       any
+	Owner      any
+	Page       any
+	PerPage    any
+	Repo       any
 	TotalCount any
 }
 
 var List = ubx.DataSourceBinding{
 	WireType: "github_artifact_list",
 	Fields: ubx.FieldMap{
-		"Name": ubx.FieldSpec{WireName: "name"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
+		"Name":    ubx.FieldSpec{WireName: "name"},
+		"Owner":   ubx.FieldSpec{WireName: "owner"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":    ubx.FieldSpec{WireName: "repo"},
 	},
 }

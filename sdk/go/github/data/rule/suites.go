@@ -4,40 +4,40 @@ package rule
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type SuitesConfig struct {
-	ActorName any
-	EvaluateStatus any
-	Org any
-	Page any
-	PerPage any
-	Ref any
-	RepositoryName any
+	ActorName       any
+	EvaluateStatus  any
+	Org             any
+	Page            any
+	PerPage         any
+	Ref             any
+	RepositoryName  any
 	RuleSuiteResult any
-	TimePeriod any
+	TimePeriod      any
 }
 
 type SuitesAttrs struct {
-	ActorName any
-	EvaluateStatus any
-	Org any
-	Page any
-	PerPage any
-	Ref any
-	RepositoryName any
+	ActorName       any
+	EvaluateStatus  any
+	Org             any
+	Page            any
+	PerPage         any
+	Ref             any
+	RepositoryName  any
 	RuleSuiteResult any
-	TimePeriod any
+	TimePeriod      any
 }
 
 var Suites = ubx.DataSourceBinding{
 	WireType: "github_rule_suites",
 	Fields: ubx.FieldMap{
-		"ActorName": ubx.FieldSpec{WireName: "actor_name"},
-		"EvaluateStatus": ubx.FieldSpec{WireName: "evaluate_status"},
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Ref": ubx.FieldSpec{WireName: "ref"},
-		"RepositoryName": ubx.FieldSpec{WireName: "repository_name"},
+		"ActorName":       ubx.FieldSpec{WireName: "actor_name"},
+		"EvaluateStatus":  ubx.FieldSpec{WireName: "evaluate_status"},
+		"Org":             ubx.FieldSpec{WireName: "org"},
+		"Page":            ubx.FieldSpec{WireName: "page"},
+		"PerPage":         ubx.FieldSpec{WireName: "per_page"},
+		"Ref":             ubx.FieldSpec{WireName: "ref"},
+		"RepositoryName":  ubx.FieldSpec{WireName: "repository_name"},
 		"RuleSuiteResult": ubx.FieldSpec{WireName: "rule_suite_result"},
-		"TimePeriod": ubx.FieldSpec{WireName: "time_period"},
+		"TimePeriod":      ubx.FieldSpec{WireName: "time_period"},
 	},
 }

@@ -4,22 +4,22 @@ package delivery
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type DeliveryConfig struct {
-	Cursor any
+	Cursor  any
 	PerPage any
-	Status any
+	Status  any
 }
 
 type DeliveryAttrs struct {
-	Cursor any
+	Cursor  any
 	PerPage any
-	Status any
+	Status  any
 }
 
 var Delivery = ubx.DataSourceBinding{
 	WireType: "github_delivery",
 	Fields: ubx.FieldMap{
-		"Cursor": ubx.FieldSpec{WireName: "cursor"},
+		"Cursor":  ubx.FieldSpec{WireName: "cursor"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Status": ubx.FieldSpec{WireName: "status"},
+		"Status":  ubx.FieldSpec{WireName: "status"},
 	},
 }

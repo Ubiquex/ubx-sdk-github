@@ -4,39 +4,39 @@ package organization
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type SimpleList_Organizations struct {
-	AvatarUrl any
-	Description any
-	EventsUrl any
-	HooksUrl any
-	Id any
-	IssuesUrl any
-	Login any
-	MembersUrl any
-	NodeId any
+	AvatarUrl        any
+	Description      any
+	EventsUrl        any
+	HooksUrl         any
+	Id               any
+	IssuesUrl        any
+	Login            any
+	MembersUrl       any
+	NodeId           any
 	PublicMembersUrl any
-	ReposUrl any
-	Url any
+	ReposUrl         any
+	Url              any
 }
 
 type SimpleListConfig struct {
 	Enterprise any
-	Page any
-	PerPage any
+	Page       any
+	PerPage    any
 }
 
 type SimpleListAttrs struct {
-	Enterprise any
+	Enterprise    any
 	Organizations any
-	Page any
-	PerPage any
-	TotalCount any
+	Page          any
+	PerPage       any
+	TotalCount    any
 }
 
 var SimpleList = ubx.DataSourceBinding{
 	WireType: "github_organization_simple_list",
 	Fields: ubx.FieldMap{
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Page":       ubx.FieldSpec{WireName: "page"},
+		"PerPage":    ubx.FieldSpec{WireName: "per_page"},
 	},
 }

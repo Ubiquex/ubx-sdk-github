@@ -4,37 +4,37 @@ package code
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ScanningConfig struct {
-	Org any
-	Page any
-	PerPage any
+	Org            any
+	Page           any
+	PerPage        any
 	RepositoryName any
-	RequestStatus any
-	Requester any
-	Reviewer any
-	TimePeriod any
+	RequestStatus  any
+	Requester      any
+	Reviewer       any
+	TimePeriod     any
 }
 
 type ScanningAttrs struct {
-	Org any
-	Page any
-	PerPage any
+	Org            any
+	Page           any
+	PerPage        any
 	RepositoryName any
-	RequestStatus any
-	Requester any
-	Reviewer any
-	TimePeriod any
+	RequestStatus  any
+	Requester      any
+	Reviewer       any
+	TimePeriod     any
 }
 
 var Scanning = ubx.DataSourceBinding{
 	WireType: "github_code_scanning",
 	Fields: ubx.FieldMap{
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Org":            ubx.FieldSpec{WireName: "org"},
+		"Page":           ubx.FieldSpec{WireName: "page"},
+		"PerPage":        ubx.FieldSpec{WireName: "per_page"},
 		"RepositoryName": ubx.FieldSpec{WireName: "repository_name"},
-		"RequestStatus": ubx.FieldSpec{WireName: "request_status"},
-		"Requester": ubx.FieldSpec{WireName: "requester"},
-		"Reviewer": ubx.FieldSpec{WireName: "reviewer"},
-		"TimePeriod": ubx.FieldSpec{WireName: "time_period"},
+		"RequestStatus":  ubx.FieldSpec{WireName: "request_status"},
+		"Requester":      ubx.FieldSpec{WireName: "requester"},
+		"Reviewer":       ubx.FieldSpec{WireName: "reviewer"},
+		"TimePeriod":     ubx.FieldSpec{WireName: "time_period"},
 	},
 }

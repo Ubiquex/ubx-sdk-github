@@ -5,14 +5,14 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ActionsVariableConfig struct {
 	Name any
-	Org any
+	Org  any
 }
 
 type ActionsVariableAttrs struct {
 	// The date and time at which the variable was created, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
-	CreatedAt any
-	Name any
-	Org any
+	CreatedAt               any
+	Name                    any
+	Org                     any
 	SelectedRepositoriesUrl any
 	// The date and time at which the variable was last updated, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
 	UpdatedAt any
@@ -26,6 +26,6 @@ var ActionsVariable = ubx.DataSourceBinding{
 	WireType: "github_organization_actions_variable",
 	Fields: ubx.FieldMap{
 		"Name": ubx.FieldSpec{WireName: "name"},
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Org":  ubx.FieldSpec{WireName: "org"},
 	},
 }

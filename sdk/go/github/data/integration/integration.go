@@ -4,71 +4,70 @@ package integration
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Integration_Owner struct {
-	AvatarUrl any
-	CreatedAt any
-	Description any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	CreatedAt         any
+	Description       any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	Slug any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	UpdatedAt any
-	Url any
-	UserViewType any
-	WebsiteUrl any
+	ReposUrl          any
+	SiteAdmin         any
+	Slug              any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	UpdatedAt         any
+	Url               any
+	UserViewType      any
+	WebsiteUrl        any
 }
 
 type Integration_Permissions struct {
-	Checks any
-	Contents any
+	Checks      any
+	Contents    any
 	Deployments any
-	Issues any
-	Metadata any
+	Issues      any
+	Metadata    any
 }
 
 type IntegrationConfig struct {
 }
 
 type IntegrationAttrs struct {
-	ClientId any
-	CreatedAt any
+	ClientId    any
+	CreatedAt   any
 	Description any
 	// The list of events for the GitHub app. Note that the `installation_target`, `security_advisory`, and `meta` events are not included because they are global events and not specific to an installation.
-	Events any
+	Events      any
 	ExternalUrl any
-	HtmlUrl any
+	HtmlUrl     any
 	// Unique identifier of the GitHub app
 	Id any
 	// The number of installations associated with the GitHub app. Only returned when the integration is requesting details about itself.
 	InstallationsCount any
 	// The name of the GitHub app
-	Name any
+	Name   any
 	NodeId any
-	Owner any
+	Owner  any
 	// The set of permissions for the GitHub app
 	Permissions any
 	// The slug name of the GitHub app
-	Slug any
+	Slug      any
 	UpdatedAt any
 }
 
 var Integration = ubx.DataSourceBinding{
 	WireType: "github_integration",
-	Fields: ubx.FieldMap{
-	},
+	Fields:   ubx.FieldMap{},
 }

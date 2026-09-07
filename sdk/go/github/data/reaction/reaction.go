@@ -5,30 +5,30 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ReactionConfig struct {
 	CommentId any
-	Content any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
+	Content   any
+	Owner     any
+	Page      any
+	PerPage   any
+	Repo      any
 }
 
 type ReactionAttrs struct {
 	CommentId any
-	Content any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
+	Content   any
+	Owner     any
+	Page      any
+	PerPage   any
+	Repo      any
 }
 
 var Reaction = ubx.DataSourceBinding{
 	WireType: "github_reaction",
 	Fields: ubx.FieldMap{
 		"CommentId": ubx.FieldSpec{WireName: "comment_id"},
-		"Content": ubx.FieldSpec{WireName: "content"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Content":   ubx.FieldSpec{WireName: "content"},
+		"Owner":     ubx.FieldSpec{WireName: "owner"},
+		"Page":      ubx.FieldSpec{WireName: "page"},
+		"PerPage":   ubx.FieldSpec{WireName: "per_page"},
+		"Repo":      ubx.FieldSpec{WireName: "repo"},
 	},
 }

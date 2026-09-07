@@ -51,10 +51,10 @@ type ProtectionRuleAttrs struct {
 var ProtectionRule = ubx.ResourceBinding{
 	WireType: "github_deployment_protection_rule",
 	Fields: ubx.FieldMap{
-		"IntegrationId": ubx.FieldSpec{WireName: "integration_id"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"EnvironmentName": ubx.FieldSpec{WireName: "environment_name"},
+		"IntegrationId":    ubx.FieldSpec{WireName: "integration_id"},
+		"Owner":            ubx.FieldSpec{WireName: "owner"},
+		"Repo":             ubx.FieldSpec{WireName: "repo"},
+		"EnvironmentName":  ubx.FieldSpec{WireName: "environment_name"},
 		"ProtectionRuleId": ubx.FieldSpec{WireName: "protection_rule_id"},
 	},
 }

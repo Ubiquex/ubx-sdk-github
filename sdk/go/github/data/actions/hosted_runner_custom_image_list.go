@@ -4,14 +4,14 @@ package actions
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type HostedRunnerCustomImageList_Images struct {
-	Id any
-	LatestVersion any
-	Name any
-	Platform any
-	Source any
-	State any
+	Id                any
+	LatestVersion     any
+	Name              any
+	Platform          any
+	Source            any
+	State             any
 	TotalVersionsSize any
-	VersionsCount any
+	VersionsCount     any
 }
 
 type HostedRunnerCustomImageListConfig struct {
@@ -20,7 +20,7 @@ type HostedRunnerCustomImageListConfig struct {
 
 type HostedRunnerCustomImageListAttrs struct {
 	Enterprise any
-	Images any
+	Images     any
 	TotalCount any
 }
 

@@ -8,22 +8,22 @@ type Hook_Config struct {
 	ContentType any
 	// Controls whether SSL verification is enabled for webhook deliveries. Set to '1' or true to ignore SSL certificate errors, or '0' or false to require valid certificates. Accepts both boolean and string values due to its dynamic type. Optional. (AI-inferred)
 	InsecureSsl any
-	Password any
+	Password    any
 	// If provided, the `secret` will be used as the `key` to generate the HMAC hex digest value for [delivery signature headers](https://docs.github.com/enterprise-cloud@latest/webhooks/event-payloads/#delivery-headers).
 	Secret any
 	// The URL to which the payloads will be delivered.
-	Url any
+	Url      any
 	Username any
 }
 
 var Hook_ConfigFields = ubx.FieldMap{
-		"ContentType": ubx.FieldSpec{WireName: "content_type"},
-		"InsecureSsl": ubx.FieldSpec{WireName: "insecure_ssl"},
-		"Password": ubx.FieldSpec{WireName: "password"},
-		"Secret": ubx.FieldSpec{WireName: "secret"},
-		"Url": ubx.FieldSpec{WireName: "url"},
-		"Username": ubx.FieldSpec{WireName: "username"},
-	}
+	"ContentType": ubx.FieldSpec{WireName: "content_type"},
+	"InsecureSsl": ubx.FieldSpec{WireName: "insecure_ssl"},
+	"Password":    ubx.FieldSpec{WireName: "password"},
+	"Secret":      ubx.FieldSpec{WireName: "secret"},
+	"Url":         ubx.FieldSpec{WireName: "url"},
+	"Username":    ubx.FieldSpec{WireName: "username"},
+}
 
 type HookConfig struct {
 	// Determines if notifications are sent when the webhook is triggered. Set to `true` to send notifications.
@@ -75,12 +75,12 @@ var Hook = ubx.ResourceBinding{
 		"Active": ubx.FieldSpec{WireName: "active"},
 		"Config": ubx.FieldSpec{
 			WireName: "config",
-			Kind: "object",
-			Fields: Hook_ConfigFields,
+			Kind:     "object",
+			Fields:   Hook_ConfigFields,
 		},
 		"Events": ubx.FieldSpec{WireName: "events"},
-		"Name": ubx.FieldSpec{WireName: "name"},
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Name":   ubx.FieldSpec{WireName: "name"},
+		"Org":    ubx.FieldSpec{WireName: "org"},
 		"HookId": ubx.FieldSpec{WireName: "hook_id"},
 	},
 }

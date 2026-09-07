@@ -5,19 +5,19 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type StatsConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type StatsAttrs struct {
-	All any
+	All   any
 	Owner any
-	Repo any
+	Repo  any
 }
 
 var Stats = ubx.DataSourceBinding{
 	WireType: "github_participation_stats",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

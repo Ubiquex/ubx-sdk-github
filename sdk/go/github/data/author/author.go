@@ -5,13 +5,13 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type AuthorConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 	Since any
 }
 
 type AuthorAttrs struct {
 	Owner any
-	Repo any
+	Repo  any
 	Since any
 }
 
@@ -19,7 +19,7 @@ var Author = ubx.DataSourceBinding{
 	WireType: "github_author",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 		"Since": ubx.FieldSpec{WireName: "since"},
 	},
 }

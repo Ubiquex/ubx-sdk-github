@@ -4,53 +4,53 @@ package license
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Content_Links struct {
-	Git any
+	Git  any
 	Html any
 	Self any
 }
 
 type Content_License struct {
 	HtmlUrl any
-	Key any
-	Name any
-	NodeId any
-	SpdxId any
-	Url any
+	Key     any
+	Name    any
+	NodeId  any
+	SpdxId  any
+	Url     any
 }
 
 type ContentConfig struct {
 	Owner any
 	// The Git reference, formatted as `refs/pull/<number>/merge`, `refs/pull/<number>/head`, `refs/heads/<branch name>` or simply `<branch name>`.
-	Ref any
+	Ref  any
 	Repo any
 }
 
 type ContentAttrs struct {
-	Links any
-	Content any
+	Links       any
+	Content     any
 	DownloadUrl any
-	Encoding any
-	GitUrl any
-	HtmlUrl any
+	Encoding    any
+	GitUrl      any
+	HtmlUrl     any
 	// License Simple
 	License any
-	Name any
-	Owner any
-	Path any
+	Name    any
+	Owner   any
+	Path    any
 	// The Git reference, formatted as `refs/pull/<number>/merge`, `refs/pull/<number>/head`, `refs/heads/<branch name>` or simply `<branch name>`.
-	Ref any
+	Ref  any
 	Repo any
-	Sha any
+	Sha  any
 	Size any
 	Type any
-	Url any
+	Url  any
 }
 
 var Content = ubx.DataSourceBinding{
 	WireType: "github_license_content",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Ref": ubx.FieldSpec{WireName: "ref"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Ref":   ubx.FieldSpec{WireName: "ref"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

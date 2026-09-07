@@ -44,7 +44,7 @@ type Comment_User struct {
 	// The type of GitHub user account, such as 'User' or 'Organization'. (AI-inferred)
 	Type any
 	// The GitHub API URL for the user (e.g., https://api.github.com/users/octocat). (AI-inferred)
-	Url any
+	Url          any
 	UserViewType any
 }
 
@@ -83,8 +83,8 @@ type CommentAttrs struct {
 var Comment = ubx.ResourceBinding{
 	WireType: "github_gist_comment",
 	Fields: ubx.FieldMap{
-		"Body": ubx.FieldSpec{WireName: "body"},
-		"GistId": ubx.FieldSpec{WireName: "gist_id"},
+		"Body":      ubx.FieldSpec{WireName: "body"},
+		"GistId":    ubx.FieldSpec{WireName: "gist_id"},
 		"CommentId": ubx.FieldSpec{WireName: "comment_id"},
 	},
 }

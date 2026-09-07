@@ -4,28 +4,28 @@ package projects
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ProjectsV2Config struct {
-	After any
-	Before any
-	Org any
+	After   any
+	Before  any
+	Org     any
 	PerPage any
-	Q any
+	Q       any
 }
 
 type ProjectsV2Attrs struct {
-	After any
-	Before any
-	Org any
+	After   any
+	Before  any
+	Org     any
 	PerPage any
-	Q any
+	Q       any
 }
 
 var ProjectsV2 = ubx.DataSourceBinding{
 	WireType: "github_projects_v2",
 	Fields: ubx.FieldMap{
-		"After": ubx.FieldSpec{WireName: "after"},
-		"Before": ubx.FieldSpec{WireName: "before"},
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"After":   ubx.FieldSpec{WireName: "after"},
+		"Before":  ubx.FieldSpec{WireName: "before"},
+		"Org":     ubx.FieldSpec{WireName: "org"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Q": ubx.FieldSpec{WireName: "q"},
+		"Q":       ubx.FieldSpec{WireName: "q"},
 	},
 }

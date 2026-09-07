@@ -4,34 +4,34 @@ package network
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ConfigurationList_NetworkConfigurations struct {
-	ComputeService any
-	CreatedOn any
-	FailoverNetworkEnabled any
+	ComputeService             any
+	CreatedOn                  any
+	FailoverNetworkEnabled     any
 	FailoverNetworkSettingsIds any
-	Id any
-	Name any
-	NetworkSettingsIds any
+	Id                         any
+	Name                       any
+	NetworkSettingsIds         any
 }
 
 type ConfigurationListConfig struct {
 	Enterprise any
-	Page any
-	PerPage any
+	Page       any
+	PerPage    any
 }
 
 type ConfigurationListAttrs struct {
-	Enterprise any
+	Enterprise            any
 	NetworkConfigurations any
-	Page any
-	PerPage any
-	TotalCount any
+	Page                  any
+	PerPage               any
+	TotalCount            any
 }
 
 var ConfigurationList = ubx.DataSourceBinding{
 	WireType: "github_network_configuration_list",
 	Fields: ubx.FieldMap{
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Page":       ubx.FieldSpec{WireName: "page"},
+		"PerPage":    ubx.FieldSpec{WireName: "per_page"},
 	},
 }

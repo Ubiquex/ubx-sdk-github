@@ -12,7 +12,7 @@ type CapAttrs struct {
 	Enabled any
 	// The maximum number of open pull requests a user can have at one time
 	MaxOpenPullRequests any
-	Org any
+	Org                 any
 }
 
 var Cap = ubx.DataSourceBinding{

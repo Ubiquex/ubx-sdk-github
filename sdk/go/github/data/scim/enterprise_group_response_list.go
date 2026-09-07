@@ -5,44 +5,44 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type EnterpriseGroupResponseList_Resources_Members struct {
 	Display any
-	Value any
+	Value   any
 }
 
 type EnterpriseGroupResponseList_Resources_Meta struct {
-	Created any
+	Created      any
 	LastModified any
-	Location any
+	Location     any
 	ResourceType any
 }
 
 type EnterpriseGroupResponseList_Resources struct {
 	DisplayName any
-	ExternalId any
-	Id any
-	Members any
-	Meta any
-	Schemas any
+	ExternalId  any
+	Id          any
+	Members     any
+	Meta        any
+	Schemas     any
 }
 
 type EnterpriseGroupResponseListConfig struct {
-	Count any
-	Enterprise any
+	Count              any
+	Enterprise         any
 	ExcludedAttributes any
-	Filter any
-	StartIndex any
+	Filter             any
+	StartIndex         any
 }
 
 type EnterpriseGroupResponseListAttrs struct {
-	Count any
-	Enterprise any
+	Count              any
+	Enterprise         any
 	ExcludedAttributes any
-	Filter any
+	Filter             any
 	// Number of objects per page
 	ItemsPerPage any
 	// Information about each provisioned group.
 	Resources any
 	// The URIs that are used to indicate the namespaces of the list SCIM schemas.
-	Schemas any
+	Schemas    any
 	StartIndex any
 	// Number of results found
 	TotalResults any
@@ -51,10 +51,10 @@ type EnterpriseGroupResponseListAttrs struct {
 var EnterpriseGroupResponseList = ubx.DataSourceBinding{
 	WireType: "github_scim_enterprise_group_response_list",
 	Fields: ubx.FieldMap{
-		"Count": ubx.FieldSpec{WireName: "count"},
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
+		"Count":              ubx.FieldSpec{WireName: "count"},
+		"Enterprise":         ubx.FieldSpec{WireName: "enterprise"},
 		"ExcludedAttributes": ubx.FieldSpec{WireName: "excluded_attributes"},
-		"Filter": ubx.FieldSpec{WireName: "filter"},
-		"StartIndex": ubx.FieldSpec{WireName: "start_index"},
+		"Filter":             ubx.FieldSpec{WireName: "filter"},
+		"StartIndex":         ubx.FieldSpec{WireName: "start_index"},
 	},
 }

@@ -4,35 +4,35 @@ package projects
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type V2ItemWithContent_Creator struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type V2ItemWithContentConfig struct {
-	Fields any
-	ItemId any
+	Fields        any
+	ItemId        any
 	ProjectNumber any
-	Username any
+	Username      any
 }
 
 type V2ItemWithContentAttrs struct {
@@ -46,28 +46,28 @@ type V2ItemWithContentAttrs struct {
 	CreatedAt any
 	// A GitHub user.
 	Creator any
-	Fields any
+	Fields  any
 	// The unique identifier of the project item.
-	Id any
+	Id     any
 	ItemId any
 	// The API URL of this item.
 	ItemUrl any
 	// The node ID of the project item.
-	NodeId any
+	NodeId        any
 	ProjectNumber any
 	// The API URL of the project that contains this item.
 	ProjectUrl any
 	// The time when the item was last updated.
 	UpdatedAt any
-	Username any
+	Username  any
 }
 
 var V2ItemWithContent = ubx.DataSourceBinding{
 	WireType: "github_projects_v2_item_with_content",
 	Fields: ubx.FieldMap{
-		"Fields": ubx.FieldSpec{WireName: "fields"},
-		"ItemId": ubx.FieldSpec{WireName: "item_id"},
+		"Fields":        ubx.FieldSpec{WireName: "fields"},
+		"ItemId":        ubx.FieldSpec{WireName: "item_id"},
 		"ProjectNumber": ubx.FieldSpec{WireName: "project_number"},
-		"Username": ubx.FieldSpec{WireName: "username"},
+		"Username":      ubx.FieldSpec{WireName: "username"},
 	},
 }

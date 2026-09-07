@@ -24,7 +24,7 @@ type ScanningVariantAnalysis_Actor struct {
 	Id any
 	// The GitHub username (login) of the actor who initiated the variant analysis. This field is required. (AI-inferred)
 	Login any
-	Name any
+	Name  any
 	// The GraphQL node identifier for the actor (user or bot) that triggered the variant analysis. (AI-inferred)
 	NodeId any
 	// The URL to the organizations endpoint for this actor, listing the organizations to which the actor belongs. (AI-inferred)
@@ -40,7 +40,7 @@ type ScanningVariantAnalysis_Actor struct {
 	StarredUrl any
 	// The API endpoint URL for the subscriptions of the actor (user or bot) that triggered the code scanning variant analysis. (AI-inferred)
 	SubscriptionsUrl any
-	Type any
+	Type             any
 	// The GitHub API URL for the actor associated with the code scanning variant analysis. (AI-inferred)
 	Url any
 	// The user's view type, which indicates whether the user account is publicly visible or private. Possible values are 'public' and 'private'. (AI-inferred)
@@ -146,7 +146,7 @@ type ScanningVariantAnalysis_ScannedRepositories_Repository struct {
 	// The full name of the repository, formatted as `owner/name` (e.g., `octocat/Hello-World`). (AI-inferred)
 	FullName any
 	// The unique numeric identifier of the GitHub repository. (AI-inferred)
-	Id any
+	Id   any
 	Name any
 	// Indicates whether the repository is private (true) or public (false). (AI-inferred)
 	Private any
@@ -261,13 +261,13 @@ type ScanningVariantAnalysisAttrs struct {
 var ScanningVariantAnalysis = ubx.ResourceBinding{
 	WireType: "github_code_scanning_variant_analysis",
 	Fields: ubx.FieldMap{
-		"Language": ubx.FieldSpec{WireName: "language"},
-		"QueryPack": ubx.FieldSpec{WireName: "query_pack"},
-		"Repositories": ubx.FieldSpec{WireName: "repositories"},
-		"RepositoryLists": ubx.FieldSpec{WireName: "repository_lists"},
-		"RepositoryOwners": ubx.FieldSpec{WireName: "repository_owners"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Language":                ubx.FieldSpec{WireName: "language"},
+		"QueryPack":               ubx.FieldSpec{WireName: "query_pack"},
+		"Repositories":            ubx.FieldSpec{WireName: "repositories"},
+		"RepositoryLists":         ubx.FieldSpec{WireName: "repository_lists"},
+		"RepositoryOwners":        ubx.FieldSpec{WireName: "repository_owners"},
+		"Owner":                   ubx.FieldSpec{WireName: "owner"},
+		"Repo":                    ubx.FieldSpec{WireName: "repo"},
 		"CodeqlVariantAnalysisId": ubx.FieldSpec{WireName: "codeql_variant_analysis_id"},
 	},
 }

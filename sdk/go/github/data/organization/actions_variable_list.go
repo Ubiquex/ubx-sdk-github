@@ -4,33 +4,33 @@ package organization
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ActionsVariableList_Variables struct {
-	CreatedAt any
-	Name any
+	CreatedAt               any
+	Name                    any
 	SelectedRepositoriesUrl any
-	UpdatedAt any
-	Value any
-	Visibility any
+	UpdatedAt               any
+	Value                   any
+	Visibility              any
 }
 
 type ActionsVariableListConfig struct {
-	Org any
-	Page any
+	Org     any
+	Page    any
 	PerPage any
 }
 
 type ActionsVariableListAttrs struct {
-	Org any
-	Page any
-	PerPage any
+	Org        any
+	Page       any
+	PerPage    any
 	TotalCount any
-	Variables any
+	Variables  any
 }
 
 var ActionsVariableList = ubx.DataSourceBinding{
 	WireType: "github_organization_actions_variable_list",
 	Fields: ubx.FieldMap{
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"Page": ubx.FieldSpec{WireName: "page"},
+		"Org":     ubx.FieldSpec{WireName: "org"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

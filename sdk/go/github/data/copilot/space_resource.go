@@ -4,9 +4,9 @@ package copilot
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type SpaceResourceConfig struct {
-	SpaceNumber any
+	SpaceNumber     any
 	SpaceResourceId any
-	Username any
+	Username        any
 }
 
 type SpaceResourceAttrs struct {
@@ -19,19 +19,19 @@ type SpaceResourceAttrs struct {
 	// Resource-specific metadata. The keys and values depend on the resource type.
 	Metadata any
 	// The type of the resource.
-	ResourceType any
-	SpaceNumber any
+	ResourceType    any
+	SpaceNumber     any
 	SpaceResourceId any
 	// The date and time the resource was last updated.
 	UpdatedAt any
-	Username any
+	Username  any
 }
 
 var SpaceResource = ubx.DataSourceBinding{
 	WireType: "github_copilot_space_resource",
 	Fields: ubx.FieldMap{
-		"SpaceNumber": ubx.FieldSpec{WireName: "space_number"},
+		"SpaceNumber":     ubx.FieldSpec{WireName: "space_number"},
 		"SpaceResourceId": ubx.FieldSpec{WireName: "space_resource_id"},
-		"Username": ubx.FieldSpec{WireName: "username"},
+		"Username":        ubx.FieldSpec{WireName: "username"},
 	},
 }

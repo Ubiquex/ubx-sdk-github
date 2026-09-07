@@ -5,29 +5,29 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Agent_CustomAgents struct {
 	FilePath any
-	Name any
-	Url any
+	Name     any
+	Url      any
 }
 
 type AgentConfig struct {
 	Enterprise any
-	Page any
-	PerPage any
+	Page       any
+	PerPage    any
 }
 
 type AgentAttrs struct {
 	// List of custom agents defined in the repository. Returns `null` if no source repository is configured.
 	CustomAgents any
-	Enterprise any
-	Page any
-	PerPage any
+	Enterprise   any
+	Page         any
+	PerPage      any
 }
 
 var Agent = ubx.DataSourceBinding{
 	WireType: "github_custom_agent",
 	Fields: ubx.FieldMap{
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Page":       ubx.FieldSpec{WireName: "page"},
+		"PerPage":    ubx.FieldSpec{WireName: "per_page"},
 	},
 }

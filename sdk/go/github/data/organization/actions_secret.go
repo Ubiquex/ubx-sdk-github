@@ -4,18 +4,18 @@ package organization
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ActionsSecretConfig struct {
-	Org any
+	Org        any
 	SecretName any
 }
 
 type ActionsSecretAttrs struct {
 	CreatedAt any
 	// The name of the secret.
-	Name any
-	Org any
-	SecretName any
+	Name                    any
+	Org                     any
+	SecretName              any
 	SelectedRepositoriesUrl any
-	UpdatedAt any
+	UpdatedAt               any
 	// Visibility of a secret
 	Visibility any
 }
@@ -23,7 +23,7 @@ type ActionsSecretAttrs struct {
 var ActionsSecret = ubx.DataSourceBinding{
 	WireType: "github_organization_actions_secret",
 	Fields: ubx.FieldMap{
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Org":        ubx.FieldSpec{WireName: "org"},
 		"SecretName": ubx.FieldSpec{WireName: "secret_name"},
 	},
 }

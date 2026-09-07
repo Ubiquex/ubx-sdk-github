@@ -4,19 +4,19 @@ package gpg
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type KeyConfig struct {
-	Page any
+	Page    any
 	PerPage any
 }
 
 type KeyAttrs struct {
-	Page any
+	Page    any
 	PerPage any
 }
 
 var Key = ubx.DataSourceBinding{
 	WireType: "github_gpg_key",
 	Fields: ubx.FieldMap{
-		"Page": ubx.FieldSpec{WireName: "page"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

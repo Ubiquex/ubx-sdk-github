@@ -4,40 +4,40 @@ package organization
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type RoleList_Roles_Organization struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type RoleList_Roles struct {
-	BaseRole any
-	CreatedAt any
-	Description any
-	Id any
-	Name any
+	BaseRole     any
+	CreatedAt    any
+	Description  any
+	Id           any
+	Name         any
 	Organization any
-	Permissions any
-	Source any
-	UpdatedAt any
+	Permissions  any
+	Source       any
+	UpdatedAt    any
 }
 
 type RoleListConfig struct {

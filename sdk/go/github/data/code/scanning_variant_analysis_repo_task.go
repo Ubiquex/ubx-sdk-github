@@ -4,28 +4,28 @@ package code
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ScanningVariantAnalysisRepoTask_Repository_Owner struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type ScanningVariantAnalysisRepoTask_Repository struct {
@@ -125,10 +125,10 @@ type ScanningVariantAnalysisRepoTask_Repository struct {
 
 type ScanningVariantAnalysisRepoTaskConfig struct {
 	CodeqlVariantAnalysisId any
-	Owner any
-	Repo any
-	RepoName any
-	RepoOwner any
+	Owner                   any
+	Repo                    any
+	RepoName                any
+	RepoOwner               any
 }
 
 type ScanningVariantAnalysisRepoTaskAttrs struct {
@@ -137,16 +137,16 @@ type ScanningVariantAnalysisRepoTaskAttrs struct {
 	// The size of the artifact. This is only available for successful analyses.
 	ArtifactSizeInBytes any
 	// The URL of the artifact. This is only available for successful analyses.
-	ArtifactUrl any
+	ArtifactUrl             any
 	CodeqlVariantAnalysisId any
 	// The SHA of the commit the CodeQL database was built against. This is only available for successful analyses.
 	DatabaseCommitSha any
 	// The reason of the failure of this repo task. This is only available if the repository task has failed.
 	FailureMessage any
-	Owner any
-	Repo any
-	RepoName any
-	RepoOwner any
+	Owner          any
+	Repo           any
+	RepoName       any
+	RepoOwner      any
 	// A GitHub repository.
 	Repository any
 	// The number of results in the case of a successful analysis. This is only available for successful analyses.
@@ -159,9 +159,9 @@ var ScanningVariantAnalysisRepoTask = ubx.DataSourceBinding{
 	WireType: "github_code_scanning_variant_analysis_repo_task",
 	Fields: ubx.FieldMap{
 		"CodeqlVariantAnalysisId": ubx.FieldSpec{WireName: "codeql_variant_analysis_id"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"RepoName": ubx.FieldSpec{WireName: "repo_name"},
-		"RepoOwner": ubx.FieldSpec{WireName: "repo_owner"},
+		"Owner":                   ubx.FieldSpec{WireName: "owner"},
+		"Repo":                    ubx.FieldSpec{WireName: "repo"},
+		"RepoName":                ubx.FieldSpec{WireName: "repo_name"},
+		"RepoOwner":               ubx.FieldSpec{WireName: "repo_owner"},
 	},
 }

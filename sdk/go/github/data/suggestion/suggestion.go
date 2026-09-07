@@ -4,34 +4,34 @@ package suggestion
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type SuggestionConfig struct {
-	Action any
+	Action      any
 	IssueNumber any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
-	State any
+	Owner       any
+	Page        any
+	PerPage     any
+	Repo        any
+	State       any
 }
 
 type SuggestionAttrs struct {
-	Action any
+	Action      any
 	IssueNumber any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
-	State any
+	Owner       any
+	Page        any
+	PerPage     any
+	Repo        any
+	State       any
 }
 
 var Suggestion = ubx.DataSourceBinding{
 	WireType: "github_suggestion",
 	Fields: ubx.FieldMap{
-		"Action": ubx.FieldSpec{WireName: "action"},
+		"Action":      ubx.FieldSpec{WireName: "action"},
 		"IssueNumber": ubx.FieldSpec{WireName: "issue_number"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"State": ubx.FieldSpec{WireName: "state"},
+		"Owner":       ubx.FieldSpec{WireName: "owner"},
+		"Page":        ubx.FieldSpec{WireName: "page"},
+		"PerPage":     ubx.FieldSpec{WireName: "per_page"},
+		"Repo":        ubx.FieldSpec{WireName: "repo"},
+		"State":       ubx.FieldSpec{WireName: "state"},
 	},
 }

@@ -5,112 +5,112 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type List_Environments_DeploymentBranchPolicy struct {
 	CustomBranchPolicies any
-	ProtectedBranches any
+	ProtectedBranches    any
 }
 
 type List_Environments_ProtectionRules_Reviewers_Reviewer_Parent struct {
-	Description any
-	EnterpriseId any
-	HtmlUrl any
-	Id any
-	LdapDn any
-	MembersUrl any
-	Name any
-	NodeId any
+	Description         any
+	EnterpriseId        any
+	HtmlUrl             any
+	Id                  any
+	LdapDn              any
+	MembersUrl          any
+	Name                any
+	NodeId              any
 	NotificationSetting any
-	OrganizationId any
-	Permission any
-	Privacy any
-	RepositoriesUrl any
-	Slug any
-	Type any
-	Url any
+	OrganizationId      any
+	Permission          any
+	Privacy             any
+	RepositoriesUrl     any
+	Slug                any
+	Type                any
+	Url                 any
 }
 
 type List_Environments_ProtectionRules_Reviewers_Reviewer_Permissions struct {
-	Admin any
+	Admin    any
 	Maintain any
-	Pull any
-	Push any
-	Triage any
+	Pull     any
+	Push     any
+	Triage   any
 }
 
 type List_Environments_ProtectionRules_Reviewers_Reviewer struct {
-	AccessSource any
-	AvatarUrl any
-	Description any
-	Email any
-	EnterpriseId any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	MembersUrl any
-	Name any
-	NodeId any
+	AccessSource        any
+	AvatarUrl           any
+	Description         any
+	Email               any
+	EnterpriseId        any
+	EventsUrl           any
+	FollowersUrl        any
+	FollowingUrl        any
+	GistsUrl            any
+	GravatarId          any
+	HtmlUrl             any
+	Id                  any
+	Login               any
+	MembersUrl          any
+	Name                any
+	NodeId              any
 	NotificationSetting any
-	OrganizationId any
-	OrganizationsUrl any
-	Parent any
-	Permission any
-	Permissions any
-	Privacy any
-	ReceivedEventsUrl any
-	ReposUrl any
-	RepositoriesUrl any
-	SiteAdmin any
-	Slug any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	OrganizationId      any
+	OrganizationsUrl    any
+	Parent              any
+	Permission          any
+	Permissions         any
+	Privacy             any
+	ReceivedEventsUrl   any
+	ReposUrl            any
+	RepositoriesUrl     any
+	SiteAdmin           any
+	Slug                any
+	StarredAt           any
+	StarredUrl          any
+	SubscriptionsUrl    any
+	Type                any
+	Url                 any
+	UserViewType        any
 }
 
 type List_Environments_ProtectionRules_Reviewers struct {
 	Reviewer any
-	Type any
+	Type     any
 }
 
 type List_Environments_ProtectionRules struct {
-	Id any
-	NodeId any
+	Id                any
+	NodeId            any
 	PreventSelfReview any
-	Reviewers any
-	Type any
-	WaitTimer any
+	Reviewers         any
+	Type              any
+	WaitTimer         any
 }
 
 type List_Environments struct {
-	CreatedAt any
+	CreatedAt              any
 	DeploymentBranchPolicy any
-	HtmlUrl any
-	Id any
-	Name any
-	NodeId any
-	ProtectionRules any
-	UpdatedAt any
-	Url any
+	HtmlUrl                any
+	Id                     any
+	Name                   any
+	NodeId                 any
+	ProtectionRules        any
+	UpdatedAt              any
+	Url                    any
 }
 
 type ListConfig struct {
-	Owner any
-	Page any
+	Owner   any
+	Page    any
 	PerPage any
-	Repo any
+	Repo    any
 }
 
 type ListAttrs struct {
 	Environments any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
+	Owner        any
+	Page         any
+	PerPage      any
+	Repo         any
 	// The number of environments in this repository
 	TotalCount any
 }
@@ -118,9 +118,9 @@ type ListAttrs struct {
 var List = ubx.DataSourceBinding{
 	WireType: "github_environment_list",
 	Fields: ubx.FieldMap{
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
+		"Owner":   ubx.FieldSpec{WireName: "owner"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":    ubx.FieldSpec{WireName: "repo"},
 	},
 }

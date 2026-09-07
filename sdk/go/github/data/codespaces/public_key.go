@@ -9,14 +9,14 @@ type PublicKeyConfig struct {
 
 type PublicKeyAttrs struct {
 	CreatedAt any
-	Id any
+	Id        any
 	// The Base64 encoded public key.
 	Key any
 	// The identifier for the key.
 	KeyId any
-	Org any
+	Org   any
 	Title any
-	Url any
+	Url   any
 }
 
 var PublicKey = ubx.DataSourceBinding{

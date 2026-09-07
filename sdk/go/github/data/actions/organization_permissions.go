@@ -12,7 +12,7 @@ type OrganizationPermissionsAttrs struct {
 	AllowedActions any
 	// The policy that controls the repositories in the organization that are allowed to run GitHub Actions.
 	EnabledRepositories any
-	Org any
+	Org                 any
 	// The API URL to use to get or set the actions and reusable workflows that are allowed to run, when `allowed_actions` is set to `selected`.
 	SelectedActionsUrl any
 	// The API URL to use to get or set the selected repositories that are allowed to run GitHub Actions, when `enabled_repositories` is set to `selected`.

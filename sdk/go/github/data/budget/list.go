@@ -5,21 +5,21 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type List_Budgets_BudgetAlerting struct {
 	AlertRecipients any
-	WillAlert any
+	WillAlert       any
 }
 
 type List_Budgets struct {
-	BudgetAlerting any
-	BudgetAmount any
-	BudgetEntityName any
-	BudgetProductSku any
-	BudgetScope any
-	BudgetType any
-	ConsumedAmount any
-	ExpiresAt any
-	Id any
+	BudgetAlerting      any
+	BudgetAmount        any
+	BudgetEntityName    any
+	BudgetProductSku    any
+	BudgetScope         any
+	BudgetType          any
+	ConsumedAmount      any
+	ExpiresAt           any
+	Id                  any
 	PreventFurtherUsage any
-	User any
+	User                any
 }
 
 type List_EffectiveBudget struct {
@@ -33,10 +33,10 @@ type List_EffectiveBudget struct {
 
 type ListConfig struct {
 	Enterprise any
-	Page any
-	PerPage any
-	Scope any
-	User any
+	Page       any
+	PerPage    any
+	Scope      any
+	User       any
 }
 
 type ListAttrs struct {
@@ -44,24 +44,24 @@ type ListAttrs struct {
 	Budgets any
 	// Effective user-level budget details returned when the response is scoped with the `user` query parameter.
 	EffectiveBudget any
-	Enterprise any
+	Enterprise      any
 	// Indicates if there are more pages of results available (maps to hasNextPage from billing platform)
 	HasNextPage any
-	Page any
-	PerPage any
-	Scope any
+	Page        any
+	PerPage     any
+	Scope       any
 	// Total number of budgets matching the query
 	TotalCount any
-	User any
+	User       any
 }
 
 var List = ubx.DataSourceBinding{
 	WireType: "github_budget_list",
 	Fields: ubx.FieldMap{
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Scope": ubx.FieldSpec{WireName: "scope"},
-		"User": ubx.FieldSpec{WireName: "user"},
+		"Page":       ubx.FieldSpec{WireName: "page"},
+		"PerPage":    ubx.FieldSpec{WireName: "per_page"},
+		"Scope":      ubx.FieldSpec{WireName: "scope"},
+		"User":       ubx.FieldSpec{WireName: "user"},
 	},
 }

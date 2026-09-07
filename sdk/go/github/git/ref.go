@@ -43,9 +43,9 @@ type RefAttrs struct {
 var Ref = ubx.ResourceBinding{
 	WireType: "github_git_ref",
 	Fields: ubx.FieldMap{
-		"Ref": ubx.FieldSpec{WireName: "ref"},
-		"Sha": ubx.FieldSpec{WireName: "sha"},
+		"Ref":   ubx.FieldSpec{WireName: "ref"},
+		"Sha":   ubx.FieldSpec{WireName: "sha"},
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

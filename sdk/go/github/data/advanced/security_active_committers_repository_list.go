@@ -4,44 +4,44 @@ package advanced
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type SecurityActiveCommittersRepositoryList_Repositories_AdvancedSecurityCommittersBreakdown struct {
-	LastPushedDate any
+	LastPushedDate  any
 	LastPushedEmail any
-	UserLogin any
+	UserLogin       any
 }
 
 type SecurityActiveCommittersRepositoryList_Repositories struct {
-	AdvancedSecurityCommitters any
+	AdvancedSecurityCommitters          any
 	AdvancedSecurityCommittersBreakdown any
-	Name any
+	Name                                any
 }
 
 type SecurityActiveCommittersRepositoryListConfig struct {
 	AdvancedSecurityProduct any
-	Enterprise any
-	Page any
-	PerPage any
+	Enterprise              any
+	Page                    any
+	PerPage                 any
 }
 
 type SecurityActiveCommittersRepositoryListAttrs struct {
 	AdvancedSecurityProduct any
-	Enterprise any
+	Enterprise              any
 	// The total number of GitHub Advanced Security licences required if all repositories were to enable GitHub Advanced Security
 	MaximumAdvancedSecurityCommitters any
-	Page any
-	PerPage any
+	Page                              any
+	PerPage                           any
 	// The total number of GitHub Advanced Security licences purchased
 	PurchasedAdvancedSecurityCommitters any
-	Repositories any
-	TotalAdvancedSecurityCommitters any
-	TotalCount any
+	Repositories                        any
+	TotalAdvancedSecurityCommitters     any
+	TotalCount                          any
 }
 
 var SecurityActiveCommittersRepositoryList = ubx.DataSourceBinding{
 	WireType: "github_advanced_security_active_committers_repository_list",
 	Fields: ubx.FieldMap{
 		"AdvancedSecurityProduct": ubx.FieldSpec{WireName: "advanced_security_product"},
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Enterprise":              ubx.FieldSpec{WireName: "enterprise"},
+		"Page":                    ubx.FieldSpec{WireName: "page"},
+		"PerPage":                 ubx.FieldSpec{WireName: "per_page"},
 	},
 }

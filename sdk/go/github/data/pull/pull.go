@@ -5,27 +5,27 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type PullConfig struct {
 	CommitSha any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
+	Owner     any
+	Page      any
+	PerPage   any
+	Repo      any
 }
 
 type PullAttrs struct {
 	CommitSha any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
+	Owner     any
+	Page      any
+	PerPage   any
+	Repo      any
 }
 
 var Pull = ubx.DataSourceBinding{
 	WireType: "github_pull",
 	Fields: ubx.FieldMap{
 		"CommitSha": ubx.FieldSpec{WireName: "commit_sha"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":     ubx.FieldSpec{WireName: "owner"},
+		"Page":      ubx.FieldSpec{WireName: "page"},
+		"PerPage":   ubx.FieldSpec{WireName: "per_page"},
+		"Repo":      ubx.FieldSpec{WireName: "repo"},
 	},
 }
