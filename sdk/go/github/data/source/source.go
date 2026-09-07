@@ -24,9 +24,9 @@ type SourceConfig struct {
 }
 
 type SourceAttrs struct {
-	Enterprise   any
+	Enterprise any
 	Organization any
-	Repository   any
+	Repository any
 }
 
 var Source = ubx.DataSourceBinding{

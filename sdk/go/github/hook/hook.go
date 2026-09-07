@@ -24,11 +24,11 @@ type Hook_LastResponse struct {
 }
 
 var Hook_ConfigFields = ubx.FieldMap{
-	"ContentType": ubx.FieldSpec{WireName: "content_type"},
-	"InsecureSsl": ubx.FieldSpec{WireName: "insecure_ssl"},
-	"Secret":      ubx.FieldSpec{WireName: "secret"},
-	"Url":         ubx.FieldSpec{WireName: "url"},
-}
+		"ContentType": ubx.FieldSpec{WireName: "content_type"},
+		"InsecureSsl": ubx.FieldSpec{WireName: "insecure_ssl"},
+		"Secret": ubx.FieldSpec{WireName: "secret"},
+		"Url": ubx.FieldSpec{WireName: "url"},
+	}
 
 type HookConfig struct {
 	// Determines if notifications are sent when the webhook is triggered. Set to `true` to send notifications.
@@ -88,13 +88,13 @@ var Hook = ubx.ResourceBinding{
 		"Active": ubx.FieldSpec{WireName: "active"},
 		"Config": ubx.FieldSpec{
 			WireName: "config",
-			Kind:     "object",
-			Fields:   Hook_ConfigFields,
+			Kind: "object",
+			Fields: Hook_ConfigFields,
 		},
 		"Events": ubx.FieldSpec{WireName: "events"},
-		"Name":   ubx.FieldSpec{WireName: "name"},
-		"Owner":  ubx.FieldSpec{WireName: "owner"},
-		"Repo":   ubx.FieldSpec{WireName: "repo"},
+		"Name": ubx.FieldSpec{WireName: "name"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
 		"HookId": ubx.FieldSpec{WireName: "hook_id"},
 	},
 }

@@ -4,4 +4,4 @@
 # re-run `ubx sdk gen` to regenerate after a provider version bump.
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
-from .simple_repository import SimpleRepository, SimpleRepositoryConfig
+from .simple_repository_list import SimpleRepositoryList, SimpleRepositoryListConfig

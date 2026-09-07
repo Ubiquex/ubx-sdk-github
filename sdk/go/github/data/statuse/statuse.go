@@ -4,28 +4,28 @@ package statuse
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type StatuseConfig struct {
-	Owner   any
-	Page    any
+	Owner any
+	Page any
 	PerPage any
-	Ref     any
-	Repo    any
+	Ref any
+	Repo any
 }
 
 type StatuseAttrs struct {
-	Owner   any
-	Page    any
+	Owner any
+	Page any
 	PerPage any
-	Ref     any
-	Repo    any
+	Ref any
+	Repo any
 }
 
 var Statuse = ubx.DataSourceBinding{
 	WireType: "github_statuse",
 	Fields: ubx.FieldMap{
-		"Owner":   ubx.FieldSpec{WireName: "owner"},
-		"Page":    ubx.FieldSpec{WireName: "page"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Page": ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Ref":     ubx.FieldSpec{WireName: "ref"},
-		"Repo":    ubx.FieldSpec{WireName: "repo"},
+		"Ref": ubx.FieldSpec{WireName: "ref"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
 	},
 }

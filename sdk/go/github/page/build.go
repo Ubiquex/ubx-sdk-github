@@ -91,8 +91,8 @@ type BuildAttrs struct {
 var Build = ubx.ResourceBinding{
 	WireType: "github_page_build",
 	Fields: ubx.FieldMap{
-		"Owner":   ubx.FieldSpec{WireName: "owner"},
-		"Repo":    ubx.FieldSpec{WireName: "repo"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
 		"BuildId": ubx.FieldSpec{WireName: "build_id"},
 	},
 }

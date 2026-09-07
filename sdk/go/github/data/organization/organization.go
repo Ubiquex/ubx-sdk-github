@@ -4,25 +4,25 @@ package organization
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type OrganizationConfig struct {
-	Enterprise     any
+	Enterprise any
 	EnterpriseTeam any
-	Page           any
-	PerPage        any
+	Page any
+	PerPage any
 }
 
 type OrganizationAttrs struct {
-	Enterprise     any
+	Enterprise any
 	EnterpriseTeam any
-	Page           any
-	PerPage        any
+	Page any
+	PerPage any
 }
 
 var Organization = ubx.DataSourceBinding{
 	WireType: "github_organization",
 	Fields: ubx.FieldMap{
-		"Enterprise":     ubx.FieldSpec{WireName: "enterprise"},
+		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
 		"EnterpriseTeam": ubx.FieldSpec{WireName: "enterprise_team"},
-		"Page":           ubx.FieldSpec{WireName: "page"},
-		"PerPage":        ubx.FieldSpec{WireName: "per_page"},
+		"Page": ubx.FieldSpec{WireName: "page"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

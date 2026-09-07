@@ -41,7 +41,7 @@ type V2ItemWithContent_Creator struct {
 	StarredUrl any
 	// The URL to retrieve the subscriptions of the creator (user), typically in the format https://api.github.com/users/{username}/subscriptions. (AI-inferred)
 	SubscriptionsUrl any
-	Type             any
+	Type any
 	// The GitHub profile URL of the creator of the project v2 item. (AI-inferred)
 	Url any
 	// The user's membership type in the organization, either 'public' or 'private'. (AI-inferred)
@@ -109,13 +109,13 @@ type V2ItemWithContentAttrs struct {
 var V2ItemWithContent = ubx.ResourceBinding{
 	WireType: "github_projects_v2_item_with_content",
 	Fields: ubx.FieldMap{
-		"Id":            ubx.FieldSpec{WireName: "id"},
-		"Number":        ubx.FieldSpec{WireName: "number"},
-		"Owner":         ubx.FieldSpec{WireName: "owner"},
-		"Repo":          ubx.FieldSpec{WireName: "repo"},
-		"Type":          ubx.FieldSpec{WireName: "type"},
-		"Org":           ubx.FieldSpec{WireName: "org"},
+		"Id": ubx.FieldSpec{WireName: "id"},
+		"Number": ubx.FieldSpec{WireName: "number"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Type": ubx.FieldSpec{WireName: "type"},
+		"Org": ubx.FieldSpec{WireName: "org"},
 		"ProjectNumber": ubx.FieldSpec{WireName: "project_number"},
-		"ItemId":        ubx.FieldSpec{WireName: "item_id"},
+		"ItemId": ubx.FieldSpec{WireName: "item_id"},
 	},
 }

@@ -4,28 +4,28 @@ package repository
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type RepositoryConfig struct {
-	Enterprise     any
+	Enterprise any
 	InstallationId any
-	Org            any
-	Page           any
-	PerPage        any
+	Org any
+	Page any
+	PerPage any
 }
 
 type RepositoryAttrs struct {
-	Enterprise     any
+	Enterprise any
 	InstallationId any
-	Org            any
-	Page           any
-	PerPage        any
+	Org any
+	Page any
+	PerPage any
 }
 
 var Repository = ubx.DataSourceBinding{
 	WireType: "github_repository",
 	Fields: ubx.FieldMap{
-		"Enterprise":     ubx.FieldSpec{WireName: "enterprise"},
+		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
 		"InstallationId": ubx.FieldSpec{WireName: "installation_id"},
-		"Org":            ubx.FieldSpec{WireName: "org"},
-		"Page":           ubx.FieldSpec{WireName: "page"},
-		"PerPage":        ubx.FieldSpec{WireName: "per_page"},
+		"Org": ubx.FieldSpec{WireName: "org"},
+		"Page": ubx.FieldSpec{WireName: "page"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

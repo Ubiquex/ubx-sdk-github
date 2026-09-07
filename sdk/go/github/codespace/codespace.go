@@ -20,7 +20,7 @@ type Codespace_BillableOwner struct {
 	GravatarId any
 	// The HTML URL of the billable owner's GitHub profile page (e.g., https://github.com/username). (AI-inferred)
 	HtmlUrl any
-	Id      any
+	Id any
 	// The GitHub username or organization name of the entity that is billed for the codespace. (AI-inferred)
 	Login any
 	// The name of the user or organization that is the billable owner for the codespace. (AI-inferred)
@@ -40,9 +40,9 @@ type Codespace_BillableOwner struct {
 	StarredUrl any
 	// The URL to the subscriptions of the billable owner associated with the codespace. (AI-inferred)
 	SubscriptionsUrl any
-	Type             any
+	Type any
 	// The API resource URL for the billable owner of the codespace, typically the GitHub user or organization that will be billed. (AI-inferred)
-	Url          any
+	Url any
 	UserViewType any
 }
 
@@ -232,7 +232,7 @@ type Codespace_Repository struct {
 	// Indicates whether the repository has GitHub Pages enabled. (AI-inferred)
 	HasPages any
 	// Whether the repository has the Projects feature enabled. (AI-inferred)
-	HasProjects     any
+	HasProjects any
 	HasPullRequests any
 	// Indicates whether the repository has a wiki enabled. (AI-inferred)
 	HasWiki any
@@ -260,7 +260,7 @@ type Codespace_Repository struct {
 	Language any
 	// The URL to the GitHub API endpoint that lists the programming languages used in the repository. (AI-inferred)
 	LanguagesUrl any
-	License      any
+	License any
 	// The API URL for the merges endpoint of the repository, which can be used to check merge status or perform merges. (AI-inferred)
 	MergesUrl any
 	// The API endpoint URL for accessing the milestones of this repository. (AI-inferred)
@@ -268,7 +268,7 @@ type Codespace_Repository struct {
 	// The URL of the mirror repository, if this repository is a mirror. This property is only present for mirrored repositories. (AI-inferred)
 	MirrorUrl any
 	// The name of the repository, without the owner/organization prefix. (AI-inferred)
-	Name         any
+	Name any
 	NetworkCount any
 	// The unique identifier for the repository, used in GraphQL operations. (AI-inferred)
 	NodeId any
@@ -279,7 +279,7 @@ type Codespace_Repository struct {
 	// The number of open issues in the repository. (AI-inferred)
 	OpenIssuesCount any
 	// A GitHub user.
-	Owner       any
+	Owner any
 	Permissions any
 	// Specifies whether the GitHub repository is private. Set to true for a private repository, false for a public one. (AI-inferred)
 	Private any
@@ -291,7 +291,7 @@ type Codespace_Repository struct {
 	PushedAt any
 	// The URL template for the repository's releases, with placeholders for additional parameters (e.g., release ID). (AI-inferred)
 	ReleasesUrl any
-	RoleName    any
+	RoleName any
 	// Security and analysis settings for the repository, including features like vulnerability alerts, dependency graph, secret scanning, and advanced security. (AI-inferred)
 	SecurityAndAnalysis any
 	// The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
@@ -325,7 +325,7 @@ type Codespace_Repository struct {
 	// The timestamp of when the repository was last updated, formatted as an ISO 8601 string (e.g., 2024-01-01T12:34:56Z). (AI-inferred)
 	UpdatedAt any
 	// The GitHub API URL of the repository. (AI-inferred)
-	Url        any
+	Url any
 	Visibility any
 	// Number of users watching (subscribing to) the repository. (AI-inferred)
 	Watchers any

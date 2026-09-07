@@ -5,24 +5,24 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type RepositoryConfig struct {
 	Enterprise any
-	Org        any
-	Page       any
-	PerPage    any
+	Org any
+	Page any
+	PerPage any
 }
 
 type RepositoryAttrs struct {
 	Enterprise any
-	Org        any
-	Page       any
-	PerPage    any
+	Org any
+	Page any
+	PerPage any
 }
 
 var Repository = ubx.DataSourceBinding{
 	WireType: "github_accessible_repository",
 	Fields: ubx.FieldMap{
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"Org":        ubx.FieldSpec{WireName: "org"},
-		"Page":       ubx.FieldSpec{WireName: "page"},
-		"PerPage":    ubx.FieldSpec{WireName: "per_page"},
+		"Org": ubx.FieldSpec{WireName: "org"},
+		"Page": ubx.FieldSpec{WireName: "page"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

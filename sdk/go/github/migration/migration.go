@@ -6,7 +6,7 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 type Migration_Owner struct {
 	// The URL of the avatar image for the owner of the GitHub migration. (AI-inferred)
 	AvatarUrl any
-	Email     any
+	Email any
 	// URL to the events of the owner (user or organization), as provided by the GitHub API. (AI-inferred)
 	EventsUrl any
 	// The URL to the GitHub API endpoint for the list of followers of the owner. (AI-inferred)
@@ -23,7 +23,7 @@ type Migration_Owner struct {
 	Id any
 	// The GitHub username or organization login for the owner of the migration. (AI-inferred)
 	Login any
-	Name  any
+	Name any
 	// The node ID of the GitHub migration owner (user or organization), used as a unique identifier in the GitHub API. (AI-inferred)
 	NodeId any
 	// The URL to the GitHub API endpoint that lists the organizations associated with this owner account (e.g., https://api.github.com/users/{login}/orgs). (AI-inferred)
@@ -43,7 +43,7 @@ type Migration_Owner struct {
 	// The type of the GitHub account that owns the migration, such as 'User' or 'Organization'. (AI-inferred)
 	Type any
 	// The URL to the owner's GitHub API resource for the migration, such as an organization or user. (AI-inferred)
-	Url          any
+	Url any
 	UserViewType any
 }
 
@@ -118,16 +118,16 @@ type MigrationAttrs struct {
 var Migration = ubx.ResourceBinding{
 	WireType: "github_migration",
 	Fields: ubx.FieldMap{
-		"Exclude":              ubx.FieldSpec{WireName: "exclude"},
-		"ExcludeAttachments":   ubx.FieldSpec{WireName: "exclude_attachments"},
-		"ExcludeGitData":       ubx.FieldSpec{WireName: "exclude_git_data"},
-		"ExcludeMetadata":      ubx.FieldSpec{WireName: "exclude_metadata"},
+		"Exclude": ubx.FieldSpec{WireName: "exclude"},
+		"ExcludeAttachments": ubx.FieldSpec{WireName: "exclude_attachments"},
+		"ExcludeGitData": ubx.FieldSpec{WireName: "exclude_git_data"},
+		"ExcludeMetadata": ubx.FieldSpec{WireName: "exclude_metadata"},
 		"ExcludeOwnerProjects": ubx.FieldSpec{WireName: "exclude_owner_projects"},
-		"ExcludeReleases":      ubx.FieldSpec{WireName: "exclude_releases"},
-		"LockRepositories":     ubx.FieldSpec{WireName: "lock_repositories"},
-		"OrgMetadataOnly":      ubx.FieldSpec{WireName: "org_metadata_only"},
-		"Repositories":         ubx.FieldSpec{WireName: "repositories"},
-		"Org":                  ubx.FieldSpec{WireName: "org"},
-		"MigrationId":          ubx.FieldSpec{WireName: "migration_id"},
+		"ExcludeReleases": ubx.FieldSpec{WireName: "exclude_releases"},
+		"LockRepositories": ubx.FieldSpec{WireName: "lock_repositories"},
+		"OrgMetadataOnly": ubx.FieldSpec{WireName: "org_metadata_only"},
+		"Repositories": ubx.FieldSpec{WireName: "repositories"},
+		"Org": ubx.FieldSpec{WireName: "org"},
+		"MigrationId": ubx.FieldSpec{WireName: "migration_id"},
 	},
 }

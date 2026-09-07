@@ -50,11 +50,11 @@ type KeyAttrs struct {
 var Key = ubx.ResourceBinding{
 	WireType: "github_deploy_key",
 	Fields: ubx.FieldMap{
-		"Key":      ubx.FieldSpec{WireName: "key"},
+		"Key": ubx.FieldSpec{WireName: "key"},
 		"ReadOnly": ubx.FieldSpec{WireName: "read_only"},
-		"Title":    ubx.FieldSpec{WireName: "title"},
-		"Owner":    ubx.FieldSpec{WireName: "owner"},
-		"Repo":     ubx.FieldSpec{WireName: "repo"},
-		"KeyId":    ubx.FieldSpec{WireName: "key_id"},
+		"Title": ubx.FieldSpec{WireName: "title"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"KeyId": ubx.FieldSpec{WireName: "key_id"},
 	},
 }

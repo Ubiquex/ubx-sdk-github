@@ -29,7 +29,7 @@ type Comment_PerformedViaGithubApp_Owner struct {
 	GravatarId any
 	// The URL to the GitHub profile of the owner (a user or organization) of the GitHub App that performed the comment. (AI-inferred)
 	HtmlUrl any
-	Id      any
+	Id any
 	// The GitHub username or organization name of the owner of the GitHub App that performed the action. (AI-inferred)
 	Login any
 	// The display name of the GitHub App's owner, which can be a user or an organization. (AI-inferred)
@@ -45,7 +45,7 @@ type Comment_PerformedViaGithubApp_Owner struct {
 	// Whether the user is a site administrator for the GitHub instance. (AI-inferred)
 	SiteAdmin any
 	// The slug of the owner of the GitHub App that performed the comment. (AI-inferred)
-	Slug      any
+	Slug any
 	StarredAt any
 	// The URL template for listing repositories starred by the owner of the GitHub App, typically in the form `https://api.github.com/users/{owner}/starred{/owner}{/repo}`. (AI-inferred)
 	StarredUrl any
@@ -56,7 +56,7 @@ type Comment_PerformedViaGithubApp_Owner struct {
 	// The date and time at which the owner of the GitHub App that performed the comment was last updated. (AI-inferred)
 	UpdatedAt any
 	// The GitHub API URL for the user or organization that owns the GitHub App. (AI-inferred)
-	Url          any
+	Url any
 	UserViewType any
 	// The website URL of the user or organization that owns the GitHub App. (AI-inferred)
 	WebsiteUrl any
@@ -138,15 +138,15 @@ type Comment_Pin_PinnedBy struct {
 	// URL to the GitHub API endpoint listing the repositories of the user who pinned the comment. (AI-inferred)
 	ReposUrl any
 	// Indicates whether the user who pinned the comment has GitHub site administrator privileges. (AI-inferred)
-	SiteAdmin  any
-	StarredAt  any
+	SiteAdmin any
+	StarredAt any
 	StarredUrl any
 	// The URL to the API endpoint listing the subscriptions of the user or organization. (AI-inferred)
 	SubscriptionsUrl any
 	// The type of GitHub account that pinned the comment, such as 'User' or 'Bot'. (AI-inferred)
 	Type any
 	// The URL of the user who pinned the issue comment. (AI-inferred)
-	Url          any
+	Url any
 	UserViewType any
 }
 
@@ -229,8 +229,8 @@ type CommentAttrs struct {
 var Comment = ubx.ResourceBinding{
 	WireType: "github_issue_comment",
 	Fields: ubx.FieldMap{
-		"Owner":     ubx.FieldSpec{WireName: "owner"},
-		"Repo":      ubx.FieldSpec{WireName: "repo"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
 		"CommentId": ubx.FieldSpec{WireName: "comment_id"},
 	},
 }

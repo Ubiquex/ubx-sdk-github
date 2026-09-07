@@ -4,34 +4,34 @@ package item
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ItemConfig struct {
-	After         any
-	Before        any
-	Fields        any
-	Org           any
-	PerPage       any
+	After any
+	Before any
+	Fields any
+	Org any
+	PerPage any
 	ProjectNumber any
-	Q             any
+	Q any
 }
 
 type ItemAttrs struct {
-	After         any
-	Before        any
-	Fields        any
-	Org           any
-	PerPage       any
+	After any
+	Before any
+	Fields any
+	Org any
+	PerPage any
 	ProjectNumber any
-	Q             any
+	Q any
 }
 
 var Item = ubx.DataSourceBinding{
 	WireType: "github_item",
 	Fields: ubx.FieldMap{
-		"After":         ubx.FieldSpec{WireName: "after"},
-		"Before":        ubx.FieldSpec{WireName: "before"},
-		"Fields":        ubx.FieldSpec{WireName: "fields"},
-		"Org":           ubx.FieldSpec{WireName: "org"},
-		"PerPage":       ubx.FieldSpec{WireName: "per_page"},
+		"After": ubx.FieldSpec{WireName: "after"},
+		"Before": ubx.FieldSpec{WireName: "before"},
+		"Fields": ubx.FieldSpec{WireName: "fields"},
+		"Org": ubx.FieldSpec{WireName: "org"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 		"ProjectNumber": ubx.FieldSpec{WireName: "project_number"},
-		"Q":             ubx.FieldSpec{WireName: "q"},
+		"Q": ubx.FieldSpec{WireName: "q"},
 	},
 }

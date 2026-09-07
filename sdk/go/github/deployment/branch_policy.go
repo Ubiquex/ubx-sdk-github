@@ -40,11 +40,11 @@ type BranchPolicyAttrs struct {
 var BranchPolicy = ubx.ResourceBinding{
 	WireType: "github_deployment_branch_policy",
 	Fields: ubx.FieldMap{
-		"Name":            ubx.FieldSpec{WireName: "name"},
-		"Type":            ubx.FieldSpec{WireName: "type"},
-		"Owner":           ubx.FieldSpec{WireName: "owner"},
-		"Repo":            ubx.FieldSpec{WireName: "repo"},
+		"Name": ubx.FieldSpec{WireName: "name"},
+		"Type": ubx.FieldSpec{WireName: "type"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
 		"EnvironmentName": ubx.FieldSpec{WireName: "environment_name"},
-		"BranchPolicyId":  ubx.FieldSpec{WireName: "branch_policy_id"},
+		"BranchPolicyId": ubx.FieldSpec{WireName: "branch_policy_id"},
 	},
 }

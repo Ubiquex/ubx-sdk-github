@@ -52,8 +52,8 @@ type Deployment_Creator struct {
 
 type Deployment_PerformedViaGithubApp_Owner struct {
 	// The URL of the avatar image for the owner of the GitHub App that performed the deployment. (AI-inferred)
-	AvatarUrl   any
-	CreatedAt   any
+	AvatarUrl any
+	CreatedAt any
 	Description any
 	// The email address associated with the GitHub account that owns the GitHub App. (AI-inferred)
 	Email any
@@ -69,7 +69,7 @@ type Deployment_PerformedViaGithubApp_Owner struct {
 	GravatarId any
 	// The URL to the GitHub profile of the owner (user or organization) of the GitHub App that performed the deployment. (AI-inferred)
 	HtmlUrl any
-	Id      any
+	Id any
 	// The username of the GitHub account that owns the GitHub App. (AI-inferred)
 	Login any
 	// The display name of the owner of the GitHub App that performed the deployment. (AI-inferred)
@@ -84,7 +84,7 @@ type Deployment_PerformedViaGithubApp_Owner struct {
 	ReposUrl any
 	// Indicates whether the GitHub App owner is a GitHub site administrator; typically present only when the owner is a user. (AI-inferred)
 	SiteAdmin any
-	Slug      any
+	Slug any
 	StarredAt any
 	// URL to list repositories starred by this owner, as defined by the GitHub API. Typically includes template placeholders such as `{/owner}{/repo}` for accessing specific starred repositories. (AI-inferred)
 	StarredUrl any
@@ -225,17 +225,17 @@ type DeploymentAttrs struct {
 var Deployment = ubx.ResourceBinding{
 	WireType: "github_deployment",
 	Fields: ubx.FieldMap{
-		"AutoMerge":             ubx.FieldSpec{WireName: "auto_merge"},
-		"Description":           ubx.FieldSpec{WireName: "description"},
-		"Environment":           ubx.FieldSpec{WireName: "environment"},
-		"Payload":               ubx.FieldSpec{WireName: "payload"},
+		"AutoMerge": ubx.FieldSpec{WireName: "auto_merge"},
+		"Description": ubx.FieldSpec{WireName: "description"},
+		"Environment": ubx.FieldSpec{WireName: "environment"},
+		"Payload": ubx.FieldSpec{WireName: "payload"},
 		"ProductionEnvironment": ubx.FieldSpec{WireName: "production_environment"},
-		"Ref":                   ubx.FieldSpec{WireName: "ref"},
-		"RequiredContexts":      ubx.FieldSpec{WireName: "required_contexts"},
-		"Task":                  ubx.FieldSpec{WireName: "task"},
-		"TransientEnvironment":  ubx.FieldSpec{WireName: "transient_environment"},
-		"Owner":                 ubx.FieldSpec{WireName: "owner"},
-		"Repo":                  ubx.FieldSpec{WireName: "repo"},
-		"DeploymentId":          ubx.FieldSpec{WireName: "deployment_id"},
+		"Ref": ubx.FieldSpec{WireName: "ref"},
+		"RequiredContexts": ubx.FieldSpec{WireName: "required_contexts"},
+		"Task": ubx.FieldSpec{WireName: "task"},
+		"TransientEnvironment": ubx.FieldSpec{WireName: "transient_environment"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"DeploymentId": ubx.FieldSpec{WireName: "deployment_id"},
 	},
 }

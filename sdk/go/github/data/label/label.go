@@ -5,27 +5,27 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type LabelConfig struct {
 	IssueNumber any
-	Owner       any
-	Page        any
-	PerPage     any
-	Repo        any
+	Owner any
+	Page any
+	PerPage any
+	Repo any
 }
 
 type LabelAttrs struct {
 	IssueNumber any
-	Owner       any
-	Page        any
-	PerPage     any
-	Repo        any
+	Owner any
+	Page any
+	PerPage any
+	Repo any
 }
 
 var Label = ubx.DataSourceBinding{
 	WireType: "github_label",
 	Fields: ubx.FieldMap{
 		"IssueNumber": ubx.FieldSpec{WireName: "issue_number"},
-		"Owner":       ubx.FieldSpec{WireName: "owner"},
-		"Page":        ubx.FieldSpec{WireName: "page"},
-		"PerPage":     ubx.FieldSpec{WireName: "per_page"},
-		"Repo":        ubx.FieldSpec{WireName: "repo"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Page": ubx.FieldSpec{WireName: "page"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
 	},
 }

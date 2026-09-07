@@ -6,4 +6,4 @@ SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
 from .org import Org, OrgConfig
 from .membership import Membership, MembershipConfig
-from .private_registry_configuration import PrivateRegistryConfiguration, PrivateRegistryConfigurationConfig
+from .private_registry_configuration_list import PrivateRegistryConfigurationList, PrivateRegistryConfigurationListConfig

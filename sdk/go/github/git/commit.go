@@ -26,10 +26,10 @@ type Commit_Verification struct {
 }
 
 var Commit_AuthorFields = ubx.FieldMap{
-	"Date":  ubx.FieldSpec{WireName: "date"},
-	"Email": ubx.FieldSpec{WireName: "email"},
-	"Name":  ubx.FieldSpec{WireName: "name"},
-}
+		"Date": ubx.FieldSpec{WireName: "date"},
+		"Email": ubx.FieldSpec{WireName: "email"},
+		"Name": ubx.FieldSpec{WireName: "name"},
+	}
 
 type CommitConfig struct {
 	// Information about the author of the commit. By default, the `author` will be the authenticated user and the current date. See the `author` and `committer` object below for details.
@@ -88,20 +88,20 @@ var Commit = ubx.ResourceBinding{
 	Fields: ubx.FieldMap{
 		"Author": ubx.FieldSpec{
 			WireName: "author",
-			Kind:     "object",
-			Fields:   Commit_AuthorFields,
+			Kind: "object",
+			Fields: Commit_AuthorFields,
 		},
 		"Committer": ubx.FieldSpec{
 			WireName: "committer",
-			Kind:     "object",
-			Fields:   Commit_AuthorFields,
+			Kind: "object",
+			Fields: Commit_AuthorFields,
 		},
-		"Message":   ubx.FieldSpec{WireName: "message"},
-		"Parents":   ubx.FieldSpec{WireName: "parents"},
+		"Message": ubx.FieldSpec{WireName: "message"},
+		"Parents": ubx.FieldSpec{WireName: "parents"},
 		"Signature": ubx.FieldSpec{WireName: "signature"},
-		"Tree":      ubx.FieldSpec{WireName: "tree"},
-		"Owner":     ubx.FieldSpec{WireName: "owner"},
-		"Repo":      ubx.FieldSpec{WireName: "repo"},
+		"Tree": ubx.FieldSpec{WireName: "tree"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
 		"CommitSha": ubx.FieldSpec{WireName: "commit_sha"},
 	},
 }

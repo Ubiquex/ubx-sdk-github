@@ -4,15 +4,15 @@ package ruleset
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type RulesetConfig struct {
-	Org     any
-	Page    any
+	Org any
+	Page any
 	PerPage any
 	Targets any
 }
 
 type RulesetAttrs struct {
-	Org     any
-	Page    any
+	Org any
+	Page any
 	PerPage any
 	Targets any
 }
@@ -20,8 +20,8 @@ type RulesetAttrs struct {
 var Ruleset = ubx.DataSourceBinding{
 	WireType: "github_ruleset",
 	Fields: ubx.FieldMap{
-		"Org":     ubx.FieldSpec{WireName: "org"},
-		"Page":    ubx.FieldSpec{WireName: "page"},
+		"Org": ubx.FieldSpec{WireName: "org"},
+		"Page": ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 		"Targets": ubx.FieldSpec{WireName: "targets"},
 	},

@@ -65,6 +65,6 @@ var User = ubx.ResourceBinding{
 	WireType: "github_simple_user",
 	Fields: ubx.FieldMap{
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"Username":   ubx.FieldSpec{WireName: "username"},
+		"Username": ubx.FieldSpec{WireName: "username"},
 	},
 }

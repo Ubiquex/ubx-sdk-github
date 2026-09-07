@@ -10,7 +10,7 @@ type PermissionConfig struct {
 type PermissionAttrs struct {
 	// The policy for which repositories can use Copilot cloud agent. Can be one of `all`, `selected`, or `none`.
 	EnabledRepositories any
-	Org                 any
+	Org any
 	// The URL for the selected repositories endpoint. Only present when `enabled_repositories` is `selected`.
 	SelectedRepositoriesUrl any
 }

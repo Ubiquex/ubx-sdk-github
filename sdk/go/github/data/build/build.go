@@ -4,25 +4,25 @@ package build
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type BuildConfig struct {
-	Owner   any
-	Page    any
+	Owner any
+	Page any
 	PerPage any
-	Repo    any
+	Repo any
 }
 
 type BuildAttrs struct {
-	Owner   any
-	Page    any
+	Owner any
+	Page any
 	PerPage any
-	Repo    any
+	Repo any
 }
 
 var Build = ubx.DataSourceBinding{
 	WireType: "github_build",
 	Fields: ubx.FieldMap{
-		"Owner":   ubx.FieldSpec{WireName: "owner"},
-		"Page":    ubx.FieldSpec{WireName: "page"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Page": ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo":    ubx.FieldSpec{WireName: "repo"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
 	},
 }

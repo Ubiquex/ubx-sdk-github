@@ -12,10 +12,10 @@ type Content_Author struct {
 }
 
 var Content_AuthorFields = ubx.FieldMap{
-	"Date":  ubx.FieldSpec{WireName: "date"},
-	"Email": ubx.FieldSpec{WireName: "email"},
-	"Name":  ubx.FieldSpec{WireName: "name"},
-}
+		"Date": ubx.FieldSpec{WireName: "date"},
+		"Email": ubx.FieldSpec{WireName: "email"},
+		"Name": ubx.FieldSpec{WireName: "name"},
+	}
 
 type ContentConfig struct {
 	// The author of the file. Default: The `committer` or the authenticated user if you omit `committer`.
@@ -64,20 +64,20 @@ var Content = ubx.ResourceBinding{
 	Fields: ubx.FieldMap{
 		"Author": ubx.FieldSpec{
 			WireName: "author",
-			Kind:     "object",
-			Fields:   Content_AuthorFields,
+			Kind: "object",
+			Fields: Content_AuthorFields,
 		},
 		"Branch": ubx.FieldSpec{WireName: "branch"},
 		"Committer": ubx.FieldSpec{
 			WireName: "committer",
-			Kind:     "object",
-			Fields:   Content_AuthorFields,
+			Kind: "object",
+			Fields: Content_AuthorFields,
 		},
 		"Content": ubx.FieldSpec{WireName: "content"},
 		"Message": ubx.FieldSpec{WireName: "message"},
-		"Sha":     ubx.FieldSpec{WireName: "sha"},
-		"Owner":   ubx.FieldSpec{WireName: "owner"},
-		"Repo":    ubx.FieldSpec{WireName: "repo"},
-		"Path":    ubx.FieldSpec{WireName: "path"},
+		"Sha": ubx.FieldSpec{WireName: "sha"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Path": ubx.FieldSpec{WireName: "path"},
 	},
 }

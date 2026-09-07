@@ -4,19 +4,19 @@ package social
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type AccountConfig struct {
-	Page    any
+	Page any
 	PerPage any
 }
 
 type AccountAttrs struct {
-	Page    any
+	Page any
 	PerPage any
 }
 
 var Account = ubx.DataSourceBinding{
 	WireType: "github_social_account",
 	Fields: ubx.FieldMap{
-		"Page":    ubx.FieldSpec{WireName: "page"},
+		"Page": ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

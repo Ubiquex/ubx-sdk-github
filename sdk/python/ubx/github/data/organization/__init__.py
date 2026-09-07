@@ -6,10 +6,13 @@ SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
 from .organization import Organization, OrganizationConfig
 from .actions_secret import ActionsSecret, ActionsSecretConfig
+from .actions_secret_list import ActionsSecretList, ActionsSecretListConfig
 from .actions_variable import ActionsVariable, ActionsVariableConfig
+from .actions_variable_list import ActionsVariableList, ActionsVariableListConfig
 from .custom_repository_role import CustomRepositoryRole, CustomRepositoryRoleConfig
-from .dependabot_secret import DependabotSecret, DependabotSecretConfig
+from .custom_repository_role_list import CustomRepositoryRoleList, CustomRepositoryRoleListConfig
+from .dependabot_secret_list import DependabotSecretList, DependabotSecretListConfig
 from .fine_grained_permission import FineGrainedPermission, FineGrainedPermissionConfig
 from .full import Full, FullConfig
-from .role import Role, RoleConfig
-from .simple import Simple, SimpleConfig
+from .role_list import RoleList, RoleListConfig
+from .simple_list import SimpleList, SimpleListConfig

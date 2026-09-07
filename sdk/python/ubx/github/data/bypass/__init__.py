@@ -5,4 +5,4 @@
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
 from .list import List, ListConfig
-from .response import Response, ResponseConfig
+from .response_list import ResponseList, ResponseListConfig

@@ -47,8 +47,8 @@ var Stack = ubx.ResourceBinding{
 	WireType: "github_stack",
 	Fields: ubx.FieldMap{
 		"PullRequests": ubx.FieldSpec{WireName: "pull_requests"},
-		"Owner":        ubx.FieldSpec{WireName: "owner"},
-		"Repo":         ubx.FieldSpec{WireName: "repo"},
-		"StackNumber":  ubx.FieldSpec{WireName: "stack_number"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"StackNumber": ubx.FieldSpec{WireName: "stack_number"},
 	},
 }

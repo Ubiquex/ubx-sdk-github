@@ -5,27 +5,27 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type InvitationConfig struct {
 	InvitationSource any
-	Org              any
-	Page             any
-	PerPage          any
-	Role             any
+	Org any
+	Page any
+	PerPage any
+	Role any
 }
 
 type InvitationAttrs struct {
 	InvitationSource any
-	Org              any
-	Page             any
-	PerPage          any
-	Role             any
+	Org any
+	Page any
+	PerPage any
+	Role any
 }
 
 var Invitation = ubx.DataSourceBinding{
 	WireType: "github_invitation",
 	Fields: ubx.FieldMap{
 		"InvitationSource": ubx.FieldSpec{WireName: "invitation_source"},
-		"Org":              ubx.FieldSpec{WireName: "org"},
-		"Page":             ubx.FieldSpec{WireName: "page"},
-		"PerPage":          ubx.FieldSpec{WireName: "per_page"},
-		"Role":             ubx.FieldSpec{WireName: "role"},
+		"Org": ubx.FieldSpec{WireName: "org"},
+		"Page": ubx.FieldSpec{WireName: "page"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Role": ubx.FieldSpec{WireName: "role"},
 	},
 }

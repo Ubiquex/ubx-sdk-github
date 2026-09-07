@@ -5,18 +5,18 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type DatabaseConfig struct {
 	Owner any
-	Repo  any
+	Repo any
 }
 
 type DatabaseAttrs struct {
 	Owner any
-	Repo  any
+	Repo any
 }
 
 var Database = ubx.DataSourceBinding{
 	WireType: "github_database",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo":  ubx.FieldSpec{WireName: "repo"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
 	},
 }

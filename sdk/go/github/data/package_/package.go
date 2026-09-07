@@ -4,28 +4,28 @@ package package_
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type PackageConfig struct {
-	Org         any
+	Org any
 	PackageType any
-	Page        any
-	PerPage     any
-	Visibility  any
+	Page any
+	PerPage any
+	Visibility any
 }
 
 type PackageAttrs struct {
-	Org         any
+	Org any
 	PackageType any
-	Page        any
-	PerPage     any
-	Visibility  any
+	Page any
+	PerPage any
+	Visibility any
 }
 
 var Package = ubx.DataSourceBinding{
 	WireType: "github_package",
 	Fields: ubx.FieldMap{
-		"Org":         ubx.FieldSpec{WireName: "org"},
+		"Org": ubx.FieldSpec{WireName: "org"},
 		"PackageType": ubx.FieldSpec{WireName: "package_type"},
-		"Page":        ubx.FieldSpec{WireName: "page"},
-		"PerPage":     ubx.FieldSpec{WireName: "per_page"},
-		"Visibility":  ubx.FieldSpec{WireName: "visibility"},
+		"Page": ubx.FieldSpec{WireName: "page"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Visibility": ubx.FieldSpec{WireName: "visibility"},
 	},
 }

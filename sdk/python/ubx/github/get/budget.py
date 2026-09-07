@@ -31,6 +31,8 @@ class BudgetConfig:
     budget_scope: Any = None
     # The type of pricing model used by the budget. Determines how `budget_product_sku` is interpreted. - `BundlePricing`: Covers all AI credit SKUs. Set `budget_product_sku` to `ai_credits`. - `ProductPricing`: Covers all SKUs that belong to a product. Set `budget_product_sku` to a product such as `actions` or `packages`. - `SkuPricing`: Covers a single, specific SKU. Set `budget_product_sku` to a SKU such as `actions_linux`.
     budget_type: Any = None
+    # The date the budget will expire in `YYYY-MM-DD` format. Only dates in the future are accepted. If not provided, the budget will not expire. Only supported for budgets with `budget_scope` of `user`
+    expires_at: Any = None
     # Whether to prevent additional spending once the budget is exceeded. For `user` and `multi_user_customer` scopes, this must be `true`.
     prevent_further_usage: Any = None
     # The username of the user for `user` scope budgets. This field is required when `budget_scope` is `user`.
@@ -53,6 +55,8 @@ class BudgetAttrs:
     budget_scope: Any = None
     # The type of pricing model used by the budget. Determines how `budget_product_sku` is interpreted. - `BundlePricing`: Covers all AI credit SKUs. Set `budget_product_sku` to `ai_credits`. - `ProductPricing`: Covers all SKUs that belong to a product. Set `budget_product_sku` to a product such as `actions` or `packages`. - `SkuPricing`: Covers a single, specific SKU. Set `budget_product_sku` to a SKU such as `actions_linux`.
     budget_type: Any = None
+    # The date the budget will expire in `YYYY-MM-DD` format. Only dates in the future are accepted. If not provided, the budget will not expire. Only supported for budgets with `budget_scope` of `user`
+    expires_at: Any = None
     # ID of the budget.
     id: Any = None
     # Whether to prevent additional spending once the budget is exceeded. For `user` and `multi_user_customer` scopes, this must be `true`.
@@ -77,6 +81,7 @@ Budget = ubx.ResourceBinding(
         "budget_product_sku": ubx.FieldSpec(wire_name="budget_product_sku"),
         "budget_scope": ubx.FieldSpec(wire_name="budget_scope"),
         "budget_type": ubx.FieldSpec(wire_name="budget_type"),
+        "expires_at": ubx.FieldSpec(wire_name="expires_at"),
         "prevent_further_usage": ubx.FieldSpec(wire_name="prevent_further_usage"),
         "user": ubx.FieldSpec(wire_name="user"),
         "enterprise": ubx.FieldSpec(wire_name="enterprise"),

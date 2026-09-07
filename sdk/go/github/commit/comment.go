@@ -39,7 +39,7 @@ type Comment_User struct {
 	GravatarId any
 	// The URL to the user's GitHub profile page. (AI-inferred)
 	HtmlUrl any
-	Id      any
+	Id any
 	// The GitHub username of the user who created the commit comment. (AI-inferred)
 	Login any
 	// The name of the user associated with the commit comment. (AI-inferred)
@@ -62,7 +62,7 @@ type Comment_User struct {
 	// The type of GitHub user account that authored the commit comment, such as "User" for a normal account or "Bot" for a bot account. (AI-inferred)
 	Type any
 	// The GitHub API URL for the user, such as https://api.github.com/users/octocat. (AI-inferred)
-	Url          any
+	Url any
 	UserViewType any
 }
 
@@ -127,12 +127,12 @@ type CommentAttrs struct {
 var Comment = ubx.ResourceBinding{
 	WireType: "github_commit_comment",
 	Fields: ubx.FieldMap{
-		"Body":      ubx.FieldSpec{WireName: "body"},
-		"Line":      ubx.FieldSpec{WireName: "line"},
-		"Path":      ubx.FieldSpec{WireName: "path"},
-		"Position":  ubx.FieldSpec{WireName: "position"},
-		"Owner":     ubx.FieldSpec{WireName: "owner"},
-		"Repo":      ubx.FieldSpec{WireName: "repo"},
+		"Body": ubx.FieldSpec{WireName: "body"},
+		"Line": ubx.FieldSpec{WireName: "line"},
+		"Path": ubx.FieldSpec{WireName: "path"},
+		"Position": ubx.FieldSpec{WireName: "position"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
 		"CommentId": ubx.FieldSpec{WireName: "comment_id"},
 		"CommitSha": ubx.FieldSpec{WireName: "commit_sha"},
 	},

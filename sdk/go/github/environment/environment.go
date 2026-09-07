@@ -11,7 +11,7 @@ type Environment_DeploymentBranchPolicy struct {
 }
 
 type Environment_ProtectionRules_Reviewers_Reviewer_Parent struct {
-	Description  any
+	Description any
 	EnterpriseId any
 	// The GitHub URL for the user or team's profile page. (AI-inferred)
 	HtmlUrl any
@@ -20,15 +20,15 @@ type Environment_ProtectionRules_Reviewers_Reviewer_Parent struct {
 	// The LDAP distinguished name (DN) of the reviewer, used to identify an LDAP user or group as a reviewer in the environment's protection rules. (AI-inferred)
 	LdapDn any
 	// The API URL for the list of members of the team that is the parent of this reviewer. (AI-inferred)
-	MembersUrl          any
-	Name                any
-	NodeId              any
+	MembersUrl any
+	Name any
+	NodeId any
 	NotificationSetting any
 	// The ID of the GitHub organization that owns the team referenced as a reviewer in the protection rule. (AI-inferred)
 	OrganizationId any
-	Permission     any
+	Permission any
 	// The privacy level of the parent team of the team reviewer. Values are 'secret' or 'closed'. This is present when the reviewer is a child team. (AI-inferred)
-	Privacy         any
+	Privacy any
 	RepositoriesUrl any
 	// The slug of the parent team of a team reviewer, if the team has a parent. (AI-inferred)
 	Slug any
@@ -53,9 +53,9 @@ type Environment_ProtectionRules_Reviewers_Reviewer_Permissions struct {
 type Environment_ProtectionRules_Reviewers_Reviewer struct {
 	AccessSource any
 	// The URL of the avatar image for the user or team that acts as the reviewer in this protection rule. (AI-inferred)
-	AvatarUrl    any
-	Description  any
-	Email        any
+	AvatarUrl any
+	Description any
+	Email any
 	EnterpriseId any
 	// The URL to retrieve events (e.g., activity) for the reviewer, typically a GitHub user. (AI-inferred)
 	EventsUrl any
@@ -85,10 +85,10 @@ type Environment_ProtectionRules_Reviewers_Reviewer struct {
 	OrganizationId any
 	// The URL to the organizations endpoint for the reviewer, which lists the organizations the user belongs to. This is typically present for user reviewers. (AI-inferred)
 	OrganizationsUrl any
-	Parent           any
-	Permission       any
-	Permissions      any
-	Privacy          any
+	Parent any
+	Permission any
+	Permissions any
+	Privacy any
 	// The API endpoint for events received by the user acting as the reviewer. (AI-inferred)
 	ReceivedEventsUrl any
 	// The API URL to the reviewer's repositories (users and teams both have a `repos_url`). This is a computed attribute that reflects the repository URL of the user or team serving as the required reviewer for the environment protection rule. (AI-inferred)
@@ -98,15 +98,15 @@ type Environment_ProtectionRules_Reviewers_Reviewer struct {
 	// Boolean indicating whether the reviewer is a site administrator. (AI-inferred)
 	SiteAdmin any
 	// The slug of the team that acts as a reviewer for the environment protection rule. This is used to reference a team by its GitHub slug (e.g., 'my-team'). (AI-inferred)
-	Slug      any
+	Slug any
 	StarredAt any
 	// The URL template for the user's starred repositories, which may contain placeholders for the owner and repository names. (AI-inferred)
 	StarredUrl any
 	// The GitHub API URL to the subscriptions of the reviewer (user or team), typically listing repositories the reviewer is watching or subscribed to. (AI-inferred)
 	SubscriptionsUrl any
 	// The type of the reviewer. Valid values are 'User' or 'Team'. (AI-inferred)
-	Type         any
-	Url          any
+	Type any
+	Url any
 	UserViewType any
 }
 
@@ -139,14 +139,14 @@ type Environment_Reviewers struct {
 }
 
 var Environment_DeploymentBranchPolicyFields = ubx.FieldMap{
-	"CustomBranchPolicies": ubx.FieldSpec{WireName: "custom_branch_policies"},
-	"ProtectedBranches":    ubx.FieldSpec{WireName: "protected_branches"},
-}
+		"CustomBranchPolicies": ubx.FieldSpec{WireName: "custom_branch_policies"},
+		"ProtectedBranches": ubx.FieldSpec{WireName: "protected_branches"},
+	}
 
 var Environment_ReviewersFields = ubx.FieldMap{
-	"Id":   ubx.FieldSpec{WireName: "id"},
-	"Type": ubx.FieldSpec{WireName: "type"},
-}
+		"Id": ubx.FieldSpec{WireName: "id"},
+		"Type": ubx.FieldSpec{WireName: "type"},
+	}
 
 type EnvironmentConfig struct {
 	// The type of deployment branch policy for this environment. To allow all branches to deploy, set to `null`.
@@ -203,18 +203,18 @@ var Environment = ubx.ResourceBinding{
 	Fields: ubx.FieldMap{
 		"DeploymentBranchPolicy": ubx.FieldSpec{
 			WireName: "deployment_branch_policy",
-			Kind:     "object",
-			Fields:   Environment_DeploymentBranchPolicyFields,
+			Kind: "object",
+			Fields: Environment_DeploymentBranchPolicyFields,
 		},
 		"PreventSelfReview": ubx.FieldSpec{WireName: "prevent_self_review"},
 		"Reviewers": ubx.FieldSpec{
 			WireName: "reviewers",
-			Kind:     "list",
-			Fields:   Environment_ReviewersFields,
+			Kind: "list",
+			Fields: Environment_ReviewersFields,
 		},
-		"WaitTimer":       ubx.FieldSpec{WireName: "wait_timer"},
-		"Owner":           ubx.FieldSpec{WireName: "owner"},
-		"Repo":            ubx.FieldSpec{WireName: "repo"},
+		"WaitTimer": ubx.FieldSpec{WireName: "wait_timer"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
 		"EnvironmentName": ubx.FieldSpec{WireName: "environment_name"},
 	},
 }

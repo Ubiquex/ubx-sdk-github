@@ -5,27 +5,27 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type AnnotationConfig struct {
 	CheckRunId any
-	Owner      any
-	Page       any
-	PerPage    any
-	Repo       any
+	Owner any
+	Page any
+	PerPage any
+	Repo any
 }
 
 type AnnotationAttrs struct {
 	CheckRunId any
-	Owner      any
-	Page       any
-	PerPage    any
-	Repo       any
+	Owner any
+	Page any
+	PerPage any
+	Repo any
 }
 
 var Annotation = ubx.DataSourceBinding{
 	WireType: "github_annotation",
 	Fields: ubx.FieldMap{
 		"CheckRunId": ubx.FieldSpec{WireName: "check_run_id"},
-		"Owner":      ubx.FieldSpec{WireName: "owner"},
-		"Page":       ubx.FieldSpec{WireName: "page"},
-		"PerPage":    ubx.FieldSpec{WireName: "per_page"},
-		"Repo":       ubx.FieldSpec{WireName: "repo"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Page": ubx.FieldSpec{WireName: "page"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
 	},
 }

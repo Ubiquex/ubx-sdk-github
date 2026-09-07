@@ -5,4 +5,5 @@
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
 from .role import Role, RoleConfig
+from .role_list import RoleList, RoleListConfig
 from .security_analysis_settings import SecurityAnalysisSettings, SecurityAnalysisSettingsConfig

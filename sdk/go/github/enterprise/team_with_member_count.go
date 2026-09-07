@@ -62,13 +62,13 @@ type TeamWithMemberCountAttrs struct {
 var TeamWithMemberCount = ubx.ResourceBinding{
 	WireType: "github_enterprise_team_with_member_count",
 	Fields: ubx.FieldMap{
-		"Description":               ubx.FieldSpec{WireName: "description"},
-		"GroupId":                   ubx.FieldSpec{WireName: "group_id"},
-		"Name":                      ubx.FieldSpec{WireName: "name"},
-		"NotificationSetting":       ubx.FieldSpec{WireName: "notification_setting"},
+		"Description": ubx.FieldSpec{WireName: "description"},
+		"GroupId": ubx.FieldSpec{WireName: "group_id"},
+		"Name": ubx.FieldSpec{WireName: "name"},
+		"NotificationSetting": ubx.FieldSpec{WireName: "notification_setting"},
 		"OrganizationSelectionType": ubx.FieldSpec{WireName: "organization_selection_type"},
-		"SyncToOrganizations":       ubx.FieldSpec{WireName: "sync_to_organizations"},
-		"Enterprise":                ubx.FieldSpec{WireName: "enterprise"},
-		"TeamSlug":                  ubx.FieldSpec{WireName: "team_slug"},
+		"SyncToOrganizations": ubx.FieldSpec{WireName: "sync_to_organizations"},
+		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
+		"TeamSlug": ubx.FieldSpec{WireName: "team_slug"},
 	},
 }

@@ -53,8 +53,8 @@ var CostCenter = ubx.ResourceBinding{
 	WireType: "github_get_cost_center",
 	Fields: ubx.FieldMap{
 		"AiCreditPoolEnabled": ubx.FieldSpec{WireName: "ai_credit_pool_enabled"},
-		"Name":                ubx.FieldSpec{WireName: "name"},
-		"Enterprise":          ubx.FieldSpec{WireName: "enterprise"},
-		"CostCenterId":        ubx.FieldSpec{WireName: "cost_center_id"},
+		"Name": ubx.FieldSpec{WireName: "name"},
+		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
+		"CostCenterId": ubx.FieldSpec{WireName: "cost_center_id"},
 	},
 }

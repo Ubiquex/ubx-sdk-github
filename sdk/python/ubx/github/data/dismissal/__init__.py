@@ -4,4 +4,4 @@
 # re-run `ubx sdk gen` to regenerate after a provider version bump.
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
-from .request_response import RequestResponse, RequestResponseConfig
+from .request_response_list import RequestResponseList, RequestResponseListConfig

@@ -6,6 +6,6 @@ SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
 from .public import Public, PublicConfig
 from .email import Email, EmailConfig
-from .ip import Ip, IpConfig
+from .ip_list import IpList, IpListConfig
 from .key import Key, KeyConfig
 from .member import Member, MemberConfig

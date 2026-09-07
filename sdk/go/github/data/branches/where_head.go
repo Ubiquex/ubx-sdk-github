@@ -5,21 +5,21 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type WhereHeadConfig struct {
 	CommitSha any
-	Owner     any
-	Repo      any
+	Owner any
+	Repo any
 }
 
 type WhereHeadAttrs struct {
 	CommitSha any
-	Owner     any
-	Repo      any
+	Owner any
+	Repo any
 }
 
 var WhereHead = ubx.DataSourceBinding{
 	WireType: "github_branches_where_head",
 	Fields: ubx.FieldMap{
 		"CommitSha": ubx.FieldSpec{WireName: "commit_sha"},
-		"Owner":     ubx.FieldSpec{WireName: "owner"},
-		"Repo":      ubx.FieldSpec{WireName: "repo"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
 	},
 }

@@ -7,7 +7,7 @@ type Suite_App_Owner struct {
 	// The URL of the avatar image for the owner of the GitHub App. (AI-inferred)
 	AvatarUrl any
 	// The timestamp indicating when the GitHub user or organization that owns the app was created. (AI-inferred)
-	CreatedAt   any
+	CreatedAt any
 	Description any
 	// The public email address of the owner (user or organization) of the GitHub App. (AI-inferred)
 	Email any
@@ -27,7 +27,7 @@ type Suite_App_Owner struct {
 	Id any
 	// The GitHub username or organization name of the owner of the GitHub App that created the check suite. (AI-inferred)
 	Login any
-	Name  any
+	Name any
 	// The unique node identifier for the GitHub user or organization that owns the app. This is the global ID used in GraphQL API operations. (AI-inferred)
 	NodeId any
 	// The URL to fetch the list of organizations that the owner belongs to. (AI-inferred)
@@ -38,7 +38,7 @@ type Suite_App_Owner struct {
 	ReposUrl any
 	// Indicates whether the user is a site administrator for GitHub. (AI-inferred)
 	SiteAdmin any
-	Slug      any
+	Slug any
 	StarredAt any
 	// The URL template to list repositories starred by the owner, with placeholders for {owner} and {repo}. (AI-inferred)
 	StarredUrl any
@@ -49,7 +49,7 @@ type Suite_App_Owner struct {
 	// The timestamp at which this owner was last updated, in ISO 8601 format. (AI-inferred)
 	UpdatedAt any
 	// The GitHub API URL for the owner of the app associated with the check suite. (AI-inferred)
-	Url          any
+	Url any
 	UserViewType any
 	// The website URL associated with the owner (user or organization) of the GitHub app that created the check suite. (AI-inferred)
 	WebsiteUrl any
@@ -218,7 +218,7 @@ type Suite_Repository_Owner struct {
 	// The type of GitHub account that owns the repository. Possible values are 'User', 'Organization', or 'Bot'. (AI-inferred)
 	Type any
 	// The GitHub API URL for the repository owner (user or organization). (AI-inferred)
-	Url          any
+	Url any
 	UserViewType any
 }
 
@@ -257,7 +257,7 @@ type Suite_Repository_SecurityAndAnalysis_SecretScanningDelegatedBypassOptions s
 type Suite_Repository_SecurityAndAnalysis struct {
 	// Enable or disable GitHub Advanced Security for the repository. For standalone Code Scanning or Secret Protection products, this parameter cannot be used.
 	AdvancedSecurity any
-	CodeSecurity     any
+	CodeSecurity any
 	// Enable or disable Dependabot security updates for the repository.
 	DependabotSecurityUpdates any
 	// The secret scanning configuration for the repository, including whether secret scanning is enabled and related settings. (AI-inferred)
@@ -351,7 +351,7 @@ type Suite_Repository struct {
 	// Indicates whether GitHub Pages is enabled for the repository. (AI-inferred)
 	HasPages any
 	// Indicates whether the repository has the GitHub Projects feature enabled. (AI-inferred)
-	HasProjects     any
+	HasProjects any
 	HasPullRequests any
 	// Indicates whether the repository has the wiki feature enabled. (AI-inferred)
 	HasWiki any
@@ -361,7 +361,7 @@ type Suite_Repository struct {
 	HooksUrl any
 	// The URL to view the repository on GitHub in a web browser. (AI-inferred)
 	HtmlUrl any
-	Id      any
+	Id any
 	// Indicates whether this repository is a template repository. Template repositories can be used to generate new repositories. (AI-inferred)
 	IsTemplate any
 	// The URL template for issue comments in the repository, e.g., 'https://api.github.com/repos/{owner}/{repo}/issues/comments{/number}'. (AI-inferred)
@@ -412,7 +412,7 @@ type Suite_Repository struct {
 	PushedAt any
 	// The URL template for accessing the releases of the repository. (AI-inferred)
 	ReleasesUrl any
-	RoleName    any
+	RoleName any
 	// Security and analysis settings for the repository. This object includes configuration for security features and code analysis. (AI-inferred)
 	SecurityAndAnalysis any
 	// The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
@@ -518,9 +518,9 @@ type SuiteAttrs struct {
 var Suite = ubx.ResourceBinding{
 	WireType: "github_check_suite",
 	Fields: ubx.FieldMap{
-		"HeadSha":      ubx.FieldSpec{WireName: "head_sha"},
-		"Owner":        ubx.FieldSpec{WireName: "owner"},
-		"Repo":         ubx.FieldSpec{WireName: "repo"},
+		"HeadSha": ubx.FieldSpec{WireName: "head_sha"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
 		"CheckSuiteId": ubx.FieldSpec{WireName: "check_suite_id"},
 	},
 }

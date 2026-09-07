@@ -5,5 +5,5 @@
 SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
 from .deployment import Deployment, DeploymentConfig
-from .branch_policy import BranchPolicy, BranchPolicyConfig
-from .protection_rule import ProtectionRule, ProtectionRuleConfig
+from .branch_policy_list import BranchPolicyList, BranchPolicyListConfig
+from .protection_rule_list import ProtectionRuleList, ProtectionRuleListConfig

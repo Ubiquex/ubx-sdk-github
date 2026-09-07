@@ -4,19 +4,19 @@ package ssh
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type SigningKeyConfig struct {
-	Page    any
+	Page any
 	PerPage any
 }
 
 type SigningKeyAttrs struct {
-	Page    any
+	Page any
 	PerPage any
 }
 
 var SigningKey = ubx.DataSourceBinding{
 	WireType: "github_ssh_signing_key",
 	Fields: ubx.FieldMap{
-		"Page":    ubx.FieldSpec{WireName: "page"},
+		"Page": ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

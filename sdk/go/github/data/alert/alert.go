@@ -4,14 +4,14 @@ package alert
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type AlertConfig struct {
-	After      any
-	Assignees  any
-	Before     any
-	Direction  any
+	After any
+	Assignees any
+	Before any
+	Direction any
 	Enterprise any
-	Page       any
-	PerPage    any
-	Sort       any
+	Page any
+	PerPage any
+	Sort any
 	// State of a code scanning alert.
 	State any
 	// The GUID of the tool used to generate the code scanning analysis, if provided in the uploaded SARIF data.
@@ -21,14 +21,14 @@ type AlertConfig struct {
 }
 
 type AlertAttrs struct {
-	After      any
-	Assignees  any
-	Before     any
-	Direction  any
+	After any
+	Assignees any
+	Before any
+	Direction any
 	Enterprise any
-	Page       any
-	PerPage    any
-	Sort       any
+	Page any
+	PerPage any
+	Sort any
 	// State of a code scanning alert.
 	State any
 	// The GUID of the tool used to generate the code scanning analysis, if provided in the uploaded SARIF data.
@@ -40,16 +40,16 @@ type AlertAttrs struct {
 var Alert = ubx.DataSourceBinding{
 	WireType: "github_alert",
 	Fields: ubx.FieldMap{
-		"After":      ubx.FieldSpec{WireName: "after"},
-		"Assignees":  ubx.FieldSpec{WireName: "assignees"},
-		"Before":     ubx.FieldSpec{WireName: "before"},
-		"Direction":  ubx.FieldSpec{WireName: "direction"},
+		"After": ubx.FieldSpec{WireName: "after"},
+		"Assignees": ubx.FieldSpec{WireName: "assignees"},
+		"Before": ubx.FieldSpec{WireName: "before"},
+		"Direction": ubx.FieldSpec{WireName: "direction"},
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"Page":       ubx.FieldSpec{WireName: "page"},
-		"PerPage":    ubx.FieldSpec{WireName: "per_page"},
-		"Sort":       ubx.FieldSpec{WireName: "sort"},
-		"State":      ubx.FieldSpec{WireName: "state"},
-		"ToolGuid":   ubx.FieldSpec{WireName: "tool_guid"},
-		"ToolName":   ubx.FieldSpec{WireName: "tool_name"},
+		"Page": ubx.FieldSpec{WireName: "page"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Sort": ubx.FieldSpec{WireName: "sort"},
+		"State": ubx.FieldSpec{WireName: "state"},
+		"ToolGuid": ubx.FieldSpec{WireName: "tool_guid"},
+		"ToolName": ubx.FieldSpec{WireName: "tool_name"},
 	},
 }

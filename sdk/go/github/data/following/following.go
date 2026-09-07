@@ -4,19 +4,19 @@ package following
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type FollowingConfig struct {
-	Page    any
+	Page any
 	PerPage any
 }
 
 type FollowingAttrs struct {
-	Page    any
+	Page any
 	PerPage any
 }
 
 var Following = ubx.DataSourceBinding{
 	WireType: "github_following",
 	Fields: ubx.FieldMap{
-		"Page":    ubx.FieldSpec{WireName: "page"},
+		"Page": ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

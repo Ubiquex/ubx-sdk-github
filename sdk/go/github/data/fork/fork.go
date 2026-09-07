@@ -4,22 +4,22 @@ package fork
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ForkConfig struct {
-	GistId  any
-	Page    any
+	GistId any
+	Page any
 	PerPage any
 }
 
 type ForkAttrs struct {
-	GistId  any
-	Page    any
+	GistId any
+	Page any
 	PerPage any
 }
 
 var Fork = ubx.DataSourceBinding{
 	WireType: "github_fork",
 	Fields: ubx.FieldMap{
-		"GistId":  ubx.FieldSpec{WireName: "gist_id"},
-		"Page":    ubx.FieldSpec{WireName: "page"},
+		"GistId": ubx.FieldSpec{WireName: "gist_id"},
+		"Page": ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

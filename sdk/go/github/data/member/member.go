@@ -4,28 +4,28 @@ package member
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type MemberConfig struct {
-	Filter  any
-	Org     any
-	Page    any
+	Filter any
+	Org any
+	Page any
 	PerPage any
-	Role    any
+	Role any
 }
 
 type MemberAttrs struct {
-	Filter  any
-	Org     any
-	Page    any
+	Filter any
+	Org any
+	Page any
 	PerPage any
-	Role    any
+	Role any
 }
 
 var Member = ubx.DataSourceBinding{
 	WireType: "github_member",
 	Fields: ubx.FieldMap{
-		"Filter":  ubx.FieldSpec{WireName: "filter"},
-		"Org":     ubx.FieldSpec{WireName: "org"},
-		"Page":    ubx.FieldSpec{WireName: "page"},
+		"Filter": ubx.FieldSpec{WireName: "filter"},
+		"Org": ubx.FieldSpec{WireName: "org"},
+		"Page": ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Role":    ubx.FieldSpec{WireName: "role"},
+		"Role": ubx.FieldSpec{WireName: "role"},
 	},
 }

@@ -6,5 +6,5 @@ SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
 from .automated_security_fixes import AutomatedSecurityFixes, AutomatedSecurityFixesConfig
 from .immutable_releases import ImmutableReleases, ImmutableReleasesConfig
-from .run import Run, RunConfig
-from .suite import Suite, SuiteConfig
+from .run_list import RunList, RunListConfig
+from .suite_list import SuiteList, SuiteListConfig

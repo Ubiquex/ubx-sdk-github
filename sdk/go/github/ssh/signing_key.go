@@ -28,8 +28,8 @@ type SigningKeyAttrs struct {
 var SigningKey = ubx.ResourceBinding{
 	WireType: "github_ssh_signing_key",
 	Fields: ubx.FieldMap{
-		"Key":             ubx.FieldSpec{WireName: "key"},
-		"Title":           ubx.FieldSpec{WireName: "title"},
+		"Key": ubx.FieldSpec{WireName: "key"},
+		"Title": ubx.FieldSpec{WireName: "title"},
 		"SshSigningKeyId": ubx.FieldSpec{WireName: "ssh_signing_key_id"},
 	},
 }

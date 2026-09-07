@@ -7,7 +7,13 @@ from typing import Any
 import ubx_sdk as ubx
 
 @dataclasses.dataclass
-class Workflow_Workflows:
+class WorkflowConfig:
+    owner: Any = None
+    repo: Any = None
+    workflow_id: Any = None
+
+@dataclasses.dataclass
+class WorkflowAttrs:
     badge_url: Any = None
     created_at: Any = None
     deleted_at: Any = None
@@ -15,33 +21,19 @@ class Workflow_Workflows:
     id: Any = None
     name: Any = None
     node_id: Any = None
+    owner: Any = None
     path: Any = None
+    repo: Any = None
     state: Any = None
     updated_at: Any = None
     url: Any = None
-
-@dataclasses.dataclass
-class WorkflowConfig:
-    owner: Any = None
-    page: Any = None
-    per_page: Any = None
-    repo: Any = None
-
-@dataclasses.dataclass
-class WorkflowAttrs:
-    owner: Any = None
-    page: Any = None
-    per_page: Any = None
-    repo: Any = None
-    total_count: Any = None
-    workflows: Any = None
+    workflow_id: Any = None
 
 Workflow = ubx.DataSourceBinding(
     wire_type="github_workflow",
     fields={
         "owner": ubx.FieldSpec(wire_name="owner"),
-        "page": ubx.FieldSpec(wire_name="page"),
-        "per_page": ubx.FieldSpec(wire_name="per_page"),
         "repo": ubx.FieldSpec(wire_name="repo"),
+        "workflow_id": ubx.FieldSpec(wire_name="workflow_id"),
     },
 )

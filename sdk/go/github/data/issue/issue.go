@@ -4,49 +4,49 @@ package issue
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type IssueConfig struct {
-	Collab    any
+	Collab any
 	Direction any
-	Filter    any
-	Labels    any
-	Orgs      any
-	Owned     any
-	Page      any
-	PerPage   any
-	Pulls     any
-	Since     any
-	Sort      any
-	State     any
+	Filter any
+	Labels any
+	Orgs any
+	Owned any
+	Page any
+	PerPage any
+	Pulls any
+	Since any
+	Sort any
+	State any
 }
 
 type IssueAttrs struct {
-	Collab    any
+	Collab any
 	Direction any
-	Filter    any
-	Labels    any
-	Orgs      any
-	Owned     any
-	Page      any
-	PerPage   any
-	Pulls     any
-	Since     any
-	Sort      any
-	State     any
+	Filter any
+	Labels any
+	Orgs any
+	Owned any
+	Page any
+	PerPage any
+	Pulls any
+	Since any
+	Sort any
+	State any
 }
 
 var Issue = ubx.DataSourceBinding{
 	WireType: "github_issue",
 	Fields: ubx.FieldMap{
-		"Collab":    ubx.FieldSpec{WireName: "collab"},
+		"Collab": ubx.FieldSpec{WireName: "collab"},
 		"Direction": ubx.FieldSpec{WireName: "direction"},
-		"Filter":    ubx.FieldSpec{WireName: "filter"},
-		"Labels":    ubx.FieldSpec{WireName: "labels"},
-		"Orgs":      ubx.FieldSpec{WireName: "orgs"},
-		"Owned":     ubx.FieldSpec{WireName: "owned"},
-		"Page":      ubx.FieldSpec{WireName: "page"},
-		"PerPage":   ubx.FieldSpec{WireName: "per_page"},
-		"Pulls":     ubx.FieldSpec{WireName: "pulls"},
-		"Since":     ubx.FieldSpec{WireName: "since"},
-		"Sort":      ubx.FieldSpec{WireName: "sort"},
-		"State":     ubx.FieldSpec{WireName: "state"},
+		"Filter": ubx.FieldSpec{WireName: "filter"},
+		"Labels": ubx.FieldSpec{WireName: "labels"},
+		"Orgs": ubx.FieldSpec{WireName: "orgs"},
+		"Owned": ubx.FieldSpec{WireName: "owned"},
+		"Page": ubx.FieldSpec{WireName: "page"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Pulls": ubx.FieldSpec{WireName: "pulls"},
+		"Since": ubx.FieldSpec{WireName: "since"},
+		"Sort": ubx.FieldSpec{WireName: "sort"},
+		"State": ubx.FieldSpec{WireName: "state"},
 	},
 }

@@ -6,4 +6,4 @@ SOURCE_PROVENANCE = {"source": "github", "version": "dynamic"}
 
 from .projects_v2 import ProjectsV2, ProjectsV2Config
 from .v2_item_with_content import V2ItemWithContent, V2ItemWithContentConfig
-from .v2_single_select_options import V2SingleSelectOptions, V2SingleSelectOptionsConfig
+from .v2_single_select_options_list import V2SingleSelectOptionsList, V2SingleSelectOptionsListConfig

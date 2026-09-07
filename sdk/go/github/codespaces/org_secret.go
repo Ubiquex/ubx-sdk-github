@@ -44,11 +44,11 @@ type OrgSecretAttrs struct {
 var OrgSecret = ubx.ResourceBinding{
 	WireType: "github_codespaces_org_secret",
 	Fields: ubx.FieldMap{
-		"EncryptedValue":        ubx.FieldSpec{WireName: "encrypted_value"},
-		"KeyId":                 ubx.FieldSpec{WireName: "key_id"},
+		"EncryptedValue": ubx.FieldSpec{WireName: "encrypted_value"},
+		"KeyId": ubx.FieldSpec{WireName: "key_id"},
 		"SelectedRepositoryIds": ubx.FieldSpec{WireName: "selected_repository_ids"},
-		"Visibility":            ubx.FieldSpec{WireName: "visibility"},
-		"Org":                   ubx.FieldSpec{WireName: "org"},
-		"SecretName":            ubx.FieldSpec{WireName: "secret_name"},
+		"Visibility": ubx.FieldSpec{WireName: "visibility"},
+		"Org": ubx.FieldSpec{WireName: "org"},
+		"SecretName": ubx.FieldSpec{WireName: "secret_name"},
 	},
 }

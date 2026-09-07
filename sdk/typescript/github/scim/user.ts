@@ -89,6 +89,8 @@ export interface UserAttrs {
   operations: User_Operations[];
   /** The ID of the organization. */
   organizationId: number;
+  /** The URL of the linked GitHub user's profile. */
+  profileUrl: string;
   /** The real roles assigned to this SCIM-provisioned user. (AI-inferred) */
   roles: User_Roles[];
   /** The real SCIM schema URIs this resource conforms to. (AI-inferred) */

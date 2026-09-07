@@ -5,18 +5,18 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type AutolinkConfig struct {
 	Owner any
-	Repo  any
+	Repo any
 }
 
 type AutolinkAttrs struct {
 	Owner any
-	Repo  any
+	Repo any
 }
 
 var Autolink = ubx.DataSourceBinding{
 	WireType: "github_autolink",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo":  ubx.FieldSpec{WireName: "repo"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
 	},
 }

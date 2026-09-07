@@ -5,21 +5,21 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type OrganizationConfig struct {
 	Enterprise any
-	Page       any
-	PerPage    any
+	Page any
+	PerPage any
 }
 
 type OrganizationAttrs struct {
 	Enterprise any
-	Page       any
-	PerPage    any
+	Page any
+	PerPage any
 }
 
 var Organization = ubx.DataSourceBinding{
 	WireType: "github_installable_organization",
 	Fields: ubx.FieldMap{
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"Page":       ubx.FieldSpec{WireName: "page"},
-		"PerPage":    ubx.FieldSpec{WireName: "per_page"},
+		"Page": ubx.FieldSpec{WireName: "page"},
+		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

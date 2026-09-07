@@ -4,22 +4,22 @@ package public
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type PublicConfig struct {
-	Page    any
+	Page any
 	PerPage any
-	Since   any
+	Since any
 }
 
 type PublicAttrs struct {
-	Page    any
+	Page any
 	PerPage any
-	Since   any
+	Since any
 }
 
 var Public = ubx.DataSourceBinding{
 	WireType: "github_public",
 	Fields: ubx.FieldMap{
-		"Page":    ubx.FieldSpec{WireName: "page"},
+		"Page": ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Since":   ubx.FieldSpec{WireName: "since"},
+		"Since": ubx.FieldSpec{WireName: "since"},
 	},
 }

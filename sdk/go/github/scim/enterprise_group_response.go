@@ -5,7 +5,7 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type EnterpriseGroupResponse_Members struct {
 	DisplayName any
-	Value       any
+	Value any
 }
 
 type EnterpriseGroupResponse_Meta struct {
@@ -20,9 +20,9 @@ type EnterpriseGroupResponse_Meta struct {
 }
 
 var EnterpriseGroupResponse_MembersFields = ubx.FieldMap{
-	"DisplayName": ubx.FieldSpec{WireName: "display_name"},
-	"Value":       ubx.FieldSpec{WireName: "value"},
-}
+		"DisplayName": ubx.FieldSpec{WireName: "display_name"},
+		"Value": ubx.FieldSpec{WireName: "value"},
+	}
 
 type EnterpriseGroupResponseConfig struct {
 	// A human-readable name for a security group.
@@ -62,14 +62,14 @@ var EnterpriseGroupResponse = ubx.ResourceBinding{
 	WireType: "github_scim_enterprise_group_response",
 	Fields: ubx.FieldMap{
 		"DisplayName": ubx.FieldSpec{WireName: "display_name"},
-		"ExternalId":  ubx.FieldSpec{WireName: "external_id"},
+		"ExternalId": ubx.FieldSpec{WireName: "external_id"},
 		"Members": ubx.FieldSpec{
 			WireName: "members",
-			Kind:     "list",
-			Fields:   EnterpriseGroupResponse_MembersFields,
+			Kind: "list",
+			Fields: EnterpriseGroupResponse_MembersFields,
 		},
-		"Schemas":     ubx.FieldSpec{WireName: "schemas"},
-		"Enterprise":  ubx.FieldSpec{WireName: "enterprise"},
+		"Schemas": ubx.FieldSpec{WireName: "schemas"},
+		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
 		"ScimGroupId": ubx.FieldSpec{WireName: "scim_group_id"},
 	},
 }

@@ -5,25 +5,25 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Record_StorageRecords struct {
 	ArtifactUrl any
-	CreatedAt   any
-	Digest      any
-	Id          any
-	Name        any
+	CreatedAt any
+	Digest any
+	Id any
+	Name any
 	RegistryUrl any
-	Repository  any
-	Status      any
-	UpdatedAt   any
+	Repository any
+	Status any
+	UpdatedAt any
 }
 
 type RecordConfig struct {
-	Org           any
+	Org any
 	SubjectDigest any
 }
 
 type RecordAttrs struct {
-	Org            any
+	Org any
 	StorageRecords any
-	SubjectDigest  any
+	SubjectDigest any
 	// The number of storage records for this digest and organization
 	TotalCount any
 }
@@ -31,7 +31,7 @@ type RecordAttrs struct {
 var Record = ubx.DataSourceBinding{
 	WireType: "github_storage_record",
 	Fields: ubx.FieldMap{
-		"Org":           ubx.FieldSpec{WireName: "org"},
+		"Org": ubx.FieldSpec{WireName: "org"},
 		"SubjectDigest": ubx.FieldSpec{WireName: "subject_digest"},
 	},
 }

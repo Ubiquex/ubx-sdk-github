@@ -3,34 +3,27 @@ package actions
 
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
-type Secret_Secrets struct {
-	CreatedAt any
-	Name      any
-	UpdatedAt any
-}
-
 type SecretConfig struct {
-	Owner   any
-	Page    any
-	PerPage any
-	Repo    any
+	Owner any
+	Repo any
+	SecretName any
 }
 
 type SecretAttrs struct {
-	Owner      any
-	Page       any
-	PerPage    any
-	Repo       any
-	Secrets    any
-	TotalCount any
+	CreatedAt any
+	// The name of the secret.
+	Name any
+	Owner any
+	Repo any
+	SecretName any
+	UpdatedAt any
 }
 
 var Secret = ubx.DataSourceBinding{
 	WireType: "github_actions_secret",
 	Fields: ubx.FieldMap{
-		"Owner":   ubx.FieldSpec{WireName: "owner"},
-		"Page":    ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo":    ubx.FieldSpec{WireName: "repo"},
+		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"SecretName": ubx.FieldSpec{WireName: "secret_name"},
 	},
 }
