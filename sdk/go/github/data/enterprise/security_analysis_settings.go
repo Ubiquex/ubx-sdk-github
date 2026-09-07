@@ -14,7 +14,7 @@ type SecurityAnalysisSettingsAttrs struct {
 	AdvancedSecurityEnabledForNewUserNamespaceRepositories any
 	// Whether Dependabot alerts are automatically enabled for new repositories and repositories transferred to this enterprise.
 	DependabotAlertsEnabledForNewRepositories any
-	Enterprise any
+	Enterprise                                any
 	// Whether secret scanning is automatically enabled for new repositories and repositories transferred to this enterprise.
 	SecretScanningEnabledForNewRepositories any
 	// Whether secret scanning of non-provider patterns is enabled for new repositories under this enterprise.

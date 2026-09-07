@@ -4,42 +4,42 @@ package runner
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type GroupsEnterpriseList_RunnerGroups struct {
-	AllowsPublicRepositories any
-	Default any
-	HostedRunnersUrl any
-	Id any
-	Name any
-	NetworkConfigurationId any
-	RestrictedToWorkflows any
-	RunnersUrl any
-	SelectedOrganizationsUrl any
-	SelectedWorkflows any
-	Visibility any
+	AllowsPublicRepositories     any
+	Default                      any
+	HostedRunnersUrl             any
+	Id                           any
+	Name                         any
+	NetworkConfigurationId       any
+	RestrictedToWorkflows        any
+	RunnersUrl                   any
+	SelectedOrganizationsUrl     any
+	SelectedWorkflows            any
+	Visibility                   any
 	WorkflowRestrictionsReadOnly any
 }
 
 type GroupsEnterpriseListConfig struct {
-	Enterprise any
-	Page any
-	PerPage any
+	Enterprise            any
+	Page                  any
+	PerPage               any
 	VisibleToOrganization any
 }
 
 type GroupsEnterpriseListAttrs struct {
-	Enterprise any
-	Page any
-	PerPage any
-	RunnerGroups any
-	TotalCount any
+	Enterprise            any
+	Page                  any
+	PerPage               any
+	RunnerGroups          any
+	TotalCount            any
 	VisibleToOrganization any
 }
 
 var GroupsEnterpriseList = ubx.DataSourceBinding{
 	WireType: "github_runner_groups_enterprise_list",
 	Fields: ubx.FieldMap{
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Enterprise":            ubx.FieldSpec{WireName: "enterprise"},
+		"Page":                  ubx.FieldSpec{WireName: "page"},
+		"PerPage":               ubx.FieldSpec{WireName: "per_page"},
 		"VisibleToOrganization": ubx.FieldSpec{WireName: "visible_to_organization"},
 	},
 }

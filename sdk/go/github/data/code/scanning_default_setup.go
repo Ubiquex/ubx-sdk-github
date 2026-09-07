@@ -5,16 +5,16 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ScanningDefaultSetupConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type ScanningDefaultSetupAttrs struct {
 	// Languages to be analyzed.
 	Languages any
-	Owner any
+	Owner     any
 	// CodeQL query suite to be used.
 	QuerySuite any
-	Repo any
+	Repo       any
 	// Runner label to be used if the runner type is labeled.
 	RunnerLabel any
 	// Runner type to be used.
@@ -33,6 +33,6 @@ var ScanningDefaultSetup = ubx.DataSourceBinding{
 	WireType: "github_code_scanning_default_setup",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

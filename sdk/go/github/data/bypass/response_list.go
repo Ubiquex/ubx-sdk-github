@@ -4,9 +4,9 @@ package bypass
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ResponseList_Data struct {
-	RuleType any
-	RulesetId any
-	RulesetName any
+	RuleType        any
+	RulesetId       any
+	RulesetName     any
 	TotalViolations any
 }
 
@@ -35,15 +35,15 @@ type ResponseList_Requester struct {
 
 type ResponseList_Responses struct {
 	CreatedAt any
-	Id any
-	Reviewer any
-	Status any
+	Id        any
+	Reviewer  any
+	Status    any
 }
 
 type ResponseListConfig struct {
 	BypassRequestNumber any
-	Owner any
-	Repo any
+	Owner               any
+	Repo                any
 }
 
 type ResponseListAttrs struct {
@@ -62,8 +62,8 @@ type ResponseListAttrs struct {
 	Number any
 	// The organization associated with the repository the bypass request is for.
 	Organization any
-	Owner any
-	Repo any
+	Owner        any
+	Repo         any
 	// The repository the bypass request is for.
 	Repository any
 	// The type of request.
@@ -78,14 +78,14 @@ type ResponseListAttrs struct {
 	Responses any
 	// The status of the bypass request.
 	Status any
-	Url any
+	Url    any
 }
 
 var ResponseList = ubx.DataSourceBinding{
 	WireType: "github_bypass_response_list",
 	Fields: ubx.FieldMap{
 		"BypassRequestNumber": ubx.FieldSpec{WireName: "bypass_request_number"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":               ubx.FieldSpec{WireName: "owner"},
+		"Repo":                ubx.FieldSpec{WireName: "repo"},
 	},
 }

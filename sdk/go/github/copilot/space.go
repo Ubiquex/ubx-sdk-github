@@ -20,10 +20,10 @@ type Space_Creator struct {
 	GravatarId any
 	// The URL to the creator's GitHub profile page. (AI-inferred)
 	HtmlUrl any
-	Id any
+	Id      any
 	// The GitHub username (login) of the creator of the Copilot space. This field is required and identifies the user who created the space. (AI-inferred)
 	Login any
-	Name any
+	Name  any
 	// The GraphQL node ID of the user who created the Copilot space. (AI-inferred)
 	NodeId any
 	// The URL to the API endpoint that returns the organizations to which the creator of the Copilot Space belongs. (AI-inferred)
@@ -39,14 +39,14 @@ type Space_Creator struct {
 	StarredUrl any
 	// The API endpoint URL for the creator's subscriptions, typically returning the list of repositories or topics the creator is subscribed to. (AI-inferred)
 	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	Type             any
+	Url              any
+	UserViewType     any
 }
 
 type Space_Owner struct {
 	// The URL of the GitHub profile avatar for the owner of the Copilot space. (AI-inferred)
-	AvatarUrl any
+	AvatarUrl   any
 	Description any
 	// The email address of the owner of the GitHub Copilot space. (AI-inferred)
 	Email any
@@ -60,17 +60,17 @@ type Space_Owner struct {
 	GistsUrl any
 	// The unique identifier for the owner's Gravatar, used to construct the URL for their avatar image. (AI-inferred)
 	GravatarId any
-	HooksUrl any
+	HooksUrl   any
 	// The HTML URL to the owner's GitHub profile page (e.g., for a user or organization). (AI-inferred)
 	HtmlUrl any
-	Id any
+	Id      any
 	// The URL to the issues for the owner, as defined by the GitHub API. (AI-inferred)
 	IssuesUrl any
 	// The GitHub username (login) of the owner of the Copilot space. (AI-inferred)
 	Login any
 	// The URL to retrieve the members of the organization that owns the Copilot space. (AI-inferred)
 	MembersUrl any
-	Name any
+	Name       any
 	// The global node ID assigned by GitHub, used to identify the owner in the GraphQL API. (AI-inferred)
 	NodeId any
 	// The API endpoint URL to list the organizations that this owner belongs to. (AI-inferred)
@@ -89,18 +89,18 @@ type Space_Owner struct {
 	// The URL to the owner's subscriptions in the GitHub API, used to list entities the owner is subscribed to. (AI-inferred)
 	SubscriptionsUrl any
 	// The type of the owner account, typically 'user' for an individual or 'organization' for an organization. (AI-inferred)
-	Type any
-	Url any
+	Type         any
+	Url          any
 	UserViewType any
 }
 
 type Space_ResourcesAttributes_Metadata struct {
 	FilePath any
-	Name any
-	Number any
+	Name     any
+	Number   any
 	// The unique numeric identifier of the repository associated with this metadata. (AI-inferred)
 	RepositoryId any
-	Text any
+	Text         any
 }
 
 type Space_ResourcesAttributes struct {
@@ -110,21 +110,21 @@ type Space_ResourcesAttributes struct {
 }
 
 var Space_ResourcesAttributes_MetadataFields = ubx.FieldMap{
-		"FilePath": ubx.FieldSpec{WireName: "file_path"},
-		"Name": ubx.FieldSpec{WireName: "name"},
-		"Number": ubx.FieldSpec{WireName: "number"},
-		"RepositoryId": ubx.FieldSpec{WireName: "repository_id"},
-		"Text": ubx.FieldSpec{WireName: "text"},
-	}
+	"FilePath":     ubx.FieldSpec{WireName: "file_path"},
+	"Name":         ubx.FieldSpec{WireName: "name"},
+	"Number":       ubx.FieldSpec{WireName: "number"},
+	"RepositoryId": ubx.FieldSpec{WireName: "repository_id"},
+	"Text":         ubx.FieldSpec{WireName: "text"},
+}
 
 var Space_ResourcesAttributesFields = ubx.FieldMap{
-		"Metadata": ubx.FieldSpec{
-			WireName: "metadata",
-			Kind: "object",
-			Fields: Space_ResourcesAttributes_MetadataFields,
-		},
-		"ResourceType": ubx.FieldSpec{WireName: "resource_type"},
-	}
+	"Metadata": ubx.FieldSpec{
+		WireName: "metadata",
+		Kind:     "object",
+		Fields:   Space_ResourcesAttributes_MetadataFields,
+	},
+	"ResourceType": ubx.FieldSpec{WireName: "resource_type"},
+}
 
 type SpaceConfig struct {
 	// The base role that determines default permissions for organization members. - `no_access`: No default access (default) - `reader`: Organization members can read the space - `writer`: Organization members can read and edit the space - `admin`: Organization members have full admin access to the space
@@ -179,16 +179,16 @@ type SpaceAttrs struct {
 var Space = ubx.ResourceBinding{
 	WireType: "github_copilot_space",
 	Fields: ubx.FieldMap{
-		"BaseRole": ubx.FieldSpec{WireName: "base_role"},
-		"Description": ubx.FieldSpec{WireName: "description"},
+		"BaseRole":            ubx.FieldSpec{WireName: "base_role"},
+		"Description":         ubx.FieldSpec{WireName: "description"},
 		"GeneralInstructions": ubx.FieldSpec{WireName: "general_instructions"},
-		"Name": ubx.FieldSpec{WireName: "name"},
+		"Name":                ubx.FieldSpec{WireName: "name"},
 		"ResourcesAttributes": ubx.FieldSpec{
 			WireName: "resources_attributes",
-			Kind: "list",
-			Fields: Space_ResourcesAttributesFields,
+			Kind:     "list",
+			Fields:   Space_ResourcesAttributesFields,
 		},
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Org":         ubx.FieldSpec{WireName: "org"},
 		"SpaceNumber": ubx.FieldSpec{WireName: "space_number"},
 	},
 }

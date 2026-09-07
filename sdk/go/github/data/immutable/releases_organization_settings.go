@@ -10,7 +10,7 @@ type ReleasesOrganizationSettingsConfig struct {
 type ReleasesOrganizationSettingsAttrs struct {
 	// The policy that controls how immutable releases are enforced in the organization.
 	EnforcedRepositories any
-	Org any
+	Org                  any
 	// The API URL to use to get or set the selected repositories for immutable releases enforcement, when `enforced_repositories` is set to `selected`.
 	SelectedRepositoriesUrl any
 }

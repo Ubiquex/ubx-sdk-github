@@ -4,28 +4,28 @@ package simple
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type UserList_Assignees struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type UserList_Dependency_Package struct {
@@ -80,7 +80,7 @@ type UserList_SecurityAdvisory_CvssSeverities struct {
 
 type UserList_SecurityAdvisory_Cwes struct {
 	CweId any
-	Name any
+	Name  any
 }
 
 type UserList_SecurityAdvisory_Epss struct {
@@ -89,7 +89,7 @@ type UserList_SecurityAdvisory_Epss struct {
 }
 
 type UserList_SecurityAdvisory_Identifiers struct {
-	Type any
+	Type  any
 	Value any
 }
 
@@ -102,9 +102,9 @@ type UserList_SecurityAdvisory_Vulnerabilities_FirstPatchedVersion struct {
 }
 
 type UserList_SecurityAdvisory_Vulnerabilities struct {
-	FirstPatchedVersion any
-	Package any
-	Severity any
+	FirstPatchedVersion    any
+	Package                any
+	Severity               any
 	VulnerableVersionRange any
 }
 
@@ -114,7 +114,7 @@ type UserList_SecurityAdvisory struct {
 	// The unique CVE ID assigned to the advisory.
 	CveId any
 	// Details for the advisory pertaining to the Common Vulnerability Scoring System.
-	Cvss any
+	Cvss           any
 	CvssSeverities any
 	// Details for the advisory pertaining to Common Weakness Enumeration.
 	Cwes any
@@ -144,7 +144,7 @@ type UserList_SecurityAdvisory struct {
 
 type UserListConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type UserListAttrs struct {
@@ -174,8 +174,8 @@ type UserListAttrs struct {
 	HtmlUrl any
 	// The security alert number.
 	Number any
-	Owner any
-	Repo any
+	Owner  any
+	Repo   any
 	// Details for the GitHub Security Advisory.
 	SecurityAdvisory any
 	// Details pertaining to one vulnerable version range for the advisory.
@@ -192,6 +192,6 @@ var UserList = ubx.DataSourceBinding{
 	WireType: "github_simple_user_list",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

@@ -5,19 +5,19 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type CountConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type CountAttrs struct {
 	Count any
 	Owner any
-	Repo any
+	Repo  any
 }
 
 var Count = ubx.DataSourceBinding{
 	WireType: "github_count",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

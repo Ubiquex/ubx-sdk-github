@@ -4,44 +4,44 @@ package runner
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type GroupsOrgList_RunnerGroups struct {
-	AllowsPublicRepositories any
-	Default any
-	HostedRunnersUrl any
-	Id any
-	Inherited any
+	AllowsPublicRepositories          any
+	Default                           any
+	HostedRunnersUrl                  any
+	Id                                any
+	Inherited                         any
 	InheritedAllowsPublicRepositories any
-	Name any
-	NetworkConfigurationId any
-	RestrictedToWorkflows any
-	RunnersUrl any
-	SelectedRepositoriesUrl any
-	SelectedWorkflows any
-	Visibility any
-	WorkflowRestrictionsReadOnly any
+	Name                              any
+	NetworkConfigurationId            any
+	RestrictedToWorkflows             any
+	RunnersUrl                        any
+	SelectedRepositoriesUrl           any
+	SelectedWorkflows                 any
+	Visibility                        any
+	WorkflowRestrictionsReadOnly      any
 }
 
 type GroupsOrgListConfig struct {
-	Org any
-	Page any
-	PerPage any
+	Org                 any
+	Page                any
+	PerPage             any
 	VisibleToRepository any
 }
 
 type GroupsOrgListAttrs struct {
-	Org any
-	Page any
-	PerPage any
-	RunnerGroups any
-	TotalCount any
+	Org                 any
+	Page                any
+	PerPage             any
+	RunnerGroups        any
+	TotalCount          any
 	VisibleToRepository any
 }
 
 var GroupsOrgList = ubx.DataSourceBinding{
 	WireType: "github_runner_groups_org_list",
 	Fields: ubx.FieldMap{
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Org":                 ubx.FieldSpec{WireName: "org"},
+		"Page":                ubx.FieldSpec{WireName: "page"},
+		"PerPage":             ubx.FieldSpec{WireName: "per_page"},
 		"VisibleToRepository": ubx.FieldSpec{WireName: "visible_to_repository"},
 	},
 }

@@ -5,18 +5,18 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type CardConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type CardAttrs struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 var Card = ubx.DataSourceBinding{
 	WireType: "github_punch_card",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

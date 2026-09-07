@@ -10,7 +10,7 @@ type ForkPrContributorApprovalConfig struct {
 type ForkPrContributorApprovalAttrs struct {
 	// The policy that controls when fork PR workflows require approval from a maintainer.
 	ApprovalPolicy any
-	Enterprise any
+	Enterprise     any
 }
 
 var ForkPrContributorApproval = ubx.DataSourceBinding{

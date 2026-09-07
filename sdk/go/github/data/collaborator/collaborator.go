@@ -5,30 +5,30 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type CollaboratorConfig struct {
 	Affiliation any
-	Owner any
-	Page any
-	PerPage any
-	Permission any
-	Repo any
+	Owner       any
+	Page        any
+	PerPage     any
+	Permission  any
+	Repo        any
 }
 
 type CollaboratorAttrs struct {
 	Affiliation any
-	Owner any
-	Page any
-	PerPage any
-	Permission any
-	Repo any
+	Owner       any
+	Page        any
+	PerPage     any
+	Permission  any
+	Repo        any
 }
 
 var Collaborator = ubx.DataSourceBinding{
 	WireType: "github_collaborator",
 	Fields: ubx.FieldMap{
 		"Affiliation": ubx.FieldSpec{WireName: "affiliation"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Permission": ubx.FieldSpec{WireName: "permission"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":       ubx.FieldSpec{WireName: "owner"},
+		"Page":        ubx.FieldSpec{WireName: "page"},
+		"PerPage":     ubx.FieldSpec{WireName: "per_page"},
+		"Permission":  ubx.FieldSpec{WireName: "permission"},
+		"Repo":        ubx.FieldSpec{WireName: "repo"},
 	},
 }

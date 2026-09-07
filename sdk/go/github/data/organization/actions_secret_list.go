@@ -4,32 +4,32 @@ package organization
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ActionsSecretList_Secrets struct {
-	CreatedAt any
-	Name any
+	CreatedAt               any
+	Name                    any
 	SelectedRepositoriesUrl any
-	UpdatedAt any
-	Visibility any
+	UpdatedAt               any
+	Visibility              any
 }
 
 type ActionsSecretListConfig struct {
-	Org any
-	Page any
+	Org     any
+	Page    any
 	PerPage any
 }
 
 type ActionsSecretListAttrs struct {
-	Org any
-	Page any
-	PerPage any
-	Secrets any
+	Org        any
+	Page       any
+	PerPage    any
+	Secrets    any
 	TotalCount any
 }
 
 var ActionsSecretList = ubx.DataSourceBinding{
 	WireType: "github_organization_actions_secret_list",
 	Fields: ubx.FieldMap{
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"Page": ubx.FieldSpec{WireName: "page"},
+		"Org":     ubx.FieldSpec{WireName: "org"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

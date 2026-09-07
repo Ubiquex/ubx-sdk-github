@@ -4,29 +4,29 @@ package actions
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type HostedRunnerCustomImageVersionList_ImageVersions struct {
-	CreatedOn any
-	SizeGb any
-	State any
+	CreatedOn    any
+	SizeGb       any
+	State        any
 	StateDetails any
-	Version any
+	Version      any
 }
 
 type HostedRunnerCustomImageVersionListConfig struct {
-	Enterprise any
+	Enterprise        any
 	ImageDefinitionId any
 }
 
 type HostedRunnerCustomImageVersionListAttrs struct {
-	Enterprise any
+	Enterprise        any
 	ImageDefinitionId any
-	ImageVersions any
-	TotalCount any
+	ImageVersions     any
+	TotalCount        any
 }
 
 var HostedRunnerCustomImageVersionList = ubx.DataSourceBinding{
 	WireType: "github_actions_hosted_runner_custom_image_version_list",
 	Fields: ubx.FieldMap{
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
+		"Enterprise":        ubx.FieldSpec{WireName: "enterprise"},
 		"ImageDefinitionId": ubx.FieldSpec{WireName: "image_definition_id"},
 	},
 }

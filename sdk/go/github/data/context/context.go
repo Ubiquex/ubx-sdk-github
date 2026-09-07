@@ -5,21 +5,21 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ContextConfig struct {
 	Branch any
-	Owner any
-	Repo any
+	Owner  any
+	Repo   any
 }
 
 type ContextAttrs struct {
 	Branch any
-	Owner any
-	Repo any
+	Owner  any
+	Repo   any
 }
 
 var Context = ubx.DataSourceBinding{
 	WireType: "github_context",
 	Fields: ubx.FieldMap{
 		"Branch": ubx.FieldSpec{WireName: "branch"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":  ubx.FieldSpec{WireName: "owner"},
+		"Repo":   ubx.FieldSpec{WireName: "repo"},
 	},
 }

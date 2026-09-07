@@ -53,7 +53,7 @@ type RequestReviewComment_User struct {
 	GravatarId any
 	// The GitHub profile URL for the user. (AI-inferred)
 	HtmlUrl any
-	Id any
+	Id      any
 	// The GitHub username (login) of the user associated with the review comment. (AI-inferred)
 	Login any
 	// The display name of the user who authored the pull request review comment. (AI-inferred)
@@ -76,7 +76,7 @@ type RequestReviewComment_User struct {
 	// The type of GitHub account, such as 'User' or 'Bot'. (AI-inferred)
 	Type any
 	// The API URL for the user associated with this pull request review comment. (AI-inferred)
-	Url any
+	Url          any
 	UserViewType any
 }
 
@@ -185,19 +185,19 @@ type RequestReviewCommentAttrs struct {
 var RequestReviewComment = ubx.ResourceBinding{
 	WireType: "github_pull_request_review_comment",
 	Fields: ubx.FieldMap{
-		"Body": ubx.FieldSpec{WireName: "body"},
-		"CommitId": ubx.FieldSpec{WireName: "commit_id"},
-		"InReplyTo": ubx.FieldSpec{WireName: "in_reply_to"},
-		"Line": ubx.FieldSpec{WireName: "line"},
-		"Path": ubx.FieldSpec{WireName: "path"},
-		"Position": ubx.FieldSpec{WireName: "position"},
-		"Side": ubx.FieldSpec{WireName: "side"},
-		"StartLine": ubx.FieldSpec{WireName: "start_line"},
-		"StartSide": ubx.FieldSpec{WireName: "start_side"},
+		"Body":        ubx.FieldSpec{WireName: "body"},
+		"CommitId":    ubx.FieldSpec{WireName: "commit_id"},
+		"InReplyTo":   ubx.FieldSpec{WireName: "in_reply_to"},
+		"Line":        ubx.FieldSpec{WireName: "line"},
+		"Path":        ubx.FieldSpec{WireName: "path"},
+		"Position":    ubx.FieldSpec{WireName: "position"},
+		"Side":        ubx.FieldSpec{WireName: "side"},
+		"StartLine":   ubx.FieldSpec{WireName: "start_line"},
+		"StartSide":   ubx.FieldSpec{WireName: "start_side"},
 		"SubjectType": ubx.FieldSpec{WireName: "subject_type"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"CommentId": ubx.FieldSpec{WireName: "comment_id"},
-		"PullNumber": ubx.FieldSpec{WireName: "pull_number"},
+		"Owner":       ubx.FieldSpec{WireName: "owner"},
+		"Repo":        ubx.FieldSpec{WireName: "repo"},
+		"CommentId":   ubx.FieldSpec{WireName: "comment_id"},
+		"PullNumber":  ubx.FieldSpec{WireName: "pull_number"},
 	},
 }

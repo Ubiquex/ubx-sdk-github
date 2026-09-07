@@ -4,32 +4,32 @@ package codespaces
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type OrgSecretList_Secrets struct {
-	CreatedAt any
-	Name any
+	CreatedAt               any
+	Name                    any
 	SelectedRepositoriesUrl any
-	UpdatedAt any
-	Visibility any
+	UpdatedAt               any
+	Visibility              any
 }
 
 type OrgSecretListConfig struct {
-	Org any
-	Page any
+	Org     any
+	Page    any
 	PerPage any
 }
 
 type OrgSecretListAttrs struct {
-	Org any
-	Page any
-	PerPage any
-	Secrets any
+	Org        any
+	Page       any
+	PerPage    any
+	Secrets    any
 	TotalCount any
 }
 
 var OrgSecretList = ubx.DataSourceBinding{
 	WireType: "github_codespaces_org_secret_list",
 	Fields: ubx.FieldMap{
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"Page": ubx.FieldSpec{WireName: "page"},
+		"Org":     ubx.FieldSpec{WireName: "org"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

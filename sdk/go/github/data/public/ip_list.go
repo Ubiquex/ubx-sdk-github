@@ -29,13 +29,13 @@ type IpList_MachineSizeDetails struct {
 
 type IpList_PublicIps struct {
 	Enabled any
-	Length any
-	Prefix any
+	Length  any
+	Prefix  any
 }
 
 type IpListConfig struct {
 	HostedRunnerId any
-	Org any
+	Org            any
 }
 
 type IpListAttrs struct {
@@ -54,7 +54,7 @@ type IpListAttrs struct {
 	MaximumRunners any
 	// The name of the hosted runner.
 	Name any
-	Org any
+	Org  any
 	// The operating system of the image.
 	Platform any
 	// Whether public IP is enabled for the hosted runners.
@@ -71,6 +71,6 @@ var IpList = ubx.DataSourceBinding{
 	WireType: "github_public_ip_list",
 	Fields: ubx.FieldMap{
 		"HostedRunnerId": ubx.FieldSpec{WireName: "hosted_runner_id"},
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Org":            ubx.FieldSpec{WireName: "org"},
 	},
 }

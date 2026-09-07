@@ -4,19 +4,19 @@ package repository
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type InvitationConfig struct {
-	Page any
+	Page    any
 	PerPage any
 }
 
 type InvitationAttrs struct {
-	Page any
+	Page    any
 	PerPage any
 }
 
 var Invitation = ubx.DataSourceBinding{
 	WireType: "github_repository_invitation",
 	Fields: ubx.FieldMap{
-		"Page": ubx.FieldSpec{WireName: "page"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

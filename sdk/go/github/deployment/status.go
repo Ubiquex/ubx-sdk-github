@@ -20,7 +20,7 @@ type Status_Creator struct {
 	GravatarId any
 	// The GitHub profile URL for the creator (user) of the deployment status. (AI-inferred)
 	HtmlUrl any
-	Id any
+	Id      any
 	// The GitHub username of the creator of the deployment status. (AI-inferred)
 	Login any
 	// The display name of the user who created the deployment status. (AI-inferred)
@@ -52,7 +52,7 @@ type Status_PerformedViaGithubApp_Owner struct {
 	// The URL to the avatar image for the owner (user or organization) of the GitHub App that performed the deployment. (AI-inferred)
 	AvatarUrl any
 	// The timestamp when the owner account was created, represented as a string. (AI-inferred)
-	CreatedAt any
+	CreatedAt   any
 	Description any
 	// Email address of the owner of the GitHub App that performed the deployment. (AI-inferred)
 	Email any
@@ -85,7 +85,7 @@ type Status_PerformedViaGithubApp_Owner struct {
 	// Indicates whether the owner is a site administrator on GitHub. (AI-inferred)
 	SiteAdmin any
 	// The URL-friendly slug for the owner of the GitHub App. In GitHub's API, this is typically the organization's login, used as the identifier in GitHub URLs. (AI-inferred)
-	Slug any
+	Slug      any
 	StarredAt any
 	// The URL template for listing the repositories starred by the user. In the GitHub API, this is typically in the form https://api.github.com/users/{user}/starred{/owner}{/repo}. (AI-inferred)
 	StarredUrl any
@@ -218,16 +218,16 @@ type StatusAttrs struct {
 var Status = ubx.ResourceBinding{
 	WireType: "github_deployment_status",
 	Fields: ubx.FieldMap{
-		"AutoInactive": ubx.FieldSpec{WireName: "auto_inactive"},
-		"Description": ubx.FieldSpec{WireName: "description"},
-		"Environment": ubx.FieldSpec{WireName: "environment"},
+		"AutoInactive":   ubx.FieldSpec{WireName: "auto_inactive"},
+		"Description":    ubx.FieldSpec{WireName: "description"},
+		"Environment":    ubx.FieldSpec{WireName: "environment"},
 		"EnvironmentUrl": ubx.FieldSpec{WireName: "environment_url"},
-		"LogUrl": ubx.FieldSpec{WireName: "log_url"},
-		"State": ubx.FieldSpec{WireName: "state"},
-		"TargetUrl": ubx.FieldSpec{WireName: "target_url"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"DeploymentId": ubx.FieldSpec{WireName: "deployment_id"},
-		"StatusId": ubx.FieldSpec{WireName: "status_id"},
+		"LogUrl":         ubx.FieldSpec{WireName: "log_url"},
+		"State":          ubx.FieldSpec{WireName: "state"},
+		"TargetUrl":      ubx.FieldSpec{WireName: "target_url"},
+		"Owner":          ubx.FieldSpec{WireName: "owner"},
+		"Repo":           ubx.FieldSpec{WireName: "repo"},
+		"DeploymentId":   ubx.FieldSpec{WireName: "deployment_id"},
+		"StatusId":       ubx.FieldSpec{WireName: "status_id"},
 	},
 }

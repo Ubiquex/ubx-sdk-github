@@ -4,66 +4,66 @@ package workflow
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type RunList_WorkflowRuns_Actor struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type RunList_WorkflowRuns_HeadCommit_Author struct {
 	Email any
-	Name any
+	Name  any
 }
 
 type RunList_WorkflowRuns_HeadCommit struct {
-	Author any
+	Author    any
 	Committer any
-	Id any
-	Message any
+	Id        any
+	Message   any
 	Timestamp any
-	TreeId any
+	TreeId    any
 }
 
 type RunList_WorkflowRuns_HeadRepository_CodeOfConduct struct {
-	Body any
+	Body    any
 	HtmlUrl any
-	Key any
-	Name any
-	Url any
+	Key     any
+	Name    any
+	Url     any
 }
 
 type RunList_WorkflowRuns_HeadRepository_License struct {
-	Key any
-	Name any
+	Key    any
+	Name   any
 	NodeId any
 	SpdxId any
-	Url any
+	Url    any
 }
 
 type RunList_WorkflowRuns_HeadRepository_Permissions struct {
-	Admin any
+	Admin    any
 	Maintain any
-	Pull any
-	Push any
-	Triage any
+	Pull     any
+	Push     any
+	Triage   any
 }
 
 type RunList_WorkflowRuns_HeadRepository_SecurityAndAnalysis_AdvancedSecurity struct {
@@ -71,8 +71,8 @@ type RunList_WorkflowRuns_HeadRepository_SecurityAndAnalysis_AdvancedSecurity st
 }
 
 type RunList_WorkflowRuns_HeadRepository_SecurityAndAnalysis_SecretScanningDelegatedBypassOptions_Reviewers struct {
-	Mode any
-	ReviewerId any
+	Mode         any
+	ReviewerId   any
 	ReviewerType any
 }
 
@@ -81,223 +81,223 @@ type RunList_WorkflowRuns_HeadRepository_SecurityAndAnalysis_SecretScanningDeleg
 }
 
 type RunList_WorkflowRuns_HeadRepository_SecurityAndAnalysis struct {
-	AdvancedSecurity any
-	CodeSecurity any
-	DependabotSecurityUpdates any
-	SecretScanning any
-	SecretScanningAiDetection any
+	AdvancedSecurity                      any
+	CodeSecurity                          any
+	DependabotSecurityUpdates             any
+	SecretScanning                        any
+	SecretScanningAiDetection             any
 	SecretScanningDelegatedAlertDismissal any
-	SecretScanningDelegatedBypass any
-	SecretScanningDelegatedBypassOptions any
-	SecretScanningNonProviderPatterns any
-	SecretScanningPushProtection any
-	SecretScanningValidityChecks any
+	SecretScanningDelegatedBypass         any
+	SecretScanningDelegatedBypassOptions  any
+	SecretScanningNonProviderPatterns     any
+	SecretScanningPushProtection          any
+	SecretScanningValidityChecks          any
 }
 
 type RunList_WorkflowRuns_HeadRepository struct {
-	AllowForking any
-	ArchiveUrl any
-	Archived any
-	AssigneesUrl any
-	BlobsUrl any
-	BranchesUrl any
-	CloneUrl any
-	CodeOfConduct any
-	CollaboratorsUrl any
-	CommentsUrl any
-	CommitsUrl any
-	CompareUrl any
-	ContentsUrl any
-	ContributorsUrl any
-	CreatedAt any
-	CustomProperties any
-	DefaultBranch any
-	DeleteBranchOnMerge any
-	DeploymentsUrl any
-	Description any
-	Disabled any
-	DownloadsUrl any
-	EventsUrl any
-	Fork any
-	Forks any
-	ForksCount any
-	ForksUrl any
-	FullName any
-	GitCommitsUrl any
-	GitRefsUrl any
-	GitTagsUrl any
-	GitUrl any
-	HasDiscussions any
-	HasDownloads any
-	HasIssues any
-	HasPages any
-	HasProjects any
-	HasPullRequests any
-	HasWiki any
-	Homepage any
-	HooksUrl any
-	HtmlUrl any
-	Id any
-	IsTemplate any
-	IssueCommentUrl any
-	IssueEventsUrl any
-	IssuesUrl any
-	KeysUrl any
-	LabelsUrl any
-	Language any
-	LanguagesUrl any
-	License any
-	MergesUrl any
-	MilestonesUrl any
-	MirrorUrl any
-	Name any
-	NetworkCount any
-	NodeId any
-	NotificationsUrl any
-	OpenIssues any
-	OpenIssuesCount any
-	Owner any
-	Permissions any
-	Private any
+	AllowForking              any
+	ArchiveUrl                any
+	Archived                  any
+	AssigneesUrl              any
+	BlobsUrl                  any
+	BranchesUrl               any
+	CloneUrl                  any
+	CodeOfConduct             any
+	CollaboratorsUrl          any
+	CommentsUrl               any
+	CommitsUrl                any
+	CompareUrl                any
+	ContentsUrl               any
+	ContributorsUrl           any
+	CreatedAt                 any
+	CustomProperties          any
+	DefaultBranch             any
+	DeleteBranchOnMerge       any
+	DeploymentsUrl            any
+	Description               any
+	Disabled                  any
+	DownloadsUrl              any
+	EventsUrl                 any
+	Fork                      any
+	Forks                     any
+	ForksCount                any
+	ForksUrl                  any
+	FullName                  any
+	GitCommitsUrl             any
+	GitRefsUrl                any
+	GitTagsUrl                any
+	GitUrl                    any
+	HasDiscussions            any
+	HasDownloads              any
+	HasIssues                 any
+	HasPages                  any
+	HasProjects               any
+	HasPullRequests           any
+	HasWiki                   any
+	Homepage                  any
+	HooksUrl                  any
+	HtmlUrl                   any
+	Id                        any
+	IsTemplate                any
+	IssueCommentUrl           any
+	IssueEventsUrl            any
+	IssuesUrl                 any
+	KeysUrl                   any
+	LabelsUrl                 any
+	Language                  any
+	LanguagesUrl              any
+	License                   any
+	MergesUrl                 any
+	MilestonesUrl             any
+	MirrorUrl                 any
+	Name                      any
+	NetworkCount              any
+	NodeId                    any
+	NotificationsUrl          any
+	OpenIssues                any
+	OpenIssuesCount           any
+	Owner                     any
+	Permissions               any
+	Private                   any
 	PullRequestCreationPolicy any
-	PullsUrl any
-	PushedAt any
-	ReleasesUrl any
-	RoleName any
-	SecurityAndAnalysis any
-	Size any
-	SshUrl any
-	StargazersCount any
-	StargazersUrl any
-	StatusesUrl any
-	SubscribersCount any
-	SubscribersUrl any
-	SubscriptionUrl any
-	SvnUrl any
-	TagsUrl any
-	TeamsUrl any
-	TempCloneToken any
-	Topics any
-	TreesUrl any
-	UpdatedAt any
-	Url any
-	Visibility any
-	Watchers any
-	WatchersCount any
-	WebCommitSignoffRequired any
+	PullsUrl                  any
+	PushedAt                  any
+	ReleasesUrl               any
+	RoleName                  any
+	SecurityAndAnalysis       any
+	Size                      any
+	SshUrl                    any
+	StargazersCount           any
+	StargazersUrl             any
+	StatusesUrl               any
+	SubscribersCount          any
+	SubscribersUrl            any
+	SubscriptionUrl           any
+	SvnUrl                    any
+	TagsUrl                   any
+	TeamsUrl                  any
+	TempCloneToken            any
+	Topics                    any
+	TreesUrl                  any
+	UpdatedAt                 any
+	Url                       any
+	Visibility                any
+	Watchers                  any
+	WatchersCount             any
+	WebCommitSignoffRequired  any
 }
 
 type RunList_WorkflowRuns_PullRequests_Base_Repo struct {
-	Id any
+	Id   any
 	Name any
-	Url any
+	Url  any
 }
 
 type RunList_WorkflowRuns_PullRequests_Base struct {
-	Ref any
+	Ref  any
 	Repo any
-	Sha any
+	Sha  any
 }
 
 type RunList_WorkflowRuns_PullRequests struct {
-	Base any
-	Head any
-	Id any
+	Base   any
+	Head   any
+	Id     any
 	Number any
-	Url any
+	Url    any
 }
 
 type RunList_WorkflowRuns_ReferencedWorkflows struct {
 	Path any
-	Ref any
-	Sha any
+	Ref  any
+	Sha  any
 }
 
 type RunList_WorkflowRuns struct {
-	Actor any
-	ArtifactsUrl any
-	CancelUrl any
-	CheckSuiteId any
-	CheckSuiteNodeId any
-	CheckSuiteUrl any
-	Conclusion any
-	CreatedAt any
-	DisplayTitle any
-	Event any
-	HeadBranch any
-	HeadCommit any
-	HeadRepository any
-	HeadRepositoryId any
-	HeadSha any
-	HtmlUrl any
-	Id any
-	JobsUrl any
-	LogsUrl any
-	Name any
-	NodeId any
-	Path any
-	PreviousAttemptUrl any
-	PullRequests any
+	Actor               any
+	ArtifactsUrl        any
+	CancelUrl           any
+	CheckSuiteId        any
+	CheckSuiteNodeId    any
+	CheckSuiteUrl       any
+	Conclusion          any
+	CreatedAt           any
+	DisplayTitle        any
+	Event               any
+	HeadBranch          any
+	HeadCommit          any
+	HeadRepository      any
+	HeadRepositoryId    any
+	HeadSha             any
+	HtmlUrl             any
+	Id                  any
+	JobsUrl             any
+	LogsUrl             any
+	Name                any
+	NodeId              any
+	Path                any
+	PreviousAttemptUrl  any
+	PullRequests        any
 	ReferencedWorkflows any
-	Repository any
-	RerunUrl any
-	RunAttempt any
-	RunNumber any
-	RunStartedAt any
-	Status any
-	TriggeringActor any
-	UpdatedAt any
-	Url any
-	WorkflowId any
-	WorkflowUrl any
+	Repository          any
+	RerunUrl            any
+	RunAttempt          any
+	RunNumber           any
+	RunStartedAt        any
+	Status              any
+	TriggeringActor     any
+	UpdatedAt           any
+	Url                 any
+	WorkflowId          any
+	WorkflowUrl         any
 }
 
 type RunListConfig struct {
-	Actor any
-	Branch any
-	CheckSuiteId any
-	Created any
-	Event any
+	Actor               any
+	Branch              any
+	CheckSuiteId        any
+	Created             any
+	Event               any
 	ExcludePullRequests any
-	HeadSha any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
-	Status any
+	HeadSha             any
+	Owner               any
+	Page                any
+	PerPage             any
+	Repo                any
+	Status              any
 }
 
 type RunListAttrs struct {
-	Actor any
-	Branch any
-	CheckSuiteId any
-	Created any
-	Event any
+	Actor               any
+	Branch              any
+	CheckSuiteId        any
+	Created             any
+	Event               any
 	ExcludePullRequests any
-	HeadSha any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
-	Status any
-	TotalCount any
-	WorkflowRuns any
+	HeadSha             any
+	Owner               any
+	Page                any
+	PerPage             any
+	Repo                any
+	Status              any
+	TotalCount          any
+	WorkflowRuns        any
 }
 
 var RunList = ubx.DataSourceBinding{
 	WireType: "github_workflow_run_list",
 	Fields: ubx.FieldMap{
-		"Actor": ubx.FieldSpec{WireName: "actor"},
-		"Branch": ubx.FieldSpec{WireName: "branch"},
-		"CheckSuiteId": ubx.FieldSpec{WireName: "check_suite_id"},
-		"Created": ubx.FieldSpec{WireName: "created"},
-		"Event": ubx.FieldSpec{WireName: "event"},
+		"Actor":               ubx.FieldSpec{WireName: "actor"},
+		"Branch":              ubx.FieldSpec{WireName: "branch"},
+		"CheckSuiteId":        ubx.FieldSpec{WireName: "check_suite_id"},
+		"Created":             ubx.FieldSpec{WireName: "created"},
+		"Event":               ubx.FieldSpec{WireName: "event"},
 		"ExcludePullRequests": ubx.FieldSpec{WireName: "exclude_pull_requests"},
-		"HeadSha": ubx.FieldSpec{WireName: "head_sha"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"Status": ubx.FieldSpec{WireName: "status"},
+		"HeadSha":             ubx.FieldSpec{WireName: "head_sha"},
+		"Owner":               ubx.FieldSpec{WireName: "owner"},
+		"Page":                ubx.FieldSpec{WireName: "page"},
+		"PerPage":             ubx.FieldSpec{WireName: "per_page"},
+		"Repo":                ubx.FieldSpec{WireName: "repo"},
+		"Status":              ubx.FieldSpec{WireName: "status"},
 	},
 }

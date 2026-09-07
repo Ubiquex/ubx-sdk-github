@@ -5,13 +5,13 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ApprovalConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 	RunId any
 }
 
 type ApprovalAttrs struct {
 	Owner any
-	Repo any
+	Repo  any
 	RunId any
 }
 
@@ -19,7 +19,7 @@ var Approval = ubx.DataSourceBinding{
 	WireType: "github_approval",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 		"RunId": ubx.FieldSpec{WireName: "run_id"},
 	},
 }

@@ -27,7 +27,7 @@ type WithProtection_Commit_Author struct {
 	GravatarId any
 	// The GitHub profile URL for the commit author. (AI-inferred)
 	HtmlUrl any
-	Id any
+	Id      any
 	// The GitHub username of the commit author. (AI-inferred)
 	Login any
 	// The name of the author of the commit, as stored in Git metadata. (AI-inferred)
@@ -185,7 +185,7 @@ type WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllow
 	// The URL of the avatar image for the GitHub user or organization that owns this GitHub App. (AI-inferred)
 	AvatarUrl any
 	// The creation timestamp of the GitHub account that owns the app, in ISO 8601 format (e.g., 2011-01-26T19:01:12Z). (AI-inferred)
-	CreatedAt any
+	CreatedAt   any
 	Description any
 	// Email address of the GitHub App owner (the user or organization that owns the app). (AI-inferred)
 	Email any
@@ -205,7 +205,7 @@ type WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllow
 	Id any
 	// The GitHub username of the user or organization that owns the GitHub App listed in the bypass pull request allowances. This identifies the owner of the app that is allowed to bypass branch protection rules for pull request reviews. (AI-inferred)
 	Login any
-	Name any
+	Name  any
 	// The GraphQL node ID of the app owner within the bypass pull request allowances. (AI-inferred)
 	NodeId any
 	// The URL to the list of organizations that the app owner belongs to (GitHub API field for the owner object). (AI-inferred)
@@ -216,7 +216,7 @@ type WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllow
 	ReposUrl any
 	// Indicates whether the owner of the GitHub App is a site administrator for the GitHub instance. (AI-inferred)
 	SiteAdmin any
-	Slug any
+	Slug      any
 	StarredAt any
 	// The URL to list the repositories starred by the owner (user or organization). This follows the GitHub API user/org object's starred_url format, typically 'https://api.github.com/users/{username}/starred{/owner}{/repo}'. (AI-inferred)
 	StarredUrl any
@@ -230,25 +230,25 @@ type WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllow
 	Url any
 	// Indicates whether the app owner (a user) is a public or private user. Allowed values are `public` and `private`; a private user is only visible within a GitHub Enterprise cloud or server instance. (AI-inferred)
 	UserViewType any
-	WebsiteUrl any
+	WebsiteUrl   any
 }
 
 type WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Apps_Permissions struct {
 	// The access level for the 'checks' permission of the GitHub App. Allowed values are 'read' or 'write'. (AI-inferred)
-	Checks any
-	Contents any
+	Checks      any
+	Contents    any
 	Deployments any
-	Issues any
-	Metadata any
+	Issues      any
+	Metadata    any
 }
 
 type WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Apps struct {
 	// The client ID of the GitHub App that is allowed to bypass pull request review requirements. (AI-inferred)
 	ClientId any
 	// The timestamp indicating when the GitHub App was created, in RFC3339 format. (AI-inferred)
-	CreatedAt any
+	CreatedAt   any
 	Description any
-	Events any
+	Events      any
 	// The external URL of the GitHub App, typically its public homepage or website. (AI-inferred)
 	ExternalUrl any
 	// The HTML URL of the GitHub app that is permitted to bypass the required pull request reviews. (AI-inferred)
@@ -266,12 +266,12 @@ type WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllow
 	// The permissions granted to the GitHub App, represented as an object mapping permission names (e.g., 'contents', 'issues') to their access levels (e.g., 'read', 'write'). (AI-inferred)
 	Permissions any
 	// The slug of the GitHub App that can bypass pull request requirements. (AI-inferred)
-	Slug any
+	Slug      any
 	UpdatedAt any
 }
 
 type WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Teams_Parent struct {
-	Description any
+	Description  any
 	EnterpriseId any
 	// The URL of the parent team's page on GitHub. (AI-inferred)
 	HtmlUrl any
@@ -319,7 +319,7 @@ type WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllow
 type WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Teams struct {
 	// The source of the team's access, indicating whether the team has direct access, or access granted through an organization or enterprise. Valid values: direct, organization, enterprise. (AI-inferred)
 	AccessSource any
-	Description any
+	Description  any
 	EnterpriseId any
 	// The HTML URL of the team's page on GitHub, e.g., https://github.com/orgs/ORG/teams/TEAM. (AI-inferred)
 	HtmlUrl any
@@ -336,7 +336,7 @@ type WithProtection_Protection_RequiredPullRequestReviews_BypassPullRequestAllow
 	// The ID of the organization that the team belongs to. (AI-inferred)
 	OrganizationId any
 	// The parent team of this team in the GitHub team hierarchy. This is an object containing the same team attributes (e.g., id, slug, name), and is null when the team has no parent. (AI-inferred)
-	Parent any
+	Parent     any
 	Permission any
 	// Object mapping permission levels to booleans representing the team's permissions on the repository. (AI-inferred)
 	Permissions any
@@ -389,7 +389,7 @@ type WithProtection_Protection_RequiredPullRequestReviews struct {
 	RequireLastPushApproval any
 	// The number of approving reviews required before a pull request can be merged. Must be between 0 and 6. (AI-inferred)
 	RequiredApprovingReviewCount any
-	Url any
+	Url                          any
 }
 
 type WithProtection_Protection_RequiredStatusChecks_Checks struct {
@@ -410,12 +410,12 @@ type WithProtection_Protection_RequiredStatusChecks struct {
 	EnforcementLevel any
 	// Require branches to be up to date before merging. When true, the branch cannot be merged unless it is up to date with the base branch. (AI-inferred)
 	Strict any
-	Url any
+	Url    any
 }
 
 type WithProtection_Protection_Restrictions_Apps_Owner struct {
 	// The URL of the avatar image for the GitHub user or organization that owns the app listed in the branch protection restrictions. (AI-inferred)
-	AvatarUrl any
+	AvatarUrl   any
 	Description any
 	// The URL to the events of the GitHub App's owner (user or organization), as returned by the GitHub API. (AI-inferred)
 	EventsUrl any
@@ -458,7 +458,7 @@ type WithProtection_Protection_Restrictions_Apps_Owner struct {
 	// The type of GitHub account that owns the app, typically 'User' or 'Organization'. (AI-inferred)
 	Type any
 	// The GitHub API URL for the owner of the GitHub app (either a user or organization). (AI-inferred)
-	Url any
+	Url          any
 	UserViewType any
 }
 
@@ -535,7 +535,7 @@ type WithProtection_Protection_Restrictions_Users struct {
 	StarredUrl any
 	// The URL to the user's subscriptions endpoint, listing repositories the user is subscribed to. (AI-inferred)
 	SubscriptionsUrl any
-	Type any
+	Type             any
 	// The GitHub API URL for the user. (AI-inferred)
 	Url any
 	// The type of user account (e.g., 'User' or 'Bot') that is restricted from the branch. (AI-inferred)
@@ -568,12 +568,12 @@ type WithProtection_Protection struct {
 	AllowForkSyncing any
 	// A branch protection setting that blocks the creation of branches matching the branch pattern. (AI-inferred)
 	BlockCreations any
-	Enabled any
+	Enabled        any
 	// Protected Branch Admin Enforced
 	EnforceAdmins any
 	// Whether to set the branch as read-only. If this is true, users will not be able to push to the branch.
 	LockBranch any
-	Name any
+	Name       any
 	// The URL of the branch protection. (AI-inferred)
 	ProtectionUrl any
 	// Indicates whether all conversations on a pull request must be resolved before it can be merged into the branch. When enabled, branch protection blocks merging until all review threads are resolved. (AI-inferred)
@@ -634,8 +634,8 @@ var WithProtection = ubx.ResourceBinding{
 	WireType: "github_branch_with_protection",
 	Fields: ubx.FieldMap{
 		"NewName": ubx.FieldSpec{WireName: "new_name"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"Branch": ubx.FieldSpec{WireName: "branch"},
+		"Owner":   ubx.FieldSpec{WireName: "owner"},
+		"Repo":    ubx.FieldSpec{WireName: "repo"},
+		"Branch":  ubx.FieldSpec{WireName: "branch"},
 	},
 }

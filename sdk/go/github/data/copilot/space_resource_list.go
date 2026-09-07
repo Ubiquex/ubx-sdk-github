@@ -5,29 +5,29 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type SpaceResourceList_Resources struct {
 	CopilotChatAttachmentId any
-	CreatedAt any
-	Id any
-	Metadata any
-	ResourceType any
-	UpdatedAt any
+	CreatedAt               any
+	Id                      any
+	Metadata                any
+	ResourceType            any
+	UpdatedAt               any
 }
 
 type SpaceResourceListConfig struct {
-	Org any
+	Org         any
 	SpaceNumber any
 }
 
 type SpaceResourceListAttrs struct {
 	Org any
 	// The list of resources attached to this Copilot Space.
-	Resources any
+	Resources   any
 	SpaceNumber any
 }
 
 var SpaceResourceList = ubx.DataSourceBinding{
 	WireType: "github_copilot_space_resource_list",
 	Fields: ubx.FieldMap{
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Org":         ubx.FieldSpec{WireName: "org"},
 		"SpaceNumber": ubx.FieldSpec{WireName: "space_number"},
 	},
 }

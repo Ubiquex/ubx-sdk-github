@@ -4,70 +4,70 @@ package codespace
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type List_Codespaces_BillableOwner struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type List_Codespaces_GitStatus struct {
-	Ahead any
-	Behind any
+	Ahead                 any
+	Behind                any
 	HasUncommittedChanges any
-	HasUnpushedChanges any
-	Ref any
+	HasUnpushedChanges    any
+	Ref                   any
 }
 
 type List_Codespaces_Machine struct {
-	Cpus any
-	DisplayName any
-	MemoryInBytes any
-	Name any
-	OperatingSystem any
+	Cpus                 any
+	DisplayName          any
+	MemoryInBytes        any
+	Name                 any
+	OperatingSystem      any
 	PrebuildAvailability any
-	StorageInBytes any
+	StorageInBytes       any
 }
 
 type List_Codespaces_Repository_CodeOfConduct struct {
-	Body any
+	Body    any
 	HtmlUrl any
-	Key any
-	Name any
-	Url any
+	Key     any
+	Name    any
+	Url     any
 }
 
 type List_Codespaces_Repository_License struct {
-	Key any
-	Name any
+	Key    any
+	Name   any
 	NodeId any
 	SpdxId any
-	Url any
+	Url    any
 }
 
 type List_Codespaces_Repository_Permissions struct {
-	Admin any
+	Admin    any
 	Maintain any
-	Pull any
-	Push any
-	Triage any
+	Pull     any
+	Push     any
+	Triage   any
 }
 
 type List_Codespaces_Repository_SecurityAndAnalysis_AdvancedSecurity struct {
@@ -75,8 +75,8 @@ type List_Codespaces_Repository_SecurityAndAnalysis_AdvancedSecurity struct {
 }
 
 type List_Codespaces_Repository_SecurityAndAnalysis_SecretScanningDelegatedBypassOptions_Reviewers struct {
-	Mode any
-	ReviewerId any
+	Mode         any
+	ReviewerId   any
 	ReviewerType any
 }
 
@@ -85,110 +85,110 @@ type List_Codespaces_Repository_SecurityAndAnalysis_SecretScanningDelegatedBypas
 }
 
 type List_Codespaces_Repository_SecurityAndAnalysis struct {
-	AdvancedSecurity any
-	CodeSecurity any
-	DependabotSecurityUpdates any
-	SecretScanning any
-	SecretScanningAiDetection any
+	AdvancedSecurity                      any
+	CodeSecurity                          any
+	DependabotSecurityUpdates             any
+	SecretScanning                        any
+	SecretScanningAiDetection             any
 	SecretScanningDelegatedAlertDismissal any
-	SecretScanningDelegatedBypass any
-	SecretScanningDelegatedBypassOptions any
-	SecretScanningNonProviderPatterns any
-	SecretScanningPushProtection any
-	SecretScanningValidityChecks any
+	SecretScanningDelegatedBypass         any
+	SecretScanningDelegatedBypassOptions  any
+	SecretScanningNonProviderPatterns     any
+	SecretScanningPushProtection          any
+	SecretScanningValidityChecks          any
 }
 
 type List_Codespaces_Repository struct {
-	AllowForking any
-	ArchiveUrl any
-	Archived any
-	AssigneesUrl any
-	BlobsUrl any
-	BranchesUrl any
-	CloneUrl any
-	CodeOfConduct any
-	CollaboratorsUrl any
-	CommentsUrl any
-	CommitsUrl any
-	CompareUrl any
-	ContentsUrl any
-	ContributorsUrl any
-	CreatedAt any
-	CustomProperties any
-	DefaultBranch any
-	DeleteBranchOnMerge any
-	DeploymentsUrl any
-	Description any
-	Disabled any
-	DownloadsUrl any
-	EventsUrl any
-	Fork any
-	Forks any
-	ForksCount any
-	ForksUrl any
-	FullName any
-	GitCommitsUrl any
-	GitRefsUrl any
-	GitTagsUrl any
-	GitUrl any
-	HasDiscussions any
-	HasDownloads any
-	HasIssues any
-	HasPages any
-	HasProjects any
-	HasPullRequests any
-	HasWiki any
-	Homepage any
-	HooksUrl any
-	HtmlUrl any
-	Id any
-	IsTemplate any
-	IssueCommentUrl any
-	IssueEventsUrl any
-	IssuesUrl any
-	KeysUrl any
-	LabelsUrl any
-	Language any
-	LanguagesUrl any
-	License any
-	MergesUrl any
-	MilestonesUrl any
-	MirrorUrl any
-	Name any
-	NetworkCount any
-	NodeId any
-	NotificationsUrl any
-	OpenIssues any
-	OpenIssuesCount any
-	Owner any
-	Permissions any
-	Private any
+	AllowForking              any
+	ArchiveUrl                any
+	Archived                  any
+	AssigneesUrl              any
+	BlobsUrl                  any
+	BranchesUrl               any
+	CloneUrl                  any
+	CodeOfConduct             any
+	CollaboratorsUrl          any
+	CommentsUrl               any
+	CommitsUrl                any
+	CompareUrl                any
+	ContentsUrl               any
+	ContributorsUrl           any
+	CreatedAt                 any
+	CustomProperties          any
+	DefaultBranch             any
+	DeleteBranchOnMerge       any
+	DeploymentsUrl            any
+	Description               any
+	Disabled                  any
+	DownloadsUrl              any
+	EventsUrl                 any
+	Fork                      any
+	Forks                     any
+	ForksCount                any
+	ForksUrl                  any
+	FullName                  any
+	GitCommitsUrl             any
+	GitRefsUrl                any
+	GitTagsUrl                any
+	GitUrl                    any
+	HasDiscussions            any
+	HasDownloads              any
+	HasIssues                 any
+	HasPages                  any
+	HasProjects               any
+	HasPullRequests           any
+	HasWiki                   any
+	Homepage                  any
+	HooksUrl                  any
+	HtmlUrl                   any
+	Id                        any
+	IsTemplate                any
+	IssueCommentUrl           any
+	IssueEventsUrl            any
+	IssuesUrl                 any
+	KeysUrl                   any
+	LabelsUrl                 any
+	Language                  any
+	LanguagesUrl              any
+	License                   any
+	MergesUrl                 any
+	MilestonesUrl             any
+	MirrorUrl                 any
+	Name                      any
+	NetworkCount              any
+	NodeId                    any
+	NotificationsUrl          any
+	OpenIssues                any
+	OpenIssuesCount           any
+	Owner                     any
+	Permissions               any
+	Private                   any
 	PullRequestCreationPolicy any
-	PullsUrl any
-	PushedAt any
-	ReleasesUrl any
-	RoleName any
-	SecurityAndAnalysis any
-	Size any
-	SshUrl any
-	StargazersCount any
-	StargazersUrl any
-	StatusesUrl any
-	SubscribersCount any
-	SubscribersUrl any
-	SubscriptionUrl any
-	SvnUrl any
-	TagsUrl any
-	TeamsUrl any
-	TempCloneToken any
-	Topics any
-	TreesUrl any
-	UpdatedAt any
-	Url any
-	Visibility any
-	Watchers any
-	WatchersCount any
-	WebCommitSignoffRequired any
+	PullsUrl                  any
+	PushedAt                  any
+	ReleasesUrl               any
+	RoleName                  any
+	SecurityAndAnalysis       any
+	Size                      any
+	SshUrl                    any
+	StargazersCount           any
+	StargazersUrl             any
+	StatusesUrl               any
+	SubscribersCount          any
+	SubscribersUrl            any
+	SubscriptionUrl           any
+	SvnUrl                    any
+	TagsUrl                   any
+	TeamsUrl                  any
+	TempCloneToken            any
+	Topics                    any
+	TreesUrl                  any
+	UpdatedAt                 any
+	Url                       any
+	Visibility                any
+	Watchers                  any
+	WatchersCount             any
+	WebCommitSignoffRequired  any
 }
 
 type List_Codespaces_RuntimeConstraints struct {
@@ -196,59 +196,59 @@ type List_Codespaces_RuntimeConstraints struct {
 }
 
 type List_Codespaces struct {
-	BillableOwner any
-	CreatedAt any
-	DevcontainerPath any
-	DisplayName any
-	EnvironmentId any
-	GitStatus any
-	Id any
-	IdleTimeoutMinutes any
-	IdleTimeoutNotice any
-	LastKnownStopNotice any
-	LastUsedAt any
-	Location any
-	Machine any
-	MachinesUrl any
-	Name any
-	Owner any
-	PendingOperation any
+	BillableOwner                  any
+	CreatedAt                      any
+	DevcontainerPath               any
+	DisplayName                    any
+	EnvironmentId                  any
+	GitStatus                      any
+	Id                             any
+	IdleTimeoutMinutes             any
+	IdleTimeoutNotice              any
+	LastKnownStopNotice            any
+	LastUsedAt                     any
+	Location                       any
+	Machine                        any
+	MachinesUrl                    any
+	Name                           any
+	Owner                          any
+	PendingOperation               any
 	PendingOperationDisabledReason any
-	Prebuild any
-	PublishUrl any
-	PullsUrl any
-	RecentFolders any
-	Repository any
-	RetentionExpiresAt any
-	RetentionPeriodMinutes any
-	RuntimeConstraints any
-	StartUrl any
-	State any
-	StopUrl any
-	UpdatedAt any
-	Url any
-	WebUrl any
+	Prebuild                       any
+	PublishUrl                     any
+	PullsUrl                       any
+	RecentFolders                  any
+	Repository                     any
+	RetentionExpiresAt             any
+	RetentionPeriodMinutes         any
+	RuntimeConstraints             any
+	StartUrl                       any
+	State                          any
+	StopUrl                        any
+	UpdatedAt                      any
+	Url                            any
+	WebUrl                         any
 }
 
 type ListConfig struct {
-	Org any
-	Page any
+	Org     any
+	Page    any
 	PerPage any
 }
 
 type ListAttrs struct {
 	Codespaces any
-	Org any
-	Page any
-	PerPage any
+	Org        any
+	Page       any
+	PerPage    any
 	TotalCount any
 }
 
 var List = ubx.DataSourceBinding{
 	WireType: "github_codespace_list",
 	Fields: ubx.FieldMap{
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"Page": ubx.FieldSpec{WireName: "page"},
+		"Org":     ubx.FieldSpec{WireName: "org"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

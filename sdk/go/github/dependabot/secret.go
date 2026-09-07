@@ -39,9 +39,9 @@ var Secret = ubx.ResourceBinding{
 	WireType: "github_dependabot_secret",
 	Fields: ubx.FieldMap{
 		"EncryptedValue": ubx.FieldSpec{WireName: "encrypted_value"},
-		"KeyId": ubx.FieldSpec{WireName: "key_id"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"SecretName": ubx.FieldSpec{WireName: "secret_name"},
+		"KeyId":          ubx.FieldSpec{WireName: "key_id"},
+		"Owner":          ubx.FieldSpec{WireName: "owner"},
+		"Repo":           ubx.FieldSpec{WireName: "repo"},
+		"SecretName":     ubx.FieldSpec{WireName: "secret_name"},
 	},
 }

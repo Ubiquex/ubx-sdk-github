@@ -5,12 +5,12 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ReportConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type ReportAttrs struct {
 	Owner any
-	Repo any
+	Repo  any
 	// URL to poll for the SBOM export result.
 	SbomUrl any
 }
@@ -19,6 +19,6 @@ var Report = ubx.DataSourceBinding{
 	WireType: "github_generate_report",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

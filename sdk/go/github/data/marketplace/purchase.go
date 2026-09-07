@@ -4,38 +4,38 @@ package marketplace
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Purchase_MarketplacePendingChange_Plan struct {
-	AccountsUrl any
-	Bullets any
-	Description any
-	HasFreeTrial any
-	Id any
+	AccountsUrl         any
+	Bullets             any
+	Description         any
+	HasFreeTrial        any
+	Id                  any
 	MonthlyPriceInCents any
-	Name any
-	Number any
-	PriceModel any
-	State any
-	UnitName any
-	Url any
-	YearlyPriceInCents any
+	Name                any
+	Number              any
+	PriceModel          any
+	State               any
+	UnitName            any
+	Url                 any
+	YearlyPriceInCents  any
 }
 
 type Purchase_MarketplacePendingChange struct {
 	EffectiveDate any
-	Id any
-	IsInstalled any
+	Id            any
+	IsInstalled   any
 	// Marketplace Listing Plan
-	Plan any
+	Plan      any
 	UnitCount any
 }
 
 type Purchase_MarketplacePurchase struct {
-	BillingCycle any
+	BillingCycle    any
 	FreeTrialEndsOn any
-	IsInstalled any
+	IsInstalled     any
 	NextBillingDate any
-	OnFreeTrial any
+	OnFreeTrial     any
 	// Marketplace Listing Plan
-	Plan any
+	Plan      any
 	UnitCount any
 	UpdatedAt any
 }
@@ -45,15 +45,15 @@ type PurchaseConfig struct {
 }
 
 type PurchaseAttrs struct {
-	AccountId any
-	Email any
-	Id any
-	Login any
+	AccountId                any
+	Email                    any
+	Id                       any
+	Login                    any
 	MarketplacePendingChange any
-	MarketplacePurchase any
+	MarketplacePurchase      any
 	OrganizationBillingEmail any
-	Type any
-	Url any
+	Type                     any
+	Url                      any
 }
 
 var Purchase = ubx.DataSourceBinding{

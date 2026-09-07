@@ -5,36 +5,36 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type V2SingleSelectOptionsList_Configuration_Iterations_Title struct {
 	Html any
-	Raw any
+	Raw  any
 }
 
 type V2SingleSelectOptionsList_Configuration_Iterations struct {
 	Completed any
-	Duration any
-	Id any
+	Duration  any
+	Id        any
 	StartDate any
-	Title any
+	Title     any
 }
 
 type V2SingleSelectOptionsList_Configuration struct {
 	// The duration of the iteration in days.
-	Duration any
+	Duration   any
 	Iterations any
 	// The day of the week when the iteration starts.
 	StartDay any
 }
 
 type V2SingleSelectOptionsList_Options struct {
-	Color any
+	Color       any
 	Description any
-	Id any
-	Name any
+	Id          any
+	Name        any
 }
 
 type V2SingleSelectOptionsListConfig struct {
-	FieldId any
+	FieldId       any
 	ProjectNumber any
-	Username any
+	Username      any
 }
 
 type V2SingleSelectOptionsListAttrs struct {
@@ -44,7 +44,7 @@ type V2SingleSelectOptionsListAttrs struct {
 	CreatedAt any
 	// The field's data type.
 	DataType any
-	FieldId any
+	FieldId  any
 	// The unique identifier of the field.
 	Id any
 	// The ID of the issue field.
@@ -54,20 +54,20 @@ type V2SingleSelectOptionsListAttrs struct {
 	// The node ID of the field.
 	NodeId any
 	// The options available for single select fields.
-	Options any
+	Options       any
 	ProjectNumber any
 	// The API URL of the project that contains the field.
 	ProjectUrl any
 	// The time when the field was last updated.
 	UpdatedAt any
-	Username any
+	Username  any
 }
 
 var V2SingleSelectOptionsList = ubx.DataSourceBinding{
 	WireType: "github_projects_v2_single_select_options_list",
 	Fields: ubx.FieldMap{
-		"FieldId": ubx.FieldSpec{WireName: "field_id"},
+		"FieldId":       ubx.FieldSpec{WireName: "field_id"},
 		"ProjectNumber": ubx.FieldSpec{WireName: "project_number"},
-		"Username": ubx.FieldSpec{WireName: "username"},
+		"Username":      ubx.FieldSpec{WireName: "username"},
 	},
 }

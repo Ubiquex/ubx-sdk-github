@@ -12,7 +12,7 @@ type Membership_Organization struct {
 	EventsUrl any
 	// The API URL for the hooks (webhooks) associated with the organization. (AI-inferred)
 	HooksUrl any
-	Id any
+	Id       any
 	// The GitHub API URL template for accessing issues belonging to the organization, such as https://api.github.com/orgs/{org}/issues. (AI-inferred)
 	IssuesUrl any
 	// The login (username) of the GitHub organization. (AI-inferred)
@@ -25,7 +25,7 @@ type Membership_Organization struct {
 	PublicMembersUrl any
 	// The API URL that lists the repositories belonging to the organization. (AI-inferred)
 	ReposUrl any
-	Url any
+	Url      any
 }
 
 type Membership_Permissions struct {
@@ -50,10 +50,10 @@ type Membership_User struct {
 	GravatarId any
 	// The URL to the user's GitHub profile. (AI-inferred)
 	HtmlUrl any
-	Id any
+	Id      any
 	// The GitHub username (login) of the user who is a member of the organization. (AI-inferred)
 	Login any
-	Name any
+	Name  any
 	// The GraphQL node ID of the user. (AI-inferred)
 	NodeId any
 	// The URL to the user's organizations endpoint, which lists the organizations the user belongs to. (AI-inferred)
@@ -69,9 +69,9 @@ type Membership_User struct {
 	StarredUrl any
 	// The URL to the user's subscriptions API endpoint. (AI-inferred)
 	SubscriptionsUrl any
-	Type any
+	Type             any
 	// The GitHub API URL for the user. (AI-inferred)
-	Url any
+	Url          any
 	UserViewType any
 }
 
@@ -93,7 +93,7 @@ type MembershipAttrs struct {
 	Organization any
 	// The URL of the GitHub organization associated with this membership. (AI-inferred)
 	OrganizationUrl any
-	Permissions any
+	Permissions     any
 	// The role to give the user in the organization. Can be one of: * `admin` - The user will become an owner of the organization. * `member` - The user will become a non-owner member of the organization.
 	Role any
 	// The state of the member in the organization. The `pending` state indicates the user has not yet accepted an invitation.
@@ -111,8 +111,8 @@ type MembershipAttrs struct {
 var Membership = ubx.ResourceBinding{
 	WireType: "github_org_membership",
 	Fields: ubx.FieldMap{
-		"Role": ubx.FieldSpec{WireName: "role"},
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Role":     ubx.FieldSpec{WireName: "role"},
+		"Org":      ubx.FieldSpec{WireName: "org"},
 		"Username": ubx.FieldSpec{WireName: "username"},
 	},
 }

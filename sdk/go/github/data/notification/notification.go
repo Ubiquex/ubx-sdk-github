@@ -4,31 +4,31 @@ package notification
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type NotificationConfig struct {
-	All any
-	Before any
-	Page any
+	All           any
+	Before        any
+	Page          any
 	Participating any
-	PerPage any
-	Since any
+	PerPage       any
+	Since         any
 }
 
 type NotificationAttrs struct {
-	All any
-	Before any
-	Page any
+	All           any
+	Before        any
+	Page          any
 	Participating any
-	PerPage any
-	Since any
+	PerPage       any
+	Since         any
 }
 
 var Notification = ubx.DataSourceBinding{
 	WireType: "github_notification",
 	Fields: ubx.FieldMap{
-		"All": ubx.FieldSpec{WireName: "all"},
-		"Before": ubx.FieldSpec{WireName: "before"},
-		"Page": ubx.FieldSpec{WireName: "page"},
+		"All":           ubx.FieldSpec{WireName: "all"},
+		"Before":        ubx.FieldSpec{WireName: "before"},
+		"Page":          ubx.FieldSpec{WireName: "page"},
 		"Participating": ubx.FieldSpec{WireName: "participating"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Since": ubx.FieldSpec{WireName: "since"},
+		"PerPage":       ubx.FieldSpec{WireName: "per_page"},
+		"Since":         ubx.FieldSpec{WireName: "since"},
 	},
 }

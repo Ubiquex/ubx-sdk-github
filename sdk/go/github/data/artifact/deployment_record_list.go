@@ -4,28 +4,28 @@ package artifact
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type DeploymentRecordList_DeploymentRecords struct {
-	AttestationId any
-	Cluster any
-	CreatedAt any
-	DeploymentName any
-	Digest any
-	Id any
-	LogicalEnvironment any
+	AttestationId       any
+	Cluster             any
+	CreatedAt           any
+	DeploymentName      any
+	Digest              any
+	Id                  any
+	LogicalEnvironment  any
 	PhysicalEnvironment any
-	RuntimeRisks any
-	Tags any
-	UpdatedAt any
+	RuntimeRisks        any
+	Tags                any
+	UpdatedAt           any
 }
 
 type DeploymentRecordListConfig struct {
-	Org any
+	Org           any
 	SubjectDigest any
 }
 
 type DeploymentRecordListAttrs struct {
 	DeploymentRecords any
-	Org any
-	SubjectDigest any
+	Org               any
+	SubjectDigest     any
 	// The number of deployment records for this digest and organization
 	TotalCount any
 }
@@ -33,7 +33,7 @@ type DeploymentRecordListAttrs struct {
 var DeploymentRecordList = ubx.DataSourceBinding{
 	WireType: "github_artifact_deployment_record_list",
 	Fields: ubx.FieldMap{
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Org":           ubx.FieldSpec{WireName: "org"},
 		"SubjectDigest": ubx.FieldSpec{WireName: "subject_digest"},
 	},
 }

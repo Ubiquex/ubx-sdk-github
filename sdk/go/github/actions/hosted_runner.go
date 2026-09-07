@@ -45,10 +45,10 @@ type HostedRunner_PublicIps struct {
 }
 
 var HostedRunner_ImageFields = ubx.FieldMap{
-		"Id": ubx.FieldSpec{WireName: "id"},
-		"Source": ubx.FieldSpec{WireName: "source"},
-		"Version": ubx.FieldSpec{WireName: "version"},
-	}
+	"Id":      ubx.FieldSpec{WireName: "id"},
+	"Source":  ubx.FieldSpec{WireName: "source"},
+	"Version": ubx.FieldSpec{WireName: "version"},
+}
 
 type HostedRunnerConfig struct {
 	// Whether this runner should be created with a static public IP. Note limit on account. To list limits on account, use `GET actions/hosted-runners/limits`
@@ -114,15 +114,15 @@ var HostedRunner = ubx.ResourceBinding{
 		"EnableStaticIp": ubx.FieldSpec{WireName: "enable_static_ip"},
 		"Image": ubx.FieldSpec{
 			WireName: "image",
-			Kind: "object",
-			Fields: HostedRunner_ImageFields,
+			Kind:     "object",
+			Fields:   HostedRunner_ImageFields,
 		},
-		"ImageGen": ubx.FieldSpec{WireName: "image_gen"},
+		"ImageGen":       ubx.FieldSpec{WireName: "image_gen"},
 		"MaximumRunners": ubx.FieldSpec{WireName: "maximum_runners"},
-		"Name": ubx.FieldSpec{WireName: "name"},
-		"RunnerGroupId": ubx.FieldSpec{WireName: "runner_group_id"},
-		"Size": ubx.FieldSpec{WireName: "size"},
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
+		"Name":           ubx.FieldSpec{WireName: "name"},
+		"RunnerGroupId":  ubx.FieldSpec{WireName: "runner_group_id"},
+		"Size":           ubx.FieldSpec{WireName: "size"},
+		"Enterprise":     ubx.FieldSpec{WireName: "enterprise"},
 		"HostedRunnerId": ubx.FieldSpec{WireName: "hosted_runner_id"},
 	},
 }

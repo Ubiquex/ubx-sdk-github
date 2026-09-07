@@ -4,58 +4,58 @@ package check
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type RunList_CheckRuns_App_Owner struct {
-	AvatarUrl any
-	CreatedAt any
-	Description any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	CreatedAt         any
+	Description       any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	Slug any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	UpdatedAt any
-	Url any
-	UserViewType any
-	WebsiteUrl any
+	ReposUrl          any
+	SiteAdmin         any
+	Slug              any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	UpdatedAt         any
+	Url               any
+	UserViewType      any
+	WebsiteUrl        any
 }
 
 type RunList_CheckRuns_App_Permissions struct {
-	Checks any
-	Contents any
+	Checks      any
+	Contents    any
 	Deployments any
-	Issues any
-	Metadata any
+	Issues      any
+	Metadata    any
 }
 
 type RunList_CheckRuns_App struct {
-	ClientId any
-	CreatedAt any
-	Description any
-	Events any
-	ExternalUrl any
-	HtmlUrl any
-	Id any
+	ClientId           any
+	CreatedAt          any
+	Description        any
+	Events             any
+	ExternalUrl        any
+	HtmlUrl            any
+	Id                 any
 	InstallationsCount any
-	Name any
-	NodeId any
-	Owner any
-	Permissions any
-	Slug any
-	UpdatedAt any
+	Name               any
+	NodeId             any
+	Owner              any
+	Permissions        any
+	Slug               any
+	UpdatedAt          any
 }
 
 type RunList_CheckRuns_CheckSuite struct {
@@ -63,104 +63,104 @@ type RunList_CheckRuns_CheckSuite struct {
 }
 
 type RunList_CheckRuns_Deployment struct {
-	CreatedAt any
-	Description any
-	Environment any
-	Id any
-	NodeId any
-	OriginalEnvironment any
+	CreatedAt             any
+	Description           any
+	Environment           any
+	Id                    any
+	NodeId                any
+	OriginalEnvironment   any
 	PerformedViaGithubApp any
 	ProductionEnvironment any
-	RepositoryUrl any
-	StatusesUrl any
-	Task any
-	TransientEnvironment any
-	UpdatedAt any
-	Url any
+	RepositoryUrl         any
+	StatusesUrl           any
+	Task                  any
+	TransientEnvironment  any
+	UpdatedAt             any
+	Url                   any
 }
 
 type RunList_CheckRuns_Output struct {
 	AnnotationsCount any
-	AnnotationsUrl any
-	Summary any
-	Text any
-	Title any
+	AnnotationsUrl   any
+	Summary          any
+	Text             any
+	Title            any
 }
 
 type RunList_CheckRuns_PullRequests_Base_Repo struct {
-	Id any
+	Id   any
 	Name any
-	Url any
+	Url  any
 }
 
 type RunList_CheckRuns_PullRequests_Base struct {
-	Ref any
+	Ref  any
 	Repo any
-	Sha any
+	Sha  any
 }
 
 type RunList_CheckRuns_PullRequests struct {
-	Base any
-	Head any
-	Id any
+	Base   any
+	Head   any
+	Id     any
 	Number any
-	Url any
+	Url    any
 }
 
 type RunList_CheckRuns struct {
-	App any
-	CheckSuite any
-	CompletedAt any
-	Conclusion any
-	Deployment any
-	DetailsUrl any
-	ExternalId any
-	HeadSha any
-	HtmlUrl any
-	Id any
-	Name any
-	NodeId any
-	Output any
+	App          any
+	CheckSuite   any
+	CompletedAt  any
+	Conclusion   any
+	Deployment   any
+	DetailsUrl   any
+	ExternalId   any
+	HeadSha      any
+	HtmlUrl      any
+	Id           any
+	Name         any
+	NodeId       any
+	Output       any
 	PullRequests any
-	StartedAt any
-	Status any
-	Url any
+	StartedAt    any
+	Status       any
+	Url          any
 }
 
 type RunListConfig struct {
-	CheckName any
+	CheckName    any
 	CheckSuiteId any
-	Filter any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
-	Status any
+	Filter       any
+	Owner        any
+	Page         any
+	PerPage      any
+	Repo         any
+	Status       any
 }
 
 type RunListAttrs struct {
-	CheckName any
-	CheckRuns any
+	CheckName    any
+	CheckRuns    any
 	CheckSuiteId any
-	Filter any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
-	Status any
-	TotalCount any
+	Filter       any
+	Owner        any
+	Page         any
+	PerPage      any
+	Repo         any
+	Status       any
+	TotalCount   any
 }
 
 var RunList = ubx.DataSourceBinding{
 	WireType: "github_check_run_list",
 	Fields: ubx.FieldMap{
-		"CheckName": ubx.FieldSpec{WireName: "check_name"},
+		"CheckName":    ubx.FieldSpec{WireName: "check_name"},
 		"CheckSuiteId": ubx.FieldSpec{WireName: "check_suite_id"},
-		"Filter": ubx.FieldSpec{WireName: "filter"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"Status": ubx.FieldSpec{WireName: "status"},
+		"Filter":       ubx.FieldSpec{WireName: "filter"},
+		"Owner":        ubx.FieldSpec{WireName: "owner"},
+		"Page":         ubx.FieldSpec{WireName: "page"},
+		"PerPage":      ubx.FieldSpec{WireName: "per_page"},
+		"Repo":         ubx.FieldSpec{WireName: "repo"},
+		"Status":       ubx.FieldSpec{WireName: "status"},
 	},
 }

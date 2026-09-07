@@ -5,32 +5,32 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type SecretList_Secrets struct {
 	CreatedAt any
-	Name any
+	Name      any
 	UpdatedAt any
 }
 
 type SecretListConfig struct {
-	Owner any
-	Page any
+	Owner   any
+	Page    any
 	PerPage any
-	Repo any
+	Repo    any
 }
 
 type SecretListAttrs struct {
-	Owner any
-	Page any
-	PerPage any
-	Repo any
-	Secrets any
+	Owner      any
+	Page       any
+	PerPage    any
+	Repo       any
+	Secrets    any
 	TotalCount any
 }
 
 var SecretList = ubx.DataSourceBinding{
 	WireType: "github_actions_secret_list",
 	Fields: ubx.FieldMap{
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
+		"Owner":   ubx.FieldSpec{WireName: "owner"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":    ubx.FieldSpec{WireName: "repo"},
 	},
 }

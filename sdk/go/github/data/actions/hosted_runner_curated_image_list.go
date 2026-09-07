@@ -5,10 +5,10 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type HostedRunnerCuratedImageList_Images struct {
 	DisplayName any
-	Id any
-	Platform any
-	SizeGb any
-	Source any
+	Id          any
+	Platform    any
+	SizeGb      any
+	Source      any
 }
 
 type HostedRunnerCuratedImageListConfig struct {
@@ -17,7 +17,7 @@ type HostedRunnerCuratedImageListConfig struct {
 
 type HostedRunnerCuratedImageListAttrs struct {
 	Enterprise any
-	Images any
+	Images     any
 	TotalCount any
 }
 

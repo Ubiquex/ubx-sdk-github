@@ -4,17 +4,17 @@ package actions
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type VariableConfig struct {
-	Name any
+	Name  any
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type VariableAttrs struct {
 	// The date and time at which the variable was created, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
 	CreatedAt any
-	Name any
-	Owner any
-	Repo any
+	Name      any
+	Owner     any
+	Repo      any
 	// The date and time at which the variable was last updated, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
 	UpdatedAt any
 	// The value of the variable.
@@ -24,8 +24,8 @@ type VariableAttrs struct {
 var Variable = ubx.DataSourceBinding{
 	WireType: "github_actions_variable",
 	Fields: ubx.FieldMap{
-		"Name": ubx.FieldSpec{WireName: "name"},
+		"Name":  ubx.FieldSpec{WireName: "name"},
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

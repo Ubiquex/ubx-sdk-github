@@ -116,7 +116,7 @@ type Request_Milestone struct {
 	DueOn any
 	// The URL to view the milestone on GitHub. (AI-inferred)
 	HtmlUrl any
-	Id any
+	Id      any
 	// The URL for the labels endpoint of this milestone, which lists the labels associated with it. (AI-inferred)
 	LabelsUrl any
 	// The node ID of the milestone in the GitHub GraphQL API. (AI-inferred)
@@ -137,7 +137,7 @@ type Request_Milestone struct {
 
 type Request_RequestedTeams struct {
 	// The description of the team that is requested for review on the pull request. (AI-inferred)
-	Description any
+	Description  any
 	EnterpriseId any
 	// The URL to the team's page on GitHub. (AI-inferred)
 	HtmlUrl any
@@ -265,7 +265,7 @@ type RequestAttrs struct {
 	Issue any
 	// The GitHub API URL for the issue associated with this pull request. Since pull requests are issues, this URL points to the pull request's issue endpoint. (AI-inferred)
 	IssueUrl any
-	Labels any
+	Labels   any
 	// Indicates whether the pull request conversation is locked, restricting commenting to users with write access. This is a read-only value set by GitHub. (AI-inferred)
 	Locked any
 	// Indicates whether [maintainers can modify](https://docs.github.com/enterprise-cloud@latest/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/) the pull request.
@@ -327,16 +327,16 @@ type RequestAttrs struct {
 var Request = ubx.ResourceBinding{
 	WireType: "github_pull_request",
 	Fields: ubx.FieldMap{
-		"Base": ubx.FieldSpec{WireName: "base"},
-		"Body": ubx.FieldSpec{WireName: "body"},
-		"Draft": ubx.FieldSpec{WireName: "draft"},
-		"Head": ubx.FieldSpec{WireName: "head"},
-		"HeadRepo": ubx.FieldSpec{WireName: "head_repo"},
-		"Issue": ubx.FieldSpec{WireName: "issue"},
+		"Base":                ubx.FieldSpec{WireName: "base"},
+		"Body":                ubx.FieldSpec{WireName: "body"},
+		"Draft":               ubx.FieldSpec{WireName: "draft"},
+		"Head":                ubx.FieldSpec{WireName: "head"},
+		"HeadRepo":            ubx.FieldSpec{WireName: "head_repo"},
+		"Issue":               ubx.FieldSpec{WireName: "issue"},
 		"MaintainerCanModify": ubx.FieldSpec{WireName: "maintainer_can_modify"},
-		"Title": ubx.FieldSpec{WireName: "title"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"PullNumber": ubx.FieldSpec{WireName: "pull_number"},
+		"Title":               ubx.FieldSpec{WireName: "title"},
+		"Owner":               ubx.FieldSpec{WireName: "owner"},
+		"Repo":                ubx.FieldSpec{WireName: "repo"},
+		"PullNumber":          ubx.FieldSpec{WireName: "pull_number"},
 	},
 }

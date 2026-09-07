@@ -5,51 +5,51 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type HostedRunnerList_Runners_ImageDetails struct {
 	DisplayName any
-	Id any
-	SizeGb any
-	Source any
-	Version any
+	Id          any
+	SizeGb      any
+	Source      any
+	Version     any
 }
 
 type HostedRunnerList_Runners_MachineSizeDetails struct {
-	CpuCores any
-	Id any
-	MemoryGb any
+	CpuCores  any
+	Id        any
+	MemoryGb  any
 	StorageGb any
 }
 
 type HostedRunnerList_Runners_PublicIps struct {
 	Enabled any
-	Length any
-	Prefix any
+	Length  any
+	Prefix  any
 }
 
 type HostedRunnerList_Runners struct {
-	Id any
-	ImageDetails any
-	ImageGen any
-	LastActiveOn any
+	Id                 any
+	ImageDetails       any
+	ImageGen           any
+	LastActiveOn       any
 	MachineSizeDetails any
-	MaximumRunners any
-	Name any
-	Platform any
-	PublicIpEnabled any
-	PublicIps any
-	RunnerGroupId any
-	Status any
+	MaximumRunners     any
+	Name               any
+	Platform           any
+	PublicIpEnabled    any
+	PublicIps          any
+	RunnerGroupId      any
+	Status             any
 }
 
 type HostedRunnerListConfig struct {
 	Enterprise any
-	Page any
-	PerPage any
+	Page       any
+	PerPage    any
 }
 
 type HostedRunnerListAttrs struct {
 	Enterprise any
-	Page any
-	PerPage any
-	Runners any
+	Page       any
+	PerPage    any
+	Runners    any
 	TotalCount any
 }
 
@@ -57,7 +57,7 @@ var HostedRunnerList = ubx.DataSourceBinding{
 	WireType: "github_actions_hosted_runner_list",
 	Fields: ubx.FieldMap{
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Page":       ubx.FieldSpec{WireName: "page"},
+		"PerPage":    ubx.FieldSpec{WireName: "per_page"},
 	},
 }

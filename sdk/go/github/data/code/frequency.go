@@ -5,18 +5,18 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type FrequencyConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type FrequencyAttrs struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 var Frequency = ubx.DataSourceBinding{
 	WireType: "github_code_frequency",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

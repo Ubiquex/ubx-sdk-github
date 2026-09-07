@@ -37,7 +37,7 @@ type Run_App_Owner struct {
 	Id any
 	// The login name (username or organization name) of the GitHub App owner. (AI-inferred)
 	Login any
-	Name any
+	Name  any
 	// The GraphQL node ID of the app's owner (user or organization). (AI-inferred)
 	NodeId any
 	// The API URL that lists the organizations this owner belongs to, as defined by the GitHub API owner object. (AI-inferred)
@@ -48,7 +48,7 @@ type Run_App_Owner struct {
 	ReposUrl any
 	// Whether the owner (user or organization) is a site administrator for GitHub Enterprise. (AI-inferred)
 	SiteAdmin any
-	Slug any
+	Slug      any
 	StarredAt any
 	// The URL template for the owner's starred repositories, as specified by the GitHub API. It typically includes placeholders for owner and repository information. (AI-inferred)
 	StarredUrl any
@@ -59,7 +59,7 @@ type Run_App_Owner struct {
 	// The timestamp (ISO 8601) when the owner of the GitHub App was last updated. (AI-inferred)
 	UpdatedAt any
 	// The GitHub API URL for the owner (user or organization) of the GitHub App associated with the check run. (AI-inferred)
-	Url any
+	Url          any
 	UserViewType any
 	// The website URL of the owner (user or organization) of the GitHub App that created or is associated with this check run. (AI-inferred)
 	WebsiteUrl any
@@ -176,9 +176,9 @@ type Run_Output_Images struct {
 
 type Run_Output struct {
 	// Adds information from your analysis to specific lines of code. Annotations are visible on GitHub in the **Checks** and **Files changed** tab of the pull request. The Checks API limits the number of annotations to a maximum of 50 per API request. To create more than 50 annotations, you have to make multiple requests to the [Update a check run](https://docs.github.com/enterprise-cloud@latest/rest/checks/runs#update-a-check-run) endpoint. Each time you update the check run, annotations are appended to the list of annotations that already exist for the check run. GitHub Actions are limited to 10 warning annotations and 10 error annotations per step. For details about how you can view annotations on GitHub, see "[About status checks](https://docs.github.com/enterprise-cloud@latest/articles/about-status-checks#checks)".
-	Annotations any
+	Annotations      any
 	AnnotationsCount any
-	AnnotationsUrl any
+	AnnotationsUrl   any
 	// Adds images to the output displayed in the GitHub pull request UI.
 	Images any
 	// The summary of the check run. This parameter supports Markdown. **Maximum length**: 65535 characters.
@@ -220,46 +220,46 @@ type Run_PullRequests struct {
 }
 
 var Run_ActionsFields = ubx.FieldMap{
-		"Description": ubx.FieldSpec{WireName: "description"},
-		"Identifier": ubx.FieldSpec{WireName: "identifier"},
-		"Label": ubx.FieldSpec{WireName: "label"},
-	}
+	"Description": ubx.FieldSpec{WireName: "description"},
+	"Identifier":  ubx.FieldSpec{WireName: "identifier"},
+	"Label":       ubx.FieldSpec{WireName: "label"},
+}
 
 var Run_Output_AnnotationsFields = ubx.FieldMap{
-		"AnnotationLevel": ubx.FieldSpec{WireName: "annotation_level"},
-		"EndColumn": ubx.FieldSpec{WireName: "end_column"},
-		"EndLine": ubx.FieldSpec{WireName: "end_line"},
-		"Message": ubx.FieldSpec{WireName: "message"},
-		"Path": ubx.FieldSpec{WireName: "path"},
-		"RawDetails": ubx.FieldSpec{WireName: "raw_details"},
-		"StartColumn": ubx.FieldSpec{WireName: "start_column"},
-		"StartLine": ubx.FieldSpec{WireName: "start_line"},
-		"Title": ubx.FieldSpec{WireName: "title"},
-	}
+	"AnnotationLevel": ubx.FieldSpec{WireName: "annotation_level"},
+	"EndColumn":       ubx.FieldSpec{WireName: "end_column"},
+	"EndLine":         ubx.FieldSpec{WireName: "end_line"},
+	"Message":         ubx.FieldSpec{WireName: "message"},
+	"Path":            ubx.FieldSpec{WireName: "path"},
+	"RawDetails":      ubx.FieldSpec{WireName: "raw_details"},
+	"StartColumn":     ubx.FieldSpec{WireName: "start_column"},
+	"StartLine":       ubx.FieldSpec{WireName: "start_line"},
+	"Title":           ubx.FieldSpec{WireName: "title"},
+}
 
 var Run_Output_ImagesFields = ubx.FieldMap{
-		"Alt": ubx.FieldSpec{WireName: "alt"},
-		"Caption": ubx.FieldSpec{WireName: "caption"},
-		"ImageUrl": ubx.FieldSpec{WireName: "image_url"},
-	}
+	"Alt":      ubx.FieldSpec{WireName: "alt"},
+	"Caption":  ubx.FieldSpec{WireName: "caption"},
+	"ImageUrl": ubx.FieldSpec{WireName: "image_url"},
+}
 
 var Run_OutputFields = ubx.FieldMap{
-		"Annotations": ubx.FieldSpec{
-			WireName: "annotations",
-			Kind: "list",
-			Fields: Run_Output_AnnotationsFields,
-		},
-		"AnnotationsCount": ubx.FieldSpec{WireName: "annotations_count"},
-		"AnnotationsUrl": ubx.FieldSpec{WireName: "annotations_url"},
-		"Images": ubx.FieldSpec{
-			WireName: "images",
-			Kind: "list",
-			Fields: Run_Output_ImagesFields,
-		},
-		"Summary": ubx.FieldSpec{WireName: "summary"},
-		"Text": ubx.FieldSpec{WireName: "text"},
-		"Title": ubx.FieldSpec{WireName: "title"},
-	}
+	"Annotations": ubx.FieldSpec{
+		WireName: "annotations",
+		Kind:     "list",
+		Fields:   Run_Output_AnnotationsFields,
+	},
+	"AnnotationsCount": ubx.FieldSpec{WireName: "annotations_count"},
+	"AnnotationsUrl":   ubx.FieldSpec{WireName: "annotations_url"},
+	"Images": ubx.FieldSpec{
+		WireName: "images",
+		Kind:     "list",
+		Fields:   Run_Output_ImagesFields,
+	},
+	"Summary": ubx.FieldSpec{WireName: "summary"},
+	"Text":    ubx.FieldSpec{WireName: "text"},
+	"Title":   ubx.FieldSpec{WireName: "title"},
+}
 
 type RunConfig struct {
 	// Displays a button on GitHub that can be clicked to alert your app to do additional tasks. For example, a code linting app can display a button that automatically fixes detected errors. The button created in this object is displayed after the check run completes. When a user clicks the button, GitHub sends the [`check_run.requested_action` webhook](https://docs.github.com/enterprise-cloud@latest/webhooks/event-payloads/#check_run) to your app. Each action includes a `label`, `identifier` and `description`. A maximum of three actions are accepted. To learn more about check runs and requested actions, see "[Check runs and requested actions](https://docs.github.com/enterprise-cloud@latest/rest/guides/using-the-rest-api-to-interact-with-checks#check-runs-and-requested-actions)."
@@ -340,24 +340,24 @@ var Run = ubx.ResourceBinding{
 	Fields: ubx.FieldMap{
 		"Actions": ubx.FieldSpec{
 			WireName: "actions",
-			Kind: "list",
-			Fields: Run_ActionsFields,
+			Kind:     "list",
+			Fields:   Run_ActionsFields,
 		},
 		"CompletedAt": ubx.FieldSpec{WireName: "completed_at"},
-		"Conclusion": ubx.FieldSpec{WireName: "conclusion"},
-		"DetailsUrl": ubx.FieldSpec{WireName: "details_url"},
-		"ExternalId": ubx.FieldSpec{WireName: "external_id"},
-		"HeadSha": ubx.FieldSpec{WireName: "head_sha"},
-		"Name": ubx.FieldSpec{WireName: "name"},
+		"Conclusion":  ubx.FieldSpec{WireName: "conclusion"},
+		"DetailsUrl":  ubx.FieldSpec{WireName: "details_url"},
+		"ExternalId":  ubx.FieldSpec{WireName: "external_id"},
+		"HeadSha":     ubx.FieldSpec{WireName: "head_sha"},
+		"Name":        ubx.FieldSpec{WireName: "name"},
 		"Output": ubx.FieldSpec{
 			WireName: "output",
-			Kind: "object",
-			Fields: Run_OutputFields,
+			Kind:     "object",
+			Fields:   Run_OutputFields,
 		},
-		"StartedAt": ubx.FieldSpec{WireName: "started_at"},
-		"Status": ubx.FieldSpec{WireName: "status"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"StartedAt":  ubx.FieldSpec{WireName: "started_at"},
+		"Status":     ubx.FieldSpec{WireName: "status"},
+		"Owner":      ubx.FieldSpec{WireName: "owner"},
+		"Repo":       ubx.FieldSpec{WireName: "repo"},
 		"CheckRunId": ubx.FieldSpec{WireName: "check_run_id"},
 	},
 }

@@ -4,60 +4,60 @@ package repository
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type CollaboratorPermission_User_Permissions struct {
-	Admin any
+	Admin    any
 	Maintain any
-	Pull any
-	Push any
-	Triage any
+	Pull     any
+	Push     any
+	Triage   any
 }
 
 type CollaboratorPermission_User struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
-	Permissions any
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
+	Permissions       any
 	ReceivedEventsUrl any
-	ReposUrl any
-	RoleName any
-	SiteAdmin any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	RoleName          any
+	SiteAdmin         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type CollaboratorPermissionConfig struct {
-	Owner any
-	Repo any
+	Owner    any
+	Repo     any
 	Username any
 }
 
 type CollaboratorPermissionAttrs struct {
-	Owner any
+	Owner      any
 	Permission any
-	Repo any
-	RoleName any
+	Repo       any
+	RoleName   any
 	// Collaborator
-	User any
+	User     any
 	Username any
 }
 
 var CollaboratorPermission = ubx.DataSourceBinding{
 	WireType: "github_repository_collaborator_permission",
 	Fields: ubx.FieldMap{
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":    ubx.FieldSpec{WireName: "owner"},
+		"Repo":     ubx.FieldSpec{WireName: "repo"},
 		"Username": ubx.FieldSpec{WireName: "username"},
 	},
 }

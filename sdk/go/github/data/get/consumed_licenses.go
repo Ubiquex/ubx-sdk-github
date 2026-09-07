@@ -4,46 +4,46 @@ package get
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ConsumedLicenses_Users struct {
-	EnterpriseServerEmails any
-	EnterpriseServerUser any
-	EnterpriseServerUserIds any
-	GithubComEnterpriseRoles any
-	GithubComLogin any
-	GithubComMemberRoles any
-	GithubComName any
+	EnterpriseServerEmails          any
+	EnterpriseServerUser            any
+	EnterpriseServerUserIds         any
+	GithubComEnterpriseRoles        any
+	GithubComLogin                  any
+	GithubComMemberRoles            any
+	GithubComName                   any
 	GithubComOrgsWithPendingInvites any
-	GithubComProfile any
-	GithubComSamlNameId any
-	GithubComTwoFactorAuth any
-	GithubComUser any
-	GithubComVerifiedDomainEmails any
-	LicenseType any
-	TotalUserAccounts any
-	VisualStudioLicenseStatus any
-	VisualStudioSubscriptionEmail any
-	VisualStudioSubscriptionUser any
+	GithubComProfile                any
+	GithubComSamlNameId             any
+	GithubComTwoFactorAuth          any
+	GithubComUser                   any
+	GithubComVerifiedDomainEmails   any
+	LicenseType                     any
+	TotalUserAccounts               any
+	VisualStudioLicenseStatus       any
+	VisualStudioSubscriptionEmail   any
+	VisualStudioSubscriptionUser    any
 }
 
 type ConsumedLicensesConfig struct {
 	Enterprise any
-	Page any
-	PerPage any
+	Page       any
+	PerPage    any
 }
 
 type ConsumedLicensesAttrs struct {
-	Enterprise any
-	Page any
-	PerPage any
-	TotalSeatsConsumed any
+	Enterprise          any
+	Page                any
+	PerPage             any
+	TotalSeatsConsumed  any
 	TotalSeatsPurchased any
-	Users any
+	Users               any
 }
 
 var ConsumedLicenses = ubx.DataSourceBinding{
 	WireType: "github_get_consumed_licenses",
 	Fields: ubx.FieldMap{
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Page":       ubx.FieldSpec{WireName: "page"},
+		"PerPage":    ubx.FieldSpec{WireName: "per_page"},
 	},
 }

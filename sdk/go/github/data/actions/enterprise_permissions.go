@@ -12,7 +12,7 @@ type EnterprisePermissionsAttrs struct {
 	AllowedActions any
 	// The policy that controls the organizations in the enterprise that are allowed to run GitHub Actions.
 	EnabledOrganizations any
-	Enterprise any
+	Enterprise           any
 	// The API URL to use to get or set the actions and reusable workflows that are allowed to run, when `allowed_actions` is set to `selected`.
 	SelectedActionsUrl any
 	// The API URL to use to get or set the selected organizations that are allowed to run GitHub Actions, when `enabled_organizations` is set to `selected`.

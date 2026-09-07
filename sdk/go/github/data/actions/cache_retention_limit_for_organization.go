@@ -10,7 +10,7 @@ type CacheRetentionLimitForOrganizationConfig struct {
 type CacheRetentionLimitForOrganizationAttrs struct {
 	// For repositories in this organization, the maximum duration, in days, for which caches in a repository may be retained.
 	MaxCacheRetentionDays any
-	Org any
+	Org                   any
 }
 
 var CacheRetentionLimitForOrganization = ubx.DataSourceBinding{

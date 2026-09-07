@@ -4,22 +4,22 @@ package gist
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type GistConfig struct {
-	Page any
+	Page    any
 	PerPage any
-	Since any
+	Since   any
 }
 
 type GistAttrs struct {
-	Page any
+	Page    any
 	PerPage any
-	Since any
+	Since   any
 }
 
 var Gist = ubx.DataSourceBinding{
 	WireType: "github_gist",
 	Fields: ubx.FieldMap{
-		"Page": ubx.FieldSpec{WireName: "page"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Since": ubx.FieldSpec{WireName: "since"},
+		"Since":   ubx.FieldSpec{WireName: "since"},
 	},
 }

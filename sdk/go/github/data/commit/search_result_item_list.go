@@ -4,34 +4,34 @@ package commit
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type SearchResultItemList_Items_Author struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type SearchResultItemList_Items_Commit_Author struct {
-	Date any
+	Date  any
 	Email any
-	Name any
+	Name  any
 }
 
 type SearchResultItemList_Items_Commit_Tree struct {
@@ -40,51 +40,51 @@ type SearchResultItemList_Items_Commit_Tree struct {
 }
 
 type SearchResultItemList_Items_Commit_Verification struct {
-	Payload any
-	Reason any
-	Signature any
-	Verified any
+	Payload    any
+	Reason     any
+	Signature  any
+	Verified   any
 	VerifiedAt any
 }
 
 type SearchResultItemList_Items_Commit struct {
-	Author any
+	Author       any
 	CommentCount any
-	Committer any
-	Message any
-	Tree any
-	Url any
+	Committer    any
+	Message      any
+	Tree         any
+	Url          any
 	Verification any
 }
 
 type SearchResultItemList_Items_Parents struct {
 	HtmlUrl any
-	Sha any
-	Url any
+	Sha     any
+	Url     any
 }
 
 type SearchResultItemList_Items_Repository_CodeOfConduct struct {
-	Body any
+	Body    any
 	HtmlUrl any
-	Key any
-	Name any
-	Url any
+	Key     any
+	Name    any
+	Url     any
 }
 
 type SearchResultItemList_Items_Repository_License struct {
-	Key any
-	Name any
+	Key    any
+	Name   any
 	NodeId any
 	SpdxId any
-	Url any
+	Url    any
 }
 
 type SearchResultItemList_Items_Repository_Permissions struct {
-	Admin any
+	Admin    any
 	Maintain any
-	Pull any
-	Push any
-	Triage any
+	Pull     any
+	Push     any
+	Triage   any
 }
 
 type SearchResultItemList_Items_Repository_SecurityAndAnalysis_AdvancedSecurity struct {
@@ -92,8 +92,8 @@ type SearchResultItemList_Items_Repository_SecurityAndAnalysis_AdvancedSecurity 
 }
 
 type SearchResultItemList_Items_Repository_SecurityAndAnalysis_SecretScanningDelegatedBypassOptions_Reviewers struct {
-	Mode any
-	ReviewerId any
+	Mode         any
+	ReviewerId   any
 	ReviewerType any
 }
 
@@ -102,166 +102,166 @@ type SearchResultItemList_Items_Repository_SecurityAndAnalysis_SecretScanningDel
 }
 
 type SearchResultItemList_Items_Repository_SecurityAndAnalysis struct {
-	AdvancedSecurity any
-	CodeSecurity any
-	DependabotSecurityUpdates any
-	SecretScanning any
-	SecretScanningAiDetection any
+	AdvancedSecurity                      any
+	CodeSecurity                          any
+	DependabotSecurityUpdates             any
+	SecretScanning                        any
+	SecretScanningAiDetection             any
 	SecretScanningDelegatedAlertDismissal any
-	SecretScanningDelegatedBypass any
-	SecretScanningDelegatedBypassOptions any
-	SecretScanningNonProviderPatterns any
-	SecretScanningPushProtection any
-	SecretScanningValidityChecks any
+	SecretScanningDelegatedBypass         any
+	SecretScanningDelegatedBypassOptions  any
+	SecretScanningNonProviderPatterns     any
+	SecretScanningPushProtection          any
+	SecretScanningValidityChecks          any
 }
 
 type SearchResultItemList_Items_Repository struct {
-	AllowForking any
-	ArchiveUrl any
-	Archived any
-	AssigneesUrl any
-	BlobsUrl any
-	BranchesUrl any
-	CloneUrl any
-	CodeOfConduct any
-	CollaboratorsUrl any
-	CommentsUrl any
-	CommitsUrl any
-	CompareUrl any
-	ContentsUrl any
-	ContributorsUrl any
-	CreatedAt any
-	CustomProperties any
-	DefaultBranch any
-	DeleteBranchOnMerge any
-	DeploymentsUrl any
-	Description any
-	Disabled any
-	DownloadsUrl any
-	EventsUrl any
-	Fork any
-	Forks any
-	ForksCount any
-	ForksUrl any
-	FullName any
-	GitCommitsUrl any
-	GitRefsUrl any
-	GitTagsUrl any
-	GitUrl any
-	HasDiscussions any
-	HasDownloads any
-	HasIssues any
-	HasPages any
-	HasProjects any
-	HasPullRequests any
-	HasWiki any
-	Homepage any
-	HooksUrl any
-	HtmlUrl any
-	Id any
-	IsTemplate any
-	IssueCommentUrl any
-	IssueEventsUrl any
-	IssuesUrl any
-	KeysUrl any
-	LabelsUrl any
-	Language any
-	LanguagesUrl any
-	License any
-	MergesUrl any
-	MilestonesUrl any
-	MirrorUrl any
-	Name any
-	NetworkCount any
-	NodeId any
-	NotificationsUrl any
-	OpenIssues any
-	OpenIssuesCount any
-	Owner any
-	Permissions any
-	Private any
+	AllowForking              any
+	ArchiveUrl                any
+	Archived                  any
+	AssigneesUrl              any
+	BlobsUrl                  any
+	BranchesUrl               any
+	CloneUrl                  any
+	CodeOfConduct             any
+	CollaboratorsUrl          any
+	CommentsUrl               any
+	CommitsUrl                any
+	CompareUrl                any
+	ContentsUrl               any
+	ContributorsUrl           any
+	CreatedAt                 any
+	CustomProperties          any
+	DefaultBranch             any
+	DeleteBranchOnMerge       any
+	DeploymentsUrl            any
+	Description               any
+	Disabled                  any
+	DownloadsUrl              any
+	EventsUrl                 any
+	Fork                      any
+	Forks                     any
+	ForksCount                any
+	ForksUrl                  any
+	FullName                  any
+	GitCommitsUrl             any
+	GitRefsUrl                any
+	GitTagsUrl                any
+	GitUrl                    any
+	HasDiscussions            any
+	HasDownloads              any
+	HasIssues                 any
+	HasPages                  any
+	HasProjects               any
+	HasPullRequests           any
+	HasWiki                   any
+	Homepage                  any
+	HooksUrl                  any
+	HtmlUrl                   any
+	Id                        any
+	IsTemplate                any
+	IssueCommentUrl           any
+	IssueEventsUrl            any
+	IssuesUrl                 any
+	KeysUrl                   any
+	LabelsUrl                 any
+	Language                  any
+	LanguagesUrl              any
+	License                   any
+	MergesUrl                 any
+	MilestonesUrl             any
+	MirrorUrl                 any
+	Name                      any
+	NetworkCount              any
+	NodeId                    any
+	NotificationsUrl          any
+	OpenIssues                any
+	OpenIssuesCount           any
+	Owner                     any
+	Permissions               any
+	Private                   any
 	PullRequestCreationPolicy any
-	PullsUrl any
-	PushedAt any
-	ReleasesUrl any
-	RoleName any
-	SecurityAndAnalysis any
-	Size any
-	SshUrl any
-	StargazersCount any
-	StargazersUrl any
-	StatusesUrl any
-	SubscribersCount any
-	SubscribersUrl any
-	SubscriptionUrl any
-	SvnUrl any
-	TagsUrl any
-	TeamsUrl any
-	TempCloneToken any
-	Topics any
-	TreesUrl any
-	UpdatedAt any
-	Url any
-	Visibility any
-	Watchers any
-	WatchersCount any
-	WebCommitSignoffRequired any
+	PullsUrl                  any
+	PushedAt                  any
+	ReleasesUrl               any
+	RoleName                  any
+	SecurityAndAnalysis       any
+	Size                      any
+	SshUrl                    any
+	StargazersCount           any
+	StargazersUrl             any
+	StatusesUrl               any
+	SubscribersCount          any
+	SubscribersUrl            any
+	SubscriptionUrl           any
+	SvnUrl                    any
+	TagsUrl                   any
+	TeamsUrl                  any
+	TempCloneToken            any
+	Topics                    any
+	TreesUrl                  any
+	UpdatedAt                 any
+	Url                       any
+	Visibility                any
+	Watchers                  any
+	WatchersCount             any
+	WebCommitSignoffRequired  any
 }
 
 type SearchResultItemList_Items_TextMatches_Matches struct {
 	Indices any
-	Text any
+	Text    any
 }
 
 type SearchResultItemList_Items_TextMatches struct {
-	Fragment any
-	Matches any
+	Fragment   any
+	Matches    any
 	ObjectType any
-	ObjectUrl any
-	Property any
+	ObjectUrl  any
+	Property   any
 }
 
 type SearchResultItemList_Items struct {
-	Author any
+	Author      any
 	CommentsUrl any
-	Commit any
-	Committer any
-	HtmlUrl any
-	NodeId any
-	Parents any
-	Repository any
-	Score any
-	Sha any
+	Commit      any
+	Committer   any
+	HtmlUrl     any
+	NodeId      any
+	Parents     any
+	Repository  any
+	Score       any
+	Sha         any
 	TextMatches any
-	Url any
+	Url         any
 }
 
 type SearchResultItemListConfig struct {
-	Order any
-	Page any
+	Order   any
+	Page    any
 	PerPage any
-	Q any
-	Sort any
+	Q       any
+	Sort    any
 }
 
 type SearchResultItemListAttrs struct {
 	IncompleteResults any
-	Items any
-	Order any
-	Page any
-	PerPage any
-	Q any
-	Sort any
-	TotalCount any
+	Items             any
+	Order             any
+	Page              any
+	PerPage           any
+	Q                 any
+	Sort              any
+	TotalCount        any
 }
 
 var SearchResultItemList = ubx.DataSourceBinding{
 	WireType: "github_commit_search_result_item_list",
 	Fields: ubx.FieldMap{
-		"Order": ubx.FieldSpec{WireName: "order"},
-		"Page": ubx.FieldSpec{WireName: "page"},
+		"Order":   ubx.FieldSpec{WireName: "order"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Q": ubx.FieldSpec{WireName: "q"},
-		"Sort": ubx.FieldSpec{WireName: "sort"},
+		"Q":       ubx.FieldSpec{WireName: "q"},
+		"Sort":    ubx.FieldSpec{WireName: "sort"},
 	},
 }

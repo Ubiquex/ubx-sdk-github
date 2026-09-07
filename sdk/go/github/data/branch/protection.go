@@ -9,135 +9,135 @@ type Protection_AllowDeletions struct {
 
 type Protection_EnforceAdmins struct {
 	Enabled any
-	Url any
+	Url     any
 }
 
 type Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Apps_Owner struct {
-	AvatarUrl any
-	CreatedAt any
-	Description any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	CreatedAt         any
+	Description       any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	Slug any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	UpdatedAt any
-	Url any
-	UserViewType any
-	WebsiteUrl any
+	ReposUrl          any
+	SiteAdmin         any
+	Slug              any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	UpdatedAt         any
+	Url               any
+	UserViewType      any
+	WebsiteUrl        any
 }
 
 type Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Apps_Permissions struct {
-	Checks any
-	Contents any
+	Checks      any
+	Contents    any
 	Deployments any
-	Issues any
-	Metadata any
+	Issues      any
+	Metadata    any
 }
 
 type Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Apps struct {
-	ClientId any
-	CreatedAt any
-	Description any
-	Events any
-	ExternalUrl any
-	HtmlUrl any
-	Id any
+	ClientId           any
+	CreatedAt          any
+	Description        any
+	Events             any
+	ExternalUrl        any
+	HtmlUrl            any
+	Id                 any
 	InstallationsCount any
-	Name any
-	NodeId any
-	Owner any
-	Permissions any
-	Slug any
-	UpdatedAt any
+	Name               any
+	NodeId             any
+	Owner              any
+	Permissions        any
+	Slug               any
+	UpdatedAt          any
 }
 
 type Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Teams_Parent struct {
-	Description any
-	EnterpriseId any
-	HtmlUrl any
-	Id any
-	LdapDn any
-	MembersUrl any
-	Name any
-	NodeId any
+	Description         any
+	EnterpriseId        any
+	HtmlUrl             any
+	Id                  any
+	LdapDn              any
+	MembersUrl          any
+	Name                any
+	NodeId              any
 	NotificationSetting any
-	OrganizationId any
-	Permission any
-	Privacy any
-	RepositoriesUrl any
-	Slug any
-	Type any
-	Url any
+	OrganizationId      any
+	Permission          any
+	Privacy             any
+	RepositoriesUrl     any
+	Slug                any
+	Type                any
+	Url                 any
 }
 
 type Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Teams_Permissions struct {
-	Admin any
+	Admin    any
 	Maintain any
-	Pull any
-	Push any
-	Triage any
+	Pull     any
+	Push     any
+	Triage   any
 }
 
 type Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Teams struct {
-	AccessSource any
-	Description any
-	EnterpriseId any
-	HtmlUrl any
-	Id any
-	MembersUrl any
-	Name any
-	NodeId any
+	AccessSource        any
+	Description         any
+	EnterpriseId        any
+	HtmlUrl             any
+	Id                  any
+	MembersUrl          any
+	Name                any
+	NodeId              any
 	NotificationSetting any
-	OrganizationId any
-	Parent any
-	Permission any
-	Permissions any
-	Privacy any
-	RepositoriesUrl any
-	Slug any
-	Type any
-	Url any
+	OrganizationId      any
+	Parent              any
+	Permission          any
+	Permissions         any
+	Privacy             any
+	RepositoriesUrl     any
+	Slug                any
+	Type                any
+	Url                 any
 }
 
 type Protection_RequiredPullRequestReviews_BypassPullRequestAllowances_Users struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type Protection_RequiredPullRequestReviews_BypassPullRequestAllowances struct {
@@ -153,161 +153,161 @@ type Protection_RequiredPullRequestReviews_DismissalRestrictions struct {
 	// The list of apps with review dismissal access.
 	Apps any
 	// The list of teams with review dismissal access.
-	Teams any
+	Teams    any
 	TeamsUrl any
-	Url any
+	Url      any
 	// The list of users with review dismissal access.
-	Users any
+	Users    any
 	UsersUrl any
 }
 
 type Protection_RequiredPullRequestReviews struct {
 	// Allow specific users, teams, or apps to bypass pull request requirements.
 	BypassPullRequestAllowances any
-	DismissStaleReviews any
-	DismissalRestrictions any
-	RequireCodeOwnerReviews any
+	DismissStaleReviews         any
+	DismissalRestrictions       any
+	RequireCodeOwnerReviews     any
 	// Whether the most recent push must be approved by someone other than the person who pushed it.
-	RequireLastPushApproval any
+	RequireLastPushApproval      any
 	RequiredApprovingReviewCount any
-	Url any
+	Url                          any
 }
 
 type Protection_RequiredStatusChecks_Checks struct {
-	AppId any
+	AppId   any
 	Context any
 }
 
 type Protection_RequiredStatusChecks struct {
-	Checks any
-	Contexts any
-	ContextsUrl any
+	Checks           any
+	Contexts         any
+	ContextsUrl      any
 	EnforcementLevel any
-	Strict any
-	Url any
+	Strict           any
+	Url              any
 }
 
 type Protection_Restrictions_Apps_Owner struct {
-	AvatarUrl any
-	Description any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HooksUrl any
-	HtmlUrl any
-	Id any
-	IssuesUrl any
-	Login any
-	MembersUrl any
-	NodeId any
-	OrganizationsUrl any
-	PublicMembersUrl any
+	AvatarUrl         any
+	Description       any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HooksUrl          any
+	HtmlUrl           any
+	Id                any
+	IssuesUrl         any
+	Login             any
+	MembersUrl        any
+	NodeId            any
+	OrganizationsUrl  any
+	PublicMembersUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type Protection_Restrictions_Apps_Permissions struct {
-	Contents any
-	Issues any
-	Metadata any
+	Contents   any
+	Issues     any
+	Metadata   any
 	SingleFile any
 }
 
 type Protection_Restrictions_Apps struct {
-	ClientId any
-	CreatedAt any
+	ClientId    any
+	CreatedAt   any
 	Description any
-	Events any
+	Events      any
 	ExternalUrl any
-	HtmlUrl any
-	Id any
-	Name any
-	NodeId any
-	Owner any
+	HtmlUrl     any
+	Id          any
+	Name        any
+	NodeId      any
+	Owner       any
 	Permissions any
-	Slug any
-	UpdatedAt any
+	Slug        any
+	UpdatedAt   any
 }
 
 type Protection_Restrictions_Users struct {
-	AvatarUrl any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type Protection_Restrictions struct {
-	Apps any
-	AppsUrl any
-	Teams any
+	Apps     any
+	AppsUrl  any
+	Teams    any
 	TeamsUrl any
-	Url any
-	Users any
+	Url      any
+	Users    any
 	UsersUrl any
 }
 
 type ProtectionConfig struct {
 	Branch any
-	Owner any
-	Repo any
+	Owner  any
+	Repo   any
 }
 
 type ProtectionAttrs struct {
-	AllowDeletions any
+	AllowDeletions   any
 	AllowForcePushes any
 	// Whether users can pull changes from upstream when the branch is locked. Set to `true` to allow fork syncing. Set to `false` to prevent fork syncing.
 	AllowForkSyncing any
-	BlockCreations any
-	Branch any
-	Enabled any
+	BlockCreations   any
+	Branch           any
+	Enabled          any
 	// Protected Branch Admin Enforced
 	EnforceAdmins any
 	// Whether to set the branch as read-only. If this is true, users will not be able to push to the branch.
-	LockBranch any
-	Name any
-	Owner any
-	ProtectionUrl any
-	Repo any
+	LockBranch                     any
+	Name                           any
+	Owner                          any
+	ProtectionUrl                  any
+	Repo                           any
 	RequiredConversationResolution any
-	RequiredLinearHistory any
+	RequiredLinearHistory          any
 	// Protected Branch Pull Request Review
 	RequiredPullRequestReviews any
-	RequiredSignatures any
+	RequiredSignatures         any
 	// Protected Branch Required Status Check
 	RequiredStatusChecks any
 	// Branch Restriction Policy
 	Restrictions any
-	Url any
+	Url          any
 }
 
 var Protection = ubx.DataSourceBinding{
 	WireType: "github_branch_protection",
 	Fields: ubx.FieldMap{
 		"Branch": ubx.FieldSpec{WireName: "branch"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":  ubx.FieldSpec{WireName: "owner"},
+		"Repo":   ubx.FieldSpec{WireName: "repo"},
 	},
 }

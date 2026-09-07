@@ -5,20 +5,20 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type CacheStorageLimitForRepositoryConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type CacheStorageLimitForRepositoryAttrs struct {
 	// The maximum total cache size for this repository, in gigabytes.
 	MaxCacheSizeGb any
-	Owner any
-	Repo any
+	Owner          any
+	Repo           any
 }
 
 var CacheStorageLimitForRepository = ubx.DataSourceBinding{
 	WireType: "github_actions_cache_storage_limit_for_repository",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

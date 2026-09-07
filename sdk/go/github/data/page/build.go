@@ -8,53 +8,53 @@ type Build_Error struct {
 }
 
 type Build_Pusher struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type BuildConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type BuildAttrs struct {
-	Commit any
+	Commit    any
 	CreatedAt any
-	Duration any
-	Error any
-	Owner any
+	Duration  any
+	Error     any
+	Owner     any
 	// A GitHub user.
-	Pusher any
-	Repo any
-	Status any
+	Pusher    any
+	Repo      any
+	Status    any
 	UpdatedAt any
-	Url any
+	Url       any
 }
 
 var Build = ubx.DataSourceBinding{
 	WireType: "github_page_build",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

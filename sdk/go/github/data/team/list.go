@@ -4,141 +4,141 @@ package team
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type List_Apps_Owner struct {
-	AvatarUrl any
-	Description any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HooksUrl any
-	HtmlUrl any
-	Id any
-	IssuesUrl any
-	Login any
-	MembersUrl any
-	NodeId any
-	OrganizationsUrl any
-	PublicMembersUrl any
+	AvatarUrl         any
+	Description       any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HooksUrl          any
+	HtmlUrl           any
+	Id                any
+	IssuesUrl         any
+	Login             any
+	MembersUrl        any
+	NodeId            any
+	OrganizationsUrl  any
+	PublicMembersUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type List_Apps_Permissions struct {
-	Contents any
-	Issues any
-	Metadata any
+	Contents   any
+	Issues     any
+	Metadata   any
 	SingleFile any
 }
 
 type List_Apps struct {
-	ClientId any
-	CreatedAt any
+	ClientId    any
+	CreatedAt   any
 	Description any
-	Events any
+	Events      any
 	ExternalUrl any
-	HtmlUrl any
-	Id any
-	Name any
-	NodeId any
-	Owner any
+	HtmlUrl     any
+	Id          any
+	Name        any
+	NodeId      any
+	Owner       any
 	Permissions any
-	Slug any
-	UpdatedAt any
+	Slug        any
+	UpdatedAt   any
 }
 
 type List_Teams_Parent struct {
-	Description any
-	EnterpriseId any
-	HtmlUrl any
-	Id any
-	LdapDn any
-	MembersUrl any
-	Name any
-	NodeId any
+	Description         any
+	EnterpriseId        any
+	HtmlUrl             any
+	Id                  any
+	LdapDn              any
+	MembersUrl          any
+	Name                any
+	NodeId              any
 	NotificationSetting any
-	OrganizationId any
-	Permission any
-	Privacy any
-	RepositoriesUrl any
-	Slug any
-	Type any
-	Url any
+	OrganizationId      any
+	Permission          any
+	Privacy             any
+	RepositoriesUrl     any
+	Slug                any
+	Type                any
+	Url                 any
 }
 
 type List_Teams_Permissions struct {
-	Admin any
+	Admin    any
 	Maintain any
-	Pull any
-	Push any
-	Triage any
+	Pull     any
+	Push     any
+	Triage   any
 }
 
 type List_Teams struct {
-	AccessSource any
-	Description any
-	EnterpriseId any
-	HtmlUrl any
-	Id any
-	MembersUrl any
-	Name any
-	NodeId any
+	AccessSource        any
+	Description         any
+	EnterpriseId        any
+	HtmlUrl             any
+	Id                  any
+	MembersUrl          any
+	Name                any
+	NodeId              any
 	NotificationSetting any
-	OrganizationId any
-	Parent any
-	Permission any
-	Permissions any
-	Privacy any
-	RepositoriesUrl any
-	Slug any
-	Type any
-	Url any
+	OrganizationId      any
+	Parent              any
+	Permission          any
+	Permissions         any
+	Privacy             any
+	RepositoriesUrl     any
+	Slug                any
+	Type                any
+	Url                 any
 }
 
 type List_Users struct {
-	AvatarUrl any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type ListConfig struct {
 	Branch any
-	Owner any
-	Repo any
+	Owner  any
+	Repo   any
 }
 
 type ListAttrs struct {
-	Apps any
-	AppsUrl any
-	Branch any
-	Owner any
-	Repo any
-	Teams any
+	Apps     any
+	AppsUrl  any
+	Branch   any
+	Owner    any
+	Repo     any
+	Teams    any
 	TeamsUrl any
-	Url any
-	Users any
+	Url      any
+	Users    any
 	UsersUrl any
 }
 
@@ -146,7 +146,7 @@ var List = ubx.DataSourceBinding{
 	WireType: "github_team_list",
 	Fields: ubx.FieldMap{
 		"Branch": ubx.FieldSpec{WireName: "branch"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":  ubx.FieldSpec{WireName: "owner"},
+		"Repo":   ubx.FieldSpec{WireName: "repo"},
 	},
 }

@@ -5,33 +5,33 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type VariableList_Variables struct {
 	CreatedAt any
-	Name any
+	Name      any
 	UpdatedAt any
-	Value any
+	Value     any
 }
 
 type VariableListConfig struct {
-	Owner any
-	Page any
+	Owner   any
+	Page    any
 	PerPage any
-	Repo any
+	Repo    any
 }
 
 type VariableListAttrs struct {
-	Owner any
-	Page any
-	PerPage any
-	Repo any
+	Owner      any
+	Page       any
+	PerPage    any
+	Repo       any
 	TotalCount any
-	Variables any
+	Variables  any
 }
 
 var VariableList = ubx.DataSourceBinding{
 	WireType: "github_actions_variable_list",
 	Fields: ubx.FieldMap{
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
+		"Owner":   ubx.FieldSpec{WireName: "owner"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":    ubx.FieldSpec{WireName: "repo"},
 	},
 }

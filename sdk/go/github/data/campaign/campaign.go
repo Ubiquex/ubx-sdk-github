@@ -5,20 +5,20 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type CampaignConfig struct {
 	Direction any
-	Org any
-	Page any
-	PerPage any
-	Sort any
+	Org       any
+	Page      any
+	PerPage   any
+	Sort      any
 	// Indicates whether a campaign is open or closed
 	State any
 }
 
 type CampaignAttrs struct {
 	Direction any
-	Org any
-	Page any
-	PerPage any
-	Sort any
+	Org       any
+	Page      any
+	PerPage   any
+	Sort      any
 	// Indicates whether a campaign is open or closed
 	State any
 }
@@ -27,10 +27,10 @@ var Campaign = ubx.DataSourceBinding{
 	WireType: "github_campaign",
 	Fields: ubx.FieldMap{
 		"Direction": ubx.FieldSpec{WireName: "direction"},
-		"Org": ubx.FieldSpec{WireName: "org"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Sort": ubx.FieldSpec{WireName: "sort"},
-		"State": ubx.FieldSpec{WireName: "state"},
+		"Org":       ubx.FieldSpec{WireName: "org"},
+		"Page":      ubx.FieldSpec{WireName: "page"},
+		"PerPage":   ubx.FieldSpec{WireName: "per_page"},
+		"Sort":      ubx.FieldSpec{WireName: "sort"},
+		"State":     ubx.FieldSpec{WireName: "state"},
 	},
 }

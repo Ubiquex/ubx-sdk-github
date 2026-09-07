@@ -5,18 +5,18 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ReferrerConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type ReferrerAttrs struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 var Referrer = ubx.DataSourceBinding{
 	WireType: "github_referrer",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

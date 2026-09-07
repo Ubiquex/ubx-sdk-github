@@ -9,23 +9,23 @@ type Hovercard_Contexts struct {
 }
 
 type HovercardConfig struct {
-	SubjectId any
+	SubjectId   any
 	SubjectType any
-	Username any
+	Username    any
 }
 
 type HovercardAttrs struct {
-	Contexts any
-	SubjectId any
+	Contexts    any
+	SubjectId   any
 	SubjectType any
-	Username any
+	Username    any
 }
 
 var Hovercard = ubx.DataSourceBinding{
 	WireType: "github_hovercard",
 	Fields: ubx.FieldMap{
-		"SubjectId": ubx.FieldSpec{WireName: "subject_id"},
+		"SubjectId":   ubx.FieldSpec{WireName: "subject_id"},
 		"SubjectType": ubx.FieldSpec{WireName: "subject_type"},
-		"Username": ubx.FieldSpec{WireName: "username"},
+		"Username":    ubx.FieldSpec{WireName: "username"},
 	},
 }

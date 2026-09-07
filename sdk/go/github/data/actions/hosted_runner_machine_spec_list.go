@@ -4,9 +4,9 @@ package actions
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type HostedRunnerMachineSpecList_MachineSpecs struct {
-	CpuCores any
-	Id any
-	MemoryGb any
+	CpuCores  any
+	Id        any
+	MemoryGb  any
 	StorageGb any
 }
 
@@ -15,9 +15,9 @@ type HostedRunnerMachineSpecListConfig struct {
 }
 
 type HostedRunnerMachineSpecListAttrs struct {
-	Enterprise any
+	Enterprise   any
 	MachineSpecs any
-	TotalCount any
+	TotalCount   any
 }
 
 var HostedRunnerMachineSpecList = ubx.DataSourceBinding{

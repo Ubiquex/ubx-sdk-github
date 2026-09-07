@@ -4,37 +4,36 @@ package rate
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type LimitOverview_Rate struct {
-	Limit any
+	Limit     any
 	Remaining any
-	Reset any
-	Used any
+	Reset     any
+	Used      any
 }
 
 type LimitOverview_Resources struct {
 	ActionsRunnerRegistration any
-	CodeScanningAutofix any
-	CodeSearch any
-	CopilotUsageRecords any
-	Core any
-	DependencySbom any
-	DependencySnapshots any
-	Graphql any
-	IntegrationManifest any
-	Scim any
-	Search any
-	SourceImport any
+	CodeScanningAutofix       any
+	CodeSearch                any
+	CopilotUsageRecords       any
+	Core                      any
+	DependencySbom            any
+	DependencySnapshots       any
+	Graphql                   any
+	IntegrationManifest       any
+	Scim                      any
+	Search                    any
+	SourceImport              any
 }
 
 type LimitOverviewConfig struct {
 }
 
 type LimitOverviewAttrs struct {
-	Rate any
+	Rate      any
 	Resources any
 }
 
 var LimitOverview = ubx.DataSourceBinding{
 	WireType: "github_rate_limit_overview",
-	Fields: ubx.FieldMap{
-	},
+	Fields:   ubx.FieldMap{},
 }

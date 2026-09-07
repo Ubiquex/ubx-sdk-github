@@ -4,52 +4,52 @@ package simple
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type CommitStatusList_Repository_CodeOfConduct struct {
-	Body any
+	Body    any
 	HtmlUrl any
-	Key any
-	Name any
-	Url any
+	Key     any
+	Name    any
+	Url     any
 }
 
 type CommitStatusList_Repository_License struct {
-	Key any
-	Name any
+	Key    any
+	Name   any
 	NodeId any
 	SpdxId any
-	Url any
+	Url    any
 }
 
 type CommitStatusList_Repository_Owner struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type CommitStatusList_Repository_Permissions struct {
-	Admin any
+	Admin    any
 	Maintain any
-	Pull any
-	Push any
-	Triage any
+	Pull     any
+	Push     any
+	Triage   any
 }
 
 type CommitStatusList_Repository_SecurityAndAnalysis_AdvancedSecurity struct {
@@ -57,8 +57,8 @@ type CommitStatusList_Repository_SecurityAndAnalysis_AdvancedSecurity struct {
 }
 
 type CommitStatusList_Repository_SecurityAndAnalysis_SecretScanningDelegatedBypassOptions_Reviewers struct {
-	Mode any
-	ReviewerId any
+	Mode         any
+	ReviewerId   any
 	ReviewerType any
 }
 
@@ -70,162 +70,162 @@ type CommitStatusList_Repository_SecurityAndAnalysis_SecretScanningDelegatedBypa
 type CommitStatusList_Repository_SecurityAndAnalysis struct {
 	// Enable or disable GitHub Advanced Security for the repository. For standalone Code Scanning or Secret Protection products, this parameter cannot be used.
 	AdvancedSecurity any
-	CodeSecurity any
+	CodeSecurity     any
 	// Enable or disable Dependabot security updates for the repository.
-	DependabotSecurityUpdates any
-	SecretScanning any
-	SecretScanningAiDetection any
+	DependabotSecurityUpdates             any
+	SecretScanning                        any
+	SecretScanningAiDetection             any
 	SecretScanningDelegatedAlertDismissal any
-	SecretScanningDelegatedBypass any
-	SecretScanningDelegatedBypassOptions any
-	SecretScanningNonProviderPatterns any
-	SecretScanningPushProtection any
-	SecretScanningValidityChecks any
+	SecretScanningDelegatedBypass         any
+	SecretScanningDelegatedBypassOptions  any
+	SecretScanningNonProviderPatterns     any
+	SecretScanningPushProtection          any
+	SecretScanningValidityChecks          any
 }
 
 type CommitStatusList_Repository struct {
 	AllowForking any
-	ArchiveUrl any
-	Archived any
+	ArchiveUrl   any
+	Archived     any
 	AssigneesUrl any
-	BlobsUrl any
-	BranchesUrl any
-	CloneUrl any
+	BlobsUrl     any
+	BranchesUrl  any
+	CloneUrl     any
 	// Code Of Conduct
-	CodeOfConduct any
+	CodeOfConduct    any
 	CollaboratorsUrl any
-	CommentsUrl any
-	CommitsUrl any
-	CompareUrl any
-	ContentsUrl any
-	ContributorsUrl any
-	CreatedAt any
+	CommentsUrl      any
+	CommitsUrl       any
+	CompareUrl       any
+	ContentsUrl      any
+	ContributorsUrl  any
+	CreatedAt        any
 	// The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
-	CustomProperties any
-	DefaultBranch any
+	CustomProperties    any
+	DefaultBranch       any
 	DeleteBranchOnMerge any
-	DeploymentsUrl any
-	Description any
-	Disabled any
-	DownloadsUrl any
-	EventsUrl any
-	Fork any
-	Forks any
-	ForksCount any
-	ForksUrl any
-	FullName any
-	GitCommitsUrl any
-	GitRefsUrl any
-	GitTagsUrl any
-	GitUrl any
-	HasDiscussions any
-	HasDownloads any
-	HasIssues any
-	HasPages any
-	HasProjects any
-	HasPullRequests any
-	HasWiki any
-	Homepage any
-	HooksUrl any
-	HtmlUrl any
-	Id any
-	IsTemplate any
-	IssueCommentUrl any
-	IssueEventsUrl any
-	IssuesUrl any
-	KeysUrl any
-	LabelsUrl any
-	Language any
-	LanguagesUrl any
-	License any
-	MergesUrl any
-	MilestonesUrl any
-	MirrorUrl any
-	Name any
-	NetworkCount any
-	NodeId any
-	NotificationsUrl any
-	OpenIssues any
-	OpenIssuesCount any
+	DeploymentsUrl      any
+	Description         any
+	Disabled            any
+	DownloadsUrl        any
+	EventsUrl           any
+	Fork                any
+	Forks               any
+	ForksCount          any
+	ForksUrl            any
+	FullName            any
+	GitCommitsUrl       any
+	GitRefsUrl          any
+	GitTagsUrl          any
+	GitUrl              any
+	HasDiscussions      any
+	HasDownloads        any
+	HasIssues           any
+	HasPages            any
+	HasProjects         any
+	HasPullRequests     any
+	HasWiki             any
+	Homepage            any
+	HooksUrl            any
+	HtmlUrl             any
+	Id                  any
+	IsTemplate          any
+	IssueCommentUrl     any
+	IssueEventsUrl      any
+	IssuesUrl           any
+	KeysUrl             any
+	LabelsUrl           any
+	Language            any
+	LanguagesUrl        any
+	License             any
+	MergesUrl           any
+	MilestonesUrl       any
+	MirrorUrl           any
+	Name                any
+	NetworkCount        any
+	NodeId              any
+	NotificationsUrl    any
+	OpenIssues          any
+	OpenIssuesCount     any
 	// A GitHub user.
-	Owner any
+	Owner       any
 	Permissions any
-	Private any
+	Private     any
 	// The policy controlling who can create pull requests: all or collaborators_only.
 	PullRequestCreationPolicy any
-	PullsUrl any
-	PushedAt any
-	ReleasesUrl any
-	RoleName any
-	SecurityAndAnalysis any
+	PullsUrl                  any
+	PushedAt                  any
+	ReleasesUrl               any
+	RoleName                  any
+	SecurityAndAnalysis       any
 	// The size of the repository, in kilobytes. Size is calculated hourly. When a repository is initially created, the size is 0.
-	Size any
-	SshUrl any
-	StargazersCount any
-	StargazersUrl any
-	StatusesUrl any
-	SubscribersCount any
-	SubscribersUrl any
-	SubscriptionUrl any
-	SvnUrl any
-	TagsUrl any
-	TeamsUrl any
-	TempCloneToken any
-	Topics any
-	TreesUrl any
-	UpdatedAt any
-	Url any
-	Visibility any
-	Watchers any
-	WatchersCount any
+	Size                     any
+	SshUrl                   any
+	StargazersCount          any
+	StargazersUrl            any
+	StatusesUrl              any
+	SubscribersCount         any
+	SubscribersUrl           any
+	SubscriptionUrl          any
+	SvnUrl                   any
+	TagsUrl                  any
+	TeamsUrl                 any
+	TempCloneToken           any
+	Topics                   any
+	TreesUrl                 any
+	UpdatedAt                any
+	Url                      any
+	Visibility               any
+	Watchers                 any
+	WatchersCount            any
 	WebCommitSignoffRequired any
 }
 
 type CommitStatusList_Statuses struct {
-	AvatarUrl any
-	Context any
-	CreatedAt any
+	AvatarUrl   any
+	Context     any
+	CreatedAt   any
 	Description any
-	Id any
-	NodeId any
-	Required any
-	State any
-	TargetUrl any
-	UpdatedAt any
-	Url any
+	Id          any
+	NodeId      any
+	Required    any
+	State       any
+	TargetUrl   any
+	UpdatedAt   any
+	Url         any
 }
 
 type CommitStatusListConfig struct {
-	Owner any
-	Page any
+	Owner   any
+	Page    any
 	PerPage any
-	Ref any
-	Repo any
+	Ref     any
+	Repo    any
 }
 
 type CommitStatusListAttrs struct {
 	CommitUrl any
-	Owner any
-	Page any
-	PerPage any
-	Ref any
-	Repo any
+	Owner     any
+	Page      any
+	PerPage   any
+	Ref       any
+	Repo      any
 	// Minimal Repository
 	Repository any
-	Sha any
-	State any
-	Statuses any
+	Sha        any
+	State      any
+	Statuses   any
 	TotalCount any
-	Url any
+	Url        any
 }
 
 var CommitStatusList = ubx.DataSourceBinding{
 	WireType: "github_simple_commit_status_list",
 	Fields: ubx.FieldMap{
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
+		"Owner":   ubx.FieldSpec{WireName: "owner"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Ref": ubx.FieldSpec{WireName: "ref"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Ref":     ubx.FieldSpec{WireName: "ref"},
+		"Repo":    ubx.FieldSpec{WireName: "repo"},
 	},
 }

@@ -4,7 +4,7 @@ package network
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type SettingsConfig struct {
-	Enterprise any
+	Enterprise        any
 	NetworkSettingsId any
 }
 
@@ -16,7 +16,7 @@ type SettingsAttrs struct {
 	Name any
 	// The identifier of the network configuration that is using this settings resource.
 	NetworkConfigurationId any
-	NetworkSettingsId any
+	NetworkSettingsId      any
 	// The location of the subnet this network settings resource is configured for.
 	Region any
 	// The subnet this network settings resource is configured for.
@@ -26,7 +26,7 @@ type SettingsAttrs struct {
 var Settings = ubx.DataSourceBinding{
 	WireType: "github_network_settings",
 	Fields: ubx.FieldMap{
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
+		"Enterprise":        ubx.FieldSpec{WireName: "enterprise"},
 		"NetworkSettingsId": ubx.FieldSpec{WireName: "network_settings_id"},
 	},
 }

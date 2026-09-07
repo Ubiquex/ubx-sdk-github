@@ -5,36 +5,36 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type DeploymentConfig struct {
 	Environment any
-	Owner any
-	Page any
-	PerPage any
-	Ref any
-	Repo any
-	Sha any
-	Task any
+	Owner       any
+	Page        any
+	PerPage     any
+	Ref         any
+	Repo        any
+	Sha         any
+	Task        any
 }
 
 type DeploymentAttrs struct {
 	Environment any
-	Owner any
-	Page any
-	PerPage any
-	Ref any
-	Repo any
-	Sha any
-	Task any
+	Owner       any
+	Page        any
+	PerPage     any
+	Ref         any
+	Repo        any
+	Sha         any
+	Task        any
 }
 
 var Deployment = ubx.DataSourceBinding{
 	WireType: "github_deployment",
 	Fields: ubx.FieldMap{
 		"Environment": ubx.FieldSpec{WireName: "environment"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Ref": ubx.FieldSpec{WireName: "ref"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"Sha": ubx.FieldSpec{WireName: "sha"},
-		"Task": ubx.FieldSpec{WireName: "task"},
+		"Owner":       ubx.FieldSpec{WireName: "owner"},
+		"Page":        ubx.FieldSpec{WireName: "page"},
+		"PerPage":     ubx.FieldSpec{WireName: "per_page"},
+		"Ref":         ubx.FieldSpec{WireName: "ref"},
+		"Repo":        ubx.FieldSpec{WireName: "repo"},
+		"Sha":         ubx.FieldSpec{WireName: "sha"},
+		"Task":        ubx.FieldSpec{WireName: "task"},
 	},
 }

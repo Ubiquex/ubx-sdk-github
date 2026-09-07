@@ -128,7 +128,7 @@ type Simple_Forks_User struct {
 	// The user's short biography or description as provided on their GitHub profile. (AI-inferred)
 	Bio any
 	// The URL of the user's personal blog or website, as provided in their GitHub profile. (AI-inferred)
-	Blog any
+	Blog          any
 	Collaborators any
 	// The company name associated with the user's GitHub profile, if provided. (AI-inferred)
 	Company any
@@ -156,7 +156,7 @@ type Simple_Forks_User struct {
 	Hireable any
 	// The URL to the user's GitHub profile page. (AI-inferred)
 	HtmlUrl any
-	Id any
+	Id      any
 	// The geographic location of the user as listed in their GitHub profile. (AI-inferred)
 	Location any
 	// The GitHub username (login) of the user who forked the gist. (AI-inferred)
@@ -164,7 +164,7 @@ type Simple_Forks_User struct {
 	// The GitHub user's public display name. This may differ from their login username. (AI-inferred)
 	Name any
 	// The globally unique node ID used to identify the user in the GitHub GraphQL API. (AI-inferred)
-	NodeId any
+	NodeId            any
 	NotificationEmail any
 	// The URL to the organizations endpoint for this user, which lists the public organizations the user belongs to. (AI-inferred)
 	OrganizationsUrl any
@@ -197,7 +197,7 @@ type Simple_Forks_User struct {
 	// The timestamp indicating when the user was last updated, typically in ISO 8601 format. (AI-inferred)
 	UpdatedAt any
 	// The GitHub API URL for the user who forked the gist. (AI-inferred)
-	Url any
+	Url          any
 	UserViewType any
 }
 
@@ -237,8 +237,8 @@ type Simple_History struct {
 }
 
 var Simple_FilesFields = ubx.FieldMap{
-		"Content": ubx.FieldSpec{WireName: "content"},
-	}
+	"Content": ubx.FieldSpec{WireName: "content"},
+}
 
 type SimpleConfig struct {
 	// Description of the gist
@@ -306,8 +306,8 @@ var Simple = ubx.ResourceBinding{
 		"Description": ubx.FieldSpec{WireName: "description"},
 		"Files": ubx.FieldSpec{
 			WireName: "files",
-			Kind: "map",
-			Fields: Simple_FilesFields,
+			Kind:     "map",
+			Fields:   Simple_FilesFields,
 		},
 		"Public": ubx.FieldSpec{WireName: "public"},
 		"GistId": ubx.FieldSpec{WireName: "gist_id"},

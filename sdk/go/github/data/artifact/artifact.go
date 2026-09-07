@@ -4,38 +4,38 @@ package artifact
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Artifact_WorkflowRun struct {
-	HeadBranch any
+	HeadBranch       any
 	HeadRepositoryId any
-	HeadSha any
-	Id any
-	RepositoryId any
+	HeadSha          any
+	Id               any
+	RepositoryId     any
 }
 
 type ArtifactConfig struct {
 	ArtifactId any
-	Owner any
-	Repo any
+	Owner      any
+	Repo       any
 }
 
 type ArtifactAttrs struct {
 	ArchiveDownloadUrl any
-	ArtifactId any
-	CreatedAt any
+	ArtifactId         any
+	CreatedAt          any
 	// The SHA256 digest of the artifact. This field will only be populated on artifacts uploaded with upload-artifact v4 or newer. For older versions, this field will be null.
 	Digest any
 	// Whether or not the artifact has expired.
-	Expired any
+	Expired   any
 	ExpiresAt any
-	Id any
+	Id        any
 	// The name of the artifact.
-	Name any
+	Name   any
 	NodeId any
-	Owner any
-	Repo any
+	Owner  any
+	Repo   any
 	// The size in bytes of the artifact.
 	SizeInBytes any
-	UpdatedAt any
-	Url any
+	UpdatedAt   any
+	Url         any
 	WorkflowRun any
 }
 
@@ -43,7 +43,7 @@ var Artifact = ubx.DataSourceBinding{
 	WireType: "github_artifact",
 	Fields: ubx.FieldMap{
 		"ArtifactId": ubx.FieldSpec{WireName: "artifact_id"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":      ubx.FieldSpec{WireName: "owner"},
+		"Repo":       ubx.FieldSpec{WireName: "repo"},
 	},
 }

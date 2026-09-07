@@ -5,20 +5,20 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type CacheRetentionLimitForRepositoryConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type CacheRetentionLimitForRepositoryAttrs struct {
 	// The maximum number of days to keep caches in this repository.
 	MaxCacheRetentionDays any
-	Owner any
-	Repo any
+	Owner                 any
+	Repo                  any
 }
 
 var CacheRetentionLimitForRepository = ubx.DataSourceBinding{
 	WireType: "github_actions_cache_retention_limit_for_repository",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

@@ -9,7 +9,7 @@ type ArtifactAndLogRetentionResponseConfig struct {
 
 type ArtifactAndLogRetentionResponseAttrs struct {
 	// The number of days artifacts and logs are retained
-	Days any
+	Days       any
 	Enterprise any
 	// The maximum number of days that can be configured
 	MaximumAllowedDays any

@@ -4,33 +4,33 @@ package workflow
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type WorkflowConfig struct {
-	Owner any
-	Repo any
+	Owner      any
+	Repo       any
 	WorkflowId any
 }
 
 type WorkflowAttrs struct {
-	BadgeUrl any
-	CreatedAt any
-	DeletedAt any
-	HtmlUrl any
-	Id any
-	Name any
-	NodeId any
-	Owner any
-	Path any
-	Repo any
-	State any
-	UpdatedAt any
-	Url any
+	BadgeUrl   any
+	CreatedAt  any
+	DeletedAt  any
+	HtmlUrl    any
+	Id         any
+	Name       any
+	NodeId     any
+	Owner      any
+	Path       any
+	Repo       any
+	State      any
+	UpdatedAt  any
+	Url        any
 	WorkflowId any
 }
 
 var Workflow = ubx.DataSourceBinding{
 	WireType: "github_workflow",
 	Fields: ubx.FieldMap{
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":      ubx.FieldSpec{WireName: "owner"},
+		"Repo":       ubx.FieldSpec{WireName: "repo"},
 		"WorkflowId": ubx.FieldSpec{WireName: "workflow_id"},
 	},
 }

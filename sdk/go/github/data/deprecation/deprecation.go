@@ -5,7 +5,7 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type DeprecationConfig struct {
 	Enterprise any
-	Version any
+	Version    any
 }
 
 type DeprecationAttrs struct {
@@ -16,13 +16,13 @@ type DeprecationAttrs struct {
 	RunnerVersion any
 	// The date after which jobs will no longer be dispatched to runners on this version.
 	RuntimeDeprecatesAt any
-	Version any
+	Version             any
 }
 
 var Deprecation = ubx.DataSourceBinding{
 	WireType: "github_deprecation",
 	Fields: ubx.FieldMap{
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"Version": ubx.FieldSpec{WireName: "version"},
+		"Version":    ubx.FieldSpec{WireName: "version"},
 	},
 }

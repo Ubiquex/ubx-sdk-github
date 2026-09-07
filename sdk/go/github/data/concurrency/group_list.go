@@ -4,33 +4,33 @@ package concurrency
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type GroupList_ConcurrencyGroups struct {
-	GroupName any
-	GroupUrl any
+	GroupName      any
+	GroupUrl       any
 	LastAcquiredAt any
 }
 
 type GroupListConfig struct {
-	After any
-	Owner any
+	After   any
+	Owner   any
 	PerPage any
-	Repo any
+	Repo    any
 }
 
 type GroupListAttrs struct {
-	After any
+	After             any
 	ConcurrencyGroups any
-	Owner any
-	PerPage any
-	Repo any
-	TotalCount any
+	Owner             any
+	PerPage           any
+	Repo              any
+	TotalCount        any
 }
 
 var GroupList = ubx.DataSourceBinding{
 	WireType: "github_concurrency_group_list",
 	Fields: ubx.FieldMap{
-		"After": ubx.FieldSpec{WireName: "after"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
+		"After":   ubx.FieldSpec{WireName: "after"},
+		"Owner":   ubx.FieldSpec{WireName: "owner"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":    ubx.FieldSpec{WireName: "repo"},
 	},
 }

@@ -5,7 +5,7 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ScanningAutofixConfig struct {
 	Owner any
-	Repo any
+	Repo  any
 }
 
 type ScanningAutofixAttrs struct {
@@ -13,8 +13,8 @@ type ScanningAutofixAttrs struct {
 	AlertNumber any
 	// The description of an autofix.
 	Description any
-	Owner any
-	Repo any
+	Owner       any
+	Repo        any
 	// The start time of an autofix in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
 	StartedAt any
 	// The status of an autofix.
@@ -25,6 +25,6 @@ var ScanningAutofix = ubx.DataSourceBinding{
 	WireType: "github_code_scanning_autofix",
 	Fields: ubx.FieldMap{
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

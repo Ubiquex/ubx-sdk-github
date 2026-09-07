@@ -4,9 +4,9 @@ package dismissal
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type RequestResponseList_Data struct {
-	AlertNumber any
+	AlertNumber      any
 	PrReviewThreadId any
-	Reason any
+	Reason           any
 }
 
 type RequestResponseList_Organization struct {
@@ -34,16 +34,16 @@ type RequestResponseList_Requester struct {
 
 type RequestResponseList_Responses struct {
 	CreatedAt any
-	Id any
-	Message any
-	Reviewer any
-	Status any
+	Id        any
+	Message   any
+	Reviewer  any
+	Status    any
 }
 
 type RequestResponseListConfig struct {
 	AlertNumber any
-	Owner any
-	Repo any
+	Owner       any
+	Repo        any
 }
 
 type RequestResponseListAttrs struct {
@@ -62,8 +62,8 @@ type RequestResponseListAttrs struct {
 	Number any
 	// The organization associated with the repository the dismissal request is for.
 	Organization any
-	Owner any
-	Repo any
+	Owner        any
+	Repo         any
 	// The repository the dismissal request is for.
 	Repository any
 	// The type of request.
@@ -78,14 +78,14 @@ type RequestResponseListAttrs struct {
 	Responses any
 	// The status of the dismissal request.
 	Status any
-	Url any
+	Url    any
 }
 
 var RequestResponseList = ubx.DataSourceBinding{
 	WireType: "github_dismissal_request_response_list",
 	Fields: ubx.FieldMap{
 		"AlertNumber": ubx.FieldSpec{WireName: "alert_number"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":       ubx.FieldSpec{WireName: "owner"},
+		"Repo":        ubx.FieldSpec{WireName: "repo"},
 	},
 }

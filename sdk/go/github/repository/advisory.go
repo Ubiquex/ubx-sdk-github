@@ -20,10 +20,10 @@ type Advisory_Author struct {
 	GravatarId any
 	// The HTML URL of the author's GitHub profile. (AI-inferred)
 	HtmlUrl any
-	Id any
+	Id      any
 	// The GitHub username (login) of the user or organization that authored the repository advisory. (AI-inferred)
 	Login any
-	Name any
+	Name  any
 	// The GraphQL node ID for the author of the repository advisory. (AI-inferred)
 	NodeId any
 	// The API URL for the organizations that the author belongs to. (AI-inferred)
@@ -39,7 +39,7 @@ type Advisory_Author struct {
 	StarredUrl any
 	// The URL to the author's GitHub subscriptions endpoint (e.g., https://api.github.com/users/{username}/subscriptions). (AI-inferred)
 	SubscriptionsUrl any
-	Type any
+	Type             any
 	// The API URL for the author's GitHub user account, such as https://api.github.com/users/{username}. (AI-inferred)
 	Url any
 	// The visibility type of the author's GitHub user profile, indicating whether the profile is publicly visible (`public`) or private (`private`). (AI-inferred)
@@ -48,11 +48,11 @@ type Advisory_Author struct {
 
 type Advisory_CollaboratingTeams_Parent struct {
 	// The description of the parent team of the collaborating team, if a parent team exists. (AI-inferred)
-	Description any
+	Description  any
 	EnterpriseId any
 	// The URL to the parent team's page on GitHub. (AI-inferred)
 	HtmlUrl any
-	Id any
+	Id      any
 	// The LDAP Distinguished Name (DN) of the parent team for the collaborating team granted access to the repository advisory. This is used when managing teams in GitHub Enterprise with LDAP synchronization. (AI-inferred)
 	LdapDn any
 	// API endpoint URL for the members of this team, typically with a template placeholder for a specific member identifier (e.g., .../members{/member}). (AI-inferred)
@@ -60,13 +60,13 @@ type Advisory_CollaboratingTeams_Parent struct {
 	// The name of the team being granted write access to the repository advisory. (AI-inferred)
 	Name any
 	// The unique node ID of the team, used for identifying this collaborator in the GitHub GraphQL API. (AI-inferred)
-	NodeId any
+	NodeId              any
 	NotificationSetting any
 	// The unique identifier of the organization that the team belongs to. (AI-inferred)
 	OrganizationId any
 	// Permission level for the team on the repository advisory. Valid values are 'read' and 'write'. (AI-inferred)
 	Permission any
-	Privacy any
+	Privacy    any
 	// The API URL to list the repositories that the team has access to. (AI-inferred)
 	RepositoriesUrl any
 	// The slug of the parent team. (AI-inferred)
@@ -79,7 +79,7 @@ type Advisory_CollaboratingTeams_Parent struct {
 
 type Advisory_CollaboratingTeams_Permissions struct {
 	// Indicates whether the collaborating team has admin-level permissions on the repository advisory. (AI-inferred)
-	Admin any
+	Admin    any
 	Maintain any
 	// Whether the team has pull access to the repository. (AI-inferred)
 	Pull any
@@ -98,18 +98,18 @@ type Advisory_CollaboratingTeams struct {
 	EnterpriseId any
 	// The URL to the team's page on GitHub. (AI-inferred)
 	HtmlUrl any
-	Id any
+	Id      any
 	// The API URL used to access the list of members for the collaborating team in the repository advisory. (AI-inferred)
 	MembersUrl any
-	Name any
+	Name       any
 	// The unique identifier (node ID) for the team, used by GitHub's GraphQL API. (AI-inferred)
-	NodeId any
+	NodeId              any
 	NotificationSetting any
 	// The ID of the GitHub organization that the collaborating team belongs to. (AI-inferred)
 	OrganizationId any
-	Parent any
+	Parent         any
 	// The permission level granted to the team for collaborating on the repository advisory. (AI-inferred)
-	Permission any
+	Permission  any
 	Permissions any
 	// The privacy setting of the team collaborating on the repository advisory. Values are typically 'secret' or 'closed'. (AI-inferred)
 	Privacy any
@@ -189,12 +189,12 @@ type Advisory_PrivateFork struct {
 	ContributorsUrl any
 	// The API URL for accessing deployments of the private fork repository associated with the advisory. (AI-inferred)
 	DeploymentsUrl any
-	Description any
+	Description    any
 	// The URL to the private fork's downloads endpoint, used to access downloadable files associated with that fork. (AI-inferred)
 	DownloadsUrl any
-	EventsUrl any
-	Fork any
-	ForksUrl any
+	EventsUrl    any
+	Fork         any
+	ForksUrl     any
 	// The full name of the private fork in the format 'owner/repo'. (AI-inferred)
 	FullName any
 	// The URL to view the commits of the private fork associated with the repository advisory. This corresponds to the `git_commits_url` property of the forked repository. (AI-inferred)
@@ -206,7 +206,7 @@ type Advisory_PrivateFork struct {
 	HooksUrl any
 	// The URL to view the private fork on GitHub. (AI-inferred)
 	HtmlUrl any
-	Id any
+	Id      any
 	// The API URL template for accessing comments on issues within the private fork repository, as defined by GitHub's repository object. (AI-inferred)
 	IssueCommentUrl any
 	// The URL template for listing issue events in the private fork repository. (AI-inferred)
@@ -220,14 +220,14 @@ type Advisory_PrivateFork struct {
 	// The URL to the GitHub API endpoint that lists the programming languages used in this private fork. (AI-inferred)
 	LanguagesUrl any
 	// The API URL used to perform merge operations on this private fork. (AI-inferred)
-	MergesUrl any
+	MergesUrl     any
 	MilestonesUrl any
-	Name any
+	Name          any
 	// The unique identifier (Node ID) of the private fork, used in GitHub's GraphQL API. (AI-inferred)
 	NodeId any
 	// The URL to retrieve notifications for the private fork of the repository advisory. (AI-inferred)
 	NotificationsUrl any
-	Owner any
+	Owner            any
 	// Whether the forked repository is private (not publicly visible). (AI-inferred)
 	Private any
 	// The URL to the pull requests within the private fork created for the repository advisory. (AI-inferred)
@@ -237,7 +237,7 @@ type Advisory_PrivateFork struct {
 	// The API endpoint URL that lists the stargazers of the private fork associated with the repository advisory. (AI-inferred)
 	StargazersUrl any
 	// The URL template for the commit statuses of the private fork, with `{sha}` replaced by a commit SHA to access statuses. (AI-inferred)
-	StatusesUrl any
+	StatusesUrl    any
 	SubscribersUrl any
 	// The API URL to subscribe to notifications for this private fork. (AI-inferred)
 	SubscriptionUrl any
@@ -275,25 +275,25 @@ type Advisory_Vulnerabilities struct {
 }
 
 var Advisory_CreditsFields = ubx.FieldMap{
-		"Login": ubx.FieldSpec{WireName: "login"},
-		"Type": ubx.FieldSpec{WireName: "type"},
-	}
+	"Login": ubx.FieldSpec{WireName: "login"},
+	"Type":  ubx.FieldSpec{WireName: "type"},
+}
 
 var Advisory_Vulnerabilities_PackageFields = ubx.FieldMap{
-		"Ecosystem": ubx.FieldSpec{WireName: "ecosystem"},
-		"Name": ubx.FieldSpec{WireName: "name"},
-	}
+	"Ecosystem": ubx.FieldSpec{WireName: "ecosystem"},
+	"Name":      ubx.FieldSpec{WireName: "name"},
+}
 
 var Advisory_VulnerabilitiesFields = ubx.FieldMap{
-		"Package": ubx.FieldSpec{
-			WireName: "package",
-			Kind: "object",
-			Fields: Advisory_Vulnerabilities_PackageFields,
-		},
-		"PatchedVersions": ubx.FieldSpec{WireName: "patched_versions"},
-		"VulnerableFunctions": ubx.FieldSpec{WireName: "vulnerable_functions"},
-		"VulnerableVersionRange": ubx.FieldSpec{WireName: "vulnerable_version_range"},
-	}
+	"Package": ubx.FieldSpec{
+		WireName: "package",
+		Kind:     "object",
+		Fields:   Advisory_Vulnerabilities_PackageFields,
+	},
+	"PatchedVersions":        ubx.FieldSpec{WireName: "patched_versions"},
+	"VulnerableFunctions":    ubx.FieldSpec{WireName: "vulnerable_functions"},
+	"VulnerableVersionRange": ubx.FieldSpec{WireName: "vulnerable_version_range"},
+}
 
 type AdvisoryConfig struct {
 	// A list of users receiving credit for their participation in the security advisory.
@@ -390,22 +390,22 @@ var Advisory = ubx.ResourceBinding{
 	Fields: ubx.FieldMap{
 		"Credits": ubx.FieldSpec{
 			WireName: "credits",
-			Kind: "list",
-			Fields: Advisory_CreditsFields,
+			Kind:     "list",
+			Fields:   Advisory_CreditsFields,
 		},
-		"CveId": ubx.FieldSpec{WireName: "cve_id"},
+		"CveId":            ubx.FieldSpec{WireName: "cve_id"},
 		"CvssVectorString": ubx.FieldSpec{WireName: "cvss_vector_string"},
-		"CweIds": ubx.FieldSpec{WireName: "cwe_ids"},
-		"Description": ubx.FieldSpec{WireName: "description"},
-		"Severity": ubx.FieldSpec{WireName: "severity"},
+		"CweIds":           ubx.FieldSpec{WireName: "cwe_ids"},
+		"Description":      ubx.FieldSpec{WireName: "description"},
+		"Severity":         ubx.FieldSpec{WireName: "severity"},
 		"StartPrivateFork": ubx.FieldSpec{WireName: "start_private_fork"},
-		"Summary": ubx.FieldSpec{WireName: "summary"},
+		"Summary":          ubx.FieldSpec{WireName: "summary"},
 		"Vulnerabilities": ubx.FieldSpec{
 			WireName: "vulnerabilities",
-			Kind: "list",
-			Fields: Advisory_VulnerabilitiesFields,
+			Kind:     "list",
+			Fields:   Advisory_VulnerabilitiesFields,
 		},
 		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Repo":  ubx.FieldSpec{WireName: "repo"},
 	},
 }

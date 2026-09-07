@@ -4,22 +4,22 @@ package runner
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type LabelList_Labels struct {
-	Id any
+	Id   any
 	Name any
 	Type any
 }
 
 type LabelListConfig struct {
 	Enterprise any
-	RunnerId any
+	RunnerId   any
 }
 
 type LabelListAttrs struct {
-	Busy any
+	Busy       any
 	Enterprise any
-	Ephemeral any
+	Ephemeral  any
 	// The ID of the runner.
-	Id any
+	Id     any
 	Labels any
 	// The name of the runner.
 	Name any
@@ -27,7 +27,7 @@ type LabelListAttrs struct {
 	Os any
 	// The ID of the runner group.
 	RunnerGroupId any
-	RunnerId any
+	RunnerId      any
 	// The status of the runner.
 	Status any
 	// The version of the GitHub Actions Runner software. This is only set if the runner has connected to the service at least once.
@@ -38,6 +38,6 @@ var LabelList = ubx.DataSourceBinding{
 	WireType: "github_runner_label_list",
 	Fields: ubx.FieldMap{
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"RunnerId": ubx.FieldSpec{WireName: "runner_id"},
+		"RunnerId":   ubx.FieldSpec{WireName: "runner_id"},
 	},
 }

@@ -5,18 +5,18 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type PropertyConfig struct {
 	CustomPropertyName any
-	Org any
+	Org                any
 }
 
 type PropertyAttrs struct {
 	// An ordered list of the allowed values of the property. The property can have up to 200 allowed values.
-	AllowedValues any
+	AllowedValues      any
 	CustomPropertyName any
 	// Default value of the property
 	DefaultValue any
 	// Short description of the property
 	Description any
-	Org any
+	Org         any
 	// The name of the property
 	PropertyName any
 	// Whether setting properties values is mandatory
@@ -37,6 +37,6 @@ var Property = ubx.DataSourceBinding{
 	WireType: "github_custom_property",
 	Fields: ubx.FieldMap{
 		"CustomPropertyName": ubx.FieldSpec{WireName: "custom_property_name"},
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Org":                ubx.FieldSpec{WireName: "org"},
 	},
 }

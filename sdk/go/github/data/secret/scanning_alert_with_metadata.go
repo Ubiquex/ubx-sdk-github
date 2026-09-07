@@ -4,64 +4,64 @@ package secret
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type ScanningAlertWithMetadata_AssignedTo struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type ScanningAlertWithMetadata_FirstLocationDetected struct {
-	BlobSha any
-	BlobUrl any
-	CommitSha any
-	CommitUrl any
-	DiscussionBodyUrl any
-	DiscussionCommentUrl any
-	DiscussionTitleUrl any
-	EndColumn any
-	EndLine any
-	HtmlUrl any
-	IssueBodyUrl any
-	IssueCommentUrl any
-	IssueTitleUrl any
-	PageUrl any
-	Path any
-	PullRequestBodyUrl any
-	PullRequestCommentUrl any
+	BlobSha                     any
+	BlobUrl                     any
+	CommitSha                   any
+	CommitUrl                   any
+	DiscussionBodyUrl           any
+	DiscussionCommentUrl        any
+	DiscussionTitleUrl          any
+	EndColumn                   any
+	EndLine                     any
+	HtmlUrl                     any
+	IssueBodyUrl                any
+	IssueCommentUrl             any
+	IssueTitleUrl               any
+	PageUrl                     any
+	Path                        any
+	PullRequestBodyUrl          any
+	PullRequestCommentUrl       any
 	PullRequestReviewCommentUrl any
-	PullRequestReviewUrl any
-	PullRequestTitleUrl any
-	StartColumn any
-	StartLine any
+	PullRequestReviewUrl        any
+	PullRequestTitleUrl         any
+	StartColumn                 any
+	StartLine                   any
 }
 
 type ScanningAlertWithMetadata_Metadata struct {
-	Key any
+	Key   any
 	Value any
 }
 
 type ScanningAlertWithMetadataConfig struct {
 	HideSecret any
-	Owner any
-	Repo any
+	Owner      any
+	Repo       any
 }
 
 type ScanningAlertWithMetadataAttrs struct {
@@ -81,7 +81,7 @@ type ScanningAlertWithMetadataAttrs struct {
 	FirstLocationDetected any
 	// A boolean value representing whether or not the token in the alert was detected in more than one location.
 	HasMoreLocations any
-	HideSecret any
+	HideSecret       any
 	// The GitHub URL of the alert resource.
 	HtmlUrl any
 	// A boolean value representing whether or not alert is base64 encoded
@@ -94,7 +94,7 @@ type ScanningAlertWithMetadataAttrs struct {
 	MultiRepo any
 	// The security alert number.
 	Number any
-	Owner any
+	Owner  any
 	// The provider of the secret that was detected.
 	Provider any
 	// The slug identifier for the provider of the secret that was detected. Use this value for filtering by provider with the `providers` or `exclude_providers` parameters.
@@ -115,7 +115,7 @@ type ScanningAlertWithMetadataAttrs struct {
 	PushProtectionBypassedAt any
 	// A GitHub user.
 	PushProtectionBypassedBy any
-	Repo any
+	Repo                     any
 	// **Required when the `state` is `resolved`.** The reason for resolving the alert.
 	Resolution any
 	// An optional comment to resolve an alert.
@@ -144,7 +144,7 @@ var ScanningAlertWithMetadata = ubx.DataSourceBinding{
 	WireType: "github_secret_scanning_alert_with_metadata",
 	Fields: ubx.FieldMap{
 		"HideSecret": ubx.FieldSpec{WireName: "hide_secret"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":      ubx.FieldSpec{WireName: "owner"},
+		"Repo":       ubx.FieldSpec{WireName: "repo"},
 	},
 }

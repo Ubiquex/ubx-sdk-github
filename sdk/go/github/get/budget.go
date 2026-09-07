@@ -11,9 +11,9 @@ type Budget_BudgetAlerting struct {
 }
 
 var Budget_BudgetAlertingFields = ubx.FieldMap{
-		"AlertRecipients": ubx.FieldSpec{WireName: "alert_recipients"},
-		"WillAlert": ubx.FieldSpec{WireName: "will_alert"},
-	}
+	"AlertRecipients": ubx.FieldSpec{WireName: "alert_recipients"},
+	"WillAlert":       ubx.FieldSpec{WireName: "will_alert"},
+}
 
 type BudgetConfig struct {
 	BudgetAlerting any
@@ -70,18 +70,18 @@ var Budget = ubx.ResourceBinding{
 	Fields: ubx.FieldMap{
 		"BudgetAlerting": ubx.FieldSpec{
 			WireName: "budget_alerting",
-			Kind: "object",
-			Fields: Budget_BudgetAlertingFields,
+			Kind:     "object",
+			Fields:   Budget_BudgetAlertingFields,
 		},
-		"BudgetAmount": ubx.FieldSpec{WireName: "budget_amount"},
-		"BudgetEntityName": ubx.FieldSpec{WireName: "budget_entity_name"},
-		"BudgetProductSku": ubx.FieldSpec{WireName: "budget_product_sku"},
-		"BudgetScope": ubx.FieldSpec{WireName: "budget_scope"},
-		"BudgetType": ubx.FieldSpec{WireName: "budget_type"},
-		"ExpiresAt": ubx.FieldSpec{WireName: "expires_at"},
+		"BudgetAmount":        ubx.FieldSpec{WireName: "budget_amount"},
+		"BudgetEntityName":    ubx.FieldSpec{WireName: "budget_entity_name"},
+		"BudgetProductSku":    ubx.FieldSpec{WireName: "budget_product_sku"},
+		"BudgetScope":         ubx.FieldSpec{WireName: "budget_scope"},
+		"BudgetType":          ubx.FieldSpec{WireName: "budget_type"},
+		"ExpiresAt":           ubx.FieldSpec{WireName: "expires_at"},
 		"PreventFurtherUsage": ubx.FieldSpec{WireName: "prevent_further_usage"},
-		"User": ubx.FieldSpec{WireName: "user"},
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"BudgetId": ubx.FieldSpec{WireName: "budget_id"},
+		"User":                ubx.FieldSpec{WireName: "user"},
+		"Enterprise":          ubx.FieldSpec{WireName: "enterprise"},
+		"BudgetId":            ubx.FieldSpec{WireName: "budget_id"},
 	},
 }

@@ -36,10 +36,10 @@ type MembershipAttrs struct {
 var Membership = ubx.ResourceBinding{
 	WireType: "github_team_membership",
 	Fields: ubx.FieldMap{
-		"Role": ubx.FieldSpec{WireName: "role"},
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Role":     ubx.FieldSpec{WireName: "role"},
+		"Org":      ubx.FieldSpec{WireName: "org"},
 		"TeamSlug": ubx.FieldSpec{WireName: "team_slug"},
 		"Username": ubx.FieldSpec{WireName: "username"},
-		"TeamId": ubx.FieldSpec{WireName: "team_id"},
+		"TeamId":   ubx.FieldSpec{WireName: "team_id"},
 	},
 }

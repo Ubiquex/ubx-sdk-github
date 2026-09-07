@@ -4,123 +4,123 @@ package copilot
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type SeatDetailsList_Seats_Assignee struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type SeatDetailsList_Seats_AssigningTeam_Parent struct {
-	Description any
-	EnterpriseId any
-	HtmlUrl any
-	Id any
-	LdapDn any
-	MembersUrl any
-	Name any
-	NodeId any
+	Description         any
+	EnterpriseId        any
+	HtmlUrl             any
+	Id                  any
+	LdapDn              any
+	MembersUrl          any
+	Name                any
+	NodeId              any
 	NotificationSetting any
-	OrganizationId any
-	Permission any
-	Privacy any
-	RepositoriesUrl any
-	Slug any
-	Type any
-	Url any
+	OrganizationId      any
+	Permission          any
+	Privacy             any
+	RepositoriesUrl     any
+	Slug                any
+	Type                any
+	Url                 any
 }
 
 type SeatDetailsList_Seats_AssigningTeam_Permissions struct {
-	Admin any
+	Admin    any
 	Maintain any
-	Pull any
-	Push any
-	Triage any
+	Pull     any
+	Push     any
+	Triage   any
 }
 
 type SeatDetailsList_Seats_AssigningTeam struct {
-	AccessSource any
-	CreatedAt any
-	Description any
-	EnterpriseId any
-	GroupId any
-	GroupName any
-	HtmlUrl any
-	Id any
-	MembersUrl any
-	Name any
-	NodeId any
-	NotificationSetting any
-	OrganizationId any
+	AccessSource              any
+	CreatedAt                 any
+	Description               any
+	EnterpriseId              any
+	GroupId                   any
+	GroupName                 any
+	HtmlUrl                   any
+	Id                        any
+	MembersUrl                any
+	Name                      any
+	NodeId                    any
+	NotificationSetting       any
+	OrganizationId            any
 	OrganizationSelectionType any
-	Parent any
-	Permission any
-	Permissions any
-	Privacy any
-	RepositoriesUrl any
-	Slug any
-	SyncToOrganizations any
-	Type any
-	UpdatedAt any
-	Url any
+	Parent                    any
+	Permission                any
+	Permissions               any
+	Privacy                   any
+	RepositoriesUrl           any
+	Slug                      any
+	SyncToOrganizations       any
+	Type                      any
+	UpdatedAt                 any
+	Url                       any
 }
 
 type SeatDetailsList_Seats_Organization struct {
-	AvatarUrl any
-	Description any
-	EventsUrl any
-	HooksUrl any
-	Id any
-	IssuesUrl any
-	Login any
-	MembersUrl any
-	NodeId any
+	AvatarUrl        any
+	Description      any
+	EventsUrl        any
+	HooksUrl         any
+	Id               any
+	IssuesUrl        any
+	Login            any
+	MembersUrl       any
+	NodeId           any
 	PublicMembersUrl any
-	ReposUrl any
-	Url any
+	ReposUrl         any
+	Url              any
 }
 
 type SeatDetailsList_Seats struct {
-	Assignee any
-	AssigningTeam any
-	CreatedAt any
-	LastActivityAt any
-	LastActivityEditor any
-	LastAuthenticatedAt any
-	Organization any
+	Assignee                any
+	AssigningTeam           any
+	CreatedAt               any
+	LastActivityAt          any
+	LastActivityEditor      any
+	LastAuthenticatedAt     any
+	Organization            any
 	PendingCancellationDate any
-	PlanType any
-	UpdatedAt any
+	PlanType                any
+	UpdatedAt               any
 }
 
 type SeatDetailsListConfig struct {
 	Enterprise any
-	Page any
-	PerPage any
+	Page       any
+	PerPage    any
 }
 
 type SeatDetailsListAttrs struct {
 	Enterprise any
-	Page any
-	PerPage any
-	Seats any
+	Page       any
+	PerPage    any
+	Seats      any
 	// The total number of Copilot seats the enterprise is being billed for. Users with access through multiple organizations or enterprise teams are only counted once.
 	TotalSeats any
 }
@@ -129,7 +129,7 @@ var SeatDetailsList = ubx.DataSourceBinding{
 	WireType: "github_copilot_seat_details_list",
 	Fields: ubx.FieldMap{
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
+		"Page":       ubx.FieldSpec{WireName: "page"},
+		"PerPage":    ubx.FieldSpec{WireName: "per_page"},
 	},
 }

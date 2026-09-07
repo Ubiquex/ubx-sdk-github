@@ -5,16 +5,16 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type AnalyseConfig struct {
 	Direction any
-	Owner any
-	Page any
-	PerPage any
-	Pr any
+	Owner     any
+	Page      any
+	PerPage   any
+	Pr        any
 	// The Git reference, formatted as `refs/pull/<number>/merge`, `refs/pull/<number>/head`, `refs/heads/<branch name>` or simply `<branch name>`.
-	Ref any
+	Ref  any
 	Repo any
 	// An identifier for the upload.
 	SarifId any
-	Sort any
+	Sort    any
 	// The GUID of the tool used to generate the code scanning analysis, if provided in the uploaded SARIF data.
 	ToolGuid any
 	// The name of the tool used to generate the code scanning analysis.
@@ -23,16 +23,16 @@ type AnalyseConfig struct {
 
 type AnalyseAttrs struct {
 	Direction any
-	Owner any
-	Page any
-	PerPage any
-	Pr any
+	Owner     any
+	Page      any
+	PerPage   any
+	Pr        any
 	// The Git reference, formatted as `refs/pull/<number>/merge`, `refs/pull/<number>/head`, `refs/heads/<branch name>` or simply `<branch name>`.
-	Ref any
+	Ref  any
 	Repo any
 	// An identifier for the upload.
 	SarifId any
-	Sort any
+	Sort    any
 	// The GUID of the tool used to generate the code scanning analysis, if provided in the uploaded SARIF data.
 	ToolGuid any
 	// The name of the tool used to generate the code scanning analysis.
@@ -43,15 +43,15 @@ var Analyse = ubx.DataSourceBinding{
 	WireType: "github_analyse",
 	Fields: ubx.FieldMap{
 		"Direction": ubx.FieldSpec{WireName: "direction"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Pr": ubx.FieldSpec{WireName: "pr"},
-		"Ref": ubx.FieldSpec{WireName: "ref"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"SarifId": ubx.FieldSpec{WireName: "sarif_id"},
-		"Sort": ubx.FieldSpec{WireName: "sort"},
-		"ToolGuid": ubx.FieldSpec{WireName: "tool_guid"},
-		"ToolName": ubx.FieldSpec{WireName: "tool_name"},
+		"Owner":     ubx.FieldSpec{WireName: "owner"},
+		"Page":      ubx.FieldSpec{WireName: "page"},
+		"PerPage":   ubx.FieldSpec{WireName: "per_page"},
+		"Pr":        ubx.FieldSpec{WireName: "pr"},
+		"Ref":       ubx.FieldSpec{WireName: "ref"},
+		"Repo":      ubx.FieldSpec{WireName: "repo"},
+		"SarifId":   ubx.FieldSpec{WireName: "sarif_id"},
+		"Sort":      ubx.FieldSpec{WireName: "sort"},
+		"ToolGuid":  ubx.FieldSpec{WireName: "tool_guid"},
+		"ToolName":  ubx.FieldSpec{WireName: "tool_name"},
 	},
 }

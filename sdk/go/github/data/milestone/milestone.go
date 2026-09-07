@@ -5,33 +5,33 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type MilestoneConfig struct {
 	Direction any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
-	Sort any
-	State any
+	Owner     any
+	Page      any
+	PerPage   any
+	Repo      any
+	Sort      any
+	State     any
 }
 
 type MilestoneAttrs struct {
 	Direction any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
-	Sort any
-	State any
+	Owner     any
+	Page      any
+	PerPage   any
+	Repo      any
+	Sort      any
+	State     any
 }
 
 var Milestone = ubx.DataSourceBinding{
 	WireType: "github_milestone",
 	Fields: ubx.FieldMap{
 		"Direction": ubx.FieldSpec{WireName: "direction"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"Sort": ubx.FieldSpec{WireName: "sort"},
-		"State": ubx.FieldSpec{WireName: "state"},
+		"Owner":     ubx.FieldSpec{WireName: "owner"},
+		"Page":      ubx.FieldSpec{WireName: "page"},
+		"PerPage":   ubx.FieldSpec{WireName: "per_page"},
+		"Repo":      ubx.FieldSpec{WireName: "repo"},
+		"Sort":      ubx.FieldSpec{WireName: "sort"},
+		"State":     ubx.FieldSpec{WireName: "state"},
 	},
 }

@@ -5,7 +5,7 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type V2Field_Configuration_Iterations_Title struct {
 	Html any
-	Raw any
+	Raw  any
 }
 
 type V2Field_Configuration_Iterations struct {
@@ -13,7 +13,7 @@ type V2Field_Configuration_Iterations struct {
 	Completed any
 	// The duration of each iteration in days. (AI-inferred)
 	Duration any
-	Id any
+	Id       any
 	// The start date of the iteration, in ISO 8601 format (YYYY-MM-DD), used to define the iteration's time period. (AI-inferred)
 	StartDate any
 	// The title of the iteration in the GitHub Projects v2 field's iteration configuration. (AI-inferred)
@@ -31,10 +31,10 @@ type V2Field_Configuration struct {
 
 type V2Field_Options struct {
 	// The color of the option, used for display in the GitHub Projects UI. Must be one of: GRAY, RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE, PINK. (AI-inferred)
-	Color any
+	Color       any
 	Description any
 	// The unique identifier for this option within the GitHub Projects v2 field. (AI-inferred)
-	Id any
+	Id   any
 	Name any
 }
 
@@ -79,8 +79,8 @@ type V2FieldAttrs struct {
 var V2Field = ubx.ResourceBinding{
 	WireType: "github_projects_v2_field",
 	Fields: ubx.FieldMap{
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Org":           ubx.FieldSpec{WireName: "org"},
 		"ProjectNumber": ubx.FieldSpec{WireName: "project_number"},
-		"FieldId": ubx.FieldSpec{WireName: "field_id"},
+		"FieldId":       ubx.FieldSpec{WireName: "field_id"},
 	},
 }

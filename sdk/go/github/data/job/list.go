@@ -5,67 +5,67 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type List_Jobs_Steps struct {
 	CompletedAt any
-	Conclusion any
-	Name any
-	Number any
-	StartedAt any
-	Status any
+	Conclusion  any
+	Name        any
+	Number      any
+	StartedAt   any
+	Status      any
 }
 
 type List_Jobs struct {
-	CheckRunUrl any
-	CompletedAt any
-	Conclusion any
-	CreatedAt any
-	HeadBranch any
-	HeadSha any
-	HtmlUrl any
-	Id any
-	Labels any
-	Name any
-	NodeId any
-	RunAttempt any
-	RunId any
-	RunUrl any
-	RunnerGroupId any
+	CheckRunUrl     any
+	CompletedAt     any
+	Conclusion      any
+	CreatedAt       any
+	HeadBranch      any
+	HeadSha         any
+	HtmlUrl         any
+	Id              any
+	Labels          any
+	Name            any
+	NodeId          any
+	RunAttempt      any
+	RunId           any
+	RunUrl          any
+	RunnerGroupId   any
 	RunnerGroupName any
-	RunnerId any
-	RunnerName any
-	StartedAt any
-	Status any
-	Steps any
-	Url any
-	WorkflowName any
+	RunnerId        any
+	RunnerName      any
+	StartedAt       any
+	Status          any
+	Steps           any
+	Url             any
+	WorkflowName    any
 }
 
 type ListConfig struct {
 	AttemptNumber any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
-	RunId any
+	Owner         any
+	Page          any
+	PerPage       any
+	Repo          any
+	RunId         any
 }
 
 type ListAttrs struct {
 	AttemptNumber any
-	Jobs any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
-	RunId any
-	TotalCount any
+	Jobs          any
+	Owner         any
+	Page          any
+	PerPage       any
+	Repo          any
+	RunId         any
+	TotalCount    any
 }
 
 var List = ubx.DataSourceBinding{
 	WireType: "github_job_list",
 	Fields: ubx.FieldMap{
 		"AttemptNumber": ubx.FieldSpec{WireName: "attempt_number"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"RunId": ubx.FieldSpec{WireName: "run_id"},
+		"Owner":         ubx.FieldSpec{WireName: "owner"},
+		"Page":          ubx.FieldSpec{WireName: "page"},
+		"PerPage":       ubx.FieldSpec{WireName: "per_page"},
+		"Repo":          ubx.FieldSpec{WireName: "repo"},
+		"RunId":         ubx.FieldSpec{WireName: "run_id"},
 	},
 }

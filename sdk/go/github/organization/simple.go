@@ -45,6 +45,6 @@ var Simple = ubx.ResourceBinding{
 	WireType: "github_organization_simple",
 	Fields: ubx.FieldMap{
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"Org": ubx.FieldSpec{WireName: "org"},
+		"Org":        ubx.FieldSpec{WireName: "org"},
 	},
 }

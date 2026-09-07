@@ -5,67 +5,67 @@ import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type EnterpriseUserResponseList_Resources_Emails struct {
 	Primary any
-	Type any
-	Value any
+	Type    any
+	Value   any
 }
 
 type EnterpriseUserResponseList_Resources_Groups struct {
 	Display any
-	Value any
+	Value   any
 }
 
 type EnterpriseUserResponseList_Resources_Meta struct {
-	Created any
+	Created      any
 	LastModified any
-	Location any
+	Location     any
 	ResourceType any
 }
 
 type EnterpriseUserResponseList_Resources_Name struct {
 	FamilyName any
-	Formatted any
-	GivenName any
+	Formatted  any
+	GivenName  any
 	MiddleName any
 }
 
 type EnterpriseUserResponseList_Resources_Roles struct {
 	Display any
 	Primary any
-	Type any
-	Value any
+	Type    any
+	Value   any
 }
 
 type EnterpriseUserResponseList_Resources struct {
-	Active any
+	Active      any
 	DisplayName any
-	Emails any
-	ExternalId any
-	Groups any
-	Id any
-	Meta any
-	Name any
-	Roles any
-	Schemas any
-	UserName any
+	Emails      any
+	ExternalId  any
+	Groups      any
+	Id          any
+	Meta        any
+	Name        any
+	Roles       any
+	Schemas     any
+	UserName    any
 }
 
 type EnterpriseUserResponseListConfig struct {
-	Count any
+	Count      any
 	Enterprise any
-	Filter any
+	Filter     any
 	StartIndex any
 }
 
 type EnterpriseUserResponseListAttrs struct {
-	Count any
+	Count      any
 	Enterprise any
-	Filter any
+	Filter     any
 	// Number of objects per page
 	ItemsPerPage any
 	// Information about each provisioned account.
 	Resources any
 	// The URIs that are used to indicate the namespaces of the list SCIM schemas.
-	Schemas any
+	Schemas    any
 	StartIndex any
 	// Number of results found
 	TotalResults any
@@ -74,9 +74,9 @@ type EnterpriseUserResponseListAttrs struct {
 var EnterpriseUserResponseList = ubx.DataSourceBinding{
 	WireType: "github_scim_enterprise_user_response_list",
 	Fields: ubx.FieldMap{
-		"Count": ubx.FieldSpec{WireName: "count"},
+		"Count":      ubx.FieldSpec{WireName: "count"},
 		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"Filter": ubx.FieldSpec{WireName: "filter"},
+		"Filter":     ubx.FieldSpec{WireName: "filter"},
 		"StartIndex": ubx.FieldSpec{WireName: "start_index"},
 	},
 }

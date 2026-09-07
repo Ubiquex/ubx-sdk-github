@@ -73,19 +73,19 @@ type RequestReview_User struct {
 	// The type of GitHub account, typically 'User' or 'Organization'. (AI-inferred)
 	Type any
 	// The URL to the user's GitHub profile. (AI-inferred)
-	Url any
+	Url          any
 	UserViewType any
 }
 
 var RequestReview_CommentsFields = ubx.FieldMap{
-		"Body": ubx.FieldSpec{WireName: "body"},
-		"Line": ubx.FieldSpec{WireName: "line"},
-		"Path": ubx.FieldSpec{WireName: "path"},
-		"Position": ubx.FieldSpec{WireName: "position"},
-		"Side": ubx.FieldSpec{WireName: "side"},
-		"StartLine": ubx.FieldSpec{WireName: "start_line"},
-		"StartSide": ubx.FieldSpec{WireName: "start_side"},
-	}
+	"Body":      ubx.FieldSpec{WireName: "body"},
+	"Line":      ubx.FieldSpec{WireName: "line"},
+	"Path":      ubx.FieldSpec{WireName: "path"},
+	"Position":  ubx.FieldSpec{WireName: "position"},
+	"Side":      ubx.FieldSpec{WireName: "side"},
+	"StartLine": ubx.FieldSpec{WireName: "start_line"},
+	"StartSide": ubx.FieldSpec{WireName: "start_side"},
+}
 
 type RequestReviewConfig struct {
 	// **Required** when using `REQUEST_CHANGES` or `COMMENT` for the `event` parameter. The body text of the pull request review.
@@ -153,14 +153,14 @@ var RequestReview = ubx.ResourceBinding{
 		"Body": ubx.FieldSpec{WireName: "body"},
 		"Comments": ubx.FieldSpec{
 			WireName: "comments",
-			Kind: "list",
-			Fields: RequestReview_CommentsFields,
+			Kind:     "list",
+			Fields:   RequestReview_CommentsFields,
 		},
-		"CommitId": ubx.FieldSpec{WireName: "commit_id"},
-		"Event": ubx.FieldSpec{WireName: "event"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"CommitId":   ubx.FieldSpec{WireName: "commit_id"},
+		"Event":      ubx.FieldSpec{WireName: "event"},
+		"Owner":      ubx.FieldSpec{WireName: "owner"},
+		"Repo":       ubx.FieldSpec{WireName: "repo"},
 		"PullNumber": ubx.FieldSpec{WireName: "pull_number"},
-		"ReviewId": ubx.FieldSpec{WireName: "review_id"},
+		"ReviewId":   ubx.FieldSpec{WireName: "review_id"},
 	},
 }

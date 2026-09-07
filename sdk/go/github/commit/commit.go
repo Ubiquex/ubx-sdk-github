@@ -41,9 +41,9 @@ type Commit_Author struct {
 	StarredUrl any
 	// The URL to the GitHub API endpoint for the commit author's subscriptions (e.g., watched repositories). (AI-inferred)
 	SubscriptionsUrl any
-	Type any
+	Type             any
 	// The GitHub API URL for the author of the commit, pointing to the user's API endpoint (e.g., https://api.github.com/users/octocat). (AI-inferred)
-	Url any
+	Url          any
 	UserViewType any
 }
 
@@ -191,11 +191,11 @@ type CommitAttrs struct {
 var Commit = ubx.ResourceBinding{
 	WireType: "github_commit",
 	Fields: ubx.FieldMap{
-		"Base": ubx.FieldSpec{WireName: "base"},
+		"Base":          ubx.FieldSpec{WireName: "base"},
 		"CommitMessage": ubx.FieldSpec{WireName: "commit_message"},
-		"Head": ubx.FieldSpec{WireName: "head"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
-		"Ref": ubx.FieldSpec{WireName: "ref"},
+		"Head":          ubx.FieldSpec{WireName: "head"},
+		"Owner":         ubx.FieldSpec{WireName: "owner"},
+		"Repo":          ubx.FieldSpec{WireName: "repo"},
+		"Ref":           ubx.FieldSpec{WireName: "ref"},
 	},
 }

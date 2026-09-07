@@ -4,19 +4,19 @@ package subscription
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type SubscriptionConfig struct {
-	Page any
+	Page    any
 	PerPage any
 }
 
 type SubscriptionAttrs struct {
-	Page any
+	Page    any
 	PerPage any
 }
 
 var Subscription = ubx.DataSourceBinding{
 	WireType: "github_subscription",
 	Fields: ubx.FieldMap{
-		"Page": ubx.FieldSpec{WireName: "page"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

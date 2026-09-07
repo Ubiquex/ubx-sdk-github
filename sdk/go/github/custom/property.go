@@ -54,14 +54,14 @@ type PropertyAttrs struct {
 var Property = ubx.ResourceBinding{
 	WireType: "github_custom_property",
 	Fields: ubx.FieldMap{
-		"AllowedValues": ubx.FieldSpec{WireName: "allowed_values"},
-		"DefaultValue": ubx.FieldSpec{WireName: "default_value"},
-		"Description": ubx.FieldSpec{WireName: "description"},
+		"AllowedValues":         ubx.FieldSpec{WireName: "allowed_values"},
+		"DefaultValue":          ubx.FieldSpec{WireName: "default_value"},
+		"Description":           ubx.FieldSpec{WireName: "description"},
 		"RequireExplicitValues": ubx.FieldSpec{WireName: "require_explicit_values"},
-		"Required": ubx.FieldSpec{WireName: "required"},
-		"ValueType": ubx.FieldSpec{WireName: "value_type"},
-		"ValuesEditableBy": ubx.FieldSpec{WireName: "values_editable_by"},
-		"Enterprise": ubx.FieldSpec{WireName: "enterprise"},
-		"CustomPropertyName": ubx.FieldSpec{WireName: "custom_property_name"},
+		"Required":              ubx.FieldSpec{WireName: "required"},
+		"ValueType":             ubx.FieldSpec{WireName: "value_type"},
+		"ValuesEditableBy":      ubx.FieldSpec{WireName: "values_editable_by"},
+		"Enterprise":            ubx.FieldSpec{WireName: "enterprise"},
+		"CustomPropertyName":    ubx.FieldSpec{WireName: "custom_property_name"},
 	},
 }

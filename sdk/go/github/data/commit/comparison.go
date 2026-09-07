@@ -4,34 +4,34 @@ package commit
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type Comparison_BaseCommit_Author struct {
-	AvatarUrl any
-	Email any
-	EventsUrl any
-	FollowersUrl any
-	FollowingUrl any
-	GistsUrl any
-	GravatarId any
-	HtmlUrl any
-	Id any
-	Login any
-	Name any
-	NodeId any
-	OrganizationsUrl any
+	AvatarUrl         any
+	Email             any
+	EventsUrl         any
+	FollowersUrl      any
+	FollowingUrl      any
+	GistsUrl          any
+	GravatarId        any
+	HtmlUrl           any
+	Id                any
+	Login             any
+	Name              any
+	NodeId            any
+	OrganizationsUrl  any
 	ReceivedEventsUrl any
-	ReposUrl any
-	SiteAdmin any
-	StarredAt any
-	StarredUrl any
-	SubscriptionsUrl any
-	Type any
-	Url any
-	UserViewType any
+	ReposUrl          any
+	SiteAdmin         any
+	StarredAt         any
+	StarredUrl        any
+	SubscriptionsUrl  any
+	Type              any
+	Url               any
+	UserViewType      any
 }
 
 type Comparison_BaseCommit_Commit_Author struct {
-	Date any
+	Date  any
 	Email any
-	Name any
+	Name  any
 }
 
 type Comparison_BaseCommit_Commit_Tree struct {
@@ -40,103 +40,103 @@ type Comparison_BaseCommit_Commit_Tree struct {
 }
 
 type Comparison_BaseCommit_Commit_Verification struct {
-	Payload any
-	Reason any
-	Signature any
-	Verified any
+	Payload    any
+	Reason     any
+	Signature  any
+	Verified   any
 	VerifiedAt any
 }
 
 type Comparison_BaseCommit_Commit struct {
 	// Metaproperties for Git author/committer information.
-	Author any
+	Author       any
 	CommentCount any
 	// Metaproperties for Git author/committer information.
-	Committer any
-	Message any
-	Tree any
-	Url any
+	Committer    any
+	Message      any
+	Tree         any
+	Url          any
 	Verification any
 }
 
 type Comparison_BaseCommit_Files struct {
-	Additions any
-	BlobUrl any
-	Changes any
-	ContentsUrl any
-	Deletions any
-	Filename any
-	Patch any
+	Additions        any
+	BlobUrl          any
+	Changes          any
+	ContentsUrl      any
+	Deletions        any
+	Filename         any
+	Patch            any
 	PreviousFilename any
-	RawUrl any
-	Sha any
-	Status any
+	RawUrl           any
+	Sha              any
+	Status           any
 }
 
 type Comparison_BaseCommit_Parents struct {
 	HtmlUrl any
-	Sha any
-	Url any
+	Sha     any
+	Url     any
 }
 
 type Comparison_BaseCommit_Stats struct {
 	Additions any
 	Deletions any
-	Total any
+	Total     any
 }
 
 type Comparison_BaseCommit struct {
-	Author any
+	Author      any
 	CommentsUrl any
-	Commit any
-	Committer any
-	Files any
-	HtmlUrl any
-	NodeId any
-	Parents any
-	Sha any
-	Stats any
-	Url any
+	Commit      any
+	Committer   any
+	Files       any
+	HtmlUrl     any
+	NodeId      any
+	Parents     any
+	Sha         any
+	Stats       any
+	Url         any
 }
 
 type ComparisonConfig struct {
 	Basehead any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
+	Owner    any
+	Page     any
+	PerPage  any
+	Repo     any
 }
 
 type ComparisonAttrs struct {
 	AheadBy any
 	// Commit
 	BaseCommit any
-	Basehead any
-	BehindBy any
-	Commits any
-	DiffUrl any
-	Files any
-	HtmlUrl any
+	Basehead   any
+	BehindBy   any
+	Commits    any
+	DiffUrl    any
+	Files      any
+	HtmlUrl    any
 	// Commit
 	MergeBaseCommit any
-	Owner any
-	Page any
-	PatchUrl any
-	PerPage any
-	PermalinkUrl any
-	Repo any
-	Status any
-	TotalCommits any
-	Url any
+	Owner           any
+	Page            any
+	PatchUrl        any
+	PerPage         any
+	PermalinkUrl    any
+	Repo            any
+	Status          any
+	TotalCommits    any
+	Url             any
 }
 
 var Comparison = ubx.DataSourceBinding{
 	WireType: "github_commit_comparison",
 	Fields: ubx.FieldMap{
 		"Basehead": ubx.FieldSpec{WireName: "basehead"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":    ubx.FieldSpec{WireName: "owner"},
+		"Page":     ubx.FieldSpec{WireName: "page"},
+		"PerPage":  ubx.FieldSpec{WireName: "per_page"},
+		"Repo":     ubx.FieldSpec{WireName: "repo"},
 	},
 }

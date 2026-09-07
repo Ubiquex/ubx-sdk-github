@@ -4,22 +4,22 @@ package comment
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type CommentConfig struct {
-	GistId any
-	Page any
+	GistId  any
+	Page    any
 	PerPage any
 }
 
 type CommentAttrs struct {
-	GistId any
-	Page any
+	GistId  any
+	Page    any
 	PerPage any
 }
 
 var Comment = ubx.DataSourceBinding{
 	WireType: "github_comment",
 	Fields: ubx.FieldMap{
-		"GistId": ubx.FieldSpec{WireName: "gist_id"},
-		"Page": ubx.FieldSpec{WireName: "page"},
+		"GistId":  ubx.FieldSpec{WireName: "gist_id"},
+		"Page":    ubx.FieldSpec{WireName: "page"},
 		"PerPage": ubx.FieldSpec{WireName: "per_page"},
 	},
 }

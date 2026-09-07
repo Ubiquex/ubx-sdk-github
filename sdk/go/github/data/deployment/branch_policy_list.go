@@ -4,27 +4,27 @@ package deployment
 import ubx "github.com/ubiquex/ubx-sdk-go/runtime"
 
 type BranchPolicyList_BranchPolicies struct {
-	Id any
-	Name any
+	Id     any
+	Name   any
 	NodeId any
-	Type any
+	Type   any
 }
 
 type BranchPolicyListConfig struct {
 	EnvironmentName any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
+	Owner           any
+	Page            any
+	PerPage         any
+	Repo            any
 }
 
 type BranchPolicyListAttrs struct {
-	BranchPolicies any
+	BranchPolicies  any
 	EnvironmentName any
-	Owner any
-	Page any
-	PerPage any
-	Repo any
+	Owner           any
+	Page            any
+	PerPage         any
+	Repo            any
 	// The number of deployment branch policies for the environment.
 	TotalCount any
 }
@@ -33,9 +33,9 @@ var BranchPolicyList = ubx.DataSourceBinding{
 	WireType: "github_deployment_branch_policy_list",
 	Fields: ubx.FieldMap{
 		"EnvironmentName": ubx.FieldSpec{WireName: "environment_name"},
-		"Owner": ubx.FieldSpec{WireName: "owner"},
-		"Page": ubx.FieldSpec{WireName: "page"},
-		"PerPage": ubx.FieldSpec{WireName: "per_page"},
-		"Repo": ubx.FieldSpec{WireName: "repo"},
+		"Owner":           ubx.FieldSpec{WireName: "owner"},
+		"Page":            ubx.FieldSpec{WireName: "page"},
+		"PerPage":         ubx.FieldSpec{WireName: "per_page"},
+		"Repo":            ubx.FieldSpec{WireName: "repo"},
 	},
 }
