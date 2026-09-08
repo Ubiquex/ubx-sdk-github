@@ -7,8 +7,8 @@ languages in one combined repo:
 
 - [`sdk/go/`](sdk/go/) — Go bindings, module `github.com/ubiquex/ubx-sdk-github/sdk/go/v2`
   (a subdirectory Go module, tagged `sdk/go/vX.Y.Z`)
-- [`sdk/typescript/`](sdk/typescript/) — TypeScript bindings, published to JSR as
-  [`@ubx/sdk-github`](https://jsr.io/@ubx/sdk-github)
+- [`sdk/typescript/`](sdk/typescript/) — TypeScript bindings, published to npm as
+  [`@ubx/sdk-github`](https://www.npmjs.com/package/@ubx/sdk-github)
 - [`sdk/python/`](sdk/python/) — Python bindings, published to PyPI as
   [`ubx-sdk-github`](https://pypi.org/project/ubx-sdk-github/) (imported as
   `ubx.github.*`, a real PEP 420 namespace package)
@@ -60,7 +60,7 @@ generated — do not hand-edit; a hash change triggers `ubx sdk gen` to
 regenerate.
 
 Depends on the shared runtime: [ubx-sdk-go](https://github.com/ubiquex/ubx-sdk-go) (Go),
-[`jsr:@ubx/sdk`](https://jsr.io/@ubx/sdk) (TypeScript),
+[`@ubx/sdk`](https://www.npmjs.com/package/@ubx/sdk) (TypeScript),
 [`ubx-sdk`](https://pypi.org/project/ubx-sdk/) (Python, imported as `ubx_sdk`).
 
 <!-- README-GEN:BEGIN -->
